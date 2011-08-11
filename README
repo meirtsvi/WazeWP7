@@ -1,2 +1,8 @@
 The project is distributed with GNU license.
-Waze source code by default uses waze APIs subject to the TOS.
+Waze (www.waze.com) source code by default uses waze APIs subject to the TOS.
+Cibyl (www.cibyl.org) source code is distributed with GPL license.
+
+Waze for Windows Phone is a port of waze BlackBerry version to Windows Phone environment. Both platforms share the same challenge in not supporting C/C++ code.
+The work is based on a work made by Waze for converting their C code into Java for supporting BlackBerry. This project uses the same tools used for converting the C code into Java but contains the necessary changes for converting the C code into .NET CIL bytecode.
+The main tool used for this conversion is Cibyl the originally converts C code to Java. The project contains altered Cibyl source code for producing .NET WIndows Phone assembly code instead of Java bytecode.
+
