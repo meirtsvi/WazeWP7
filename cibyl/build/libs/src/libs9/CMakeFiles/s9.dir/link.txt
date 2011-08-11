@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libs9.a  CMakeFiles/s9.dir/s9.c.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libs9.a

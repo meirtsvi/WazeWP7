@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libjava.a  CMakeFiles/java.dir/inputstream-filesystem.c.o CMakeFiles/java.dir/outputstream-filesystem.c.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libjava.a

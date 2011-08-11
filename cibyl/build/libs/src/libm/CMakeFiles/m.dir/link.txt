@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libm.a  CMakeFiles/m.dir/math.c.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libm.a

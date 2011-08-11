@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libc.a  CMakeFiles/c.dir/ansi.c.o CMakeFiles/c.dir/smalloc.c.o CMakeFiles/c.dir/stdlib.c.o CMakeFiles/c.dir/time.c.o CMakeFiles/c.dir/scanf_ska.c.o CMakeFiles/c.dir/printf.c.o CMakeFiles/c.dir/vsnprintf.c.o CMakeFiles/c.dir/string.c.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libc.a

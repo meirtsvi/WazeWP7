@@ -1,0 +1,946 @@
+Cibyl (21)
+	* Add a --package-name option to cibyl-mips2java (although a bit more
+	support is neeeded for this to be complete)
+
+	* Integrate elfutils as part of the Cibyl source code to make building
+	windows easier (Marcus Groeber, me)
+
+	* Support powf, exp, log etc for host-builds (Maik Merten)
+
+	* Correct __floatunsisf/sidf
+
+	* Various new peephole optimizations (Marcus Groeber)
+
+	* Improved memset/memcpy (Marcus Groeber)
+
+	* Various fixes for building with newer GCCs (Marcus Groeber, me)
+
+	* Various instruction improvements: sltu/sltiu inlines, better
+	compare-vs-0 implementation etc (Marcus Groeber)
+
+	* Use libstdc++ map instead of GHT hash
+
+	* Use DWARF information to reduce the number of registers that
+	need to be passed to functions. Now only the actual used arguments
+	are passed.
+
+	* Fix relocation bugs: STT_SECTION (Marcus Groeber), check for
+	target addresses in all classes
+
+	* The build system has been completely replaced
+
+	* Correct regression for __ashldi3 and other 64-bit shift operations
+	introduced in v20 (the shift-by argument was passed in the wrong
+	register). This caused s9 (t9) input to malfunction in Sarien.
+
+	* Make R_MEM a real register, which stores a reference to
+	CRunTime.memory. This improves performance on blackberry devices quite
+	a bit (Ehud Shabtai)
+
+	* Make the Java stack size dynamically allocated (might reduce the
+	memory usage just a tiny bit)
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Mon Jun  6 09:10:09 CEST 2011
+
+Cibyl (20)
+	* Fixed bug caused by removing some stores of s-registers in function
+	porlogues/epilogues without checking if they were in use (thanks
+	Ehud). Added test case for this and made the optimization optional
+	(enabled via -O or --optimize-prune-stack-stores)
+
+	* setjmp/longjmp has been implemented, the last missing big C
+	functionality
+
+	* Implemented NOPH_throw(), as a builtin, to throw exceptions
+
+	* Try/catch handling has been reimplemented. The new implementation is
+	based on a stack to handle nested try/catches and supports catching
+	specific classes. It allows for the adding of setjmp/longjmp support
+
+	* 64-bit div and mod are handled as builtins now (as suggested by
+	Susmith M R)
+
+	* Do not automatically invoke the python translator on -O
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sun Oct 26 09:41:20 CET 2008
+
+Cibyl (19)
+	* Implemented FileInputStream/FileOutputStream handling in libj2se
+	(new library). This allows file handling from J2SE as well and added
+	an example in examples/host-java/file-ops
+
+	* Always export main - in crt0.S it's defined as an empty function
+	with weak linkage. If it's defined elsewhere, that version will be
+	used instead.
+
+	* Reorganized examples into J2ME and non-J2ME parts, and added an
+	example which shows how to export a library to Java
+
+	* Split startup (from start.o) - this is now split in one call to
+	initialize (and run global constructors), start main() and then to run
+	global destructors. The NOPH_GameCanvas_get have also changed to
+	NOPH_Canvas_get (with an inlined function to get the original one),
+	and these objects are registered from the Java file.
+
+	* Don't mark streams (causes problems on Nokia devices)
+
+	* strncmp off-by-one bug fixed (Ehud Shabtai)
+
+	* The C++ translator Makefile now handles proper dependencies
+
+	* Implemented function colocation in methods for the C++
+	translator. All important optimizations from the Python translator
+	have now been implemented in the C++ ditto
+
+	* Fixed bug in looking up function addresses in methods
+
+	* Added mkdir/rmdir/remove for JSR075 and added these to the test
+	cases
+
+	* Some more panic cases to handle broken binaries etc in a good way
+	and added gcov tests to improve the quality of the C++ translator
+
+	* More Object methods implemented, including wait() and notify() which
+	can be used to provide synchronization between threads
+
+	* Added option to control thread safety and reorganized the code to
+	support this. This is still off by default but can be enabled by the
+	--thread-safe option to cibyl-mips2java
+
+	* Inlining of builtins (softfloat operations) has now been implemented
+	in the C++ translator as well. Most important optimizations except for
+	function colocation are now present in the C++ translator
+
+	* The C++ translator now inlines lb/lh/lbu/lhu/sb/sh instructions as
+	well (which the Python translator doesn't). This is done if the size
+	of the method is small enough.
+
+	* Honor the --only-translate option for C++ as well
+
+	* Prune unused functions also in the C++ translator
+
+	* Implemented the 32-bit mul/div optimization for the C++ translator
+	as well. This is on by default and cannot be turned off
+
+	* Added more sanity checks throughout the code, e.g., for snprintfs
+
+	* Implemented splitting classes for C++ as well. This is needed as a
+	workaround for blackberry problems.
+
+	* Implemented call a table hierarchy in the C++ translator. This is
+	needed as a workaround for problems on some phones
+
+	* Added a compiler option to implement 8- and 16-bit loads and stores
+	through subroutines instead of static methods in the runtime
+	support. This should improve performance a bit
+
+	* Mark the instructions used in each function
+
+	* Implemented symbol exporting to Java with the CIBYL_EXPORT_SYMBOL
+	macro and allow generation of these interfaces by the translator
+
+	* Refactored the implementation of ELF section handling - much more
+	general now
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Fri Jul 18 15:15:53 CEST 2008
+
+Cibyl (18)
+	* Peephole optimization is now possible for the C++ translator
+
+	* Micro optimizations of lb/lh/sb/sh in CRunTime.java
+
+	* Error handling in strtoull has been improved
+
+	* Added NOPH_MemoryFile_openIndirectSizeHint to provide more efficient
+	allocation
+
+	* Fixed bug in NOPH_MemoryFile_openIndirect - the data was overwritten
+	on initial read if the file was larger than the bufsize (4096)
+
+	* Fixed alignment bug for the ctors and dtors sections
+
+	* Refactoring: Added a panic_if statement to replace some assertions
+	and regular errors with more descriptive messages
+
+	* Re-implemented sscanf due to a license incompatibility. The previous
+	sscanf was taken from dietlibc, which is GPLed. I reimplemented the
+	functionality here, to replace it with a LGPLed implementation like
+	the rest of the Cibyl libraries (sans some BSD code)
+
+	* Emit warning on missing syscalls in Python
+
+	* Fixed the ELF symbol size fixup also in the Python translator
+	(thanks to Ehud Shabtai)
+
+	* Extended ctype.h with isgraph, ispunct, isxdigit, iscntrl and
+	stdlib.h with strtoll and strtoull
+
+	* Inputstreams are now marked upon open (if mark is available). This
+	fixes a problem occuring in the newer Sun emulators
+
+	* Fixed NOPH_InputStream_markSupported prototype
+
+	* Fixed potential bug in NOPH_try/NOPH_catch - GCC could sometimes
+	optimze away usage of addresses computed within the try/catch block
+	(and if the exception occurs, these might never happen).
+
+	* The configuration handling of the C++ translator has been improved
+	and xcibyl-translator now accepts arbitrary configuration on the
+	command line
+
+	* Optimization of the call table is now *off* by default for both the
+	Python and the C++ translator
+
+	* The Python translator will now also handle labels pointing to
+	instructions in delay slots (patch from Eran Netanel)
+
+	* Added --force-python-translator / --force-cpp-translator to
+	cibyl-mips2java to force which translator to use
+
+	* Handle LWL/SWL/LWR/SWR for relocations (adding to the call table)
+
+	* Fix for bug when adding things to the call table: The statement
+	if (v & 3 != 0) was changed to if ( (v & 3) != 0 ). Thanks to Eran
+	Netanel
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Mon May 12 18:30:43 CEST 2008
+
+Cibyl (17)
+	* Refactored the instruction implementation. The instruction parser
+	also recognises MIPS32 FPU instructions although these do not yet
+	generate working code
+
+	* Generate the string table in cibyl-syscalls.db with unique strings,
+	i.e., reuse string offsets for strings which are already present
+
+	* Fixed C++ build issue, .gnu.linkonce.r.* sections were ignored by
+	the linker script (thanks Susmith M R!)
+
+	* Implemented less pessimistic adding of functions to the call
+	table. Relocation information is now used to add only functions which
+	can be in the call table
+
+	* Some bugs in the fixup of the ELF symbol sizes has been fixed: it was
+	always done on the functions, and the last function was not fixed
+	up. The size has also been corrected to include the last instruction
+	(usually a delay slot instruction)
+
+	* 64-bit compile fixes: cibyl-syscalls.db is now in native byteorder
+	and also different-sized on 32- and 64-bit platforms
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sun Apr 13 13:16:12 CEST 2008
+
+Cibyl (16)
+	* The syscall wrapper generator has now been integrated into the C++
+	translator and therefore in the cibyl-mips2java step. The Makefile
+	build rules have been changed to accomodate this, and the src/
+	directory is now deprecated
+
+	* Handle lables to instructions in delay slots safely and emit a
+	warning for it (should never happen). Still just in the C++
+	translator. Thanks to Eran Netanel for finding and debugging this
+
+	* Added code to handle tail-call optimizations (jumps to other
+	functions). This is still just in the C++ translator.
+
+	* Better warning/error messages
+
+	* Re-implemented most parts of the translator in C++. This
+	improves compilation performance quite a bit and the bottleneck
+	is now the Jasmin step. Not all optimizations are implemented in
+	the C++ version yet. cibyl-mips2java will automatically use the
+	C++ translator providing no optimizations are selected.
+
+	The translation step is no longer the bottleneck, Jasmin now takes
+	most time. With the new translator, Sarien compiles in around 20
+	seconds totally instead of over one minute.
+
+	* Add disabling of function pruning to workaround Cibyl bugs triggered
+	by some versions of GCC
+
+	* Check malloc return value in strdup
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sun Mar 16 08:38:42 CET 2008
+
+Cibyl (15)
+	* Fixed a bug with callbacks being published but not registered -
+	this would lead to a call of address 0
+
+	* Fixed a bug in fflush - the fn pointer could be called even if
+	being NULL
+
+	* A realloc bug was fixed - it didn't check for the return value
+
+	* Added a --memory-debug option which will instrument all stores
+	in the program. The cibyl_memdebug_start_addr and
+	cibyl_memdebug_end_addr can be used to set the address range to
+	check, by default it is 0...4
+
+	* The stack pointer was set wrong: instead of setting it to
+	memory_size, it was set to memory_size - stack_size, wasting 8KB
+
+	* Changed the instruction tracing to use --trace-range=start,end
+	instead, and also output the register values for these
+	instructions
+
+	* Fixed a nasty bug for loads with unaligned base addresses and
+	offsets, e.g.,
+
+	   lw   a0, 3(s0)
+
+	where s0 is e.g., 1. The memory register optimization has been
+	removed since it's difficult to maintain with this bug. Only very
+	minor performance decrease should be expected from that
+
+	* Added a remove() function pointer for the fops. This is used to
+	remove files in the different file systems (although none are
+	implemented yet). Also slightly restructured the handling of file
+	ops.
+
+	* Remove the unecessary ; at the end of _syscall definitions
+	(causes a warning with some GCC options)
+
+	* exit is now really noreturn and is a real function. Also fixed
+	the local jumptab to deal with these situations (add a jump over
+	it to prevent that something just "falls" into it)
+
+	* Implemented localtime, localtime_r and the Java TimeZone class
+	(parts of), sscanf from dietlibc and limits.h from glibc
+
+	* Added an option to turn off the generation of CRunTime.memory
+	aloads/astores. This works around a SE bug in Sarien (stupid
+	phones!)
+
+	* Initial work on the Qemu proxy server and debug support. This
+	does *not* work yet.
+
+	* Fixed bug in the register value tracking - it needs to
+	invalidate registers on basic block entry *and* exit (branch), not
+	just on entry. Well, well.
+
+	* Corrected various syscall stuff,  isinff name (was isnanf...),
+	some of the softfloat functions are not implemented in J2ME,
+	cannot create OutputStream (abstract) etc
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Mon Jan 21 19:24:57 CET 2008
+
+Cibyl (14)
+	* More peephole optimizations: move constant assignments past
+	memory pushing (to simplify other peephole optimizations), better
+	support for catching double stores
+
+	* Push a local variable as memory reference instead of the static
+	CRunTime.memory each time. This saves 1-2 byte on each memory
+	access, and perhaps improves speed a bit as well.
+
+	* Implemented (partially) a register value tracker. This can for
+	example make a fairly big difference when reading or storing
+	values at constant memory locations - the address calculation can
+	then be made completely constant.
+
+	* Small bug in the java syscall generator fixed
+
+	* Callback handling has been generalized. Java startup now
+	publishes "callback interfaces" in the form of a string and gets
+	an integer handle back. C code registers callback functions as
+	(string, fnPtr) pairs. Invoking callbacks are done through the
+	handle returned in the publish phase.
+
+	The main motivation behind this support is to avoid global
+	#defines and Java constants. Especially for Google android
+	support, which relies heavily on abstract methods, this is
+	improves maintainability of the code
+
+	* Implemented GDB interruptions (Ctrl-C) in the gdb server
+
+	* Fixed bug in instruction.py where -g would still skip
+	loads/stores to RA
+
+	* cibyl-mips2java: Force single class if -g is specified (needed
+	by the GDB server)
+
+	* GDB server: Handle JDB line numbers correctly (they specify high
+	numbers as 1,474), made JDB handling more verbose if -v is given
+
+	* GDB server: only RA is in CRunTime.java now
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Wed Nov 28 18:02:26 CET 2007
+
+Cibyl (13)
+	* Let the top-level Makefile recurse into examples/
+
+	* Some support for profile-guided method colocation, which is still
+	not enabled though
+
+	* Changed spaces -> tabs for the python source. The diff will look
+	quite large, but most of it is just whitespace changes.
+
+	* The framework for registering callbacks (such as the Java
+	Canvas.keyPressed) has been generalized and moved to the ansi
+	syscall set and the CRunTime.java file. Support for atexit has
+	been implemented through this improvement
+
+	* Fixed minor bug on register cleanup (static registers should not
+	be cleaned up)
+
+	* Some minor code refactoring of GameScreenCanvas.java and Main.java.
+	This also partially works around a problem when exiting a program and
+	restarting it.
+
+	* Define NOPH_Exception_new_string to take printf-style arguments
+
+	* Workaround a bug on SE phones - InputStream's from
+	FileConnections return the wrong value on "skip", so we no longer
+	validate the return value in the ::seek method.
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Wed Oct 31 19:31:11 CET 2007
+
+Cibyl (12)
+	* Fixed a bug with the --optimize-indirect-calls option, which
+	could cause a python exception with relocation entries in pruned
+	functions (thanks Ehud)
+
+	* Fixed bug where Cibyl generated broken code if the RA register
+	was assigned to/read within a method (thanks Ehud). Also added a
+	test case to check for this.
+
+	* Cibyl now produce .class files directly, and the
+	--only-translate option has been added to avoid the compile step
+
+	* Fixed bug where the label lookup was done too early, meaning
+	that the memory register optimization could produce broken code.
+
+	* Minor optimizations to some instructions (some from NestedVM)
+
+	* The peephole optimizer is now automatically called if -O is
+	specified
+
+	* Display an error dialogue if the device cannot allocate enough
+	memory or throws some other exception (Ehud)
+
+	* Avoid copying data memory more than once (Ehud)
+
+	* libc has been extended with some gmtime, vsnprintf and various
+	other functionality (Ehud)
+
+	* Link all .rodata.* sections to .rodata. This again avoids some
+	C++ problems.
+
+	* Use pushsection for .cibylstrtab. This avoids a C++ bug where,
+	due to using other sections than .text for some code, the assembly
+	part would break with "Error: operation combines symbols in
+	different segments".
+
+	* Use psyco if available. This typically decreases compilation
+	time by ~20%.
+
+	* Profile-guided optimization framework has been added. The first
+	enabled optimization is to arrange methods in classes ordered by
+	call-count. This allows methods that are never used (e.g. which
+	would be used in error conditions) to be placed in classes that
+	are never loaded (if supported). The option
+	--optimize-use-profile=PROFILE.prf controls this.
+
+	* cibyl-mips2java has the option --save-temps now, to inhibit
+	removing of temporary files generated
+
+	* cibyl-mips2java will now produce and compile a Java source file
+	for the call table. This can also optionally be split into a
+	hierarchy of functions, which can be used as a workaround for
+	problems on certain SonyEricsson phones. This is enabled with
+	--call-table-hierarchy=NR
+
+	* cibyl-mips2java can now produce multiple classes for the
+	translated code, and will produce classes directly (i.e., invoke
+	jasmin). The options has been changed to reflect this and it is no
+	longer option-compatible with the last release. The option
+	--class-size-limit=NR specifies what size to split at, or
+	--single-class to generate only one class.
+
+	* Added sanity checks to acertain that the environment is setup
+	for Cibyl (and produce a helpful message if not), cleaned up of
+	parts of the code. Options --javac-command-line=LINE and
+	--jasmin-command-line has been added to supply Javac and Jasmin
+	command lines manually (overriding environment variables)
+
+	* Fixed bug where __negdf2 was misnamed (thanks to Abhishek Singh)
+
+	* Optimized the cleanup register generation more (fewer registers
+	are now cleaned). This should now be almost optimal, and the code
+	has actually been made a bit smaller as well
+
+	* Improved the performance of cibyl-generate-java-wrappers by only
+	reading in what's needed: The RoadMap syscall defs previously took
+	almost 2.5 minutes on my computer, with the optimizations it
+	finishes in less than 1 minute. Also made some smaller
+	improvements to cibyl-mips2java, which should improve performance
+	by about 10%
+
+	* Extended with various new J2ME syscalls for sockets, http
+	connections and other functionality (partially from Ehud)
+
+	* Removed the rex6000 syscalls - it's not really something useful
+	for public consumption anyway
+
+	* The test application can now write to a log file and has the
+	ability to select the file system root
+
+	* The test application has been improved and extended with many
+	more tests (including performance tests)
+
+	* Added generation of Doxygen documentation (run make clean first)
+
+	* Bug fix in the global jump table generation: Static functions
+	incorrectly called the same label if they have the same name
+
+	* Implemented NOPH_throw which allows throwing of Java exceptions
+	from C.
+
+	* New file operations structure, which makes the standard "FILE"
+	stuff much more useful and also the implementation more
+	sane. Almost everything is now implemented in C which is also
+	easier to maintain and has fewer Java special cases among the
+	syscalls. The new structure also allows URI-style passing of
+	options to fopen.
+
+	* Implemented the --optimize-colocate-functions=FNs option, which
+	colocates C functions into one Java method. This can significantly
+	improve performance if you can place a hot callchain in a single
+	Java method
+
+	* Moved the stackStore optimization to function.py (from
+ 	javamethod.py) since it really works on functions and not methods
+	and also call it from fixup()
+
+	* Fixed a bug where the first basic block of a function was by
+	mistake made empty (this nullified the skip-stack-stores
+	optimization), and also a problem with the last basic block. The
+	bug fix will make generated code slightly smaller.
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Mon Oct  1 17:34:06 CEST 2007
+
+Cibyl (11)
+	* The size of the operand stack is now dynamically set depending
+	on the instructions used by the recompiled method. An option has
+	also been added to allow manual setting of this size.
+
+	* The peephole optimizer has been improved to catch a few more
+	cases
+
+	* The mult and div instructions are now always handled inlined and
+	the runtime functions multu and divu return a long result. This
+	allows the MIPS hi/lo registers to be represented as normal Java
+	local registers, which will be needed for future threading
+	implementations. It might also improve performance in some cases
+
+	* Implemented catching of exceptions in C with the
+	NOPH_try(handler, arg) / NOPH_catch() pair. The use of
+	NOPH_exception is now deprecated and should be replaced with
+	NOPH_try/NOPH_catch pairs.
+
+	* Fixed bug in jalr and jal where the destination registers were
+	wrong
+
+	* Switched to manage the project at google code,
+	http://cibyl.googlecode.com, the subversion repository is at
+	http://cibyl.googlecode.com/svn/
+
+	* Implemented the option --optimize-indirect-calls, which provides
+	a more compact global jumptab (containing only those functions
+	which are used through function pointers instead of all
+	functions). This significantly reduces the size of most
+	applications.
+
+	* The test application now outputs on a console, which allows it
+	to run on real phones. Also reduced the output generated and
+	renamed the application.
+
+	* Fixed Font.charWidth() with a non-generated implementation
+
+	* Optimized the cleanup register generation (fewer registers are
+	now cleaned)
+
+	* Fixed a bug in __fixunssfsi_helper.java where values above or
+	equal to 1^32 were incorrectly handled (truncated)
+
+	* More floating point and double checks, and better support for
+	typecast checks in the test framework
+
+	* Added optimizations to inline function calls to builtin
+	functionality (currently the floating point support). This can be
+	enabled by passing --optimize-inline-all-builtins (enable
+	globally) or --optimize-inline-builtins=FUNCTIONS (enable for a
+	set of functions). This can significantly improve the performance
+	of floating point operations, but will also increase the
+	class size.
+
+	Implemented builtin optimizations for much of the float support
+
+	* Emit .line and .var information only if -g is defined
+
+	* Bug fix in the syscall definitions: Clobber v0 (thanks to Ehud
+	Shabtai for reporting this!)
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sun Jul 22 13:40:07 CEST 2007
+
+Cibyl (10)
+	* Fixed build dependency in the s9 example so that it builds
+	correctly
+
+	* Catch addu v0, v0, zero (and similar). This can sometimes be
+	generated by the Cibyl system calls
+
+	* Simplified name mangling: Only append the address if the symbol
+	has local linkage
+
+	* Fixed bug where System.currentTimeMillis() returned a 32-bit
+	value, which causes hard-to-find wrap-around problems. Oh my.
+
+	* C++ fix: Allow undefined symbols (assuming they are not
+	accessed!)
+
+	* C++ fix: Don't demangle symbols in elf.py
+
+	* C++ fix: Build C++ source with -fno-rtti and -fno-exceptions
+
+	* C++ support has been partially implemented (support for
+	operator::new/delete, error printouts)
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sat May 19 14:59:29 CEST 2007
+
+Cibyl (9)
+	* Assert that the first object (0) in the object repostiory
+	actually is == null
+
+	* Added support for "faulting in" more heap space (from derived
+	from TastePhone). This will be used if a fixed size of the memory
+	has been selected in CibylConfig.
+
+	* libs9 has been added. S9 (Simon-9 or Sarien-9) is an
+	implementation of a T9-style input database. The reasoning behind
+	this is that the built-in text entry in J2ME usually (ever?) does
+	not support setting user dictionaries. The Sarien port uses this
+	to implement T9-style input with the game dictionaries. The s9
+	example shows how to use it.
+
+	* libcibar has been added. Cibar implements an ar-style archive
+	which can be read (almost) as normal files. It's used to avoid
+	having to open FileConnections all the time (which usually means
+	an irritating dialogue all the time)
+
+	* Test cases now depend on JSR075
+
+	* Reorganization of the syscall set names (java.lang->java)
+
+	* Added utility function NOPH_String_toCharPtr() which writes a
+	Java String object to a memory address (as a char*)
+
+	* Some more ANSI C functionality added (toupper, opendir, readdir,
+	closedir). The latter are only available on systems with JSR075
+	(PIM/PDA) implemented. Misc functionality in the java libraries
+	has also been added to support this
+
+	* The cibyl-gdbserver tool has been added. This allows Cibyl
+	programs to be debugged with GDB. The -g option to cibyl-mips2java
+	is needed for the gdbserver to work.
+
+	* Added -g option to cibyl-mips2java provide some debugging output
+
+	* Minor optimization: Skip zeroing of the RA register (it's not
+	used anyway)
+
+	* A peephole optimizer for the Jasmin assembly source output has
+	been implemented. A cibyl-peephole-optimize tool executes this
+	optimization. The peephole optimizer can improve some code quite
+	substantially
+
+	* Fixed a bug in the syscall definitions (which could sometimes
+	cause v0 to be overwritten)
+
+	* Workaround for bug in Nokia JVMs - place the local jumptab
+	before the function return
+
+	* Fixed the implementation of exit() so that it actually exits on
+	 J2ME as well (Ehud Shabtai)
+
+	* Java files are now preprocessed by cpp and the
+	cibyl-generate-java-wrappers tool takes a -D option to pass
+	arguments to cpp. Non-J2ME apps are now passed -D NOJ2ME to
+	conditionally compile out certain things
+
+	* fseek supports SEEK_CUR as well now and can also operate on both
+	resource streams and the FileConnection API (jsr075). (Ehud
+	Shabtai)
+
+	* atan, asin etc has been added to the softfloat support. The
+	implementation uses mMath.java which is written by Richard Carless.
+	The support was added by Ehud Shabtai
+
+	* Strings can now use arbitrary encodings supported by J2ME
+	(Ehud Shabtai)
+
+	* Implemented MIDP event handling, like keyPressed events. These
+	are delivered to a callback function in C. Also added an example
+	program (j2me-events) and defined a set of Canvas events.
+
+	* Fixed a bug in the generation of the global jumptable when the
+	register scheduler optimization was turned on. It simply generated
+	incorrect code.
+
+	* Fixed bug in the slt instruction, which incorrectly inherited
+	from OneRegisterSetInstruction - it is a two-register
+	instruction. This fixed the previously broken register scheduler.
+
+	* Reenabled the mul/div/mod optimization (generate direct Java
+	bytecode for common cases) and implemented correct mod handling
+
+	* Fixed bug in fwrite when size == 1
+
+	* Fixed a bug where malloc was allowed to overwrite both the stack
+	and outside of allocated memory.
+
+	* Cibyl configuration file added (CibylConfig.java). This can be
+	used to specify the memory size and the stack size for the Cibyl
+	program and made some more things configurable in the Makefile
+
+	* Implemented support for using external system call sets and an
+	example which shows how this is done
+	(examples/external-syscalls). This also added a number of options
+	to cibyl-mips2java and cibyl-generate-java-wrappers
+
+	* jmicropolygon, a library to draw filled and outlined polygons
+	written by Simon Turner has been added (Ehud Shabtai)
+
+	* Changed the way system calls work to store the system call name
+	in a special section to simplify use of external system call sets
+
+	* Optimized versions of some ANSI C functionality (memset, fread)
+	has been implemented (Ehud Shabtai)
+
+	* The ANSI C support has been extended in many places (Ehud
+	Shabtai).
+
+	* Some preparations for threading support, although this is not
+	yet implemented. It is described in docs/threading.txt
+
+	* Simplified certain things - the stack is now setup in crt0.S
+
+	* Fixed bug in __fixunsdfsi_helper.java where values > 0xffffffff
+	were incorrectly converted (such values should become
+	0xffffffff). The workaround in vsnprintf introduced in version 8
+	is therefore now reverted,
+
+	* Memory tests started on (lwl and swl regression tests so far),
+	never inline test functions. Also added an exception test. The
+	test program is now a J2ME app.
+
+	* Fixed bugs in __strncmp and __strncpy where the last char was not
+	copied (Ehud Shabtai)
+
+	* Two new options to cibyl-mips2java to improve tracing of larger
+	programs: --trace-function-instructions and --trace-function-calls
+
+	* Fixed three bugs in CRunTime.java where the function for swl was
+	wrongly named and implemented the wrong way (backwards!). Also,
+	the bytes were written in the wrong endian-order in both swl and
+	lwl. Further, lwl should read unsigned bytes so that
+	sign-extension does not ruin the fun.
+
+	* More javax.microedition classes and methods added, e.g.,
+	javax.microedition.lcdui.Form and .Alert (me, Ehud Shabtai)
+
+	* Fixed various minor build system issues (enable debugging
+	symbols, path to J2ME emulator)
+
+	* Function pruning is now always enabled because it interfers with
+	the pruning of used system calls (these two must be synchronized)
+
+	* Fixed bug in cibyl-softfloat.h where __fixsidf was defined and
+	no such function is used by the GCC softfloat support (reported by
+	Ehud Shabtai)
+
+	* Fixed bug where the syscalls generated from functions were not
+	properly pruned (reported by Ehud Shabtai)
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sat Apr 28 13:57:53 CEST 2007
+
+Cibyl (8)
+	* Workaround a Cibyl bug in vsnprintf (fix this later)
+
+	* Implemented inf and nan support for vsnprintf
+
+	* vsnprintf now has support for floating point ops enabled. This
+	works by making the symbol weak and rebuilding it for
+	libsoftfloat.a (now actually just a .o-file).
+
+	* Better structure and much more expandable test infrastructure
+	has been added which allows for regression tests. Tests for floats
+	and doubles has been added as well. The test-cases example has
+	been removed.
+
+	* Various libm functionality has been added (sin/cos, pow, exp
+	etc), but this is still not complete
+
+	* Floating point has been fully implemented
+	(except for long doubles) as a soft-float implementation
+	[Me, Roelof Berg]
+
+	* Restructured the code to have less MIPS dependencies. The code
+	now follows a more logical module structure with MIPS-dependencies
+	in the Mips subdir and optimizations in the Optimizations subdir
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Sun Jan 21 19:21:38 CET 2007
+
+Cibyl (7)
+	* A few more J2ME calls were added
+
+	* Started on floating point support. Cibyl uses -msoft-float and
+	optimized implementations of the support functions. This can be
+	done since Cibyl will just call Java helpers to implement the
+	functions using the native Java float/double types. See
+	doc/floating-point.txt for more about this.
+
+	* saved_v1 is now placed in CRunTime to avoid Jasmin
+	incompatibilities [Roelof Berg]
+
+	* Use environment variables for readelf/nm/objcopy and jasmin
+	[Roelof Berg]
+
+	* Extended the Graphics and GameCanvas classes slightly
+
+	* Cygwin fix: Don't write objcopy output to stdout but instead to
+	a tempfile. Cygwin does not have /dev/stdout etc. [Roelof Berg]
+
+	* Fixed bug in the creation of basic blocks. Backward-branches
+	were not counted as they should and the first basic block was
+	incorrect if it started with a branch
+
+	* sltu has been optimized for the common case of comparing to
+	zero, which can be done without the runtime environment support
+
+	* Replaced the Java implementation of malloc/free with a more
+	efficient one in C written by Calin A. Culianu. This also made the
+	ANSI C library slightly simpler.
+
+	* Fixed bug where the mult/div optimization did not work for
+	instructions in the delay slot.
+
+	* The memory register optimization has been broken for a while,
+	but is now fixed again.
+
+	* Implemented a register scheduler so that only used registers in
+	a function/method are allocated. This also helps to minimize the
+	number of registers passed to leaf methods and also avoids storing
+	to v0 all the time.
+
+	* Fixed bug where instructions in delay slots did not have their
+	fixup() methods called.
+
+	* Added command-line option -O / --optimize-all to turn on all
+	optimizations
+
+	* Set LANG explicitly in env.sh so that readelf-parsing works OK
+	["7not6"]
+
+	* Implemented optimization that avoids the storing and restoring
+	of caller-saved registers on the stack. Since registers are stored
+	in local variables in Cibyl, these are automatically kept in
+	function invocations. This optimization rarely improves
+	performance, but it does reduce class size a bit.
+
+	* Implemented one-C-function-per-Java method, which should reduce
+	the total size of the compiled class as well as allow some
+	interesting (future) optimizations.
+
+	Another benefit with the one-to-one mapping is that the J2ME
+	emulator profiler now produces meaningful output for Cibyl.
+
+	* Removed fgets and fputs in exit() - it's placed in the
+	syscalls/ansi/init now anyway
+
+	-- Simon Kagstrom <simon.kagstrom@gmail.com>, Fri Dec  1 13:33:05 CET 2006
+
+Cibyl (6)
+	* The Java stub generator now generates direct accesses to the
+	object repository instead of calling a "getter" method. This
+	should improve performance somewhat.
+
+	* As a safety-measure, disable GCC's tail recursion optimization
+	(-fno-optimize-sibling-calls), which can cause problems with
+	cross-method calls
+
+	* Support for global constructors and destructors has been
+	added. The linker script has been extended to add the .ctors and
+	.dtors sections.
+
+	* Added libdebug.a with stack/register dump facilities
+
+	* Fixed bug in the setting of the stack pointer in CRunTime.java
+
+	* Reorganized ansi/libc support into a library (build libc.a)
+
+ 	* The lwl/lwr and swl/swr instruction pairs has been
+	implemented. A difference compared to hardware is that lwr and swr
+	does not actually do anything, but since these instructions are
+	used in pairs this should not be noticable.
+
+	* Implemented more of ANSI C - mainly FILE*-stuff, but also some
+	string and memory handling parts
+
+	* Reworked the API handling. To better support libraries, the
+	system call numbers are now fixed.
+
+	The C API has also been split in several header files to provide
+	better compatibility with ANSI C and more logical structuring of
+	the J2ME APIs.
+
+	* Fixed a bug in the linker script. Not all read-only sections
+	were loaded. GCC sometimes loads addresses from read-only memory,
+	and this caused strange errors
+
+	-- Simon Kagstrom <simon.kagstrom@bth.se>, Sat Nov 18 10:08:53 CET 2006
+
+Cibyl (5)
+	* Mainly a bugfix release
+
+	* Control optimizations with command-line options, default to no
+	optimizations
+
+	* Restructured part of the binary translator in multiple files
+
+	* GCC 4.0 needs memory clobbering on syscalls, fixed that
+
+	* xori and some other instructions uses a zero-extended immediate
+	value, this is now handled correctly.
+
+	* Corrected the jalr instruction (does not always store the return
+	address in RA)
+
+	* Implemented handling of the bal instruction
+
+	* Corrected size-fixing in elf.py and store symbols by address
+	(there are programs with multiple symbols with the same
+	name). This fixes some issues in GCC 4.0
+
+	* Allocate 2/3 of the available memory for the C program instead
+	of fixing it at 128KB
+
+	* -O2 was incorrectly selected as default in version 4 and
+	earlier, fixed that and made cc/ld etc possible to override
+
+	* Fixed the fopen call to try/catch exceptions
+
+	-- Simon Kagstrom <simon.kagstrom@bth.se>, Sat Nov  4 08:13:44 CET 2006
+
+Cibyl (4)
+	* Implemented exception handling (the NOPH_exception global
+	variable)
+	* Fixed a bug on conversion char* to Java strings
+	* Support for RecordStore
+	* assert and misc other stuff added
+
+	-- Simon Kagstrom <simon.kagstrom@bth.se>, Thu Oct 12 12:52:14 CEST 2006
+
+r11390: Release 3
+
+r9480: Registers stored in local variables

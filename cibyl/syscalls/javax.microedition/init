@@ -1,0 +1,3 @@
+ 	public static int canvasHandle;
+	public static int graphicsHandle;
+	public static int midletHandle;

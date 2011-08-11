@@ -1,0 +1,52 @@
+######################################################################
+##
+## Filename:      unused_label.py
+## Author:        Marcus Groeber <marcus.groeber@nuance.com>
+## Description:   Peephole template
+##
+######################################################################
+import re
+
+from Cibyl.PeepholeOptimizer.template import Template, addTemplate
+from Cibyl.PeepholeOptimizer.classes import *
+
+#Assuming nothing jumps to __CIBYL_<label>:
+#	__CIBYL_<label>:
+#->
+class MatchClass(Template):
+    def __init__(self):
+	Template.__init__(self,
+			  [{"class" : Label}]
+			  )
+	self.lookupswitch_label = re.compile("[ ,\t]*0x[A-F,a-f,0-9,_]+[ ,\t]*:[ ,\t]*([A-Z,a-z,0-9,_]+)")
+	self.lookupswitch_default = re.compile("[ ,\t]*default[ ,\t]*:[ ,\t]*([A-Z,a-z,0-9,_]+)")
+	self.catch = re.compile("\.catch [A-Z,a-z,0-9,_]+ from ([A-Z,a-z,0-9,_]+) to ([A-Z,a-z,0-9,_]+) using ([A-Z,a-z,0-9,_]+)")
+
+    def match(self, fn, items):
+	# Avoid miss-classification of "default" lookup switch as label
+	if items[0].name=='default':
+	    return False
+	# See to it that there are no jumps to LABEL
+	for fnItem in fn.contents:
+	    if isinstance(fnItem, BranchInstruction):
+		if fnItem.target == items[0].name:
+		    return False
+	    elif self.catch.match(fnItem.line):
+		match = self.catch.match(fnItem.line)
+		if match.group(1)==items[0].name or match.group(2)==items[0].name or match.group(3)==items[0].name:
+		    return False
+	    elif self.lookupswitch_label.match(fnItem.line):
+		match = self.lookupswitch_label.match(fnItem.line)
+		if match.group(1)==items[0].name:
+		    return False
+	    elif self.lookupswitch_default.match(fnItem.line):
+		match = self.lookupswitch_default.match(fnItem.line)
+		if match.group(1)==items[0].name:
+		    return False
+	return True
+
+    def execute(self, fn, items):
+	items[0] = Nop()
+	return items
+
+addTemplate(MatchClass())

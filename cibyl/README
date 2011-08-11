@@ -1,0 +1,75 @@
+Cibyl is an environment to compile and run programs written in C,
+Objective-C, C++ and possibly Fortran on J2ME phones. It is documented
+on the project page at
+
+  http://cibyl.org
+
+and the source code can be found on github:
+
+  http://github.com/SimonKagstrom/cibyl
+
+Prerequisites
+-------------
+You need the following to use Cibyl:
+
+- unzip, gcc, g++, tar, gzip, make, cmake
+- Python (2.3, 2.4 tested)
+- The Jasmin assembler (http://jasmin.sourceforge.net)
+- A Java compiler / runtime environment
+- The jasmin java assembler (http://jasmin.sourceforge.net)
+- For J2ME support, MIDPath (http://midpath.thenesis.org) or the Sun
+  Wireless Toolkit
+
+Building Cibyl
+--------------
+To setup Cibyl, do the following steps:
+
+1. Download a pre-built toolchain from http://cibyl.org. In this
+    case you can skip directly to step 2.
+
+   Alternatively, build it first using the following command:
+
+     cd toolchain
+     make # (this will take some hours)
+
+2. Unpack the toolchain
+
+     cp cibyl-bin-PLATFORM-VERSION.tar.bz2 /path/to/install/dir
+     tar -xjf cibyl-bin-PLATFORM-VERSION.tar.bz2
+
+3. Add the Cibyl binaries to your path:
+
+     export PATH=$PATH:/path/to/install/dir/mips-cibyl-elf/bin
+
+   If you downloaded the pre-built toolchain, you can stop here.
+
+4. Build the translator and the cibyl libraries
+
+     mkdir build
+     cd build
+     cmake ../
+     make && make install
+
+   this will install the libraries and tools in /path/to/install/dir
+
+5. Build the examples by e.g.,
+
+     cd examples/host-java/hello-world
+     make
+
+
+6. To build a J2ME example, do
+
+   6.1 For windows:
+
+      cd examples/j2me/hello-world
+      make -f Makefile.cygwin
+
+   6.2 For other platforms:
+
+      cd examples/j2me/hello-world
+      make
+
+
+--
+// Simon Kagstrom <simon.kagstrom@gmail.com>

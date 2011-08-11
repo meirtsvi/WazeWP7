@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libcrt0.a  CMakeFiles/crt0.dir/fileops.c.o CMakeFiles/crt0.dir/helpers.c.o CMakeFiles/crt0.dir/memory-filesystem.c.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libcrt0.a

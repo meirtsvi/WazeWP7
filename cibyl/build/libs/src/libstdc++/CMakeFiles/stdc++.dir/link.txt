@@ -1,0 +1,2 @@
+/usr/bin/ar.exe cr ../../../mips-cibyl-elf/sys-root/lib/libstdc++.a  CMakeFiles/stdc++.dir/alloc.cc.o CMakeFiles/stdc++.dir/virtual.cc.o
+/usr/bin/ranlib.exe ../../../mips-cibyl-elf/sys-root/lib/libstdc++.a

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/cibyl-syscall_defs.h
+
+../include/cibyl.h
+cibyl-syscall_defs.h
+../include/cibyl-syscall_defs.h
+
+/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libm/math.c
+cibyl-softfloat.h
+-
+
+mips-cibyl-elf/sys-root/usr/include/cibyl-softfloat.h
+cibyl.h
+-
+stdint.h
+-
+
+mips-cibyl-elf/sys-root/usr/include/stdint.h
+
