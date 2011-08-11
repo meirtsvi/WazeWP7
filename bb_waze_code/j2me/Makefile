@@ -82,11 +82,11 @@ endif
 
 EMULATOR_OPTIONS = -Xheapsize:10M
 
-include ../../../cibyl/build/Rules-j2me.mk
+include ../../cibyl/build/Rules-j2me.mk
 
 tmpclasses/CibylConfig.java: CibylConfig.java
 	cp $< $@
 
 include/: FORCE
-	../../../cibyl/tools/cibyl-generate-c-header -o $@ syscalls/ gps_manager sound_mgr timer_mgr json_lib tile_storage async_net waze rim_timer_mgr ansi javax.microedition java rimapi rim_device softfloat $(SPECIFIC_LIBS)
+	../../cibyl/tools/cibyl-generate-c-header -o $@ syscalls/ gps_manager sound_mgr timer_mgr json_lib tile_storage async_net waze rim_timer_mgr ansi javax.microedition java rimapi rim_device softfloat $(SPECIFIC_LIBS)
 FORCE:
