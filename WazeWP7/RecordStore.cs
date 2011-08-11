@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 using System.IO.IsolatedStorage;
 
 
+
     [XmlRoot("RecordStore", Namespace = "RecordStore", IsNullable = false)]
     public class RecordStore
     {
