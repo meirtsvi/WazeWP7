@@ -1,0 +1,116 @@
+N logo
+I top_logo
+P 1 4
+B -4 -4 22 22
+A about
+
+N gps_reception
+I top_satellite_off
+I top_satellite_off
+I top_satellite_on
+I top_satellite_on
+P 69 5
+S GPS_reception
+
+N moods
+S mood_state
+I top_mood_disabled
+I top_mood_happy
+I top_mood_sad
+I top_mood_mad
+I top_mood_bored
+I top_mood_speedy
+I top_mood_starving
+I top_mood_sleepy
+I top_mood_cool
+I top_mood_inlove
+I top_mood_LOL
+I top_mood_peaceful2
+I top_mood_singing
+I top_mood_wondering
+I top_mood_happy
+I top_mood_sad
+I top_mood_mad
+I top_mood_bored
+I top_mood_speedy
+I top_mood_starving
+I top_mood_sleepy
+I top_mood_cool
+I top_mood_inlove
+I top_mood_LOL
+I top_mood_peaceful
+I top_mood_singing
+I top_mood_wondering
+I top_mood_bronze
+I top_mood_silver
+I top_mood_gold
+I top_mood_busy
+I top_mood_busy
+I top_mood_in_a_hurry
+I top_mood_in_a_hurry
+P 103 0
+
+N crown
+S user_addon_state
+I top_mood_crown
+I top_mood_sword
+I top_mood_shield
+P 103 0
+
+
+N alerts 
+I top_alerts
+I top_alerts
+I top_alerts
+I top_alerts
+I top_alerts
+P 149 6
+S alerts_state
+C real_time_state 1
+
+N num_alerts
+T num_alerts
+P 164 19
+F 12
+S alerts_state
+C real_time_state 1
+
+N on_line
+I top_not_connected
+P 148 6
+C real_time_state 0
+
+N clock
+T clock
+P -14 6
+F 17
+C softkeys_state 0
+
+N clock
+T clock
+P -100 6
+F 14
+C softkeys_state 1
+
+N battery
+S battery_level
+I battery_0
+I battery_1
+I battery_2
+I battery_3
+I battery_4
+P -144 14
+
+N charging
+C charging_state 1
+I battery_charging
+P -131 11
+
+N right_softkey
+T right_softkey
+P -8 6
+A right_softkey
+F 16
+C softkeys_state 1
+
+Y 1

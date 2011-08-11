@@ -1,0 +1,18 @@
+N Compass
+E Compass
+P 20 25
+S orientation_mode
+B -20 -16 20 16
+A toggleorientation
+
+N Compass_north
+I empty_image
+I north
+P 10 6
+S orientation_mode
+
+N Compass_bg
+I compass_bg
+O 0
+P 0 0
+

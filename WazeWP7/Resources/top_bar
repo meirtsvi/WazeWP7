@@ -1,0 +1,16 @@
+N gps_reception
+I top_satellite_off
+I top_satellite_off
+I top_satellite_on
+I top_satellite_on
+P 10 5
+S GPS_reception
+
+
+N on_line
+I top_not_connected
+P 50 6
+C real_time_state 0
+
+
+Y 1

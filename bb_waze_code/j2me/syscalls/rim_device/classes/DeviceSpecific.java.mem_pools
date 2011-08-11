@@ -1,0 +1,38 @@
+import net.rim.device.api.system.*;
+
+public class DeviceSpecific {
+	private int invokeLaterID = -1;
+
+	public static void init() {
+		System.out.println("In DeviceSpecific!!!");
+		new DeviceSpecific();
+	}
+
+	public static void getPlatform(int addr, int size) {
+		String p = System.getProperty("microedition.platform");
+		byte[] bytes = p.getBytes();
+		size--;
+		if (size > bytes.length) size = bytes.length;
+		CRunTime.memcpy(addr, bytes, 0, size);
+		CRunTime.memoryWriteByte(addr+size, 0);
+	}
+
+	public DeviceSpecific() {
+		invokeLaterID = Application.getApplication().invokeLater(new Runnable() { public void run() { Backlight.enable(true); } }, 5000, true);
+	}
+
+	public void stop() {
+		if (invokeLaterID != -1) {
+			Application.getApplication().cancelInvokeLater(invokeLaterID);
+		}
+	}
+	public static int allocChunk(int size) {
+           return CRunTime.allocChunk(size);
+	}
+
+	public static void freeChunk(int addr) {
+           CRunTime.freeChunk(addr);
+	}
+
+}
+

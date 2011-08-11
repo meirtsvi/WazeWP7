@@ -1,0 +1,44 @@
+N zoomout_button
+I rm_zoomout
+P 0 0
+A zoomout
+B -1 -2 94 94
+S show_screen_icons
+
+N zoomin_button
+I rm_zoomin
+P -94 0
+A zoomin
+B -1 -2 94 94
+S show_screen_icons
+
+N Compass
+E Compass
+P 48 172
+S orientation_mode
+
+N Compass_north
+I north_off
+I north_touch
+P 0 123
+B -1 -2 94 94
+A toggleorientation
+S orientation_mode
+
+N map_update_shortcut
+I update_map_button
+I update_map_button_recording
+P -94 94
+A map_updates_menu
+B -1 -2 94 94
+S new_roads
+C editor_shortcut 1
+
+N recording_shortcut
+I record_new_roads
+I update_map_button_recording
+P -94 94
+A togglenewroads
+B -1 -2 94 94
+S new_roads
+C editor_shortcut 2
