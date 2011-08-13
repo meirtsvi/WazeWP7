@@ -54,7 +54,7 @@
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="NBidi">
-      <HintPath>Bin\Debug\NBidi.dll</HintPath>
+      <HintPath>.\NBidi.dll</HintPath>
     </Reference>
     <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization" />
@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Serialization" />
     <Reference Include="ZlibWP7">
-      <HintPath>..\ZlibWP7\Bin\Debug\ZlibWP7.dll</HintPath>
+      <HintPath>..\ZlibWP7\Bin\Release\ZlibWP7.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
