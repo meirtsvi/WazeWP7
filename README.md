@@ -23,6 +23,7 @@ License
 - All WazeWP7 code and extensions themselves are are licensed under the GPL v2 which can be read here: http://www.gnu.org/licenses/gpl.html
 - [Waze](www.waze.com) source code by default uses waze APIs subject to the TOS.
 - [Cibyl](www.cibyl.org) source code is distributed with GPL license.
+- ZLib library in use is taken from http://www.componentace.com.
 
 Installation
 ------------
