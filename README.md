@@ -5,7 +5,7 @@ What is WazeWP7?
 - The work is based on a Waze port of their C code into Java for supporting BlackBerry.
 - The main tool used for this conversion is Cibyl the originally converts C code to Java. The project contains altered Cibyl source code for producing .NET WIndows Phone assembly code instead of Java bytecode.
 
-The conversion project as well as deeper explanation of the tools is described in my blog: http://meirtsvi.wordpress.com/
+The conversion project as well as deeper explanation of the tools is described in my blog: http://meirtsvi.wordpress.com/2011/05/17/waze-for-wp7-the-journey-begins/
 
 ###This is private port of Waze. Waze does not take any responsibility or support this version.
 
