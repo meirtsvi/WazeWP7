@@ -67,3 +67,17 @@ Now you can simply execute Waze from within the WazeWP7 visual studio solution.
 
 4. Run Waze from Visual Studio in debug mode. All roadmap_logs calls will be printed out to output pane.
 
+### How do i compile Cibyl after I made changes in its engine or in one of the CLIB cibyl implementation?
+
+1. cd <SRC_DIR>/cibyl/build
+
+2. export CIBYL_BASE=<SRC_DIR>/cibyl/
+
+3. export PATH=$PATH:<SRC_DIR>/cibyl/mips-cibyl-elf/bin/
+
+4. cmake ..
+
+This will create the necessary makefile for further compilations.
+Now you can edit every Cibyl/Cibyl CLIB file and compile it using step (5)
+
+5. make clean all install
