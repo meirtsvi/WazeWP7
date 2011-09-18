@@ -181,6 +181,7 @@ public class Syscalls
         AsyncNet async = (AsyncNet)CRunTime.objectRepository[__async];
         async.stopRead();
     }
+
     public static void NOPH_Bitmap_Waze_resetARGB(int c_bitmap, int width, int height)
     {
         //todomt
@@ -190,6 +191,7 @@ public class Syscalls
         int dataTransparent[] = new int[width * height];
            bitmap.setARGB(dataTransparent, 0, width, 0, 0, width, height);*/
     }
+
     public static int NOPH_Bitmap_getBitmapFromBytes(int buf, int size, int scale_factor)
     {
         //todomt

@@ -2843,8 +2843,8 @@ void RTAlerts_get_report_info_str( RTAlert *pAlert, char* buf, int buf_len )
     else
     	tmpStr = roadmap_lang_get("");
 
+	 
   	snprintf( buf, buf_len, "%s", tmpStr );
-
 
     if (timeDiff < 60)
         snprintf( buf  + strlen( buf ), buf_len - strlen( buf ),
@@ -2853,7 +2853,8 @@ void RTAlerts_get_report_info_str( RTAlert *pAlert, char* buf, int buf_len )
         snprintf( buf  + strlen( buf ), buf_len - strlen( buf ),
                 roadmap_lang_get("%d minutes ago"), timeDiff/60 );
     else
-        snprintf( buf  + strlen( buf ), buf_len - strlen( buf ), roadmap_lang_get("%2.1f hours ago"), (float)timeDiff/3600 );
+		//snprintf( buf  + strlen( buf ), buf_len - strlen( buf ), roadmap_lang_get("%2.1f hours ago"), (float)timeDiff/3600 );
+        snprintf( buf  + strlen( buf ), buf_len - strlen( buf ), roadmap_lang_get("%d hours ago"), (int)timeDiff/3600 );
 }
 
 /**
@@ -4208,7 +4209,6 @@ void report_alert(int iAlertType, const char * szDescription, int iDirection, co
 
     ssd_dialog_hide_current(dec_close);
 
-	roadmap_log(ROADMAP_ERROR, "mt - report_alert");
 #if (defined(__SYMBIAN32__) && !defined(TOUCH_SCREEN)) || (defined (RIMAPI) && RIMAPI_OS_VER>= 5) || defined (IPHONE) || defined (ANDROID)
 	on_keyboard_closed(1, "",AlertConext);
 /*    ShowEditboxCamera(roadmap_lang_get("Additional Details"), "", roadmap_lang_get("Add image"), roadmap_lang_get("Send"), roadmap_lang_get("Change image"),

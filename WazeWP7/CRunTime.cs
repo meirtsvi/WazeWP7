@@ -271,6 +271,9 @@ using System.Collections.Generic;
             int i = 0;
             int len = 0;
 
+            if (address == 0)
+                return "";
+
             while (CRunTime.memoryReadByte(startAddress + len) != 0)
             {
                 len++;

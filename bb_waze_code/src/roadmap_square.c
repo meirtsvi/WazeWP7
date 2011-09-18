@@ -903,9 +903,9 @@ int roadmap_square_view (int *square, int size, RoadMapArea *squares_area) {
       squares_area->north = position.latitude;
    }
 
-#ifndef J2ME
+//#ifndef J2ME
 	roadmap_square_get_tiles (&peripheral, RoadMapScaleCurrent);
-#endif
+//#endif
 	RoadMapSquareForceUpdateMode = 0;
    //printf("count: %d filter: %d \n", count, filter_count);
    return count;

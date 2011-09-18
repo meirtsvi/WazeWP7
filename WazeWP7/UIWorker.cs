@@ -12,7 +12,7 @@ using System.Windows;
  * Events are added to 2 queues which are a private variable of this class, "queue" and
  * "priorityQueue". After an event finishes running, the next event is taken from the priority
  * if one exists in it, otherwise it is taken from the queue. An event  is added to the prioirity
- * queue iff the last bool parameter in addUIEvent equals true.
+ * queue if the last Boolean parameter in addUIEvent equals true.
  *
  * An event is represented using the private class "Item". When calling UIEvent,
  * the event is stored as an Item object in the queue.
@@ -32,16 +32,22 @@ using System.Windows;
         static private UIWorker uiWorker;
 
         private bool should_quit = false;
-        private List<object> queue = new List<object>(100);
-        private List<object> priorityQueue = new List<object>(50);
+
+        private Queue<object> queue = new Queue<object>();
+        private Queue<object> priorityQueue = new Queue<object>();
+        private object lockQueues = new object();
+
         // private static int UIEventLock = 1; // This will be locked each time the UI thread is running. 
         private Thread thread;
         private static int c_sp;
         private bool isWaiting = false;
         private int userDrawCount;
+        //private Item cur_item;
+
         private static int msgAddr; // the address to which exception messages should be pushed
         private static int msgAddrSize;
         private static int c_write_to_log;
+        
 
         public interface ValidityCheck
         {
@@ -54,7 +60,8 @@ using System.Windows;
             public String logString;
             public ValidityCheck validity_check;
             public bool user_draw;
-            public bool equals(Object other)
+            
+            public override bool Equals(object other)
             {
                 Item o = (Item)other;
                 if (addr != o.addr) return false;
@@ -65,9 +72,18 @@ using System.Windows;
 
                 return true;
             }
+
+            public override int GetHashCode()
+            {
+                return 
+                    addr.GetHashCode() ^ 
+                    p1.GetHashCode() ^
+                    p2.GetHashCode() ^
+                    p3.GetHashCode() ^
+                    p4.GetHashCode();
+            }
         }
 
-        private Item cur_item;
         static public void init(bool run_in_thread)
         {
             uiWorker = new UIWorker(run_in_thread);
@@ -85,7 +101,6 @@ using System.Windows;
             //thread.setPriority(Thread.MAX_PRIORITY);
             if (run_in_thread) thread.Start();
         }
-
 
         public void run()
         {
@@ -145,7 +160,6 @@ using System.Windows;
             }
         }
 
-
         public static int pendingDraws()
         {
             return uiWorker.getPendingDraws();
@@ -153,7 +167,7 @@ using System.Windows;
 
         public int getPendingDraws()
         {
-            lock (queue)
+            lock (lockQueues)
             {
                 return userDrawCount;
             }
@@ -182,27 +196,28 @@ using System.Windows;
             {
                 o = null;
 
-                lock (queue)
+                lock (lockQueues)
                 {
                     if (priorityQueue.Count > 0)
                     {
-                        o = (Item)priorityQueue[0];
-                        priorityQueue.RemoveAt(0);
-
+                        o = priorityQueue.Dequeue() as Item;
                     }
                     else if (queue.Count > 0)
                     {
-                        o = (Item)queue[0];
-                        queue.RemoveAt(0);
-                    }
+                        o = queue.Dequeue() as Item;
+                    }                    
                     else
                     {
+                        // Making sure no elements 
+                        // adds to the queues will querying the queues
                         if (forever)
                         {
                             try
                             {
                                 isWaiting = true;
-                                Monitor.Wait(queue);
+
+                                // Wait until another thread insert new elements to the queue
+                                Monitor.Wait(lockQueues);
                                 isWaiting = false;
                             }
                             catch (Exception e)
@@ -211,11 +226,19 @@ using System.Windows;
                             }
                         }
                     }
-                    cur_item = o;
-                    if ((o != null) && o.user_draw) userDrawCount--;
+                    
+                    //cur_item = o;
+                    if ((o != null) && o.user_draw)
+                    {
+                        userDrawCount--;
+                    }
                 }
 
-                if (!forever && (o == null)) return;
+                if (!forever && (o == null))
+                {
+                    return;
+                }
+
                 if (o != null)
                 {
                     try
@@ -226,10 +249,15 @@ using System.Windows;
                             int length;
 
                             str_bytes = Syscalls.StringToAscii(o.logString);
-                            if (str_bytes.Length > msgAddrSize) // do not overflow size of buffer in roadmap_main
+                            if (str_bytes.Length > msgAddrSize)
+                            {
+                                // do not overflow size of buffer in roadmap_main
                                 length = msgAddrSize;
+                            }
                             else
+                            {
                                 length = str_bytes.Length;
+                            }
 
                             lock (this)
                             {
@@ -342,11 +370,14 @@ using System.Windows;
             item.validity_check = obj;
             item.logString = logString;
 
-            lock (queue)
+            lock (lockQueues)
             {
                 if (!should_quit)
                 {
-                    if (user_draw) userDrawCount++;
+                    if (user_draw)
+                    {
+                        userDrawCount++;
+                    }
 
                     if (priority)
                     {
@@ -360,7 +391,7 @@ using System.Windows;
                             }
                              */
 
-                            priorityQueue.Add(item);
+                            priorityQueue.Enqueue(item);
                         }
                     }
                     else
@@ -374,14 +405,15 @@ using System.Windows;
                                          " cur_addr:" + cur_item.addr +
                                          " addr:" + addr + " p1:" + p1 + " p2:" + p2 + " p3:" + p3 + " p4:" + p4);
                             }*/
-                            queue.Add(item);
+                            queue.Enqueue(item);
                         }
                     }
 
                     if (isWaiting)
                     {
-                        Monitor.Pulse(queue);
+                        Monitor.Pulse(lockQueues);
                     }
+
                     return true;
                 }
 
@@ -391,10 +423,10 @@ using System.Windows;
 
         public void quit()
         {
-            lock (queue)
+            lock (lockQueues)
             {
                 should_quit = true;
-                Monitor.PulseAll(queue);
+                Monitor.PulseAll(lockQueues);
             }
         }
 

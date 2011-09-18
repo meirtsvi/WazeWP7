@@ -132,7 +132,7 @@ L_1002c5c:
 // 0x01002c5c: 0x1002c5c: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x01002c60: 0x1002c60: jal   0x100e6a0 addiu a0, a0, 144
+// 0x01002c60: 0x1002c60: jal   0x100e81c addiu a0, a0, 144
 	ldloc.1
 	ldc.i4 144
 	add
@@ -142,7 +142,7 @@ L_1002c5c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_100e6a0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_100e81c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -365,7 +365,7 @@ L_1002ca8:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x01002d08: 0x1002d08: jal   0x10a5830 sw    zero, 28(sp)
+// 0x01002d08: 0x1002d08: jal   0x10a5950 sw    zero, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -379,7 +379,7 @@ L_1002ca8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl125::roadmap_res_download_10a5830(int32,int32,int32,int32,int32)
+	call int32 Cibyl125::roadmap_res_download_10a5950(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -399,7 +399,7 @@ L_1002d10:
 // 0x01002d20: 0x1002d20: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x01002d24: 0x1002d24: jal   0x100e6f0 addiu a0, a0, 160
+// 0x01002d24: 0x1002d24: jal   0x100e86c addiu a0, a0, 160
 	ldloc.1
 	ldc.i4 160
 	add
@@ -409,7 +409,7 @@ L_1002d10:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_integer_100e6f0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_integer_100e86c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -571,7 +571,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01002d94: 0x1002d94: sw    ra, 20(sp)
-// 0x01002d98: 0x1002d98: jal   0x100e428 addiu a0, a0, 176
+// 0x01002d98: 0x1002d98: jal   0x100e5a4 addiu a0, a0, 176
 	ldloc.1
 	ldc.i4 176
 	add
@@ -581,7 +581,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_100e428(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_100e5a4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -768,7 +768,7 @@ L_1002ddc:
 	ldc.i4 16777216
 	stloc.1
 L_1002e30:
-// 0x01002e30: 0x1002e30: jal   0x106d5bc addiu a0, a0, 10592
+// 0x01002e30: 0x1002e30: jal   0x106d738 addiu a0, a0, 10592
 	ldloc.1
 	ldc.i4 10592
 	add
@@ -778,7 +778,7 @@ L_1002e30:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl82::Realtime_NotifyOnLogin_106d5bc(int32,int32,int32,int32,int32)
+	call int32 Cibyl82::Realtime_NotifyOnLogin_106d738(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -1233,7 +1233,7 @@ __CIBYL_javamethod_begin:
 // 0x01002f90: 0x1002f90: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x01002f94: 0x1002f94: jal   0x104e388 addiu a0, a0, 21804
+// 0x01002f94: 0x1002f94: jal   0x104e504 addiu a0, a0, 21804
 	ldloc.1
 	ldc.i4 21804
 	add
@@ -1243,7 +1243,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl58::roadmap_path_preferred_104e388(int32,int32,int32,int32,int32)
+	call int32 Cibyl58::roadmap_path_preferred_104e504(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 5
@@ -5089,10 +5089,10 @@ L_1003980:
 // 0x01003a0c: 0x1003a0c: addu  a0, s1, zero
 	ldloc 9
 	stloc.1
-// 0x01003a10: 0x1003a10: jal   0x1053f4c addu  a1, s2, zero
+// 0x01003a10: 0x1003a10: jal   0x10540c8 addu  a1, s2, zero
 	ldloc 10
 	stloc.2
-	call void Cibyl62::roadmap_tile_remove_1053f4c()
+	call void Cibyl62::roadmap_tile_remove_10540c8()
 // --- basic block ---
 // 0x01003a18: 0x1003a18: j	 0x1003a40 addu  v1, zero, zero
 	ldc.i4.s 0
@@ -5220,7 +5220,7 @@ L_1003a64:
 	ldc.i4.s 24
 	add
 	stloc.3
-// 0x01003a6c: 0x1003a6c: jal   0x105408c addiu a3, sp, 28
+// 0x01003a6c: 0x1003a6c: jal   0x1054208 addiu a3, sp, 28
 	ldloc.0
 	ldc.i4.s 28
 	add
@@ -5230,7 +5230,7 @@ L_1003a64:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl62::roadmap_tile_load_105408c(int32,int32,int32,int32,int32)
+	call int32 Cibyl62::roadmap_tile_load_1054208(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6

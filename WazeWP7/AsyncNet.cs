@@ -78,6 +78,10 @@ public class AsyncNet : UIWorker.ValidityCheck
             queue = new NetQueue();
             queue.init();
         }
+        else
+        {
+            queue = queue;
+        }
 
         queue.add(this);
     }
@@ -87,10 +91,11 @@ public class AsyncNet : UIWorker.ValidityCheck
         return is_valid;
     }
 
-    static HttpWebResponse resp = null;
-    static ManualResetEvent http_response_sync = new ManualResetEvent(false);
     public void runNetLoop()
     {
+        ManualResetEvent http_response_sync = new ManualResetEvent(false);
+        HttpWebResponse resp = null;
+
         int registeredHandle = 0;
         try
         {
@@ -100,12 +105,10 @@ public class AsyncNet : UIWorker.ValidityCheck
             if (method == 0) conn.Method = "GET";
             else conn.Method = "POST";
 
-            /* todomt
-         if (updateTime != null) {
-          conn.setRequestProperty("If-Modified-Since", updateTime);
-         }
-             */
-
+            if (updateTime != null && updateTime.Trim().Length > 0) {
+                conn.Headers["IfModifiedSince"] = updateTime;
+            }
+            
             registeredHandle = CRunTime.registerObject(conn);
 
         }
@@ -144,6 +147,7 @@ public class AsyncNet : UIWorker.ValidityCheck
                 if (Stream == null)
                 {
                     resp = null;
+                    Exception exp = null;
                     try
                     {
                         http_response_sync.Reset();
@@ -155,21 +159,18 @@ public class AsyncNet : UIWorker.ValidityCheck
                                 resp = (HttpWebResponse)conn.EndGetResponse(result);
                                 http_response_sync.Set();
                             }
-                            catch (WebException we)
+                            catch (Exception we)
                             {
                                 resp = null;
-                                http_response_sync.Set();
-                            }
-                            catch (NotSupportedException nse)
-                            {
-                                resp = null;
+                                exp = we;
                                 http_response_sync.Set();
                             }
                         }, null);
                     }
-                    catch (InvalidOperationException ioe)
+                    catch (Exception ioe)
                     {
                         resp = null;
+                        exp = ioe;
                         http_response_sync.Set();
                     }
 
@@ -202,21 +203,29 @@ public class AsyncNet : UIWorker.ValidityCheck
                     }
                     else
                     {
-                        //buffer = new byte[4096];
-                        string res = "HTTP/1.1 404 Not Found\r\n";
-                        /*byte[] res_bytes*/buffer = Syscalls.StringToAscii(res);
-                        //res_bytes.CopyTo(buffer, 0);
-                        buffer_len = /*res_bytes.Length;*/buffer.Length;
-                        buffer_cur_ptr = 0;
-                        do_read = false;
+                        UIWorker.addUIEventLog("Exception in async net read: " + exp);
+                        eof = true;
+                        quit = true;
+                        ////buffer = new byte[4096];
+                        //string res = "HTTP/1.1 404 Not Found\r\n";
+                        ///*byte[] res_bytes*/buffer = Syscalls.StringToAscii(res);
+                        ////res_bytes.CopyTo(buffer, 0);
+                        //buffer_len = /*res_bytes.Length;*/buffer.Length;
+                        //buffer_cur_ptr = 0;
+                        //do_read = false;
                     }
                 }
                 else
                 {
                     if (buffer_cur_ptr == buffer_len)
                     {
-                        buffer_len = Stream.Read(buffer,0,buffer.Length);
-                        if (buffer_len == -1) eof = true;
+                        buffer_len = Stream.Read(buffer, 0, buffer.Length);
+                        if (buffer_len == -1)
+                        {
+                            eof = true;
+                            Stream.Dispose();
+                            resp.Dispose();
+                        }
                         buffer_cur_ptr = 0;
                     }
                 }
@@ -234,6 +243,7 @@ public class AsyncNet : UIWorker.ValidityCheck
 
             // Call read CB
             if (is_valid) UIWorker.addUIEventValid(c_input_ready_cb, input_id, 0, 0, 0, false, this);
+
         }
     }
 
@@ -352,6 +362,7 @@ class Worker
                     }
                     catch (SynchronizationLockException e)
                     {
+                        Logger.log("Sync exception " + e);
                     }
                 }
                 if (quit) return;

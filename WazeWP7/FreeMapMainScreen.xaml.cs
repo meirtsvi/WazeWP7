@@ -419,7 +419,7 @@ namespace WazeWP7
 
                         FreeMapMainScreen.get().LayoutRoot.Children.Add(ad);
                     };
-
+                    ApplicationBar.MenuItems.Add(appBarMenuItem);
 
 
                     appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
@@ -547,16 +547,20 @@ namespace WazeWP7
 
             }
 
-            if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
+
+            if (text.ToLower().Equals("Saved locations") || text.Equals("מקומות שמורים"))
+            //if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
             {
-                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/reset.png", UriKind.Relative));
-                appBarButton.Text = "Exit";
-                appBarButton.IconUri = new Uri("Resources/reset.png", UriKind.Relative);
+                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/favorites.png", UriKind.Relative));
+                appBarButton.Text = "Saved Locs";
+                appBarButton.IconUri = new Uri("Resources/favorites.png", UriKind.Relative);
                 appBarButton.Click += delegate
                 {
-                    MessageBoxResult res = MessageBox.Show("Are you sure you want to exit", "Exit", MessageBoxButton.OKCancel);
-                    if (res == MessageBoxResult.OK)
-                        new_item.CallCallback();
+                    new_item.CallCallback();
+
+                    //MessageBoxResult res = MessageBox.Show("Are you sure you want to exit", "Exit", MessageBoxButton.OKCancel);
+                    //if (res == MessageBoxResult.OK)
+                    //    new_item.CallCallback();
                 };
 
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
