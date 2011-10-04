@@ -6,16 +6,19 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress">
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False" 
+    BackKeyPress="PhoneApplicationPage_BackKeyPress" 
+    OrientationChanged="PhoneApplicationPage_OrientationChanged">
+    <!--Hiding systray to get more screen space, aded orientation events, and enabling support for landscape-->
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" 
-          Background="Transparent" Height="768" Width="480" 
+          Background="Transparent" Height="800" Width="480" 
           MouseLeftButtonDown="LayoutRoot_MouseLeftButtonDown" 
           MouseLeftButtonUp="LayoutRoot_MouseLeftButtonUp" 
           MouseMove="LayoutRoot_MouseMove">

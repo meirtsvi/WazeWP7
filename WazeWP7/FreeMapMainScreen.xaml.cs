@@ -84,6 +84,7 @@ namespace WazeWP7
         private int isLandscapeScreen;
         private bool isUIWorkerInit = false;
         private static bool dummy = false;
+        private PageOrientation m_CurrentOrientation;
 
         public Canvas MainGraphics;
 
@@ -100,6 +101,9 @@ namespace WazeWP7
         {
             // Set the page's ApplicationBar to a new instance of ApplicationBar
             ApplicationBar = new ApplicationBar();
+
+            // Hide the app bar by default:
+            ApplicationBar.IsVisible = false;
 
         }
 
@@ -254,7 +258,9 @@ namespace WazeWP7
 
             Syscalls.progressDialog = new ProgressDialog(this);
 
-            isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
+            //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
+            isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
+            this.
 
             CopySounds();
 
@@ -271,14 +277,60 @@ namespace WazeWP7
 
         }
 
-        public int getVisibleWidth()
+        /// <summary>
+        /// Check if phone is currently reported to be landscape.
+        /// </summary>
+        /// <returns></returns>
+        private bool IsPhoneLandscape()
         {
-            return 480;
+            return (m_CurrentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
         }
 
+        private static int _deviceHight = 800;
+        private static int _deviceWidth = 480;
+
+        /// <summary>
+        /// Get the drawing Width according to the phone's position
+        /// </summary>
+        /// <returns></returns>
+        public int getVisibleWidth()
+        {
+
+            if (IsPhoneLandscape())
+                {
+                    isLandscapeScreen = 1;
+
+                    return _deviceHight;
+                }
+                else
+                {
+                    isLandscapeScreen = 0;
+                    return _deviceWidth;
+                }
+           
+        }
+
+
+        /// <summary>
+        /// Get the drawing Hight according to the phone's position
+        /// </summary>
+        /// <returns></returns>
         public int getVisibleHeight()
         {
-            return 745;
+
+
+            if (IsPhoneLandscape())
+            {
+                isLandscapeScreen = 1;
+                return _deviceWidth;
+            }
+            else
+            {
+                isLandscapeScreen = 0;
+                return _deviceHight;
+            }
+           
+
         }
 
         public static FreeMapMainScreen get() { return m_this; }
@@ -400,7 +452,7 @@ namespace WazeWP7
 
                 // Create a new menu item with the localized string from AppResources
                 ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(text);
-                if (text.ToLower().Equals("About") || text.Equals("אודות"))
+                if (text.ToLower().Equals("about") || text.Equals("אודות"))
                 {
                     appBarMenuItem.Click += delegate
                     {
@@ -418,6 +470,11 @@ namespace WazeWP7
                         ad.SetVersion(s);
 
                         FreeMapMainScreen.get().LayoutRoot.Children.Add(ad);
+
+
+                        // Hide bar after asking to show me
+                        ApplicationBar.IsVisible = false;                    
+
                     };
                     ApplicationBar.MenuItems.Add(appBarMenuItem);
 
@@ -465,6 +522,11 @@ namespace WazeWP7
                                 line = reader.ReadLine();
                             }
                         }*/
+
+
+                        // Hide bar after asking to show me
+                        ApplicationBar.IsVisible = false;                    
+
                         MessageBox.Show("Finished");
 
                     };
@@ -474,6 +536,11 @@ namespace WazeWP7
                     appBarMenuItem.Click += (delegate
                     {
                         new_item.CallCallback();
+
+
+                        // Hide bar after asking to show me
+                        ApplicationBar.IsVisible = false;                    
+
                     });
                 }
                 ApplicationBar.MenuItems.Add(appBarMenuItem);
@@ -489,6 +556,10 @@ namespace WazeWP7
                 appBarButton.Click += delegate
                 {
                     new_item.CallCallback();
+
+                    // Hide bar after asking to show me
+                    ApplicationBar.IsVisible = false;
+
                 };
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
@@ -505,6 +576,9 @@ namespace WazeWP7
                 appBarButton.Click += delegate
                 {
                     new_item.CallCallback();
+                    
+                    // Hide bar after asking to show me
+                    ApplicationBar.IsVisible = false;                    
                 };
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
@@ -538,6 +612,10 @@ namespace WazeWP7
                 appBarButton.Click += delegate
                 {
                     new_item.CallCallback();
+
+                    // Hide bar after asking to show me
+                    ApplicationBar.IsVisible = false;                    
+
                 };
 
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
@@ -548,15 +626,22 @@ namespace WazeWP7
             }
 
 
-            if (text.ToLower().Equals("Saved locations") || text.Equals("מקומות שמורים"))
+            // Use favorites as the app bar icon instead of exit.
+            // We can still exit from the menu or simply use the home button and let Windows decide when it's time to clear the memory.
+            if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי"))
             //if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
             {
                 ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/favorites.png", UriKind.Relative));
-                appBarButton.Text = "Saved Locs";
+                appBarButton.Text = "Favorites";
                 appBarButton.IconUri = new Uri("Resources/favorites.png", UriKind.Relative);
                 appBarButton.Click += delegate
                 {
                     new_item.CallCallback();
+
+
+                    // Hide bar after asking to show me
+                    ApplicationBar.IsVisible = false;                    
+
 
                     //MessageBoxResult res = MessageBox.Show("Are you sure you want to exit", "Exit", MessageBoxButton.OKCancel);
                     //if (res == MessageBoxResult.OK)
@@ -1071,11 +1156,15 @@ namespace WazeWP7
         private void checkOrientationChanged(int w, int h)
         {
             //calculate current orientation based on width and height
-            int isLandscape = w > h ? 1 : 0;
-            if (isLandscape == isLandscapeScreen)
-            {
-                return;
-            }
+
+            // Commented out, we use the size methods to calculate our size.
+            //int isLandscape = w > h ? 1 : 0;
+            //if (isLandscape == isLandscapeScreen)
+            //{
+            //    return;
+            //}
+            int isLandscape = isLandscapeScreen;
+
             if (!isUIWorkerInit)
             {
                 // verify that UIWorker is initialized
@@ -1083,7 +1172,7 @@ namespace WazeWP7
                 if (!isUIWorkerInit)
                     return;
             }
-            isLandscapeScreen = isLandscape;
+            //isLandscapeScreen = isLandscape;
             try
             {
                 if (c_on_orientation_change == 0)
@@ -1108,6 +1197,37 @@ namespace WazeWP7
 
         private void touchDownEvent(int x, int y)
         {
+            // On every touch on appbar area, reverse the appbar visability
+
+            int appBarArea = 0;
+            //if (IsPhoneLandscape())
+            //{
+            //    appBarArea = getVisibleWidth() - x;
+            //}
+            //else
+            //{
+                appBarArea = getVisibleHeight() - y;
+
+            //}
+
+            if (appBarArea < 60)
+            {
+                ApplicationBar.IsVisible = true;
+
+                // Auto hide after 10 sec.
+                Thread threadAutoHide = new Thread(new ThreadStart(
+                    delegate()
+                    {
+
+                        Thread.Sleep(15000);
+                        Dispatcher.BeginInvoke(() =>
+                        {
+                            ApplicationBar.IsVisible = false;
+                        });
+                    }));
+
+                threadAutoHide.Start();
+            }
             try
             {
                 if (c_on_canvas_button_pressed == 0)
@@ -1127,6 +1247,8 @@ namespace WazeWP7
             {
                 UIWorker.addUIEvent(c_on_canvas_button_pressed, x, y, 0, 0, true);
             }
+
+
 
         }
 
@@ -1243,6 +1365,25 @@ namespace WazeWP7
             ContentPanel_MouseMove(sender, e);
             UIElement el = (UIElement)sender;
             
+        }
+
+        /// <summary>
+        /// Listen to phone's oreientation changes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        {
+            //Keep the latest oreientation   
+            m_CurrentOrientation = e.Orientation;
+
+            // Update the layout size accordiing to orientaiton.
+              LayoutRoot.Height = getVisibleHeight();
+              LayoutRoot.Width = getVisibleWidth();
+
+            // Call the changed event for more internal updates.
+             checkOrientationChanged(getVisibleWidth(), getVisibleHeight());
+          
         }
 
 

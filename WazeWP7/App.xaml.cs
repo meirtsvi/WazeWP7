@@ -30,6 +30,7 @@ namespace WazeWP7
         {
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
+            
 
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)

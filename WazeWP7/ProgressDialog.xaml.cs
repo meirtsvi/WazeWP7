@@ -54,7 +54,7 @@ namespace WazeWP7
 
         internal void SetLabel(string label)
         {
-            inputLabel.Text = NBidi.NBidi.LogicalToVisual(label);
+            inputLabel.Text = label;
         }
 
     }

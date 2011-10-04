@@ -968,6 +968,7 @@ public class Syscalls
     public static int NOPH_FreemapMainScreen_get()
     {
         FreeMapMainScreen ret = (FreeMapMainScreen)FreeMapMainScreen.get();
+        
         int registeredHandle = CRunTime.registerObject(ret);
         return registeredHandle;
     }
@@ -1047,7 +1048,8 @@ public class Syscalls
     {
         //FreeMapMainScreen screen = (FreeMapMainScreen)CRunTime.objectRepository[__screen];
         String text = CRunTime.charPtrToString(__text);
-        WazeMenuItem menuItem = new WazeMenuItem(NBidi.NBidi.LogicalToVisual(text), ordinal, 0, wrapper_callback, callback);
+        WazeMenuItem menuItem = new WazeMenuItem(text, ordinal, 0, wrapper_callback, callback);
+
         miniMenuItems.Add(menuItem);
         /*
         screen.setMiniMenuItem(text, ordinal, wrapper_callback, callback);
@@ -1071,7 +1073,7 @@ public class Syscalls
                 {
                     miniMenu.Items.Add(menuItem);
                 }
-                WazeMenuItem meOnMapL2V = new WazeMenuItem(NBidi.NBidi.LogicalToVisual(FreeMapMainScreen.MeOnMapItem.text),
+                WazeMenuItem meOnMapL2V = new WazeMenuItem(FreeMapMainScreen.MeOnMapItem.text,
                                                            FreeMapMainScreen.MeOnMapItem.ordinal,
                                                            FreeMapMainScreen.MeOnMapItem.priority,
                                                            FreeMapMainScreen.MeOnMapItem.wrapper_callback,
@@ -1500,8 +1502,9 @@ public class Syscalls
                 tb.FontSize = font_size;
                 tb.FontStyle = FontStyles.Normal;
                 tb.Foreground = new SolidColorBrush(curr_pen);
-                
-                tb.Text = NBidi.NBidi.LogicalToVisual(text);
+
+                tb.Text = text;
+
                 tb.SetValue(Canvas.LeftProperty, (double)(copy_x));// - (tb.ActualWidth / 2)));
                 tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight + 5 ));
                 
@@ -1516,7 +1519,7 @@ public class Syscalls
                 tb.Foreground = new SolidColorBrush(curr_pen);
                 tb.SetValue(Canvas.LeftProperty, (double)(copy_x));// - (tb.ActualWidth / 2)));
                 tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight - 20.0));
-                tb.Text = NBidi.NBidi.LogicalToVisual(text);
+                tb.Text = text;
 
                 RotateTransform rt = new RotateTransform();
                 rt.Angle = copy_angle;

@@ -113,10 +113,10 @@ using System.Windows;
 
                 int c_start = CibylCallTable.getAddressByName("rim_start");
                 Logger.log("rim_start: " + c_start);
-                lock (this)
-                {
+                //lock (this)
+                //{
                     CibylCallTable.fcall(c_start, c_sp, 0, 0, 0, 0);
-                }
+                //}
 
             }
             catch (Exception t)
@@ -259,8 +259,8 @@ using System.Windows;
                                 length = str_bytes.Length;
                             }
 
-                            lock (this)
-                            {
+                            //lock (this)
+                            //{
                                 CRunTime.memcpy(msgAddr, str_bytes, 0, length);
                                 CRunTime.memoryWriteByte(msgAddr + length, 0);
                                 try
@@ -271,13 +271,13 @@ using System.Windows;
                                 {
                                     Logger.log("UIWORKER - print to log file :  Could not print out to log, message :" + o.logString + " Exception : " + e.ToString());
                                 }
-                            }
+                            //}
 
                         }
                         else if ((o.validity_check == null) || (o.validity_check.isValid()))
                         {
-                            lock (this)
-                            {
+                            //lock (this)
+                            //{
                                 //long start = DateTime.Now.Ticks;// System.currentTimeMillis();
                                 //Logger.log("calling addres "+ Integer.toHexString(o.addr));
                                 CibylCallTable.fcall(o.addr, c_sp, o.p1, o.p2, o.p3, o.p4);
@@ -298,7 +298,7 @@ using System.Windows;
                                 }
                                  */
 
-                            }
+                            //}
                         }
                     }
                     catch (Exception t)
@@ -343,8 +343,8 @@ using System.Windows;
 
         public int UIEventExecuteNow(int addr, int p1, int p2, int p3, int p4)
         {
-            lock (this)
-            {
+            //lock (this)
+            //{
                 try
                 {
                     return CibylCallTable.fcall(addr, c_sp, p1, p2, p3, p4);
@@ -354,7 +354,7 @@ using System.Windows;
                     Logger.log("UIWORKER - UIEventExecuteNow, could not finish call to addr : " + addr + " got exception : " + e);
                     return 0;
                 }
-            }
+            //}
 
         }
 
