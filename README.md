@@ -13,7 +13,7 @@ Pre-Requisites
 --------------
 
 - Visual Studio 2010 + SP1.
-- Windows Phone SDK 7.
+- Windows Phone SDK 7.1.
 - Latest Zune software.
 - Cygwin - during setup choose devel + python + perl.
 
