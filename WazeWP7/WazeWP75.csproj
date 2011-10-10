@@ -2454,181 +2454,181 @@
     <Content Include="Resources\search.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Resources\sound\eng\200.wma">
+    <Resource Include="Resources\sound\eng\200.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\200meters.wma">
+    <Resource Include="Resources\sound\eng\200meters.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\800.wma">
+    <Resource Include="Resources\sound\eng\800.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\800meters.wma">
+    <Resource Include="Resources\sound\eng\800meters.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\alert_1.wma">
+    <Resource Include="Resources\sound\eng\alert_1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\ApproachSpeedCam.wma">
+    <Resource Include="Resources\sound\eng\ApproachSpeedCam.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Arrive.wma">
+    <Resource Include="Resources\sound\eng\Arrive.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\click.wma">
+    <Resource Include="Resources\sound\eng\click.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\click_long.wma">
+    <Resource Include="Resources\sound\eng\click_long.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Exit.wma">
+    <Resource Include="Resources\sound\eng\Exit.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Fifth.wma">
+    <Resource Include="Resources\sound\eng\Fifth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\First.wma">
+    <Resource Include="Resources\sound\eng\First.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Fourth.wma">
+    <Resource Include="Resources\sound\eng\Fourth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\ft.wma">
+    <Resource Include="Resources\sound\eng\ft.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\KeepLeft.wma">
+    <Resource Include="Resources\sound\eng\KeepLeft.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\KeepRight.wma">
+    <Resource Include="Resources\sound\eng\KeepRight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\m.wma">
+    <Resource Include="Resources\sound\eng\m.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Police.wma">
+    <Resource Include="Resources\sound\eng\Police.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\rec_end.wma">
+    <Resource Include="Resources\sound\eng\rec_end.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\rec_start.wma">
+    <Resource Include="Resources\sound\eng\rec_start.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Roundabout.wma">
+    <Resource Include="Resources\sound\eng\Roundabout.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Second.wma">
+    <Resource Include="Resources\sound\eng\Second.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Seventh.wma">
+    <Resource Include="Resources\sound\eng\Seventh.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Sixth.wma">
+    <Resource Include="Resources\sound\eng\Sixth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Straight.wma">
+    <Resource Include="Resources\sound\eng\Straight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\Third.wma">
+    <Resource Include="Resources\sound\eng\Third.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\TickerPoints.wma">
+    <Resource Include="Resources\sound\eng\TickerPoints.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\TurnLeft.wma">
+    <Resource Include="Resources\sound\eng\TurnLeft.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\TurnRight.wma">
+    <Resource Include="Resources\sound\eng\TurnRight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\eng\within.wma">
+    <Resource Include="Resources\sound\eng\within.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\200.wma">
+    <Resource Include="Resources\sound\heb\200.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\200meters.wma">
+    <Resource Include="Resources\sound\heb\200meters.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\800.wma">
+    <Resource Include="Resources\sound\heb\800.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\800meters.wma">
+    <Resource Include="Resources\sound\heb\800meters.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\alert_1.wma">
+    <Resource Include="Resources\sound\heb\alert_1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\ApproachSpeedCam.wma">
+    <Resource Include="Resources\sound\heb\ApproachSpeedCam.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Arrive.wma">
+    <Resource Include="Resources\sound\heb\Arrive.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\click.wma">
+    <Resource Include="Resources\sound\heb\click.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\click_long.wma">
+    <Resource Include="Resources\sound\heb\click_long.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Exit.wma">
+    <Resource Include="Resources\sound\heb\Exit.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Fifth.wma">
+    <Resource Include="Resources\sound\heb\Fifth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\First.wma">
+    <Resource Include="Resources\sound\heb\First.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Fourth.wma">
+    <Resource Include="Resources\sound\heb\Fourth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\KeepLeft.wma">
+    <Resource Include="Resources\sound\heb\KeepLeft.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\KeepRight.wma">
+    <Resource Include="Resources\sound\heb\KeepRight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\m.wma">
+    <Resource Include="Resources\sound\heb\m.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Police.wma">
+    <Resource Include="Resources\sound\heb\Police.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\rec_end.wma">
+    <Resource Include="Resources\sound\heb\rec_end.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\rec_start.wma">
+    <Resource Include="Resources\sound\heb\rec_start.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Roundabout.wma">
+    <Resource Include="Resources\sound\heb\Roundabout.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Second.wma">
+    <Resource Include="Resources\sound\heb\Second.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Seventh.wma">
+    <Resource Include="Resources\sound\heb\Seventh.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Sixth.wma">
+    <Resource Include="Resources\sound\heb\Sixth.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Straight.wma">
+    <Resource Include="Resources\sound\heb\Straight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\Third.wma">
+    <Resource Include="Resources\sound\heb\Third.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\TickerPoints.wma">
+    <Resource Include="Resources\sound\heb\TickerPoints.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\TurnLeft.wma">
+    <Resource Include="Resources\sound\heb\TurnLeft.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\TurnRight.wma">
+    <Resource Include="Resources\sound\heb\TurnRight.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\sound\heb\within.wma">
+    <Resource Include="Resources\sound\heb\within.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="waze.png">

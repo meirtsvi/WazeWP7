@@ -91,6 +91,7 @@ namespace WazeWP7
                 gps.Start();
                 timer = new Timer(TimerCallback, null, 500, 500);
 
+                // uncomment in order to simulate car driving
 //                timerEmulator = new Timer(TimerCallbackEmulator, null, 20000, interval * 1000);
             }
         }
