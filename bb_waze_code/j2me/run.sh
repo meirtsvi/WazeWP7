@@ -10,3 +10,4 @@ cibyl-mips2java  --only-translate -d ../tmpclasses ../c/program
 cp *.j ../../../converted
 cp program.data.bin ../../../WazeWP7/Resources/
 cp CibylCallTable.java ../../../WazeWP7/CibylCallTable.cs
+
