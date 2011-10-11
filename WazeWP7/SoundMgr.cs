@@ -280,7 +280,7 @@ namespace WazeWP7
             SoundList list = (SoundList)CRunTime.getRegisteredObject(_list);
 
             if (list.count == SoundList.MAX_SOUND_LIST) return -1;
-            list.list[list.count] = name + ".wma";
+            list.list[list.count] = name + ".wav";
             list.count++;
             return list.count - 1;
         }

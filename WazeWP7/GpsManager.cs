@@ -16,6 +16,7 @@ namespace WazeWP7
 
         public GeoCoordinateWatcher gps;
         private static GpsManager instance;
+        private static GeoPositionStatus gpsStatus = GeoPositionStatus.Initializing;
         private static Timer timer;
         private static Timer timerEmulator;
         //private MIDlet midlet;
@@ -25,6 +26,10 @@ namespace WazeWP7
         //private String external_str = "External GPS";
         //private List menu;
         private GpsManager() { }
+
+        private static int c_pos1 = CibylCallTable.getAddressByName("roadmap_gpsj2me_pos1");
+        private static int c_pos2 = CibylCallTable.getAddressByName("roadmap_gpsj2me_pos2");
+        private static DateTime baseTime = new DateTime(1970, 1, 1, 0, 0, 0);
 
         private static int point_index = 0;
         private static List<GeoPosition<GeoCoordinate>> points;
@@ -57,7 +62,7 @@ namespace WazeWP7
                 s = sr.ReadLine();
             }
         }
-
+                
         public static GpsManager getInstance()
         {
             if (instance == null)
@@ -69,7 +74,7 @@ namespace WazeWP7
 
             return instance;
         }
-
+        
         /**
          * Starts receving of data (if not yet started).
          *  
@@ -80,13 +85,14 @@ namespace WazeWP7
             if (gps == null)
             {
                 gps = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
-                gps.MovementThreshold = 5;
                 gps.StatusChanged += new EventHandler<GeoPositionStatusChangedEventArgs>(gps_StatusChanged);
-                gps.PositionChanged += new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(gps_PositionChanged);
+                // gps.PositionChanged += new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(gps_PositionChanged);
+                // gps.MovementThreshold = 5;
                 gps.Start();
+                timer = new Timer(TimerCallback, null, 500, 500);
 
+                // uncomment in order to simulate car driving
 //                timerEmulator = new Timer(TimerCallbackEmulator, null, 20000, interval * 1000);
-//                timer = new Timer(TimerCallback, null, 10000, 1000);
             }
         }
 
@@ -98,40 +104,41 @@ namespace WazeWP7
         }
 
 
-        private static GeoPosition<GeoCoordinate> last_position = null;
-        private static DateTime last_update_time = DateTime.UtcNow;
+        // private static GeoPosition<GeoCoordinate> last_position = null;
+        // private static DateTime last_update_time = DateTime.UtcNow;
+        
         private void TimerCallback(object state)
         {
-            if (last_position != null && DateTime.UtcNow.Subtract(last_update_time).TotalSeconds > 3)
-            {
-                UpdatePosition(last_position);
-            }
+            if (gpsStatus != GeoPositionStatus.Ready) return;
+            
+            GeoPosition<GeoCoordinate> coordinate = gps.Position;
+            if (coordinate.Location.IsUnknown) return;
+
+            UpdatePosition(coordinate);
         }
 
         private void TimerCallbackEmulator(object state)
         {            
             if (point_index >= points.Count - 1)
                 point_index = 0;
-            last_position = points[point_index];
-            last_update_time = DateTime.UtcNow;
+            //last_position = points[point_index];
+            //last_update_time = DateTime.UtcNow;
             UpdatePosition(points[point_index++]);                        
         }
 
-
+        /*
         public void gps_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             UpdatePosition(e.Position);
             last_update_time = DateTime.UtcNow;
             last_position = e.Position;
         }
+        */
 
         private void UpdatePosition(GeoPosition<GeoCoordinate> position)
         {
             try
             {
-                int c_pos1 = CibylCallTable.getAddressByName("roadmap_gpsj2me_pos1");
-                int c_pos2 = CibylCallTable.getAddressByName("roadmap_gpsj2me_pos2");
-
                 UIWorker.addUIEvent(c_pos1,
                                     (int)(position.Location.Latitude * 1000000),
                                     (int)(position.Location.Longitude * 1000000),
@@ -140,7 +147,6 @@ namespace WazeWP7
 
 
                 DateTime Now = DateTime.Now.ToUniversalTime();
-                DateTime baseTime = new DateTime(1970, 1, 1, 0, 0, 0);
                 long currentTimeMillis = (Now - baseTime).Ticks / 10000;                
 
                 UIWorker.addUIEvent(c_pos2,
@@ -165,12 +171,11 @@ namespace WazeWP7
 
         void gps_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
         {
-            if (e.Status == GeoPositionStatus.Disabled || e.Status == GeoPositionStatus.NoData)
+            gpsStatus = e.Status;
+            if (gpsStatus == GeoPositionStatus.Disabled || gpsStatus == GeoPositionStatus.NoData)
             {
                 try
                 {
-                    int c_pos2 = CibylCallTable.getAddressByName("roadmap_gpsj2me_pos2");
-
                     UIWorker.addUIEvent(c_pos2, 'V', 0, 0, 0, false);
                 }
                 catch (Exception ex)
