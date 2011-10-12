@@ -61,9 +61,12 @@ NOPH_Graphics_t NOPH_Graphics_new(NOPH_Bitmap_t bitmap);
 void NOPH_Graphics_drawArc(NOPH_Graphics_t graphics, int x, int y, int width, int height, int startAngle, int arcAngle);
 void NOPH_Graphics_drawBitmap(NOPH_Graphics_t graphics, int x, int y, int width, int height, NOPH_Bitmap_t bitmap, int left, int top);
 void NOPH_Graphics_drawFilledPath(NOPH_Graphics_t graphics, int* xPts, int* yPts, int* pointTypes, int* offsets, int count); /* Not generated */
+void NOPH_Graphics_drawFilledPath4points(NOPH_Graphics_t graphics, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4); /* Not generated */
 void NOPH_Graphics_drawShadedFilledPath(NOPH_Graphics_t graphics, int* xPts, int* yPts, int* pointTypes, int* offsets, int count); /* Not generated */
+void NOPH_Graphics_drawShadedFilledPath4Points(NOPH_Graphics_t graphics, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4); /* Not generated */
 void NOPH_Graphics_drawLine(NOPH_Graphics_t graphics, int x1, int y1, int x2, int y2);
 void NOPH_Graphics_drawPathOutline(NOPH_Graphics_t graphics, int* xPts, int* yPts, int* pointTypes, int* offsets, int count, int closed); /* Not generated */
+void NOPH_Graphics_drawPathOutline4Points(NOPH_Graphics_t graphics, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int closed); /* Not generated */
 void NOPH_Graphics_drawText(NOPH_Graphics_t graphics, const char* text, int x, int y, int flags);
 void NOPH_Graphics_drawTextAngle(NOPH_Graphics_t graphics, const char* text, int x, int y, int flags, int angle); /* Not generated */
 void NOPH_Graphics_fillArc(NOPH_Graphics_t graphics, int x, int y, int width, int height, int startAngle, int arcAngle);
