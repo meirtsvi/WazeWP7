@@ -4,6 +4,7 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Windows.Resources;
+using System.Globalization;
 
 namespace WazeWP7
 {
@@ -43,11 +44,11 @@ namespace WazeWP7
             while (s != null)
             {
                 string[] items = s.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                double longitude = double.Parse(items[0]);
-                double latitude = double.Parse(items[1]);
-                double speed = double.Parse(items[2]);
-                double course = double.Parse(items[3]);
-                DateTime time = DateTime.Parse(items[5]);
+                double longitude = double.Parse(items[0], CultureInfo.InvariantCulture);
+                double latitude = double.Parse(items[1], CultureInfo.InvariantCulture);
+                double speed = double.Parse(items[2], CultureInfo.InvariantCulture);
+                double course = double.Parse(items[3], CultureInfo.InvariantCulture);
+                DateTime time = DateTime.Parse(items[5], CultureInfo.InvariantCulture);
 
                 GeoPosition<GeoCoordinate> position = new GeoPosition<GeoCoordinate>();
                 position.Location = new GeoCoordinate();
