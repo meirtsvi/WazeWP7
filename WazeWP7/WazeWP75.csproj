@@ -73,8 +73,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AsyncNet.cs" />
+    <Compile Include="BitmapInfo.cs" />
+    <Compile Include="CachedBitmap.cs" />
     <Compile Include="CibylCallTable.cs" />
     <Compile Include="CibylConfig.cs" />
+    <Compile Include="RTLMessageBox.xaml.cs">
+      <DependentUpon>RTLMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>
@@ -113,6 +118,10 @@
     <Page Include="AboutDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RTLMessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ProgressDialog.xaml">
       <Generator>MSBuild:Compile</Generator>

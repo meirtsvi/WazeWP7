@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Waze for WP7.5")]
+[assembly: AssemblyTitle("Waze")]
 [assembly: AssemblyDescription("Waze for Windows Phone 7.5")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Meir Tsvi")]

@@ -85,6 +85,7 @@ namespace WazeWP7
         private bool isUIWorkerInit = false;
         private static bool dummy = false;
         private PageOrientation m_CurrentOrientation;
+        private bool m_isMenuVisible = false;
 
         public Canvas MainGraphics;
 
@@ -103,9 +104,13 @@ namespace WazeWP7
             ApplicationBar = new ApplicationBar();
 
             // Hide the app bar by default:
-            ApplicationBar.IsVisible = false;
+            ApplicationBar.IsVisible = true;
+            PopApplicationBar();
+
+            ApplicationBar.StateChanged += new EventHandler<ApplicationBarStateChangedEventArgs>(ApplicationBar_StateChanged);
 
         }
+
 
 //        void CopySounds(object obj)
 //        {
@@ -252,11 +257,13 @@ namespace WazeWP7
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MainGraphics = new Canvas();
+            
             LayoutRoot.Children.Add(MainGraphics);
 
             BuildApplicationBar();
 
             Syscalls.progressDialog = new ProgressDialog(this);
+            Syscalls.rtlDialog = new RTLMessageBox(this);
 
             //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
             isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
@@ -281,7 +288,7 @@ namespace WazeWP7
         /// Check if phone is currently reported to be landscape.
         /// </summary>
         /// <returns></returns>
-        private bool IsPhoneLandscape()
+        public bool IsPhoneLandscape()
         {
             return (m_CurrentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
         }
@@ -370,6 +377,12 @@ namespace WazeWP7
              */
         }
 
+        /// <summary>
+        /// Refresh the graphics.
+        /// Repaint the screen using the update graphic element list.
+        /// This is heavy as eache change in the MainGraphics children wil trigger dependencies code.
+        /// </summary>
+        /// <param name="list"></param>
         public void refresh(List<UIElement> list)
         {
             Dispatcher.BeginInvoke(() =>
@@ -543,6 +556,7 @@ namespace WazeWP7
 
                     });
                 }
+
                 ApplicationBar.MenuItems.Add(appBarMenuItem);
             });
 
@@ -1197,7 +1211,38 @@ namespace WazeWP7
 
         private void touchDownEvent(int x, int y)
         {
-            // On every touch on appbar area, reverse the appbar visability
+
+            // If listbox is in progress, ignore map touch
+            if (Syscalls.MiniMenuIsOn)
+            {
+                return;
+            }
+
+            // Backdoor: Pressing on the GPS icon area will start emulating GPS on the device
+            if (x < 50 && y < 50)
+            {
+                // Auto hide on timeout.
+                Thread threadDispatchMessage = new Thread(new ThreadStart(
+                    delegate()
+                    {
+
+                        GpsManager.getInstance().SwitchGPSEmulation();
+                        if (GpsManager.getInstance().GPSEmulationIsOn)
+                        {
+                            MessageBoxFactory.messageBoxTimed("GPS", "אמולצית GPS הופעלה", "OK", 5);
+                        }
+                        else
+                        {
+                            MessageBoxFactory.messageBoxTimed("GPS", "אמולצית GPS כובתה", "OK", 5);
+
+                        }
+                    }));
+
+                threadDispatchMessage.Start();
+
+                
+            }
+
 
             int appBarArea = 0;
             //if (IsPhoneLandscape())
@@ -1210,24 +1255,14 @@ namespace WazeWP7
 
             //}
 
+
+            // Handle appbar visibility
             if (appBarArea < 60)
             {
-                ApplicationBar.IsVisible = true;
+                    PopApplicationBar();
+                }
 
-                // Auto hide after 10 sec.
-                Thread threadAutoHide = new Thread(new ThreadStart(
-                    delegate()
-                    {
 
-                        Thread.Sleep(15000);
-                        Dispatcher.BeginInvoke(() =>
-                        {
-                            ApplicationBar.IsVisible = false;
-                        });
-                    }));
-
-                threadAutoHide.Start();
-            }
             try
             {
                 if (c_on_canvas_button_pressed == 0)
@@ -1250,6 +1285,33 @@ namespace WazeWP7
 
 
 
+        }
+
+        private void PopApplicationBar()
+        {
+            // Open the application bar
+            ApplicationBar.IsVisible = true;
+
+            // Auto hide after 15 sec if menu is closed.
+            Thread threadAutoHide = new Thread(new ThreadStart(
+                delegate()
+                {
+
+                    // Wait before autohide if appbar menu is open:
+                    do
+                    {
+                        Thread.Sleep(15000);
+
+                    } while (m_isMenuVisible);
+
+                    // Menu is minimized, we are allowed to hide it.
+                    Dispatcher.BeginInvoke(() =>
+                    {
+                        ApplicationBar.IsVisible = false;
+                    });
+                }));
+
+            threadAutoHide.Start();
         }
 
         private void touchUpEvent(int x, int y)
@@ -1381,12 +1443,17 @@ namespace WazeWP7
               LayoutRoot.Height = getVisibleHeight();
               LayoutRoot.Width = getVisibleWidth();
 
+
             // Call the changed event for more internal updates.
              checkOrientationChanged(getVisibleWidth(), getVisibleHeight());
           
         }
 
 
+        void ApplicationBar_StateChanged(object sender, ApplicationBarStateChangedEventArgs e)
+        {
+            m_isMenuVisible = e.IsMenuVisible;
+        }
 
     }
 

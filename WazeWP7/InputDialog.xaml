@@ -7,7 +7,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="480" d:DesignWidth="480">
+    d:DesignHeight="480" d:DesignWidth="480" FlowDirection="LeftToRight" HorizontalContentAlignment="Center">
     
     <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
         <Grid Background="Transparent" Margin="10,10,-10,-298" Name="grid1">
@@ -15,12 +15,16 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Margin="12,17,0,28" Name="TitlePanel" />
-            <Grid Grid.Row="1" Margin="12,0,135,511" Name="ContentPanel">
-                <TextBox Height="68" HorizontalAlignment="Left" Margin="-2,72,0,0" Name="inputText" Text="" VerticalAlignment="Top" Width="327" FontSize="18" KeyUp="inputText_KeyUp" />
-                <TextBlock Height="43" Margin="17,18,31,0" Name="inputLabel" Text="" VerticalAlignment="Top" />
-                <Button Click="OkButton_Click" Content="OK" Height="73" HorizontalAlignment="Left" Margin="37,133,0,0" Name="OkButton" VerticalAlignment="Top" Width="133" />
-                <Button Click="CancelClick" Content="Cancel" Height="73" HorizontalAlignment="Left" Margin="169,133,0,0" Name="CancelButton" VerticalAlignment="Top" Width="133" />
+            <StackPanel Margin="118,17,-106,28" Name="TitlePanel" />
+            <Grid Margin="118,38,29,518" Name="ContentPanel" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="318*" />
+                    <ColumnDefinition Width="15*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Height="68" HorizontalAlignment="Left" Margin="-2,50,0,0" Name="inputText" Text="" VerticalAlignment="Top" Width="327" FontSize="18" KeyUp="inputText_KeyUp" TextAlignment="Right" Grid.ColumnSpan="2" />
+                <TextBlock Height="43" Margin="17,9,16,0" Name="inputLabel" Text="" VerticalAlignment="Top" TextAlignment="Right" />
+                <Button Click="OkButton_Click" Content="OK" Height="73" HorizontalAlignment="Left" Margin="37,107,0,0" Name="OkButton" VerticalAlignment="Top" Width="133" />
+                <Button Click="CancelClick" Content="Cancel" Height="73" HorizontalAlignment="Left" Margin="169,107,0,0" Name="CancelButton" VerticalAlignment="Top" Width="133" />
             </Grid>
         </Grid>
     </Grid>

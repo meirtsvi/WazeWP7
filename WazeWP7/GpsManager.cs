@@ -20,6 +20,15 @@ namespace WazeWP7
         private static GeoPositionStatus gpsStatus = GeoPositionStatus.Initializing;
         private static Timer timer;
         private static Timer timerEmulator;
+        private  bool m_GPSEmulationIsOn = false;
+        public  bool GPSEmulationIsOn
+        {
+            get
+            {
+                return m_GPSEmulationIsOn;
+            }
+        }
+            
         //private MIDlet midlet;
         //private String wait_msg;
         //private String not_found_msg;
@@ -91,10 +100,32 @@ namespace WazeWP7
                 // gps.MovementThreshold = 5;
                 gps.Start();
                 timer = new Timer(TimerCallback, null, 500, 500);
+                
+                timerEmulator = new Timer(TimerCallbackEmulator, null, 20000, interval * 1000);
+                timerEmulator.Change(10000, Timeout.Infinite);                    
+                m_GPSEmulationIsOn = false;
 
-                // uncomment in order to simulate car driving
-//                timerEmulator = new Timer(TimerCallbackEmulator, null, 20000, interval * 1000);
             }
+        }
+
+        /// <summary>
+        /// Switch between Real GPS and GPS Emulation.
+        /// </summary>
+        public void SwitchGPSEmulation()
+        {
+            if (GPSEmulationIsOn) // Currently emulated - switch to real
+            {
+                timerEmulator.Change(1000, Timeout.Infinite);
+                timer.Change(500, 500);
+                m_GPSEmulationIsOn = false;
+            }
+            else // currently real - switch to emulated.
+            {
+                timerEmulator.Change(1000, 2000);
+                timer.Change(1000, Timeout.Infinite);
+                m_GPSEmulationIsOn = true;
+            }
+
         }
 
 
@@ -108,6 +139,10 @@ namespace WazeWP7
         // private static GeoPosition<GeoCoordinate> last_position = null;
         // private static DateTime last_update_time = DateTime.UtcNow;
         
+        /// <summary>
+        /// Force update into wase every 2000 ms
+        /// </summary>
+        /// <param name="state"></param>
         private void TimerCallback(object state)
         {
             if (gpsStatus != GeoPositionStatus.Ready) return;
@@ -118,6 +153,10 @@ namespace WazeWP7
             UpdatePosition(coordinate);
         }
 
+        /// <summary>
+        /// Update wze with simulated gps data
+        /// </summary>
+        /// <param name="state"></param>
         private void TimerCallbackEmulator(object state)
         {            
             if (point_index >= points.Count - 1)
@@ -127,15 +166,10 @@ namespace WazeWP7
             UpdatePosition(points[point_index++]);                        
         }
 
-        /*
-        public void gps_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            UpdatePosition(e.Position);
-            last_update_time = DateTime.UtcNow;
-            last_position = e.Position;
-        }
-        */
-
+        /// <summary>
+        /// Update waze with new GPS coordinates
+        /// </summary>
+        /// <param name="position"></param>
         private void UpdatePosition(GeoPosition<GeoCoordinate> position)
         {
             try

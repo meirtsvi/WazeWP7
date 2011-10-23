@@ -31,18 +31,79 @@ class MessageBoxFactory {
                 string msgText,  int textSize,  string buttonText,
                                            int callback,  int numberOfSeconds,  int isModal)
     {
+        // TODO Eli:
+        // This box is always model which is wrong..
+        // if numberOfSeconds is non zero we should auto close, but MessageBox is always Modal and does not support closing from code.
+        // we will need to implement a non model message box calss for this scenario.
+
+                MessageBoxResult res = MessageBoxResult.None;
+
                 mre.Reset();
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    MessageBoxResult res = MessageBox.Show(msgText, titleText, MessageBoxButton.OK);
-                    if (res == MessageBoxResult.OK || res == MessageBoxResult.Yes)
+
+                    if (numberOfSeconds > 0)
                     {
-                        /*        Logger.log("Messagebox: " + msgText);*/
-                        if (callback != 0)
-                            UIWorker.addUIEvent(callback, 0, 0, 0, 0, true);
+                        Syscalls.rtlDialog.Show(titleText, msgText);
+
+                        // Auto hide on timeout.
+                        Thread threadAutoHide = new Thread(new ThreadStart(
+                            delegate()
+                            {
+
+                                Thread.Sleep(numberOfSeconds * 1000);
+
+                                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                                {
+                                    Syscalls.rtlDialog.Hide();
+                                    res = Syscalls.rtlDialog.Result;
+
+                                });
+                            }));
+
+                        threadAutoHide.Start();
+
                     }
-                    mre.Set();
+                    else
+                    {
+                        // Show dialog
+                        Syscalls.rtlDialog.Show(titleText, msgText);
+
+
+                        //res = MessageBox.Show(msgText, titleText, MessageBoxButton.OK);
+
+                    }
+
+
+
                 });
+
+                if (numberOfSeconds == 0)
+                {
+
+                    // Wait for use to press OK
+                    while (Syscalls.rtlDialog.Result == MessageBoxResult.None)
+                    {
+                        Thread.Sleep(100);
+                    }
+
+                    // Get result
+                    res = Syscalls.rtlDialog.Result;
+                }
+
+                    System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                               if (res == MessageBoxResult.OK || res == MessageBoxResult.Yes)
+                                {
+                                    Logger.log("Messagebox: " + msgText);
+                                    if (callback != 0)
+                                        UIWorker.addUIEvent(callback, 0, 0, 0, 0, true);
+                                }
+
+                                mre.Set();
+                    }
+
+                );
                 mre.WaitOne();
 
         /* todomt

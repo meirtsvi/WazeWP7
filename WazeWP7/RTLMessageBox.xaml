@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WazeWP7.RTLMessageBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="250" d:DesignWidth="336" Loaded="UserControl_Loaded">           
+    
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="250" Width="336" OpacityMask="{x:Null}" Opacity="0.85">
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Width="158*" />
+            <ColumnDefinition Width="174*" />-->
+        </Grid.ColumnDefinitions>
+        <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,7,17,0" Name="Title" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" FlowDirection="RightToLeft" />
+        <TextBlock Height="107" HorizontalAlignment="Right" Margin="0,59,16,0" Name="Message" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" TextWrapping="Wrap" FlowDirection="RightToLeft" />
+        <Button Content="OK" Height="59" HorizontalAlignment="Left" Margin="131,173,0,0" Name="okButton" VerticalAlignment="Top" Width="77" FontSize="18" Click="OkButton_Click" />
+    </Grid>
+</UserControl>

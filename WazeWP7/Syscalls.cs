@@ -32,6 +32,10 @@ public class Syscalls
     private static List<UIElement> children_list = new List<UIElement>();
     private static int c_on_invokeLater;
     private static Random random;
+    private static Dictionary<int, CachedBitmap> bitmapCacheStore = new Dictionary<int, CachedBitmap>();
+    private static Dictionary<int, BitmapInfo> bitmaps_info = new Dictionary<int, BitmapInfo>();
+
+
 
     /* These functions have dependencies and are therefore placed here */
     public static int __strlen(int src)
@@ -231,14 +235,26 @@ public class Syscalls
     private static int bitmap_registeredHandle;
     public static int NOPH_Bitmap_getBitmapResource(int __name)
     {
+        //// Try to get the bitmap from the cache store:
+        //if (bitmapCacheStore.ContainsKey(__name))
+        //{
+        //    bitmapCacheStore[__name].RegisteredHandle = CRunTime.registerObject(bitmapCacheStore[__name].Bitmap);
+        //    bitmaps_info.Add(bitmapCacheStore[__name].RegisteredHandle, bitmapCacheStore[__name].Info);
+        //    return bitmapCacheStore[__name].RegisteredHandle;
+        //}
+
         String name = "/WazeWP7;component/resources/" + CRunTime.charPtrToString(__name);
+        //Logger.log("Bitmap name:" + name);
         if (!FileExists(name))
         {
             name = "Userstore://" + CRunTime.charPtrToString(__name);
+
+            // ignore this file if we can find in in resources. this is usually commercial icon to be located on the map like banks, coffe shops etc.
             if (!FileExists(name))
             {
                 return 0;
             }
+
         }
 
         mre.Reset();
@@ -249,25 +265,22 @@ public class Syscalls
             Stream stream = GetFileStream(name, FileMode.Open);
             bitmap.SetSource(stream);
             bitmap_registeredHandle = CRunTime.registerObject(bitmap);
-            bitmaps_info.Add(bitmap_registeredHandle, new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight));
+            BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
+            
+            //if (!bitmapCacheStore.ContainsKey(__name))
+            //{
+            //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
+            //}
+
+            bitmaps_info.Add(bitmap_registeredHandle, info);
             mre.Set();
         });
         mre.WaitOne();
         return bitmap_registeredHandle;
     }
 
-    private class BitmapInfo
-    {
-        public BitmapInfo(int width, int height)
-        {
-            this.width = width;
-            this.height = height;
-        }
 
-        public int width, height;
-    }
 
-    private static Dictionary<int, BitmapInfo> bitmaps_info = new Dictionary<int, BitmapInfo>();
 
     //private static int bitmap_height;
     public static int NOPH_Bitmap_getHeight(int __bitmap)
@@ -1044,6 +1057,15 @@ public class Syscalls
     }
 
     static List<WazeMenuItem> miniMenuItems = new List<WazeMenuItem>();
+    
+    public static bool MiniMenuIsOn { 
+        get
+        {
+            return m_MiniMenuIsOn;
+        }
+    }
+
+    private static bool m_MiniMenuIsOn = false;
     public static void NOPH_FreemapMainScreen_setMiniMenuItem(int __screen, int __text, int ordinal, int wrapper_callback, int callback)
     {
         //FreeMapMainScreen screen = (FreeMapMainScreen)CRunTime.objectRepository[__screen];
@@ -1051,6 +1073,7 @@ public class Syscalls
         WazeMenuItem menuItem = new WazeMenuItem(text, ordinal, 0, wrapper_callback, callback);
 
         miniMenuItems.Add(menuItem);
+        m_MiniMenuIsOn = true;
         /*
         screen.setMiniMenuItem(text, ordinal, wrapper_callback, callback);
          */
@@ -1063,16 +1086,22 @@ public class Syscalls
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
                 ListBox miniMenu = new ListBox();
+                miniMenu.FlowDirection = FlowDirection.RightToLeft;
+
                 miniMenu.SetValue(Canvas.LeftProperty, (double)150);
                 miniMenu.SetValue(Canvas.TopProperty, (double)300);
                 miniMenu.BorderBrush = new SolidColorBrush(Colors.White);
                 miniMenu.Foreground = new SolidColorBrush(Colors.White);
                 miniMenu.Background = new SolidColorBrush(Colors.Black);
                 miniMenu.FontSize = 40;
+
+                // Build the menu items to display:
                 foreach (WazeMenuItem menuItem in miniMenuItems)
                 {
                     miniMenu.Items.Add(menuItem);
                 }
+
+                // Add Me on map as the last menu:
                 WazeMenuItem meOnMapL2V = new WazeMenuItem(FreeMapMainScreen.MeOnMapItem.text,
                                                            FreeMapMainScreen.MeOnMapItem.ordinal,
                                                            FreeMapMainScreen.MeOnMapItem.priority,
@@ -1080,21 +1109,29 @@ public class Syscalls
                                                            FreeMapMainScreen.MeOnMapItem.callback);
 
                 miniMenu.Items.Add(meOnMapL2V);
+                
+                // Handle user choice:
                 miniMenu.SelectionChanged += delegate(object sender, SelectionChangedEventArgs e)
                     {
                         ListBox lb = (ListBox)sender;
                         WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
                         screen.LayoutRoot.Children.Remove(miniMenu);
                         miniMenu = null;
+
+                        // Clear the menu
                         miniMenuItems.Clear();
+                        m_MiniMenuIsOn = false;
+
+                        // Fire the user selection:
                         selectedItem.CallCallback();
                     };
                 screen.LayoutRoot.Children.Add(miniMenu);
+                
                 //mre.Set();
             });
         //mre.WaitOne();
-//        
-//        screen.showMiniMenu();
+        
+        //screen.showMiniMenu();
     }
 
     public static int NOPH_GpsManager_connect(int __gm, int __url)
@@ -1193,7 +1230,7 @@ public class Syscalls
                 myEllipse.Height = copy_height;
                 myEllipse.SetValue(Canvas.LeftProperty, (double)copy_x);
                 myEllipse.SetValue(Canvas.TopProperty, (double)copy_y);
-
+                
                 children_list.Add(myEllipse);// graphics.Children.Add(myEllipse);
             }
             else
@@ -1232,6 +1269,7 @@ public class Syscalls
     public static void NOPH_Graphics_drawBitmap(int __graphics, int x, int y, int width, int height, int __bitmap, int left, int top)
     {
         if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
+          //  System.Diagnostics.Debug.WriteLine("G:" + __graphics);
             return; //todmt2 - understand why i get such numbers
         //mre.Reset();
 
@@ -1243,6 +1281,10 @@ public class Syscalls
             Image image = new Image();
             Canvas graphics = (Canvas)CRunTime.objectRepository[copy_graphics];
             BitmapImage bitmap = (BitmapImage)CRunTime.objectRepository[copy_bitmap];
+            //image.Width = copy_width;
+            //image.Height = copy_height;
+            //image.Stretch = Stretch.Fill;
+            
             image.SetValue(Canvas.LeftProperty, (double)copy_x);
             image.SetValue(Canvas.TopProperty, (double)copy_y);
             //todomt - see if there is need for these: image.Width = (double)width;
@@ -1255,6 +1297,17 @@ public class Syscalls
     }
 
 
+
+    /// <summary>
+    /// 
+    ///
+    /// </summary>
+    /// <param name="c_graphics"></param>
+    /// <param name="xPtsAddr"></param>
+    /// <param name="yPtsAddr"></param>
+    /// <param name="pointTypesAddr"></param>
+    /// <param name="offsetsAddr"></param>
+    /// <param name="count"></param>
     public static void NOPH_Graphics_drawFilledPath(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count)
     {
         //mre.Reset();
@@ -1503,9 +1556,34 @@ public class Syscalls
                 tb.FontStyle = FontStyles.Normal;
                 tb.Foreground = new SolidColorBrush(curr_pen);
 
+                // Align to Right
+                tb.FlowDirection = FlowDirection.RightToLeft;
+                
+
                 tb.Text = text;
 
-                tb.SetValue(Canvas.LeftProperty, (double)(copy_x));// - (tb.ActualWidth / 2)));
+                //Logger.log("Draw Text: " + text);
+
+
+
+                // Fix location of upper notification. for some reason the C code is sending x values that are outside the canvas...
+                if (copy_y == 67)
+                {
+                    copy_x -= 32;
+                }
+
+                // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
+                if (
+                    ((copy_y == 472) && FreeMapMainScreen.get().IsPhoneLandscape()) || 
+                    ((copy_y == 792) && !FreeMapMainScreen.get().IsPhoneLandscape())
+                    )
+                {
+                    copy_x -= 37;
+                }
+                // End fix
+
+
+                tb.SetValue(Canvas.LeftProperty, (double)(copy_x + tb.ActualWidth));
                 tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight + 5 ));
                 
                 children_list.Add(tb);
@@ -1928,6 +2006,8 @@ public class Syscalls
 
     static bool progressDialogAddedToLayoutRoot = false;
     public static ProgressDialog progressDialog = null;
+    public static RTLMessageBox rtlDialog = null;
+
     public static void NOPH_ProgressMessageDialog_hideDialog()
     {
         mre.Reset();

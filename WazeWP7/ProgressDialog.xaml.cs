@@ -17,6 +17,7 @@ namespace WazeWP7
     public partial class ProgressDialog : UserControl
     {
         private FreeMapMainScreen mainScreen;
+        public MessageBoxResult Result { get; set; }
 
         public ProgressDialog()
         {
@@ -32,12 +33,15 @@ namespace WazeWP7
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
+            Result = MessageBoxResult.OK;
             Hide();
 
         }
 
         public void Show()
         {
+            Result = MessageBoxResult.None;
+
             if (mainScreen != null)
             {
                 mainScreen.LayoutRoot.Children.Add(this);

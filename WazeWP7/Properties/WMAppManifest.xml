@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{c09e8fbf-3389-4f44-8faa-a47179aac859}" Title="WazeWP7.5" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WazeWP7 author" Description="Sample description" Publisher="WazeWP7">
+  <App xmlns="" ProductID="{c09e8fbf-3389-4f44-8faa-a47179aac859}" Title="Waze" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WazeWP7 author" Description="Sample description" Publisher="WazeWP7">
     <IconPath IsRelative="true" IsResource="false">waze.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
@@ -23,7 +23,7 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">waze_logo.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>WazeWP7.5</Title>
+          <Title>Waze</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
