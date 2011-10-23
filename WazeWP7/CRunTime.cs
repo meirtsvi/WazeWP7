@@ -385,15 +385,23 @@ using System.Collections.Generic;
 
         public static int memoryReadByte(int address)
         {
-            int val = CRunTime.memory[address >> 2];
-            int b = (3 - (address & 3)) << 3;
-            int lout = (val >> b) & 0xff;
+            try
+            {
+                int val = CRunTime.memory[address >> 2];
+                int b = (3 - (address & 3)) << 3;
+                int lout = (val >> b) & 0xff;
 
-            /* Sign-extend */
-            if ((lout & (1 << 7)) != 0)
-                return (int)(lout | 0xffffff00);
+                /* Sign-extend */
+                if ((lout & (1 << 7)) != 0)
+                    return (int)(lout | 0xffffff00);
 
-            return lout;
+                return lout;
+            }
+            catch (Exception)
+            {
+                // sometimes IndexOutOfRange is thrown - not sure why
+                return 0;
+            }
         }
 
         public static int memoryReadShortUnsigned(int address)
