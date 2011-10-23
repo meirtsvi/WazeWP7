@@ -14,6 +14,9 @@ using System.Windows.Shapes;
 
 namespace WazeWP7
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class RTLMessageBox : UserControl
     {
         private FreeMapMainScreen mainScreen;
