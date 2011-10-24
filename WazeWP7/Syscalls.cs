@@ -1102,7 +1102,7 @@ public class Syscalls
                 }
 
                 // Add Me on map as the last menu:
-                WazeMenuItem meOnMapL2V = new WazeMenuItem(FreeMapMainScreen.MeOnMapItem.text,
+                WazeMenuItem meOnMapL2V = new WazeMenuItem("Cancel",
                                                            FreeMapMainScreen.MeOnMapItem.ordinal,
                                                            FreeMapMainScreen.MeOnMapItem.priority,
                                                            FreeMapMainScreen.MeOnMapItem.wrapper_callback,

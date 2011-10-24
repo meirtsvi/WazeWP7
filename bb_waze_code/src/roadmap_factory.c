@@ -100,6 +100,7 @@ static const RoadMapAction *roadmap_factory_find_action
                               (const RoadMapAction *actions, const char *item) {
 
    while (actions->name != NULL) {
+	   roadmap_log(ROADMAP_ERROR, "meirt - %s", actions->name);
       if (strcmp (actions->name, item) == 0) return actions;
       ++actions;
    }
@@ -144,6 +145,8 @@ static const char **roadmap_factory_load_config (const char *file_name,
 
       /* remove the end-of-line character. */
       p = strchr (buffer, '\n');
+      if (p != NULL) *p = 0;
+      p = strchr (buffer, '\r');
       if (p != NULL) *p = 0;
 
       /* Remove any leading space. */
