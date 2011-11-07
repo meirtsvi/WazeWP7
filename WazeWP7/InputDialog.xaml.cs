@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using Microsoft.Phone.Controls;
 
 namespace WazeWP7
 {
     public partial class InputDialog : UserControl
     {
         public bool confirm;
-        private FreeMapMainScreen mainScreen;
+        private Panel rootPanel;
         public ManualResetEvent dialogShowing = new ManualResetEvent(false);
 
         public InputDialog()
@@ -26,10 +27,10 @@ namespace WazeWP7
             dialogShowing.Reset();
         }
 
-        public InputDialog(FreeMapMainScreen mainScreen)
+        public InputDialog(Panel rootPanel)
         {
             InitializeComponent();
-            this.mainScreen = mainScreen;
+            this.rootPanel = rootPanel;
             dialogShowing.Reset();
         }
 
@@ -59,7 +60,7 @@ namespace WazeWP7
         public void Show()
         {
             dialogShowing.Reset();
-            mainScreen.LayoutRoot.Children.Add(this);
+            rootPanel.Children.Add(this);
             inputText.Focus();
             inputText.SelectAll();
 

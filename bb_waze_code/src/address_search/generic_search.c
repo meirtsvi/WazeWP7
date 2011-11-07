@@ -135,7 +135,7 @@ static const char* address__prepare_query( const char* address, const char* cust
    /* Append custom query */
    if ( custom_query )
    {
-	   sprintf ( s_current_location + strlen(s_current_location), "&%s", custom_query );
+       sprintf ( s_current_location + strlen(s_current_location), "&%s", custom_query );
    }
    /* Append current location */
    address_append_current_location( s_current_location + strlen(s_current_location));
@@ -325,7 +325,10 @@ void generic_search_add_address_to_history( int               category,
       for( i=0; i<ahi__count; i++)
          favorites_address_info[i] = strdup( address[i]);
 
-      generic_search_add_to_favorites();
+      if (name)
+          on_favorites_name( dec_ok, name, NULL);
+      else
+          generic_search_add_to_favorites();
    }
    else
    {

@@ -73,8 +73,11 @@ typedef enum
 } TEditBoxType;
 
 void ShowEditbox(const char* aTitleUtf8, const char* aTextUtf8, SsdKeyboardCallback callback, void *context, TEditBoxType aBoxType );
+void ShowSearchEditbox(SsdKeyboardCallback callback);
+const char* GetEditboxText();
 
 void roadmap_editbox_dlg_hide( void );
+
 
 #ifdef POINTER_SCREEN
 int roadmap_is_touchScreen_supported();

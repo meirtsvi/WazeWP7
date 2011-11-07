@@ -1,30 +1,22 @@
 ﻿using System;
-using System.IO;
-using System.Threading;
-using System.Net;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+using System.IO;
+using System.IO.IsolatedStorage;
+using System.Net;
 using System.Text;
-using System.Collections;
-using System.Windows.Shapes;
-using System.Windows.Media.Imaging;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Threading;
-using System.Windows.Navigation;
+using System.Windows.Media.Imaging;
 using System.Windows.Resources;
+using System.Windows.Shapes;
 
-using Microsoft.Phone.Tasks;
-
-using System.IO.IsolatedStorage;
+using Microsoft.Phone.Controls;
 using ComponentAce.Compression.Libs.zlib;
 
 using WazeWP7;
+
 
 
 public class Syscalls
@@ -34,8 +26,6 @@ public class Syscalls
     private static Random random;
     private static Dictionary<int, CachedBitmap> bitmapCacheStore = new Dictionary<int, CachedBitmap>();
     private static Dictionary<int, BitmapInfo> bitmaps_info = new Dictionary<int, BitmapInfo>();
-
-
 
     /* These functions have dependencies and are therefore placed here */
     public static int __strlen(int src)
@@ -263,21 +253,48 @@ public class Syscalls
             BitmapImage bitmap = new BitmapImage();
             name = "/WazeWP7;component/resources/" + CRunTime.charPtrToString(__name);
             Stream stream = GetFileStream(name, FileMode.Open);
-            bitmap.SetSource(stream);
-            bitmap_registeredHandle = CRunTime.registerObject(bitmap);
-            BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
-            
-            //if (!bitmapCacheStore.ContainsKey(__name))
-            //{
-            //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
-            //}
 
-            bitmaps_info.Add(bitmap_registeredHandle, info);
-            mre.Set();
+            bool runInEmulator = false;
+            if (runInEmulator)
+            {
+                bitmap.ImageOpened += delegate(object sender, RoutedEventArgs e)
+                {
+                    BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
+
+                    //if (!bitmapCacheStore.ContainsKey(__name))
+                    //{
+                    //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
+                    //}
+
+                    if (!bitmaps_info.ContainsKey(bitmap_registeredHandle))
+                    {
+                        bitmaps_info.Add(bitmap_registeredHandle, info);
+                    }
+                    mre.Set();
+
+                };
+                bitmap.SetSource(stream);
+                bitmap_registeredHandle = CRunTime.registerObject(bitmap);
+            }
+            else
+            {
+                bitmap.SetSource(stream);
+                bitmap_registeredHandle = CRunTime.registerObject(bitmap);
+                BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
+
+                //if (!bitmapCacheStore.ContainsKey(__name))
+                //{
+                //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
+                //}
+
+                bitmaps_info.Add(bitmap_registeredHandle, info);
+                mre.Set();
+            }
         });
         mre.WaitOne();
         return bitmap_registeredHandle;
     }
+
 
 
 
@@ -1717,10 +1734,12 @@ public class Syscalls
     }
 
     private static Color curr_color = Colors.Cyan;
+    public static List<Color> colors = new List<Color>();
     public static void NOPH_Graphics_setColor(int __graphics, int rgb)
     {
         //   Canvas graphics = (Canvas)CRunTime.objectRepository[__graphics];
         curr_color = Color.FromArgb(0xff, (byte)((rgb >> 0x10) & 0xff), (byte)((rgb >> 8) & 0xff), (byte)(rgb & 0xff));
+        if (!colors.Contains(curr_color)) colors.Add(curr_color);
     }
 
     public static void NOPH_Graphics_setDrawingStyle(int __graphics, int drawStyle, int __on)
@@ -2004,18 +2023,15 @@ public class Syscalls
         }
     }
 
-    static bool progressDialogAddedToLayoutRoot = false;
-    public static ProgressDialog progressDialog = null;
-    public static RTLMessageBox rtlDialog = null;
+    public static ProgressDialog progressDialog = new ProgressDialog();
+    public static RTLMessageBox rtlDialog = new RTLMessageBox();
 
     public static void NOPH_ProgressMessageDialog_hideDialog()
     {
         mre.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
-            FreeMapMainScreen.get().LayoutRoot.Children.Remove(progressDialog);
-            //progressDialog.Hide();
-            progressDialogAddedToLayoutRoot = false;
+            progressDialog.Hide();
             mre.Set();
             
         });
@@ -2034,12 +2050,7 @@ public class Syscalls
             String label = CRunTime.charPtrToString(__text);
 
             progressDialog.SetLabel(label);
-            if (!progressDialogAddedToLayoutRoot)
-            {
-                FreeMapMainScreen.get().LayoutRoot.Children.Add(progressDialog);
-                progressDialogAddedToLayoutRoot = true;
-            }
-
+            progressDialog.Show();
             mre.Set();
         });
 
@@ -2828,21 +2839,256 @@ public class Syscalls
         return 1;
     }
 
+    #region Search dialog methods
+    private static string FormatIconResource(string resultIcon)
+    {
+        return string.Format("Resources/{0}.png", resultIcon);
+    }
+
+
+    public static void NOPH_SearchDialog_showDialog(int in_callback)
+    {
+        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var searchPageContext = new SingleSearchPageContext
+            {
+                OnActionSelected = (selectedAction, searchString) =>
+                    {
+                        CRunTime.stringToCharPtr(searchString, textAddr);
+                        int c_editbox_callback = CibylCallTable.getAddressByName("rim_on_editbox_closed");
+                        UIWorker.addUIEvent(c_editbox_callback, in_callback, 0, (int)selectedAction, 0, true);
+                    }
+            };
+
+            mainScreen.NavigationService.Navigate<SingleSearchPage>(searchPageContext);
+        });
+    }
+
+    public static void NOPH_SearchDialog_showError(int i_title, int i_message)
+    {
+        String title = CRunTime.charPtrToString(i_title);
+        String message = CRunTime.charPtrToString(i_message);
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            SingleSearchPage.Instance.ShowErrorMessage(title, message);
+        });
+    }
+    
+    public static void NOPH_SearchDialog_addressResolved(int in_callback, int i_local_search_provider_label,
+                                                         int address_count, int address_results, int address_indexes, int address_icons, 
+                                                         int local_sreach_count, int local_sreach_results, int local_sreach_indexes, int local_sreach_icons)
+    {
+         // Offset the array points
+        address_results /= 4;
+        address_indexes /= 4;
+        address_icons /= 4;
+        local_sreach_results /= 4;
+        local_sreach_indexes /= 4;
+        local_sreach_icons /= 4;
+
+        // Start with the addresses results
+        SearchResult[] addressResults = new SearchResult[address_count];
+        for (int i = 0; i < address_count; ++i)
+        {
+            string address = CRunTime.charPtrToString(CRunTime.memory[address_results + i]);
+            int index = CRunTime.memory[address_indexes + i];
+            string icon = FormatIconResource( CRunTime.charPtrToString(CRunTime.memory[address_icons + i]));
+            addressResults[i] = new SearchResult
+            {
+                Address = address,
+                IconResource = icon,
+                ReferenceIndex = index
+            };
+        }
+        
+        // And now handle the local search results
+        SearchResult[] localSearchResults = new SearchResult[local_sreach_count];
+        for (int i = 0; i < local_sreach_count; ++i)
+        {
+            string address = CRunTime.charPtrToString(CRunTime.memory[local_sreach_results + i]);
+            int index = CRunTime.memory[local_sreach_indexes + i];
+            string icon = FormatIconResource( CRunTime.charPtrToString(CRunTime.memory[local_sreach_icons + i]));
+            localSearchResults[i] = new SearchResult
+            {
+                Address = address,
+                IconResource = icon,
+                ReferenceIndex = index
+            };
+        }
+
+        // Dont forget the local search provider label
+        string localSearchProviderLabel = CRunTime.charPtrToString(i_local_search_provider_label);
+
+        // And wrap it all up
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            SearchOptionSelectedDelegate onSearchOptionSelected = (selectedItemIndex, selectedOption, data) =>
+                {
+                    CRunTime.stringToCharPtr(data, textAddr);
+                    UIWorker.addUIEvent(in_callback, selectedItemIndex, (int)selectedOption, 0, 0, true);
+                };
+            SingleSearchPage.Instance.SearchCompleted(onSearchOptionSelected, localSearchProviderLabel, addressResults, localSearchResults);
+        });
+    }
+    #endregion
+
+    #region Language methods
+    public static void NOPH_SetSystemLanguage (int i_langugae)
+    {
+        String langugae = CRunTime.charPtrToString(i_langugae);
+        LanguageResources.LoadLanaguage(langugae);
+    }
+    #endregion
+
+    #region Login dialogs methods
+    private static int usernameTextAddr;
+    private static int passwordTextAddr;
+    private static int confirmPasswordTextAddr;
+    private static int emailTextAddr;
+    private static int nicknameTextAddr;
+    private static int sendUpdatesTextAddr;
+
+    private static void CallSigninCallback (int callback, string username, string password)
+    {
+        CRunTime.stringToCharPtr(username, usernameTextAddr);
+        CRunTime.stringToCharPtr(password, passwordTextAddr);
+
+        UIWorker.addUIEvent(callback, 0, 0, 0, 0, true);
+    }
+
+    private static void CallSignupCallback (int callback, 
+                                            string username, string password, string confirmPassword, 
+                                            string email, string nickame, bool sendUpdates)
+    {
+        CRunTime.stringToCharPtr(username, usernameTextAddr);
+        CRunTime.stringToCharPtr(password, passwordTextAddr);
+        CRunTime.stringToCharPtr(confirmPassword, confirmPasswordTextAddr);
+        CRunTime.stringToCharPtr(email, emailTextAddr);
+        CRunTime.stringToCharPtr(nickame, nicknameTextAddr);
+        CRunTime.stringToCharPtr(sendUpdates ? "yes" : "no", sendUpdatesTextAddr);
+
+        UIWorker.addUIEvent(callback, 0, 0, 0, 0, true);
+    }
+
+    public static void NOPH_SignInUpDialogs_registerTextAddrs(int username_addr, int password_addr, 
+                                                              int confirm_password_addr, int email_addr, 
+                                                              int nickame_addr, int send_updates_addr)
+    {
+        usernameTextAddr = username_addr;
+        passwordTextAddr = password_addr;
+        confirmPasswordTextAddr = confirm_password_addr;
+        emailTextAddr = email_addr;
+        nicknameTextAddr = nickame_addr;
+        sendUpdatesTextAddr = send_updates_addr;
+    }
+
+    public static void NOPH_SignInUpDialogs_showWelcomeDialog(int in_signin_callback, int in_signup_callback, int in_signup_skip_callback)
+    {
+        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            SignInUpDialogsContext pageContext = new SignInUpDialogsContext
+            {
+                Username = null,
+                Password = null
+            };
+            pageContext.OnSignin += (username, password) =>
+                {
+                    CallSigninCallback(in_signin_callback, username, password);
+                };
+            pageContext.OnSignup += (username, password, confirmPassword, email, nickame, sendUpdates) =>
+                {
+                    CallSignupCallback(in_signup_callback, username, password, confirmPassword, email, nickame, sendUpdates);
+                };
+            pageContext.OnSkipSignup += () =>
+                {
+                    UIWorker.addUIEvent(in_signup_skip_callback, 0, 0, 0, 0, true);
+                };
+            mainScreen.NavigationService.Navigate<WelcomePage>( pageContext);
+        });
+    }
+
+    public static void NOPH_SignInUpDialogs_showSignInDialog(int in_signin_callback, int i_username, int i_password)
+    {
+        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            String username = CRunTime.charPtrToString(i_username);
+            String password = CRunTime.charPtrToString(i_password);
+            SignInUpDialogsContext pageContext = new SignInUpDialogsContext
+            {
+                Username = username,
+                Password = password
+            };
+            pageContext.OnSignin += (dialog_username, dialog_password) =>
+            {
+                CallSigninCallback(in_signin_callback, dialog_username, dialog_password);
+            };
+            mainScreen.NavigationService.Navigate<SignInPage>(pageContext);
+        });
+    }
+
+    public static void NOPH_SignInUpDialogs_showSignUpDialog(int in_signup_callback, int in_signup_skip_callback)
+    {
+        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            SignInUpDialogsContext pageContext = new SignInUpDialogsContext
+            {
+                Username = null,
+                Password = null
+            };
+            pageContext.OnSignup += (username, password, confirmPassword, email, nickame, sendUpdates) =>
+            {
+                CallSignupCallback(in_signup_callback, username, password, confirmPassword, email, nickame, sendUpdates);
+            };
+            pageContext.OnSkipSignup += () =>
+            {
+                UIWorker.addUIEvent(in_signup_skip_callback, 0, 0, 0, 0, true);
+            };
+            mainScreen.NavigationService.Navigate<SignUpPage>(pageContext);
+        });
+    }
+
+    public static void NOPH_SignInUpDialogs_signInSuccessful()
+    {
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var currentPage = ((App)Application.Current).RootFrame.Content as ISignInUpPage;
+            if (currentPage != null)
+            {
+                currentPage.SignInSuccessful();
+            }
+        });
+    }
+    
+    public static int  NOPH_SignInUpDialogs_isLoginActive()
+    {
+        var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
+        return (currentPage is ISignInUpPage) ? 1 : 0;
+    }
+
+    #endregion
+
     public static void NOPH_EditBoxScreenOS5_showEditBox(int i_label, int i_in_text, int in_callback, int in_data, int style)
     {
-        mre.Reset();
-        bool confirm = false;
         InputDialog dialog = null;
         FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
 
-        //mre.Reset();
+        mre.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             
             String label = CRunTime.charPtrToString(i_label);
             String in_text = CRunTime.charPtrToString(i_in_text);
 
-            dialog = new InputDialog(mainScreen);
+            dialog = new InputDialog(mainScreen.LayoutRoot);
             dialog.SetLabelAndText(label, in_text);
             dialog.Show();
             
@@ -2862,14 +3108,11 @@ public class Syscalls
         {
             mainScreen.LayoutRoot.Children.Remove(dialog);
                 
-            confirm = dialog.confirm;
-            byte[] str_bytes = Encoding.UTF8.GetBytes(dialog.GetInput());
-            //byte[] str_bytes = StringToAscii(dialog.GetInput());// StringToAscii("bavli 11 tel aviv");
-            int length = str_bytes.Length;
-            CRunTime.memcpy(textAddr, str_bytes, 0, length);
+            bool confirm = dialog.confirm;
+            CRunTime.stringToCharPtr(dialog.GetInput(), textAddr);
             int c_editbox_callback = CibylCallTable.getAddressByName("rim_on_editbox_closed");
             if (c_editbox_callback != 0)
-                UIWorker.addUIEvent(c_editbox_callback, in_callback, in_data, confirm ? 1 : 0, length, true);
+                UIWorker.addUIEvent(c_editbox_callback, in_callback, in_data, confirm ? 1 : 0, 0, true);
 
             mre.Set();
         });

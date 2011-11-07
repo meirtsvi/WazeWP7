@@ -86,8 +86,9 @@ namespace WazeWP7
         private static bool dummy = false;
         private PageOrientation m_CurrentOrientation;
         private bool m_isMenuVisible = false;
+        private bool m_isPageActive = false;
 
-        public Canvas MainGraphics;
+        public Canvas MainGraphics = null;
 
         public FreeMapMainScreen()
         {
@@ -111,6 +112,17 @@ namespace WazeWP7
 
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            m_isPageActive = true;
+            base.OnNavigatedTo(e);
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            m_isPageActive = false;
+            base.OnNavigatedFrom(e);
+        }
 
 //        void CopySounds(object obj)
 //        {
@@ -256,14 +268,13 @@ namespace WazeWP7
         static FreemapApp app;
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            if (MainGraphics == null)
+            {
             MainGraphics = new Canvas();
             
             LayoutRoot.Children.Add(MainGraphics);
 
             BuildApplicationBar();
-
-            Syscalls.progressDialog = new ProgressDialog(this);
-            Syscalls.rtlDialog = new RTLMessageBox(this);
 
             //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
             isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
@@ -280,8 +291,7 @@ namespace WazeWP7
             {
                 MessageBox.Show("error in init " + ex);
             }
-
-
+            }
         }
 
         /// <summary>
@@ -385,12 +395,18 @@ namespace WazeWP7
         /// <param name="list"></param>
         public void refresh(List<UIElement> list)
         {
+            if (!m_isPageActive)
+            {
+                return;
+            }
+
             Dispatcher.BeginInvoke(() =>
             {
                 for (int i = MainGraphics.Children.Count - 1; i >= 0; i--)
                 {
                     if (!(MainGraphics.Children[i] is MediaElement) &&
                         !(MainGraphics.Children[i] is ProgressDialog) &&
+                        !(MainGraphics.Children[i] is InputDialog) &&
                         !(MainGraphics.Children[i] is ListBox ))
                     {
                         MainGraphics.Children.RemoveAt(i);

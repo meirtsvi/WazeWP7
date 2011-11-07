@@ -87,7 +87,6 @@ RoadMapConfigDescriptor RT_CFG_PRM_PASSWORD_Var =
 
 //======= Local interface ========
 extern void roadmap_login_ssd_on_signup_skip( messagebox_closed cb );
-extern BOOL roadmap_login_ssd_new_existing_in_process();
 
 /***********************************************************
  *  Name        : roadmap_login_initialize
@@ -118,6 +117,7 @@ void roadmap_login_set_show_function (RoadmapLoginDlgShowFn callback) {
 
 void roadmap_login_on_login_cb( BOOL bDetailsVerified, roadmap_result rc )
 {
+    roadmap_log(ROADMAP_INFO, "LOGIN DIALOGS: callback roadmap_login_on_login_cb called with bDetailsVerified=%d rc-%d", bDetailsVerified, rc);
 
 	/* Close the progress message */
    ssd_progress_msg_dialog_hide();
@@ -204,11 +204,14 @@ int roadmap_login_on_login( SsdWidget this, const char *new_value )
    const char *password = NULL;
    const char *nickname = NULL;
 
+   roadmap_log(ROADMAP_INFO, "LOGIN DIALOGS: roadmap_login_on_login callback called");
+
    username = roadmap_login_dlg_get_username();
    password = roadmap_login_dlg_get_password();
 #ifdef IPHONE
    nickname = roadmap_login_dlg_get_nickname();
 #endif
+   roadmap_log(ROADMAP_INFO, "LOGIN DIALOGS: username='%s' password='%s'", username, password);
 
    if (!*username || !*password )
    {
@@ -303,7 +306,7 @@ BOOL check_alphanumeric(const char *str){
 #ifndef IPHONE
 void on_signup_skip_msgbox_closed( int exit_code )
 {
-   roadmap_welcome_guided_tour();
+    roadmap_welcome_guided_tour();
 }
 #endif //IPHONE
 

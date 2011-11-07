@@ -45,6 +45,7 @@
 #include "websvc_trans/web_date_format.h"
 #include "roadmap_start.h"
 #include "roadmap_canvas.h"
+#include <rimapi.h>
 
 
 #define INITIAL_ITEMS_SIZE 50
@@ -120,6 +121,7 @@ void roadmap_lang_set_system_lang(const char *lang, RoadMapCallback callback){
    roadmap_lang_download_lang_file( lang, callback );
    roadmap_config_set(&RoadMapConfigSystemLanguage, lang);
    roadmap_config_save(0);
+   NOPH_SetSystemLanguage(lang);
 }
 
 //////////////////////////////////////////////////////////////////
@@ -483,6 +485,7 @@ void roadmap_lang_initialize (void) {
       RoadMapLangLoaded = roadmap_lang_load (p);
    }
    RoadMapLangRTL = (strcasecmp(roadmap_lang_get ("RTL"), "Yes") == 0);
+   NOPH_SetSystemLanguage(roadmap_lang_get_system_lang());
 }
 
 

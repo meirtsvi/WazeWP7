@@ -304,6 +304,14 @@ using System.Collections.Generic;
             }
         }
 
+        public static void stringToCharPtr(string str, int address)
+        {
+            byte[] str_bytes = Encoding.UTF8.GetBytes(str);
+            int length = str_bytes.Length;
+            CRunTime.memcpy(address, str_bytes, 0, length);
+            CRunTime.memoryWriteByte(address + length, 0);
+        }
+
         public static void memoryWriteByte(int address, int ins)
         {
             int value = ins & 0xff;
