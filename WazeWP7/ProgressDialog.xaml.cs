@@ -11,12 +11,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using Microsoft.Phone.Controls;
 
 namespace WazeWP7
 {
     public partial class ProgressDialog : UserControl
     {
-        private FreeMapMainScreen mainScreen;
+        private Panel parentPanel;
         public MessageBoxResult Result { get; set; }
 
         public ProgressDialog()
@@ -24,35 +25,35 @@ namespace WazeWP7
             InitializeComponent();
         }
 
-        public ProgressDialog(FreeMapMainScreen mainScreen)
-        {
-            InitializeComponent();
-            this.mainScreen = mainScreen;
-        }
-
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             Result = MessageBoxResult.OK;
             Hide();
-
         }
 
         public void Show()
         {
             Result = MessageBoxResult.None;
 
-            if (mainScreen != null)
+            // Hide before you show
+            Hide();
+
+            // And now add to the current page
+            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
+            parentPanel = currentPage.Content as Panel;
+            if (parentPanel != null)
             {
-                mainScreen.LayoutRoot.Children.Add(this);
+                parentPanel.Children.Add(this);
             }
         }
 
         internal void Hide()
         {
-            if (mainScreen != null)
+            if (parentPanel != null)
             {
-                mainScreen.LayoutRoot.Children.Remove(this);
+                parentPanel.Children.Remove(this);
+                parentPanel = null;
             }
         }
 

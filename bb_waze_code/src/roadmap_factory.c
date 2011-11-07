@@ -100,7 +100,6 @@ static const RoadMapAction *roadmap_factory_find_action
                               (const RoadMapAction *actions, const char *item) {
 
    while (actions->name != NULL) {
-	   roadmap_log(ROADMAP_ERROR, "meirt - %s", actions->name);
       if (strcmp (actions->name, item) == 0) return actions;
       ++actions;
    }

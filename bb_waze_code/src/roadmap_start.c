@@ -1253,7 +1253,6 @@ static const char *RoadMapStartMenu[] = {
    "search_favorites",
    "search_history",
    "search_marked_locations",
-   "search_local",
    RoadMapFactorySeparator,
    "login_details",
    "view_points",
@@ -1276,6 +1275,7 @@ static const char *RoadMapStartMenu[] = {
 #elif 0
    "about",
    "search_address",
+   "search_local",
    "gps",
    "hold",
    "toggleview",

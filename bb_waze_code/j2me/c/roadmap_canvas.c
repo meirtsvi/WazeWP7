@@ -585,7 +585,7 @@ void roadmap_canvas_draw_multiple_lines(int count, int *lines,
 
 	// keep these lines in order for rim_graphics to stay with valid value. For some reason cibyl decides to put it in RA register if
 	// we remove this line
-	roadmap_log(ROADMAP_ERROR, "rim_graphics in drawLine == %d\n", rim_graphics);
+	roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine == %d\n", rim_graphics);
 
 	for (i = 0; i < count; ++i) {
 
@@ -603,7 +603,7 @@ void roadmap_canvas_draw_multiple_lines(int count, int *lines,
 #ifdef RIMAPI
 				// keep these lines in order for rim_graphics to stay with valid value. For some reason cibyl decides to put it in RA register if
 				// we remove this line
-				roadmap_log(ROADMAP_ERROR, "rim_graphics in drawLine (%d, %d) == %d\n", i, j, rim_graphics);
+				roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine (%d, %d) == %d\n", i, j, rim_graphics);
 				NOPH_Graphics_drawLine
 				(rim_graphics, points->x, points->y, to_point->x, to_point->y);
 #else

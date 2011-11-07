@@ -46,6 +46,17 @@ static myShowEditBox(const char* label, const char* in_text, int in_callback, in
 	 NOPH_EditBoxScreen_showEditBox( label, in_text,  in_callback, in_data, style);
 #endif// RIMAPI_OS_VER>= 5
 }
+
+void ShowSearchEditbox(SsdKeyboardCallback callback)
+{
+	if (!gisRegistered) {
+		NOPH_EditBoxScreen_registerEditBoxTextAddr(&editbox_text[0]);
+		gisRegistered= TRUE;
+	}
+
+    NOPH_SearchDialog_showDialog(callback);
+}
+
 void ShowEditbox(const char* aTitleUtf8, const char* aTextUtf8, SsdKeyboardCallback callback,
 					  void *context, TEditBoxType aBoxType ){
 	if (!gisRegistered) {
@@ -63,16 +74,30 @@ void ShowEditbox(const char* aTitleUtf8, const char* aTextUtf8, SsdKeyboardCallb
 	 else if  ( aBoxType & EEditBoxAlphaNumeric ){ // Standard
 		 roadmap_input_type_set_mode(inputtype_alphanumeric);
 		 myShowEditBox( aTitleUtf8, aTextUtf8,  callback, context, NOPH_EditBoxScreen_EDIT_FIELD);
-	 } else {
+	 }
+	 else {
 		 roadmap_input_type_set_mode(inputtype_free_text);
 		 myShowEditBox( aTitleUtf8, aTextUtf8,  callback, context, NOPH_EditBoxScreen_EDIT_FIELD);
 	 }
 
 }
 
-void rim_on_editbox_closed(void * callback, void * data, int confirm, int length){
-	int dec_val = (confirm == 1 )? dec_ok : dec_cancel;
-	editbox_text[length] = '\0';
+const char* GetEditboxText()
+{
+	return editbox_text;
+}
+
+void rim_on_editbox_closed(void * callback, void * data, int confirm){
+	int dec_val;
+	if (confirm <= 1)
+    {
+		dec_val = (confirm == 1 )? dec_ok : dec_cancel;
+	}
+	else
+	{
+		dec_val = confirm;
+	}
+
 	((CB_OnKeyboardDone) callback) (dec_val, editbox_text, data);
 	roadmap_screen_redraw();
 }

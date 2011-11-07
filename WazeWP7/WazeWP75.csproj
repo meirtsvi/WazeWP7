@@ -52,6 +52,10 @@
       <HintPath>..\converted\cibyl.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\Toolkit\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization" />
@@ -72,11 +76,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationPageContext.cs" />
     <Compile Include="AsyncNet.cs" />
     <Compile Include="BitmapInfo.cs" />
     <Compile Include="CachedBitmap.cs" />
     <Compile Include="CibylCallTable.cs" />
     <Compile Include="CibylConfig.cs" />
+    <Compile Include="LanguageResources.cs" />
+    <Compile Include="Navigator.cs" />
     <Compile Include="RTLMessageBox.xaml.cs">
       <DependentUpon>RTLMessageBox.xaml</DependentUpon>
     </Compile>
@@ -103,12 +110,29 @@
     <Compile Include="RoadMapMath.cs" />
     <Compile Include="SetjmpException.cs" />
     <Compile Include="SharpGIS.UnZipper.cs" />
+    <Compile Include="SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignInUpDialogsContext.cs" />
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleSearchPage.xaml.cs">
+      <DependentUpon>SingleSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleSearchResultsPivotPage.xaml.cs">
+      <DependentUpon>SingleSearchResultsPivotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleSearchResultsPivotPageContext.cs" />
     <Compile Include="SoundMgr.cs" />
     <Compile Include="StringWidthCalculator.cs" />
     <Compile Include="Syscalls.cs" />
     <Compile Include="TileStorage.cs" />
     <Compile Include="UIWorker.cs" />
     <Compile Include="WazeMenuItem.cs" />
+    <Compile Include="WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -132,6 +156,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InputDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SingleSearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SingleSearchResultsPivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
