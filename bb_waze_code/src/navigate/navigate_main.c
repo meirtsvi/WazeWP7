@@ -29,6 +29,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <rimapi.h>
+
 #include "roadmap.h"
 #include "roadmap_pointer.h"
 #include "roadmap_plugin.h"
@@ -3184,13 +3186,25 @@ static void display_pop_up(navigate_list_value *list_value){
 ///////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////
-static int navigate_main_list_call_back (SsdWidget widget, const char *new_value, const void *value, void *context) {
-	navigate_list_value *list_value = (navigate_list_value *)value;
+//static int navigate_main_list_call_back (SsdWidget widget, const char *new_value, const void *value, void *context) {
+static void navigate_main_list_call_back( char** selected_label,
+                                          void** selected_item,
+                                          void*  selected_option, 
+                                          void*  context)
+{
+    roadmap_log(ROADMAP_INFO, "NAVIGATE MAIN: Callback 'navigate_main_list_call_back' called with: Selected label = '%s'. Selected option = %d.", 
+                *selected_label, (int)(selected_option));
+
+    navigate_list_value *list_value = (navigate_list_value *)(*selected_item);
+
+    roadmap_log(ROADMAP_INFO, "NAVIGATE MAIN: list_value={str='%s'; icon='%s'; inst_num=%d; position=(%d,%d)}", 
+                list_value->str, list_value->icon, list_value->inst_num, list_value->position.longitude, list_value->position.latitude);
 
 #ifdef IPHONE
    roadmap_main_show_root(0);
 #endif //IPHONE
 
+    NOPH_GenericListDialogs_closeDialog(TRUE);
 	current_displayed_value = list_value;
 	display_pop_up(list_value);
 	return 0;
@@ -3395,47 +3409,14 @@ void navigate_main_list(void){
 	}
 	navigate_list_count = count;
 
-#ifndef IPHONE
-
-#ifndef RIMAPI
-	if ( roadmap_screen_is_hd_screen() )
-	{
-		height = 90;
-	}
-#endif
-
-	ssd_generic_icon_list_dialog_show (roadmap_lang_get ("Navigation list"),
-                  count,
-                  (const char **)navigate_list_labels,
-                  (const void **)navigate_list_values,
-                  (const char **)navigate_list_icons,
-                  NULL,
-                  navigate_main_list_call_back,
-                  NULL,
-                  NULL,
-                  NULL,
-                  NULL,
-                  height,
-                  0,
-                  FALSE);
-#else
-   roadmap_list_menu_generic (roadmap_lang_get ("Navigation list"),
-                              count,
-                              (const char **)navigate_list_labels,
-                              (const void **)navigate_list_values,
-                              (const char **)navigate_list_icons,
-                              NULL,
-                              NULL,
-                              navigate_main_list_call_back,
-                              NULL,
-                              NULL,
-                              NULL,
-                              height,
-                              0,
-                              NULL);
-#endif //IPHONE
-
-
+    NOPH_GenericListDialogs_showDialog( "Navigation list", 
+                                        (int)navigate_main_list_call_back, 
+                                        count,
+                                        (int)navigate_list_labels,
+                                        (int)navigate_list_values,
+                                        (int)navigate_list_icons,
+                                        0, 0, 0,
+                                        NULL);
 
 }
 

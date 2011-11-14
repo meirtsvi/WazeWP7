@@ -12,6 +12,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
+using System.Text;
+using System.Threading;
 
 namespace WazeWP7
 {
@@ -101,7 +104,22 @@ namespace WazeWP7
                 System.Diagnostics.Debugger.Break();
             }
 
-//            MessageBox.Show(string.Format("Page {0} failed to load because of with error: {1}", e.ExceptionObject)); e.Handled = true;
+            if (!(e.ExceptionObject is InvalidProgramException))
+            {
+                MessageBoxResult result = MessageBox.Show("Waze crashed to to an unexpected exception. Please press OK to send an error report to the developers",
+                                                           "Unexpected error", MessageBoxButton.OKCancel);
+
+                if (result == MessageBoxResult.OK)
+                {
+                    EmailComposeTask emailComposer = new EmailComposeTask();
+                    emailComposer.To = "meir.tsvi@live.com";
+                    emailComposer.Cc = "erang@microsoft.com";
+                    emailComposer.Subject = string.Format("Waze crash due to {0} exception", e.ExceptionObject.GetType());
+                    emailComposer.Body = e.ExceptionObject.ToString();
+                    emailComposer.Show();
+                    Thread.Sleep(30000);
+                }
+            }
         }
 
         #region Phone application initialization

@@ -5,14 +5,15 @@ using System.Windows.Media;
 using System.Windows.Input;
 using System.Threading;
 using System.ComponentModel;
+using SearchResult = WazeWP7.SingleSearchResultsPivotPageContext.SearchResult;
+using SearchOption  = WazeWP7.SingleSearchResultsPivotPageContext.SearchOption;
 
 namespace WazeWP7
 {
-    public partial class SingleSearchResultsPivotPage : PhoneApplicationPage
+    public partial class SingleSearchResultsPivotPage : WazeApplicationPage
     {
         #region Private members
-        private SingleSearchResultsPivotPageContext pageContext;
-        private SearchResult selectedResult;
+        private SingleSearchResultsPivotPageContext.SearchResult selectedResult;
 
         private readonly string driveContextMenuItemHeaderName = "Drive";
         private readonly string showContextMenuItemHeaderName = "Show on map";
@@ -22,6 +23,8 @@ namespace WazeWP7
         #endregion
 
         #region Public observable properties
+        public SingleSearchResultsPivotPageContext PageContext { get; private set; }
+
         public string DriveContextMenuItemHeader { get { return LanguageResources.Instance.Translate(driveContextMenuItemHeaderName); } }
         public string ShowContextMenuItemHeader { get { return LanguageResources.Instance.Translate(showContextMenuItemHeaderName); } }
         public string AddToFavoritesContextMenuItemHeader { get { return LanguageResources.Instance.Translate(addToFavoritesContextMenuItemHeaderName); } }
@@ -29,31 +32,39 @@ namespace WazeWP7
         public string CancelContextMenuItemHeader { get { return LanguageResources.Instance.Translate(cancelContextMenuItemHeaderName); } }
         #endregion
 
+
         public SingleSearchResultsPivotPage()
         {
             InitializeComponent();
+        }
+
+        public override Panel GetPopupPanel()
+        {
+            return this.PopupsGrid;
         }
 
         #region Navigation overrides
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            // Set the page's state according to the context
-            this.selectedResult = null;
-            this.pageContext = NavigationContext.GetData<SingleSearchResultsPivotPageContext>();
-            this.NewAddressListBox.DataContext = pageContext;
-            this.LocalSearchListBox.DataContext = pageContext;
-            this.DataContext = this;
-            if (!(string.IsNullOrEmpty(pageContext.LocalSearchProviderLabel)))
-            {
-                LocalSearchPivotItem.Header = pageContext.LocalSearchProviderLabel;
-            }
-
-            // Translate the page according to the local language (must be after the context handling)
-            LanguageResources.Instance.UpdateApplicationPage(this);
-
-            // Finally call the base method
+            // Start with calling the base implementation
             base.OnNavigatedTo(e);
+
+            // Set the page's state according to the context
+            var pageContext = NavigationContext.GetData<SingleSearchResultsPivotPageContext>();
+            if (pageContext != null)
+            {
+                this.PageContext = pageContext;
+                this.DataContext = this;
+                this.selectedResult = null;
+                if (!(string.IsNullOrEmpty(pageContext.LocalSearchProviderLabel)))
+                {
+                    LocalSearchPivotItem.Header = pageContext.LocalSearchProviderLabel;
+                }
+
+                // Translate the page according to the local language (must be after the context handling)
+                LanguageResources.Instance.UpdateApplicationPage(this);
+            }
         }
 
         protected override void OnBackKeyPress(CancelEventArgs e)
@@ -134,14 +145,14 @@ namespace WazeWP7
             InputGrid.Visibility = System.Windows.Visibility.Collapsed;
             if (result)
             {
-                OptionSelected(SearchOption.AddToFavorites);
+                OptionSelected(SingleSearchResultsPivotPageContext.SearchOption.AddToFavorites);
             }
         }
 
-        private void OptionSelected (SearchOption searchOption)
+        private void OptionSelected(SingleSearchResultsPivotPageContext.SearchOption searchOption)
         {
             // Call the callback to start the operation
-            pageContext.OnSearchOptionSelected(selectedResult.ReferenceIndex, searchOption, InputTextBox.Text);
+            PageContext.OnSearchOptionSelected(selectedResult.ReferenceIndex, searchOption, InputTextBox.Text);
 
             // And close the dialog (need to pop the search input page as well)
             NavigationService.RemoveBackEntry();

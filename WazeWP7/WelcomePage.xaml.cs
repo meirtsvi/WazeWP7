@@ -15,12 +15,7 @@ using System.Windows.Navigation;
 
 namespace WazeWP7
 {
-    public interface ISignInUpPage
-    {
-        void SignInSuccessful();
-    }
-
-    public partial class WelcomePage : PhoneApplicationPage, ISignInUpPage
+    public partial class WelcomePage : WazeApplicationPage
     {
         #region Private mambers
         private SignInUpDialogsContext pageContext = null;
@@ -31,22 +26,23 @@ namespace WazeWP7
             InitializeComponent();
         }
 
-        public void SignInSuccessful()
+        public override Panel GetPopupPanel()
         {
-            NavigationService.GoBack();
+            return this.PopupsGrid;
         }
 
         #region Page control overrides
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            // Start with calling the base implementation
+            base.OnNavigatedTo(e);
+
             LanguageResources.Instance.UpdateApplicationPage(this);
             var newContext = NavigationContext.GetData<SignInUpDialogsContext>();
             if (newContext != null)
             {
                 pageContext = newContext;
             }
-
-            base.OnNavigatedTo(e);
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
@@ -54,6 +50,7 @@ namespace WazeWP7
             pageContext.OnSkipSignup();
             base.OnBackKeyPress(e);
         }
+
         #endregion
 
         #region Page callbacks methods

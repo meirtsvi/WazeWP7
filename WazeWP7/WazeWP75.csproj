@@ -53,16 +53,16 @@
     </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <HintPath>..\Toolkit\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Serialization" />
     <Reference Include="ZlibWP7">
@@ -82,6 +82,11 @@
     <Compile Include="CachedBitmap.cs" />
     <Compile Include="CibylCallTable.cs" />
     <Compile Include="CibylConfig.cs" />
+    <Compile Include="GenericListPage.xaml.cs">
+      <DependentUpon>GenericListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GenericListPageContext.cs" />
+    <Compile Include="WazeApplicationPage.cs" />
     <Compile Include="LanguageResources.cs" />
     <Compile Include="Navigator.cs" />
     <Compile Include="RTLMessageBox.xaml.cs">
@@ -140,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GenericListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

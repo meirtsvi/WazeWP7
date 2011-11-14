@@ -20,7 +20,6 @@ namespace WazeWP7
     /// </summary>
     public partial class RTLMessageBox : UserControl
     {
-        private Panel parentPanel;
         public MessageBoxResult Result { get; set; }
 
         public RTLMessageBox()
@@ -46,16 +45,13 @@ namespace WazeWP7
             Hide();
 
             // And now add to the current page
-            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
-            parentPanel = currentPage.Content as Panel;
-            if (parentPanel != null)
-            {
-                parentPanel.Children.Add(this);
-            }
+            var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
+            currentPage.GetPopupPanel().Children.Add(this);
         }
 
         internal void Hide()
         {
+            var parentPanel = this.Parent as Panel;
             if (parentPanel != null)
             {
                 parentPanel.Children.Remove(this);

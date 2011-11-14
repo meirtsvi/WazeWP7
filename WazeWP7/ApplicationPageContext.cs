@@ -1,17 +1,11 @@
-﻿using System.Windows;
-using Microsoft.Phone.Controls;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace WazeWP7
 {
     public class ApplicationPageContext : INotifyPropertyChanged
     {
-        public Dictionary<string,string> Resources { get; private set; }
-
         public ApplicationPageContext()
         {
-            Resources = new Dictionary<string,string>();
         }
 
         #region INotifyPropertyChanged Members
@@ -27,5 +21,6 @@ namespace WazeWP7
             }
         }
         #endregion
+
     }
 }

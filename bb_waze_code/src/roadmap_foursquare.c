@@ -25,6 +25,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <rimapi.h>
+
 #include "roadmap_main.h"
 #include "roadmap_config.h"
 #include "roadmap_foursquare.h"
@@ -609,9 +611,16 @@ static void create_address (FoursquareVenue*   venue, FoursquareCheckin* checkin
    sprintf(checkin->sAddress, "%s, %s",venue->sAddress, venue->sCity);
 }
 
-static int on_venue_item_selected(SsdWidget widget, const char* selection,const void *value, void* context)
+//static int on_venue_item_selected(SsdWidget widget, const char* selection,const void *value, void* context)
+static void on_venue_item_selected( char** selected_label,
+                                    void** selected_item,
+                                    void*  selected_option, 
+                                    void*  context)
 {
-   int index = (int)value;
+   roadmap_log(ROADMAP_INFO, "ROADMAP FOURSQUARE: Callback 'on_venue_item_selected' called with: Selected label = '%s'. Selected option = %d. Selected value = '%s'", 
+                *selected_label, (int)(selected_option), (int)(*selected_item));
+
+   int index = (int)(*selected_item);
 #ifdef IPHONE_NATIVE
    index -= 10;
 #endif //IPHONE_NATIVE
@@ -627,7 +636,7 @@ static int on_venue_item_selected(SsdWidget widget, const char* selection,const 
 
    create_address (&gsVenuesList[index], &gsCheckInInfo);
 
-   ssd_dialog_hide_all(dec_close);
+    NOPH_GenericListDialogs_closeDialog(FALSE);
 
    Realtime_FoursquareCheckin(gsVenuesList[index].sId,
          roadmap_foursquare_is_tweet_badge_enabled() && roadmap_twitter_logged_in());
@@ -655,38 +664,14 @@ void roadmap_foursquare_venues_list (void) {
       icons[i] = "foursquare_checkin";
    }
 
-#ifdef IPHONE_NATIVE
-   roadmap_list_menu_generic(roadmap_lang_get(FOURSQUARE_TITLE),
-                             gsVenuesCount,
-                             results,
-                             (const void **)indexes,
-                             icons,
-                             NULL,
-                             NULL,
-                             on_venue_item_selected,
-                             NULL,
-                             NULL,
-                             NULL,
-                             60,
-                             0,
-                             NULL);
-#else
-   ssd_generic_icon_list_dialog_show(roadmap_lang_get(FOURSQUARE_VENUES_TITLE),
-                                       gsVenuesCount,
-                                       results,
-                                       (const void **)indexes,
-                                       icons,
-                                       0,
-                                       on_venue_item_selected,
-                                       NULL,
-                                       NULL,
-                                       NULL,
-                                       NULL,
-                                       60,
-                                       0,
-                                       FALSE);
-
-#endif //IPHONE_NATIVE
+   NOPH_GenericListDialogs_showDialog( FOURSQUARE_VENUES_TITLE, 
+                                       (int)on_venue_item_selected,
+                                       gsVenuesCount, 
+                                       (int)results,
+                                       (int)indexes,
+                                       (int)icons, 
+                                       0, 0, 0,
+                                       NULL);
 }
 
 static void create_description (FoursquareVenue*   venue) {

@@ -109,7 +109,7 @@ using System.Windows;
                 //Workaround an unfortunate Cibyl reliance on a Canvas object in the implementation
                 //of reading from resources under fopen
                 Logger.log("In start!!!!!!!!!!");
-                Syscalls.canvasHandle = CRunTime.registerObject(new DummyCanvas());
+                Syscalls.dummyCanvasHandle = CRunTime.registerObject(new DummyCanvas());
 
                 int c_start = CibylCallTable.getAddressByName("rim_start");
                 Logger.log("rim_start: " + c_start);
@@ -154,7 +154,7 @@ using System.Windows;
             {
                 c_write_to_log = CibylCallTable.getAddressByName("roadmap_main_write_exception_to_log");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Logger.log("Could not register roadmap_main_write_exception_to_log");
             }

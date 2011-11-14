@@ -167,7 +167,14 @@ namespace WazeWP7
                         var pivotItem = item as PivotItem;
 
                         // Take care of both the header and the content
-                        pivotItem.Header = Translate((string)pivotItem.Header);
+                        if (pivotItem.Header is string)
+                        {
+                            pivotItem.Header = Translate((string)pivotItem.Header);
+                        }
+                        else if (pivotItem.Header is TextBlock)
+                        {
+                            UpdateTextBlockText(pivotItem.Header as TextBlock);
+                        }
                         UpdatePanelTexts(pivotItem.Content as Panel);
                     }
                 }

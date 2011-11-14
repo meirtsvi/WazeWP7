@@ -28,6 +28,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <rimapi.h>
+
 #include "roadmap.h"
 #include "roadmap_types.h"
 #include "roadmap_history.h"
@@ -67,23 +69,23 @@ typedef struct {
 } roadmap_car_list;
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-static int roadmap_car_call_back (SsdWidget widget, const char *new_value, const void *value, void *context) {
-
-   roadmap_car_list_dialog *list_context = (roadmap_car_list_dialog *)context;
-   RoadMapConfigDescriptor CarCfg =
-                  ROADMAP_CONFIG_ITEM("Trip", "Car");
-
-   roadmap_config_declare
-        ("user", &CarCfg, "car_blue", NULL);
-   roadmap_config_set (&CarCfg, value); 
-#ifndef IPHONE
-   ssd_generic_list_dialog_hide ();
-#else
-	roadmap_main_show_root(0);
-#endif
-
-   if (list_context->callback)
-   		(*list_context->callback)();
+static void roadmap_car_call_back( char** selected_label,
+                                   void** selected_item,
+                                   void*  selected_option, 
+                                   void*  context)
+{
+    roadmap_log(ROADMAP_INFO, "ROADMAP CAR: Callback 'roadmap_car_call_back' called with: Selected label = '%s'. Selected option = %d. Selected value = '%s'", 
+                *selected_label, (int)(selected_option), (char*)(*selected_item));
+    
+    roadmap_car_list_dialog *list_context = (roadmap_car_list_dialog *)context;
+    RoadMapConfigDescriptor CarCfg = ROADMAP_CONFIG_ITEM("Trip", "Car");
+    
+    roadmap_config_declare( "user", &CarCfg, "car_blue", NULL);
+    roadmap_config_set( &CarCfg, *selected_item); 
+    NOPH_GenericListDialogs_closeDialog(FALSE);
+    
+    if (list_context->callback)
+        (*list_context->callback)();
 
    return 1;
 }
@@ -144,21 +146,14 @@ void roadmap_car_dialog (RoadMapCallback callback) {
 
     free (directory);
 #endif
-    ssd_generic_icon_list_dialog_show (roadmap_lang_get ("Select your car"),
-                  count,
-                  (const char **)labels,
-                  (const void **)values,
-                  (const char **)icons,
-                  NULL,
-                  roadmap_car_call_back,
-                  NULL,
-                  &context,
-                  NULL,
-                  NULL,
-                  70,
-                  0,
-                  FALSE);
-
+    NOPH_GenericListDialogs_showDialog("Select your car", 
+                                        (int)roadmap_car_call_back, 
+                                        count, 
+                                        (int)labels,
+                                        (int)values,
+                                        (int)icons, 
+                                        0, 0, 0,
+                                        (int)(&context));
 }
 
 void roadmap_car(void){

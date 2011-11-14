@@ -202,7 +202,7 @@ void NOPH_ProgressMessageDialog_hideDialog(void);
 
 void NOPH_SearchDialog_showDialog(int in_callback);
 void NOPH_SearchDialog_showError(const char* title, const char* message);
-void NOPH_SearchDialog_addressResolved(int in_callback, int local_search_provider_label, int address_count, int address_results, int address_indexes, int address_icons, int local_sreach_count, int local_sreach_results, int local_sreach_indexes, int local_sreach_icons);
+void NOPH_SearchDialog_addressResolved(int in_callback, const char* local_search_provider_label, int address_count, int address_results, int address_indexes, int address_icons, int local_sreach_count, int local_sreach_results, int local_sreach_indexes, int local_sreach_icons);
 
 //
 // Language options
@@ -218,6 +218,13 @@ void NOPH_SignInUpDialogs_showSignInDialog(int in_signin_callback, const char* u
 void NOPH_SignInUpDialogs_showSignUpDialog(int in_signup_callback, int in_signup_skip_callback);
 void NOPH_SignInUpDialogs_signInSuccessful(void);
 int NOPH_SignInUpDialogs_isLoginActive(void);
+
+//
+// Generic list dialogs
+//
+void NOPH_GenericListDialogs_showDialog(const char* title, int in_action_callback, int count, int labels_addr, int values_addr, int icons_addr, int menu_count, int menu_labels_addr, int menu_values_addr, int context_addr);
+void NOPH_GenericListDialogs_showDialogNoItems(const char* title, const char* empty_list_message);
+void NOPH_GenericListDialogs_closeDialog(int return_to_main_menu);
 
 #endif// __RIMAPI_H__
 

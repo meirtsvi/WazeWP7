@@ -172,11 +172,16 @@ BOOL roadmap_map_settings_isEnabled(RoadMapConfigDescriptor descriptor){
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-static int map_scheme_callback (SsdWidget widget, const char *new_value, const void *value, void *context) {
+static void map_scheme_callback ( char** selected_label,
+                                  void** selected_item,
+                                  void*  selected_option, 
+                                  void*  context)
+{
+    roadmap_log(ROADMAP_INFO, "ROADMAP MAP SEETINGS: Callback 'map_scheme_callback' called with: Selected label = '%s'. Selected option = %d. Selected value = '%s'", 
+                *selected_label, (int)(selected_option), (char*)(*selected_item));
 
-   roadmap_skin_set_scheme((const char *)value);
-   ssd_dialog_hide_all(dec_close);
-   return 1;
+   roadmap_skin_set_scheme((const char *)selected_item);
+   NOPH_GenericListDialogs_closeDialog(FALSE);
 }
 
 static int on_map_scheme_select (SsdWidget this, const char *new_value) {
@@ -186,20 +191,14 @@ static int on_map_scheme_select (SsdWidget this, const char *new_value) {
       map_labels[i] = (char *)roadmap_lang_get(map_labels[i]);
    }
 
-   ssd_generic_icon_list_dialog_show (roadmap_lang_get ("Select map color scheme"),
-               MAP_SCHEMES,
-               (const char **)map_labels,
-               (const void **)map_values,
-               (const char **)map_icons,
-               NULL,
-               map_scheme_callback,
-               NULL,
-               NULL,
-               NULL,
-               NULL,
-               70,
-               0,
-               FALSE);
+   NOPH_GenericListDialogs_showDialog( "Select map color scheme", 
+                                       (int)map_scheme_callback, 
+                                       MAP_SCHEMES, 
+                                       (int)map_labels,
+                                       (int)map_values,
+                                       (int)map_icons,
+                                       0, 0, 0,
+                                       NULL);
    return 1;
 }
 
