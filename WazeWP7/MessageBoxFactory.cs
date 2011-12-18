@@ -31,8 +31,9 @@ class MessageBoxFactory {
                 string msgText,  int textSize,  string buttonText,
                                            int callback,  int numberOfSeconds,  int isModal)
     {
-        // TODO Eli:
-        // This box is always model which is wrong..
+
+        
+
         // if numberOfSeconds is non zero we should auto close, but MessageBox is always Modal and does not support closing from code.
         // we will need to implement a non model message box calss for this scenario.
 
@@ -59,6 +60,13 @@ class MessageBoxFactory {
                                     res = Syscalls.rtlDialog.Result;
 
                                 });
+
+                                // If we were asked to display an error, try to handle it gracefully by trying to navigate again.
+                                if (titleText.Contains("אופס") || titleText.Contains("Oops"))
+                                {
+                                    //TODO: Try to navigate to latest destination again.
+                                }
+
                             }));
 
                         threadAutoHide.Start();
