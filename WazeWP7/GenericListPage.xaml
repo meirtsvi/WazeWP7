@@ -17,7 +17,7 @@
 
     <!--Resources defining the look and feel of the list-->
     <phone:PhoneApplicationPage.Resources>
-       <DataTemplate x:Key="GenericListItemTemplate">
+        <DataTemplate x:Key="GenericListItemTemplate">
             <Grid x:Name="ListItemGrid"
                   Tap="ListItemGrid_Tap" 
                   MouseLeftButtonDown="ListItemGrid_MouseLeftButtonDown">
@@ -29,9 +29,8 @@
                 <toolkit:ContextMenuService.ContextMenu>
                     <toolkit:ContextMenu IsZoomEnabled="False"
                                          FlowDirection="{Binding FlowDirection,ElementName=LayoutRoot}"
-                                         IsEnabled="{Binding IsContextMenuEnabled}"
-                                         ItemsSource="{Binding ContextMenuItems}"
-                                         Opened="ContextMenu_Opened">
+                                         Opened="ContextMenu_Opened"
+                                         Loaded="ContextMenu_Loaded">
                         <toolkit:ContextMenu.ItemTemplate>
                             <DataTemplate>
                                 <toolkit:MenuItem Header="{Binding Header}"
@@ -62,7 +61,7 @@
         <!--Grid for displaying popups-->
         <Grid Grid.RowSpan="2"
                 x:Name="PopupsGrid" Canvas.ZIndex="2"
-                HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
         
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">

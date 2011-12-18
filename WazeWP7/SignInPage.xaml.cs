@@ -35,13 +35,12 @@ namespace WazeWP7
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // Start with calling the base implementation
-            base.OnNavigatedTo(e); 
-            
-            LanguageResources.Instance.UpdateApplicationPage(this);
-            var newPageContext = NavigationContext.GetData<SignInUpDialogsContext>();
-            if (newPageContext != null)
+            base.OnNavigatedTo(e);
+
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                pageContext = newPageContext;
+                LanguageResources.Instance.UpdateControl(this);
+                this.pageContext = NavigationContext.GetData<SignInUpDialogsContext>();
             }
         }
         #endregion

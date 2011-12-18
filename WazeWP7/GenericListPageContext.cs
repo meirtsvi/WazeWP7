@@ -12,16 +12,11 @@ namespace WazeWP7
             public string IconResource { get; private set; }
             public int ReferenceIndex { get; private set; }
 
-            public IEnumerable<ContextMenuItem> ContextMenuItems { get; private set; }
-            public bool IsContextMenuEnabled { get { return ContextMenuItems.Any(); } }
-            public System.Windows.Visibility ContextMenuVisibility { get { return IsContextMenuEnabled ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; } }
-
-            public ListItem(string label, string iconResource, int referenceIndex, IEnumerable<ContextMenuItem> contextMenuItems)
+            public ListItem(string label, string iconResource, int referenceIndex)
             {
                 this.Label = label;
                 this.IconResource = iconResource;
                 this.ReferenceIndex = referenceIndex;
-                this.ContextMenuItems = contextMenuItems;
             }
         }
 
@@ -80,6 +75,20 @@ namespace WazeWP7
             {
                 listItems = value;
                 NotifyPropertyChanged("ListItems");
+            }
+        }
+
+        private ObservableCollection<ContextMenuItem> contextMenuItems = new ObservableCollection<ContextMenuItem>();
+        public ObservableCollection<ContextMenuItem> ContextMenuItems
+        {
+            get
+            {
+                return contextMenuItems;
+            }
+            set
+            {
+                contextMenuItems = value;
+                NotifyPropertyChanged("ContextMenuItems");
             }
         }
     }

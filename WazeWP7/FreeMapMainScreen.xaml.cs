@@ -484,7 +484,11 @@ namespace WazeWP7
                 addIconMenuItem("Resources/favorites.png", text, new_item);
                 addMenuItem = false;
             }
-
+            //else if (text.ToLower().Equals("settings") || text.Equals("הגדרות"))
+            //{
+            //    addIconMenuItem("Resources/appbar.feature.settings.rest.png", text, new_item);
+            //    addMenuItem = false;
+            //}
             /*
             if (!perf_button_added)
             {
@@ -1194,7 +1198,10 @@ namespace WazeWP7
 
             if (c_on_canvas_button_pressed != 0)
             {
-                UIWorker.addUIEvent(c_on_canvas_button_pressed, x, y, 0, 0, true);
+                if (appBarArea >= 60)
+                {
+                    UIWorker.addUIEvent(c_on_canvas_button_pressed, x, y, 0, 0, true);
+                }
             }
 
 

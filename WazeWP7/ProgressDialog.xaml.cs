@@ -31,10 +31,11 @@ namespace WazeWP7
             Hide();
         }
 
-        public void Show()
+        public void Show(string label)
         {
-            this.LayoutRoot.FlowDirection = LanguageResources.Instance.FlowDirection;
+            this.inputLabel.Text = label;
             Result = MessageBoxResult.None;
+            LanguageResources.Instance.UpdateControl(this);
 
             // Hide before you show
             Hide();
@@ -53,11 +54,5 @@ namespace WazeWP7
                 parentPanel = null;
             }
         }
-
-        internal void SetLabel(string label)
-        {
-            inputLabel.Text = label;
-        }
-
     }
 }

@@ -110,18 +110,18 @@ typedef int NOPH_StringItem_t;
 typedef int NOPH_Gauge_t;
 
 /* Canvas and GameCanvas classes. */
-#define __NR_NOPH_Canvas_get 292 /* javax.microedition */
+#define __NR_NOPH_Canvas_get 313 /* javax.microedition */
 static inline _syscall0(NOPH_Canvas_t,NOPH_Canvas_get) /* Not generated */
 
-#define __NR_NOPH_Canvas_setFullScreenMode 293 /* javax.microedition */
+#define __NR_NOPH_Canvas_setFullScreenMode 314 /* javax.microedition */
 static inline _syscall2(void,NOPH_Canvas_setFullScreenMode, NOPH_Canvas_t, canvas, bool_t, mode) 
-#define __NR_NOPH_Canvas_getKeyCode 294 /* javax.microedition */
+#define __NR_NOPH_Canvas_getKeyCode 315 /* javax.microedition */
 static inline _syscall2(int,NOPH_Canvas_getKeyCode, NOPH_Canvas_t, canvas, int, gameAction) 
-#define __NR_NOPH_Canvas_getGameAction 295 /* javax.microedition */
+#define __NR_NOPH_Canvas_getGameAction 316 /* javax.microedition */
 static inline _syscall2(int,NOPH_Canvas_getGameAction, NOPH_Canvas_t, canvas, int, keyCode) 
-#define __NR_NOPH_Canvas_getWidth 296 /* javax.microedition */
+#define __NR_NOPH_Canvas_getWidth 317 /* javax.microedition */
 static inline _syscall1(int,NOPH_Canvas_getWidth, NOPH_Canvas_t, canvas) 
-#define __NR_NOPH_Canvas_getHeight 297 /* javax.microedition */
+#define __NR_NOPH_Canvas_getHeight 318 /* javax.microedition */
 static inline _syscall1(int,NOPH_Canvas_getHeight, NOPH_Canvas_t, canvas) 
 
 /**
@@ -164,58 +164,58 @@ return (void*)NOPH_registerCallback("javax.microedition.lcdui.game.GameCanvas.po
 }
 
 /* Image class */
-#define __NR_NOPH_Image_createImage 298 /* javax.microedition */
+#define __NR_NOPH_Image_createImage 319 /* javax.microedition */
 static inline _syscall6(NOPH_Image_t,NOPH_Image_createImage, NOPH_Image_t, src, int, x, int, y, int, width, int, height, int, transform) /* Not generated */
-#define __NR_NOPH_Image_createImage_string 299 /* javax.microedition */
+#define __NR_NOPH_Image_createImage_string 320 /* javax.microedition */
 static inline _syscall1(NOPH_Image_t,NOPH_Image_createImage_string, char*, name) /* Throws */
-#define __NR_NOPH_Image_createImage_xy 300 /* javax.microedition */
+#define __NR_NOPH_Image_createImage_xy 321 /* javax.microedition */
 static inline _syscall2(NOPH_Image_t,NOPH_Image_createImage_xy, int, width, int, height) /* Throws */
-#define __NR_NOPH_Image_getWidth 301 /* javax.microedition */
+#define __NR_NOPH_Image_getWidth 322 /* javax.microedition */
 static inline _syscall1(int,NOPH_Image_getWidth, NOPH_Image_t, image) 
-#define __NR_NOPH_Image_getHeight 302 /* javax.microedition */
+#define __NR_NOPH_Image_getHeight 323 /* javax.microedition */
 static inline _syscall1(int,NOPH_Image_getHeight, NOPH_Image_t, image) 
-#define __NR_NOPH_Image_getGraphics 303 /* javax.microedition */
+#define __NR_NOPH_Image_getGraphics 324 /* javax.microedition */
 static inline _syscall1(NOPH_Graphics_t,NOPH_Image_getGraphics, NOPH_Image_t, image) 
-#define __NR_NOPH_Image_isMutable 304 /* javax.microedition */
+#define __NR_NOPH_Image_isMutable 325 /* javax.microedition */
 static inline _syscall1(bool_t,NOPH_Image_isMutable, NOPH_Image_t, image) 
-#define __NR_NOPH_Image_setMutable 305 /* javax.microedition */
+#define __NR_NOPH_Image_setMutable 326 /* javax.microedition */
 static inline _syscall1(NOPH_Image_t,NOPH_Image_setMutable, NOPH_Image_t, src) /* Not generated */
 
 /* Graphics class */
-#define __NR_NOPH_Graphics_setFont 306 /* javax.microedition */
+#define __NR_NOPH_Graphics_setFont 327 /* javax.microedition */
 static inline _syscall2(void,NOPH_Graphics_setFont, NOPH_Graphics_t, graphics, NOPH_Font_t, font) 
-#define __NR_NOPH_Graphics_getFont 307 /* javax.microedition */
+#define __NR_NOPH_Graphics_getFont 328 /* javax.microedition */
 static inline _syscall1(NOPH_Font_t,NOPH_Graphics_getFont, NOPH_Graphics_t, graphics) 
 /*void NOPH_Graphics_setColor(NOPH_Graphics_t graphics, int red, int green, int blue);*/
-#define __NR_NOPH_Graphics_setColor_int 308 /* javax.microedition */
+#define __NR_NOPH_Graphics_setColor_int 329 /* javax.microedition */
 static inline _syscall2(void,NOPH_Graphics_setColor_int, NOPH_Graphics_t, graphics, int, rgb) 
-#define __NR_NOPH_Graphics_fillArc 309 /* javax.microedition */
+#define __NR_NOPH_Graphics_fillArc 330 /* javax.microedition */
 static inline _syscall7(void,NOPH_Graphics_fillArc, NOPH_Graphics_t, graphics, int, x, int, y, int, width, int, height, int, startAngle, int, arcAngle) 
-#define __NR_NOPH_Graphics_drawArc 310 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawArc 331 /* javax.microedition */
 static inline _syscall7(void,NOPH_Graphics_drawArc, NOPH_Graphics_t, graphics, int, x, int, y, int, width, int, height, int, startAngle, int, arcAngle) 
-#define __NR_NOPH_Graphics_fillRect 311 /* javax.microedition */
+#define __NR_NOPH_Graphics_fillRect 332 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_fillRect, NOPH_Graphics_t, graphics, int, x, int, y, int, width, int, height) 
-#define __NR_NOPH_Graphics_drawRect 312 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawRect 333 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_drawRect, NOPH_Graphics_t, graphics, int, x, int, y, int, width, int, height) 
-#define __NR_NOPH_Graphics_drawRoundRect 313 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawRoundRect 334 /* javax.microedition */
 static inline _syscall7(void,NOPH_Graphics_drawRoundRect, NOPH_Graphics_t, graphics, int, x, int, y, int, width, int, height, int, arcWidth, int, arcHeight) 
-#define __NR_NOPH_Graphics_fillTriangle 314 /* javax.microedition */
+#define __NR_NOPH_Graphics_fillTriangle 335 /* javax.microedition */
 static inline _syscall7(void,NOPH_Graphics_fillTriangle, NOPH_Graphics_t, graphics, int, x1, int, y1, int, x2, int, y2, int, x3, int, y3) 
-#define __NR_NOPH_Graphics_drawLine 315 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawLine 336 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_drawLine, NOPH_Graphics_t, graphics, int, x1, int, y1, int, x2, int, y2) 
-#define __NR_NOPH_Graphics_drawImage 316 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawImage 337 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_drawImage, NOPH_Graphics_t, graphics, NOPH_Image_t, image, int, x, int, y, int, anchor) 
-#define __NR_NOPH_Graphics_drawRegion 317 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawRegion 338 /* javax.microedition */
 static inline _syscall10(void,NOPH_Graphics_drawRegion, NOPH_Graphics_t, graphics, NOPH_Image_t, src, int, x_src, int, y_src, int, width, int, height, int, transform, int, x_dest, int, y_dest, int, anchor) 
-#define __NR_NOPH_Graphics_drawString 318 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawString 339 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_drawString, NOPH_Graphics_t, graphics, const char*, str, int, x, int, y, int, anchor) 
-#define __NR_NOPH_Graphics_getClipX 319 /* javax.microedition */
+#define __NR_NOPH_Graphics_getClipX 340 /* javax.microedition */
 static inline _syscall1(int,NOPH_Graphics_getClipX, NOPH_Graphics_t, graphics) 
-#define __NR_NOPH_Graphics_getClipY 320 /* javax.microedition */
+#define __NR_NOPH_Graphics_getClipY 341 /* javax.microedition */
 static inline _syscall1(int,NOPH_Graphics_getClipY, NOPH_Graphics_t, graphics) 
-#define __NR_NOPH_Graphics_getClipHeight 321 /* javax.microedition */
+#define __NR_NOPH_Graphics_getClipHeight 342 /* javax.microedition */
 static inline _syscall1(int,NOPH_Graphics_getClipHeight, NOPH_Graphics_t, graphics) 
-#define __NR_NOPH_Graphics_getClipWidth 322 /* javax.microedition */
+#define __NR_NOPH_Graphics_getClipWidth 343 /* javax.microedition */
 static inline _syscall1(int,NOPH_Graphics_getClipWidth, NOPH_Graphics_t, graphics) 
 
 /**
@@ -227,72 +227,72 @@ static inline _syscall1(int,NOPH_Graphics_getClipWidth, NOPH_Graphics_t, graphic
 *
 * CRuntime.memory[ (rgbData + offset) / 4 ];
 */
-#define __NR_NOPH_Graphics_drawRGB 323 /* javax.microedition */
+#define __NR_NOPH_Graphics_drawRGB 344 /* javax.microedition */
 static inline _syscall9(void,NOPH_Graphics_drawRGB, NOPH_Graphics_t, graphics, int, rgbData, int, offset, int, scanlength, int, x, int, y, int, width, int, height, int, processAlpha) /* Not generated */
-#define __NR_NOPH_Graphics_setClip 324 /* javax.microedition */
+#define __NR_NOPH_Graphics_setClip 345 /* javax.microedition */
 static inline _syscall5(void,NOPH_Graphics_setClip, NOPH_Graphics_t, graphics, int, x, int, y, int, w, int, h) 
 
 /* Display stuff */
-#define __NR_NOPH_Display_getDisplay 325 /* javax.microedition */
+#define __NR_NOPH_Display_getDisplay 346 /* javax.microedition */
 static inline _syscall1(NOPH_Display_t,NOPH_Display_getDisplay, NOPH_MIDlet_t, midlet) 
-#define __NR_NOPH_Display_vibrate 326 /* javax.microedition */
+#define __NR_NOPH_Display_vibrate 347 /* javax.microedition */
 static inline _syscall2(bool_t,NOPH_Display_vibrate, NOPH_Display_t, display, int, duration) 
-#define __NR_NOPH_Display_numColors 327 /* javax.microedition */
+#define __NR_NOPH_Display_numColors 348 /* javax.microedition */
 static inline _syscall1(int,NOPH_Display_numColors, NOPH_Display_t, display) 
-#define __NR_NOPH_Display_numAlphaLevels 328 /* javax.microedition */
+#define __NR_NOPH_Display_numAlphaLevels 349 /* javax.microedition */
 static inline _syscall1(int,NOPH_Display_numAlphaLevels, NOPH_Display_t, display) 
-#define __NR_NOPH_Display_setCurrent 329 /* javax.microedition */
+#define __NR_NOPH_Display_setCurrent 350 /* javax.microedition */
 static inline _syscall2(void,NOPH_Display_setCurrent, NOPH_Display_t, display, NOPH_Displayable_t, nextDisplayable) 
-#define __NR_NOPH_Display_setCurrentItem 330 /* javax.microedition */
+#define __NR_NOPH_Display_setCurrentItem 351 /* javax.microedition */
 static inline _syscall2(void,NOPH_Display_setCurrentItem, NOPH_Display_t, display, NOPH_Item_t, item) 
-#define __NR_NOPH_Display_getCurrent 331 /* javax.microedition */
+#define __NR_NOPH_Display_getCurrent 352 /* javax.microedition */
 static inline _syscall1(NOPH_Displayable_t,NOPH_Display_getCurrent, NOPH_Display_t, display) 
 
-#define __NR_NOPH_Item_setLayout 332 /* javax.microedition */
+#define __NR_NOPH_Item_setLayout 353 /* javax.microedition */
 static inline _syscall2(void,NOPH_Item_setLayout, NOPH_Item_t, item, int, layout) 
 
 /* Form class */
-#define __NR_NOPH_Form_new 333 /* javax.microedition */
+#define __NR_NOPH_Form_new 354 /* javax.microedition */
 static inline _syscall1(NOPH_Form_t,NOPH_Form_new, const char*, title) 
-#define __NR_NOPH_Form_append 334 /* javax.microedition */
+#define __NR_NOPH_Form_append 355 /* javax.microedition */
 static inline _syscall2(int,NOPH_Form_append, NOPH_Form_t, form, NOPH_Item_t, item) 
-#define __NR_NOPH_ChoiceGroup_new 335 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_new 356 /* javax.microedition */
 static inline _syscall2(NOPH_ChoiceGroup_t,NOPH_ChoiceGroup_new, const char*, title, int, choiceType) 
-#define __NR_NOPH_ChoiceGroup_append 336 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_append 357 /* javax.microedition */
 static inline _syscall3(void,NOPH_ChoiceGroup_append, NOPH_ChoiceGroup_t, choice, const char*, label, NOPH_Image_t, image) 
-#define __NR_NOPH_ChoiceGroup_getSelectedIndex 337 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_getSelectedIndex 358 /* javax.microedition */
 static inline _syscall1(int,NOPH_ChoiceGroup_getSelectedIndex, NOPH_ChoiceGroup_t, choice) 
-#define __NR_NOPH_ChoiceGroup_deleteAll 338 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_deleteAll 359 /* javax.microedition */
 static inline _syscall1(void,NOPH_ChoiceGroup_deleteAll, NOPH_ChoiceGroup_t, choice) 
-#define __NR_NOPH_ChoiceGroup_getCString 339 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_getCString 360 /* javax.microedition */
 static inline _syscall4(void,NOPH_ChoiceGroup_getCString, NOPH_ChoiceGroup_t, choice, int, elementNum, char*, buffer, int, size) /* Not generated */
-#define __NR_NOPH_ChoiceGroup_setSelectedIndex 340 /* javax.microedition */
+#define __NR_NOPH_ChoiceGroup_setSelectedIndex 361 /* javax.microedition */
 static inline _syscall3(void,NOPH_ChoiceGroup_setSelectedIndex, NOPH_ChoiceGroup_t, choice, int, elementNum, bool_t, selected) 
-#define __NR_NOPH_TextField_new 341 /* javax.microedition */
+#define __NR_NOPH_TextField_new 362 /* javax.microedition */
 static inline _syscall4(NOPH_TextField_t,NOPH_TextField_new, const char*, label, const char*, text, int, maxSize, int, constraints) 
-#define __NR_NOPH_TextField_size 342 /* javax.microedition */
+#define __NR_NOPH_TextField_size 363 /* javax.microedition */
 static inline _syscall1(int,NOPH_TextField_size, NOPH_TextField_t, tf) 
-#define __NR_NOPH_TextField_getCString 343 /* javax.microedition */
+#define __NR_NOPH_TextField_getCString 364 /* javax.microedition */
 static inline _syscall3(void,NOPH_TextField_getCString, NOPH_TextField_t, tf, char*, buffer, int, size) /* Not generated */
-#define __NR_NOPH_TextField_setString 344 /* javax.microedition */
+#define __NR_NOPH_TextField_setString 365 /* javax.microedition */
 static inline _syscall2(void,NOPH_TextField_setString, NOPH_TextField_t, tf, const char*, text) 
-#define __NR_NOPH_StringItem_new 345 /* javax.microedition */
+#define __NR_NOPH_StringItem_new 366 /* javax.microedition */
 static inline _syscall2(NOPH_StringItem_t,NOPH_StringItem_new, const char*, label, const char*, text) 
-#define __NR_NOPH_StringItem_getCString 346 /* javax.microedition */
+#define __NR_NOPH_StringItem_getCString 367 /* javax.microedition */
 static inline _syscall3(void,NOPH_StringItem_getCString, NOPH_StringItem_t, si, char*, buffer, int, size) /* Not generated */
-#define __NR_NOPH_StringItem_setText 347 /* javax.microedition */
+#define __NR_NOPH_StringItem_setText 368 /* javax.microedition */
 static inline _syscall2(void,NOPH_StringItem_setText, NOPH_StringItem_t, si, const char*, text) 
-#define __NR_NOPH_Gauge_new 348 /* javax.microedition */
+#define __NR_NOPH_Gauge_new 369 /* javax.microedition */
 static inline _syscall4(NOPH_Gauge_t,NOPH_Gauge_new, const char*, label, bool_t, interactive, int, maxValue, int, initialValue) 
-#define __NR_NOPH_Gauge_setValue 349 /* javax.microedition */
+#define __NR_NOPH_Gauge_setValue 370 /* javax.microedition */
 static inline _syscall2(void,NOPH_Gauge_setValue, NOPH_Gauge_t, gauge, int, value) 
 
 /* List class */
-#define __NR_NOPH_List_new 350 /* javax.microedition */
+#define __NR_NOPH_List_new 371 /* javax.microedition */
 static inline _syscall2(NOPH_List_t,NOPH_List_new, const char*, title, int, listType) 
-#define __NR_NOPH_List_append 351 /* javax.microedition */
+#define __NR_NOPH_List_append 372 /* javax.microedition */
 static inline _syscall3(int,NOPH_List_append, NOPH_List_t, l, const char*, stringPart, NOPH_Image_t, imagePart) 
-#define __NR_NOPH_List_getSelectedIndex 352 /* javax.microedition */
+#define __NR_NOPH_List_getSelectedIndex 373 /* javax.microedition */
 static inline _syscall1(int,NOPH_List_getSelectedIndex, NOPH_List_t, l) 
 
 #if defined(__cplusplus)

@@ -1820,7 +1820,7 @@ void roadmap_welcome_personalize_dialog( void ){
 
    ssd_widget_add(group, box);
 
-#ifdef TOUCH_SCREEN
+#if (defined TOUCH_SCREEN) || (defined POINTER_SCREEN)
    ssd_widget_add (group, space(10));
 #endif
 
@@ -1828,7 +1828,7 @@ void roadmap_welcome_personalize_dialog( void ){
    ssd_dialog_add_vspace( group, 5, 0 );
 
    // Sign in text
-#ifdef TOUCH_SCREEN
+#if (defined TOUCH_SCREEN) || (defined POINTER_SCREEN)
    text_group = ssd_container_new ( "Text container", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE, SSD_END_ROW );
    ssd_dialog_add_hspace( text_group, 1, 0 );
    ssd_widget_add( text_group, ssd_text_new("Label", roadmap_lang_get ( "Already have a login?  "), 18, SSD_TEXT_LABEL | SSD_ALIGN_VCENTER | SSD_WIDGET_SPACE ) );
@@ -1851,7 +1851,7 @@ void roadmap_welcome_personalize_dialog( void ){
    ssd_widget_add (group, space(10));
 
 
-#ifdef TOUCH_SCREEN
+#if (defined TOUCH_SCREEN) || (defined POINTER_SCREEN)
    ssd_widget_add (group,
    ssd_button_label ("Skip", roadmap_lang_get ("Not now"),
                      SSD_WS_TABSTOP|SSD_ALIGN_CENTER|SSD_START_NEW_ROW, personalize_buttons_callback));

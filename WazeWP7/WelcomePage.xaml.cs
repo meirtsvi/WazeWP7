@@ -37,11 +37,10 @@ namespace WazeWP7
             // Start with calling the base implementation
             base.OnNavigatedTo(e);
 
-            LanguageResources.Instance.UpdateApplicationPage(this);
-            var newContext = NavigationContext.GetData<SignInUpDialogsContext>();
-            if (newContext != null)
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                pageContext = newContext;
+                LanguageResources.Instance.UpdateControl(this);
+                this.pageContext = NavigationContext.GetData<SignInUpDialogsContext>();
             }
         }
 

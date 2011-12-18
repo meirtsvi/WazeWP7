@@ -40,31 +40,31 @@ static inline NOPH_GameCanvas_t NOPH_GameCanvas_get(void)
 return (NOPH_GameCanvas_t)NOPH_Canvas_get();
 }
 
-#define __NR_NOPH_GameCanvas_flushGraphics 372 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_flushGraphics 393 /* javax.microedition */
 static inline _syscall1(void,NOPH_GameCanvas_flushGraphics, NOPH_GameCanvas_t, canvas) 
-#define __NR_NOPH_GameCanvas_flushGraphics_rect 373 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_flushGraphics_rect 394 /* javax.microedition */
 static inline _syscall5(void,NOPH_GameCanvas_flushGraphics_rect, NOPH_GameCanvas_t, canvas, int, x, int, y, int, width, int, height) 
-#define __NR_NOPH_GameCanvas_getGraphics 374 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_getGraphics 395 /* javax.microedition */
 static inline _syscall1(NOPH_Graphics_t,NOPH_GameCanvas_getGraphics, NOPH_GameCanvas_t, canvas) /* Not generated */
-#define __NR_NOPH_GameCanvas_getWidth 375 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_getWidth 396 /* javax.microedition */
 static inline _syscall1(int,NOPH_GameCanvas_getWidth, NOPH_GameCanvas_t, canvas) 
-#define __NR_NOPH_GameCanvas_getHeight 376 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_getHeight 397 /* javax.microedition */
 static inline _syscall1(int,NOPH_GameCanvas_getHeight, NOPH_GameCanvas_t, canvas) 
-#define __NR_NOPH_GameCanvas_getKeyStates 377 /* javax.microedition */
+#define __NR_NOPH_GameCanvas_getKeyStates 398 /* javax.microedition */
 static inline _syscall1(int,NOPH_GameCanvas_getKeyStates, NOPH_GameCanvas_t, canvas) 
 
 /* Sprite class */
-#define __NR_NOPH_Sprite_new 378 /* javax.microedition */
+#define __NR_NOPH_Sprite_new 399 /* javax.microedition */
 static inline _syscall1(NOPH_Sprite_t,NOPH_Sprite_new, NOPH_Image_t, image) 
-#define __NR_NOPH_Sprite_new_imageSize 379 /* javax.microedition */
+#define __NR_NOPH_Sprite_new_imageSize 400 /* javax.microedition */
 static inline _syscall3(NOPH_Sprite_t,NOPH_Sprite_new_imageSize, NOPH_Image_t, image, int, width, int, height) 
-#define __NR_NOPH_Sprite_new_sprite 380 /* javax.microedition */
+#define __NR_NOPH_Sprite_new_sprite 401 /* javax.microedition */
 static inline _syscall1(NOPH_Sprite_t,NOPH_Sprite_new_sprite, NOPH_Sprite_t, sprite) 
-#define __NR_NOPH_Sprite_setFrame 381 /* javax.microedition */
+#define __NR_NOPH_Sprite_setFrame 402 /* javax.microedition */
 static inline _syscall2(void,NOPH_Sprite_setFrame, NOPH_Sprite_t, sprite, int, sequenceIndex) 
-#define __NR_NOPH_Sprite_setImage 382 /* javax.microedition */
+#define __NR_NOPH_Sprite_setImage 403 /* javax.microedition */
 static inline _syscall4(void,NOPH_Sprite_setImage, NOPH_Sprite_t, sprite, NOPH_Image_t, image, int, frameWidth, int, frameHeight) 
-#define __NR_NOPH_Sprite_paint 383 /* javax.microedition */
+#define __NR_NOPH_Sprite_paint 404 /* javax.microedition */
 static inline _syscall2(void,NOPH_Sprite_paint, NOPH_Sprite_t, sprite, NOPH_Graphics_t, graphics) 
 #define NOPH_Sprite_move(layer, dx, dy) NOPH_Layer_move(layer, dx, dy)
 #define NOPH_Sprite_setPosition(layer, x, y) NOPH_Layer_setPosition(layer, x, y)
@@ -73,24 +73,24 @@ static inline _syscall2(void,NOPH_Sprite_paint, NOPH_Sprite_t, sprite, NOPH_Grap
 #define NOPH_Sprite_getHeight(layer) NOPH_Layer_getHeight(layer)
 
 /* LayerManager, layer and TiledLayer classes */
-#define __NR_NOPH_Layer_move 384 /* javax.microedition */
+#define __NR_NOPH_Layer_move 405 /* javax.microedition */
 static inline _syscall3(void,NOPH_Layer_move, NOPH_Layer_t, layer, int, dx, int, dy) 
-#define __NR_NOPH_Layer_setPosition 385 /* javax.microedition */
+#define __NR_NOPH_Layer_setPosition 406 /* javax.microedition */
 static inline _syscall3(void,NOPH_Layer_setPosition, NOPH_Layer_t, layer, int, x, int, y) 
-#define __NR_NOPH_Layer_setVisible 386 /* javax.microedition */
+#define __NR_NOPH_Layer_setVisible 407 /* javax.microedition */
 static inline _syscall2(void,NOPH_Layer_setVisible, NOPH_Layer_t, layer, bool_t, visible) 
-#define __NR_NOPH_Layer_getWidth 387 /* javax.microedition */
+#define __NR_NOPH_Layer_getWidth 408 /* javax.microedition */
 static inline _syscall1(int,NOPH_Layer_getWidth, NOPH_Layer_t, layer) 
-#define __NR_NOPH_Layer_getHeight 388 /* javax.microedition */
+#define __NR_NOPH_Layer_getHeight 409 /* javax.microedition */
 static inline _syscall1(int,NOPH_Layer_getHeight, NOPH_Layer_t, layer) 
 
-#define __NR_NOPH_TiledLayer_new 389 /* javax.microedition */
+#define __NR_NOPH_TiledLayer_new 410 /* javax.microedition */
 static inline _syscall5(NOPH_TiledLayer_t,NOPH_TiledLayer_new, int, columns, int, rows, NOPH_Image_t, image, int, tileWidth, int, tileHeight) 
-#define __NR_NOPH_TiledLayer_setCell 390 /* javax.microedition */
+#define __NR_NOPH_TiledLayer_setCell 411 /* javax.microedition */
 static inline _syscall4(void,NOPH_TiledLayer_setCell, NOPH_TiledLayer_t, layer, int, col, int, row, int, tileIndex) 
-#define __NR_NOPH_TiledLayer_getCell 391 /* javax.microedition */
+#define __NR_NOPH_TiledLayer_getCell 412 /* javax.microedition */
 static inline _syscall3(int,NOPH_TiledLayer_getCell, NOPH_TiledLayer_t, layer, int, col, int, row) 
-#define __NR_NOPH_TiledLayer_paint 392 /* javax.microedition */
+#define __NR_NOPH_TiledLayer_paint 413 /* javax.microedition */
 static inline _syscall2(void,NOPH_TiledLayer_paint, NOPH_TiledLayer_t, layer, NOPH_Graphics_t, graphics) 
 #define NOPH_TiledLayer_move(layer, dx, dy) NOPH_Layer_move(layer, dx, dy)
 #define NOPH_TiledLayer_setPosition(layer, x, y) NOPH_Layer_setPosition(layer, x, y)
@@ -98,13 +98,13 @@ static inline _syscall2(void,NOPH_TiledLayer_paint, NOPH_TiledLayer_t, layer, NO
 #define NOPH_TiledLayer_getWidth(layer) NOPH_Layer_getWidth(layer)
 #define NOPH_TiledLayer_getHeight(layer) NOPH_Layer_getHeight(layer)
 
-#define __NR_NOPH_LayerManager_new 393 /* javax.microedition */
+#define __NR_NOPH_LayerManager_new 414 /* javax.microedition */
 static inline _syscall0(NOPH_LayerManager_t,NOPH_LayerManager_new) 
-#define __NR_NOPH_LayerManager_append 394 /* javax.microedition */
+#define __NR_NOPH_LayerManager_append 415 /* javax.microedition */
 static inline _syscall2(void,NOPH_LayerManager_append, NOPH_LayerManager_t, mgr, NOPH_Layer_t, layer) 
-#define __NR_NOPH_LayerManager_paint 395 /* javax.microedition */
+#define __NR_NOPH_LayerManager_paint 416 /* javax.microedition */
 static inline _syscall4(void,NOPH_LayerManager_paint, NOPH_LayerManager_t, mgr, NOPH_Graphics_t, graphics, int, x, int, y) 
-#define __NR_NOPH_LayerManager_setViewWindow 396 /* javax.microedition */
+#define __NR_NOPH_LayerManager_setViewWindow 417 /* javax.microedition */
 static inline _syscall5(void,NOPH_LayerManager_setViewWindow, NOPH_LayerManager_t, mgr, int, x, int, y, int, width, int, height) 
 
 #if defined(__cplusplus)

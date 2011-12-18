@@ -53,7 +53,7 @@
     <Grid x:Name="LayoutRoot" Background="#FF46CBFF">
         <!--Grid for displaying popups-->
         <Grid x:Name="PopupsGrid" Canvas.ZIndex="1"
-              HorizontalAlignment="Center" VerticalAlignment="Top"/>
+              HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
 
         <Grid Background="Transparent" VerticalAlignment="Center" 
               Name="InputGrid" Canvas.ZIndex="1" Visibility="Collapsed">

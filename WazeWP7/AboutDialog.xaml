@@ -9,7 +9,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="332" d:DesignWidth="479">
     
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="333" Width="480">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="333" Width="480"
+          VerticalAlignment="Top">
         <TextBlock Height="35" HorizontalAlignment="Center" Margin="129,12,135,0" Name="textBlock1" Text="Waze for Windows Phone 7.5" VerticalAlignment="Top" Width="217" FontFamily="Segoe WP Bold" TextAlignment="Center" FontSize="15" />
         <TextBlock Height="30" HorizontalAlignment="Center" Margin="102,92,91,0" Name="textBlock2" Text="Ported to Windows Phone by Meir Tsvi" VerticalAlignment="Top" FontFamily="Segoe WP" Width="275" FontSize="15" />
         <TextBlock Height="41" HorizontalAlignment="Center" Margin="8,166,11,0" Name="textBlock16" Text="Code contributed by Meni Zalzman, Amit Finkelstein, Eli Ofek and Eran Gonen" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="461" FontFamily="Segoe WP" FontSize="16" />

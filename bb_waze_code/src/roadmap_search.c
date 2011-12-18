@@ -92,7 +92,6 @@ typedef struct {
 extern int main_navigator( const RoadMapPosition *point,
                            address_info_ptr       ai);
 
-static   BOOL              s_address_search_is_active = FALSE;
 static   BOOL              s_poi_search_is_active = FALSE;
 
 
@@ -756,8 +755,6 @@ void search_menu_geo_reminders(void){
 
 static void on_dlg_closed_address(int exit_code, void* context)
 {
-   s_address_search_is_active = FALSE;
-
    if(( dec_cancel != exit_code) && (dec_close != exit_code) && (dec_ok != exit_code))
       ssd_dialog_hide_all( dec_close);
 }
@@ -774,14 +771,7 @@ void search_menu_search_address(void){
    roadmap_analytics_log_event(ANALYTICS_EVENT_SEARCHADDR_NAME, NULL, NULL);
 
 #ifndef IPHONE
-   if( s_address_search_is_active)
-   {
-      assert(0);
-      return;
-   }
-
    address_search_dlg_show( on_dlg_closed_address, NULL);
-   s_address_search_is_active = TRUE;
 #else
 	address_search_dlg_show(NULL, NULL);
 #endif //IPHONE
@@ -791,14 +781,7 @@ void search_menu_single_search(void){
    roadmap_analytics_log_event(ANALYTICS_EVENT_SEARCHADDR_NAME, NULL, NULL);
 
 #ifndef IPHONE
-   if( s_address_search_is_active)
-   {
-      assert(0);
-      return;
-   }
-
    single_search_dlg_show( on_dlg_closed_address, NULL);
-   s_address_search_is_active = TRUE;
 #else
    single_search_dlg_show(NULL, NULL);
 #endif //IPHONE

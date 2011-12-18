@@ -63,36 +63,36 @@
 
 static time_t start_time;
 
-static RoadMapConfigDescriptor CostTypeCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Type");
-static RoadMapConfigDescriptor PreferSameStreetCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Prefer same street");
-static RoadMapConfigDescriptor CostAvoidPrimaryCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Avoid primaries");
-static RoadMapConfigDescriptor CostAvoidTollRoadsCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Avoid tolls");
+RoadMapConfigDescriptor CostTypeCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Type");
+RoadMapConfigDescriptor PreferSameStreetCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Prefer same street");
+RoadMapConfigDescriptor CostAvoidPrimaryCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Avoid primaries");
+RoadMapConfigDescriptor CostAvoidTollRoadsCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Avoid tolls");
 
-static RoadMapConfigDescriptor CostPreferUnknownDirectionsCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Prefer unknown directions");
+RoadMapConfigDescriptor CostPreferUnknownDirectionsCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Prefer unknown directions");
 
-static RoadMapConfigDescriptor CostAvoidTrailCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Avoid trails");
+RoadMapConfigDescriptor CostAvoidTrailCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Avoid trails");
 
-static RoadMapConfigDescriptor CostAllowUnknownsCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Allow unknown directions");
-                  
-static RoadMapConfigDescriptor CostAvoidPalestinianRoadsCfg =
-                  ROADMAP_CONFIG_ITEM("Routing", "Avoid Palestinian Roads");
+RoadMapConfigDescriptor CostAllowUnknownsCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Allow unknown directions");
+           
+RoadMapConfigDescriptor CostAvoidPalestinianRoadsCfg =
+           ROADMAP_CONFIG_ITEM("Routing", "Avoid Palestinian Roads");
 
 // allow the user to avoid routing through palestinan roads only if
 // this config will be true ( we will get it from server ).
-static RoadMapConfigDescriptor PalestinianRoadsCfg =
+RoadMapConfigDescriptor PalestinianRoadsCfg =
                   ROADMAP_CONFIG_ITEM("Routing", "Palestinian Roads");
 
-static RoadMapConfigDescriptor TollRoadsCfg =
+RoadMapConfigDescriptor TollRoadsCfg =
                   ROADMAP_CONFIG_ITEM("Routing", "Tolls roads");
 
-static RoadMapConfigDescriptor UnknownRoadsCfg =
+RoadMapConfigDescriptor UnknownRoadsCfg =
                   ROADMAP_CONFIG_ITEM("Routing", "Unknown roads");
 
 
@@ -116,18 +116,18 @@ static ssd_contextmenu  context_menu = SSD_CM_INIT_MENU( context_menu_items);
 
 int navigate_cost_use_traffic (void) {
 
-	return TRUE;
+    return TRUE;
 }
 
 int navigate_cost_prefer_same_street (void) {
 
-	return roadmap_config_match(&PreferSameStreetCfg, "yes");
+    return roadmap_config_match(&PreferSameStreetCfg, "yes");
 }
 
 
 int navigate_cost_avoid_primaries (void) {
 
-	return roadmap_config_match(&CostAvoidPrimaryCfg, "yes");
+    return roadmap_config_match(&CostAvoidPrimaryCfg, "yes");
 }
 
 int navigate_cost_avoid_toll_roads(void){
@@ -140,21 +140,21 @@ int navigate_cost_prefer_unknown_directions(void){
 
 int navigate_cost_avoid_trails (void) {
 
-	if (roadmap_config_match(&CostAvoidTrailCfg, "Allow"))
-		return ALLOW_DIRT_ROADS;
-	else if (roadmap_config_match(&CostAvoidTrailCfg, "Don't allow"))
-		return AVOID_ALL_DIRT_ROADS;
-	else
-		return AVOID_LONG_DIRT_ROADS;
+    if (roadmap_config_match(&CostAvoidTrailCfg, "Allow"))
+        return ALLOW_DIRT_ROADS;
+    else if (roadmap_config_match(&CostAvoidTrailCfg, "Don't allow"))
+        return AVOID_ALL_DIRT_ROADS;
+    else
+        return AVOID_LONG_DIRT_ROADS;
 }
 
 int navigate_cost_avoid_palestinian_roads (void) {
-	return ( roadmap_config_match(&CostAvoidPalestinianRoadsCfg, "yes") );
+    return ( roadmap_config_match(&CostAvoidPalestinianRoadsCfg, "yes") );
 }
 
 int navigate_cost_allow_unknowns (void) {
 
-	return ( !roadmap_config_match(&CostAllowUnknownsCfg, "no") );
+    return ( !roadmap_config_match(&CostAllowUnknownsCfg, "no") );
 }
 
 static int calc_penalty (int line_id, int cfcc, int prev_line_id) {
@@ -168,17 +168,17 @@ static int calc_penalty (int line_id, int cfcc, int prev_line_id) {
          break;
       case ROADMAP_ROAD_4X4:
       case ROADMAP_ROAD_TRAIL:
-      	{
-	      	int option = navigate_cost_avoid_trails ();
-	         if (option == ALLOW_DIRT_ROADS)
-	            return PENALTY_AVOID;
+        {
+            int option = navigate_cost_avoid_trails ();
+             if (option == ALLOW_DIRT_ROADS)
+                return PENALTY_AVOID;
 
-	         if (option == AVOID_LONG_DIRT_ROADS) {
-	            int length = roadmap_line_length (line_id);
+             if (option == AVOID_LONG_DIRT_ROADS) {
+                int length = roadmap_line_length (line_id);
 
-	            if (length > 300) return PENALTY_AVOID;
-	         }
-      	}
+                if (length > 300) return PENALTY_AVOID;
+             }
+        }
          break;
       case ROADMAP_ROAD_PEDESTRIAN:
       case ROADMAP_ROAD_WALKWAY:
@@ -206,19 +206,19 @@ static int cost_shortest (int line_id, int is_revesred, int cur_cost,
 
    if (node_id != -1) {
 
-   	penalty = calc_penalty (line_id, cfcc, prev_line_id);
+    penalty = calc_penalty (line_id, cfcc, prev_line_id);
 
-	   switch (penalty) {
-	      case PENALTY_AVOID:
-	         penalty = 100000;
-	         break;
-	      case PENALTY_SMALL:
-	         penalty = 500;
-	         break;
-	      case PENALTY_NONE:
-	         penalty = 0;
-	         break;
-	   }
+       switch (penalty) {
+          case PENALTY_AVOID:
+             penalty = 100000;
+             break;
+          case PENALTY_SMALL:
+             penalty = 500;
+             break;
+          case PENALTY_NONE:
+             penalty = 0;
+             break;
+       }
    }
 
    return penalty + roadmap_line_length (line_id);
@@ -284,69 +284,69 @@ static int cost_fastest_traffic (int line_id, int is_reversed, int cur_cost,
    int cfcc = roadmap_line_cfcc (line_id);
    int penalty = PENALTY_NONE;
    int square = roadmap_square_active ();
-	int test_square = square;
-	int test_line = line_id;
-	int test_reversed = is_reversed;
-	int i;
-	RoadMapPosition start_position;
-	RoadMapPosition end_position;
+    int test_square = square;
+    int test_line = line_id;
+    int test_reversed = is_reversed;
+    int i;
+    RoadMapPosition start_position;
+    RoadMapPosition end_position;
 
-	cross_time = RTTrafficInfo_Get_Avg_Cross_Time(line_id, square ,is_reversed);
+    cross_time = RTTrafficInfo_Get_Avg_Cross_Time(line_id, square ,is_reversed);
 
-	/* the following loop is supposed to prevent navigation from
-	 * issuing instructions to exit a highway and enter right back
-	 * on the same exit when traffic is slow
-	 */
-	if (is_reversed) {
-		roadmap_line_to (line_id, &start_position);
-	} else {
-		roadmap_line_from (line_id, &start_position);
-	}
+    /* the following loop is supposed to prevent navigation from
+     * issuing instructions to exit a highway and enter right back
+     * on the same exit when traffic is slow
+     */
+    if (is_reversed) {
+        roadmap_line_to (line_id, &start_position);
+    } else {
+        roadmap_line_from (line_id, &start_position);
+    }
 
-	for (i = 0; i < 3 && !cross_time; i++) {
-		/* if this segment has only one successor, use traffic info from the successor */
-		int from;
-		int to;
-		struct successor successors[2];
-		int count;
-		int speed;
+    for (i = 0; i < 3 && !cross_time; i++) {
+        /* if this segment has only one successor, use traffic info from the successor */
+        int from;
+        int to;
+        struct successor successors[2];
+        int count;
+        int speed;
 
-		roadmap_square_set_current (test_square);
-		if (test_reversed) {
-			roadmap_line_points (test_line, &to, &from);
-		} else {
-			roadmap_line_points (test_line, &from, &to);
-		}
+        roadmap_square_set_current (test_square);
+        if (test_reversed) {
+            roadmap_line_points (test_line, &to, &from);
+        } else {
+            roadmap_line_points (test_line, &from, &to);
+        }
 
-		roadmap_point_position (to, &end_position);
-		if (roadmap_math_distance (&start_position, &end_position) > 1000) break;
+        roadmap_point_position (to, &end_position);
+        if (roadmap_math_distance (&start_position, &end_position) > 1000) break;
 
-	   count = get_connected_segments (test_square, test_line, test_reversed,
-	            							  to, successors, 2, 1, 1);
-	   if (count != 1) break;
+       count = get_connected_segments (test_square, test_line, test_reversed,
+                                              to, successors, 2, 1, 1);
+       if (count != 1) break;
 
-	   test_square = successors[0].square_id;
-	   test_line = successors[0].line_id;
-	   test_reversed = successors[0].reversed;
+       test_square = successors[0].square_id;
+       test_line = successors[0].line_id;
+       test_reversed = successors[0].reversed;
 
-		if (test_square == square &&
-			 test_line == line_id &&
-			 test_reversed == is_reversed) {
+        if (test_square == square &&
+             test_line == line_id &&
+             test_reversed == is_reversed) {
 
-			break;
-		}
+            break;
+        }
 
-		speed = RTTrafficInfo_Get_Avg_Speed(test_line, test_square ,test_reversed);
-		if (speed) {
-			int length_m;
-			length_m = 	roadmap_math_to_cm(roadmap_line_length (test_line)) / 100;
-			cross_time = (int)(length_m *3.6  / speed) + 1;
-		}
-	}
-	roadmap_square_set_current (square);
+        speed = RTTrafficInfo_Get_Avg_Speed(test_line, test_square ,test_reversed);
+        if (speed) {
+            int length_m;
+            length_m = 	roadmap_math_to_cm(roadmap_line_length (test_line)) / 100;
+            cross_time = (int)(length_m *3.6  / speed) + 1;
+        }
+    }
+    roadmap_square_set_current (square);
 
    if (!cross_time) cross_time =
-		roadmap_line_speed_get_cross_time_at (line_id, is_reversed,
+        roadmap_line_speed_get_cross_time_at (line_id, is_reversed,
                        (start_time + (time_t)cur_cost));
 
    if (!cross_time) cross_time =
@@ -354,9 +354,9 @@ static int cost_fastest_traffic (int line_id, int is_reversed, int cur_cost,
 
    if (node_id != -1) {
 
-	   cross_time += RTAlerts_Penalty(line_id, is_reversed);
+       cross_time += RTAlerts_Penalty(line_id, is_reversed);
 
-   	penalty = calc_penalty (line_id, cfcc, prev_line_id);
+    penalty = calc_penalty (line_id, cfcc, prev_line_id);
    }
 
    switch (penalty) {
@@ -419,11 +419,11 @@ int navigate_cost_time (int line_id, int is_revesred, int cur_cost,
                         int prev_line_id, int is_prev_reversed) {
 
      if (navigate_cost_use_traffic ()) {
-					return cost_fastest_traffic (line_id, is_revesred, cur_cost,
-               					                 prev_line_id, is_prev_reversed, -1);
+                    return cost_fastest_traffic (line_id, is_revesred, cur_cost,
+                                                 prev_line_id, is_prev_reversed, -1);
       } else {
-					return cost_fastest_no_traffic (line_id, is_revesred, cur_cost,
-               					                 prev_line_id, is_prev_reversed, -1);
+                    return cost_fastest_no_traffic (line_id, is_revesred, cur_cost,
+                                                 prev_line_id, is_prev_reversed, -1);
      }
 
 }
@@ -509,21 +509,21 @@ static void save_changes(){
                            (const char *)ssd_dialog_get_data ("samestreet"));
    roadmap_config_set (&CostAvoidTrailCfg,
                            (const char *)ssd_dialog_get_data ("avoidtrails"));
-	                            
+                                
 }
 
 int navigate_cost_isPalestinianOptionEnabled(){
-	return (roadmap_config_match(&PalestinianRoadsCfg, "yes"));
+    return (roadmap_config_match(&PalestinianRoadsCfg, "yes"));
 }
 
 
 static void on_close_dialog (int exit_code, void* context){
 #if defined (TOUCH_SCREEN) || defined (RIMAPI)
-	if (exit_code == dec_ok){
-		save_changes();
-		if (navigate_main_state() == 0)
-		   navigate_main_calc_route ();
-	}
+    if (exit_code == dec_ok){
+        save_changes();
+        if (navigate_main_state() == 0)
+           navigate_main_calc_route ();
+    }
 #endif
 }
 static const char *yesno_label[2];
@@ -535,10 +535,10 @@ static const char *trails_value[3];
 
 /////////////////////////////////////////////////////////////////////
 static SsdWidget space(int height){
-	SsdWidget space;
-	space = ssd_container_new ("spacer", NULL, SSD_MAX_SIZE, height, SSD_WIDGET_SPACE|SSD_END_ROW);
-	ssd_widget_set_color (space, NULL,NULL);
-	return space;
+    SsdWidget space;
+    space = ssd_container_new ("spacer", NULL, SSD_MAX_SIZE, height, SSD_WIDGET_SPACE|SSD_END_ROW);
+    ssd_widget_set_color (space, NULL,NULL);
+    return space;
 }
 
 static void create_ssd_dialog (void) {
@@ -546,9 +546,9 @@ static void create_ssd_dialog (void) {
    SsdWidget box, box2;
    SsdWidget container;
 #ifdef TOUCH_SCREEN
-	int tab_flag = SSD_WS_TABSTOP;
+    int tab_flag = SSD_WS_TABSTOP;
 #else
-   	int tab_flag = SSD_WS_TABSTOP;
+    int tab_flag = SSD_WS_TABSTOP;
 #endif
    SsdWidget dialog = ssd_dialog_new ("route_prefs",
                       roadmap_lang_get ("Routing preferences"),
@@ -660,7 +660,7 @@ static void create_ssd_dialog (void) {
 
 
    if (roadmap_config_match(&TollRoadsCfg, "yes")){
-   	  ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
+      ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
       box = ssd_container_new ("avoidtolls group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
                                 SSD_WIDGET_SPACE|SSD_END_ROW|tab_flag);
       ssd_widget_set_color (box, "#000000", "#ffffff");
@@ -677,12 +677,12 @@ static void create_ssd_dialog (void) {
    }
    
    if (roadmap_config_match(&PalestinianRoadsCfg, "yes")){
-   	  ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
+      ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
       box = ssd_container_new ("palestinianroads group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
                                 SSD_WIDGET_SPACE|SSD_END_ROW|tab_flag);
       ssd_widget_set_color (box, "#000000", "#ffffff");
-	
-	  box2 = ssd_container_new ("palestinianroads text group", NULL, roadmap_canvas_width()/2, SSD_MIN_SIZE,
+    
+      box2 = ssd_container_new ("palestinianroads text group", NULL, roadmap_canvas_width()/2, SSD_MIN_SIZE,
                             SSD_ALIGN_VCENTER);
       ssd_widget_set_color (box2, NULL, NULL);
 
@@ -691,16 +691,16 @@ static void create_ssd_dialog (void) {
                      roadmap_lang_get ("Avoid areas under Palestinian authority supervision"),
                     -1, SSD_TEXT_LABEL|SSD_ALIGN_VCENTER|SSD_WIDGET_SPACE));
       ssd_widget_add(box, box2);
- 	
+    
       ssd_widget_add (box,
          ssd_checkbox_new ("avoidPalestinianRoads", TRUE,   SSD_ALIGN_RIGHT, NULL,NULL,NULL,CHECKBOX_STYLE_ON_OFF));
-	
+    
       ssd_widget_add (container, box);
    }
    
    
    if (roadmap_config_match(&UnknownRoadsCfg, "yes")){
-   	  ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
+      ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
       box = ssd_container_new ("preferunknowndir group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
                                SSD_WIDGET_SPACE|SSD_END_ROW|tab_flag);
       ssd_widget_set_color (box, "#000000", "#ffffff");
@@ -719,12 +719,12 @@ static void create_ssd_dialog (void) {
    
    ssd_widget_add (dialog, container);
 
-	SsdWidget button = ssd_button_label ( "Save", "Save",
-		SSD_ALIGN_VCENTER|SSD_END_ROW|SSD_ALIGN_RIGHT|SSD_WS_TABSTOP|SSD_WS_DEFWIDGET, on_save ) ;
-	ssd_widget_add (dialog, button); 
+    SsdWidget button = ssd_button_label ( "Save", "Save",
+        SSD_ALIGN_VCENTER|SSD_END_ROW|SSD_ALIGN_RIGHT|SSD_WS_TABSTOP|SSD_WS_DEFWIDGET, on_save ) ;
+    ssd_widget_add (dialog, button); 
 
 #ifndef TOUCH_SCREEN
-	set_softkeys(dialog);
+    set_softkeys(dialog);
 #endif
 }
 
@@ -763,18 +763,18 @@ void cost_preferences (void) {
    ssd_dialog_set_data ("samestreet", (void *) value);
   
    if (roadmap_config_match(&PalestinianRoadsCfg, "yes")){
-	   if (navigate_cost_avoid_palestinian_roads()) value = yesno[0];
-	   else value = yesno[1];
-	   ssd_dialog_set_data ("avoidPalestinianRoads", (void *) value);
+       if (navigate_cost_avoid_palestinian_roads()) value = yesno[0];
+       else value = yesno[1];
+       ssd_dialog_set_data ("avoidPalestinianRoads", (void *) value);
    }
 
-	avoid_trails = navigate_cost_avoid_trails ();
+    avoid_trails = navigate_cost_avoid_trails ();
    if (avoid_trails == ALLOW_DIRT_ROADS) value = trails_value[0];
    else if (avoid_trails == AVOID_ALL_DIRT_ROADS) value = trails_value[1];
    else value = trails_value[2];
    ssd_dialog_set_data ("avoidtrails", (void *) value);
 #else
-	cost_preferences_show();
+    cost_preferences_show();
 #endif //IPHONE
 
 
@@ -803,10 +803,10 @@ static void on_option_selected(  BOOL              made_selection,
    switch( selection)
    {
       case nc_cm_recalculate:
-      	save_changes();
-      	ssd_dialog_hide_current(dec_close);
-      	 if (navigate_main_state() == 0)
-      	    navigate_main_calc_route ();
+        save_changes();
+        ssd_dialog_hide_current(dec_close);
+         if (navigate_main_state() == 0)
+            navigate_main_calc_route ();
          break;
 
       case nc_cm_save:
@@ -819,8 +819,8 @@ static void on_option_selected(  BOOL              made_selection,
 
       case nc_cm_exit:
          exit_code = dec_cancel;
-      	ssd_dialog_hide_all( exit_code);
-      	roadmap_screen_refresh ();
+        ssd_dialog_hide_all( exit_code);
+        roadmap_screen_refresh ();
          break;
 
       default:
@@ -838,7 +838,7 @@ static int on_save(SsdWidget widget, const char *new_value, void *context){
 ///////////////////////////////////////////////////////////////////////////////////////////
 static int on_options(SsdWidget widget, const char *new_value, void *context)
 {
-	int menu_x;
+    int menu_x;
 
 
    if(g_context_menu_is_active)
@@ -849,18 +849,18 @@ static int on_options(SsdWidget widget, const char *new_value, void *context)
 
 
    if  (ssd_widget_rtl (NULL))
-	   menu_x = SSD_X_SCREEN_RIGHT;
-	else
-		menu_x = SSD_X_SCREEN_LEFT;
+       menu_x = SSD_X_SCREEN_RIGHT;
+    else
+        menu_x = SSD_X_SCREEN_LEFT;
 
    g_context_menu_is_active =  ssd_context_menu_show(  menu_x,              // X
-							   SSD_Y_SCREEN_BOTTOM, // Y
-							   &context_menu,
-							   on_option_selected,
-							   NULL,
-							   dir_default,
-							   0,
-							   TRUE);
+                               SSD_Y_SCREEN_BOTTOM, // Y
+                               &context_menu,
+                               on_option_selected,
+                               NULL,
+                               dir_default,
+                               0,
+                               TRUE);
 
 
    return 0;

@@ -226,5 +226,18 @@ void NOPH_GenericListDialogs_showDialog(const char* title, int in_action_callbac
 void NOPH_GenericListDialogs_showDialogNoItems(const char* title, const char* empty_list_message);
 void NOPH_GenericListDialogs_closeDialog(int return_to_main_menu);
 
+//
+// Navigate result dialog
+//
+void NOPH_NavigateResultDialog_showDialog(int navigate_flags, const char* title_text, const char* route_distance, const char* route_distance_units, int route_length, const char* via, int timeout, int show_diclaimer, int drive_callback, int alternative_routes_callback);
+void NOPH_AlternativeResultsDialog_showDialog(int number_of_routes, int routes, int dialog_closed_callback, int route_option_selected_callback);
+
+//
+// Settings dialog
+//
+void NOPH_LanguagesLoaded(int labels, int values, int count);
+void NOPH_PromptsLoaded(int labels, int values, int count);
+void NOPH_SettingsDialog_showDialog(int all_settings, int is_metric_system, int on_save_callback);
+
 #endif// __RIMAPI_H__
 

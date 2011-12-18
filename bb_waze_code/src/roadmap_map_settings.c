@@ -40,6 +40,7 @@
 #include "Realtime/RealtimeBonus.h"
 #include <string.h>
 #include <stdlib.h>
+#include <rimapi.h>
 
 #ifdef IPHONE
 #include "iphone/roadmap_map_settings_dialog.h"
@@ -255,7 +256,7 @@ void roadmap_map_settings_show(void){
               SSD_WIDGET_SPACE|SSD_END_ROW|SSD_ROUNDED_CORNERS|SSD_ROUNDED_WHITE|SSD_POINTER_NONE|SSD_CONTAINER_BORDER);
 
 
-	   /*
+	  
       if (roadmap_skin_auto_night_feature_enabled()){
 	      //Auto Night mode
          box = ssd_container_new ("Auto night mode group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
@@ -276,8 +277,8 @@ void roadmap_map_settings_show(void){
          ssd_widget_add (container, box);
       //   ssd_widget_add(box, ssd_separator_new("separator", SSD_ALIGN_BOTTOM));
       }
-	  */
-#ifdef TOUCH_SCREEN
+	  
+#if (defined TOUCH_SCREEN) || (defined POINTER_SCREEN)
       //Show Icons
 	   ssd_widget_add(box, space(1));
 	   box = ssd_container_new ("show icons group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
@@ -329,7 +330,7 @@ void roadmap_map_settings_show(void){
 
 #endif
 
-	   /*
+	   
       // Map Color schem
 
       ssd_widget_add(box, space(1));
@@ -362,7 +363,7 @@ void roadmap_map_settings_show(void){
 
 	  
 
-#ifdef TOUCH_SCREEN
+#if (defined TOUCH_SCREEN) || (defined POINTER_SCREEN)
       button = ssd_button_new ("edit_button", "", &buttons[0], 2,
                               SSD_ALIGN_VCENTER|SSD_ALIGN_RIGHT, on_map_scheme_select);
       ssd_widget_set_click_offsets_ext(button, -300, -10, 300, 10);
@@ -373,9 +374,9 @@ void roadmap_map_settings_show(void){
       ssd_widget_add(box, space(1));
 
       ssd_widget_add (container, box);
-
+      
       ssd_widget_add (dialog, container);
-	  */
+	  
 	   container = ssd_container_new ("Map GUI prefs", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE,
               SSD_WIDGET_SPACE|SSD_END_ROW|SSD_ROUNDED_CORNERS|SSD_ROUNDED_WHITE|SSD_POINTER_NONE|SSD_CONTAINER_BORDER);
 

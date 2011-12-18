@@ -1,0 +1,254 @@
+﻿<local:WazeApplicationPage 
+    x:Class="WazeWP7.SettingsPivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:local="clr-namespace:WazeWP7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="WazeSettingsListPickerItemDataTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding IconSource}"/>
+                <TextBlock Text="{Binding Label}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="WazeSettingsListPickerFullItemDataTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding IconSource}"/>
+                <TextBlock Text="{Binding Label}" VerticalAlignment="Center"
+                           Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF46CBFF">
+        <!--Grid for displaying popups-->
+        <Grid x:Name="PopupsGrid" Canvas.ZIndex="1"
+              HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+        <!--Pivot Control-->
+        <controls:Pivot>
+            <!--Pivot item one-->
+            <controls:PivotItem Header="General settings">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical">
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <toolkit:ListPicker x:Name="LanguagePicker"
+                                                    Header="Language"
+                                                    DataContext="{Binding Language}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                                <toolkit:ListPicker x:Name="PromptsPicker"
+                                                    Header="Prompts" 
+                                                    DataContext="{Binding Prompts}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <local:SimpleToggleSwitch x:Name="MeasurementSystemSwitch"
+                                                      ViewModel="{Binding MeasurementSystem}"/>
+                        </Border>
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <local:SimpleToggleSwitch x:Name="AutoZoomSwitch"
+                                                          ViewModel="{Binding AutoZoom}"/>
+                                <local:SimpleToggleSwitch x:Name="NavigationGuidanceSwitch"
+                                                          ViewModel="{Binding NavigationGuidance}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowPointsTickerSwitch"
+                                                          ViewModel="{Binding ShowPointsTicker}"/>
+                                <local:SimpleToggleSwitch x:Name="ClockFormatSwitch"
+                                                          ViewModel="{Binding ClockFormat}"/>
+                                <local:SimpleToggleSwitch x:Name="AutoRouteSuggestionsSwitch"
+                                                          ViewModel="{Binding AutoRouteSuggestions}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <toolkit:ListPicker Header="Events Radius" x:Name="EventsRadiusPicker"
+                                                DataContext="{Binding EventsRadius}"
+                                                ItemsSource="{Binding Items}"
+                                                ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Map settings">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="General map settings"/>
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel>
+                                <local:SimpleToggleSwitch x:Name="AutomaticNightModeSwitch"
+                                                          ViewModel="{Binding AutomaticNightMode}"/>
+                                <local:SimpleToggleSwitch x:Name="DisplayMapControlsOnTapSwitch"
+                                                          ViewModel="{Binding DisplayMapControlsOnTap}"/>
+                                <local:SimpleToggleSwitch x:Name="DisplayTopBarOnTapSwitch"
+                                                          ViewModel="{Binding DisplayTopBarOnTap}"/>
+                                <toolkit:ListPicker x:Name="MapColorSchemePicker"
+                                                    Header="Map color scheme"
+                                                    DataContext="{Binding MapColorScheme}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="Show on map" Margin="0,10,0,0" />
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel>
+                                <local:SimpleToggleSwitch x:Name="ShowSpeedometerSwitch"
+                                                          ViewModel="{Binding ShowSpeedometer}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowWazersSwitch"
+                                                          ViewModel="{Binding ShowWazers}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowTrafficLayerSwitch"
+                                                          ViewModel="{Binding ShowTrafficLayer}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowSpeedCamsSwitch"
+                                                          ViewModel="{Binding ShowSpeedCams}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowRoadGoodiesSwitch"
+                                                          ViewModel="{Binding ShowRoadGoodies}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowChitChatsSwitch"
+                                                          ViewModel="{Binding ShowChitChats}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowPoliceTrapsSwitch"
+                                                          ViewModel="{Binding ShowPoliceTraps}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowAccidentsSwitch"
+                                                          ViewModel="{Binding ShowAccidents}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowTrafficJamsSwitch"
+                                                          ViewModel="{Binding ShowTrafficJams}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowHazardsSwitch"
+                                                          ViewModel="{Binding ShowHazards}"/>
+                                <local:SimpleToggleSwitch x:Name="ShowRoadConstructionsSwitch"
+                                                          ViewModel="{Binding ShowRoadConstructions}"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+            
+            <!--Pivot item three-->
+            <controls:PivotItem Header="Groups">
+                <StackPanel Orientation="Vertical">
+                    <toolkit:ListPicker x:Name="PopUpReportsPicker"
+                                        Header="Pop-up reports"
+                                        DataContext="{Binding PopupReports}"
+                                        ItemsSource="{Binding Items}"
+                                        ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                        FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                        SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                    <toolkit:ListPicker x:Name="WazersGroupIconsPicker"
+                                        Header="Wazers group icons"
+                                        DataContext="{Binding WazersGroupIcons}"
+                                        ItemsSource="{Binding Items}"
+                                        ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                        FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                        SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                </StackPanel>
+            </controls:PivotItem>
+
+            <!--Pivot item four-->
+            <controls:PivotItem Header="Routing preferences">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical">
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <toolkit:ListPicker x:Name="RoutePreferencePicker"
+                                                    Header="Route preference"
+                                                    DataContext="{Binding RoutePreferences}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                                <toolkit:ListPicker x:Name="DirtRoardsPicker"
+                                                    Header="Dirt roads"
+                                                    DataContext="{Binding DirtRoards}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                            <local:SimpleToggleSwitch x:Name="MinimizeTurnsSwitch"
+                                                      ViewModel="{Binding MinimizeTurns}"/>
+                            <local:SimpleToggleSwitch x:Name="AvoidHighwaysSwitch"
+                                                      ViewModel="{Binding AvoidHighways}"/>
+                            <local:SimpleToggleSwitch x:Name="AvoidTollRoadsSwitch"
+                                                      ViewModel="{Binding AvoidTollRoads}"/>
+                            <local:SimpleToggleSwitch x:Name="AvoidPalestinianRoadsSwitch"
+                                                      ViewModel="{Binding AvoidPalestinianRoads}"/>
+                            <local:SimpleToggleSwitch x:Name="PreferCoockieMunchingTurnsSwitch"
+                                                      ViewModel="{Binding PreferCoockieMunchingTurns}"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+
+            <!--Pivot item five-->
+            <controls:PivotItem Header="Data Usage">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical" Margin="5,0">
+                        <TextBlock Text="Reduce data usage:"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <local:SimpleToggleSwitch x:Name="DisplayNetworkMonitorSwitch"
+                                                          ViewModel="{Binding DisplayNetworkMonitor}"/>
+                                <local:SimpleToggleSwitch x:Name="DownloadTrafficInfoSwitch"
+                                                          ViewModel="{Binding DownloadTrafficInfo}"/>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Text="Note:"/>
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="* Changes won't affect routing. Your route is always calculated based on real-time traffic conditions."/>
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="* Traffic and updates will not be seen on the map if you disable their download."/>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="SaveButton" 
+                                            IconUri="/Resources/appbar.save.rest.png" 
+                                            Text="Save"
+                                            Click="SaveButton_Click"/>
+            <shell:ApplicationBarIconButton x:Name="CancelButton"
+                                            IconUri="/Resources/appbar.cancel.rest.png" 
+                                            Text="Cancel"
+                                            Click="CancelButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</local:WazeApplicationPage>

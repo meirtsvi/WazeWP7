@@ -69,10 +69,9 @@ namespace WazeWP7
             base.OnNavigatedTo(e);
             
             // Set the page's state according to the context
-            var pageContext = NavigationContext.GetData<GenericListPageContext>();
-            if (pageContext != null)
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                this.PageContext = pageContext;
+                this.PageContext = NavigationContext.GetData<GenericListPageContext>();
                 this.DataContext = this;
 
                 // Check which grid to display
@@ -80,7 +79,7 @@ namespace WazeWP7
                 this.NoItemsGrid.Visibility = (this.PageContext.ListItems.Any()) ? System.Windows.Visibility.Collapsed : System.Windows.Visibility.Visible;
 
                 // And translate the page
-                LanguageResources.Instance.UpdateApplicationPage(this);
+                LanguageResources.Instance.UpdateControl(this);
             }
         }
 
@@ -103,7 +102,15 @@ namespace WazeWP7
 
         private void ContextMenu_Opened(object sender, RoutedEventArgs e)
         {
-            currentMenu = sender as ContextMenu;
+            var contextMenu = sender as ContextMenu;
+            if (this.PageContext.ContextMenuItems.Any())
+            {
+                currentMenu = contextMenu;
+            }
+            else
+            {
+                contextMenu.IsOpen = false;
+            }
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -120,6 +127,12 @@ namespace WazeWP7
                 currentMenu.IsOpen = false;
             }
             PageContext.OnListItemSelected(currentItem, selectedAction);
+        }
+
+        private void ContextMenu_Loaded(object sender, RoutedEventArgs e)
+        {
+            var contextMenu = sender as ContextMenu;
+            contextMenu.ItemsSource = this.PageContext.ContextMenuItems;
         }
     }
 }

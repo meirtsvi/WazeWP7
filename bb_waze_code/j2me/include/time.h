@@ -36,9 +36,9 @@ extern time_t timegm(struct tm *_tm);
 extern struct tm *localtime(const time_t *timep);
 extern struct tm *localtime_r(const time_t *timep, struct tm *result);
 
-#define __NR_time 180 /* ansi */
+#define __NR_time 201 /* ansi */
 static inline _syscall1(time_t,time, time_t*, t) /* Not generated */
-#define __NR___gettimeofday 181 /* ansi */
+#define __NR___gettimeofday 202 /* ansi */
 static inline _syscall2(int,__gettimeofday, int*, tv, int*, tz) /* Not generated */
 
 #define difftime(t1,t0) (double)(t1 - t0)

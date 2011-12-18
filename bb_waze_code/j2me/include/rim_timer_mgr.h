@@ -23,8 +23,8 @@
 
 #include <cibyl.h>
 #include <java/util.h>
-#define __NR_NOPH_RimTimerMgr_schedule 247 /* rim_timer_mgr */
+#define __NR_NOPH_RimTimerMgr_schedule 268 /* rim_timer_mgr */
 static inline _syscall3(NOPH_TimerTask_t,NOPH_RimTimerMgr_schedule, int, index, int, interval, int, repeat) 
-#define __NR_NOPH_RimTimerMgr_cancelTimer 248 /* rim_timer_mgr */
+#define __NR_NOPH_RimTimerMgr_cancelTimer 269 /* rim_timer_mgr */
 static inline _syscall0(void,NOPH_RimTimerMgr_cancelTimer) 
 #endif /* !__TIMER_MGR_H__ */

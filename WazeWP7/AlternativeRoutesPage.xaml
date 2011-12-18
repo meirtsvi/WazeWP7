@@ -1,0 +1,140 @@
+﻿<local:WazeApplicationPage 
+    x:Class="WazeWP7.AlternativeRoutesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:local="clr-namespace:WazeWP7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--Resources defining the look and feel of the list-->
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="AlternativeRoutesListItemTemplate">
+            <Grid x:Name="ListItemGrid" Margin="5,5"
+                  MouseLeftButtonDown="ListItemGrid_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0" Tap="ListItemGrid_Tap">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--<toolkit:ContextMenuService.ContextMenu>
+                        <toolkit:ContextMenu IsZoomEnabled="False" 
+                                             FlowDirection="{Binding FlowDirection,ElementName=ContentPanel}"
+                                             Loaded="ContextMenu_Loaded"
+                                             Opened="ContextMenu_Opened">
+                        </toolkit:ContextMenu>
+                    </toolkit:ContextMenuService.ContextMenu>-->
+
+                    <Image Grid.Column="0" Grid.RowSpan="2" 
+                               Source="{Binding RouteIconResource}" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Margin="10"/>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" x:Name="RouteDurationTextBlock"
+                                   Text="{Binding RouteDurationLabel}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Foreground="Black"
+                                   VerticalAlignment="Center"
+                                   Padding="5,0" />
+                        <TextBlock Grid.Column="1" x:Name="RouteLengthTextBlock"
+                                   Text="{Binding RouteLengthLabel}"
+                                   FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                                   Foreground="Black"
+                                   VerticalAlignment="Center"
+                                   Padding="5,0"/>
+                        <TextBlock Grid.Column="2" x:Name="FrequentRouteTextBlock"
+                                   Text="{Binding FrequentRouteLabel}"
+                                   FontSize="{StaticResource PhoneFontSizeSmall}"
+                                   Foreground="Black"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                    <TextBlock Grid.Row="1" Grid.Column="1" 
+                                   x:Name="ViaTextBlock"
+                                   Text="{Binding ViaLabel}"
+                                   FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                                   TextWrapping="Wrap"
+                                   Foreground="#FF6A6A6A"/>
+                </Grid>
+                <Button Grid.Column="1"
+                        x:Name="NextButton"
+                        Padding="-10" HorizontalAlignment="Stretch"
+                        Click="NextButton_Click">
+                    <Image Source="{Binding NextIconResource}" Margin="0"/>
+                </Button>
+            </Grid>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="#FF46CBFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Grid for displaying popups-->
+        <Grid Grid.RowSpan="2"
+                x:Name="PopupsGrid" Canvas.ZIndex="2"
+                HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="Compare routes" Margin="9,-7,0,0" 
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Recommended routes:"
+                       Style="{StaticResource PhoneTextTitle2Style}"/>
+            <ListBox Grid.Row="1" x:Name="AlternativeRoutesListBox"
+                     ItemsSource="{Binding AlternativeRoutes}" 
+                     Margin="12, 0, 12, 0" 
+                     ItemTemplate="{StaticResource AlternativeRoutesListItemTemplate}" 
+                     ItemContainerStyle="{StaticResource WazeListBoxItemStyle}"/>
+            <TextBlock Grid.Row="2" x:Name="DisclaimerTextBox"
+                       Text="{Binding DisclaimerText}"
+                       Foreground="Black"
+                       TextWrapping="Wrap"/>
+            <local:ImageButton Grid.Row="3" x:Name="ShowAllButton" 
+                               Content ="Map"
+                               Style="{StaticResource WazeImageButtonDefaultStyle}"
+                               Margin="10,12"
+                               Click="ShowAllButton_Click"/>
+
+        </Grid>
+    </Grid>
+
+</local:WazeApplicationPage>

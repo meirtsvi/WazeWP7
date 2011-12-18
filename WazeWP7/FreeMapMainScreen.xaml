@@ -30,7 +30,8 @@
         
         <!--Grid for displaying popups-->
         <Grid x:Name="PopupsGrid" Canvas.ZIndex="1" 
-              VerticalAlignment="Top" HorizontalAlignment="Center"/>
+              VerticalAlignment="Stretch" HorizontalAlignment="Center">
+        </Grid>
 
     </Grid>
 

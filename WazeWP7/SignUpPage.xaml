@@ -24,7 +24,7 @@
         <!--Grid for displaying popups-->
         <Grid Grid.RowSpan="2" 
               x:Name="PopupsGrid" Canvas.ZIndex="1"
-              HorizontalAlignment="Center" VerticalAlignment="Top"/>
+              HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
@@ -145,13 +145,15 @@
 
             </Grid>
 
-            <Button Content ="Skip" Grid.Row="2" Grid.Column="1"
-                    x:Name="SkipButton" Click="SkipButton_Click"
-                    BorderThickness="0" Template="{StaticResource WazeButtonControlTemplate}"                    />
+            <local:ImageButton Grid.Row="2" Grid.Column="1"
+                               Content="Skip" x:Name="SkipButton" 
+                               Click="SkipButton_Click"
+                               Style="{StaticResource WazeImageButtonDefaultStyle}"/>
 
-            <Button Content ="Next" Grid.Row="2" Grid.Column="3"
-                    x:Name="NextButton" Click="NextButton_Click"
-                    BorderThickness="0" Template="{StaticResource WazeButtonControlTemplate}"/>
+            <local:ImageButton Grid.Row="2" Grid.Column="3"
+                               Content="Next" x:Name="NextButton" 
+                               Click="NextButton_Click"
+                               Style="{StaticResource WazeImageButtonDefaultStyle}"/>
         </Grid>
     </Grid>
 </local:WazeApplicationPage>

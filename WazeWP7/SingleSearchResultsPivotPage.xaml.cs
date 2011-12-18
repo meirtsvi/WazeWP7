@@ -51,19 +51,19 @@ namespace WazeWP7
             base.OnNavigatedTo(e);
 
             // Set the page's state according to the context
-            var pageContext = NavigationContext.GetData<SingleSearchResultsPivotPageContext>();
-            if (pageContext != null)
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                this.PageContext = pageContext;
+                this.PageContext = NavigationContext.GetData<SingleSearchResultsPivotPageContext>();
+                this.PageContext = this.PageContext;
                 this.DataContext = this;
                 this.selectedResult = null;
-                if (!(string.IsNullOrEmpty(pageContext.LocalSearchProviderLabel)))
+                if (!(string.IsNullOrEmpty(this.PageContext.LocalSearchProviderLabel)))
                 {
-                    LocalSearchPivotItem.Header = pageContext.LocalSearchProviderLabel;
+                    LocalSearchPivotItem.Header = this.PageContext.LocalSearchProviderLabel;
                 }
 
                 // Translate the page according to the local language (must be after the context handling)
-                LanguageResources.Instance.UpdateApplicationPage(this);
+                LanguageResources.Instance.UpdateControl(this);
             }
         }
 

@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using Microsoft.Phone;
+using Microsoft.Phone.Tasks;
 
 using Microsoft.Phone.Controls;
 using ComponentAce.Compression.Libs.zlib;
@@ -1552,7 +1554,12 @@ public class Syscalls
                         // Fire the user selection:
                         selectedItem.CallCallback();
                     };
-                FreeMapMainScreen.get().GetPopupPanel().Children.Add(miniMenu);
+
+                var popupPanel = FreeMapMainScreen.get().GetPopupPanel();
+                if (popupPanel != null)
+                {
+                    popupPanel.Children.Add(miniMenu);
+                }
                 
                 //mre.Set();
             });
@@ -1700,6 +1707,9 @@ public class Syscalls
 
     public static void NOPH_Graphics_drawBitmap(int __graphics, int x, int y, int width, int height, int __bitmap, int left, int top)
     {
+        if (!(CRunTime.objectRepository[__bitmap] is BitmapImage))
+            return;
+
         if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
           //  System.Diagnostics.Debug.WriteLine("G:" + __graphics);
             return; //todmt2 - understand why i get such numbers
@@ -2439,8 +2449,7 @@ public class Syscalls
 
             String label = CRunTime.charPtrToString(__text);
 
-            progressDialog.SetLabel(label);
-            progressDialog.Show();
+            progressDialog.Show(label);
             mre.Set();
         });
 
@@ -2863,10 +2872,11 @@ public class Syscalls
 
     public static void NOPH_SearchDialog_showDialog(int in_callback)
     {
-        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
-
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
+            var mainScreen = ((App)Application.Current).RootFrame.Content as FreeMapMainScreen;
+            if (mainScreen != null)
+            {
             var searchPageContext = new SingleSearchPageContext
             {
                 OnActionSelected = (selectedAction, searchString) =>
@@ -2878,6 +2888,7 @@ public class Syscalls
             };
 
             mainScreen.NavigationService.Navigate<SingleSearchPage>(searchPageContext);
+            }
         });
     }
 
@@ -2889,7 +2900,10 @@ public class Syscalls
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             var currentPage = ((App)Application.Current).RootFrame.Content as SingleSearchPage;
-            currentPage.ShowErrorMessage(title, message);
+            if (currentPage != null)
+            {
+                currentPage.ShowErrorMessage(title, message);
+            }
         });
     }
     
@@ -2942,13 +2956,16 @@ public class Syscalls
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             var currentPage = ((App)Application.Current).RootFrame.Content as SingleSearchPage;
-            SingleSearchResultsPivotPageContext.SearchOptionSelectedDelegate onSearchOptionSelected = (selectedItemIndex, selectedOption, data) =>
-                {
-                    CRunTime.stringToCharPtr(data, textAddr);
-                    UIWorker.addUIEvent(in_callback, selectedItemIndex, (int)selectedOption, 0, 0, true);
-                };
+            if (currentPage != null)
+            {
+                SingleSearchResultsPivotPageContext.SearchOptionSelectedDelegate onSearchOptionSelected = (selectedItemIndex, selectedOption, data) =>
+                    {
+                        CRunTime.stringToCharPtr(data, textAddr);
+                        UIWorker.addUIEvent(in_callback, selectedItemIndex, (int)selectedOption, 0, 0, true);
+                    };
 
-            currentPage.SearchCompleted(onSearchOptionSelected, localSearchProviderLabel, addressResults, localSearchResults);
+                currentPage.SearchCompleted(onSearchOptionSelected, localSearchProviderLabel, addressResults, localSearchResults);
+            }
         });
     }
     #endregion
@@ -3163,7 +3180,7 @@ public class Syscalls
 
     #endregion
 
-    #region GenericList methjods
+    #region GenericList methods
     public static void NOPH_GenericListDialogs_showDialog (int i_title, int in_action_callback, 
                                                            int count, int labels_addr, int values_addr, int icons_addr, 
                                                            int menu_count, int menu_labels_addr, int menu_values_addr,
@@ -3175,7 +3192,7 @@ public class Syscalls
         menu_labels_addr /= 4;
 
         // Start with the context menu items
-        List<GenericListContextMenuItem> menuItems = new List<GenericListContextMenuItem>();
+        ObservableCollection<GenericListContextMenuItem> menuItems = new ObservableCollection<GenericListContextMenuItem>();
         for (int i = 0; i < menu_count; ++i)
         {
             if (CRunTime.memory[menu_labels_addr + i] != 0)
@@ -3191,7 +3208,7 @@ public class Syscalls
         {
             string label = CRunTime.charPtrToString(CRunTime.memory[labels_addr + i]);
             string icon = FormatIconResource(CRunTime.charPtrToString(CRunTime.memory[icons_addr + i]));
-            listItems.Add( new GenericListItem( label, icon, i, menuItems));
+            listItems.Add( new GenericListItem( label, icon, i));
         }
 
         // And don't forget the tilte 
@@ -3209,7 +3226,8 @@ public class Syscalls
             {
                 ListTitle = title,
                 EmptyListMessage = "",
-                ListItems = listItems
+                ListItems = listItems,
+                ContextMenuItems = menuItems
             };
             pageContext.OnListItemSelected += (listItem, menuItem) =>
                 {
@@ -3269,5 +3287,228 @@ public class Syscalls
     }
 
     #endregion 
+
+    #region NavigateResultcontrol and AlternativeRoutesPage methods
+
+    private const int CHANGED_DEPARTURE = 256;
+    private const int CHANGED_DESTINATION = 128;
+    public static void NOPH_NavigateResultDialog_showDialog(int navigate_flags, 
+                                                            int i_title_text, int i_route_distance, int i_route_distance_units, 
+                                                            int route_length, int i_via, int timeout, int show_diclaimer, 
+                                                            int drive_callback, int alternative_routes_callback)
+    {
+        // Convert the input
+        bool changedDeparture = ((navigate_flags & CHANGED_DEPARTURE) != 0);
+        bool changedDestination = ((navigate_flags & CHANGED_DESTINATION) != 0);
+        string title = CRunTime.charPtrToString(i_title_text);
+        string routeDistance = CRunTime.charPtrToString(i_route_distance);
+        string routeDistanceUnits = CRunTime.charPtrToString(i_route_distance_units);
+        string via = CRunTime.charPtrToString(i_via);
+        bool showDisclaimer = (show_diclaimer != 0);
+
+        // Create the view model
+        NavigateResultControlViewModel viewModel = new NavigateResultControlViewModel(changedDestination, changedDeparture,
+                                                                                      title, routeDistance, routeDistanceUnits,
+                                                                                      route_length, via, timeout, showDisclaimer);
+        viewModel.OnDialogClosed += (sender, args) =>
+        {
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                if (args.SelectedAction == NavigateResultControlViewModel.DialogClosingEventArgs.ClosingActions.Drive)
+                {
+                    UIWorker.addUIEvent(drive_callback, 0, 0, 0, 0, true);
+                }
+                else // NavigateResultControlViewModel.DialogClosingEventArgs.ClosingActions.Alternatives
+                {
+                    UIWorker.addUIEvent(alternative_routes_callback, 0, 0, 0, 0, true);
+                }
+            });
+        };
+
+
+        // And show the dialog
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var dialog = new NavigateResultControl();
+            dialog.Show(viewModel);
+        });
+    }
+
+    private const int AlternativeRouteLabelLength=200;
+    private static AlternativeRoutesPageViewModel.NavigationRouteResult ReadAlternativeRouteFromMemory (ref int recordPointer)
+    {
+        int result_index = CRunTime.memory[recordPointer / 4];
+        recordPointer += sizeof(int);
+
+        string routeLengthLabel = CRunTime.charPtrToString(recordPointer);
+        recordPointer += AlternativeRouteLabelLength;
+
+        string routeDurationLabel = CRunTime.charPtrToString(recordPointer);
+        recordPointer += AlternativeRouteLabelLength;
+
+        string viaLabel = CRunTime.charPtrToString(recordPointer);
+        recordPointer += AlternativeRouteLabelLength;
+
+        int origin = CRunTime.memory[recordPointer / 4];
+        recordPointer += sizeof(int);
+
+        int context = recordPointer;
+        recordPointer += sizeof(int) * 2;
+        
+        return new AlternativeRoutesPageViewModel.NavigationRouteResult(result_index, 
+                                                                        routeLengthLabel, routeDurationLabel, viaLabel,
+                                                                        (origin != 0), context);
+    }
+
+    public static void NOPH_AlternativeResultsDialog_showDialog(int number_of_routes, int routes, int dialog_closed_callback, int route_option_selected_callback)
+    {
+        var viewModel = new AlternativeRoutesPageViewModel();
+
+        // Read all the routes from the memory
+        int recordPointer = routes;
+        for (int i = 0; i < number_of_routes; i++)
+        {
+            viewModel.AlternativeRoutes.Add(ReadAlternativeRouteFromMemory(ref recordPointer));
+        }
+
+        // Set the callback
+        viewModel.OnDialogClosed += (sender, args) =>
+        {
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                UIWorker.addUIEvent(dialog_closed_callback, 1, 0, 0, 0, true);
+            });
+        };
+        viewModel.OnOptionSelected += (sender, args) =>
+        {
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                UIWorker.addUIEvent(route_option_selected_callback, (int)(args.SelectedOption), args.ContextAddress, 0, 0, true);
+            });
+        };
+
+        // And navigate the the page
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
+            currentPage.NavigationService.Navigate<AlternativeRoutesPage>(viewModel);
+        });
+    }
+    #endregion
+
+    #region SettingsPivotPage methods
+
+    private static ManualResetEvent languagesLoaded = new ManualResetEvent(false);
+    private static ManualResetEvent promptsLoaded = new ManualResetEvent(false);
+
+    public static void NOPH_LanguagesLoaded(int labels_addr, int values_addr, int count)
+    {
+        // Offset the array points
+        labels_addr /= 4;
+        values_addr /= 4;
+
+        // Convert to strings
+        List<SettingsPageViewModel.ListItemViewModel> languageItems = new List<SettingsPageViewModel.ListItemViewModel>();
+        for (int i = 0; i < count; ++i)
+        {
+            string label = CRunTime.charPtrToString(CRunTime.memory[labels_addr + i]);
+            string value = CRunTime.charPtrToString(CRunTime.memory[values_addr + i]);
+            languageItems.Add( new SettingsPageViewModel.ListItemViewModel(label, null, value));
+        }
+
+        SettingsPageViewModel.SetLanguages(languageItems);
+        languagesLoaded.Set();
+    }
+
+    public static void NOPH_PromptsLoaded(int labels_addr, int values_addr, int count)
+    {
+        // Offset the array points
+        labels_addr /= 4;
+        values_addr /= 4;
+
+        // Convert to strings
+        List<SettingsPageViewModel.ListItemViewModel> promptItems = new List<SettingsPageViewModel.ListItemViewModel>();
+        for (int i = 0; i < count; ++i)
+        {
+            string label = CRunTime.charPtrToString(CRunTime.memory[labels_addr + i]);
+            string value = CRunTime.charPtrToString(CRunTime.memory[values_addr + i]);
+            promptItems.Add(new SettingsPageViewModel.ListItemViewModel(label, null, value));
+        }
+
+        SettingsPageViewModel.SetPrompts(promptItems);
+        promptsLoaded.Set();
+    }
+
+    public static void NOPH_SettingsDialog_showDialog (int all_settings_addr, int is_metric_system, int on_save_callback)
+    {
+        // Make sure the languages and prompts were loaded first
+        languagesLoaded.WaitOne();
+        promptsLoaded.WaitOne();
+
+        // Read the settings
+        SettingsPageViewModel viewModel = new SettingsPageViewModel(is_metric_system == 1);
+        int currentPtr = all_settings_addr;
+        for (int i = 0; i < (int)SettingsPageViewModel.Settings.SettingsMaxValue; i++)
+        {
+            bool isValid = CRunTime.memory[currentPtr / 4] == 1;
+            currentPtr += sizeof(int);
+            string value = CRunTime.charPtrToString(currentPtr);
+            currentPtr += 40;
+
+            viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, isValid, value);
+        }
+
+
+        // Set the callback
+        viewModel.OnSettingsSaved += (sender, args) =>
+        {
+            // Save the settings
+            currentPtr = all_settings_addr;
+            for (int i = 0; i < (int)SettingsPageViewModel.Settings.SettingsMaxValue; i++)
+            {
+                currentPtr += sizeof(int); // Skip the is valid - we don't update this
+                CRunTime.stringToCharPtr(viewModel.GetSettingsValue((SettingsPageViewModel.Settings)i), currentPtr);
+                string value = CRunTime.charPtrToString(currentPtr);
+                currentPtr += 40;
+            }
+
+            // And call the callback
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                UIWorker.addUIEvent(on_save_callback, 0, 0, 0, 0, true);
+            });
+        };
+
+        // And navigate to the dialog
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
+            currentPage.NavigationService.Navigate<SettingsPivotPage>(viewModel);
+        });
+    }
+
+    #endregion
+
+    #region browser methods
+
+    public static void NOPH_EmbeddedBrowser_EmbeddedBrowserShow(int __url, int minx, int miny, int maxx, int maxy, int __back_text)
+    {
+        String url = CRunTime.charPtrToString(__url);
+        String back_text = CRunTime.charPtrToString(__back_text);
+
+        WebBrowserTask wbt = new WebBrowserTask();
+        wbt.Uri = new Uri(url);
+        wbt.Show();
+
+        //EmbeddedBrowser.EmbeddedBrowserShow(url, minx, miny, maxx, maxy, back_text);
+    }
+
+    public static void NOPH_EmbeddedBrowser_EmbeddedBrowserHide()
+    {
+        //EmbeddedBrowser.EmbeddedBrowserHide();
+    } 
+
+    #endregion
+
 }
 

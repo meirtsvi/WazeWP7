@@ -319,8 +319,11 @@ using System.Windows;
         }
 
         public static void addUIEvent(int addr, int p1, int p2, int p3, int p4, bool priority)
-        {
-            uiWorker.addToQueue(addr, p1, p2, p3, p4, priority, false, null, null);
+       {
+           if (uiWorker != null)
+           {
+               uiWorker.addToQueue(addr, p1, p2, p3, p4, priority, false, null, null);
+           }
         }
 
         /*

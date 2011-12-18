@@ -19,10 +19,10 @@ extern "C" {
 #include <stddef.h>
 #include <stdarg.h>
 
-#define __NR___puts 164 /* ansi */
+#define __NR___puts 185 /* ansi */
 static inline _syscall1(int,__puts, const char*, string) /* Not generated */
 #define puts __puts
-#define __NR___putchar 165 /* ansi */
+#define __NR___putchar 186 /* ansi */
 static inline _syscall1(int,__putchar, int, c) /* Not generated */
 #define putchar __putchar
 
@@ -89,7 +89,7 @@ extern int printf(const char* fmt, ...);
 
 extern int sscanf(const char *str, const char *format, ...); /* TMP! */
 
-#define __NR___setup_io 166 /* ansi */
+#define __NR___setup_io 187 /* ansi */
 static inline _syscall2(void,__setup_io, void*, addr_stdout, void*, addr_stderr) /* Not generated */
 
 /* Does not apply for us yet */

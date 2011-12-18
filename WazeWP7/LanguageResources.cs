@@ -62,14 +62,15 @@ namespace WazeWP7
             return (translationDictionary.ContainsKey(name)) ? translationDictionary[name] : name;
         }
 
-        public void UpdateApplicationPage(PhoneApplicationPage page)
+        public void UpdateControl(UserControl control)
         {
             // First set the page's flow direction
-            page.FlowDirection = FlowDirection;
+            control.FlowDirection = FlowDirection;
 
             // And now (recusivley) update the page's texts
-            UpdatePanelTexts(page.Content as Panel);
+            UpdatePanelTexts(control.Content as Panel);
         }
+
 
         #endregion
 
@@ -110,7 +111,6 @@ namespace WazeWP7
             }
         }
 
-
         private string ReadNextStringFromLanguageFile (IsolatedStorageFileStream file, byte[] intBuffer, ref byte[] stringBuffer)
         {
             int readSize = file.Read(intBuffer, 0, 4);
@@ -135,55 +135,101 @@ namespace WazeWP7
             }
         }
 
-        private void UpdatePanelTexts (Panel panel)
+        private void UpdateElementTexts(FrameworkElement element)
+        {
+            if (element is Panel)
+            {
+                UpdatePanelTexts(element as Panel);
+            }
+            else if (element is Pivot)
+            {
+                UpdatePivotTexts(element as Pivot);
+            }
+            else if (element is Border)
+            {
+                UpdateBorderTexts(element as Border);
+            }
+            else if (element is TextBlock)
+            {
+                UpdateTextBlockText(element as TextBlock);
+            }
+            else if (element is Button)
+            {
+                UpdateButtonText(element as Button);
+            }
+            else if (element is ScrollViewer)
+            {
+                UpdateScrollViewerText(element as ScrollViewer);
+            }
+            else if (element is ListPicker)
+            {
+                UpdateListPickerText(element as ListPicker);
+            }
+        }
+
+        private void UpdatePanelTexts(Panel panel)
         {
             foreach (var element in panel.Children)
             {
-                if (element is TextBlock)
+                if (element is FrameworkElement)
                 {
-                    UpdateTextBlockText( element as TextBlock);
+                    UpdateElementTexts(element as FrameworkElement);
                 }
-                else if (element is Panel)
-                {
-                    UpdatePanelTexts(element as Panel);
-                }
-                else if (element is Button)
-                {
-                    var button = element as Button;
-                    if (button.Content is TextBlock)
-                    {
-                        UpdateTextBlockText(button.Content as TextBlock);
-                    }
-                    else if (button.Content is Panel)
-                    {
-                        UpdatePanelTexts(button.Content as Panel);
-                    }
-                }
-                else if (element is Pivot)
-                {
-                    var pivot = element as Pivot;
-                    foreach (var item in pivot.Items)
-                    {
-                        var pivotItem = item as PivotItem;
+            }
+        }
 
-                        // Take care of both the header and the content
-                        if (pivotItem.Header is string)
-                        {
-                            pivotItem.Header = Translate((string)pivotItem.Header);
-                        }
-                        else if (pivotItem.Header is TextBlock)
-                        {
-                            UpdateTextBlockText(pivotItem.Header as TextBlock);
-                        }
-                        UpdatePanelTexts(pivotItem.Content as Panel);
-                    }
-                }
+        private void UpdatePivotTexts (Pivot pivot)
+        {
+            foreach (var item in pivot.Items)
+            {
+                var pivotItem = item as PivotItem;
+
+                // Take care of both the header and the content
+                pivotItem.Header = UpdateStringOrElement(pivotItem.Header);
+                UpdateElementTexts(pivotItem.Content as FrameworkElement);
+            }
+        }
+
+        private void UpdateBorderTexts (Border border)
+        {
+            if (border.Child is FrameworkElement)
+            {
+                UpdateElementTexts(border.Child as FrameworkElement);
             }
         }
 
         private void UpdateTextBlockText (TextBlock textBlock)
         {
             textBlock.Text = Translate(textBlock.Text);
+        }
+
+        private void UpdateButtonText (Button button)
+        {
+            button.Content = UpdateStringOrElement(button.Content);
+        }
+
+        private void UpdateScrollViewerText (ScrollViewer scrollViewer)
+        {
+            UpdateElementTexts(scrollViewer.Content as FrameworkElement);
+        }
+
+        private void UpdateListPickerText(ListPicker listPicker)
+        {
+            listPicker.Header = UpdateStringOrElement(listPicker.Header);
+            listPicker.FullModeHeader = UpdateStringOrElement(listPicker.FullModeHeader);
+        }
+
+        private object UpdateStringOrElement (object obj)
+        {
+            if (obj is string)
+            {
+                return Translate(obj as string);
+            }
+            else if (obj is FrameworkElement)
+            {
+                UpdateElementTexts(obj as FrameworkElement);
+            }
+            return obj;
         }
 
         #endregion

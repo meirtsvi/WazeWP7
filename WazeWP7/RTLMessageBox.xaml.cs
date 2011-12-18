@@ -36,10 +36,10 @@ namespace WazeWP7
 
         public void Show(string title, string message)
         {
-            this.LayoutRoot.FlowDirection = LanguageResources.Instance.FlowDirection;
             Message.Text = message;
             Title.Text = title;
             Result = MessageBoxResult.None;
+            LanguageResources.Instance.UpdateControl(this);
 
             // Hide before you show
             Hide();
@@ -59,10 +59,6 @@ namespace WazeWP7
             }
         }
 
-        internal void SetLabel(string label)
-        {
-            Message.Text = label;
-        }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {

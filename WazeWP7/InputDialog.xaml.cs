@@ -47,7 +47,7 @@ namespace WazeWP7
 
         public void Show()
         {
-            this.LayoutRoot.FlowDirection = LanguageResources.Instance.FlowDirection;
+            LanguageResources.Instance.UpdateControl(this);
 
             // Hide before you show
             dialogShowing.Reset();

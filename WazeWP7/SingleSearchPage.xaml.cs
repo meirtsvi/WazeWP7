@@ -86,12 +86,10 @@ namespace WazeWP7
             base.OnNavigatedTo(e);
                     
             // Replace the context only if it's not null. A null context should mean we were backed to the page
-            var newContext = NavigationContext.GetData<SingleSearchPageContext>();
-            if (newContext != null)
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                pageContext = newContext;
-                LanguageResources.Instance.UpdateApplicationPage(this);
-
+                this.pageContext = NavigationContext.GetData<SingleSearchPageContext>();
+                LanguageResources.Instance.UpdateControl(this);
             }
 
             // Make sure the message grids are collapsed

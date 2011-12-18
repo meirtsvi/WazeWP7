@@ -38,30 +38,30 @@ int status;
 /* GpsManager class (this is not in J2ME) */
 typedef int NOPH_GpsManager_t;
 
-#define __NR_NOPH_GpsManager_getInstance 143 /* gps_manager */
+#define __NR_NOPH_GpsManager_getInstance 164 /* gps_manager */
 static inline _syscall0(NOPH_GpsManager_t,NOPH_GpsManager_getInstance) 
 
-#define __NR_NOPH_GpsManager_setTypeMsgs 144 /* gps_manager */
+#define __NR_NOPH_GpsManager_setTypeMsgs 165 /* gps_manager */
 static inline _syscall3(void,NOPH_GpsManager_setTypeMsgs, NOPH_GpsManager_t, gm, const char*, internal, const char*, external) 
-#define __NR_NOPH_GpsManager_searchGps 145 /* gps_manager */
+#define __NR_NOPH_GpsManager_searchGps 166 /* gps_manager */
 static inline _syscall4(void,NOPH_GpsManager_searchGps, NOPH_GpsManager_t, gm, NOPH_MIDlet_t, m, const char*, wait_msg, const char*, not_found_msg) 
-#define __NR_NOPH_GpsManager_searchGpsRim 146 /* gps_manager */
+#define __NR_NOPH_GpsManager_searchGpsRim 167 /* gps_manager */
 static inline _syscall3(void,NOPH_GpsManager_searchGpsRim, NOPH_GpsManager_t, gm, const char*, wait_msg, const char*, not_found_msg) 
-#define __NR_NOPH_GpsManager_connect 147 /* gps_manager */
+#define __NR_NOPH_GpsManager_connect 168 /* gps_manager */
 static inline _syscall2(int,NOPH_GpsManager_connect, NOPH_GpsManager_t, gm, const char*, url) 
-#define __NR_NOPH_GpsManager_disconnect 148 /* gps_manager */
+#define __NR_NOPH_GpsManager_disconnect 169 /* gps_manager */
 static inline _syscall1(void,NOPH_GpsManager_disconnect, NOPH_GpsManager_t, gm) 
-#define __NR_NOPH_GpsManager_start 149 /* gps_manager */
+#define __NR_NOPH_GpsManager_start 170 /* gps_manager */
 static inline _syscall4(void,NOPH_GpsManager_start, NOPH_GpsManager_t, gm, int, interval, int, timeout, int, maxage) 
-#define __NR_NOPH_GpsManager_stop 150 /* gps_manager */
+#define __NR_NOPH_GpsManager_stop 171 /* gps_manager */
 static inline _syscall1(void,NOPH_GpsManager_stop, NOPH_GpsManager_t, gm) 
-#define __NR_NOPH_GpsManager_read 151 /* gps_manager */
+#define __NR_NOPH_GpsManager_read 172 /* gps_manager */
 static inline _syscall3(int,NOPH_GpsManager_read, NOPH_GpsManager_t, gm, void*, buffer, int, size) 
-#define __NR_NOPH_GpsManager_getURL 152 /* gps_manager */
+#define __NR_NOPH_GpsManager_getURL 173 /* gps_manager */
 static inline _syscall3(int,NOPH_GpsManager_getURL, NOPH_GpsManager_t, gm, void*, buffer, int, size) 
 
 #ifdef RIMAPI
-#define __NR_NOPH_GpsManager_getCoarseFix 153 /* gps_manager */
+#define __NR_NOPH_GpsManager_getCoarseFix 174 /* gps_manager */
 static inline _syscall1(void,NOPH_GpsManager_getCoarseFix, const char*, url) 
 #endif
 
