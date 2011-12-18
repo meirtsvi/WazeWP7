@@ -9,8 +9,10 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="113" d:DesignWidth="336">           
     
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="113" Width="332">
-        <TextBlock Height="36" HorizontalAlignment="Left" Margin="17,14,0,0" Name="inputLabel" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" FlowDirection="RightToLeft" />
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" 
+          Height="113" Width="332"
+          VerticalAlignment="Top">
+        <TextBlock Height="36" HorizontalAlignment="Left" Margin="17,14,0,0" Name="inputLabel" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" />
         <Button Content="OK" Height="59" HorizontalAlignment="Left" Margin="138,54,0,0" Name="okButton" VerticalAlignment="Top" Width="77" FontSize="18" Click="OkButton_Click" />
     </Grid>
 </UserControl>

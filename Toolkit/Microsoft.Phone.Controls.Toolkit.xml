@@ -3451,6 +3451,7 @@
             <summary>
             Represents a pop-up menu that enables a control to expose functionality that is specific to the context of the control.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="T:Microsoft.Phone.Controls.Primitives.MenuBase">
             <summary>
@@ -3703,7 +3704,7 @@
             Set up the background and border default styles
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleStoryboardCompleted(System.Object,System.EventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnStoryboardCompleted(System.Object,System.EventArgs)">
             <summary>
             Handles the Completed event of the opening Storyboard.
             </summary>
@@ -3737,28 +3738,28 @@
             </summary>
             <param name="e">The event data for the KeyDown event.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleLayoutUpdated(System.Object,System.EventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnLayoutUpdated(System.Object,System.EventArgs)">
             <summary>
             Handles the LayoutUpdated event to capture Application.Current.RootVisual.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleRootVisualMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnRootVisualMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
             <summary>
             Handles the RootVisual's MouseMove event to track the last mouse position.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleRootVisualManipulationCompleted(System.Object,System.Windows.Input.ManipulationCompletedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnRootVisualManipulationCompleted(System.Object,System.Windows.Input.ManipulationCompletedEventArgs)">
             <summary>
             Handles the ManipulationCompleted event for the RootVisual.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleOwnerHold(System.Object,System.Windows.Input.GestureEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnOwnerHold(System.Object,System.Windows.Input.GestureEventArgs)">
             <summary>
             Handles the Hold event for the owning element.
             </summary>
@@ -3784,28 +3785,28 @@
             <param name="oldValue">Old value.</param>
             <param name="newValue">New value.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleEventThatClosesContextMenu(System.Object,System.EventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnEventThatClosesContextMenu(System.Object,System.EventArgs)">
             <summary>
             Handles an event which should close an open ContextMenu.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleOwnerLoaded(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnOwnerLoaded(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Handles the Loaded event of the Owner.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleOwnerUnloaded(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnOwnerUnloaded(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Handles the Unloaded event of the Owner.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandlePageBackKeyPress(System.Object,System.ComponentModel.CancelEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnPageBackKeyPress(System.Object,System.ComponentModel.CancelEventArgs)">
             <summary>
             Handles the BackKeyPress of the containing PhoneApplicationPage.
             </summary>
@@ -3836,14 +3837,14 @@
             Called when a child MenuItem is clicked.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleContextMenuOrRootVisualSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnContextMenuOrRootVisualSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
             <summary>
             Handles the SizeChanged event for the ContextMenu or RootVisual.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ContextMenu.HandleOverlayMouseButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ContextMenu.OnOverlayMouseButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
             <summary>
             Handles the MouseButtonUp events for the overlay.
             </summary>
@@ -4252,7 +4253,7 @@
             Called when a MenuItem is clicked and raises a Click event.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.MenuItem.HandleCanExecuteChanged(System.Object,System.EventArgs)">
+        <member name="M:Microsoft.Phone.Controls.MenuItem.OnCanExecuteChanged(System.Object,System.EventArgs)">
             <summary>
             Handles the CanExecuteChanged event of the Command property.
             </summary>
@@ -4268,14 +4269,14 @@
             </remarks>
             <param name="changeVisualState">True if ChangeVisualState should be called.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.MenuItem.HandleIsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.MenuItem.OnIsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
             <summary>
             Called when the IsEnabled property changes.
             </summary>
             <param name="sender">Source of the event.</param>
             <param name="e">Event arguments.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.MenuItem.HandleLoaded(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.MenuItem.OnLoaded(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Called when the Loaded event is raised.
             </summary>
@@ -4405,6 +4406,7 @@
             <summary>
             Date and time converter for daily feeds.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.DailyDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -4431,6 +4433,11 @@
             <param name="parameter">(Not used).</param>
             <param name="culture">(Not used).</param>
             <returns>null</returns>
+        </member>
+        <member name="T:Microsoft.Phone.Controls.DateTimeFormatHelper">
+            <summary>
+            Helper methods and constants for the date time converters.
+            </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.DateTimeFormatHelper.Hour">
             <summary>
@@ -4695,6 +4702,7 @@
             <summary>
             Date and time converter to display information in full format.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.FullViewDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -4730,6 +4738,7 @@
             <summary>
             Date and time converter for hourly feeds.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.HourlyDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -4761,6 +4770,7 @@
             <summary>
             Date and time converter to be used in list-views.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.ListViewDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -4795,6 +4805,7 @@
             <summary>
             Time converter to display elapsed time relatively to the present.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.RelativeTimeConverter.Minute">
             <summary>
@@ -4923,6 +4934,7 @@
             <summary>
             Date and time converter for threads.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.ThreadDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -4957,6 +4969,7 @@
             <summary>
             Defines how the LoopingSelector communicates with data source.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.Primitives.ILoopingSelectorDataSource.GetNext(System.Object)">
             <summary>
@@ -4986,6 +4999,7 @@
             <summary>
             Represents a control that allows the user to choose a date (day/month/year).
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="T:Microsoft.Phone.Controls.DateTimePickerBase">
             <summary>
@@ -5274,11 +5288,13 @@
             <summary>
             Represents a control that allows the user to choose days of the week.
             </summary>
+            <QualityBand>Experimental</QualityBand>
         </member>
         <member name="T:Microsoft.Phone.Controls.ListPicker">
             <summary>
             Class that implements a flexible list-picking experience with a custom interface for few/many items.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.ListPicker.NormalModeOffset">
             <summary>
@@ -5288,6 +5304,11 @@
         <member name="F:Microsoft.Phone.Controls.ListPicker._hasPickerPageOpen">
             <summary>
             Whether this list picker has the picker page opened.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.ListPicker.SummaryForSelectedItemsDelegateProperty">
+            <summary>
+            Identifies the SummaryForSelectedItemsDelegate DependencyProperty.
             </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.ListPicker.ListPickerModeProperty">
@@ -5412,6 +5433,12 @@
             Provides handling for the ItemContainerGenerator.ItemsChanged event.
             </summary>
             <param name="e">A NotifyCollectionChangedEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.ListPicker.OnTap(System.Windows.Input.GestureEventArgs)">
+            <summary>
+            Handles the tap event.
+            </summary>
+            <param name="e">Event args</param>
         </member>
         <member name="M:Microsoft.Phone.Controls.ListPicker.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
             <summary>
@@ -5567,6 +5594,7 @@
             <summary>
             Represents a control that allows the user to choose a time (hour/minute/am/pm).
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.TimePicker.#ctor">
             <summary>
@@ -5609,6 +5637,7 @@
             <summary>
             Represents a collection of items that can be expanded or collapsed.
             </summary>
+            <QualityBand>Experimental</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.ExpanderView.ExpansionStates">
             <summary>
@@ -5684,6 +5713,11 @@
         <member name="F:Microsoft.Phone.Controls.ExpanderView._presenter">
             <summary>
             Presenter template part.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.ExpanderView._itemsCanvas">
+            <summary>
+            Canvas template part
             </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.ExpanderView._expanderPanel">
@@ -5793,12 +5827,19 @@
             Initializes a new instance of the ExpanderView class.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ExpanderView.ExpanderView_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ExpanderView.OnSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
             <summary>
             Recalculates the size of the presenter to match its parent.
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
+            <param name="sender">Sender</param>
+            <param name="e">Event args</param>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.ExpanderView.OnPresenterSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Recalculates size of canvas based on the size change for the presenter.
+            </summary>
+            <param name="sender">Sender</param>
+            <param name="e">Event args</param>
         </member>
         <member name="M:Microsoft.Phone.Controls.ExpanderView.UpdateVisualState(System.Boolean)">
             <summary>
@@ -5827,7 +5868,7 @@
             </summary>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ExpanderView.ExpanderPanel_Tap(System.Object,System.Windows.Input.GestureEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ExpanderView.OnExpanderPanelTap(System.Object,System.Windows.Input.GestureEventArgs)">
             <summary>
             Toggles the IsExpanded property.
             </summary>
@@ -5976,11 +6017,240 @@
             NonExpandable visual state value.
             </summary>
         </member>
+        <member name="T:Microsoft.Phone.Controls.PhoneTextBox">
+            <summary>
+            An extended TextBox for Windows Phone which implements hint text, an action icon, and a 
+            length indicator.
+            </summary>
+            <QualityBand>Experimental</QualityBand>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.RootGridName">
+            <summary>
+            Root grid.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.TextBoxName">
+            <summary>
+            Main text box.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.HintContentName">
+            <summary>
+            Hint Content.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.HintBorderName">
+            <summary>
+            Hint border.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorName">
+            <summary>
+            Length indicator name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.ActionIconCanvasName">
+            <summary>
+            Action icon canvas.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.MeasurementTextBlockName">
+            <summary>
+            Measurement Text Block name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.ActionIconBorderName">
+            <summary>
+            Action icon image name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorStates">
+            <summary>
+            Length indicator states.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorVisibleState">
+            <summary>
+            Length indicator visible visual state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorHiddenState">
+            <summary>
+            Length indicator hidden visual state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.CommonStates">
+            <summary>
+            Common States.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.DisabledState">
+            <summary>
+            Disabled state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.ReadOnlyState">
+            <summary>
+            ReadOnly state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.FocusStates">
+            <summary>
+            Focus states.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.FocusedState">
+            <summary>
+            Focused state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.UnfocusedState">
+            <summary>
+            Unfocused state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.HintProperty">
+            <summary>
+            Identifies the Hint DependencyProperty.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.HintStyleProperty">
+            <summary>
+            Identifies the HintStyle DependencyProperty.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.ActualHintVisibilityProperty">
+            <summary>
+            Identifies the HintVisibility DependencyProperty
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnHintPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            When the Hint is changed, check if it needs to be hidden or shown.
+            </summary>
+            <param name="sender">Sending PhoneTextBox.</param>
+            <param name="args">DependencyPropertyChangedEvent Arguments.</param>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.UpdateHintVisibility">
+            <summary>
+            Determines if the Hint should be shown or not based on if there is content in the TextBox.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Override the Blur/LostFocus event to show the Hint if needed.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Override the Focus event to hide the Hint.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorVisibleProperty">
+            <summary>
+            Length Indicator Visibile Dependency Property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorThresholdProperty">
+            <summary>
+            Length Indicator Visibility Threshold Dependency Property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.DisplayedMaxLengthProperty">
+            <summary>
+            The displayed maximum length of text that can be entered. This value takes
+            priority over the MaxLength property in the Length Indicator display.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.ActionIconProperty">
+            <summary>
+            Identifies the ActionIcon DependencyProperty.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PhoneTextBox.HidesActionItemWhenEmptyProperty">
+            <summary>
+            Identifies the HidesActionItemWhenEmpty DependencyProperty.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnActionIconTapped(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Determines if the developer set an event for ActionIconTapped.
+            </summary>
+            <param name="sender">The sender object</param>
+            <param name="e">The RoutedEventArgs for the event</param>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the PhoneTextBox class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnApplyTemplate">
+            <summary>
+            Applies the template and checks to see if the Hint should be shown
+            when the page is first loaded.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.PhoneTextBox.OnTextChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Called when the selection changed event occurs. This determines whether the length indicator should be shown or
+            not and if the TextBox needs to grow.
+            </summary>
+            <param name="sender">Sender TextBox</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.Hint">
+            <summary>
+            Gets or sets the Hint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.HintStyle">
+            <summary>
+            Gets or sets the Hint style
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.ActualHintVisibility">
+            <summary>
+            Gets or sets whether the hint is actually visible.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorVisible">
+            <summary>
+            Boolean that determines if the length indicator should be visible.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.LengthIndicatorThreshold">
+            <summary>
+            Threshold after which the length indicator will appear.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.DisplayedMaxLength">
+            <summary>
+            The displayed value for the maximum length of the input.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.ActionIcon">
+            <summary>
+            Gets or sets the ActionIcon.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.PhoneTextBox.HidesActionItemWhenEmpty">
+            <summary>
+            Gets or sets whether the ActionItem is hidden when there is not text entered in the PhoneTextBox.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Phone.Controls.PhoneTextBox.ActionIconTapped">
+            <summary>
+            Action Icon Tapped event.
+            </summary>
+        </member>
         <member name="T:Microsoft.Phone.Controls.HubTile">
             <summary>
             Represents an animated tile that supports an image and a title.
             Furthermore, it can also be associated with a message or a notification.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.HubTile.ImageStates">
             <summary>
@@ -6236,6 +6506,7 @@
             <summary>
             Provides organized animations for the hub tiles.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.HubTileService.WaitingPipelineSteps">
             <summary>
@@ -6407,7 +6678,7 @@
             and event routing.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.GestureListener.Touch_FrameReported(System.Object,System.Windows.Input.TouchFrameEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.GestureListener.OnTouchFrameReported(System.Object,System.Windows.Input.TouchFrameEventArgs)">
             <summary>
             Handle touch events.
             </summary>
@@ -7083,6 +7354,7 @@
             Represents a virtualizing list designed for grouped lists. Can also be 
             used with flat lists.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.LongListSelector.TemplatedListBoxName">
             <summary>
@@ -7131,12 +7403,17 @@
         </member>
         <member name="F:Microsoft.Phone.Controls.LongListSelector._listBox">
             <summary>
-            Reference to the ListBox hosed in this control.
+            Reference to the ListBox hosted in this control.
             </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.LongListSelector._scrollGroup">
             <summary>
             Reference to the visual state group for scrolling.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.LongListSelector._verticalCompressionGroup">
+            <summary>
+            Reference to the visual state group for  vertical compression.
             </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.LongListSelector._rootCollection">
@@ -7296,7 +7573,7 @@
             Loads ItemsSource into the hosted list box.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.LongListSelector.AddListHeader(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.ItemTuple})">
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.AddListHeader(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.LongListSelectorItem})">
             <summary>
             Adds a list header to the given list.
             </summary>
@@ -7306,7 +7583,7 @@
             Adds a list header to the listbox.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.LongListSelector.RemoveListHeader(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.ItemTuple})">
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.RemoveListHeader(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.LongListSelectorItem})">
             <summary>
             Removes the list header from the given list.
             </summary>
@@ -7316,7 +7593,7 @@
             Removes the list header from the listbox.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.LongListSelector.AddListFooter(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.ItemTuple})">
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.AddListFooter(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.LongListSelectorItem})">
             <summary>
             Adds a list footer to the given list.
             </summary>
@@ -7326,7 +7603,7 @@
             Adds a list footer to the listbox.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.LongListSelector.RemoveListFooter(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.ItemTuple})">
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.RemoveListFooter(System.Collections.Generic.IList{Microsoft.Phone.Controls.LongListSelector.LongListSelectorItem})">
             <summary>
             Removes the list footer from the given list.
             </summary>
@@ -7430,7 +7707,7 @@
             <param name="group">Group from which to retrieve the items count.</param>
             <returns>Returns the number of items in a group including the group header.</returns>
         </member>
-        <member name="M:Microsoft.Phone.Controls.LongListSelector.UpdateItemsTemplate(Microsoft.Phone.Controls.LongListSelector.ItemType,System.Windows.DataTemplate)">
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.UpdateItemsTemplate(Microsoft.Phone.Controls.LongListSelector.LongListSelectorItemType,System.Windows.DataTemplate)">
             <summary>
             Updates the templates for a given item type in the list box.
             </summary>
@@ -7458,6 +7735,11 @@
             </summary>
         </member>
         <member name="M:Microsoft.Phone.Controls.LongListSelector.OnScrollStateChanging(System.Object,System.Windows.VisualStateChangedEventArgs)">
+            <summary>
+            Called when the scrolling state of the list box changes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.LongListSelector.OnStretchStateChanging(System.Object,System.Windows.VisualStateChangedEventArgs)">
             <summary>
             Called when the scrolling state of the list box changes.
             </summary>
@@ -7500,6 +7782,11 @@
         <member name="P:Microsoft.Phone.Controls.LongListSelector.IsScrolling">
             <summary>
             Gets whether or not the user is manipulating the list, or if an inertial animation is taking place.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Phone.Controls.LongListSelector.IsStretching">
+            <summary>
+            Gets whether or not stretching is taking place.
             </summary>
         </member>
         <member name="P:Microsoft.Phone.Controls.LongListSelector.ItemsSource">
@@ -7628,12 +7915,12 @@
             Occurs when the user has dragged the items down from the top as far as they can go.  
             </summary>
         </member>
-        <member name="T:Microsoft.Phone.Controls.LongListSelector.ItemType">
+        <member name="T:Microsoft.Phone.Controls.LongListSelector.LongListSelectorItemType">
             <summary>
             Describes different items.
             </summary>
         </member>
-        <member name="T:Microsoft.Phone.Controls.LongListSelector.ItemTuple">
+        <member name="T:Microsoft.Phone.Controls.LongListSelector.LongListSelectorItem">
             <summary>
             Holds information about an item.
             </summary>
@@ -7642,6 +7929,7 @@
             <summary>
             Class that implements a container for the ListPicker control.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.ListPickerItem.#ctor">
             <summary>
@@ -7673,25 +7961,26 @@
             Full mode; all items are visible in a separate Popup.
             </summary>
         </member>
-        <member name="T:Microsoft.Phone.Controls.TemplatedListBox">
+        <member name="T:Microsoft.Phone.Controls.Primitives.TemplatedListBox">
             <summary>
             Represents a ListBox with item-specific templates.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
-        <member name="M:Microsoft.Phone.Controls.TemplatedListBox.GetContainerForItemOverride">
+        <member name="M:Microsoft.Phone.Controls.Primitives.TemplatedListBox.GetContainerForItemOverride">
             <summary>
             Creates or identifies the element used to display a specified item.
             </summary>
             <returns>Returns the new container.</returns>
         </member>
-        <member name="M:Microsoft.Phone.Controls.TemplatedListBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+        <member name="M:Microsoft.Phone.Controls.Primitives.TemplatedListBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
             <summary>
             Prepares the specified element to display the specified item.
             </summary>
             <param name="element">Element used to display the specified item.</param>
             <param name="item">Specified item.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.TemplatedListBox.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+        <member name="M:Microsoft.Phone.Controls.Primitives.TemplatedListBox.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
             <summary>
             When overridden in a derived class, undoes the effects of the 
             PrepareContainerForItemOverride method.
@@ -7699,40 +7988,41 @@
             <param name="element">The container element.</param>
             <param name="item">The item.</param>
         </member>
-        <member name="P:Microsoft.Phone.Controls.TemplatedListBox.ListHeaderTemplate">
+        <member name="P:Microsoft.Phone.Controls.Primitives.TemplatedListBox.ListHeaderTemplate">
             <summary>
             Gets or sets the list header template.
             </summary>
         </member>
-        <member name="P:Microsoft.Phone.Controls.TemplatedListBox.ListFooterTemplate">
+        <member name="P:Microsoft.Phone.Controls.Primitives.TemplatedListBox.ListFooterTemplate">
             <summary>
             Gets or sets the list footer template.
             </summary>
         </member>
-        <member name="P:Microsoft.Phone.Controls.TemplatedListBox.GroupHeaderTemplate">
+        <member name="P:Microsoft.Phone.Controls.Primitives.TemplatedListBox.GroupHeaderTemplate">
             <summary>
             Gets or sets the group header template.
             </summary>
         </member>
-        <member name="P:Microsoft.Phone.Controls.TemplatedListBox.GroupFooterTemplate">
+        <member name="P:Microsoft.Phone.Controls.Primitives.TemplatedListBox.GroupFooterTemplate">
             <summary>
             Gets or sets the footer template.
             </summary>
         </member>
-        <member name="E:Microsoft.Phone.Controls.TemplatedListBox.Link">
+        <member name="E:Microsoft.Phone.Controls.Primitives.TemplatedListBox.Link">
             <summary>
             Occurs when an item is about to be "realized".
             </summary>
         </member>
-        <member name="E:Microsoft.Phone.Controls.TemplatedListBox.Unlink">
+        <member name="E:Microsoft.Phone.Controls.Primitives.TemplatedListBox.Unlink">
             <summary>
             Occurs when an item is about to be "un-realized".
             </summary>
         </member>
-        <member name="T:Microsoft.Phone.Controls.TemplatedListBoxItem">
+        <member name="T:Microsoft.Phone.Controls.Primitives.TemplatedListBoxItem">
             <summary>
-            Represents an item within a <see cref="T:Microsoft.Phone.Controls.TemplatedListBox"/>
+            Represents an item within a <see cref="T:Microsoft.Phone.Controls.Primitives.TemplatedListBox"/>
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="T:Microsoft.Phone.Controls.Primitives.ClipToBounds">
             <summary>
@@ -7740,6 +8030,7 @@
             to its bounds, e.g. clip the element when it is translated outside 
             of the panel it is placed in.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.Primitives.ClipToBounds.GetIsEnabled(System.Windows.DependencyObject)">
             <summary>
@@ -7804,6 +8095,7 @@
             <summary>
             An item container for a Multiselect List.
             </summary>
+            <QualityBand>Experimental</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.MultiselectItem.SelectionEnabledStates">
             <summary>
@@ -8117,6 +8409,7 @@
             <summary>
             A collection of items that supports multiple selection.
             </summary>
+            <QualityBand>Experimental</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.MultiselectList.IsInSelectionModeProperty">
             <summary>
@@ -8237,6 +8530,7 @@
             <summary>
             An infinitely scrolling, UI- and data-virtualizing selection control.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.Primitives.LoopingSelector.DataSourceProperty">
             <summary>
@@ -8304,6 +8598,7 @@
             <summary>
             The items that will be contained in the LoopingSelector.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.Primitives.LoopingSelectorItem.#ctor">
             <summary>
@@ -8359,6 +8654,7 @@
             <summary>
             Represents a switch that can be toggled between two states.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.CommonStates">
             <summary>
@@ -8491,21 +8787,21 @@
             Gets all the template parts and initializes the corresponding state.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.ManipulationStartedHandler(System.Object,System.Windows.Input.ManipulationStartedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.OnManipulationStarted(System.Object,System.Windows.Input.ManipulationStartedEventArgs)">
             <summary>
             Handles started drags on the root.
             </summary>
             <param name="sender">The event sender.</param>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.ManipulationDeltaHandler(System.Object,System.Windows.Input.ManipulationDeltaEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.OnManipulationDelta(System.Object,System.Windows.Input.ManipulationDeltaEventArgs)">
             <summary>
             Handles drags on the root.
             </summary>
             <param name="sender">The event sender.</param>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.SizeChangedHandler(System.Object,System.Windows.SizeChangedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.Primitives.ToggleSwitchButton.OnSizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
             <summary>
             Handles changed sizes for the track and the thumb.
             Sets the clip of the track and computes the indeterminate and checked translations.
@@ -8538,6 +8834,7 @@
             Use the standard ProgressBar control in the platform for determinate 
             scenarios as there is no performance benefit in determinate mode.
             </remarks>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.PerformanceProgressBar._visualStateGroup">
             <summary>
@@ -8549,6 +8846,11 @@
         <member name="F:Microsoft.Phone.Controls.PerformanceProgressBar._cachedIsIndeterminate">
             <summary>
             Gets or sets a value indicating the cached IsIndeterminate.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Phone.Controls.PerformanceProgressBar._cachedIsIndeterminateBindingExpression">
+            <summary>
+            Gets or sets a value indicating the cached IsIndeterminate binding expression.
             </summary>
         </member>
         <member name="F:Microsoft.Phone.Controls.PerformanceProgressBar.ActualIsIndeterminateProperty">
@@ -8601,6 +8903,7 @@
             It is used to enable a Windows Phone native platform-style progress bar
             experience in indeterminate mode that remains performant.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.Primitives.RelativeAnimatingContentControl.SimpleDoubleComparisonEpsilon">
             <summary>
@@ -8854,6 +9157,7 @@
             This code provides attached properties for adding a 'tilt' effect to all 
             controls within a container.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.TiltEffect.MaxAngle">
             <summary>
@@ -9169,6 +9473,7 @@
             <summary>
             Converts bool? values to "Off" and "On" strings.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.OffOnConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
             <summary>
@@ -9194,6 +9499,7 @@
             <summary>
             Represents a switch that can be toggled between two states.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.ToggleSwitch.CommonStates">
             <summary>
@@ -9282,7 +9588,7 @@
             Gets all the template parts and initializes the corresponding state.
             </summary>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.CheckedHandler(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.OnChecked(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Mirrors the
             <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Checked"/>
@@ -9291,7 +9597,7 @@
             <param name="sender">The event sender.</param>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.UncheckedHandler(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.OnUnchecked(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Mirrors the
             <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Unchecked"/>
@@ -9300,7 +9606,7 @@
             <param name="sender">The event sender.</param>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.IndeterminateHandler(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.OnIndeterminate(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Mirrors the
             <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Indeterminate"/>
@@ -9309,7 +9615,7 @@
             <param name="sender">The event sender.</param>
             <param name="e">The event information.</param>
         </member>
-        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.ClickHandler(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:Microsoft.Phone.Controls.ToggleSwitch.OnClick(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Mirrors the 
             <see cref="E:System.Windows.Controls.Primitives.ToggleButton.Click"/>
@@ -9561,6 +9867,7 @@
             Enables navigation transitions for
             <see cref="T:Microsoft.Phone.Controls.PhoneApplicationPage"/>s.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.TransitionFrame.FirstTemplatePartName">
             <summary>
@@ -9842,6 +10149,7 @@
             <summary>
             Transition factory for a particular transition family.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="M:Microsoft.Phone.Controls.TransitionElement.GetTransition(System.Windows.UIElement)">
             <summary>
@@ -10009,6 +10317,7 @@
             Provides attached properties for navigation
             <see cref="T:Microsoft.Phone.Controls.ITransition"/>s.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.TransitionService.NavigationInTransitionProperty">
             <summary>
@@ -10329,6 +10638,7 @@
             <see cref="T:Microsoft.Phone.Controls.ITransition"/>s
             for transition families and modes.
             </summary>
+            <QualityBand>Preview</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.Transitions._storyboardXamlCache">
             <summary>
@@ -10451,6 +10761,7 @@
             element in the row.  When the orientation is reversed, so is the
             directional growth with respect to Width and Height.
             </summary>
+            <QualityBand>Mature</QualityBand>
         </member>
         <member name="F:System.Windows.Controls.OrientedSize._orientation">
             <summary>
@@ -10515,7 +10826,7 @@
             bottom.  When elements extend beyond the panel edge, elements are
             positioned in the next row or column.
             </summary>
-            <QualityBand>Stable</QualityBand>
+            <QualityBand>Mature</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.WrapPanel._ignorePropertyChange">
             <summary>
@@ -10673,6 +10984,7 @@
             The lockable Pivot extends the base Pivot control with a property that
             disables navigation between Pivot items.
             </summary>
+            <QualityBand>Experimental</QualityBand>
         </member>
         <member name="F:Microsoft.Phone.Controls.LockablePivot.HeadersListElement">
             <summary>
@@ -10689,6 +11001,18 @@
             The item container style property name.
             </summary>
         </member>
+        <member name="F:Microsoft.Phone.Controls.LockablePivot.IsLockedProperty">
+            <summary>
+            Identifies the IsLocked dependency property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Phone.Controls.LockablePivot.OnIsLockedPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsLockedProperty property changed handler.
+            </summary>
+            <param name="d">LockablePivot that changed its IsLocked.</param>
+            <param name="e">Event arguments.</param>
+        </member>
         <member name="M:Microsoft.Phone.Controls.LockablePivot.#ctor">
             <summary>
             Initializes a new instance of the LockablePivot type.
@@ -10702,7 +11026,7 @@
         </member>
         <member name="P:Microsoft.Phone.Controls.LockablePivot.IsLocked">
             <summary>
-            Sets or Gets the navigation lock mode.
+            Gets or sets a value indicating whether the control is locked.
             </summary>
         </member>
     </members>

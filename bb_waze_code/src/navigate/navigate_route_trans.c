@@ -832,6 +832,7 @@ const char *on_routing_response (/* IN  */   const char*       data,
                               NULL,                      //   [in,opt]  Allowed padding
                               &curr_result->origin,      //   [out]     Output value
                               TRIM_ALL_CHARS);           //   [in]      TRIM_ALL_CHARS, DO_NOT_TRIM, or 'n'
+   curr_result->origin = 1;
 
    if (!data) {
       roadmap_log (ROADMAP_ERROR, "on_routing_response() - Failed to read 'Origin'");

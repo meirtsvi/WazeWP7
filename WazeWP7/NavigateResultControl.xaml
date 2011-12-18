@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="WazeWP7.NavigateResultControl"
+    xmlns:local="clr-namespace:WazeWP7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent" 
+          HorizontalAlignment="Stretch" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="1" Grid.Row="1" 
+                Background="{StaticResource PhoneChromeBrush}"
+                CornerRadius="20">
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="TitleTextBlock" Text="{Binding Title}"
+                        Foreground="#FFF6A203"
+                        Style="{StaticResource PhoneTextTitle2Style}"
+                        HorizontalAlignment="Center" Margin="12,20,12,10" />
+                <TextBlock x:Name="ChangedDestinationTextBlock"
+                           Text="Unable to provide route to destination. Taking you to nearest location."
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="12,10"
+                           Visibility="{Binding ChangedDestinationVisibility}"/>
+                <TextBlock x:Name="ChangedDepartureTextBlock"
+                           Text="Showing route using alternative departure point."
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="12,10"
+                           Visibility="{Binding ChangedDepartureVisibility}"/>
+                <Grid x:Name="ETAGrid">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                            <TextBlock x:Name="ETAMinutesTextBlock"
+                                    Text="{Binding ETAMinutes}"
+                                    Style="{StaticResource PhoneTextTitle3Style}" 
+                                    Margin="13,0,3,0" />
+                            <TextBlock Text="min."
+                                    Style="{StaticResource PhoneTextTitle3Style}" 
+                                    Margin="0" />
+                            <TextBlock x:Name="ETADistanceTextBlock"
+                                    Text="{Binding ETADistance}"
+                                    Style="{StaticResource PhoneTextTitle3Style}" 
+                                    Margin="13,0,3,0" />
+                            <TextBlock x:Name="ETADistanceUnitsTextBlock"
+                                    Text="{Binding ETADistanceUnits}"
+                                    Style="{StaticResource PhoneTextTitle3Style}" 
+                                    Margin="0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                            <TextBlock x:Name="ETATextBlock"
+                                       Text="ETA"
+                                       Style="{StaticResource PhoneTextTitle3Style}" 
+                                       Margin="13,0,3,0" />
+                            <TextBlock x:Name="ETATimeTextBlock"
+                                       Text="{Binding ETATime}"
+                                       Style="{StaticResource PhoneTextTitle3Style}" 
+                                       Margin="0" />
+                        </StackPanel>
+                        <TextBlock x:Name="ETAViaTextBlock"
+                                Text="{Binding ETAVia}"
+                                Margin="13,5,0,0"/>
+                    </StackPanel>
+                </Grid>
+                <TextBlock x:Name="DisclaimerTextBlock"
+                           Text="Note: route may not be optimal, but waze learns quickly..."
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="12,10"
+                           FontSize="13"
+                           Visibility="{Binding DisclaimerVisibility}"/>
+
+                <local:ImageButton x:Name="DriveButton" Content ="Drive"
+                                   Style="{StaticResource WazeImageButtonDefaultStyle}"
+                                   Margin="10,12"
+                                   Click="DriveButton_Click"/>
+                <local:ImageButton x:Name="AlternativesButton" Content ="Alternatives"
+                                   Style="{StaticResource WazeImageButtonDefaultStyle}"
+                                   Margin="10,12"
+                                   Click="AlternativesButton_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

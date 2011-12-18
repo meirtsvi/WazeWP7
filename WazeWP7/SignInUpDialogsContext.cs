@@ -11,9 +11,6 @@ using System.Windows.Shapes;
 
 namespace WazeWP7
 {
-    public delegate void SigninDelegate(string username, string password);
-    public delegate void SignupDelegate(string username, string password, string confirmPassword, string email, string nickame, bool sendUpdates);
-    public delegate void SkipSignupDelegate();
 
     public class SignInUpDialogsContext : ApplicationPageContext
     {
@@ -21,6 +18,10 @@ namespace WazeWP7
         private string username = null;
         private string password = null;
         #endregion
+
+        public delegate void SigninDelegate(string username, string password);
+        public delegate void SignupDelegate(string username, string password, string confirmPassword, string email, string nickame, bool sendUpdates);
+        public delegate void SkipSignupDelegate();
 
         public SigninDelegate OnSignin { get; set; }
         public SignupDelegate OnSignup { get; set; }

@@ -26,7 +26,7 @@ namespace WazeWP7
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            FreeMapMainScreen.get().LayoutRoot.Children.Remove(this);
+            (this.Parent as Panel).Children.Remove(this);
         }
     }
 }

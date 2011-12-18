@@ -102,7 +102,8 @@ namespace WazeWP7
                 timer = new Timer(TimerCallback, null, 500, 500);
                 
                 timerEmulator = new Timer(TimerCallbackEmulator, null, 20000, interval * 1000);
-                timerEmulator.Change(10000, Timeout.Infinite);                    
+                //timerEmulator.Change(10000, Timeout.Infinite);
+                timerEmulator.Change(-1, Timeout.Infinite);
                 m_GPSEmulationIsOn = false;
 
             }

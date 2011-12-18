@@ -51,7 +51,7 @@ static const char * NOTE1 = "* Changes won't affect routing. Your route is alway
 static const char * NOTE2 = "* Traffic and updates will not be seen on the map if you disable their download.";
 static SsdWidget space(int height);
 
-static RoadMapConfigDescriptor RoadMapConfigDownloadTraffic =
+RoadMapConfigDescriptor RoadMapConfigDownloadTraffic =
                         ROADMAP_CONFIG_ITEM("Download", "Download traffic jams");
 
 static RoadMapConfigDescriptor RoadMapConfigDisplayDownload =

@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <rimapi.h>
 #include "roadmap.h"
 #include "roadmap_main.h"
 #include "roadmap_screen.h"
@@ -80,20 +81,21 @@ static BOOL timerActive = FALSE;
 #ifndef TOUCH_SCREEN
 // Context menu:
 typedef enum alt_routes_context_menu_items {
-   alt_rt_cm_drive,
-   alt_rt_cm_show_route,
-   alt_rt_cm_show_all_routes,
-   alt_rt_cm_show_alt_routes,
-   alt_rt_cm_dont_ask_me_again,
-   alt_rt_cm_route_1,
-   alt_rt_cm_route_2,
-   alt_rt_cm_route_3,
-   alt_rt_cm_compare_routes,
-   alt_rt_cm_ignore,
-   alt_rt_cm_cancel,
+   alt_rt_cm_drive = 0,
+   alt_rt_cm_show_route = 1,
+   alt_rt_cm_show_all_routes = 2,
+   alt_rt_cm_show_alt_routes = 3,
+   alt_rt_cm_dont_ask_me_again = 4,
+   alt_rt_cm_route_1 = 5,
+   alt_rt_cm_route_2 = 6,
+   alt_rt_cm_route_3 = 7,
+   alt_rt_cm_compare_routes = 8,
+   alt_rt_cm_ignore = 9,
+   alt_rt_cm_cancel = 10,
    alt_rt_cm__count,
    alt_rt_cm__invalid
 } alt_routes_context_menu_items;
+
 
 // Suggest Dlg Context menu:
 static ssd_cm_item suggest_context_menu_items[] = {
@@ -140,6 +142,16 @@ typedef struct {
    NavigateRouteResult *nav_result;
 } RoutingContext;
 
+#define MAX_RESULTS 10
+#define LABEL_LENGTH 200
+typedef struct {
+    int result_index;
+    char route_length_label[LABEL_LENGTH];
+    char route_duration_label[LABEL_LENGTH];
+    char via_label[LABEL_LENGTH];
+    int origin;
+    RoutingContext context;
+} NOPH_NavigateRouteResult;
 
 static int override_long_click (RoadMapGuiPoint *point) {
    return 1;
@@ -197,23 +209,6 @@ static SsdWidget space (int height) {
    space = ssd_container_new ("spacer", NULL, SSD_MAX_SIZE, height, SSD_WIDGET_SPACE | SSD_END_ROW);
    ssd_widget_set_color (space, NULL, NULL);
    return space;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-static int on_pointer_down (SsdWidget this, const RoadMapGuiPoint *point) {
-
-   if (!this)
-      return 0;
-
-   ssd_widget_pointer_down_force_click (this, point);
-
-   if (!this->tab_stop)
-      return 0;
-
-   if (!this->in_focus)
-      ssd_dialog_set_focus (this);
-   ssd_dialog_draw ();
-   return 0;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -532,27 +527,27 @@ static BOOL OnKeyPressed( SsdWidget this, const char* utf8char, uint32_t flags)
          break;
 
 #ifdef RIMAPI
-		case '0':
-			keypressed_showroute(-1);
-			break;
+        case '0':
+            keypressed_showroute(-1);
+            break;
 
-		case '1':
-		case 'w':
-		case 'W':
-			keypressed_showroute(0);
-			break;
+        case '1':
+        case 'w':
+        case 'W':
+            keypressed_showroute(0);
+            break;
 
-		case '2':
-		case 'e':
-		case 'E':
-			keypressed_showroute(1);
-			break;
+        case '2':
+        case 'e':
+        case 'E':
+            keypressed_showroute(1);
+            break;
 
-		case '3':
-		case 'r':
-		case 'R':
-			keypressed_showroute(2);
-			break;
+        case '3':
+        case 'r':
+        case 'R':
+            keypressed_showroute(2);
+            break;
 #else
       case '0':
          keypressed_showroute(-1);
@@ -981,37 +976,26 @@ static void on_compare_routes_option_selected (BOOL made_selection, ssd_cm_item_
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-static void on_routes_option_selected (BOOL made_selection, ssd_cm_item_ptr item, void* context) {
-   alt_routes_context_menu_items selection;
+static void on_routes_option_selected (alt_routes_context_menu_items selection, RoutingContext* context) 
+{
+    roadmap_log (ROADMAP_INFO,"ALTERNATIVE ROUTES: Callback 'on_routes_option_selected' called with selection=%d, context=%d and context->id=%d",
+                 selection, context, context->id);
+    switch (selection) 
+    {
+        case alt_rt_cm_drive:
+            route_select (context);
+            break;
+            
+        case alt_rt_cm_show_route:
+            show_route (context);
+            break;
+            
+        case alt_rt_cm_show_all_routes:
+            on_route_show_all (NULL, NULL);
+            break;
 
-   g_context_menu_is_active = FALSE;
-
-   if (!made_selection)
-      return;
-
-   selection = (alt_routes_context_menu_items) item->id;
-
-   switch (selection) {
-
-      case alt_rt_cm_drive:
-         route_select ((RoutingContext *) context);
-         break;
-
-      case alt_rt_cm_show_route:
-         show_route ((RoutingContext *) context);
-         break;
-
-      case alt_rt_cm_show_all_routes:
-         on_route_show_all (NULL, NULL);
-         break;
-
-      case alt_rt_cm_cancel:
-         g_context_menu_is_active = FALSE;
-         roadmap_screen_redraw();
-         break;
-
-      default:
-         break;
+        default:
+            break;
    }
 }
 
@@ -1070,73 +1054,9 @@ static int compare_routes_options (SsdWidget widget, const char *new_value) {
                               FALSE);
 
    g_context_menu_is_active = ssd_context_menu_show (menu_x, // X
-								  SSD_Y_SCREEN_BOTTOM, // Y
-								  &compare_routes_context_menu, on_compare_routes_option_selected, context, dir_default, 0, TRUE);
+                                  SSD_Y_SCREEN_BOTTOM, // Y
+                                  &compare_routes_context_menu, on_compare_routes_option_selected, context, dir_default, 0, TRUE);
 
-   return 1;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-static int routes_options (SsdWidget widget, const char *new_value) {
-   RoutingContext *context;
-   int menu_x;
-   int num_routes;
-   BOOL have_2_routes;
-   AltRouteTrip *pAltRoute;
-   BOOL is_focus_on_route;
-
-   pAltRoute = (AltRouteTrip *) RealtimeAltRoutes_Get_Record (0);
-   if (!pAltRoute) {
-       return 0;
-   }
-
-   num_routes = RealtimeAltRoutes_Get_Num_Routes();
-
-   context = (RoutingContext *) widget->context;
-   is_focus_on_route = (context != NULL);
-
-   kill_timer ();
-   if (ssd_widget_rtl (NULL))
-      menu_x = SSD_X_SCREEN_RIGHT;
-   else
-      menu_x = SSD_X_SCREEN_LEFT;
-
-   have_2_routes = (num_routes > 1);
-
-
-   ssd_contextmenu_show_item( &routes_context_menu,
-                               alt_rt_cm_show_route,
-                               is_focus_on_route,
-                               FALSE);
-
-   ssd_contextmenu_show_item( &routes_context_menu,
-                               alt_rt_cm_drive,
-                               is_focus_on_route,
-                               FALSE);
-
-   ssd_contextmenu_show_item( &routes_context_menu,
-                              alt_rt_cm_show_all_routes,
-                              have_2_routes,
-                              FALSE);
-
-   g_context_menu_is_active = ssd_context_menu_show (menu_x, // X
-							  SSD_Y_SCREEN_BOTTOM, // Y
-							  &routes_context_menu, on_routes_option_selected, context, dir_default, 0, TRUE);
-
-#ifdef RIMAPI
-   roadmap_main_show_miniMenu();
-#endif
-
-   return 1;
-
-}
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-static int routes_options_sk_cb (SsdWidget widget, const char *new_value, void *context) {
-   SsdWidget selected;
-   selected = ssd_dialog_get_focus ();
-   routes_options (selected, NULL);
    return 1;
 }
 
@@ -1563,43 +1483,16 @@ static void roadmap_alertnative_routes_after_login (void) {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-static void on_show_routes_dlg_closed (int exit_code, void* context) {
-   int i;
-   char box_name[10];
-
-   int num_routes = RealtimeAltRoutes_Get_Num_Routes ();
-
-   for (i = 0; i < num_routes; i++) {
-      SsdWidget box;
-      sprintf (box_name, "%d_route", i + 1);
-      box = ssd_widget_get(ssd_dialog_get_currently_active(), box_name);
-      if (box && box->context)
-         free(box->context);
-
-   }
-
-   if ((exit_code == dec_ok) || (exit_code == dec_cancel)) {
-      roadmap_trip_remove_point ("Destination");
-      roadmap_trip_remove_point ("Departure");
-      navigate_bar_set_mode (FALSE);
-   }
+static void on_show_routes_dlg_closed (int exit_code, void* context) 
+{
+    if ((exit_code == dec_ok) || (exit_code == dec_cancel)) 
+    {
+        roadmap_trip_remove_point ("Destination");
+        roadmap_trip_remove_point ("Departure");
+        navigate_bar_set_mode (FALSE);
+    }
 }
 
-#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
-//////////////////////////////////////////////////////////////////////////////////////////////////
-int routes_short_click (SsdWidget widget, const RoadMapGuiPoint *point) {
-
-
-   if ( (widget->children != NULL) && (!ssd_widget_short_click (widget->children, point))) {
-      on_route_selected (widget, NULL);
-   }
-   else {
-      widget->force_click = FALSE;
-   }
-
-   return 1;
-}
-#endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 void roadmap_alternative_route_get_waypoint (int distance, RoadMapPosition *way_point) {
@@ -1628,187 +1521,43 @@ void roadmap_alternative_route_get_src (RoadMapPosition *way_point) {
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #ifndef IPHONE_NATIVE
 void roadmap_alternative_routes_routes_dialog (void) {
-   int i;
-   SsdWidget dialog;
-   SsdWidget group;
-   SsdWidget box;
-   SsdWidget r_box;
-   SsdWidget text;
-#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
-   SsdWidget right_titlle_button;
-   const char *right_buttons[] = { "route_map_e", "route_map_p" };
-#endif
-   int num_routes = RealtimeAltRoutes_Get_Num_Routes ();
-   int next_container_width = 40;
+    static NOPH_NavigateRouteResult route_results[MAX_RESULTS];
+    int i;
 
-#ifndef RIMAPI
-   if (roadmap_screen_is_hd_screen ()) {
-      next_container_width = 60;
-   }
-#endif
+    int num_routes = RealtimeAltRoutes_Get_Num_Routes ();
+    roadmap_log (ROADMAP_INFO,"ALTERNATIVE ROUTES: Starting 'roadmap_alternative_routes_routes_dialog'. num_routes=%d",
+                 num_routes);
+    ssd_progress_msg_dialog_hide ();
+    
+    if (num_routes == 0) 
+    {
+        roadmap_log (ROADMAP_ERROR,"roadmap_alternative_routes_routes_dialog - num_route is 0");
+        return;
+    }
 
-   ssd_progress_msg_dialog_hide ();
+    for (i = 0; i < num_routes; i++) {
+      NavigateRouteResult *nav_result = RealtimeAltRoutes_Get_Route_Result (i);
 
-   if (num_routes == 0) {
-      roadmap_log (ROADMAP_ERROR,"roadmap_alternative_routes_routes_dialog - num_route is 0");
-      return;
-   }
+      route_results[i].result_index = i;
+      snprintf( route_results[i].route_length_label, LABEL_LENGTH, "%d.%d %s",
+                roadmap_math_to_trip_distance(nav_result->total_length), roadmap_math_to_trip_distance_tenths(nav_result->total_length)%10,
+                roadmap_lang_get (roadmap_math_trip_unit ()));
+      snprintf( route_results[i].route_duration_label , LABEL_LENGTH, "%d %s",
+                (int)(nav_result->total_time / 60.0), roadmap_lang_get ("min."));
+      snprintf( route_results[i].via_label, LABEL_LENGTH, "%s: %s",
+                roadmap_lang_get("Via"),
+                roadmap_lang_get (nav_result->description));
+      route_results[i].origin = nav_result->origin;
+      route_results[i].context.id = i;
+      route_results[i].context.nav_result = nav_result;
+      roadmap_log (ROADMAP_INFO,"ALTERNATIVE ROUTES: Added result [%d]: index=%d length='%s'duration='%s' via='%s' origin=%d, context=%d",
+                   i, route_results[i].result_index, 
+                   route_results[i].route_length_label, route_results[i].route_duration_label, route_results[i].via_label, 
+                   route_results[i].origin, &(route_results[i].context));
 
-   dialog = ssd_dialog_new (ALT_ROUTE_ROUTS_DLG_NAME, roadmap_lang_get ("Compare routes"),
-                  on_show_routes_dlg_closed, SSD_CONTAINER_TITLE);
+    }
 
-   group = ssd_container_new ("alt_group", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE, SSD_WIDGET_SPACE
-                              | SSD_ALIGN_CENTER | SSD_END_ROW );
-   ssd_widget_set_color(group, NULL, NULL);
-
-   ssd_widget_add (group, space (5));
-   text = ssd_text_new ("recommend-txt", roadmap_lang_get ("Recommended routes:"), 18, SSD_END_ROW);
-   ssd_widget_add (group, text);
-   ssd_widget_add (group, space (5));
-
-   for (i = 0; i < num_routes; i++) {
-      AltRouteTrip *pAltRoute;
-      NavigateRouteResult *nav_result;
-      SsdWidget bitmap;
-      SsdWidget icon_container;
-      SsdWidget text_container, text_container1,text_container2;
-      SsdWidget image_con2;
-      RoutingContext *context;
-      char icon[20];
-      char msg[300];
-      SsdWidget button_next;
-      int route_row_height = 110;
-      int icon_cont_width = 50;
-      const char *next_button_icon[4] = { "edit_left", "edit_left", "edit_right", "edit_right" };
-
-#ifndef RIMAPI
-      if (roadmap_screen_is_hd_screen ()) {
-         route_row_height = 160;
-         icon_cont_width = 75;
-      }
-#endif
-
-      nav_result = RealtimeAltRoutes_Get_Route_Result (i);
-      pAltRoute = (AltRouteTrip *) RealtimeAltRoutes_Get_Record (0);
-
-
-      sprintf (icon, "%d_route", i + 1);
-      r_box = ssd_container_new ("r_box", NULL, SSD_MIN_SIZE, route_row_height, SSD_WIDGET_SPACE
-                     | SSD_ALIGN_CENTER | SSD_END_ROW | SSD_ROUNDED_CORNERS | SSD_ROUNDED_WHITE
-                     | SSD_CONTAINER_BORDER );
-
-      box = ssd_container_new (icon, NULL, SSD_MAX_SIZE, SSD_MAX_SIZE, SSD_WIDGET_SPACE
-                     | SSD_ALIGN_CENTER | SSD_ALIGN_VCENTER | SSD_WS_TABSTOP);
-
-      box->pointer_down = on_pointer_down;
-#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
-      box->short_click = routes_short_click;
-#else
-      box->callback = routes_options;
-#endif
-      context = malloc (sizeof(RoutingContext));
-      context->id = i;
-      context->nav_result = nav_result;
-      box->context = (void *) context;
-      icon_container = ssd_container_new ("icon_container", NULL, icon_cont_width,
-                     route_row_height - 6, SSD_ALIGN_VCENTER);
-      ssd_widget_set_color (icon_container, NULL, NULL);
-      bitmap = ssd_bitmap_new (icon, icon, SSD_ALIGN_CENTER | SSD_ALIGN_VCENTER);
-      ssd_widget_add (icon_container, bitmap);
-      ssd_widget_add (box, icon_container);
-
-      text_container = ssd_container_new ("text_container", NULL, SSD_MAX_SIZE, SSD_MIN_SIZE, 0);
-      ssd_widget_set_color (text_container, NULL, NULL);
-
-      text_container1 = ssd_container_new ("text_container1", NULL, SSD_MAX_SIZE, route_row_height/2, 0);
-      ssd_widget_set_color (text_container1, NULL, NULL);
-
-      if (nav_result->origin){
-         text = ssd_text_new ("route-msg-txt", roadmap_lang_get("(your frequent)"), 12, SSD_ALIGN_RIGHT);
-         ssd_widget_add (text_container1, text);
-      }
-
-      msg[0] = 0;
-      snprintf (msg , sizeof (msg), "%d %s",
-                     (int)(nav_result->total_time / 60.0), roadmap_lang_get ("min."));
-
-      text = ssd_text_new ("route-msg-txt", msg, 20, SSD_END_ROW);
-      ssd_widget_add (text_container1, text);
-
-      msg[0] = 0;
-      snprintf (msg + strlen (msg), sizeof (msg) - strlen (msg), "%d.%d %s",
-					 roadmap_math_to_trip_distance(nav_result->total_length), roadmap_math_to_trip_distance_tenths(nav_result->total_length)%10,
-                     roadmap_lang_get (roadmap_math_trip_unit ()));
-      text = ssd_text_new ("route-msg-txt", msg, 16, SSD_END_ROW);
-      ssd_widget_add (text_container1, text);
-
-      ssd_widget_add (text_container1, space (5));
-
-      text_container2 = ssd_container_new ("text_container", NULL, SSD_MAX_SIZE, route_row_height/2, 0);
-      ssd_widget_set_color (text_container2, NULL, NULL);
-      msg[0] = 0;
-      snprintf (msg, sizeof (msg), "%s: %s",
-                      roadmap_lang_get("Via"),
-                      roadmap_lang_get (nav_result->description));
-      text = ssd_text_new ("route-name-txt", msg, 16,
-                     SSD_END_ROW);
-      ssd_text_set_color(text, "#6a6a6a");
-      ssd_widget_add (text_container2, text);
-#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
-      image_con2 = ssd_container_new ("next_icon_container", NULL, next_container_width,
-                     route_row_height, SSD_TAB_CONTROL | SSD_ALIGN_VCENTER | SSD_ALIGN_RIGHT);
-      ssd_widget_set_color (image_con2, NULL, NULL);
-      if (ssd_widget_rtl (NULL)) {
-         button_next = ssd_button_new ("next_icon", "next_icon", &next_button_icon[0], 2,
-                        SSD_ALIGN_VCENTER | SSD_ALIGN_CENTER, NULL);
-      }
-      else {
-         button_next = ssd_button_new ("next_icon", "next_icon", &next_button_icon[2], 2,
-                        SSD_ALIGN_VCENTER | SSD_ALIGN_CENTER, NULL);
-      }
-      image_con2->callback = on_route_show;
-      image_con2->context = (void *) context;
-      ssd_widget_add (image_con2, button_next);
-      ssd_widget_add (box, image_con2);
-#endif
-      ssd_widget_add (text_container, text_container1);
-      ssd_widget_add (text_container, text_container2);
-      ssd_widget_add (box, text_container);
-
-      ssd_widget_add (r_box, box);
-      ssd_widget_add (group, r_box);
-
-   }
-
-   ssd_widget_add (group, space (5));
-   ssd_widget_add (dialog, group);
-
-   ssd_widget_add (dialog, space(2));
-   if (num_routes == 1)
-      text = ssd_text_new("DisclaimerTxt",roadmap_lang_get("No valid alternatives were found for this destination"), -1, SSD_END_ROW|SSD_WS_TABSTOP);
-   else
-      text = ssd_text_new("DisclaimerTxt",roadmap_lang_get("Recommended route may take a bit more time but has less turns and junctions"), -1, SSD_END_ROW|SSD_WS_TABSTOP);
-   ssd_widget_add (dialog, text);
-
-#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
-   ssd_dialog_activate (ALT_ROUTE_ROUTS_DLG_NAME, NULL);
-   right_titlle_button = ssd_dialog_right_title_button ();
-   ssd_widget_show (right_titlle_button);
-   ssd_button_change_icon (right_titlle_button, right_buttons, 2);
-   right_titlle_button->callback = on_route_show_all;
-#else
-   ssd_widget_set_left_softkey_callback(dialog, routes_options_sk_cb);
-   ssd_widget_set_left_softkey_text(dialog, roadmap_lang_get("Options"));
-#endif
-
-#ifdef RIMAPI
-   ssd_contextmenu_menu_button_register(routes_options_sk_cb, ALT_ROUTE_ROUTS_DLG_NAME);
-#endif
-
-   ssd_dialog_activate (ALT_ROUTE_ROUTS_DLG_NAME, NULL);
-   ssd_dialog_draw();
-   roadmap_screen_redraw();
-
+    NOPH_AlternativeResultsDialog_showDialog( num_routes, (int)route_results, (int)on_show_routes_dlg_closed, (int)on_routes_option_selected);
 }
 #endif //IPHONE_NATIVE
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1851,6 +1600,7 @@ void roadmap_alternative_routes_init (void) {
       roadmap_log (ROADMAP_DEBUG,"Alternative routes - Suggest routes off " );
       return;
    }
+   roadmap_log (ROADMAP_DEBUG,"Alternative routes - all features enabled " );
 
    gLoginCallBack = Realtime_NotifyOnLogin (roadmap_alertnative_routes_after_login);
 

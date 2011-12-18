@@ -19,10 +19,10 @@ extern "C" {
 #include <stddef.h>
 
 /* Helper to register callback functions (this is not part of ANSI C, but... ) */
-#define __NR_NOPH_registerCallback 167 /* ansi */
+#define __NR_NOPH_registerCallback 188 /* ansi */
 static inline _syscall2(int,NOPH_registerCallback, char*, name, int, fnAddr) /* Not generated */
 
-#define __NR___exit 168 /* ansi */
+#define __NR___exit 189 /* ansi */
 static inline _syscall1(void,__exit, int, code) /* Not generated */
 extern void __attribute__((noreturn)) exit(int code);
 #define abort() __exit(1)
@@ -38,9 +38,9 @@ extern unsigned long int strtoul(const char *nptr, char **endptr, int base);
 extern float atof(const char *nptr);
 extern int atoi(const char *nptr);
 
-#define __NR_rand 169 /* ansi */
+#define __NR_rand 190 /* ansi */
 static inline _syscall0(int,rand) /* Not generated */
-#define __NR_srand 170 /* ansi */
+#define __NR_srand 191 /* ansi */
 static inline _syscall1(void,srand, unsigned int, seed) /* Not generated */
 
 #include <string.h>

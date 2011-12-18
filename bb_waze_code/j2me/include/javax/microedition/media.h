@@ -21,7 +21,7 @@ extern "C" {
 #define NOPH_ToneControl_C4 60
 #define NOPH_ToneControl_SILENCE -1
 
-#define __NR_NOPH_Manager_playTone 353 /* javax.microedition */
+#define __NR_NOPH_Manager_playTone 374 /* javax.microedition */
 static inline _syscall3(void,NOPH_Manager_playTone, int, note, int, duration, int, volume) /* Throws */
 
 #if defined(__cplusplus)

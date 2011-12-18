@@ -311,6 +311,8 @@ static int roadmap_lang_conf_load (const char *path) {
    char *name;
    char *value;
 
+   roadmap_log (ROADMAP_INFO, "Starting 'roadmap_lang_conf_load'");
+
    languages_count = 0;
 
    sprintf(file_name, "lang.conf");
@@ -346,7 +348,9 @@ static int roadmap_lang_conf_load (const char *path) {
            languages_count++;
     }
 
+   roadmap_log (ROADMAP_INFO, "Calling 'NOPH_LanguagesLoaded'");
     fclose (file);
+	NOPH_LanguagesLoaded( (int)lang_labels, (int)lang_values, languages_count);
 
     return 1;
 }
@@ -467,6 +471,7 @@ void roadmap_lang_initialize (void) {
    const char *p;
    initialized = TRUE;
 
+   roadmap_log (ROADMAP_INFO, "Starting 'roadmap_lang_initialize'");
    roadmap_lang_initialize_params();
 
    roadmap_lang_allocate ();

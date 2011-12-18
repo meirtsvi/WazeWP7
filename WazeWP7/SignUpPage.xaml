@@ -1,9 +1,10 @@
-﻿<phone:PhoneApplicationPage 
+﻿<local:WazeApplicationPage 
     x:Class="WazeWP7.SignUpPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:local="clr-namespace:WazeWP7"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -20,11 +21,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <!--Grid for displaying popups-->
+        <Grid Grid.RowSpan="2" 
+              x:Name="PopupsGrid" Canvas.ZIndex="1"
+              HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="PageTitle" Text="Create your account" 
                        Margin="9,-7,0,0" 
-                       Style="{StaticResource PhoneTextExtraLargeStyle}"
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       FontSize="{StaticResource PhoneFontSizeExtraLarge}"
                        HorizontalAlignment="Center"/>
         </StackPanel>
 
@@ -138,15 +145,15 @@
 
             </Grid>
 
-            <Button Content ="Skip" Grid.Row="2" Grid.Column="1"
-                    x:Name="SkipButton" Click="SkipButton_Click"
-                    BorderThickness="0" Template="{StaticResource WazeButtonControlTemplate}"                    />
+            <local:ImageButton Grid.Row="2" Grid.Column="1"
+                               Content="Skip" x:Name="SkipButton" 
+                               Click="SkipButton_Click"
+                               Style="{StaticResource WazeImageButtonDefaultStyle}"/>
 
-            <Button Content ="Next" Grid.Row="2" Grid.Column="3"
-                    x:Name="NextButton" Click="NextButton_Click"
-                    BorderThickness="0" Template="{StaticResource WazeButtonControlTemplate}"/>
+            <local:ImageButton Grid.Row="2" Grid.Column="3"
+                               Content="Next" x:Name="NextButton" 
+                               Click="NextButton_Click"
+                               Style="{StaticResource WazeImageButtonDefaultStyle}"/>
         </Grid>
     </Grid>
-
-
-</phone:PhoneApplicationPage>
+</local:WazeApplicationPage>

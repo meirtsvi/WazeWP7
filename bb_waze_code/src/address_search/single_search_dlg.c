@@ -52,6 +52,8 @@
 #include "single_search_dlg.h"
 #include "../roadmap_bar.h"
 #include "../roadmap_device_events.h"
+#include "../roadmap_search.h"
+#include "../roadmap_editbox.h"
 #include <rimapi.h>
 
 #ifdef TOUCH_SCREEN
@@ -229,9 +231,9 @@ static void on_address_resolved( void*                context,
    }
 
    roadmap_log(ROADMAP_INFO, "SINGLE SEARCH: Calling 'NOPH_SearchDialog_addressResolved' with %d address results and %d local results", count_adr, count_ls);
-   NOPH_SearchDialog_addressResolved(on_option_selected, local_search_get_provider_label(),
-                                     count_adr, results_adr, indexes_adr, icons_adr,
-                                     count_ls, results_ls, indexes_ls, icons_ls);
+   NOPH_SearchDialog_addressResolved((int)on_option_selected, local_search_get_provider_label(),
+                                     count_adr, (int)results_adr, (int)indexes_adr, (int)icons_adr,
+                                     count_ls, (int)results_ls, (int)indexes_ls, (int)icons_ls);
 }
 
 static void perform_search(const char* text)
@@ -329,6 +331,15 @@ static BOOL on_search_action(int         exit_code,
             break;
         case 3: // search
             perform_search(value);
+            break;
+        case 4: // favorites
+            search_menu_search_favorites();
+            break;
+        case 5: // history
+            search_menu_search_history();
+            break;
+        case 6: // saved locations
+            search_menu_my_saved_places();
             break;
     }
 

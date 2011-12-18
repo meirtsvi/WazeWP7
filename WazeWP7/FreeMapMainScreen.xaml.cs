@@ -58,7 +58,7 @@ using SharpGIS;
 
 namespace WazeWP7
 {
-    public partial class FreeMapMainScreen : PhoneApplicationPage
+    public partial class FreeMapMainScreen : WazeApplicationPage
     {
 
         private static FreeMapMainScreen m_this;
@@ -87,8 +87,7 @@ namespace WazeWP7
         private PageOrientation m_CurrentOrientation;
         private bool m_isMenuVisible = false;
         private bool m_isPageActive = false;
-
-        public Canvas MainGraphics = null;
+        private Canvas m_mainGraphics = null;
 
         public FreeMapMainScreen()
         {
@@ -114,135 +113,139 @@ namespace WazeWP7
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            m_isPageActive = true;
+            // Start with calling the base implementation
             base.OnNavigatedTo(e);
+                    
+            m_isPageActive = true;
         }
 
         protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
         {
-            m_isPageActive = false;
+            // Start with calling the base implementation
             base.OnNavigatedFrom(e);
+            
+            m_isPageActive = false;
         }
 
-//        void CopySounds(object obj)
-//        {
-//            try
-//            {
-//                //Thread.Sleep(5000);
-//                var store = IsolatedStorageFile.GetUserStoreForApplication();
-//                if (!store.DirectoryExists("/sound") || !store.FileExists("/sound/heb/within.wav"))
-//                {
-//                    List<string> file_list = new List<string>();
+        //        void CopySounds(object obj)
+        //        {
+        //            try
+        //            {
+        //                //Thread.Sleep(5000);
+        //                var store = IsolatedStorageFile.GetUserStoreForApplication();
+        //                if (!store.DirectoryExists("/sound") || !store.FileExists("/sound/heb/within.wav"))
+        //                {
+        //                    List<string> file_list = new List<string>();
 
-///*                   file_list.Add("200.mp3");
-//                   file_list.Add("800.mp3");
-//                   file_list.Add("200meters.mp3");
-//                   file_list.Add("800meters.mp3");
-//                   file_list.Add("alert_1.mp3");
-//                   file_list.Add("ApproachSpeedCam.mp3");
-//                   file_list.Add("Arrive.mp3");
-//                   file_list.Add("click.mp3");
-//                   file_list.Add("click_long.mp3");
-//                   file_list.Add("Exit.mp3");
-//                   file_list.Add("Fifth.mp3");
-//                   file_list.Add("First.mp3");
-//                   file_list.Add("Fourth.mp3");
-//                   file_list.Add("KeepLeft.mp3");
-//                   file_list.Add("KeepRight.mp3");
-//                   file_list.Add("m.mp3");
-//                   file_list.Add("Police.mp3");
-//                   file_list.Add("rec_end.mp3");
-//                   file_list.Add("rec_start.mp3");
-//                   file_list.Add("Roundabout.mp3");
-//                   file_list.Add("Second.mp3");
-//                   file_list.Add("Seventh.mp3");
-//                   file_list.Add("Sixth.mp3");
-//                   file_list.Add("Straight.mp3");
-//                   file_list.Add("Third.mp3");
-//                   file_list.Add("TickerPoints.mp3");
-//                   file_list.Add("TurnLeft.mp3");
-//                   file_list.Add("TurnRight.mp3");*/
-//                   file_list.Add("within.mp3");
-                    
-//                   file_list.Add("200.wav");
-//                   file_list.Add("800.wav");
-//                   file_list.Add("200meters.wav");
-//                   file_list.Add("800meters.wav");
-//                   file_list.Add("alert_1.wav");
-//                   file_list.Add("ApproachSpeedCam.wav");
-//                   file_list.Add("Arrive.wav");
-//                   file_list.Add("click.wav");
-//                   file_list.Add("click_long.wav");
-//                   file_list.Add("Exit.wav");
-//                   file_list.Add("Fifth.wav");
-//                   file_list.Add("First.wav");
-//                   file_list.Add("Fourth.wav");
-//                   file_list.Add("KeepLeft.wav");
-//                   file_list.Add("KeepRight.wav");
-//                   file_list.Add("m.wav");
-//                   file_list.Add("Police.wav");
-//                   file_list.Add("rec_end.wav");
-//                   file_list.Add("rec_start.wav");
-//                   file_list.Add("Roundabout.wav");
-//                   file_list.Add("Second.wav");
-//                   file_list.Add("Seventh.wav");
-//                   file_list.Add("Sixth.wav");
-//                   file_list.Add("Straight.wav");
-//                   file_list.Add("Third.wav");
-//                   file_list.Add("TickerPoints.wav");
-//                   file_list.Add("TurnLeft.wav");
-//                   file_list.Add("TurnRight.wav");
-//                   file_list.Add("within.wav");
-                    
-//                    store.CreateDirectory("/sound");
-//                    store.CreateDirectory("/sound/eng");
-//                    store.CreateDirectory("/sound/heb");
+        ///*                   file_list.Add("200.mp3");
+        //                   file_list.Add("800.mp3");
+        //                   file_list.Add("200meters.mp3");
+        //                   file_list.Add("800meters.mp3");
+        //                   file_list.Add("alert_1.mp3");
+        //                   file_list.Add("ApproachSpeedCam.mp3");
+        //                   file_list.Add("Arrive.mp3");
+        //                   file_list.Add("click.mp3");
+        //                   file_list.Add("click_long.mp3");
+        //                   file_list.Add("Exit.mp3");
+        //                   file_list.Add("Fifth.mp3");
+        //                   file_list.Add("First.mp3");
+        //                   file_list.Add("Fourth.mp3");
+        //                   file_list.Add("KeepLeft.mp3");
+        //                   file_list.Add("KeepRight.mp3");
+        //                   file_list.Add("m.mp3");
+        //                   file_list.Add("Police.mp3");
+        //                   file_list.Add("rec_end.mp3");
+        //                   file_list.Add("rec_start.mp3");
+        //                   file_list.Add("Roundabout.mp3");
+        //                   file_list.Add("Second.mp3");
+        //                   file_list.Add("Seventh.mp3");
+        //                   file_list.Add("Sixth.mp3");
+        //                   file_list.Add("Straight.mp3");
+        //                   file_list.Add("Third.mp3");
+        //                   file_list.Add("TickerPoints.mp3");
+        //                   file_list.Add("TurnLeft.mp3");
+        //                   file_list.Add("TurnRight.mp3");*/
+        //                   file_list.Add("within.mp3");
 
-//                    Syscalls.CopyFile("/WazeWP7;component/resources/prompt_list.txt", "prompt_list.txt");
-///*                    return;
-//                    // not sure why waze is unable to d/l the file to userstore by itself so i'm copying the file from resources dir to userstore manually.
-//                    Stream input = Syscalls.GetFileStream("/WazeWP7;component/resources/prompt_list.txt", FileMode.Open);
-//                    Stream output = new IsolatedStorageFileStream("prompt_list.txt", FileMode.CreateNew, FileAccess.Write, store);
-//                    byte[] file_buffer = new byte[input.Length];
-//                    input.Read(file_buffer, 0, file_buffer.Length);
-//                    output.Write(file_buffer, 0, file_buffer.Length);
-//                    input.Close();
-//                    output.Close();*/
+        //                   file_list.Add("200.wav");
+        //                   file_list.Add("800.wav");
+        //                   file_list.Add("200meters.wav");
+        //                   file_list.Add("800meters.wav");
+        //                   file_list.Add("alert_1.wav");
+        //                   file_list.Add("ApproachSpeedCam.wav");
+        //                   file_list.Add("Arrive.wav");
+        //                   file_list.Add("click.wav");
+        //                   file_list.Add("click_long.wav");
+        //                   file_list.Add("Exit.wav");
+        //                   file_list.Add("Fifth.wav");
+        //                   file_list.Add("First.wav");
+        //                   file_list.Add("Fourth.wav");
+        //                   file_list.Add("KeepLeft.wav");
+        //                   file_list.Add("KeepRight.wav");
+        //                   file_list.Add("m.wav");
+        //                   file_list.Add("Police.wav");
+        //                   file_list.Add("rec_end.wav");
+        //                   file_list.Add("rec_start.wav");
+        //                   file_list.Add("Roundabout.wav");
+        //                   file_list.Add("Second.wav");
+        //                   file_list.Add("Seventh.wav");
+        //                   file_list.Add("Sixth.wav");
+        //                   file_list.Add("Straight.wav");
+        //                   file_list.Add("Third.wav");
+        //                   file_list.Add("TickerPoints.wav");
+        //                   file_list.Add("TurnLeft.wav");
+        //                   file_list.Add("TurnRight.wav");
+        //                   file_list.Add("within.wav");
 
-//                    foreach (string file in file_list)
-//                    {
-//                        Syscalls.CopyFile("/WazeWP7;component/resources/sound/eng/" + file, "/sound/eng/" + file);
-//                        Syscalls.CopyFile("/WazeWP7;component/resources/sound/heb/" + file, "/sound/heb/" + file);
-///*                        try
-//                        {
-//                            Stream source = App.GetResourceStream(new Uri("/WazeWP7;component/resources/sound/eng/" + file, UriKind.Relative)).Stream;
-//                            Stream target = new IsolatedStorageFileStream("/sound/eng/" + file, FileMode.CreateNew, FileAccess.Write, store);
-//                            byte[] buffer = new byte[source.Length];
-//                            source.Read(buffer, 0, buffer.Length);
-//                            target.Write(buffer, 0, buffer.Length);
-//                            source.Close();
-//                            target.Close();
+        //                    store.CreateDirectory("/sound");
+        //                    store.CreateDirectory("/sound/eng");
+        //                    store.CreateDirectory("/sound/heb");
 
-//                            source = App.GetResourceStream(new Uri("/WazeWP7;component/resources/sound/heb/" + file, UriKind.Relative)).Stream;
-//                            target = new IsolatedStorageFileStream("/sound/heb/" + file, FileMode.CreateNew, FileAccess.Write, store);
-//                            buffer = new byte[source.Length];
-//                            source.Read(buffer, 0, buffer.Length);
-//                            target.Write(buffer, 0, buffer.Length);
-//                            source.Close();
-//                            target.Close();
-//                        }
-//                        catch (Exception)
-//                        {
-//                            // best effort
-//                        }*/
-//                    }
-//                }
-//            }
-//            catch (Exception)
-//            {
-//                // do nothing
-//            }
-//        }
+        //                    Syscalls.CopyFile("/WazeWP7;component/resources/prompt_list.txt", "prompt_list.txt");
+        ///*                    return;
+        //                    // not sure why waze is unable to d/l the file to userstore by itself so i'm copying the file from resources dir to userstore manually.
+        //                    Stream input = Syscalls.GetFileStream("/WazeWP7;component/resources/prompt_list.txt", FileMode.Open);
+        //                    Stream output = new IsolatedStorageFileStream("prompt_list.txt", FileMode.CreateNew, FileAccess.Write, store);
+        //                    byte[] file_buffer = new byte[input.Length];
+        //                    input.Read(file_buffer, 0, file_buffer.Length);
+        //                    output.Write(file_buffer, 0, file_buffer.Length);
+        //                    input.Close();
+        //                    output.Close();*/
+
+        //                    foreach (string file in file_list)
+        //                    {
+        //                        Syscalls.CopyFile("/WazeWP7;component/resources/sound/eng/" + file, "/sound/eng/" + file);
+        //                        Syscalls.CopyFile("/WazeWP7;component/resources/sound/heb/" + file, "/sound/heb/" + file);
+        ///*                        try
+        //                        {
+        //                            Stream source = App.GetResourceStream(new Uri("/WazeWP7;component/resources/sound/eng/" + file, UriKind.Relative)).Stream;
+        //                            Stream target = new IsolatedStorageFileStream("/sound/eng/" + file, FileMode.CreateNew, FileAccess.Write, store);
+        //                            byte[] buffer = new byte[source.Length];
+        //                            source.Read(buffer, 0, buffer.Length);
+        //                            target.Write(buffer, 0, buffer.Length);
+        //                            source.Close();
+        //                            target.Close();
+
+        //                            source = App.GetResourceStream(new Uri("/WazeWP7;component/resources/sound/heb/" + file, UriKind.Relative)).Stream;
+        //                            target = new IsolatedStorageFileStream("/sound/heb/" + file, FileMode.CreateNew, FileAccess.Write, store);
+        //                            buffer = new byte[source.Length];
+        //                            source.Read(buffer, 0, buffer.Length);
+        //                            target.Write(buffer, 0, buffer.Length);
+        //                            source.Close();
+        //                            target.Close();
+        //                        }
+        //                        catch (Exception)
+        //                        {
+        //                            // best effort
+        //                        }*/
+        //                    }
+        //                }
+        //            }
+        //            catch (Exception)
+        //            {
+        //                // do nothing
+        //            }
+        //        }
 
         void CopySounds()
         {
@@ -268,29 +271,29 @@ namespace WazeWP7
         static FreemapApp app;
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (MainGraphics == null)
+            if (m_mainGraphics == null)
             {
-            MainGraphics = new Canvas();
-            
-            LayoutRoot.Children.Add(MainGraphics);
+                m_mainGraphics = new Canvas();
 
-            BuildApplicationBar();
+                LayoutRoot.Children.Add(m_mainGraphics);
 
-            //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
-            isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
-            this.
+                BuildApplicationBar();
 
-            CopySounds();
+                //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
+                isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
+                this.
 
-            app = new FreemapApp();
-            try
-            {
-                app.Main(null);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error in init " + ex);
-            }
+                CopySounds();
+
+                app = new FreemapApp();
+                try
+                {
+                    app.Main(null);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error in init " + ex);
+                }
             }
         }
 
@@ -314,17 +317,17 @@ namespace WazeWP7
         {
 
             if (IsPhoneLandscape())
-                {
-                    isLandscapeScreen = 1;
+            {
+                isLandscapeScreen = 1;
 
-                    return _deviceHight;
-                }
-                else
-                {
-                    isLandscapeScreen = 0;
-                    return _deviceWidth;
-                }
-           
+                return _deviceHight;
+            }
+            else
+            {
+                isLandscapeScreen = 0;
+                return _deviceWidth;
+            }
+
         }
 
 
@@ -346,19 +349,12 @@ namespace WazeWP7
                 isLandscapeScreen = 0;
                 return _deviceHight;
             }
-           
+
 
         }
 
         public static FreeMapMainScreen get() { return m_this; }
         public static void setKeyDownAddr(int addr) { c_key_down_value_addr = addr; }
-
-        public Canvas getGraphics()
-        {
-            //todomt2 m_bitmap = new BitmapImage();//(getVisibleWidth(), getVisibleHeight());
-            return MainGraphics;
-        }
-
 
         public void revertToInitialLocale()
         {
@@ -393,7 +389,7 @@ namespace WazeWP7
         /// This is heavy as eache change in the MainGraphics children wil trigger dependencies code.
         /// </summary>
         /// <param name="list"></param>
-        public void refresh(List<UIElement> list)
+        public void refresh(Canvas newGraphics)
         {
             if (!m_isPageActive)
             {
@@ -402,33 +398,11 @@ namespace WazeWP7
 
             Dispatcher.BeginInvoke(() =>
             {
-                for (int i = MainGraphics.Children.Count - 1; i >= 0; i--)
-                {
-                    if (!(MainGraphics.Children[i] is MediaElement) &&
-                        !(MainGraphics.Children[i] is ProgressDialog) &&
-                        !(MainGraphics.Children[i] is InputDialog) &&
-                        !(MainGraphics.Children[i] is ListBox ))
-                    {
-                        MainGraphics.Children.RemoveAt(i);
-                    }
-                }
-
-                foreach (UIElement ui in list)
-                {
-                    MainGraphics.Children.Add(ui);
-                    ui.IsHitTestVisible = false;
-                }
+                this.LayoutRoot.Children.Remove(m_mainGraphics);
+                newGraphics.IsHitTestVisible = false;
+                m_mainGraphics = newGraphics;
+                this.LayoutRoot.Children.Add(m_mainGraphics);
             });
-            /* todomt
-         invalidate();
-         UiApplication.getUiApplication().invokeLater(new Runnable()
-          {
-           public void run()
-           {
-            updateDisplay();
-           }
-          });
-             */
         }
 
         public void removeMenuItemByLabel(String text)
@@ -446,6 +420,25 @@ namespace WazeWP7
         //private static bool perf_button_added = false;
         public static WazeMenuItem MeOnMapItem = null;
         private static ManualResetEvent graphic_sync = new ManualResetEvent(false);
+
+        private void addIconMenuItem (string iconResouce, string text, WazeMenuItem wazeMenuItem)
+        {
+            ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri(iconResouce, UriKind.Relative));
+            appBarButton.Text = text;
+            appBarButton.Click += delegate
+            {
+                wazeMenuItem.CallCallback();
+
+                // Hide bar after asking to show me
+                ApplicationBar.IsVisible = false;
+
+            };
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                ApplicationBar.Buttons.Add(appBarButton);
+            });
+        }
+
         public void addMenuItem(String text, int ordinal, int priority, int wrapper_callback, int callback, int push_at_start)
         {
             for (int i = 0; i < m_menuItems.Count; i++)
@@ -457,15 +450,6 @@ namespace WazeWP7
                 }
             }
 
-            /*            if (text.Equals("Accept"))
-                        {
-                            int c_on_menuItem = CibylCallTable.getAddressByName("rim_on_menuItem");
-                            if (c_on_menuItem != 0)
-                            {
-                                UIWorker.addUIEvent(c_on_menuItem, wrapper_callback, callback, 0, 0, true);
-                            }
-                        }*/
-
             WazeMenuItem new_item = new WazeMenuItem(text, ordinal, priority, wrapper_callback, callback);
             if (push_at_start == 1)
             {
@@ -476,215 +460,35 @@ namespace WazeWP7
                 m_menuItems.Add(new_item);
             }
 
-            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-
-                // Create a new menu item with the localized string from AppResources
-                ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(text);
-                if (text.ToLower().Equals("about") || text.Equals("אודות"))
-                {
-                    appBarMenuItem.Click += delegate
-                    {
-                        string name = System.Reflection.Assembly.GetExecutingAssembly().FullName;
-                        System.Reflection.AssemblyName asmName = new System.Reflection.AssemblyName(name);
-
-                        //System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                        Version version = asmName.Version;
-                        String s = String.Format("{0}.{1}.{2}.{3}",
-                                                            version.Major,
-                                                            version.Minor,
-                                                            version.Build,
-                                                            version.Revision);
-                        AboutDialog ad = new AboutDialog();
-                        ad.SetVersion(s);
-
-                        FreeMapMainScreen.get().LayoutRoot.Children.Add(ad);
-
-
-                        // Hide bar after asking to show me
-                        ApplicationBar.IsVisible = false;                    
-
-                    };
-                    ApplicationBar.MenuItems.Add(appBarMenuItem);
-
-
-                    appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
-                    appBarMenuItem.Click += delegate 
-                    {
-/*                        TileStorage ts = (TileStorage)CRunTime.objectRepository[Syscalls.ts_id];
-                        UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles.zip", UriKind.Relative)).Stream);
-                        int index = 0;
-                        foreach (string filename in uz.FileNamesInZip)
-                        {
-                            int tile_index = int.Parse(filename);
-                            Stream st = uz.GetFileStream(filename);
-                            BinaryReader br = new BinaryReader(st);
-                            byte[] tile_bytes = new byte[st.Length];
-                            br.Read(tile_bytes, 0, tile_bytes.Length);
-                            ts.storeTileEx(77001, tile_index, tile_bytes);
-                            index++;
-                        }*/
-
-
-                        UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tel_aviv_till_hod_hasharon.zip", UriKind.Relative)).Stream);
-                        foreach (string filename in uz.FileNamesInZip)
-                        {
-                            Stream st = uz.GetFileStream(filename);
-                            Syscalls.CopyFileFromStream(st, filename);
-                        }
-
-                        Syscalls.NOPH_TileStorage_initialize(Syscalls.ts_id);
-
-                        /*
-                        StreamResourceInfo info = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/file_list.txt", UriKind.Relative));
-                        using (StreamReader reader = new StreamReader(info.Stream))
-                        {
-                            string line = reader.ReadLine();
-                            while (line != null)
-                            {
-                                int tile_index = int.Parse(line);
-                                Stream tile = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/" + line, UriKind.Relative)).Stream;
-                                BinaryReader br = new BinaryReader(tile);
-                                byte[] tile_bytes = new byte[tile.Length];
-                                br.Read(tile_bytes, 0, tile_bytes.Length);
-                                ts.storeTileEx(77001, tile_index, tile_bytes);
-                                line = reader.ReadLine();
-                            }
-                        }*/
-
-
-                        // Hide bar after asking to show me
-                        ApplicationBar.IsVisible = false;                    
-
-                        MessageBox.Show("Finished");
-
-                    };
-                }
-                else
-                {
-                    appBarMenuItem.Click += (delegate
-                    {
-                        new_item.CallCallback();
-
-
-                        // Hide bar after asking to show me
-                        ApplicationBar.IsVisible = false;                    
-
-                    });
-                }
-
-                ApplicationBar.MenuItems.Add(appBarMenuItem);
-            });
+            bool addMenuItem = true;
 
             if (text.ToLower().Equals("me on map") || text.Equals("הצג אותי"))
             {
                 MeOnMapItem = new_item;
 
-                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/compas.png", UriKind.Relative));
-                appBarButton.Text = "Me on map";
-                appBarButton.IconUri = new Uri("Resources/compas.png", UriKind.Relative);
-                appBarButton.Click += delegate
-                {
-                    new_item.CallCallback();
-
-                    // Hide bar after asking to show me
-                    ApplicationBar.IsVisible = false;
-
-                };
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    ApplicationBar.Buttons.Add(appBarButton);
-                });
-
+                addIconMenuItem("Resources/compas.png", text, MeOnMapItem);
+                addMenuItem = false;
             }
-
-            if (text.ToLower().Equals("drive to") || text.Equals("נווט"))
+            else if (text.ToLower().Equals("drive to") || text.Equals("נווט"))
             {
-                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/search.png", UriKind.Relative));
-                appBarButton.Text = "Navigate";
-                appBarButton.IconUri = new Uri("Resources/search.png", UriKind.Relative);
-                appBarButton.Click += delegate
-                {
-                    new_item.CallCallback();
-                    
-                    // Hide bar after asking to show me
-                    ApplicationBar.IsVisible = false;                    
-                };
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    ApplicationBar.Buttons.Add(appBarButton);
-                });
-
+                addIconMenuItem("Resources/search.png", text, new_item);
+                addMenuItem = false;
             }
-
-            //if (text.ToLower().Equals("stop navigation") || text.Equals("הפסק ניווט"))
+            else if (text.ToLower().Equals("report") || text.Equals("דווח"))
+            {
+                addIconMenuItem("Resources/i.png", text, new_item);
+                addMenuItem = false;
+            }
+            else if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי"))
+            {
+                addIconMenuItem("Resources/favorites.png", text, new_item);
+                addMenuItem = false;
+            }
+            //else if (text.ToLower().Equals("settings") || text.Equals("הגדרות"))
             //{
-            //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/cancel.png", UriKind.Relative));
-            //    appBarButton.Text = "Navigate";
-            //    appBarButton.IconUri = new Uri("Resources/cancel.png", UriKind.Relative);
-            //    appBarButton.Click += delegate
-            //    {
-            //        new_item.CallCallback();
-            //    };
-            //    System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-            //    {
-            //        ApplicationBar.Buttons.Add(appBarButton);
-            //    });
-
+            //    addIconMenuItem("Resources/appbar.feature.settings.rest.png", text, new_item);
+            //    addMenuItem = false;
             //}
-
-
-            if (text.ToLower().Equals("report") || text.Equals("דווח"))
-            {
-                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/i.png", UriKind.Relative));
-                appBarButton.Text = "Report";
-                appBarButton.IconUri = new Uri("Resources/i.png", UriKind.Relative);
-                appBarButton.Click += delegate
-                {
-                    new_item.CallCallback();
-
-                    // Hide bar after asking to show me
-                    ApplicationBar.IsVisible = false;                    
-
-                };
-
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    ApplicationBar.Buttons.Add(appBarButton);
-                });
-
-            }
-
-
-            // Use favorites as the app bar icon instead of exit.
-            // We can still exit from the menu or simply use the home button and let Windows decide when it's time to clear the memory.
-            if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי"))
-            //if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
-            {
-                ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("Resources/favorites.png", UriKind.Relative));
-                appBarButton.Text = "Favorites";
-                appBarButton.IconUri = new Uri("Resources/favorites.png", UriKind.Relative);
-                appBarButton.Click += delegate
-                {
-                    new_item.CallCallback();
-
-
-                    // Hide bar after asking to show me
-                    ApplicationBar.IsVisible = false;                    
-
-
-                    //MessageBoxResult res = MessageBox.Show("Are you sure you want to exit", "Exit", MessageBoxButton.OKCancel);
-                    //if (res == MessageBoxResult.OK)
-                    //    new_item.CallCallback();
-                };
-
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    ApplicationBar.Buttons.Add(appBarButton);
-                });
-
-            }
-
             /*
             if (!perf_button_added)
             {
@@ -717,6 +521,105 @@ namespace WazeWP7
                     ApplicationBar.MenuItems.Add(appBarMenuItem);                    
                 });                
             }*/
+
+            if (addMenuItem)
+            {
+                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    // Create a new menu item with the localized string from AppResources
+                    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(text);
+                    if (text.ToLower().Equals("about") || text.Equals("אודות"))
+                    {
+                        appBarMenuItem.Click += delegate
+                        {
+                            string name = System.Reflection.Assembly.GetExecutingAssembly().FullName;
+                            System.Reflection.AssemblyName asmName = new System.Reflection.AssemblyName(name);
+
+                            //System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+                            Version version = asmName.Version;
+                            String s = String.Format("{0}.{1}.{2}.{3}",
+                                                                version.Major,
+                                                                version.Minor,
+                                                                version.Build,
+                                                                version.Revision);
+                            AboutDialog ad = new AboutDialog();
+                            ad.SetVersion(s);
+
+                            FreeMapMainScreen.get().GetPopupPanel().Children.Add(ad);
+
+
+                            // Hide bar after asking to show me
+                            ApplicationBar.IsVisible = false;
+
+                        };
+                        ApplicationBar.MenuItems.Add(appBarMenuItem);
+
+                        appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
+                        appBarMenuItem.Click += delegate
+                        {
+                            /*                        TileStorage ts = (TileStorage)CRunTime.objectRepository[Syscalls.ts_id];
+                                                    UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles.zip", UriKind.Relative)).Stream);
+                                                    int index = 0;
+                                                    foreach (string filename in uz.FileNamesInZip)
+                                                    {
+                                                        int tile_index = int.Parse(filename);
+                                                        Stream st = uz.GetFileStream(filename);
+                                                        BinaryReader br = new BinaryReader(st);
+                                                        byte[] tile_bytes = new byte[st.Length];
+                                                        br.Read(tile_bytes, 0, tile_bytes.Length);
+                                                        ts.storeTileEx(77001, tile_index, tile_bytes);
+                                                        index++;
+                                                    }*/
+
+
+                            UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tel_aviv_till_hod_hasharon.zip", UriKind.Relative)).Stream);
+                            foreach (string filename in uz.FileNamesInZip)
+                            {
+                                Stream st = uz.GetFileStream(filename);
+                                Syscalls.CopyFileFromStream(st, filename);
+                            }
+
+                            Syscalls.NOPH_TileStorage_initialize(Syscalls.ts_id);
+
+                            /*
+                            StreamResourceInfo info = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/file_list.txt", UriKind.Relative));
+                            using (StreamReader reader = new StreamReader(info.Stream))
+                            {
+                                string line = reader.ReadLine();
+                                while (line != null)
+                                {
+                                    int tile_index = int.Parse(line);
+                                    Stream tile = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/" + line, UriKind.Relative)).Stream;
+                                    BinaryReader br = new BinaryReader(tile);
+                                    byte[] tile_bytes = new byte[tile.Length];
+                                    br.Read(tile_bytes, 0, tile_bytes.Length);
+                                    ts.storeTileEx(77001, tile_index, tile_bytes);
+                                    line = reader.ReadLine();
+                                }
+                            }*/
+
+
+                            // Hide bar after asking to show me
+                            ApplicationBar.IsVisible = false;
+
+                            MessageBox.Show("Finished");
+                        };
+                    }
+                    else
+                    {
+                        appBarMenuItem.Click += (delegate
+                        {
+                            new_item.CallCallback();
+
+                            // Hide bar after asking to show me
+                            ApplicationBar.IsVisible = false;
+
+                        });
+                    }
+
+                    ApplicationBar.MenuItems.Add(appBarMenuItem);
+                });
+            }
         }
         /*
         private static bool isSendMailAdded = false;
@@ -910,91 +813,91 @@ namespace WazeWP7
     }
        */
 
-        
-    protected bool keyDown(Key keycode, int time)
-    {
-        Console.WriteLine("***** keyDown *****");
-        Console.WriteLine("keycode=" + keycode);
 
-        if (keyDownStackAddress == 0)
+        protected bool keyDown(Key keycode, int time)
         {
-            Logger.log("keyDownStackAddress = 0, before stack init ");
-            return true;
-        }
+            Console.WriteLine("***** keyDown *****");
+            Console.WriteLine("keycode=" + keycode);
 
-        if (keycode == Key.Escape)
-        {
-            Console.WriteLine("***** MENU BUTTON PRESSED *****");
-            menu_open = true;
-            try
+            if (keyDownStackAddress == 0)
             {
-                if (c_on_menu_key_down == 0)
-                {
-                    c_on_menu_key_down = CibylCallTable.getAddressByName("rim_on_menu_button");
-                }
-                if (c_on_menu_key_down != 0)
-                {
-                    CibylCallTable.fcall(c_on_menu_key_down, keyDownStackAddress, (int)keycode, 0, time, 0);
-                    //CibylCallTable.fcall(c_on_menu_key_down, keyDownStackAddress, (int)keycode, 0, time, 0);
-                }
+                Logger.log("keyDownStackAddress = 0, before stack init ");
+                return true;
             }
-            catch (Exception t)
+
+            if (keycode == Key.Escape)
             {
-                Logger.log("Exception in UI action: " + t);
+                Console.WriteLine("***** MENU BUTTON PRESSED *****");
+                menu_open = true;
+                try
+                {
+                    if (c_on_menu_key_down == 0)
+                    {
+                        c_on_menu_key_down = CibylCallTable.getAddressByName("rim_on_menu_button");
+                    }
+                    if (c_on_menu_key_down != 0)
+                    {
+                        CibylCallTable.fcall(c_on_menu_key_down, keyDownStackAddress, (int)keycode, 0, time, 0);
+                        //CibylCallTable.fcall(c_on_menu_key_down, keyDownStackAddress, (int)keycode, 0, time, 0);
+                    }
+                }
+                catch (Exception t)
+                {
+                    Logger.log("Exception in UI action: " + t);
+
+                }
+                return false; // return false so RIM will open the menu as necessary.
 
             }
-            return false; // return false so RIM will open the menu as necessary.
-
-        }
-        else if (keycode == Key.Subtract)
-        {
-            SoundMgr.updateSoundLevel(-10);
-        }
-        else if (keycode == Key.Add)
-        {
-            SoundMgr.updateSoundLevel(10);
-        }
-        else if (keycode == Key.Enter)
-        {
-            if (c_on_key_down == 0)
-                c_on_key_down = CibylCallTable.getAddressByName("rim_on_key_down");
-            UIWorker.addUIEvent(c_on_key_down, 0x0000000a, 0, time, 0, true);
-            //UIWorker.addUIEvent(c_on_key_down, 0x0000000a, status, time, 0, true);
-
-
-        }
-        else if (keycode == Key.Left)
-        {
-            if (c_on_key_down == 0)
-                c_on_key_down = CibylCallTable.getAddressByName("rim_on_key_down");
-            UIWorker.addUIEvent(c_on_key_down, 27, 0, time, 0, true);
-        }
-        else
-        {
-            try
+            else if (keycode == Key.Subtract)
+            {
+                SoundMgr.updateSoundLevel(-10);
+            }
+            else if (keycode == Key.Add)
+            {
+                SoundMgr.updateSoundLevel(10);
+            }
+            else if (keycode == Key.Enter)
             {
                 if (c_on_key_down == 0)
                     c_on_key_down = CibylCallTable.getAddressByName("rim_on_key_down");
+                UIWorker.addUIEvent(c_on_key_down, 0x0000000a, 0, time, 0, true);
+                //UIWorker.addUIEvent(c_on_key_down, 0x0000000a, status, time, 0, true);
+
+
             }
-            catch (Exception t)
+            else if (keycode == Key.Left)
             {
-                Logger.log("Exception in keyDown: " + t);
-
-
-                throw; //todomt
-                //Environment.Exit(0);
-
+                if (c_on_key_down == 0)
+                    c_on_key_down = CibylCallTable.getAddressByName("rim_on_key_down");
+                UIWorker.addUIEvent(c_on_key_down, 27, 0, time, 0, true);
             }
-
-            if (c_on_key_down != 0)
+            else
             {
+                try
+                {
+                    if (c_on_key_down == 0)
+                        c_on_key_down = CibylCallTable.getAddressByName("rim_on_key_down");
+                }
+                catch (Exception t)
+                {
+                    Logger.log("Exception in keyDown: " + t);
 
-                UIWorker.addUIEvent(c_on_key_down, (int)keycode, 0, time, 0, true);
-                //UIWorker.addUIEvent(c_on_key_down, (int)keycode, todomt status, time, 0, true);
+
+                    throw; //todomt
+                    //Environment.Exit(0);
+
+                }
+
+                if (c_on_key_down != 0)
+                {
+
+                    UIWorker.addUIEvent(c_on_key_down, (int)keycode, 0, time, 0, true);
+                    //UIWorker.addUIEvent(c_on_key_down, (int)keycode, todomt status, time, 0, true);
+                }
             }
+            return true;
         }
-        return true;
-    }
         /*
 
      protected bool keyControl(char c, int status, int time){
@@ -1048,7 +951,6 @@ namespace WazeWP7
             //		Console.WriteLine("***** navigationMovement *****");
             //		Console.WriteLine("dx=" + dx + " dy=" + dy + " status=" + Integer.toHexString(status));
 
-            bool used = false;
             //m_graphics.copyArea(0, 0, getVisibleWidth(), getVisibleHeight(), dx * 30, dy * 30);
             //refresh();
 
@@ -1256,7 +1158,7 @@ namespace WazeWP7
 
                 threadDispatchMessage.Start();
 
-                
+
             }
 
 
@@ -1267,7 +1169,7 @@ namespace WazeWP7
             //}
             //else
             //{
-                appBarArea = getVisibleHeight() - y;
+            appBarArea = getVisibleHeight() - y;
 
             //}
 
@@ -1275,8 +1177,8 @@ namespace WazeWP7
             // Handle appbar visibility
             if (appBarArea < 60)
             {
-                    PopApplicationBar();
-                }
+                PopApplicationBar();
+            }
 
 
             try
@@ -1296,7 +1198,10 @@ namespace WazeWP7
 
             if (c_on_canvas_button_pressed != 0)
             {
-                UIWorker.addUIEvent(c_on_canvas_button_pressed, x, y, 0, 0, true);
+                if (appBarArea >= 60)
+                {
+                    UIWorker.addUIEvent(c_on_canvas_button_pressed, x, y, 0, 0, true);
+                }
             }
 
 
@@ -1442,7 +1347,7 @@ namespace WazeWP7
         {
             ContentPanel_MouseMove(sender, e);
             UIElement el = (UIElement)sender;
-            
+
         }
 
         /// <summary>
@@ -1456,13 +1361,13 @@ namespace WazeWP7
             m_CurrentOrientation = e.Orientation;
 
             // Update the layout size accordiing to orientaiton.
-              LayoutRoot.Height = getVisibleHeight();
-              LayoutRoot.Width = getVisibleWidth();
+            LayoutRoot.Height = getVisibleHeight();
+            LayoutRoot.Width = getVisibleWidth();
 
 
             // Call the changed event for more internal updates.
-             checkOrientationChanged(getVisibleWidth(), getVisibleHeight());
-          
+            checkOrientationChanged(getVisibleWidth(), getVisibleHeight());
+
         }
 
 
@@ -1471,6 +1376,12 @@ namespace WazeWP7
             m_isMenuVisible = e.IsMenuVisible;
         }
 
-    }
 
+        public override Panel GetPopupPanel()
+        {
+            return this.PopupsGrid;
+        }
+
+        public override bool IsHomePage { get { return true; } }
+    }
 }

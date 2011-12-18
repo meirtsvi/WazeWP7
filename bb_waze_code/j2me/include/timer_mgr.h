@@ -26,13 +26,13 @@
 /* TimerMgr class (this is not in J2ME) */
 typedef int NOPH_TimerMgr_t;
 
-#define __NR_NOPH_TimerMgr_getInstance 249 /* timer_mgr */
+#define __NR_NOPH_TimerMgr_getInstance 270 /* timer_mgr */
 static inline _syscall0(NOPH_TimerMgr_t,NOPH_TimerMgr_getInstance) 
-#define __NR_NOPH_TimerMgr_set 250 /* timer_mgr */
+#define __NR_NOPH_TimerMgr_set 271 /* timer_mgr */
 static inline _syscall2(int,NOPH_TimerMgr_set, NOPH_TimerMgr_t, tm, int, interval) 
-#define __NR_NOPH_TimerMgr_remove 251 /* timer_mgr */
+#define __NR_NOPH_TimerMgr_remove 272 /* timer_mgr */
 static inline _syscall2(void,NOPH_TimerMgr_remove, NOPH_TimerMgr_t, tm, int, index) 
-#define __NR_NOPH_TimerMgr_getExpired 252 /* timer_mgr */
+#define __NR_NOPH_TimerMgr_getExpired 273 /* timer_mgr */
 static inline _syscall1(int,NOPH_TimerMgr_getExpired, NOPH_TimerMgr_t, tm) 
 
 #endif /* !__TIMER_MGR_H__ */

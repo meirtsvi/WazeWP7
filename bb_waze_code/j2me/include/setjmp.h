@@ -20,11 +20,11 @@ extern "C" {
 
 typedef int NOPH_SetjmpException_t;
 
-#define __NR_NOPH_SetjmpException_new 161 /* ansi */
+#define __NR_NOPH_SetjmpException_new 182 /* ansi */
 static inline _syscall2(NOPH_SetjmpException_t,NOPH_SetjmpException_new, int, cookie, int, val) 
-#define __NR_NOPH_SetjmpException_getCookie 162 /* ansi */
+#define __NR_NOPH_SetjmpException_getCookie 183 /* ansi */
 static inline _syscall1(int,NOPH_SetjmpException_getCookie, NOPH_SetjmpException_t, e) 
-#define __NR_NOPH_SetjmpException_getValue 163 /* ansi */
+#define __NR_NOPH_SetjmpException_getValue 184 /* ansi */
 static inline _syscall1(int,NOPH_SetjmpException_getValue, NOPH_SetjmpException_t, e) 
 
 typedef int jmp_buf[1];

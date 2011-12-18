@@ -21,22 +21,11 @@ namespace WazeWP7
         private Panel rootPanel;
         public ManualResetEvent dialogShowing = new ManualResetEvent(false);
 
-        public InputDialog()
+        public InputDialog(string label, string text)
         {
             InitializeComponent();
-            dialogShowing.Reset();
-        }
-
-        public InputDialog(Panel rootPanel)
-        {
-            InitializeComponent();
-            this.rootPanel = rootPanel;
-            dialogShowing.Reset();
-        }
-
-        public void SetLabelAndText(string label, string text)
-        {
             inputLabel.Text = label;
+            dialogShowing.Reset();
         }
 
         public string GetInput()
@@ -48,7 +37,6 @@ namespace WazeWP7
         {
             confirm = true;
             dialogShowing.Set();
-
         }
 
         private void CancelClick(object sender, RoutedEventArgs e)
@@ -59,11 +47,27 @@ namespace WazeWP7
 
         public void Show()
         {
+            LanguageResources.Instance.UpdateControl(this);
+
+            // Hide before you show
             dialogShowing.Reset();
-            rootPanel.Children.Add(this);
+            Hide();
+
+            // And now add to the current page
+            var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
+            currentPage.GetPopupPanel().Children.Add(this);
             inputText.Focus();
             inputText.SelectAll();
+        }
 
+        public void Hide ()
+        {
+            var parentPanel = this.Parent as Panel;
+            if (parentPanel != null)
+            {
+                parentPanel.Children.Remove(this);
+                parentPanel = null;
+            }
         }
 
         private void inputText_KeyUp(object sender, KeyEventArgs e)

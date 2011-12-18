@@ -44,11 +44,11 @@
 #include "rimapi.h"
 static int stop_writing_to_log_file = 0;
 static void roadmap_log_exception_handler(NOPH_Exception_t exception, void *arg){
-	char msg[512];
-	NOPH_String_toCharPtr(NOPH_Throwable_toString(exception), msg, sizeof(msg));
-	printf("Waze Error : in roadmap_log_exception_handler, exception = : %s", msg);
-	int * error = (int *)arg;
-	error = -1;
+    char msg[512];
+    NOPH_String_toCharPtr(NOPH_Throwable_toString(exception), msg, sizeof(msg));
+    printf("Waze Error : in roadmap_log_exception_handler, exception = : %s", msg);
+    int * error = (int *)arg;
+    error = -1;
 
 }
 #endif
@@ -251,7 +251,7 @@ GET_2_DIGIT_STRING( tms->tm_year-100, year ); // Year from 1900
    strftime( date_buf, sizeof( date_buf ), "%d/%m/%y", tms );
 
    fprintf (file, "%s %02d:%02d:%02d %c%s %s, line %d ",
-		   date_buf, tms->tm_hour, tms->tm_min, tms->tm_sec,
+           date_buf, tms->tm_hour, tms->tm_min, tms->tm_sec,
          saved, category->prefix, source, line);
 
 #elif defined (_WIN32)
@@ -288,13 +288,13 @@ GET_2_DIGIT_STRING( tms->tm_year-100, year ); // Year from 1900
       char msg[500];
       time_t time = NOPH_System_currentTimeMillis();
       int len = snprintf (msg, sizeof(msg), "%s %u %c%s %s, line %d ",
-      		roadmap_time_get_time_wseconds(),time,
-      		saved, category->prefix, source, line);
+            roadmap_time_get_time_wseconds(),time,
+            saved, category->prefix, source, line);
       int len2 = vsnprintf(msg + len, sizeof(msg) - len -1, format, ap);
       strcat(msg,"\n");
-	  int total = (len2> sizeof(msg)-len-1)?sizeof(msg):(len+len2+1);
-	  int num_wrote  = fwrite(msg,1,total,file);
-	  NOPH_Logger_log(msg);
+      int total = (len2> sizeof(msg)-len-1)?sizeof(msg):(len+len2+1);
+      int num_wrote  = fwrite(msg,1,total,file);
+      NOPH_Logger_log(msg);
    }
    vprintf(format, ap);
 #else
@@ -348,9 +348,10 @@ void roadmap_log (int level, const char *source, int line, const char *format, .
    
 #ifdef J2ME
    if(level < ROADMAP_MESSAGE_FATAL)  {
-	   return; // don't show WARNING, INFO, and DEBUG prints in J2ME, too slow.
+       return; // don't show WARNING, INFO, and DEBUG prints in J2ME, too slow.
    }
    if (level < ROADMAP_MESSAGE_INFO) return;
+   if (level < ROADMAP_MESSAGE_DEBUG) return;
 #else
    if (level < roadmap_verbosity()) return;
 #endif
@@ -371,13 +372,13 @@ void roadmap_log (int level, const char *source, int line, const char *format, .
    va_end(ap_error);
 
    if (stop_writing_to_log_file == 1){
-	   printf("WAZE ERROR, message : %s",error_msg);
-	   return;
+       printf("WAZE ERROR, message : %s",error_msg);
+       return;
    }
 
    if(roadmap_log_in_stack){
-	   printf("WAZE ERROR : recursion in roadmap_log, message : %s", error_msg);
-	   return;
+       printf("WAZE ERROR : recursion in roadmap_log, message : %s", error_msg);
+       return;
    }
 
    roadmap_log_in_stack = TRUE;
@@ -400,48 +401,48 @@ void roadmap_log (int level, const char *source, int line, const char *format, .
    va_start(ap, format);
 
    if (category->save_to_file) {
-	  static int open_file_attemped = 0;
-	  if ((sgLogFile == NULL) && ( (!open_file_attemped) || need_to_reopen_file)) {
-		 open_file_attemped = 1;
-		 need_to_reopen_file = 0;
-		 sgLogFile = roadmap_file_fopen (roadmap_log_path(),
-										 roadmap_log_filename(),
-										 roadmap_log_access_mode());
-		 if (sgLogFile){
-			 fprintf (sgLogFile, "*** Starting log file %d ---- ver=%s ***\n",
-				 (int)time(NULL), roadmap_start_version());
-			 if(roadmap_config_is_loaded())
-			   fprintf(sgLogFile, "lang=%s ---- server=%s \n", roadmap_lang_get_system_lang()
-					   ,roadmap_geo_config_get_server_id());
+      static int open_file_attemped = 0;
+      if ((sgLogFile == NULL) && ( (!open_file_attemped) || need_to_reopen_file)) {
+         open_file_attemped = 1;
+         need_to_reopen_file = 0;
+         sgLogFile = roadmap_file_fopen (roadmap_log_path(),
+                                         roadmap_log_filename(),
+                                         roadmap_log_access_mode());
+         if (sgLogFile){
+             fprintf (sgLogFile, "*** Starting log file %d ---- ver=%s ***\n",
+                 (int)time(NULL), roadmap_start_version());
+             if(roadmap_config_is_loaded())
+               fprintf(sgLogFile, "lang=%s ---- server=%s \n", roadmap_lang_get_system_lang()
+                       ,roadmap_geo_config_get_server_id());
 #ifdef RIMAPI
-			 fprintf(sgLogFile, "Device version is %d internal memory : %d kb fileConnectionPath : %s\n",  NOPH_FreemapApp_getDeviceVersion()
-					, NOPH_FreemapApp_getInternalMemoryLeft()/1000, roadmap_log_path() );
+             fprintf(sgLogFile, "Device version is %d internal memory : %d kb fileConnectionPath : %s\n",  NOPH_FreemapApp_getDeviceVersion()
+                    , NOPH_FreemapApp_getInternalMemoryLeft()/1000, roadmap_log_path() );
 #endif
 
-		 }
-	  }
+         }
+      }
 
-	  if (sgLogFile != NULL) {
-		 roadmap_log_one (category, sgLogFile, ' ', source, line, format, ap);
-		 fflush (sgLogFile);
-		 va_end(ap);
-		 va_start(ap, format);
+      if (sgLogFile != NULL) {
+         roadmap_log_one (category, sgLogFile, ' ', source, line, format, ap);
+         fflush (sgLogFile);
+         va_end(ap);
+         va_start(ap, format);
 
-		 saved = 's';
+         saved = 's';
 
-	  }
+      }
    }
 #ifdef RIMAPI
    }NOPH_catch();
 
    if(error == -1 || sgLogFile == NULL){
-	   printf("WAZE_ERROR : roadmap_log : error == %d, sgLogFile == %d, error : %s", error, sgLogFile, error_msg);
-		roadmap_messagebox_custom(
-									"OOPS", "Seems we're unable to display dynamic graphic elements on the map due to low storage memory on this phone."
-										, 12, "#f6a201", 12, "#ffffff" );
-		stop_writing_to_log_file = 1;
-		roadmap_log_in_stack = FALSE;
-		return;
+       printf("WAZE_ERROR : roadmap_log : error == %d, sgLogFile == %d, error : %s", error, sgLogFile, error_msg);
+        roadmap_messagebox_custom(
+                                    "OOPS", "Seems we're unable to display dynamic graphic elements on the map due to low storage memory on this phone."
+                                        , 12, "#f6a201", 12, "#ffffff" );
+        stop_writing_to_log_file = 1;
+        roadmap_log_in_stack = FALSE;
+        return;
    }
    roadmap_log_in_stack = FALSE;
 #endif
@@ -510,12 +511,12 @@ void roadmap_check_allocated_with_source_line
  */
 BOOL roadmap_log_raw_data ( const char* data )
 {
-	BOOL ret_val = FALSE;
-	if ( sgLogFile && data )
-	{
-		ret_val = roadmap_log_raw_data_fmt( "%s", data );
-	}
-	return FALSE;
+    BOOL ret_val = FALSE;
+    if ( sgLogFile && data )
+    {
+        ret_val = roadmap_log_raw_data_fmt( "%s", data );
+    }
+    return FALSE;
 }
 
 
@@ -527,35 +528,35 @@ BOOL roadmap_log_raw_data ( const char* data )
  */
 BOOL roadmap_log_raw_data_fmt( const char *format, ... )
 {
-	va_list ap;
-	BOOL ret_val = FALSE;
+    va_list ap;
+    BOOL ret_val = FALSE;
 
-	if ( sgLogFile && format )
-	{
-		va_start( ap, format );
-		vfprintf( sgLogFile, format, ap );
-		ret_val = TRUE;
-		va_end( ap );
-	}
-	return FALSE;
+    if ( sgLogFile && format )
+    {
+        va_start( ap, format );
+        vfprintf( sgLogFile, format, ap );
+        ret_val = TRUE;
+        va_end( ap );
+    }
+    return FALSE;
 }
 
 #if 0
 void roadmap_log_init(){
-	long fileSize;
-	const char *log_path;
-	const char *log_path_temp;
-	const char * path;
-	const char * name;
-	char lineFromLog[300];
+    long fileSize;
+    const char *log_path;
+    const char *log_path_temp;
+    const char * path;
+    const char * name;
+    char lineFromLog[300];
 #if defined (__SYMBIAN32__)
-	#if defined (WINSCW)
+    #if defined (WINSCW)
       path = "C:\\";
       name = "waze_log.txt";
-	#else
-	  path = roadmap_db_map_path();
+    #else
+      path = roadmap_db_map_path();
       name = "waze_log.txt";
-	#endif
+    #endif
 #elif defined(ANDROID)
       roadmap_path_sdcard();
       name = "waze_log.txt";
@@ -564,38 +565,38 @@ void roadmap_log_init(){
       name = "postmortem";
 #endif
 
-	fileSize = roadmap_file_length(path,name);
-	if (fileSize > 0 ){ // file exists
-		if(fileSize>MAX_SIZE_LOG_FILE){
-		   FILE * LogFile = roadmap_file_fopen(path,name,"sa+");
-		   FILE * tempLogFile = roadmap_file_fopen(path,"temp_log_file.txt","sa+");
-		   fseek(LogFile, 0, SEEK_END-TO_KEEP_LOG_SIZE);
-		   fgets (lineFromLog,300, LogFile );
-		   while (1){
-		   	    fgets (lineFromLog,300, LogFile );
-		   	    if(feof(LogFile))
-		   	    	break;
-		   		fputs (lineFromLog,tempLogFile );
-		   }
-		   fclose(LogFile);
-		   fclose(tempLogFile);
-		   log_path = roadmap_path_join (path, name);
-		   log_path_temp = roadmap_path_join (path, "temp_log_file.txt");
-	  	   roadmap_file_remove (path, name);
-	  	   rename(log_path_temp,log_path);
-	  	   roadmap_path_free (log_path);
-	  	   roadmap_path_free (log_path_temp);
-	    }
-	}
+    fileSize = roadmap_file_length(path,name);
+    if (fileSize > 0 ){ // file exists
+        if(fileSize>MAX_SIZE_LOG_FILE){
+           FILE * LogFile = roadmap_file_fopen(path,name,"sa+");
+           FILE * tempLogFile = roadmap_file_fopen(path,"temp_log_file.txt","sa+");
+           fseek(LogFile, 0, SEEK_END-TO_KEEP_LOG_SIZE);
+           fgets (lineFromLog,300, LogFile );
+           while (1){
+                fgets (lineFromLog,300, LogFile );
+                if(feof(LogFile))
+                    break;
+                fputs (lineFromLog,tempLogFile );
+           }
+           fclose(LogFile);
+           fclose(tempLogFile);
+           log_path = roadmap_path_join (path, name);
+           log_path_temp = roadmap_path_join (path, "temp_log_file.txt");
+           roadmap_file_remove (path, name);
+           rename(log_path_temp,log_path);
+           roadmap_path_free (log_path);
+           roadmap_path_free (log_path_temp);
+        }
+    }
 }
 #endif
 
 FILE * roadmap_log_get_log_file(){
-	if (sgLogFile){
-		fseek(sgLogFile,0,SEEK_SET);
-		return sgLogFile;
-	}
-	return NULL;
+    if (sgLogFile){
+        fseek(sgLogFile,0,SEEK_SET);
+        return sgLogFile;
+    }
+    return NULL;
 }
 
 /*
@@ -603,17 +604,17 @@ FILE * roadmap_log_get_log_file(){
  * the relevant parameters, so the next log call will reopen it. D.F.
  */
 void roadmap_log_close_log_file(){
-	roadmap_log(ROADMAP_DEBUG,"closing log file");
-	if (sgLogFile){
-		fclose(sgLogFile);
-		need_to_reopen_file = 1;
-		sgLogFile = NULL;
-	}
+    roadmap_log(ROADMAP_DEBUG,"closing log file");
+    if (sgLogFile){
+        fclose(sgLogFile);
+        need_to_reopen_file = 1;
+        sgLogFile = NULL;
+    }
 }
 
 void roadmap_log_shutdown(){
-	if (sgLogFile){
-			fclose(sgLogFile);
-	}
+    if (sgLogFile){
+            fclose(sgLogFile);
+    }
 }
 

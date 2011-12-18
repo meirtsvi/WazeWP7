@@ -27,6 +27,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <rimapi.h>
 #include "roadmap.h"
 #include "roadmap_main.h"
 #include "roadmap_prompts.h"
@@ -347,6 +348,7 @@ static int roadmap_prompts_conf_load (const char *path) {
    }
 
    fclose (file);
+   NOPH_PromptsLoaded( (int)prompts_labels, (int)prompts_values, prompt_set_count);
 
    return 1;
 }

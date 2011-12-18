@@ -3,26 +3,26 @@
 namespace WazeWP7
 {
     #region Context classes
-    public enum SearchOption
-    {
-        Navigate = 0,
-        Show = 1,
-        AddToFavorites = 2,
-        Cancel = 3,
-        AddGeoReminder = 4
-    };
-
-    public delegate void SearchOptionSelectedDelegate(int selectedItemIndex, SearchOption selectionOption, string data);
-
-    public class SearchResult
-    {
-        public string Address { get; set; }
-        public string IconResource { get; set; }
-        public int ReferenceIndex { get; set; }
-    }
-
     public class SingleSearchResultsPivotPageContext : ApplicationPageContext
     {
+        public enum SearchOption
+        {
+            Navigate = 0,
+            Show = 1,
+            AddToFavorites = 2,
+            Cancel = 3,
+            AddGeoReminder = 4
+        };
+
+        public class SearchResult
+        {
+            public string Address { get; set; }
+            public string IconResource { get; set; }
+            public int ReferenceIndex { get; set; }
+        }
+
+
+        public delegate void SearchOptionSelectedDelegate(int selectedItemIndex, SearchOption selectionOption, string data);
         public SearchOptionSelectedDelegate OnSearchOptionSelected { get; set; }
 
         private string localSearchProviderLabel = "";

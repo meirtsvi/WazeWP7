@@ -32,32 +32,32 @@ typedef int NOPH_Font_t;
 
 /* Font class */
 //NOPH_Font_t NOPH_Font_getFont(int fontSpecifier);
-#define __NR_NOPH_Font_getDefaultFont 359 /* javax.microedition */
+#define __NR_NOPH_Font_getDefaultFont 380 /* javax.microedition */
 static inline _syscall0(NOPH_Font_t,NOPH_Font_getDefaultFont) 
-#define __NR_NOPH_Font_getFont 360 /* javax.microedition */
+#define __NR_NOPH_Font_getFont 381 /* javax.microedition */
 static inline _syscall3(NOPH_Font_t,NOPH_Font_getFont, int, face, int, style, int, size) 
-#define __NR_NOPH_Font_getStyle 361 /* javax.microedition */
+#define __NR_NOPH_Font_getStyle 382 /* javax.microedition */
 static inline _syscall1(int,NOPH_Font_getStyle, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_getSize 362 /* javax.microedition */
+#define __NR_NOPH_Font_getSize 383 /* javax.microedition */
 static inline _syscall1(int,NOPH_Font_getSize, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_getFace 363 /* javax.microedition */
+#define __NR_NOPH_Font_getFace 384 /* javax.microedition */
 static inline _syscall1(int,NOPH_Font_getFace, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_isPlain 364 /* javax.microedition */
+#define __NR_NOPH_Font_isPlain 385 /* javax.microedition */
 static inline _syscall1(bool_t,NOPH_Font_isPlain, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_isBold 365 /* javax.microedition */
+#define __NR_NOPH_Font_isBold 386 /* javax.microedition */
 static inline _syscall1(bool_t,NOPH_Font_isBold, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_isItalic 366 /* javax.microedition */
+#define __NR_NOPH_Font_isItalic 387 /* javax.microedition */
 static inline _syscall1(bool_t,NOPH_Font_isItalic, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_isUnderlined 367 /* javax.microedition */
+#define __NR_NOPH_Font_isUnderlined 388 /* javax.microedition */
 static inline _syscall1(bool_t,NOPH_Font_isUnderlined, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_getHeight 368 /* javax.microedition */
+#define __NR_NOPH_Font_getHeight 389 /* javax.microedition */
 static inline _syscall1(int,NOPH_Font_getHeight, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_getBaselinePosition 369 /* javax.microedition */
+#define __NR_NOPH_Font_getBaselinePosition 390 /* javax.microedition */
 static inline _syscall1(int,NOPH_Font_getBaselinePosition, NOPH_Font_t, font) 
-#define __NR_NOPH_Font_charWidth 370 /* javax.microedition */
+#define __NR_NOPH_Font_charWidth 391 /* javax.microedition */
 static inline _syscall2(int,NOPH_Font_charWidth, NOPH_Font_t, font, char, ch) /* Not generated */
 //int NOPH_Font_charsWidth(NOPH_Font_t font, char[] ch, int offset, int length);
-#define __NR_NOPH_Font_stringWidth 371 /* javax.microedition */
+#define __NR_NOPH_Font_stringWidth 392 /* javax.microedition */
 static inline _syscall2(int,NOPH_Font_stringWidth, NOPH_Font_t, font, const char*, str) 
 //int NOPH_Font_substringWidth(NOPH_Font_t font, String str, int offset, int len);
 

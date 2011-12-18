@@ -71,7 +71,7 @@ namespace WazeWP7
                 if (current_list.streams[i] != null)
                 {
                     try { current_list.streams[i].Close(); }
-                    catch (Exception e) { }
+                    catch (Exception) { }
                     current_list.streams[i] = null;
                 }
             }

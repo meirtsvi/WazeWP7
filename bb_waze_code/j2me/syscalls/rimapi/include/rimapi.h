@@ -202,7 +202,7 @@ void NOPH_ProgressMessageDialog_hideDialog(void);
 
 void NOPH_SearchDialog_showDialog(int in_callback);
 void NOPH_SearchDialog_showError(const char* title, const char* message);
-void NOPH_SearchDialog_addressResolved(int in_callback, int local_search_provider_label, int address_count, int address_results, int address_indexes, int address_icons, int local_sreach_count, int local_sreach_results, int local_sreach_indexes, int local_sreach_icons);
+void NOPH_SearchDialog_addressResolved(int in_callback, const char* local_search_provider_label, int address_count, int address_results, int address_indexes, int address_icons, int local_sreach_count, int local_sreach_results, int local_sreach_indexes, int local_sreach_icons);
 
 //
 // Language options
@@ -218,6 +218,26 @@ void NOPH_SignInUpDialogs_showSignInDialog(int in_signin_callback, const char* u
 void NOPH_SignInUpDialogs_showSignUpDialog(int in_signup_callback, int in_signup_skip_callback);
 void NOPH_SignInUpDialogs_signInSuccessful(void);
 int NOPH_SignInUpDialogs_isLoginActive(void);
+
+//
+// Generic list dialogs
+//
+void NOPH_GenericListDialogs_showDialog(const char* title, int in_action_callback, int count, int labels_addr, int values_addr, int icons_addr, int menu_count, int menu_labels_addr, int menu_values_addr, int context_addr);
+void NOPH_GenericListDialogs_showDialogNoItems(const char* title, const char* empty_list_message);
+void NOPH_GenericListDialogs_closeDialog(int return_to_main_menu);
+
+//
+// Navigate result dialog
+//
+void NOPH_NavigateResultDialog_showDialog(int navigate_flags, const char* title_text, const char* route_distance, const char* route_distance_units, int route_length, const char* via, int timeout, int show_diclaimer, int drive_callback, int alternative_routes_callback);
+void NOPH_AlternativeResultsDialog_showDialog(int number_of_routes, int routes, int dialog_closed_callback, int route_option_selected_callback);
+
+//
+// Settings dialog
+//
+void NOPH_LanguagesLoaded(int labels, int values, int count);
+void NOPH_PromptsLoaded(int labels, int values, int count);
+void NOPH_SettingsDialog_showDialog(int all_settings, int is_metric_system, int on_save_callback);
 
 #endif// __RIMAPI_H__
 

@@ -22,28 +22,32 @@ namespace WazeWP7
         public ActionSelectedDelegate OnActionSelected {get; set;}
     }
 
-    public partial class SingleSearchPage : PhoneApplicationPage
+    public partial class SingleSearchPage : WazeApplicationPage
     {
         #region Private members
         private SingleSearchPageContext pageContext;
         #endregion
 
         #region Public properties
-        public enum ActionType 
+        public enum ActionType
         {
-            Cancel = 2, 
-            SingleSearch = 3, 
-            ShowFavorites = 4, 
-            ShowHistory = 5
+            Cancel = 2,
+            SingleSearch = 3,
+            ShowFavorites = 4,
+            ShowHistory = 5,
+            ShowSavedLocations = 6
         }
-
-        public static SingleSearchPage Instance = null;
 
         #endregion
 
         public SingleSearchPage()
         {
             InitializeComponent();
+        }
+
+        public override Panel GetPopupPanel()
+        {
+            return this.PopupsGrid;
         }
 
         #region External control methods
@@ -59,15 +63,15 @@ namespace WazeWP7
             MessageGrid.Visibility = System.Windows.Visibility.Visible;
         }
 
-        public void SearchCompleted (SearchOptionSelectedDelegate onSearchOptionSelected, string localSearchProviderLabel,
-                                     IEnumerable<SearchResult> addressResults, IEnumerable<SearchResult> localSearchResults)
+        public void SearchCompleted (SingleSearchResultsPivotPageContext.SearchOptionSelectedDelegate onSearchOptionSelected, string localSearchProviderLabel,
+                                     IEnumerable<SingleSearchResultsPivotPageContext.SearchResult> addressResults, IEnumerable<SingleSearchResultsPivotPageContext.SearchResult> localSearchResults)
         {
             var searchResultsPageContext = new SingleSearchResultsPivotPageContext
             {
                 OnSearchOptionSelected = onSearchOptionSelected,
                 LocalSearchProviderLabel = localSearchProviderLabel,
-                AddressResults = new ObservableCollection<SearchResult>(addressResults),
-                LocalSearchResults = new ObservableCollection<SearchResult>(localSearchResults),
+                AddressResults = new ObservableCollection<SingleSearchResultsPivotPageContext.SearchResult>(addressResults),
+                LocalSearchResults = new ObservableCollection<SingleSearchResultsPivotPageContext.SearchResult>(localSearchResults),
             };
             NavigationService.Navigate<SingleSearchResultsPivotPage>(searchResultsPageContext);
         }
@@ -78,62 +82,19 @@ namespace WazeWP7
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            // Save the instance so that Sysalls can update the page for errors/results
-            if (Instance != this)
-            {
-                Instance = this;
-            }
-
+            // Start with calling the base implementation
+            base.OnNavigatedTo(e);
+                    
             // Replace the context only if it's not null. A null context should mean we were backed to the page
-            var newContext = NavigationContext.GetData<SingleSearchPageContext>();
-            if (newContext != null)
+            if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
-                pageContext = newContext;
+                this.pageContext = NavigationContext.GetData<SingleSearchPageContext>();
+                LanguageResources.Instance.UpdateControl(this);
             }
-
-            LanguageResources.Instance.UpdateApplicationPage(this);
 
             // Make sure the message grids are collapsed
             InProgressGrid.Visibility = System.Windows.Visibility.Collapsed;
             MessageGrid.Visibility = System.Windows.Visibility.Collapsed;
-
-            //////////////
-            // Color patch
-            //////////////
-            StackPanel panel = null;
-            for (int i = 0; i < Syscalls.colors.Count; ++i)
-            {
-                if (i % 4 == 0)
-                {
-                    panel = new StackPanel();
-                    panel.Orientation = System.Windows.Controls.Orientation.Horizontal;
-                    panel.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
-                    panel.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
-                    ColorPanel.Children.Add(panel);
-                }
-
-                Color color = Syscalls.colors[i];
-                Canvas canvas = new Canvas();
-                canvas.Height = 30;
-                canvas.Width = 110;
-                canvas.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
-                canvas.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
-                canvas.Background = new SolidColorBrush(color);
-                TextBlock textBlock = new TextBlock();
-
-                if (color.R + color.G + color.B > 200)
-                {
-                    textBlock.Foreground = new SolidColorBrush(Colors.Black);
-                }
-                textBlock.Text = color.ToString();
-                canvas.Children.Add(textBlock);
-
-                panel.Children.Add(canvas);
-            }
-
-            
-            // Call the base method
-            base.OnNavigatedTo(e);
         }
 
         protected override void OnBackKeyPress(CancelEventArgs e)
@@ -174,7 +135,7 @@ namespace WazeWP7
 
         private void FavoritesButton_Click(object sender, RoutedEventArgs e)
         {
-            SelectAction(ActionType.ShowHistory);
+            SelectAction(ActionType.ShowFavorites);
         }
 
         private void HistoryButton_Click(object sender, RoutedEventArgs e)
@@ -182,6 +143,11 @@ namespace WazeWP7
             SelectAction(ActionType.ShowHistory);
         }
 
+        private void SavedLocationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectAction(ActionType.ShowSavedLocations);
+        }
+        
         #endregion
 
         #region Private members

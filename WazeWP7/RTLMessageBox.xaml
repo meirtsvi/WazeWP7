@@ -9,13 +9,15 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="250" d:DesignWidth="336" Loaded="UserControl_Loaded">           
     
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="250" Width="336" OpacityMask="{x:Null}" Opacity="0.85">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" 
+          Height="250" Width="336" OpacityMask="{x:Null}" Opacity="0.85"
+          VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <!--<ColumnDefinition Width="158*" />
             <ColumnDefinition Width="174*" />-->
         </Grid.ColumnDefinitions>
-        <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,7,17,0" Name="Title" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" FlowDirection="RightToLeft" />
-        <TextBlock Height="107" HorizontalAlignment="Right" Margin="0,59,16,0" Name="Message" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" TextWrapping="Wrap" FlowDirection="RightToLeft" />
+        <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,7,17,0" Name="Title" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center"/>
+        <TextBlock Height="107" HorizontalAlignment="Right" Margin="0,59,16,0" Name="Message" Text="" VerticalAlignment="Top" Width="303" TextAlignment="Center" TextWrapping="Wrap" />
         <Button Content="OK" Height="59" HorizontalAlignment="Left" Margin="131,173,0,0" Name="okButton" VerticalAlignment="Top" Width="77" FontSize="18" Click="OkButton_Click" />
     </Grid>
 </UserControl>

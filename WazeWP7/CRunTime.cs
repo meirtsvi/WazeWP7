@@ -142,7 +142,7 @@ using System.Collections.Generic;
                     lout = lout + 1024;
                 }
             }
-            catch (Exception t)
+            catch (Exception)
             { // Should get an OutOfMemoryError but we prefer to catch everything.
                 v = null;
                 //lout = Runtime.getRuntime().totalMemory();
@@ -166,7 +166,6 @@ using System.Collections.Generic;
             if (obj == null)
                 return 0;
 
-            int r = 0;
             CRunTime.objectRepository[ret] = obj;
             for (i = CRunTime.firstFree; i < CRunTime.objectRepository.Length; i++)
             {
@@ -298,7 +297,7 @@ using System.Collections.Generic;
 
                 return str;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return "UnSupportedEncodingException happened";
             }
@@ -344,7 +343,7 @@ using System.Collections.Generic;
         public static void memoryWriteLong(int address, long ins)
         {
             CRunTime.memory[address >> 2] = (int)(ins >> 32);
-            CRunTime.memory[(address + 4) >> 2] = (int)(ins & 0xffffffffl);
+            CRunTime.memory[(address + 4) >> 2] = (int)(ins & 0xffffffffL);
         }
 
 
@@ -370,8 +369,8 @@ using System.Collections.Generic;
 
         public static long memoryReadLong(int address)
         {
-            long low = ((long)CRunTime.memory[(address + 4) >> 2]) & 0xffffffffl;
-            long high = ((long)CRunTime.memory[address >> 2]) & 0xffffffffl;
+            long low = ((long)CRunTime.memory[(address + 4) >> 2]) & 0xffffffffL;
+            long high = ((long)CRunTime.memory[address >> 2]) & 0xffffffffL;
             long lout = (high << 32) | low;
 
             return lout;
@@ -517,8 +516,8 @@ using System.Collections.Generic;
                 long a = rsVal;
                 long b = rtVal;
 
-                a &= 0xffffffffl;
-                b &= 0xffffffffl;
+                a &= 0xffffffffL;
+                b &= 0xffffffffL;
 
                 low = a / b;
                 high = a % b;
@@ -537,8 +536,8 @@ using System.Collections.Generic;
             long a = (long)rsVal;
             long b = (long)rtVal;
 
-            a &= 0xffffffffl;
-            b &= 0xffffffffl;
+            a &= 0xffffffffL;
+            b &= 0xffffffffL;
 
             return a * b;
         }
@@ -548,8 +547,8 @@ using System.Collections.Generic;
             long a = (long)aVal;
             long b = (long)bVal;
 
-            a &= 0xffffffffl;
-            b &= 0xffffffffl;
+            a &= 0xffffffffL;
+            b &= 0xffffffffL;
             if (a < b)
                 return 1;
 

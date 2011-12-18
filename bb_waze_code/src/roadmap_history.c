@@ -449,7 +449,7 @@ static void roadmap_history_add_entry (char category, const char *data) {
 
 
 	void roadmap_history_get (char category, void *cursor, char *argv[]) {
-
+        
 	   int argc = RoadMapHistoryCategories[(int)category];
 
 	   if (argc <= 0) {

@@ -20,7 +20,6 @@ namespace WazeWP7
     /// </summary>
     public partial class RTLMessageBox : UserControl
     {
-        private Panel parentPanel;
         public MessageBoxResult Result { get; set; }
 
         public RTLMessageBox()
@@ -37,25 +36,22 @@ namespace WazeWP7
 
         public void Show(string title, string message)
         {
-            this.LayoutRoot.FlowDirection = LanguageResources.Instance.FlowDirection;
             Message.Text = message;
             Title.Text = title;
             Result = MessageBoxResult.None;
+            LanguageResources.Instance.UpdateControl(this);
 
             // Hide before you show
             Hide();
 
             // And now add to the current page
-            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
-            parentPanel = currentPage.Content as Panel;
-            if (parentPanel != null)
-            {
-                parentPanel.Children.Add(this);
-            }
+            var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
+            currentPage.GetPopupPanel().Children.Add(this);
         }
 
         internal void Hide()
         {
+            var parentPanel = this.Parent as Panel;
             if (parentPanel != null)
             {
                 parentPanel.Children.Remove(this);
@@ -63,10 +59,6 @@ namespace WazeWP7
             }
         }
 
-        internal void SetLabel(string label)
-        {
-            Message.Text = label;
-        }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {

@@ -17,7 +17,6 @@ namespace WazeWP7
 {
     public partial class ProgressDialog : UserControl
     {
-        private Panel parentPanel;
         public MessageBoxResult Result { get; set; }
 
         public ProgressDialog()
@@ -32,35 +31,28 @@ namespace WazeWP7
             Hide();
         }
 
-        public void Show()
+        public void Show(string label)
         {
+            this.inputLabel.Text = label;
             Result = MessageBoxResult.None;
+            LanguageResources.Instance.UpdateControl(this);
 
             // Hide before you show
             Hide();
 
             // And now add to the current page
-            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
-            parentPanel = currentPage.Content as Panel;
-            if (parentPanel != null)
-            {
-                parentPanel.Children.Add(this);
-            }
+            var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
+            currentPage.GetPopupPanel().Children.Add(this);
         }
 
         internal void Hide()
         {
+            var parentPanel = this.Parent as Panel;
             if (parentPanel != null)
             {
                 parentPanel.Children.Remove(this);
                 parentPanel = null;
             }
         }
-
-        internal void SetLabel(string label)
-        {
-            inputLabel.Text = label;
-        }
-
     }
 }
