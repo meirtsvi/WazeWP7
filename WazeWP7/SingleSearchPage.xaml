@@ -10,7 +10,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
@@ -66,7 +66,7 @@
         </Grid>
         
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" VerticalAlignment="Stretch">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
@@ -104,7 +104,7 @@
                         Height="{Binding Height,ElementName=SavedLocationButton}"
                         Width="{Binding Width,ElementName=SavedLocationButton}">                        
                     <StackPanel Orientation="Vertical" >
-                        <Image Source="Resources/search_favorites.png" />
+                        <Image Source="Resources/search_favorites.png" Height="93" Width="119" />
                         <TextBlock x:Name="FavoritesButtonTextBlock" Text="My favorites" HorizontalAlignment="Center"
                                    Style="{StaticResource PhoneTextNormalStyle}"/>
                     </StackPanel>
@@ -114,7 +114,7 @@
                         Click="SavedLocationsButton_Click"
                         BorderThickness="3" Margin="0">
                     <StackPanel Orientation="Vertical" >
-                        <Image Source="Resources/search_marked_locations.png" />
+                        <Image Source="Resources/search_marked_locations.png"  Height="93" Width="119" />
                         <TextBlock Text="Saved locations" HorizontalAlignment="Center"
                                    Style="{StaticResource PhoneTextNormalStyle}"/>
                     </StackPanel>
@@ -124,7 +124,7 @@
                         Click="HistoryButton_Click"
                         BorderThickness="3" Margin="0">
                     <StackPanel Orientation="Vertical" >
-                        <Image Source="Resources/search_history.png" />
+                        <Image Source="Resources/search_history.png"  Height="93" Width="119"/>
                         <TextBlock x:Name="HistoryButtonTextBlock" Text="Recent searches" HorizontalAlignment="Center"
                                    Style="{StaticResource PhoneTextNormalStyle}"/>
                     </StackPanel>

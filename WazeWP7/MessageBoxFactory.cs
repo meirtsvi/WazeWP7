@@ -32,7 +32,7 @@ class MessageBoxFactory {
                                            int callback,  int numberOfSeconds,  int isModal)
     {
         // TODO Eli:
-        // This box is always modal which is wrong..
+        // This box is always model which is wrong..
         // if numberOfSeconds is non zero we should auto close, but MessageBox is always Modal and does not support closing from code.
         // we will need to implement a non model message box calss for this scenario.
 
