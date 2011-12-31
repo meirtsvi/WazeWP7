@@ -260,9 +260,9 @@ OBJS    = $(src_dir)/roadmap_splash.o \
 
 ifeq ($(RIM),YES)
 ifeq ($(RIMOS5),YES)
-OBJS += $(src_dir)/roadmap_label.o
-else
 OBJS += $(src_dir)/roadmap_label_fast.o
+else
+OBJS += $(src_dir)/roadmap_label.o
 endif # RIMOS5
 else  # !RIM
 OBJS += $(src_dir)/zlib/uncompr.o \

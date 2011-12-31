@@ -118,7 +118,7 @@ namespace WazeWP7
                             {
                                 // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
                                 mediaElement = new MediaElement();
-                                FreeMapMainScreen.get().LayoutRoot.Children.Add(mediaElement);
+                                GamePage.get().LayoutRoot.Children.Add(mediaElement);
                                 mediaElement.SetSource(current_list.streams[copy_index]);
                                 mediaElement.Volume = 1.0;//todomt (double)((double)sound_level / 100.0);
                                 mediaElement.MediaEnded += delegate
@@ -130,7 +130,7 @@ namespace WazeWP7
                                             current_list.streams[copy_index].Close();
                                         }
                                     }
-                                    FreeMapMainScreen.get().LayoutRoot.Children.Remove(mediaElement);
+                                    GamePage.get().LayoutRoot.Children.Remove(mediaElement);
                                     playNextItem();
                                 };
 

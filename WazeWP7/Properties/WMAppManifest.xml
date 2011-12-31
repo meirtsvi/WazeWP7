@@ -16,10 +16,10 @@
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="FreeMapMainScreen.xaml" />
+      <DefaultTask Name="_default" NavigationPage="GamePage.xaml" />
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="WazeWP7Token" TaskName="_default">
+      <PrimaryToken TokenID="SlXnaApp1Token" TaskName="_default">
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">waze_logo.png</BackgroundImageURI>
           <Count>0</Count>

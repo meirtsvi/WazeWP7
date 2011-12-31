@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -10,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Meir Tsvi")]
 [assembly: AssemblyProduct("Waze for WP7.5")]
-[assembly: AssemblyCopyright("Copyright © Meir Tsvi 2011")]
+[assembly: AssemblyCopyright("Copyright © Meir Tsvi 2011-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +32,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.9.7.8")]
-[assembly: AssemblyFileVersion("0.9.7.8")]
+[assembly: AssemblyVersion("0.9.7.9")]
+[assembly: AssemblyFileVersion("0.9.7.9")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]

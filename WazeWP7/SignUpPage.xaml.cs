@@ -46,12 +46,19 @@ namespace WazeWP7
 
         private void SkipButton_Click(object sender, RoutedEventArgs e)
         {
-            if (NavigationService.BackStack.Any(entry => entry.Source.OriginalString.Contains("WelcomePage.xaml")))
+            try
             {
-                NavigationService.RemoveBackEntry();
+                if (NavigationService.BackStack.Any(entry => entry.Source.OriginalString.Contains("WelcomePage.xaml")))
+                {
+                    NavigationService.RemoveBackEntry();
+                }
+                NavigationService.GoBack();
+                this.pageContext.OnSkipSignup();
             }
-            NavigationService.GoBack();
-            this.pageContext.OnSkipSignup();
+            catch (InvalidOperationException)
+            {
+                // can happen if navigation is already in progress. In this case ignore
+            }
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)

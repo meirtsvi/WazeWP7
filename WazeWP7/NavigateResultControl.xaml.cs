@@ -34,7 +34,7 @@ namespace WazeWP7
             LanguageResources.Instance.UpdateControl(this);
 
             // And now add to the current page (we only allow to add this to the main page
-            var currentPage = ((App)Application.Current).RootFrame.Content as FreeMapMainScreen;
+            var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
             if (currentPage != null)
             {
                 currentPage.GetPopupPanel().Children.Add(this);

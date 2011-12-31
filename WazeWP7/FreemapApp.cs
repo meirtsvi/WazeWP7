@@ -8,14 +8,9 @@ using System.Windows.Resources;
 using WazeWP7;
 
     /*
-
      * This class is the main entry point for the application through the
-
      * main(string args[])  method, as well as providing other general
-
      * functionalities which are related to the device, such as capturing foreground to background events.
-
-     *
      */
     class FreemapApp //extends UiApplication implements SystemListener , WLANConnectionListener
     {
@@ -336,7 +331,7 @@ using WazeWP7;
             if (c_malloc_stack != 0)
             {
                 int stackAddress = CibylCallTable.fcall(c_malloc_stack, c_sp, 4096, 0, 0, 0);
-                FreeMapMainScreen.setStackAddress(stackAddress);
+                GamePage.setStackAddress(stackAddress);
             }
         }
 

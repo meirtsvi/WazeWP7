@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -33,7 +37,15 @@ namespace WazeWP7
         {
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
-            
+
+            // Standard Silverlight initialization
+            InitializeComponent();
+
+            // Phone-specific initialization
+            InitializePhoneApplication();
+
+            // XNA initialization
+            InitializeXnaApplication();
 
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)
@@ -45,16 +57,32 @@ namespace WazeWP7
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
 
                 // Enable non-production analysis visualization mode, 
-                // which shows areas of a page that are being GPU accelerated with a colored overlay.
+                // which shows areas of a page that are handed off to GPU with a colored overlay.
                 //Application.Current.Host.Settings.EnableCacheVisualization = true;
+
+                // Disable the application idle detection by setting the UserIdleDetectionMode property of the
+                // application's PhoneApplicationService object to Disabled.
+                // Caution:- Use this under debug mode only. Applications that disable user idle detection will continue to run
+                // and consume battery power when the user is not using the phone.
+                PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-
-            // Standard Silverlight initialization
-            InitializeComponent();
-
-            // Phone-specific initialization
-            InitializePhoneApplication();
         }
+
+        /// <summary>
+        /// Provides access to a ContentManager for the application.
+        /// </summary>
+        public ContentManager Content { get; private set; }
+
+        /// <summary>
+        /// Provides access to a GameTimer that is set up to pump the FrameworkDispatcher.
+        /// </summary>
+        public GameTimer FrameworkDispatcherTimer { get; private set; }
+
+        /// <summary>
+        /// Provides access to the AppServiceProvider for the application.
+        /// </summary>
+        public AppServiceProvider Services { get; private set; }
+
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
@@ -154,6 +182,40 @@ namespace WazeWP7
 
             // Remove this handler since it is no longer needed
             RootFrame.Navigated -= CompleteInitializePhoneApplication;
+        }
+
+        #endregion
+
+        #region XNA application initialization
+
+        // Performs initialization of the XNA types required for the application.
+        private void InitializeXnaApplication()
+        {
+            // Create the service provider
+            Services = new AppServiceProvider();
+
+            // Add the SharedGraphicsDeviceManager to the Services as the IGraphicsDeviceService for the app
+            foreach (object obj in ApplicationLifetimeObjects)
+            {
+                if (obj is IGraphicsDeviceService)
+                    Services.AddService(typeof(IGraphicsDeviceService), obj);
+            }
+
+            // Create the ContentManager so the application can load precompiled assets
+            Content = new ContentManager(Services, "Content");
+
+            // Create a GameTimer to pump the XNA FrameworkDispatcher
+            FrameworkDispatcherTimer = new GameTimer();
+            FrameworkDispatcherTimer.FrameAction += FrameworkDispatcherFrameAction;
+            FrameworkDispatcherTimer.Start();
+        }
+
+        // An event handler that pumps the FrameworkDispatcher each frame.
+        // FrameworkDispatcher is required for a lot of the XNA events and
+        // for certain functionality such as SoundEffect playback.
+        private void FrameworkDispatcherFrameAction(object sender, EventArgs e)
+        {
+            FrameworkDispatcher.Update();
         }
 
         #endregion

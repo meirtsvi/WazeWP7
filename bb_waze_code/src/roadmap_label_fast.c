@@ -80,7 +80,7 @@ RoadMapConfigDescriptor RoadMapConfigLabelsColor =
 RoadMapConfigDescriptor RoadMapConfigLabelsBgColor =
                         ROADMAP_CONFIG_ITEM("Labels", "BgColor");
 /* this is fairly arbitrary */
-#define MAX_LABELS 20
+#define MAX_LABELS 200
 #define MAX_DRAW   4
 #define ROADMAP_LABEL_STREETLABEL_SIZE 12
 
@@ -382,12 +382,12 @@ int roadmap_label_add (const PluginLine *line, const LabelInfo *label_info) {
    if (dup_label_index != -1) i = dup_label_index;
 
    if (i == MAX_LABELS) {
-      if (min_feature_size_index == -1) {
+/*      if (min_feature_size_index == -1) {
          printf("CacheMinFeatureSizeSq:%d\n", CacheMinFeatureSizeSq);
          for (i=0; i<MAX_LABELS; i++) {
             printf("label %d) size:%d\n", i, LabelsCache[i].featuresize_sq);
          }
-      }
+      }*/
       assert(min_feature_size_index != -1);
       i = min_feature_size_index;
 

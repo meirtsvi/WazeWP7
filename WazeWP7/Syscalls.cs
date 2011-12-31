@@ -14,14 +14,18 @@ using System.Windows.Shapes;
 using Microsoft.Phone;
 using Microsoft.Phone.Tasks;
 
+using NBidi;
+
 using Microsoft.Phone.Controls;
 using ComponentAce.Compression.Libs.zlib;
 
-using WazeWP7;
 using SearchResult = WazeWP7.SingleSearchResultsPivotPageContext.SearchResult;
 using GenericListItem = WazeWP7.GenericListPageContext.ListItem;
 using GenericListContextMenuItem = WazeWP7.GenericListPageContext.ContextMenuItem;
 using System.Collections.ObjectModel;
+using Microsoft.Xna.Framework.Graphics;
+
+using WazeWP7;
 
 public class Syscalls
 {
@@ -130,6 +134,11 @@ public class Syscalls
             {
                 return null;
             }
+            catch (ArgumentException)
+            {
+                return null;
+            }
+
         }
 
         return null;
@@ -428,10 +437,10 @@ public class Syscalls
     {
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
-            if (FreeMapMainScreen.get().NavigationService.CanGoBack)
+            if (GamePage.get().NavigationService.CanGoBack)
             {
-                FreeMapMainScreen.get().LayoutRoot.Children.Clear();
-                FreeMapMainScreen.get().NavigationService.GoBack();
+                GamePage.get().LayoutRoot.Children.Clear();
+                GamePage.get().NavigationService.GoBack();
             }
             else
             {
@@ -762,16 +771,9 @@ public class Syscalls
 
     public static int NOPH_Bitmap_getBitmapResource(int __name)
     {
-        //// Try to get the bitmap from the cache store:
-        //if (bitmapCacheStore.ContainsKey(__name))
-        //{
-        //    bitmapCacheStore[__name].RegisteredHandle = CRunTime.registerObject(bitmapCacheStore[__name].Bitmap);
-        //    bitmaps_info.Add(bitmapCacheStore[__name].RegisteredHandle, bitmapCacheStore[__name].Info);
-        //    return bitmapCacheStore[__name].RegisteredHandle;
-        //}
-
         String name = "/WazeWP7;component/resources/" + CRunTime.charPtrToString(__name);
-        //Logger.log("Bitmap name:" + name);
+
+
         if (!FileExists(name))
         {
             name = "Userstore://" + CRunTime.charPtrToString(__name);
@@ -784,52 +786,23 @@ public class Syscalls
 
         }
 
-        mre.Reset();
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        Stream stream = GetFileStream(name, FileMode.Open);
+        Texture2D bitmap = GamePage.LoadBitmap(stream);
+        int bitmap_registeredHandle = CRunTime.registerObject(bitmap);
+        BitmapInfo info = new BitmapInfo(bitmap.Width, bitmap.Height);
+        if (!bitmaps_info.ContainsKey(bitmap_registeredHandle))
         {
-            BitmapImage bitmap = new BitmapImage();
-            name = "/WazeWP7;component/resources/" + CRunTime.charPtrToString(__name);
-            Stream stream = GetFileStream(name, FileMode.Open);
-
-            bool runInEmulator = false;
-            if (runInEmulator)
-            {
-                bitmap.ImageOpened += delegate(object sender, RoutedEventArgs e)
-                {
-                    BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
-
-                    //if (!bitmapCacheStore.ContainsKey(__name))
-                    //{
-                    //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
-                    //}
-
-                    if (!bitmaps_info.ContainsKey(bitmap_registeredHandle))
-                    {
-                        bitmaps_info.Add(bitmap_registeredHandle, info);
-                    }
-                    mre.Set();
-
-                };
-                bitmap.SetSource(stream);
-                bitmap_registeredHandle = CRunTime.registerObject(bitmap);
-            }
-            else
-            {
-                bitmap.SetSource(stream);
-                bitmap_registeredHandle = CRunTime.registerObject(bitmap);
-                BitmapInfo info = new BitmapInfo(bitmap.PixelWidth, bitmap.PixelHeight);
-
-                //if (!bitmapCacheStore.ContainsKey(__name))
-                //{
-                //bitmapCacheStore.Add(__name, new CachedBitmap() { Bitmap = bitmap, Name = name, Number = __name, RegisteredHandle = bitmap_registeredHandle, Info = info });
-                //}
-
-                bitmaps_info.Add(bitmap_registeredHandle, info);
-                mre.Set();
-            }
-        });
-        mre.WaitOne();
+            bitmaps_info.Add(bitmap_registeredHandle, info);
+        }
         return bitmap_registeredHandle;
+
+        //// Try to get the bitmap from the cache store:
+        //if (bitmapCacheStore.ContainsKey(__name))
+        //{
+        //    bitmapCacheStore[__name].RegisteredHandle = CRunTime.registerObject(bitmapCacheStore[__name].Bitmap);
+        //    bitmaps_info.Add(bitmapCacheStore[__name].RegisteredHandle, bitmapCacheStore[__name].Info);
+        //    return bitmapCacheStore[__name].RegisteredHandle;
+        //}
     }
 
     //private static int bitmap_height;
@@ -1264,6 +1237,7 @@ public class Syscalls
     public static int NOPH_Font_getAdvance(int __font, int __text)
     {
         String text = CRunTime.charPtrToString(__text);
+//        return (int)GamePage.get().Fonts[__font].MeasureString(text).X;
         return StringWidthCalculator.CalcStringSize(text, __font);
 //        return (int)((__font*0.56) * text.Length);
     }
@@ -1414,12 +1388,12 @@ public class Syscalls
     public static void NOPH_FreemapMainScreen_addMenuItem(int __screen, int __text, int ordinal, int priority, int wrapper_callback, int callback, int push_at_start)
     {
         String text = CRunTime.charPtrToString(__text);
-        FreeMapMainScreen.get().addMenuItem(text, ordinal, priority, wrapper_callback, callback, push_at_start);
+        GamePage.get().addMenuItem(text, ordinal, priority, wrapper_callback, callback, push_at_start);
     }
 
     public static void NOPH_FreemapMainScreen_addMenuItemSeparator(int __screen, int ordinal)
     {
-        FreeMapMainScreen.get().addMenuItemSeparator(ordinal);
+        GamePage.get().addMenuItemSeparator(ordinal);
     }
 
     public static int NOPH_FreemapMainScreen_get()
@@ -1436,13 +1410,13 @@ public class Syscalls
 
     public static int NOPH_FreemapMainScreen_getVisibleHeight(int __screen)
     {
-        int ret = (int)FreeMapMainScreen.get().getVisibleHeight();
+        int ret = (int)GamePage.get().getVisibleHeight();
         return ret;
     }
 
     public static int NOPH_FreemapMainScreen_getVisibleWidth(int __screen)
     {
-        int ret = (int)FreeMapMainScreen.get().getVisibleWidth();
+        int ret = (int)GamePage.get().getVisibleWidth();
         return ret;
     }
 
@@ -1455,13 +1429,13 @@ public class Syscalls
 
     public static void NOPH_FreemapMainScreen_refresh(int __screen)
     {
-        FreeMapMainScreen.get().refresh(next_canvas);
+        GamePage.get().refresh(next_canvas);
     }
 
     public static void NOPH_FreemapMainScreen_removeMenuItemByLabel(int __screen, int __text)
     {
         String text = CRunTime.charPtrToString(__text);
-        FreeMapMainScreen.get().removeMenuItemByLabel(text);
+        GamePage.get().removeMenuItemByLabel(text);
     }
 
     public static void NOPH_FreemapMainScreen_resetContextMenu(int __screen, int starting_from)
@@ -1471,7 +1445,7 @@ public class Syscalls
 
     public static void NOPH_FreemapMainScreen_revertToInitialLocale(int __screen)
     {
-        FreeMapMainScreen.get().revertToInitialLocale();
+        GamePage.get().revertToInitialLocale();
     }
 
     public static void NOPH_FreemapMainScreen_setContextMenuItem(int __screen, int __text, int ordinal, int callback)
@@ -1483,7 +1457,7 @@ public class Syscalls
     //todomt - is that necessary on wp7?
     public static void NOPH_FreemapMainScreen_setKeyDownAddr(int addr)
     {
-        FreeMapMainScreen.setKeyDownAddr(addr);
+        GamePage.setKeyDownAddr(addr);
     }
 
     public static void NOPH_FreemapMainScreen_setLocale(int __screen, int __text)
@@ -1532,10 +1506,10 @@ public class Syscalls
 
                 // Add Me on map as the last menu:
                 WazeMenuItem meOnMapL2V = new WazeMenuItem("Cancel",
-                                                           FreeMapMainScreen.MeOnMapItem.ordinal,
-                                                           FreeMapMainScreen.MeOnMapItem.priority,
-                                                           FreeMapMainScreen.MeOnMapItem.wrapper_callback,
-                                                           FreeMapMainScreen.MeOnMapItem.callback);
+                                                           GamePage.MeOnMapItem.ordinal,
+                                                           GamePage.MeOnMapItem.priority,
+                                                           GamePage.MeOnMapItem.wrapper_callback,
+                                                           GamePage.MeOnMapItem.callback);
 
                 miniMenu.Items.Add(meOnMapL2V);
                 
@@ -1544,7 +1518,7 @@ public class Syscalls
                     {
                         ListBox lb = (ListBox)sender;
                         WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
-                        FreeMapMainScreen.get().GetPopupPanel().Children.Remove(miniMenu);
+                        GamePage.get().GetPopupPanel().Children.Remove(miniMenu);
                         miniMenu = null;
 
                         // Clear the menu
@@ -1555,7 +1529,7 @@ public class Syscalls
                         selectedItem.CallCallback();
                     };
 
-                var popupPanel = FreeMapMainScreen.get().GetPopupPanel();
+                var popupPanel = GamePage.get().GetPopupPanel();
                 if (popupPanel != null)
                 {
                     popupPanel.Children.Add(miniMenu);
@@ -1647,8 +1621,20 @@ public class Syscalls
 
     #region Graphics methods
 
+    private static void AddVertext(float x, float y, Microsoft.Xna.Framework.Color color)
+    {
+        GamePage gamePage = GamePage.get();
+        int polygonArrayIndex = gamePage.whichPolygonAndTextAndBitmapArrayIsInWork;
+
+        gamePage.filledPathPolygons[polygonArrayIndex][gamePage.vertexInWorkIndex].Position.X = x;
+        gamePage.filledPathPolygons[polygonArrayIndex][gamePage.vertexInWorkIndex].Position.Y = y;
+        gamePage.filledPathPolygons[polygonArrayIndex][gamePage.vertexInWorkIndex].Position.Z = 1;
+        gamePage.filledPathPolygons[polygonArrayIndex][gamePage.vertexInWorkIndex++].Color = color;
+    }
+
     public static void NOPH_Graphics_drawArc(int __graphics, int x, int y, int width, int height, int startAngle, int arcAngle)
     {
+        return;
         //mre.Reset();
         int copy_x, copy_y, copy_width, copy_height, copy_start_angle, copy_arc_angle;
         copy_x = x; copy_y = y; copy_width = width; copy_height = height; copy_start_angle = startAngle; copy_arc_angle = arcAngle;
@@ -1707,34 +1693,17 @@ public class Syscalls
 
     public static void NOPH_Graphics_drawBitmap(int __graphics, int x, int y, int width, int height, int __bitmap, int left, int top)
     {
-        if (!(CRunTime.objectRepository[__bitmap] is BitmapImage))
+        if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
+            return; //todmt2 - understand why i get such numbers
+
+        Texture2D bitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
+        if (bitmap == null)
             return;
 
-        if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
-          //  System.Diagnostics.Debug.WriteLine("G:" + __graphics);
-            return; //todmt2 - understand why i get such numbers
-        //mre.Reset();
+        bitmap.Tag = x + "," + y;
+        GamePage.get().bitmaps[GamePage.get().whichPolygonAndTextAndBitmapArrayIsInWork][GamePage.get().bitmapWorkIndex++] = bitmap;
+        return;
 
-        int copy_x, copy_y, copy_width, copy_height, copy_bitmap, copy_left, copy_top;
-        copy_x = x; copy_y = y; copy_width = width; copy_height = height; copy_bitmap = __bitmap; copy_left = left; copy_top = top;
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            Image image = new Image();
-            BitmapImage bitmap = (BitmapImage)CRunTime.objectRepository[copy_bitmap];
-            //image.Width = copy_width;
-            //image.Height = copy_height;
-            //image.Stretch = Stretch.Fill;
-            
-            image.SetValue(Canvas.LeftProperty, (double)copy_x);
-            image.SetValue(Canvas.TopProperty, (double)copy_y);
-            //todomt - see if there is need for these: image.Width = (double)width;
-            //image.Height = (double)height;
-            image.Source = bitmap;
-            next_canvas.Children.Add(image);// graphics.Children.Add(image);// .DrawImage(bitmap, new Rectangle(x, y, width, height), new Rectangle(left, top, bitmap.Width-left, bitmap.Height-top), GraphicsUnit.Pixel);
-            //mre.Set();
-        });
-        //mre.WaitOne(); // avoid race conditions where drawImage is running while NOPH_Delete is being called in parallel
     }
 
     /// <summary>
@@ -1749,224 +1718,88 @@ public class Syscalls
     /// <param name="count"></param>
     public static void NOPH_Graphics_drawFilledPath(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count)
     {
-        //mre.Reset();
-        Color curr_pen = curr_color;
-
         xPtsAddr /= 4;
         yPtsAddr /= 4;
         offsetsAddr /= 4;
 
-        int[] xPts;
-        int[] yPts;
-        byte[] pointTypes;
-        int[] offsets;
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        //System.out.println("DFP COUNT: " + count);
-
-        xPts = new int[count];
-        yPts = new int[count];
-        pointTypes = (pointTypesAddr != 0 ? new byte[count] : null);
-        offsets = (offsetsAddr != 0 ? new int[count] : null);
-
-        for (int i = 0; i < count; ++i)
-        {
-            xPts[i] = CRunTime.memory[xPtsAddr + i];
-            yPts[i] = CRunTime.memory[yPtsAddr + i];
-
-            if (offsets != null)
-            {
-                offsets[i] = CRunTime.memory[offsetsAddr + i];
-            }
-        }
-
-
-        if (pointTypes != null)
-        {
-            CRunTime.memcpy(pointTypes, 0, pointTypesAddr, count);
-        }
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            PointCollection points = new PointCollection();
-            for (int i = 0; i < xPts.Length; i++)
-            {
-                points.Add(new Point(xPts[i], yPts[i]));
-            }
-
-            Polygon p = new Polygon();
-            p.Points = points;
-            p.Fill = new SolidColorBrush(curr_pen);
-            next_canvas.Children.Add(p);
-            //            mre.Set();
-        });
-        //        mre.WaitOne();
+        AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
+        AddVertext((float)(CRunTime.memory[xPtsAddr+1]), (float)(CRunTime.memory[yPtsAddr+1]), color);
+        AddVertext((float)(CRunTime.memory[xPtsAddr+2]), (float)(CRunTime.memory[yPtsAddr+2]), color);
+        AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
+        AddVertext((float)(CRunTime.memory[xPtsAddr+3]), (float)(CRunTime.memory[yPtsAddr+3]), color);
+        AddVertext((float)(CRunTime.memory[xPtsAddr+2]), (float)(CRunTime.memory[yPtsAddr+2]), color);
     }
 
     public static void NOPH_Graphics_drawLine(int __graphics, int x1, int y1, int x2, int y2)
     {
-        //mre.Reset();
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        int copy_x1, copy_y1, copy_x2, copy_y2;
-        copy_x1 = x1; copy_y1 = y1; copy_x2 = x2; copy_y2 = y2;
-        Color curr_pen = curr_color;
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            Line line = new Line();
-            line.Stroke = new SolidColorBrush(curr_pen);
-            line.StrokeThickness = 1;
-            Point point1 = new Point(copy_x1, copy_y1);
-            Point point2 = new Point(copy_x2, copy_y2);
-            line.X1 = point1.X;
-            line.Y1 = point1.Y;
-            line.X2 = point2.X;
-            line.Y2 = point2.Y;
-            next_canvas.Children.Add(line);// graphics.Children.Add(line);
-
-            //mre.Set();
-        });
-        //mre.WaitOne();
+        AddVertext( (float)(x1), (float)(y1),color);
+        AddVertext((float)(x2), (float)(y2), color);
+        AddVertext((float)(x2), (float)(y2), color);
     }
 
     public static void NOPH_Graphics_drawPathOutline(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count, int closed)
     {
-        //mre.Reset();
-        int copy_closed;
-        copy_closed = closed;
-
-        //todomt2 - what to do with closed var?
-
-        Color curr_pen = curr_color;
-
         xPtsAddr /= 4;
         yPtsAddr /= 4;
-        offsetsAddr /= 4;
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        int[] xPts;
-        int[] yPts;
-        byte[] pointTypes;
-        int[] offsets;
-
-        //System.out.println("DPO COUNT: " + count);
-
-        xPts = new int[count];
-        yPts = new int[count];
-        pointTypes = (pointTypesAddr != 0 ? new byte[count] : null);
-        offsets = (offsetsAddr != 0 ? new int[count] : null);
-
-        for (int i = 0; i < count; ++i)
+        for (int i=0; i<count-1; i++)
         {
-            xPts[i] = CRunTime.memory[xPtsAddr + i];
-            yPts[i] = CRunTime.memory[yPtsAddr + i];
-
-            if (offsets != null)
-            {
-                offsets[i] = CRunTime.memory[offsetsAddr + i];
-            }
+            AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
+            AddVertext(CRunTime.memory[xPtsAddr + i+1], CRunTime.memory[yPtsAddr + i+1], color);
+            AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
         }
-
-        if (pointTypes != null)
-        {
-            CRunTime.memcpy(pointTypes, 0, pointTypesAddr, count);
-        }
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            PointCollection points = new PointCollection();
-            for (int i = 0; i < xPts.Length; i++)
-            {
-                points.Add(new Point(xPts[i], yPts[i]));
-            }
-
-            Polygon p = new Polygon();
-            p.Points = points;
-            //p.Fill = new SolidColorBrush(curr_pen);
-            p.Stroke = new SolidColorBrush(curr_pen);
-            next_canvas.Children.Add(p);// graphics.Children.Add(p);
-
-            //mre.Set();
-        });
-        //mre.WaitOne();
     }
 
     public static void NOPH_Graphics_drawShadedFilledPath(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count)
     {
-        //mre.Reset();
         if (curr_color.R == 255 && curr_color.B == 0 && curr_color.G == 0)
             return;
-
-        //todomt2 - what to do with closed var?
-
-        Color curr_pen = curr_color;
 
         xPtsAddr /= 4;
         yPtsAddr /= 4;
         offsetsAddr /= 4;
 
-        int[] xPts;
-        int[] yPts;
-        byte[] pointTypes;
-        int[] offsets;
-
-        //System.out.println("DPO COUNT: " + count);
-
-        xPts = new int[count];
-        yPts = new int[count];
-        pointTypes = (pointTypesAddr != 0 ? new byte[count] : null);
-        offsets = (offsetsAddr != 0 ? new int[count] : null);
-
+        List<System.Windows.Point> points = new List<Point>();
         for (int i = 0; i < count; ++i)
         {
-            xPts[i] = CRunTime.memory[xPtsAddr + i];
-            yPts[i] = CRunTime.memory[yPtsAddr + i];
-
-            if (offsets != null)
-            {
-                offsets[i] = CRunTime.memory[offsetsAddr + i];
-            }
+            int x = CRunTime.memory[xPtsAddr + i];
+            int y =  CRunTime.memory[yPtsAddr + i];
+            points.Add(new Point(x,y));
         }
 
-        if (pointTypes != null)
+        List<System.Windows.Point> triagnlesPoints = Triangulator.triangulate(points);
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+
+        for (int i = 0; i < triagnlesPoints.Count; i++)
         {
-            CRunTime.memcpy(pointTypes, 0, pointTypesAddr, count);
+            AddVertext( (float)(triagnlesPoints[i].X), (float)(triagnlesPoints[i].Y), color);
         }
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            PointCollection points = new PointCollection();
-            for (int i = 0; i < xPts.Length; i++)
-            {
-/*                if (xPts[i] < 0 || yPts[i] < 0)
-                    return;*/
-                points.Add(new Point(xPts[i], yPts[i]));
-            }
-
-            if (!(points[0].X == points[points.Count-1].X &&
-                points[0].Y == points[points.Count-1].Y))
-            {
-                points.Add(new Point(xPts[0], yPts[0]));
-            }
-
-            Polygon p = new Polygon();
-            p.Points = points;
-            p.Fill = new SolidColorBrush(curr_pen);
-            p.Stroke = new SolidColorBrush(curr_pen);
-            next_canvas.Children.Add(p);// graphics.Children.Add(p);
-
-            //mre.Set();
-        });
-        //mre.WaitOne();
     }
 
+    private static char illegalChar1 = (char)4;
+    private static char illegalChar2 = (char)8;
     public static void NOPH_Graphics_drawTextAngle(int c_graphics, int c_text, int x, int y, int flags, int angle)
     {
+        int font_size = currFontSize - 4;
+        String text = NBidi.NBidi.LogicalToVisual(CRunTime.charPtrToString(c_text)).Replace(illegalChar1,' ').Replace(illegalChar2, ' ');
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+        GamePage gamePage = GamePage.get();
+
+        TextString textString = new TextString(text, font_size, x, y, angle, color);
+        gamePage.textStrings[gamePage.whichPolygonAndTextAndBitmapArrayIsInWork][gamePage.textStringWorkIndex++] = textString;
+
+        return;
         //        mre.Reset();
         int copy_c_text, copy_x, copy_y, copy_flags, copy_angle;
         copy_c_text = c_text; copy_x = x; copy_y = y; copy_flags = flags; copy_angle = angle;
         Color curr_pen = curr_color;
-        int font_size = currFontSize;
+
         //todomt2 - what about flags?
-        String text = CRunTime.charPtrToString(copy_c_text);
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
@@ -1997,8 +1830,8 @@ public class Syscalls
 
                 // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
                 if (
-                    ((copy_y == 472) && FreeMapMainScreen.get().IsPhoneLandscape()) || 
-                    ((copy_y == 792) && !FreeMapMainScreen.get().IsPhoneLandscape())
+                    ((copy_y == 472) && GamePage.get().IsPhoneLandscape()) || 
+                    ((copy_y == 792) && !GamePage.get().IsPhoneLandscape())
                     )
                 {
                     copy_x -= 37;
@@ -2037,92 +1870,45 @@ public class Syscalls
 
     public static void NOPH_Graphics_fillArc(int __graphics, int x, int y, int width, int height, int startAngle, int arcAngle)
     {
-        Color curr_pen = curr_color;
-        //mre.Reset();
+        float radius = (float)width;
+        int sides = 10;
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        int copy_x, copy_y, copy_width, copy_height, copy_startAngle, copy_arcAngle;
-        copy_x = x; copy_y = y; copy_width = width; copy_height = height; copy_startAngle = startAngle; copy_arcAngle = arcAngle;
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        float max = 2 * (float)Math.PI; 
+        float step = max / (float)sides; 
+        for (float theta = 0; theta < max; theta += step)
         {
-            if (copy_arcAngle - copy_startAngle == 360)
+            float xPos = (float)(radius * (float)Math.Cos((double)theta)); 
+            float yPos = (float)(radius * (float)Math.Sin((double)theta));
+
+            for (int j = 0; j < 3; j++)
             {
-                Ellipse myEllipse = new Ellipse();
-
-                SolidColorBrush mySolidColorBrush = new SolidColorBrush();
-                mySolidColorBrush.Color = curr_pen;
-                myEllipse.Fill = mySolidColorBrush;
-                myEllipse.StrokeThickness = 1;
-                myEllipse.Stroke = mySolidColorBrush;
-
-                myEllipse.Width = copy_width;
-                myEllipse.Height = copy_height;
-                myEllipse.SetValue(Canvas.LeftProperty, (double)copy_x);
-                myEllipse.SetValue(Canvas.TopProperty, (double)copy_y);
-
-                next_canvas.Children.Add(myEllipse);// graphics.Children.Add(myEllipse);
+                AddVertext(xPos, yPos, color);
             }
-            else
-            {
-                SolidColorBrush fb = new SolidColorBrush(curr_pen);
-                System.Windows.Shapes.Path path1 = new System.Windows.Shapes.Path();
-                PathGeometry pg1 = new PathGeometry();
-                PathFigure pf1 = new PathFigure();
-                pf1.StartPoint = new Point(copy_x, copy_y);
-                //set up the segments collection
-                PathSegmentCollection segments = new PathSegmentCollection();
-                //arc1    
-                ArcSegment arc1 = new ArcSegment();
-                arc1.Point = new Point(copy_width + copy_x, copy_height + copy_y);
-                arc1.Size = new Size(copy_width, copy_height);
-                arc1.IsLargeArc = (copy_arcAngle - copy_startAngle) > 180 ? true : false;
-                arc1.SweepDirection = SweepDirection.Clockwise;
-                segments.Add(arc1);
+        }
 
-                //Set up the path
-                pf1.Segments = segments;
-                pg1.Figures.Add(pf1);
-                path1.Data = pg1;
-                path1.Fill = fb;
-                path1.Stroke = fb;
-                path1.StrokeThickness = 1;
-
-                next_canvas.Children.Add(path1);// graphics.Children.Add(path1);
-            }
-            //mre.Set();
-        });
-        //mre.WaitOne();
-
+        // then add the first vector again so it's a complete loop
+        for (int j = 0; j < 3; j++)
+        {
+            AddVertext( (float)(radius * (float)Math.Cos(0)), (float)(radius * (float)Math.Sin(0)) ,color);
+        }
     }
 
     public static void NOPH_Graphics_fillRect(int __graphics, int x, int y, int width, int height)
     {
-        int copy_x, copy_y, copy_width, copy_height;
-        copy_x = x; copy_y = y; copy_width = width; copy_height = height;
-        Color curr_pen = curr_color;
+        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        //mre.Reset();
+        // 1st triangle
+        AddVertext(x,y,color);
+        AddVertext(x+width, y, color);
+        AddVertext(x+width, y+height, color);
 
-
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-
-            if (copy_x == 0 && copy_y == 0 && copy_width == FreeMapMainScreen.get().getVisibleWidth() && copy_height == FreeMapMainScreen.get().getVisibleHeight())
-            {
-                next_canvas = new Canvas();
-            }
-
-            Rectangle r = new Rectangle();
-            r.SetValue(Canvas.LeftProperty, (double)copy_x);
-            r.SetValue(Canvas.TopProperty, (double)copy_y);
-            r.SetValue(Canvas.HeightProperty, (double)copy_height);
-            r.SetValue(Canvas.WidthProperty, (double)copy_width);
-            r.Fill = new SolidColorBrush(curr_pen);
-            next_canvas.Children.Add(r);
-            //mre.Set();
-        });
-        //mre.WaitOne();
+        // 2nd triangle
+        AddVertext(x, y, color);
+        AddVertext(x, y+height, color);
+        AddVertext(x+width, y+height, color);
     }
+
     //todomt - what's that?
     public static int NOPH_Graphics_new(int __bitmap)
     {
@@ -2155,7 +1941,7 @@ public class Syscalls
 
     public static void NOPH_Graphics_setGlobalAlpha(int __graphics, int alpha)
     {
-        //todomt graphics.setGlobalAlpha(alpha);
+        curr_color.A = (byte)alpha;
     }
 
     #endregion
@@ -2874,7 +2660,7 @@ public class Syscalls
     {
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
-            var mainScreen = ((App)Application.Current).RootFrame.Content as FreeMapMainScreen;
+            var mainScreen = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
             if (mainScreen != null)
             {
             var searchPageContext = new SingleSearchPageContext
@@ -3022,7 +2808,7 @@ public class Syscalls
 
     public static void NOPH_SignInUpDialogs_showWelcomeDialog(int in_signin_callback, int in_signup_callback, int in_signup_skip_callback)
     {
-        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+        GamePage mainScreen = (GamePage)GamePage.get();
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
@@ -3049,7 +2835,7 @@ public class Syscalls
 
     public static void NOPH_SignInUpDialogs_showSignInDialog(int in_signin_callback, int i_username, int i_password)
     {
-        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+        GamePage mainScreen = (GamePage)GamePage.get();
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
@@ -3070,7 +2856,7 @@ public class Syscalls
 
     public static void NOPH_SignInUpDialogs_showSignUpDialog(int in_signup_callback, int in_signup_skip_callback)
     {
-        FreeMapMainScreen mainScreen = (FreeMapMainScreen)FreeMapMainScreen.get();
+        GamePage mainScreen = (GamePage)GamePage.get();
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
@@ -3489,10 +3275,11 @@ public class Syscalls
 
     #endregion
 
-    #region browser methods
+    #region Browser methods
 
     public static void NOPH_EmbeddedBrowser_EmbeddedBrowserShow(int __url, int minx, int miny, int maxx, int maxy, int __back_text)
     {
+        //xnamt open browser control instead of full size control
         String url = CRunTime.charPtrToString(__url);
         String back_text = CRunTime.charPtrToString(__back_text);
 
