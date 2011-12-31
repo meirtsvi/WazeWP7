@@ -2818,6 +2818,10 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WazeWP7Lib\WazeWP7Lib.csproj">
+      <Project>{F2A9743D-63BD-4E70-8269-08952EDC1602}</Project>
+      <Name>WazeWP7Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZlibWP7\ZlibWP7.csproj">
       <Project>{B0EDE0F5-4C4B-498C-B08D-35B8CE76F6B5}</Project>
       <Name>ZlibWP7</Name>
