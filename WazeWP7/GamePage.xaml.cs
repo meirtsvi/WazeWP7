@@ -92,7 +92,6 @@ namespace WazeWP7
         //todomt private static Dialog waiting_dialog;
         private static int keyDownStackAddress = 0;
         private bool pushMiniMenu = false;
-        private int isLandscapeScreen;
         private bool isUIWorkerInit = false;
         private static bool dummy = false;
         private PageOrientation m_CurrentOrientation;
@@ -207,7 +206,9 @@ namespace WazeWP7
     (float)SharedGraphicsDeviceManager.Current.GraphicsDevice.Viewport.Height,
     1.0f, 100.0f);
 
-            projectionMatrix = Matrix.CreateOrthographicOffCenter(0, 480, 800, 0, -5, 10);
+            // Fixed the W/H not to be hard coded.
+            projectionMatrix = Matrix.CreateOrthographicOffCenter(0, getVisibleWidth(), getVisibleHeight(), 0, -5, 10);
+
             viewMatrix = Matrix.Identity;
             basicEffect = new BasicEffect(SharedGraphicsDeviceManager.Current.GraphicsDevice);
             basicEffect.VertexColorEnabled = true;
@@ -218,8 +219,13 @@ namespace WazeWP7
             basicEffect.LightingEnabled = false;
          //   SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(true);
 
-            SharedGraphicsDeviceManager.Current.MultiSampleCount = 4;
-            SharedGraphicsDeviceManager.Current.ApplyChanges();
+
+            // This should not run while running in the emulator
+            if (! (Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator))
+            {
+                SharedGraphicsDeviceManager.Current.MultiSampleCount = 4;
+                SharedGraphicsDeviceManager.Current.ApplyChanges();
+            }
 
         }
 
@@ -473,10 +479,6 @@ namespace WazeWP7
 
                 BuildApplicationBar();
 
-                //isLandscapeScreen = 0; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
-                isLandscapeScreen = 1; //todomt getVisibleWidth()> getVisibleHeight() ? 1 : 0;
-                this.
-
                 CopySounds();
 
                 app = new FreemapApp();
@@ -512,13 +514,10 @@ namespace WazeWP7
 
             if (IsPhoneLandscape())
             {
-                isLandscapeScreen = 1;
-
                 return _deviceHight;
             }
             else
             {
-                isLandscapeScreen = 0;
                 return _deviceWidth;
             }
 
@@ -535,12 +534,10 @@ namespace WazeWP7
 
             if (IsPhoneLandscape())
             {
-                isLandscapeScreen = 1;
                 return _deviceWidth;
             }
             else
             {
-                isLandscapeScreen = 0;
                 return _deviceHight;
             }
 
@@ -1285,17 +1282,10 @@ namespace WazeWP7
 
          */
 
-        private void checkOrientationChanged(int w, int h)
+        private void checkOrientationChanged()
         {
-            //calculate current orientation based on width and height
 
-            // Commented out, we use the size methods to calculate our size.
-            //int isLandscape = w > h ? 1 : 0;
-            //if (isLandscape == isLandscapeScreen)
-            //{
-            //    return;
-            //}
-            int isLandscape = isLandscapeScreen;
+            int isLandscape = IsPhoneLandscape() ? 1: 0; // set 1 if landscape , 0 otherwise
 
             if (!isUIWorkerInit)
             {
@@ -1304,7 +1294,7 @@ namespace WazeWP7
                 if (!isUIWorkerInit)
                     return;
             }
-            //isLandscapeScreen = isLandscape;
+            
             try
             {
                 if (c_on_orientation_change == 0)
@@ -1564,9 +1554,14 @@ namespace WazeWP7
             LayoutRoot.Height = getVisibleHeight();
             LayoutRoot.Width = getVisibleWidth();
 
+            // Fix Center for XNA with updated W/H values:
+            projectionMatrix = Matrix.CreateOrthographicOffCenter(0, getVisibleWidth(), getVisibleHeight(), 0, -5, 10);
+            basicEffect.Projection = projectionMatrix;
+
+
 
             // Call the changed event for more internal updates.
-            checkOrientationChanged(getVisibleWidth(), getVisibleHeight());
+            checkOrientationChanged();
 
         }
 

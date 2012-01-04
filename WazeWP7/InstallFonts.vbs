@@ -1,0 +1,8 @@
+﻿Set objShell = CreateObject("Shell.Application")
+Set objFolder = objShell.Namespace("<Folder or Share Location>")
+Set objFolderItem = objFolder.ParseName("<TTF File Name>")
+objFolderItem.InvokeVerb("Install")
+Set objShell = CreateObject("Shell.Application")
+Set objFolder = objShell.Namespace("<Folder or Share Location>")
+Set objFolderItem = objFolder.ParseName("<TTF File Name>")
+objFolderItem.InvokeVerb("Install")

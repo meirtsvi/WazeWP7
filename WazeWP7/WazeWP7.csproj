@@ -64,7 +64,9 @@
     <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
     <Reference Include="Microsoft.Xna.Framework.Interop" />
     <Reference Include="mscorlib.extensions" />
-    <Reference Include="NBidi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NBidi">
+      <HintPath>.\NBidi.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
