@@ -218,8 +218,13 @@ namespace WazeWP7
             basicEffect.LightingEnabled = false;
          //   SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(true);
 
-            SharedGraphicsDeviceManager.Current.MultiSampleCount = 4;
-            SharedGraphicsDeviceManager.Current.ApplyChanges();
+
+            // This should not run while running in the emulator
+            if (! (Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator))
+            {
+                SharedGraphicsDeviceManager.Current.MultiSampleCount = 4;
+                SharedGraphicsDeviceManager.Current.ApplyChanges();
+            }
 
         }
 
