@@ -5,7 +5,7 @@ libs/src/libc/CMakeFiles/c.dir/ansi.c.o
  ../include/cibyl-fileops.h
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/ansi.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/ansi.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/ctype.h
  mips-cibyl-elf/sys-root/usr/include/dirent.h
@@ -18,7 +18,7 @@ libs/src/libc/CMakeFiles/c.dir/ansi.c.o
 libs/src/libc/CMakeFiles/c.dir/printf.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/printf.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/printf.c
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
  mips-cibyl-elf/sys-root/usr/include/stddef.h
  mips-cibyl-elf/sys-root/usr/include/stdio.h
@@ -26,7 +26,7 @@ libs/src/libc/CMakeFiles/c.dir/printf.c.o
 libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/scanf_ska.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/scanf_ska.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/ctype.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
@@ -37,7 +37,7 @@ libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.o
 libs/src/libc/CMakeFiles/c.dir/smalloc.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/smalloc.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/smalloc.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
  mips-cibyl-elf/sys-root/usr/include/stddef.h
@@ -47,7 +47,7 @@ libs/src/libc/CMakeFiles/c.dir/smalloc.c.o
 libs/src/libc/CMakeFiles/c.dir/stdlib.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/stdlib.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/stdlib.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/ctype.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
@@ -58,7 +58,7 @@ libs/src/libc/CMakeFiles/c.dir/stdlib.c.o
 libs/src/libc/CMakeFiles/c.dir/string.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/string.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/string.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
  mips-cibyl-elf/sys-root/usr/include/stddef.h
@@ -70,7 +70,7 @@ libs/src/libc/CMakeFiles/c.dir/time.c.o
  ../include/cibyl-fileops.h
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/time.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/time.c
  mips-cibyl-elf/sys-root/usr/include/dirent.h
  mips-cibyl-elf/sys-root/usr/include/java/io.h
  mips-cibyl-elf/sys-root/usr/include/java/lang.h
@@ -84,7 +84,7 @@ libs/src/libc/CMakeFiles/c.dir/time.c.o
 libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libc/vsnprintf.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libc/vsnprintf.c
  mips-cibyl-elf/sys-root/usr/include/cibyl-softfloat.h
  mips-cibyl-elf/sys-root/usr/include/math.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h

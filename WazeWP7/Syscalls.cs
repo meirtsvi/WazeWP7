@@ -750,7 +750,6 @@ public class Syscalls
 
     public static int NOPH_Bitmap_getBitmapFromBytes(int buf, int size, int scale_factor)
     {
-        //todomt
         /* net.rim.device.api.system.Bitmap bitmap;
          byte[] image = new byte[size];
          int registeredHandle = 0;
@@ -1516,17 +1515,20 @@ public class Syscalls
                 // Handle user choice:
                 miniMenu.SelectionChanged += delegate(object sender, SelectionChangedEventArgs e)
                     {
-                        ListBox lb = (ListBox)sender;
-                        WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
-                        GamePage.get().GetPopupPanel().Children.Remove(miniMenu);
-                        miniMenu = null;
+                        if (GamePage.get().GetPopupPanel() != null)
+                        {
+                            ListBox lb = (ListBox)sender;
+                            WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
+                            GamePage.get().GetPopupPanel().Children.Remove(miniMenu);
+                            miniMenu = null;
 
-                        // Clear the menu
-                        miniMenuItems.Clear();
-                        MiniMenuIsOn = false;
+                            // Clear the menu
+                            miniMenuItems.Clear();
+                            MiniMenuIsOn = false;
 
-                        // Fire the user selection:
-                        selectedItem.CallCallback();
+                            // Fire the user selection:
+                            selectedItem.CallCallback();
+                        }
                     };
 
                 var popupPanel = GamePage.get().GetPopupPanel();
@@ -1871,7 +1873,7 @@ public class Syscalls
     public static void NOPH_Graphics_fillArc(int __graphics, int x, int y, int width, int height, int startAngle, int arcAngle)
     {
         float radius = (float)width;
-        int sides = 10;
+        int sides = 40;
         Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
         float max = 2 * (float)Math.PI; 
@@ -1917,11 +1919,9 @@ public class Syscalls
     }
 
     private static Color curr_color = Colors.Cyan;
-    public static List<Color> colors = new List<Color>();
     public static void NOPH_Graphics_setColor(int __graphics, int rgb)
     {
         curr_color = Color.FromArgb(0xff, (byte)((rgb >> 0x10) & 0xff), (byte)((rgb >> 8) & 0xff), (byte)(rgb & 0xff));
-        if (!colors.Contains(curr_color)) colors.Add(curr_color);
     }
 
     public static void NOPH_Graphics_setDrawingStyle(int __graphics, int drawStyle, int __on)
@@ -2415,7 +2415,10 @@ public class Syscalls
 
     public static int NOPH_TileStorage_initialize(int __ts)
     {
-        TileStorage ts = (TileStorage)CRunTime.objectRepository[__ts];
+        TileStorage ts = CRunTime.objectRepository[__ts] as TileStorage;
+        if (ts == null)
+            return 0;
+
         int ret = (int)ts.initialize();
         return ret;
     }

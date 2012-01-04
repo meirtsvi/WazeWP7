@@ -7,9 +7,9 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="332" d:DesignWidth="479">
+    d:DesignHeight="439" d:DesignWidth="471">
     
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="333" Width="480"
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="440" Width="480"
           VerticalAlignment="Top">
         <TextBlock Height="35" HorizontalAlignment="Center" Margin="129,12,135,0" Name="textBlock1" Text="Waze for Windows Phone 7.5" VerticalAlignment="Top" Width="217" FontFamily="Segoe WP Bold" TextAlignment="Center" FontSize="15" />
         <TextBlock Height="30" HorizontalAlignment="Center" Margin="102,92,91,0" Name="textBlock2" Text="Ported to Windows Phone by Meir Tsvi" VerticalAlignment="Top" FontFamily="Segoe WP" Width="275" FontSize="15" />
@@ -19,6 +19,8 @@
         <TextBlock Height="30" HorizontalAlignment="Center" Margin="179,241,179,0" Name="textBlock5" Text="meir.tsvi@live.com" VerticalAlignment="Top" FontFamily="Segoe WP" TextAlignment="Center" FontSize="15" />
         <TextBlock Height="25" HorizontalAlignment="Right" Margin="0,54,211,0" Name="textBlock6" Text="Version:" VerticalAlignment="Top" Width="90" FontFamily="Segoe WP" FontSize="15" />
         <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,51,147,0" Name="Version" Text="{Binding}" VerticalAlignment="Top" Width="93" FontFamily="Segoe WP" FontSize="17" />
-        <Button Content="OK" Height="59" HorizontalAlignment="Left" Margin="151,274,0,0" Name="button1" VerticalAlignment="Top" Width="171" FontSize="16" Click="button1_Click" />
+        <Button Content="OK" Height="59" HorizontalAlignment="Left" Margin="151,366,0,0" Name="button1" VerticalAlignment="Top" Width="171" FontSize="16" Click="button1_Click" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="142,307,0,0" Name="textBlock7" Text="Allocated Memory (MB):" VerticalAlignment="Top" Width="165" FontSize="15" />
+        <TextBox Height="65" HorizontalAlignment="Left" Margin="296,290,0,0" Name="AllocatedMemory" Text="{Binding}" VerticalAlignment="Top" Width="63" FontFamily="Segoe WP" FontSize="17" Foreground="White" Background="{x:Null}" BorderThickness="0" />
     </Grid>
 </UserControl>

@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/syscalls
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/syscalls
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/..//mips-cibyl-elf/sys-root/usr/share/syscalls")
-FILE(INSTALL DESTINATION "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/..//mips-cibyl-elf/sys-root/usr/share" TYPE DIRECTORY FILES "/cygdrive/c/downloads/shared/cibylnet/cibyl/syscalls")
+   "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/..//mips-cibyl-elf/sys-root/usr/share/syscalls")
+FILE(INSTALL DESTINATION "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/..//mips-cibyl-elf/sys-root/usr/share" TYPE DIRECTORY FILES "/cygdrive/c/users/meir/WazeWP7/cibyl/syscalls")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

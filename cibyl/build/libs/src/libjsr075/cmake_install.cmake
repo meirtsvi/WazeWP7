@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjsr075
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjsr075
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -39,10 +39,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles /cygdrive/c/downloads/shared/cibylnet/cibyl/build/syscalls/CMakeFiles/progress.marks
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles /cygdrive/c/users/meir/WazeWP7/cibyl/build/syscalls/CMakeFiles/progress.marks
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/clean
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 syscalls/CMakeFiles/cibyl-syscalls.dir/rule:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/CMakeFiles/cibyl-syscalls.dir/rule
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 syscalls/CMakeFiles/cibyl-syscalls.dir/rule
 .PHONY : syscalls/CMakeFiles/cibyl-syscalls.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ cibyl-syscalls: syscalls/CMakeFiles/cibyl-syscalls.dir/rule
 
 # fast build rule for target.
 cibyl-syscalls/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f syscalls/CMakeFiles/cibyl-syscalls.dir/build.make syscalls/CMakeFiles/cibyl-syscalls.dir/build
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f syscalls/CMakeFiles/cibyl-syscalls.dir/build.make syscalls/CMakeFiles/cibyl-syscalls.dir/build
 .PHONY : cibyl-syscalls/fast
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

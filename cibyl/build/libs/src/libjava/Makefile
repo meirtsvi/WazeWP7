@@ -39,10 +39,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libjava/CMakeFiles/progress.marks
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libjava/CMakeFiles/progress.marks
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/clean
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libs/src/libjava/CMakeFiles/java.dir/rule:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/CMakeFiles/java.dir/rule
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libjava/CMakeFiles/java.dir/rule
 .PHONY : libs/src/libjava/CMakeFiles/java.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ java: libs/src/libjava/CMakeFiles/java.dir/rule
 
 # fast build rule for target.
 java/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/build
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/build
 .PHONY : java/fast
 
 inputstream-filesystem.o: inputstream-filesystem.c.o
@@ -158,7 +158,7 @@ inputstream-filesystem.o: inputstream-filesystem.c.o
 
 # target to build an object file
 inputstream-filesystem.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.o
 .PHONY : inputstream-filesystem.c.o
 
 inputstream-filesystem.i: inputstream-filesystem.c.i
@@ -166,7 +166,7 @@ inputstream-filesystem.i: inputstream-filesystem.c.i
 
 # target to preprocess a source file
 inputstream-filesystem.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.i
 .PHONY : inputstream-filesystem.c.i
 
 inputstream-filesystem.s: inputstream-filesystem.c.s
@@ -174,7 +174,7 @@ inputstream-filesystem.s: inputstream-filesystem.c.s
 
 # target to generate assembly for a file
 inputstream-filesystem.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.s
 .PHONY : inputstream-filesystem.c.s
 
 outputstream-filesystem.o: outputstream-filesystem.c.o
@@ -182,7 +182,7 @@ outputstream-filesystem.o: outputstream-filesystem.c.o
 
 # target to build an object file
 outputstream-filesystem.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.o
 .PHONY : outputstream-filesystem.c.o
 
 outputstream-filesystem.i: outputstream-filesystem.c.i
@@ -190,7 +190,7 @@ outputstream-filesystem.i: outputstream-filesystem.c.i
 
 # target to preprocess a source file
 outputstream-filesystem.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.i
 .PHONY : outputstream-filesystem.c.i
 
 outputstream-filesystem.s: outputstream-filesystem.c.s
@@ -198,7 +198,7 @@ outputstream-filesystem.s: outputstream-filesystem.c.s
 
 # target to generate assembly for a file
 outputstream-filesystem.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libjava/CMakeFiles/java.dir/build.make libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.s
 .PHONY : outputstream-filesystem.c.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

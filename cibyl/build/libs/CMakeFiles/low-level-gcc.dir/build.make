@@ -35,18 +35,18 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Utility rule file for low-level-gcc.
 
 libs/CMakeFiles/low-level-gcc:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/downloads/shared/cibylnet/cibyl/include /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/crt0.S -o /cygdrive/c/downloads/shared/cibylnet/cibyl/build/mips-cibyl-elf/sys-root/lib/crt0.o
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs && install -d /cygdrive/c/downloads/shared/cibylnet/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5/
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/downloads/shared/cibylnet/cibyl/include /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/crtbegin.S -o /cygdrive/c/downloads/shared/cibylnet/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5//crtbegin.o
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/downloads/shared/cibylnet/cibyl/include /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/crtend.S -o /cygdrive/c/downloads/shared/cibylnet/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5//crtend.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/users/meir/WazeWP7/cibyl/include /cygdrive/c/users/meir/WazeWP7/cibyl/libs/crt0.S -o /cygdrive/c/users/meir/WazeWP7/cibyl/build/mips-cibyl-elf/sys-root/lib/crt0.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs && install -d /cygdrive/c/users/meir/WazeWP7/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5/
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/users/meir/WazeWP7/cibyl/include /cygdrive/c/users/meir/WazeWP7/cibyl/libs/crtbegin.S -o /cygdrive/c/users/meir/WazeWP7/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5//crtbegin.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs && mips-cibyl-elf-gcc -c -I /cygdrive/c/users/meir/WazeWP7/cibyl/include /cygdrive/c/users/meir/WazeWP7/cibyl/libs/crtend.S -o /cygdrive/c/users/meir/WazeWP7/cibyl/build/lib/gcc/mips-cibyl-elf/4.4.5//crtend.o
 
 low-level-gcc: libs/CMakeFiles/low-level-gcc
 low-level-gcc: libs/CMakeFiles/low-level-gcc.dir/build.make
@@ -57,10 +57,10 @@ libs/CMakeFiles/low-level-gcc.dir/build: low-level-gcc
 .PHONY : libs/CMakeFiles/low-level-gcc.dir/build
 
 libs/CMakeFiles/low-level-gcc.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs && $(CMAKE_COMMAND) -P CMakeFiles/low-level-gcc.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs && $(CMAKE_COMMAND) -P CMakeFiles/low-level-gcc.dir/cmake_clean.cmake
 .PHONY : libs/CMakeFiles/low-level-gcc.dir/clean
 
 libs/CMakeFiles/low-level-gcc.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/libs /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/CMakeFiles/low-level-gcc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/libs /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/CMakeFiles/low-level-gcc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/CMakeFiles/low-level-gcc.dir/depend
 

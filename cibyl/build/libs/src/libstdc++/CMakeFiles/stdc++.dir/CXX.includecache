@@ -12,13 +12,13 @@
 cibyl-syscall_defs.h
 ../include/cibyl-syscall_defs.h
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/alloc.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/alloc.cc
 stdlib.h
 -
 stddef.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/virtual.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/virtual.cc
 stdlib.h
 -
 stdio.h

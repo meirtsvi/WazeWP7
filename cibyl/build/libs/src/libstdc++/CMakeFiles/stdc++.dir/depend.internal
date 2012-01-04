@@ -4,14 +4,14 @@
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/alloc.cc
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/alloc.cc
  mips-cibyl-elf/sys-root/usr/include/stddef.h
  mips-cibyl-elf/sys-root/usr/include/stdlib.h
  mips-cibyl-elf/sys-root/usr/include/string.h
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/virtual.cc
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/virtual.cc
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
  mips-cibyl-elf/sys-root/usr/include/stddef.h
  mips-cibyl-elf/sys-root/usr/include/stdio.h

@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/tools
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/tools
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,21 +29,21 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-c-header;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-java-wrappers;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-cibar;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-peephole-optimize;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-syscall-db;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-mips2java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin/cibyl-config")
-FILE(INSTALL DESTINATION "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../bin" TYPE PROGRAM FILES
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-generate-c-header"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-generate-java-wrappers"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-generate-cibar"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-peephole-optimize"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-generate-syscall-db"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-mips2java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/cibyl-config"
+   "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-c-header;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-java-wrappers;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-cibar;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-peephole-optimize;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-generate-syscall-db;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-mips2java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin/cibyl-config")
+FILE(INSTALL DESTINATION "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../bin" TYPE PROGRAM FILES
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-generate-c-header"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-generate-java-wrappers"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-generate-cibar"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-peephole-optimize"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-generate-syscall-db"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-mips2java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/cibyl-config"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/..//bin/python")
-FILE(INSTALL DESTINATION "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/..//bin" TYPE DIRECTORY FILES "/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/python")
+   "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/..//bin/python")
+FILE(INSTALL DESTINATION "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/..//bin" TYPE DIRECTORY FILES "/cygdrive/c/users/meir/WazeWP7/cibyl/tools/python")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

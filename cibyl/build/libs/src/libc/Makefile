@@ -39,10 +39,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libc/CMakeFiles/progress.marks
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libc/CMakeFiles/progress.marks
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/clean
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libs/src/libc/CMakeFiles/c.dir/rule:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/CMakeFiles/c.dir/rule
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libc/CMakeFiles/c.dir/rule
 .PHONY : libs/src/libc/CMakeFiles/c.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ c : libs/src/libc/CMakeFiles/c.dir/rule
 
 # fast build rule for target.
 c/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/build
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/build
 .PHONY : c/fast
 
 ansi.o: ansi.c.o
@@ -158,7 +158,7 @@ ansi.o: ansi.c.o
 
 # target to build an object file
 ansi.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.o
 .PHONY : ansi.c.o
 
 ansi.i: ansi.c.i
@@ -166,7 +166,7 @@ ansi.i: ansi.c.i
 
 # target to preprocess a source file
 ansi.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.i
 .PHONY : ansi.c.i
 
 ansi.s: ansi.c.s
@@ -174,7 +174,7 @@ ansi.s: ansi.c.s
 
 # target to generate assembly for a file
 ansi.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/ansi.c.s
 .PHONY : ansi.c.s
 
 printf.o: printf.c.o
@@ -182,7 +182,7 @@ printf.o: printf.c.o
 
 # target to build an object file
 printf.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.o
 .PHONY : printf.c.o
 
 printf.i: printf.c.i
@@ -190,7 +190,7 @@ printf.i: printf.c.i
 
 # target to preprocess a source file
 printf.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.i
 .PHONY : printf.c.i
 
 printf.s: printf.c.s
@@ -198,7 +198,7 @@ printf.s: printf.c.s
 
 # target to generate assembly for a file
 printf.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/printf.c.s
 .PHONY : printf.c.s
 
 scanf_ska.o: scanf_ska.c.o
@@ -206,7 +206,7 @@ scanf_ska.o: scanf_ska.c.o
 
 # target to build an object file
 scanf_ska.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.o
 .PHONY : scanf_ska.c.o
 
 scanf_ska.i: scanf_ska.c.i
@@ -214,7 +214,7 @@ scanf_ska.i: scanf_ska.c.i
 
 # target to preprocess a source file
 scanf_ska.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.i
 .PHONY : scanf_ska.c.i
 
 scanf_ska.s: scanf_ska.c.s
@@ -222,7 +222,7 @@ scanf_ska.s: scanf_ska.c.s
 
 # target to generate assembly for a file
 scanf_ska.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/scanf_ska.c.s
 .PHONY : scanf_ska.c.s
 
 smalloc.o: smalloc.c.o
@@ -230,7 +230,7 @@ smalloc.o: smalloc.c.o
 
 # target to build an object file
 smalloc.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.o
 .PHONY : smalloc.c.o
 
 smalloc.i: smalloc.c.i
@@ -238,7 +238,7 @@ smalloc.i: smalloc.c.i
 
 # target to preprocess a source file
 smalloc.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.i
 .PHONY : smalloc.c.i
 
 smalloc.s: smalloc.c.s
@@ -246,7 +246,7 @@ smalloc.s: smalloc.c.s
 
 # target to generate assembly for a file
 smalloc.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/smalloc.c.s
 .PHONY : smalloc.c.s
 
 stdlib.o: stdlib.c.o
@@ -254,7 +254,7 @@ stdlib.o: stdlib.c.o
 
 # target to build an object file
 stdlib.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.o
 .PHONY : stdlib.c.o
 
 stdlib.i: stdlib.c.i
@@ -262,7 +262,7 @@ stdlib.i: stdlib.c.i
 
 # target to preprocess a source file
 stdlib.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.i
 .PHONY : stdlib.c.i
 
 stdlib.s: stdlib.c.s
@@ -270,7 +270,7 @@ stdlib.s: stdlib.c.s
 
 # target to generate assembly for a file
 stdlib.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/stdlib.c.s
 .PHONY : stdlib.c.s
 
 string.o: string.c.o
@@ -278,7 +278,7 @@ string.o: string.c.o
 
 # target to build an object file
 string.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.o
 .PHONY : string.c.o
 
 string.i: string.c.i
@@ -286,7 +286,7 @@ string.i: string.c.i
 
 # target to preprocess a source file
 string.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.i
 .PHONY : string.c.i
 
 string.s: string.c.s
@@ -294,7 +294,7 @@ string.s: string.c.s
 
 # target to generate assembly for a file
 string.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/string.c.s
 .PHONY : string.c.s
 
 time.o: time.c.o
@@ -302,7 +302,7 @@ time.o: time.c.o
 
 # target to build an object file
 time.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.o
 .PHONY : time.c.o
 
 time.i: time.c.i
@@ -310,7 +310,7 @@ time.i: time.c.i
 
 # target to preprocess a source file
 time.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.i
 .PHONY : time.c.i
 
 time.s: time.c.s
@@ -318,7 +318,7 @@ time.s: time.c.s
 
 # target to generate assembly for a file
 time.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/time.c.s
 .PHONY : time.c.s
 
 vsnprintf.o: vsnprintf.c.o
@@ -326,7 +326,7 @@ vsnprintf.o: vsnprintf.c.o
 
 # target to build an object file
 vsnprintf.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.o
 .PHONY : vsnprintf.c.o
 
 vsnprintf.i: vsnprintf.c.i
@@ -334,7 +334,7 @@ vsnprintf.i: vsnprintf.c.i
 
 # target to preprocess a source file
 vsnprintf.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.i
 .PHONY : vsnprintf.c.i
 
 vsnprintf.s: vsnprintf.c.s
@@ -342,7 +342,7 @@ vsnprintf.s: vsnprintf.c.s
 
 # target to generate assembly for a file
 vsnprintf.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libc/CMakeFiles/c.dir/build.make libs/src/libc/CMakeFiles/c.dir/vsnprintf.c.s
 .PHONY : vsnprintf.c.s
 
 # Help Target
@@ -393,6 +393,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

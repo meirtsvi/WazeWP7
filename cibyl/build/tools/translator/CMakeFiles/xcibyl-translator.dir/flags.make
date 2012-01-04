@@ -3,11 +3,11 @@
 
 # compile C with /usr/bin/gcc.exe
 # compile CXX with /usr/bin/c++.exe
-C_FLAGS = -g -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/include  
+C_FLAGS = -g -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/include  
 
 C_DEFINES = 
 
-CXX_FLAGS = -g -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external -I/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/include  
+CXX_FLAGS = -g -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external -I/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/include  
 
 CXX_DEFINES = 
 

@@ -24,7 +24,7 @@ cibyl-fileops.h
 cibyl-syscall_defs.h
 ../include/cibyl-syscall_defs.h
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/fileops.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/fileops.c
 stdlib.h
 -
 assert.h
@@ -34,7 +34,7 @@ cibyl-fileops.h
 java/lang.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/helpers.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/helpers.c
 stdio.h
 -
 stdlib.h
@@ -44,7 +44,7 @@ cibyl.h
 java/lang.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/memory-filesystem.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/memory-filesystem.c
 string.h
 -
 stdlib.h

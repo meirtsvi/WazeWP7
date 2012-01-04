@@ -166,7 +166,7 @@ string.h
 stdio.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/basicblock.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/basicblock.cc
 controller.hh
 -
 basicblock.hh
@@ -176,19 +176,19 @@ emit.hh
 config.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins.cc
 builtins.hh
 -
 config.hh
 -
 builtins/exceptions.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/exceptions.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/exceptions.cc
 builtins/softfloat.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/softfloat.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/softfloat.cc
 builtins/64-bit-muldiv.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/64-bit-muldiv.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/64-bit-muldiv.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/64-bit-muldiv.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/64-bit-muldiv.cc
 javamethod.hh
 -
 controller.hh
@@ -198,7 +198,7 @@ builtins.hh
 emit.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/exceptions.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/exceptions.cc
 javamethod.hh
 -
 controller.hh
@@ -210,7 +210,7 @@ emit.hh
 controller.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins/softfloat.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins/softfloat.cc
 javamethod.hh
 -
 controller.hh
@@ -220,7 +220,7 @@ builtins.hh
 emit.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/calltablemethod.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/calltablemethod.cc
 javamethod.hh
 -
 javamethod.hh
@@ -232,7 +232,7 @@ config.hh
 emit.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/codeblock.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/codeblock.cc
 stdio.h
 -
 entity.hh
@@ -240,7 +240,7 @@ entity.hh
 utils.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/controller.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/controller.cc
 assert.h
 -
 unistd.h
@@ -266,7 +266,7 @@ libgen.h
 unistd.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/elf.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/elf.cc
 sys/types.h
 -
 sys/stat.h
@@ -294,7 +294,7 @@ utils.h
 elf.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/emit.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/emit.cc
 stdio.h
 -
 string.h
@@ -312,7 +312,7 @@ emit.hh
 controller.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/function.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/function.cc
 string.h
 -
 stdlib.h
@@ -322,13 +322,13 @@ utils.h
 function.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/functioncolocation.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/functioncolocation.cc
 functioncolocation.hh
 -
 utils.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instruction.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instruction.cc
 assert.h
 -
 stdio.h
@@ -346,49 +346,49 @@ config.hh
 utils.h
 -
 instructions/ifmt.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/ifmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/ifmt.cc
 instructions/rfmt.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/rfmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/rfmt.cc
 instructions/muldiv.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/muldiv.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/muldiv.cc
 instructions/set.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/set.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/set.cc
 instructions/jfmt.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/jfmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/jfmt.cc
 instructions/nop.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/nop.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/nop.cc
 instructions/syscall.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/syscall.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/syscall.cc
 instructions/memory.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/memory.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/memory.cc
 instructions/fpu.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/fpu.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/fpu.cc
 instructions/catch.cc
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/catch.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/catch.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/catch.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/catch.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/fpu.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/fpu.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/ifmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/ifmt.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/jfmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/jfmt.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/memory.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/memory.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/muldiv.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/muldiv.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/nop.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/nop.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/rfmt.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/rfmt.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/set.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/set.cc
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instructions/syscall.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instructions/syscall.cc
 controller.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javaclass.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javaclass.cc
 assert.h
 -
 stdlib.h
@@ -404,7 +404,7 @@ controller.hh
 emit.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javamethod.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javamethod.cc
 stdio.h
 -
 string.h
@@ -418,23 +418,23 @@ config.hh
 emit.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips.cc
 mips.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/registerallocator.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/registerallocator.cc
 string.h
 -
 registerallocator.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/string-instruction.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/string-instruction.cc
 instruction.hh
 -
 mips.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/syscall-wrappers.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/syscall-wrappers.cc
 emit.hh
 -
 syscall-wrappers.hh
@@ -446,7 +446,7 @@ sys/stat.h
 controller.hh
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/utils.cc
+/cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/utils.cc
 sys/types.h
 -
 sys/stat.h

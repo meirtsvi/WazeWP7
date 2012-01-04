@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/include
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/include
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,15 +29,15 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibar.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-fileops.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-memoryfs.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-mips-regdef.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-syscall_defs.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl.h;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/s9.h")
-FILE(INSTALL DESTINATION "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include" TYPE FILE FILES
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibar.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibyl-fileops.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibyl-memoryfs.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibyl-mips-regdef.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibyl-syscall_defs.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/cibyl.h"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/include/s9.h"
+   "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibar.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-fileops.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-memoryfs.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-mips-regdef.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl-syscall_defs.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/cibyl.h;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include/s9.h")
+FILE(INSTALL DESTINATION "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/include" TYPE FILE FILES
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibar.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibyl-fileops.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibyl-memoryfs.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibyl-mips-regdef.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibyl-syscall_defs.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/cibyl.h"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/include/s9.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

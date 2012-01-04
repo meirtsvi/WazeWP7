@@ -71,7 +71,7 @@ using System.Collections.Generic;
             CRunTime.objectRepository = null;
             //System.gc();
 
-            int memorySize = (int)(51200000 * 4 /* Runtime.getRuntime().freeMemory() */ * CibylConfig.cibylMemoryProportion);
+            int memorySize = 512 * 1024 * 10;// (int)(51200000 * 4 /* Runtime.getRuntime().freeMemory() */ * CibylConfig.cibylMemoryProportion);
 
             if (CibylConfig.memorySize != 0)
                 memorySize = CibylConfig.memorySize;

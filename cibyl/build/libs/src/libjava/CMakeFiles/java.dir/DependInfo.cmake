@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjava/inputstream-filesystem.c" "/cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.o"
-  "/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjava/outputstream-filesystem.c" "/cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.o"
+  "/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjava/inputstream-filesystem.c" "/cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libjava/CMakeFiles/java.dir/inputstream-filesystem.c.o"
+  "/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjava/outputstream-filesystem.c" "/cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libjava/CMakeFiles/java.dir/outputstream-filesystem.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

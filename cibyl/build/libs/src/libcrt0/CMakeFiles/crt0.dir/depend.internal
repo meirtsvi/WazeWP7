@@ -5,7 +5,7 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o
  ../include/cibyl-fileops.h
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/fileops.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/fileops.c
  mips-cibyl-elf/sys-root/usr/include/assert.h
  mips-cibyl-elf/sys-root/usr/include/dirent.h
  mips-cibyl-elf/sys-root/usr/include/java/io.h
@@ -20,7 +20,7 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o
  ../include/cibyl-fileops.h
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/helpers.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/helpers.c
  mips-cibyl-elf/sys-root/usr/include/dirent.h
  mips-cibyl-elf/sys-root/usr/include/java/io.h
  mips-cibyl-elf/sys-root/usr/include/java/lang.h
@@ -35,7 +35,7 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o
  ../include/cibyl-memoryfs.h
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/memory-filesystem.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/memory-filesystem.c
  mips-cibyl-elf/sys-root/usr/include/dirent.h
  mips-cibyl-elf/sys-root/usr/include/stdarg.h
  mips-cibyl-elf/sys-root/usr/include/stddef.h

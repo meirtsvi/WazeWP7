@@ -4,6 +4,6 @@
 libs/src/libm/CMakeFiles/m.dir/math.c.o
  ../include/cibyl-syscall_defs.h
  ../include/cibyl.h
- /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libm/math.c
+ /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libm/math.c
  mips-cibyl-elf/sys-root/usr/include/cibyl-softfloat.h
  mips-cibyl-elf/sys-root/usr/include/stdint.h

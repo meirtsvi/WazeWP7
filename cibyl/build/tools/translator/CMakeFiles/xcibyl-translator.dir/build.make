@@ -35,10 +35,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Include any dependencies generated for this target.
 include tools/translator/CMakeFiles/xcibyl-translator.dir/depend.make
@@ -51,17 +51,17 @@ include tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o: ../tools/translator/external/elfutils/dwarf_abbrev_hash.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_abbrev_hash.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o.requires
@@ -74,17 +74,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o: ../tools/translator/external/elfutils/dwarf_attr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o.requires
@@ -97,17 +97,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o: ../tools/translator/external/elfutils/dwarf_attr_integrate.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_attr_integrate.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o.requires
@@ -120,17 +120,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o: ../tools/translator/external/elfutils/dwarf_begin_elf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_begin_elf.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o.requires
@@ -143,17 +143,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o: ../tools/translator/external/elfutils/dwarf_child.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_child.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_child.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_child.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_child.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_child.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_child.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o.requires
@@ -166,17 +166,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o: ../tools/translator/external/elfutils/dwarf_end.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_end.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_end.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_end.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_end.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_end.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_end.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o.requires
@@ -189,17 +189,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o: ../tools/translator/external/elfutils/dwarf_error.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_error.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_error.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_error.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_error.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_error.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_error.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o.requires
@@ -212,17 +212,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o: ../tools/translator/external/elfutils/dwarf_formaddr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formaddr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o.requires
@@ -235,17 +235,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formad
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o: ../tools/translator/external/elfutils/dwarf_formref.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o.requires
@@ -258,17 +258,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formre
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o: ../tools/translator/external/elfutils/dwarf_formref_die.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formref_die.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o.requires
@@ -281,17 +281,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formre
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o: ../tools/translator/external/elfutils/dwarf_formudata.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formudata.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formudata.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formudata.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formudata.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_formudata.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_formudata.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o.requires
@@ -304,17 +304,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formud
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o: ../tools/translator/external/elfutils/dwarf_getabbrev.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_getabbrev.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o.requires
@@ -327,17 +327,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabb
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o: ../tools/translator/external/elfutils/dwarf_hasattr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o.requires
@@ -350,17 +350,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasatt
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o: ../tools/translator/external/elfutils/dwarf_hasattr_integrate.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_hasattr_integrate.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o.requires
@@ -373,17 +373,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasatt
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o: ../tools/translator/external/elfutils/dwarf_lowpc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_lowpc.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o.requires
@@ -396,17 +396,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o: ../tools/translator/external/elfutils/dwarf_nextcu.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_nextcu.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o.requires
@@ -419,17 +419,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o: ../tools/translator/external/elfutils/dwarf_offdie.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_offdie.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_offdie.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_offdie.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_offdie.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_offdie.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_offdie.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o.requires
@@ -442,17 +442,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o: ../tools/translator/external/elfutils/dwarf_siblingof.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_siblingof.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o.requires
@@ -465,17 +465,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblin
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o: ../tools/translator/external/elfutils/dwarf_sig8_hash.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_sig8_hash.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o.requires
@@ -488,17 +488,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_h
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o: ../tools/translator/external/elfutils/dwarf_tag.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_tag.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_tag.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_tag.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_tag.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/dwarf_tag.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/dwarf_tag.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o.requires
@@ -511,17 +511,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o: ../tools/translator/external/elfutils/frame-cache.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/frame-cache.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/frame-cache.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/frame-cache.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/frame-cache.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/frame-cache.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/frame-cache.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o.requires
@@ -534,17 +534,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o: ../tools/translator/external/elfutils/libdw_alloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_alloc.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_alloc.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_alloc.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_alloc.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_alloc.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_alloc.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o.requires
@@ -557,17 +557,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o: ../tools/translator/external/elfutils/libdw_findcu.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_findcu.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_findcu.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_findcu.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_findcu.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_findcu.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_findcu.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o.requires
@@ -580,17 +580,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o: ../tools/translator/external/elfutils/libdw_form.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_form.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_form.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_form.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_form.c > CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/external/elfutils/libdw_form.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/external/elfutils/libdw_form.c -o CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o.requires
@@ -603,17 +603,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o: ../tools/translator/basicblock.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/basicblock.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/basicblock.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/basicblock.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/basicblock.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/basicblock.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/basicblock.cc > CMakeFiles/xcibyl-translator.dir/basicblock.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/basicblock.cc > CMakeFiles/xcibyl-translator.dir/basicblock.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/basicblock.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/basicblock.cc -o CMakeFiles/xcibyl-translator.dir/basicblock.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/basicblock.cc -o CMakeFiles/xcibyl-translator.dir/basicblock.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o.requires
@@ -626,17 +626,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o.provides.build
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o: ../tools/translator/builtins.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/builtins.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/builtins.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/builtins.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins.cc > CMakeFiles/xcibyl-translator.dir/builtins.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins.cc > CMakeFiles/xcibyl-translator.dir/builtins.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/builtins.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/builtins.cc -o CMakeFiles/xcibyl-translator.dir/builtins.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/builtins.cc -o CMakeFiles/xcibyl-translator.dir/builtins.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o.requires
@@ -649,17 +649,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o.provides.build: 
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o: ../tools/translator/calltablemethod.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/calltablemethod.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/calltablemethod.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/calltablemethod.cc > CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/calltablemethod.cc > CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/calltablemethod.cc -o CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/calltablemethod.cc -o CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o.requires
@@ -672,17 +672,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o.provides.
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o: ../tools/translator/codeblock.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/codeblock.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/codeblock.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/codeblock.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/codeblock.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/codeblock.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/codeblock.cc > CMakeFiles/xcibyl-translator.dir/codeblock.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/codeblock.cc > CMakeFiles/xcibyl-translator.dir/codeblock.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/codeblock.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/codeblock.cc -o CMakeFiles/xcibyl-translator.dir/codeblock.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/codeblock.cc -o CMakeFiles/xcibyl-translator.dir/codeblock.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o.requires
@@ -695,17 +695,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o.provides.build:
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o: ../tools/translator/controller.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/controller.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/controller.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/controller.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/controller.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/controller.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/controller.cc > CMakeFiles/xcibyl-translator.dir/controller.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/controller.cc > CMakeFiles/xcibyl-translator.dir/controller.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/controller.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/controller.cc -o CMakeFiles/xcibyl-translator.dir/controller.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/controller.cc -o CMakeFiles/xcibyl-translator.dir/controller.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o.requires
@@ -718,17 +718,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o.provides.build
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o: ../tools/translator/elf.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/elf.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/elf.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/elf.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/elf.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/elf.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/elf.cc > CMakeFiles/xcibyl-translator.dir/elf.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/elf.cc > CMakeFiles/xcibyl-translator.dir/elf.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/elf.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/elf.cc -o CMakeFiles/xcibyl-translator.dir/elf.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/elf.cc -o CMakeFiles/xcibyl-translator.dir/elf.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o.requires
@@ -741,17 +741,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o.provides.build: tools
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o: ../tools/translator/emit.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/emit.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/emit.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/emit.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/emit.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/emit.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/emit.cc > CMakeFiles/xcibyl-translator.dir/emit.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/emit.cc > CMakeFiles/xcibyl-translator.dir/emit.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/emit.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/emit.cc -o CMakeFiles/xcibyl-translator.dir/emit.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/emit.cc -o CMakeFiles/xcibyl-translator.dir/emit.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o.requires
@@ -764,17 +764,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o.provides.build: tool
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o: ../tools/translator/function.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/function.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/function.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/function.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/function.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/function.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/function.cc > CMakeFiles/xcibyl-translator.dir/function.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/function.cc > CMakeFiles/xcibyl-translator.dir/function.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/function.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/function.cc -o CMakeFiles/xcibyl-translator.dir/function.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/function.cc -o CMakeFiles/xcibyl-translator.dir/function.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o.requires
@@ -787,17 +787,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o.provides.build: 
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o: ../tools/translator/functioncolocation.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/functioncolocation.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/functioncolocation.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/functioncolocation.cc > CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/functioncolocation.cc > CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/functioncolocation.cc -o CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/functioncolocation.cc -o CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o.requires
@@ -810,17 +810,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o.provid
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o: ../tools/translator/instruction.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/instruction.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instruction.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/instruction.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instruction.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/instruction.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instruction.cc > CMakeFiles/xcibyl-translator.dir/instruction.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instruction.cc > CMakeFiles/xcibyl-translator.dir/instruction.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/instruction.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/instruction.cc -o CMakeFiles/xcibyl-translator.dir/instruction.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/instruction.cc -o CMakeFiles/xcibyl-translator.dir/instruction.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o.requires
@@ -833,17 +833,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o.provides.buil
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o: ../tools/translator/javamethod.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/javamethod.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javamethod.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/javamethod.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javamethod.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/javamethod.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javamethod.cc > CMakeFiles/xcibyl-translator.dir/javamethod.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javamethod.cc > CMakeFiles/xcibyl-translator.dir/javamethod.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/javamethod.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javamethod.cc -o CMakeFiles/xcibyl-translator.dir/javamethod.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javamethod.cc -o CMakeFiles/xcibyl-translator.dir/javamethod.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o.requires
@@ -856,17 +856,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o.provides.build
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o: ../tools/translator/javaclass.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/javaclass.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javaclass.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/javaclass.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javaclass.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/javaclass.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javaclass.cc > CMakeFiles/xcibyl-translator.dir/javaclass.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javaclass.cc > CMakeFiles/xcibyl-translator.dir/javaclass.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/javaclass.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/javaclass.cc -o CMakeFiles/xcibyl-translator.dir/javaclass.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/javaclass.cc -o CMakeFiles/xcibyl-translator.dir/javaclass.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o.requires
@@ -879,17 +879,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o.provides.build:
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o: ../tools/translator/mips.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/mips.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/mips.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/mips.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips.cc > CMakeFiles/xcibyl-translator.dir/mips.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips.cc > CMakeFiles/xcibyl-translator.dir/mips.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/mips.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips.cc -o CMakeFiles/xcibyl-translator.dir/mips.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips.cc -o CMakeFiles/xcibyl-translator.dir/mips.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o.requires
@@ -902,17 +902,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o.provides.build: tool
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o: ../tools/translator/mips-dwarf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips-dwarf.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips-dwarf.c
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips-dwarf.c > CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips-dwarf.c > CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/mips-dwarf.c -o CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/gcc.exe  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/mips-dwarf.c -o CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o.requires
@@ -925,17 +925,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o.provides.build:
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o: ../tools/translator/registerallocator.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/registerallocator.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/registerallocator.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/registerallocator.cc > CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/registerallocator.cc > CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/registerallocator.cc -o CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/registerallocator.cc -o CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o.requires
@@ -948,17 +948,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o.provide
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o: ../tools/translator/string-instruction.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/string-instruction.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/string-instruction.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/string-instruction.cc > CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/string-instruction.cc > CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/string-instruction.cc -o CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/string-instruction.cc -o CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o.requires
@@ -971,17 +971,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o.provid
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o: ../tools/translator/syscall-wrappers.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/syscall-wrappers.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/syscall-wrappers.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/syscall-wrappers.cc > CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/syscall-wrappers.cc > CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/syscall-wrappers.cc -o CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/syscall-wrappers.cc -o CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o.requires
@@ -994,17 +994,17 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o.provides
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o: tools/translator/CMakeFiles/xcibyl-translator.dir/flags.make
 tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o: ../tools/translator/utils.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/utils.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/utils.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/xcibyl-translator.dir/utils.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/utils.cc
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xcibyl-translator.dir/utils.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/utils.cc > CMakeFiles/xcibyl-translator.dir/utils.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/utils.cc > CMakeFiles/xcibyl-translator.dir/utils.cc.i
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xcibyl-translator.dir/utils.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator/utils.cc -o CMakeFiles/xcibyl-translator.dir/utils.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator/utils.cc -o CMakeFiles/xcibyl-translator.dir/utils.cc.s
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o.requires:
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o.requires
@@ -1108,7 +1108,7 @@ bin/xcibyl-translator.exe: tools/translator/CMakeFiles/xcibyl-translator.dir/uti
 bin/xcibyl-translator.exe: tools/translator/CMakeFiles/xcibyl-translator.dir/build.make
 bin/xcibyl-translator.exe: tools/translator/CMakeFiles/xcibyl-translator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../bin/xcibyl-translator.exe"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xcibyl-translator.dir/link.txt --verbose=$(VERBOSE)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xcibyl-translator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/translator/CMakeFiles/xcibyl-translator.dir/build: bin/xcibyl-translator.exe
@@ -1159,10 +1159,10 @@ tools/translator/CMakeFiles/xcibyl-translator.dir/requires: tools/translator/CMa
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/requires
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator && $(CMAKE_COMMAND) -P CMakeFiles/xcibyl-translator.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator && $(CMAKE_COMMAND) -P CMakeFiles/xcibyl-translator.dir/cmake_clean.cmake
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/clean
 
 tools/translator/CMakeFiles/xcibyl-translator.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/tools/translator /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator/CMakeFiles/xcibyl-translator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/tools/translator /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator/CMakeFiles/xcibyl-translator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/depend
 

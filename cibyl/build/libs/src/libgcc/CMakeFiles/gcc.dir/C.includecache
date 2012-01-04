@@ -12,7 +12,7 @@
 cibyl-syscall_defs.h
 ../include/cibyl-syscall_defs.h
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/../libc/vsnprintf.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/../libc/vsnprintf.c
 stdio.h
 -
 string.h
@@ -22,13 +22,13 @@ stdarg.h
 math.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/64-bit-ops.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/64-bit-ops.c
 stdint.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/cache.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/cache.c
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/soft-float.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/soft-float.c
 cibyl-softfloat.h
 -
 stdlib.h
@@ -36,7 +36,7 @@ stdlib.h
 ctype.h
 -
 ../libc/vsnprintf.c
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/../libc/vsnprintf.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/../libc/vsnprintf.c
 
 mips-cibyl-elf/sys-root/usr/include/cibyl-softfloat.h
 cibyl.h

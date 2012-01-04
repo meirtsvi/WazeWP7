@@ -35,10 +35,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Include any dependencies generated for this target.
 include libs/src/libgcc/CMakeFiles/gcc.dir/depend.make
@@ -51,17 +51,17 @@ include libs/src/libgcc/CMakeFiles/gcc.dir/flags.make
 
 libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o: libs/src/libgcc/CMakeFiles/gcc.dir/flags.make
 libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o: ../libs/src/libgcc/64-bit-ops.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/64-bit-ops.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/64-bit-ops.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/64-bit-ops.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/64-bit-ops.c
 
 libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gcc.dir/64-bit-ops.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/64-bit-ops.c > CMakeFiles/gcc.dir/64-bit-ops.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/64-bit-ops.c > CMakeFiles/gcc.dir/64-bit-ops.c.i
 
 libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gcc.dir/64-bit-ops.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/64-bit-ops.c -o CMakeFiles/gcc.dir/64-bit-ops.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/64-bit-ops.c -o CMakeFiles/gcc.dir/64-bit-ops.c.s
 
 libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o.requires:
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o.requires
@@ -74,17 +74,17 @@ libs/src/libgcc/CMakeFiles/gcc.dir/64-bit-ops.c.o.provides.build: libs/src/libgc
 
 libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o: libs/src/libgcc/CMakeFiles/gcc.dir/flags.make
 libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o: ../libs/src/libgcc/cache.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/cache.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/cache.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/cache.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/cache.c
 
 libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gcc.dir/cache.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/cache.c > CMakeFiles/gcc.dir/cache.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/cache.c > CMakeFiles/gcc.dir/cache.c.i
 
 libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gcc.dir/cache.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/cache.c -o CMakeFiles/gcc.dir/cache.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/cache.c -o CMakeFiles/gcc.dir/cache.c.s
 
 libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o.requires:
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o.requires
@@ -97,17 +97,17 @@ libs/src/libgcc/CMakeFiles/gcc.dir/cache.c.o.provides.build: libs/src/libgcc/CMa
 
 libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.o: libs/src/libgcc/CMakeFiles/gcc.dir/flags.make
 libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.o: ../libs/src/libgcc/soft-float.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/soft-float.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/soft-float.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gcc.dir/soft-float.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/soft-float.c
 
 libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gcc.dir/soft-float.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/soft-float.c > CMakeFiles/gcc.dir/soft-float.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/soft-float.c > CMakeFiles/gcc.dir/soft-float.c.i
 
 libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gcc.dir/soft-float.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc/soft-float.c -o CMakeFiles/gcc.dir/soft-float.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc/soft-float.c -o CMakeFiles/gcc.dir/soft-float.c.s
 
 libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.o.requires:
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/soft-float.c.o.requires
@@ -133,8 +133,8 @@ lib/gcc/mips-cibyl-elf/4.4.5/libgcc.a: libs/src/libgcc/CMakeFiles/gcc.dir/soft-f
 lib/gcc/mips-cibyl-elf/4.4.5/libgcc.a: libs/src/libgcc/CMakeFiles/gcc.dir/build.make
 lib/gcc/mips-cibyl-elf/4.4.5/libgcc.a: libs/src/libgcc/CMakeFiles/gcc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library ../../../lib/gcc/mips-cibyl-elf/4.4.5/libgcc.a"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -P CMakeFiles/gcc.dir/cmake_clean_target.cmake
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gcc.dir/link.txt --verbose=$(VERBOSE)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -P CMakeFiles/gcc.dir/cmake_clean_target.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gcc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libs/src/libgcc/CMakeFiles/gcc.dir/build: lib/gcc/mips-cibyl-elf/4.4.5/libgcc.a
@@ -146,10 +146,10 @@ libs/src/libgcc/CMakeFiles/gcc.dir/requires: libs/src/libgcc/CMakeFiles/gcc.dir/
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/requires
 
 libs/src/libgcc/CMakeFiles/gcc.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -P CMakeFiles/gcc.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc && $(CMAKE_COMMAND) -P CMakeFiles/gcc.dir/cmake_clean.cmake
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/clean
 
 libs/src/libgcc/CMakeFiles/gcc.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libgcc /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libgcc/CMakeFiles/gcc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libgcc /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libgcc/CMakeFiles/gcc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/src/libgcc/CMakeFiles/gcc.dir/depend
 

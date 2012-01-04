@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/java
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/java
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,14 +29,14 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/CRunTime.java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/CibylConfig.java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/Console.java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/GameScreenCanvas.java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/Main.java;/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/StandaloneMain.java")
-FILE(INSTALL DESTINATION "/cygdrive/c/downloads/shared/cibylnet/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java" TYPE FILE FILES
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/CRunTime.java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/CibylConfig.java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/Console.java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/GameScreenCanvas.java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/Main.java"
-    "/cygdrive/c/downloads/shared/cibylnet/cibyl/java/StandaloneMain.java"
+   "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/CRunTime.java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/CibylConfig.java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/Console.java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/GameScreenCanvas.java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/Main.java;/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java/StandaloneMain.java")
+FILE(INSTALL DESTINATION "/cygdrive/c/users/meir/WazeWP7/cibyl/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/java" TYPE FILE FILES
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/CRunTime.java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/CibylConfig.java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/Console.java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/GameScreenCanvas.java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/Main.java"
+    "/cygdrive/c/users/meir/WazeWP7/cibyl/java/StandaloneMain.java"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

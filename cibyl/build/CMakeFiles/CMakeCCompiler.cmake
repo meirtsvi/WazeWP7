@@ -41,4 +41,4 @@ SET(CMAKE_C_HAS_ISYSROOT "")
 
 
 SET(CMAKE_C_IMPLICIT_LINK_LIBRARIES "cygwin;user32;kernel32;advapi32;shell32")
-SET(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/i686-pc-cygwin/4.3.4;/usr/lib")
+SET(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/i686-pc-cygwin/4.5.3;/usr/lib")

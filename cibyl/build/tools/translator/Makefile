@@ -39,10 +39,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles /cygdrive/c/downloads/shared/cibylnet/cibyl/build/tools/translator/CMakeFiles/progress.marks
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles /cygdrive/c/users/meir/WazeWP7/cibyl/build/tools/translator/CMakeFiles/progress.marks
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/clean
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/translator/CMakeFiles/xcibyl-translator.dir/rule:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/CMakeFiles/xcibyl-translator.dir/rule
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 tools/translator/CMakeFiles/xcibyl-translator.dir/rule
 .PHONY : tools/translator/CMakeFiles/xcibyl-translator.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ xcibyl-translator: tools/translator/CMakeFiles/xcibyl-translator.dir/rule
 
 # fast build rule for target.
 xcibyl-translator/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/build
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/build
 .PHONY : xcibyl-translator/fast
 
 basicblock.o: basicblock.cc.o
@@ -158,7 +158,7 @@ basicblock.o: basicblock.cc.o
 
 # target to build an object file
 basicblock.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.o
 .PHONY : basicblock.cc.o
 
 basicblock.i: basicblock.cc.i
@@ -166,7 +166,7 @@ basicblock.i: basicblock.cc.i
 
 # target to preprocess a source file
 basicblock.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.i
 .PHONY : basicblock.cc.i
 
 basicblock.s: basicblock.cc.s
@@ -174,7 +174,7 @@ basicblock.s: basicblock.cc.s
 
 # target to generate assembly for a file
 basicblock.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/basicblock.cc.s
 .PHONY : basicblock.cc.s
 
 builtins.o: builtins.cc.o
@@ -182,7 +182,7 @@ builtins.o: builtins.cc.o
 
 # target to build an object file
 builtins.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.o
 .PHONY : builtins.cc.o
 
 builtins.i: builtins.cc.i
@@ -190,7 +190,7 @@ builtins.i: builtins.cc.i
 
 # target to preprocess a source file
 builtins.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.i
 .PHONY : builtins.cc.i
 
 builtins.s: builtins.cc.s
@@ -198,7 +198,7 @@ builtins.s: builtins.cc.s
 
 # target to generate assembly for a file
 builtins.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/builtins.cc.s
 .PHONY : builtins.cc.s
 
 calltablemethod.o: calltablemethod.cc.o
@@ -206,7 +206,7 @@ calltablemethod.o: calltablemethod.cc.o
 
 # target to build an object file
 calltablemethod.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.o
 .PHONY : calltablemethod.cc.o
 
 calltablemethod.i: calltablemethod.cc.i
@@ -214,7 +214,7 @@ calltablemethod.i: calltablemethod.cc.i
 
 # target to preprocess a source file
 calltablemethod.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.i
 .PHONY : calltablemethod.cc.i
 
 calltablemethod.s: calltablemethod.cc.s
@@ -222,7 +222,7 @@ calltablemethod.s: calltablemethod.cc.s
 
 # target to generate assembly for a file
 calltablemethod.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/calltablemethod.cc.s
 .PHONY : calltablemethod.cc.s
 
 codeblock.o: codeblock.cc.o
@@ -230,7 +230,7 @@ codeblock.o: codeblock.cc.o
 
 # target to build an object file
 codeblock.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.o
 .PHONY : codeblock.cc.o
 
 codeblock.i: codeblock.cc.i
@@ -238,7 +238,7 @@ codeblock.i: codeblock.cc.i
 
 # target to preprocess a source file
 codeblock.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.i
 .PHONY : codeblock.cc.i
 
 codeblock.s: codeblock.cc.s
@@ -246,7 +246,7 @@ codeblock.s: codeblock.cc.s
 
 # target to generate assembly for a file
 codeblock.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/codeblock.cc.s
 .PHONY : codeblock.cc.s
 
 controller.o: controller.cc.o
@@ -254,7 +254,7 @@ controller.o: controller.cc.o
 
 # target to build an object file
 controller.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.o
 .PHONY : controller.cc.o
 
 controller.i: controller.cc.i
@@ -262,7 +262,7 @@ controller.i: controller.cc.i
 
 # target to preprocess a source file
 controller.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.i
 .PHONY : controller.cc.i
 
 controller.s: controller.cc.s
@@ -270,7 +270,7 @@ controller.s: controller.cc.s
 
 # target to generate assembly for a file
 controller.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/controller.cc.s
 .PHONY : controller.cc.s
 
 elf.o: elf.cc.o
@@ -278,7 +278,7 @@ elf.o: elf.cc.o
 
 # target to build an object file
 elf.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.o
 .PHONY : elf.cc.o
 
 elf.i: elf.cc.i
@@ -286,7 +286,7 @@ elf.i: elf.cc.i
 
 # target to preprocess a source file
 elf.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.i
 .PHONY : elf.cc.i
 
 elf.s: elf.cc.s
@@ -294,7 +294,7 @@ elf.s: elf.cc.s
 
 # target to generate assembly for a file
 elf.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/elf.cc.s
 .PHONY : elf.cc.s
 
 emit.o: emit.cc.o
@@ -302,7 +302,7 @@ emit.o: emit.cc.o
 
 # target to build an object file
 emit.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.o
 .PHONY : emit.cc.o
 
 emit.i: emit.cc.i
@@ -310,7 +310,7 @@ emit.i: emit.cc.i
 
 # target to preprocess a source file
 emit.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.i
 .PHONY : emit.cc.i
 
 emit.s: emit.cc.s
@@ -318,7 +318,7 @@ emit.s: emit.cc.s
 
 # target to generate assembly for a file
 emit.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/emit.cc.s
 .PHONY : emit.cc.s
 
 external/elfutils/dwarf_abbrev_hash.o: external/elfutils/dwarf_abbrev_hash.c.o
@@ -326,7 +326,7 @@ external/elfutils/dwarf_abbrev_hash.o: external/elfutils/dwarf_abbrev_hash.c.o
 
 # target to build an object file
 external/elfutils/dwarf_abbrev_hash.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.o
 .PHONY : external/elfutils/dwarf_abbrev_hash.c.o
 
 external/elfutils/dwarf_abbrev_hash.i: external/elfutils/dwarf_abbrev_hash.c.i
@@ -334,7 +334,7 @@ external/elfutils/dwarf_abbrev_hash.i: external/elfutils/dwarf_abbrev_hash.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_abbrev_hash.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.i
 .PHONY : external/elfutils/dwarf_abbrev_hash.c.i
 
 external/elfutils/dwarf_abbrev_hash.s: external/elfutils/dwarf_abbrev_hash.c.s
@@ -342,7 +342,7 @@ external/elfutils/dwarf_abbrev_hash.s: external/elfutils/dwarf_abbrev_hash.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_abbrev_hash.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_abbrev_hash.c.s
 .PHONY : external/elfutils/dwarf_abbrev_hash.c.s
 
 external/elfutils/dwarf_attr.o: external/elfutils/dwarf_attr.c.o
@@ -350,7 +350,7 @@ external/elfutils/dwarf_attr.o: external/elfutils/dwarf_attr.c.o
 
 # target to build an object file
 external/elfutils/dwarf_attr.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.o
 .PHONY : external/elfutils/dwarf_attr.c.o
 
 external/elfutils/dwarf_attr.i: external/elfutils/dwarf_attr.c.i
@@ -358,7 +358,7 @@ external/elfutils/dwarf_attr.i: external/elfutils/dwarf_attr.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_attr.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.i
 .PHONY : external/elfutils/dwarf_attr.c.i
 
 external/elfutils/dwarf_attr.s: external/elfutils/dwarf_attr.c.s
@@ -366,7 +366,7 @@ external/elfutils/dwarf_attr.s: external/elfutils/dwarf_attr.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_attr.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr.c.s
 .PHONY : external/elfutils/dwarf_attr.c.s
 
 external/elfutils/dwarf_attr_integrate.o: external/elfutils/dwarf_attr_integrate.c.o
@@ -374,7 +374,7 @@ external/elfutils/dwarf_attr_integrate.o: external/elfutils/dwarf_attr_integrate
 
 # target to build an object file
 external/elfutils/dwarf_attr_integrate.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.o
 .PHONY : external/elfutils/dwarf_attr_integrate.c.o
 
 external/elfutils/dwarf_attr_integrate.i: external/elfutils/dwarf_attr_integrate.c.i
@@ -382,7 +382,7 @@ external/elfutils/dwarf_attr_integrate.i: external/elfutils/dwarf_attr_integrate
 
 # target to preprocess a source file
 external/elfutils/dwarf_attr_integrate.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.i
 .PHONY : external/elfutils/dwarf_attr_integrate.c.i
 
 external/elfutils/dwarf_attr_integrate.s: external/elfutils/dwarf_attr_integrate.c.s
@@ -390,7 +390,7 @@ external/elfutils/dwarf_attr_integrate.s: external/elfutils/dwarf_attr_integrate
 
 # target to generate assembly for a file
 external/elfutils/dwarf_attr_integrate.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_attr_integrate.c.s
 .PHONY : external/elfutils/dwarf_attr_integrate.c.s
 
 external/elfutils/dwarf_begin_elf.o: external/elfutils/dwarf_begin_elf.c.o
@@ -398,7 +398,7 @@ external/elfutils/dwarf_begin_elf.o: external/elfutils/dwarf_begin_elf.c.o
 
 # target to build an object file
 external/elfutils/dwarf_begin_elf.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.o
 .PHONY : external/elfutils/dwarf_begin_elf.c.o
 
 external/elfutils/dwarf_begin_elf.i: external/elfutils/dwarf_begin_elf.c.i
@@ -406,7 +406,7 @@ external/elfutils/dwarf_begin_elf.i: external/elfutils/dwarf_begin_elf.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_begin_elf.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.i
 .PHONY : external/elfutils/dwarf_begin_elf.c.i
 
 external/elfutils/dwarf_begin_elf.s: external/elfutils/dwarf_begin_elf.c.s
@@ -414,7 +414,7 @@ external/elfutils/dwarf_begin_elf.s: external/elfutils/dwarf_begin_elf.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_begin_elf.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_begin_elf.c.s
 .PHONY : external/elfutils/dwarf_begin_elf.c.s
 
 external/elfutils/dwarf_child.o: external/elfutils/dwarf_child.c.o
@@ -422,7 +422,7 @@ external/elfutils/dwarf_child.o: external/elfutils/dwarf_child.c.o
 
 # target to build an object file
 external/elfutils/dwarf_child.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.o
 .PHONY : external/elfutils/dwarf_child.c.o
 
 external/elfutils/dwarf_child.i: external/elfutils/dwarf_child.c.i
@@ -430,7 +430,7 @@ external/elfutils/dwarf_child.i: external/elfutils/dwarf_child.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_child.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.i
 .PHONY : external/elfutils/dwarf_child.c.i
 
 external/elfutils/dwarf_child.s: external/elfutils/dwarf_child.c.s
@@ -438,7 +438,7 @@ external/elfutils/dwarf_child.s: external/elfutils/dwarf_child.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_child.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_child.c.s
 .PHONY : external/elfutils/dwarf_child.c.s
 
 external/elfutils/dwarf_end.o: external/elfutils/dwarf_end.c.o
@@ -446,7 +446,7 @@ external/elfutils/dwarf_end.o: external/elfutils/dwarf_end.c.o
 
 # target to build an object file
 external/elfutils/dwarf_end.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.o
 .PHONY : external/elfutils/dwarf_end.c.o
 
 external/elfutils/dwarf_end.i: external/elfutils/dwarf_end.c.i
@@ -454,7 +454,7 @@ external/elfutils/dwarf_end.i: external/elfutils/dwarf_end.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_end.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.i
 .PHONY : external/elfutils/dwarf_end.c.i
 
 external/elfutils/dwarf_end.s: external/elfutils/dwarf_end.c.s
@@ -462,7 +462,7 @@ external/elfutils/dwarf_end.s: external/elfutils/dwarf_end.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_end.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_end.c.s
 .PHONY : external/elfutils/dwarf_end.c.s
 
 external/elfutils/dwarf_error.o: external/elfutils/dwarf_error.c.o
@@ -470,7 +470,7 @@ external/elfutils/dwarf_error.o: external/elfutils/dwarf_error.c.o
 
 # target to build an object file
 external/elfutils/dwarf_error.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.o
 .PHONY : external/elfutils/dwarf_error.c.o
 
 external/elfutils/dwarf_error.i: external/elfutils/dwarf_error.c.i
@@ -478,7 +478,7 @@ external/elfutils/dwarf_error.i: external/elfutils/dwarf_error.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_error.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.i
 .PHONY : external/elfutils/dwarf_error.c.i
 
 external/elfutils/dwarf_error.s: external/elfutils/dwarf_error.c.s
@@ -486,7 +486,7 @@ external/elfutils/dwarf_error.s: external/elfutils/dwarf_error.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_error.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_error.c.s
 .PHONY : external/elfutils/dwarf_error.c.s
 
 external/elfutils/dwarf_formaddr.o: external/elfutils/dwarf_formaddr.c.o
@@ -494,7 +494,7 @@ external/elfutils/dwarf_formaddr.o: external/elfutils/dwarf_formaddr.c.o
 
 # target to build an object file
 external/elfutils/dwarf_formaddr.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.o
 .PHONY : external/elfutils/dwarf_formaddr.c.o
 
 external/elfutils/dwarf_formaddr.i: external/elfutils/dwarf_formaddr.c.i
@@ -502,7 +502,7 @@ external/elfutils/dwarf_formaddr.i: external/elfutils/dwarf_formaddr.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_formaddr.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.i
 .PHONY : external/elfutils/dwarf_formaddr.c.i
 
 external/elfutils/dwarf_formaddr.s: external/elfutils/dwarf_formaddr.c.s
@@ -510,7 +510,7 @@ external/elfutils/dwarf_formaddr.s: external/elfutils/dwarf_formaddr.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_formaddr.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formaddr.c.s
 .PHONY : external/elfutils/dwarf_formaddr.c.s
 
 external/elfutils/dwarf_formref.o: external/elfutils/dwarf_formref.c.o
@@ -518,7 +518,7 @@ external/elfutils/dwarf_formref.o: external/elfutils/dwarf_formref.c.o
 
 # target to build an object file
 external/elfutils/dwarf_formref.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.o
 .PHONY : external/elfutils/dwarf_formref.c.o
 
 external/elfutils/dwarf_formref.i: external/elfutils/dwarf_formref.c.i
@@ -526,7 +526,7 @@ external/elfutils/dwarf_formref.i: external/elfutils/dwarf_formref.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_formref.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.i
 .PHONY : external/elfutils/dwarf_formref.c.i
 
 external/elfutils/dwarf_formref.s: external/elfutils/dwarf_formref.c.s
@@ -534,7 +534,7 @@ external/elfutils/dwarf_formref.s: external/elfutils/dwarf_formref.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_formref.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref.c.s
 .PHONY : external/elfutils/dwarf_formref.c.s
 
 external/elfutils/dwarf_formref_die.o: external/elfutils/dwarf_formref_die.c.o
@@ -542,7 +542,7 @@ external/elfutils/dwarf_formref_die.o: external/elfutils/dwarf_formref_die.c.o
 
 # target to build an object file
 external/elfutils/dwarf_formref_die.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.o
 .PHONY : external/elfutils/dwarf_formref_die.c.o
 
 external/elfutils/dwarf_formref_die.i: external/elfutils/dwarf_formref_die.c.i
@@ -550,7 +550,7 @@ external/elfutils/dwarf_formref_die.i: external/elfutils/dwarf_formref_die.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_formref_die.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.i
 .PHONY : external/elfutils/dwarf_formref_die.c.i
 
 external/elfutils/dwarf_formref_die.s: external/elfutils/dwarf_formref_die.c.s
@@ -558,7 +558,7 @@ external/elfutils/dwarf_formref_die.s: external/elfutils/dwarf_formref_die.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_formref_die.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formref_die.c.s
 .PHONY : external/elfutils/dwarf_formref_die.c.s
 
 external/elfutils/dwarf_formudata.o: external/elfutils/dwarf_formudata.c.o
@@ -566,7 +566,7 @@ external/elfutils/dwarf_formudata.o: external/elfutils/dwarf_formudata.c.o
 
 # target to build an object file
 external/elfutils/dwarf_formudata.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.o
 .PHONY : external/elfutils/dwarf_formudata.c.o
 
 external/elfutils/dwarf_formudata.i: external/elfutils/dwarf_formudata.c.i
@@ -574,7 +574,7 @@ external/elfutils/dwarf_formudata.i: external/elfutils/dwarf_formudata.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_formudata.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.i
 .PHONY : external/elfutils/dwarf_formudata.c.i
 
 external/elfutils/dwarf_formudata.s: external/elfutils/dwarf_formudata.c.s
@@ -582,7 +582,7 @@ external/elfutils/dwarf_formudata.s: external/elfutils/dwarf_formudata.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_formudata.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_formudata.c.s
 .PHONY : external/elfutils/dwarf_formudata.c.s
 
 external/elfutils/dwarf_getabbrev.o: external/elfutils/dwarf_getabbrev.c.o
@@ -590,7 +590,7 @@ external/elfutils/dwarf_getabbrev.o: external/elfutils/dwarf_getabbrev.c.o
 
 # target to build an object file
 external/elfutils/dwarf_getabbrev.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.o
 .PHONY : external/elfutils/dwarf_getabbrev.c.o
 
 external/elfutils/dwarf_getabbrev.i: external/elfutils/dwarf_getabbrev.c.i
@@ -598,7 +598,7 @@ external/elfutils/dwarf_getabbrev.i: external/elfutils/dwarf_getabbrev.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_getabbrev.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.i
 .PHONY : external/elfutils/dwarf_getabbrev.c.i
 
 external/elfutils/dwarf_getabbrev.s: external/elfutils/dwarf_getabbrev.c.s
@@ -606,7 +606,7 @@ external/elfutils/dwarf_getabbrev.s: external/elfutils/dwarf_getabbrev.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_getabbrev.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_getabbrev.c.s
 .PHONY : external/elfutils/dwarf_getabbrev.c.s
 
 external/elfutils/dwarf_hasattr.o: external/elfutils/dwarf_hasattr.c.o
@@ -614,7 +614,7 @@ external/elfutils/dwarf_hasattr.o: external/elfutils/dwarf_hasattr.c.o
 
 # target to build an object file
 external/elfutils/dwarf_hasattr.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.o
 .PHONY : external/elfutils/dwarf_hasattr.c.o
 
 external/elfutils/dwarf_hasattr.i: external/elfutils/dwarf_hasattr.c.i
@@ -622,7 +622,7 @@ external/elfutils/dwarf_hasattr.i: external/elfutils/dwarf_hasattr.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_hasattr.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.i
 .PHONY : external/elfutils/dwarf_hasattr.c.i
 
 external/elfutils/dwarf_hasattr.s: external/elfutils/dwarf_hasattr.c.s
@@ -630,7 +630,7 @@ external/elfutils/dwarf_hasattr.s: external/elfutils/dwarf_hasattr.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_hasattr.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr.c.s
 .PHONY : external/elfutils/dwarf_hasattr.c.s
 
 external/elfutils/dwarf_hasattr_integrate.o: external/elfutils/dwarf_hasattr_integrate.c.o
@@ -638,7 +638,7 @@ external/elfutils/dwarf_hasattr_integrate.o: external/elfutils/dwarf_hasattr_int
 
 # target to build an object file
 external/elfutils/dwarf_hasattr_integrate.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.o
 .PHONY : external/elfutils/dwarf_hasattr_integrate.c.o
 
 external/elfutils/dwarf_hasattr_integrate.i: external/elfutils/dwarf_hasattr_integrate.c.i
@@ -646,7 +646,7 @@ external/elfutils/dwarf_hasattr_integrate.i: external/elfutils/dwarf_hasattr_int
 
 # target to preprocess a source file
 external/elfutils/dwarf_hasattr_integrate.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.i
 .PHONY : external/elfutils/dwarf_hasattr_integrate.c.i
 
 external/elfutils/dwarf_hasattr_integrate.s: external/elfutils/dwarf_hasattr_integrate.c.s
@@ -654,7 +654,7 @@ external/elfutils/dwarf_hasattr_integrate.s: external/elfutils/dwarf_hasattr_int
 
 # target to generate assembly for a file
 external/elfutils/dwarf_hasattr_integrate.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_hasattr_integrate.c.s
 .PHONY : external/elfutils/dwarf_hasattr_integrate.c.s
 
 external/elfutils/dwarf_lowpc.o: external/elfutils/dwarf_lowpc.c.o
@@ -662,7 +662,7 @@ external/elfutils/dwarf_lowpc.o: external/elfutils/dwarf_lowpc.c.o
 
 # target to build an object file
 external/elfutils/dwarf_lowpc.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.o
 .PHONY : external/elfutils/dwarf_lowpc.c.o
 
 external/elfutils/dwarf_lowpc.i: external/elfutils/dwarf_lowpc.c.i
@@ -670,7 +670,7 @@ external/elfutils/dwarf_lowpc.i: external/elfutils/dwarf_lowpc.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_lowpc.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.i
 .PHONY : external/elfutils/dwarf_lowpc.c.i
 
 external/elfutils/dwarf_lowpc.s: external/elfutils/dwarf_lowpc.c.s
@@ -678,7 +678,7 @@ external/elfutils/dwarf_lowpc.s: external/elfutils/dwarf_lowpc.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_lowpc.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_lowpc.c.s
 .PHONY : external/elfutils/dwarf_lowpc.c.s
 
 external/elfutils/dwarf_nextcu.o: external/elfutils/dwarf_nextcu.c.o
@@ -686,7 +686,7 @@ external/elfutils/dwarf_nextcu.o: external/elfutils/dwarf_nextcu.c.o
 
 # target to build an object file
 external/elfutils/dwarf_nextcu.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.o
 .PHONY : external/elfutils/dwarf_nextcu.c.o
 
 external/elfutils/dwarf_nextcu.i: external/elfutils/dwarf_nextcu.c.i
@@ -694,7 +694,7 @@ external/elfutils/dwarf_nextcu.i: external/elfutils/dwarf_nextcu.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_nextcu.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.i
 .PHONY : external/elfutils/dwarf_nextcu.c.i
 
 external/elfutils/dwarf_nextcu.s: external/elfutils/dwarf_nextcu.c.s
@@ -702,7 +702,7 @@ external/elfutils/dwarf_nextcu.s: external/elfutils/dwarf_nextcu.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_nextcu.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_nextcu.c.s
 .PHONY : external/elfutils/dwarf_nextcu.c.s
 
 external/elfutils/dwarf_offdie.o: external/elfutils/dwarf_offdie.c.o
@@ -710,7 +710,7 @@ external/elfutils/dwarf_offdie.o: external/elfutils/dwarf_offdie.c.o
 
 # target to build an object file
 external/elfutils/dwarf_offdie.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.o
 .PHONY : external/elfutils/dwarf_offdie.c.o
 
 external/elfutils/dwarf_offdie.i: external/elfutils/dwarf_offdie.c.i
@@ -718,7 +718,7 @@ external/elfutils/dwarf_offdie.i: external/elfutils/dwarf_offdie.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_offdie.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.i
 .PHONY : external/elfutils/dwarf_offdie.c.i
 
 external/elfutils/dwarf_offdie.s: external/elfutils/dwarf_offdie.c.s
@@ -726,7 +726,7 @@ external/elfutils/dwarf_offdie.s: external/elfutils/dwarf_offdie.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_offdie.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_offdie.c.s
 .PHONY : external/elfutils/dwarf_offdie.c.s
 
 external/elfutils/dwarf_siblingof.o: external/elfutils/dwarf_siblingof.c.o
@@ -734,7 +734,7 @@ external/elfutils/dwarf_siblingof.o: external/elfutils/dwarf_siblingof.c.o
 
 # target to build an object file
 external/elfutils/dwarf_siblingof.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.o
 .PHONY : external/elfutils/dwarf_siblingof.c.o
 
 external/elfutils/dwarf_siblingof.i: external/elfutils/dwarf_siblingof.c.i
@@ -742,7 +742,7 @@ external/elfutils/dwarf_siblingof.i: external/elfutils/dwarf_siblingof.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_siblingof.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.i
 .PHONY : external/elfutils/dwarf_siblingof.c.i
 
 external/elfutils/dwarf_siblingof.s: external/elfutils/dwarf_siblingof.c.s
@@ -750,7 +750,7 @@ external/elfutils/dwarf_siblingof.s: external/elfutils/dwarf_siblingof.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_siblingof.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_siblingof.c.s
 .PHONY : external/elfutils/dwarf_siblingof.c.s
 
 external/elfutils/dwarf_sig8_hash.o: external/elfutils/dwarf_sig8_hash.c.o
@@ -758,7 +758,7 @@ external/elfutils/dwarf_sig8_hash.o: external/elfutils/dwarf_sig8_hash.c.o
 
 # target to build an object file
 external/elfutils/dwarf_sig8_hash.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.o
 .PHONY : external/elfutils/dwarf_sig8_hash.c.o
 
 external/elfutils/dwarf_sig8_hash.i: external/elfutils/dwarf_sig8_hash.c.i
@@ -766,7 +766,7 @@ external/elfutils/dwarf_sig8_hash.i: external/elfutils/dwarf_sig8_hash.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_sig8_hash.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.i
 .PHONY : external/elfutils/dwarf_sig8_hash.c.i
 
 external/elfutils/dwarf_sig8_hash.s: external/elfutils/dwarf_sig8_hash.c.s
@@ -774,7 +774,7 @@ external/elfutils/dwarf_sig8_hash.s: external/elfutils/dwarf_sig8_hash.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_sig8_hash.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_sig8_hash.c.s
 .PHONY : external/elfutils/dwarf_sig8_hash.c.s
 
 external/elfutils/dwarf_tag.o: external/elfutils/dwarf_tag.c.o
@@ -782,7 +782,7 @@ external/elfutils/dwarf_tag.o: external/elfutils/dwarf_tag.c.o
 
 # target to build an object file
 external/elfutils/dwarf_tag.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.o
 .PHONY : external/elfutils/dwarf_tag.c.o
 
 external/elfutils/dwarf_tag.i: external/elfutils/dwarf_tag.c.i
@@ -790,7 +790,7 @@ external/elfutils/dwarf_tag.i: external/elfutils/dwarf_tag.c.i
 
 # target to preprocess a source file
 external/elfutils/dwarf_tag.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.i
 .PHONY : external/elfutils/dwarf_tag.c.i
 
 external/elfutils/dwarf_tag.s: external/elfutils/dwarf_tag.c.s
@@ -798,7 +798,7 @@ external/elfutils/dwarf_tag.s: external/elfutils/dwarf_tag.c.s
 
 # target to generate assembly for a file
 external/elfutils/dwarf_tag.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/dwarf_tag.c.s
 .PHONY : external/elfutils/dwarf_tag.c.s
 
 external/elfutils/frame-cache.o: external/elfutils/frame-cache.c.o
@@ -806,7 +806,7 @@ external/elfutils/frame-cache.o: external/elfutils/frame-cache.c.o
 
 # target to build an object file
 external/elfutils/frame-cache.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.o
 .PHONY : external/elfutils/frame-cache.c.o
 
 external/elfutils/frame-cache.i: external/elfutils/frame-cache.c.i
@@ -814,7 +814,7 @@ external/elfutils/frame-cache.i: external/elfutils/frame-cache.c.i
 
 # target to preprocess a source file
 external/elfutils/frame-cache.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.i
 .PHONY : external/elfutils/frame-cache.c.i
 
 external/elfutils/frame-cache.s: external/elfutils/frame-cache.c.s
@@ -822,7 +822,7 @@ external/elfutils/frame-cache.s: external/elfutils/frame-cache.c.s
 
 # target to generate assembly for a file
 external/elfutils/frame-cache.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/frame-cache.c.s
 .PHONY : external/elfutils/frame-cache.c.s
 
 external/elfutils/libdw_alloc.o: external/elfutils/libdw_alloc.c.o
@@ -830,7 +830,7 @@ external/elfutils/libdw_alloc.o: external/elfutils/libdw_alloc.c.o
 
 # target to build an object file
 external/elfutils/libdw_alloc.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.o
 .PHONY : external/elfutils/libdw_alloc.c.o
 
 external/elfutils/libdw_alloc.i: external/elfutils/libdw_alloc.c.i
@@ -838,7 +838,7 @@ external/elfutils/libdw_alloc.i: external/elfutils/libdw_alloc.c.i
 
 # target to preprocess a source file
 external/elfutils/libdw_alloc.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.i
 .PHONY : external/elfutils/libdw_alloc.c.i
 
 external/elfutils/libdw_alloc.s: external/elfutils/libdw_alloc.c.s
@@ -846,7 +846,7 @@ external/elfutils/libdw_alloc.s: external/elfutils/libdw_alloc.c.s
 
 # target to generate assembly for a file
 external/elfutils/libdw_alloc.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_alloc.c.s
 .PHONY : external/elfutils/libdw_alloc.c.s
 
 external/elfutils/libdw_findcu.o: external/elfutils/libdw_findcu.c.o
@@ -854,7 +854,7 @@ external/elfutils/libdw_findcu.o: external/elfutils/libdw_findcu.c.o
 
 # target to build an object file
 external/elfutils/libdw_findcu.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.o
 .PHONY : external/elfutils/libdw_findcu.c.o
 
 external/elfutils/libdw_findcu.i: external/elfutils/libdw_findcu.c.i
@@ -862,7 +862,7 @@ external/elfutils/libdw_findcu.i: external/elfutils/libdw_findcu.c.i
 
 # target to preprocess a source file
 external/elfutils/libdw_findcu.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.i
 .PHONY : external/elfutils/libdw_findcu.c.i
 
 external/elfutils/libdw_findcu.s: external/elfutils/libdw_findcu.c.s
@@ -870,7 +870,7 @@ external/elfutils/libdw_findcu.s: external/elfutils/libdw_findcu.c.s
 
 # target to generate assembly for a file
 external/elfutils/libdw_findcu.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_findcu.c.s
 .PHONY : external/elfutils/libdw_findcu.c.s
 
 external/elfutils/libdw_form.o: external/elfutils/libdw_form.c.o
@@ -878,7 +878,7 @@ external/elfutils/libdw_form.o: external/elfutils/libdw_form.c.o
 
 # target to build an object file
 external/elfutils/libdw_form.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.o
 .PHONY : external/elfutils/libdw_form.c.o
 
 external/elfutils/libdw_form.i: external/elfutils/libdw_form.c.i
@@ -886,7 +886,7 @@ external/elfutils/libdw_form.i: external/elfutils/libdw_form.c.i
 
 # target to preprocess a source file
 external/elfutils/libdw_form.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.i
 .PHONY : external/elfutils/libdw_form.c.i
 
 external/elfutils/libdw_form.s: external/elfutils/libdw_form.c.s
@@ -894,7 +894,7 @@ external/elfutils/libdw_form.s: external/elfutils/libdw_form.c.s
 
 # target to generate assembly for a file
 external/elfutils/libdw_form.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/external/elfutils/libdw_form.c.s
 .PHONY : external/elfutils/libdw_form.c.s
 
 function.o: function.cc.o
@@ -902,7 +902,7 @@ function.o: function.cc.o
 
 # target to build an object file
 function.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.o
 .PHONY : function.cc.o
 
 function.i: function.cc.i
@@ -910,7 +910,7 @@ function.i: function.cc.i
 
 # target to preprocess a source file
 function.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.i
 .PHONY : function.cc.i
 
 function.s: function.cc.s
@@ -918,7 +918,7 @@ function.s: function.cc.s
 
 # target to generate assembly for a file
 function.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/function.cc.s
 .PHONY : function.cc.s
 
 functioncolocation.o: functioncolocation.cc.o
@@ -926,7 +926,7 @@ functioncolocation.o: functioncolocation.cc.o
 
 # target to build an object file
 functioncolocation.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.o
 .PHONY : functioncolocation.cc.o
 
 functioncolocation.i: functioncolocation.cc.i
@@ -934,7 +934,7 @@ functioncolocation.i: functioncolocation.cc.i
 
 # target to preprocess a source file
 functioncolocation.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.i
 .PHONY : functioncolocation.cc.i
 
 functioncolocation.s: functioncolocation.cc.s
@@ -942,7 +942,7 @@ functioncolocation.s: functioncolocation.cc.s
 
 # target to generate assembly for a file
 functioncolocation.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/functioncolocation.cc.s
 .PHONY : functioncolocation.cc.s
 
 instruction.o: instruction.cc.o
@@ -950,7 +950,7 @@ instruction.o: instruction.cc.o
 
 # target to build an object file
 instruction.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.o
 .PHONY : instruction.cc.o
 
 instruction.i: instruction.cc.i
@@ -958,7 +958,7 @@ instruction.i: instruction.cc.i
 
 # target to preprocess a source file
 instruction.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.i
 .PHONY : instruction.cc.i
 
 instruction.s: instruction.cc.s
@@ -966,7 +966,7 @@ instruction.s: instruction.cc.s
 
 # target to generate assembly for a file
 instruction.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/instruction.cc.s
 .PHONY : instruction.cc.s
 
 javaclass.o: javaclass.cc.o
@@ -974,7 +974,7 @@ javaclass.o: javaclass.cc.o
 
 # target to build an object file
 javaclass.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.o
 .PHONY : javaclass.cc.o
 
 javaclass.i: javaclass.cc.i
@@ -982,7 +982,7 @@ javaclass.i: javaclass.cc.i
 
 # target to preprocess a source file
 javaclass.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.i
 .PHONY : javaclass.cc.i
 
 javaclass.s: javaclass.cc.s
@@ -990,7 +990,7 @@ javaclass.s: javaclass.cc.s
 
 # target to generate assembly for a file
 javaclass.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javaclass.cc.s
 .PHONY : javaclass.cc.s
 
 javamethod.o: javamethod.cc.o
@@ -998,7 +998,7 @@ javamethod.o: javamethod.cc.o
 
 # target to build an object file
 javamethod.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.o
 .PHONY : javamethod.cc.o
 
 javamethod.i: javamethod.cc.i
@@ -1006,7 +1006,7 @@ javamethod.i: javamethod.cc.i
 
 # target to preprocess a source file
 javamethod.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.i
 .PHONY : javamethod.cc.i
 
 javamethod.s: javamethod.cc.s
@@ -1014,7 +1014,7 @@ javamethod.s: javamethod.cc.s
 
 # target to generate assembly for a file
 javamethod.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/javamethod.cc.s
 .PHONY : javamethod.cc.s
 
 mips-dwarf.o: mips-dwarf.c.o
@@ -1022,7 +1022,7 @@ mips-dwarf.o: mips-dwarf.c.o
 
 # target to build an object file
 mips-dwarf.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.o
 .PHONY : mips-dwarf.c.o
 
 mips-dwarf.i: mips-dwarf.c.i
@@ -1030,7 +1030,7 @@ mips-dwarf.i: mips-dwarf.c.i
 
 # target to preprocess a source file
 mips-dwarf.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.i
 .PHONY : mips-dwarf.c.i
 
 mips-dwarf.s: mips-dwarf.c.s
@@ -1038,7 +1038,7 @@ mips-dwarf.s: mips-dwarf.c.s
 
 # target to generate assembly for a file
 mips-dwarf.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips-dwarf.c.s
 .PHONY : mips-dwarf.c.s
 
 mips.o: mips.cc.o
@@ -1046,7 +1046,7 @@ mips.o: mips.cc.o
 
 # target to build an object file
 mips.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.o
 .PHONY : mips.cc.o
 
 mips.i: mips.cc.i
@@ -1054,7 +1054,7 @@ mips.i: mips.cc.i
 
 # target to preprocess a source file
 mips.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.i
 .PHONY : mips.cc.i
 
 mips.s: mips.cc.s
@@ -1062,7 +1062,7 @@ mips.s: mips.cc.s
 
 # target to generate assembly for a file
 mips.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/mips.cc.s
 .PHONY : mips.cc.s
 
 registerallocator.o: registerallocator.cc.o
@@ -1070,7 +1070,7 @@ registerallocator.o: registerallocator.cc.o
 
 # target to build an object file
 registerallocator.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.o
 .PHONY : registerallocator.cc.o
 
 registerallocator.i: registerallocator.cc.i
@@ -1078,7 +1078,7 @@ registerallocator.i: registerallocator.cc.i
 
 # target to preprocess a source file
 registerallocator.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.i
 .PHONY : registerallocator.cc.i
 
 registerallocator.s: registerallocator.cc.s
@@ -1086,7 +1086,7 @@ registerallocator.s: registerallocator.cc.s
 
 # target to generate assembly for a file
 registerallocator.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/registerallocator.cc.s
 .PHONY : registerallocator.cc.s
 
 string-instruction.o: string-instruction.cc.o
@@ -1094,7 +1094,7 @@ string-instruction.o: string-instruction.cc.o
 
 # target to build an object file
 string-instruction.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.o
 .PHONY : string-instruction.cc.o
 
 string-instruction.i: string-instruction.cc.i
@@ -1102,7 +1102,7 @@ string-instruction.i: string-instruction.cc.i
 
 # target to preprocess a source file
 string-instruction.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.i
 .PHONY : string-instruction.cc.i
 
 string-instruction.s: string-instruction.cc.s
@@ -1110,7 +1110,7 @@ string-instruction.s: string-instruction.cc.s
 
 # target to generate assembly for a file
 string-instruction.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/string-instruction.cc.s
 .PHONY : string-instruction.cc.s
 
 syscall-wrappers.o: syscall-wrappers.cc.o
@@ -1118,7 +1118,7 @@ syscall-wrappers.o: syscall-wrappers.cc.o
 
 # target to build an object file
 syscall-wrappers.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.o
 .PHONY : syscall-wrappers.cc.o
 
 syscall-wrappers.i: syscall-wrappers.cc.i
@@ -1126,7 +1126,7 @@ syscall-wrappers.i: syscall-wrappers.cc.i
 
 # target to preprocess a source file
 syscall-wrappers.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.i
 .PHONY : syscall-wrappers.cc.i
 
 syscall-wrappers.s: syscall-wrappers.cc.s
@@ -1134,7 +1134,7 @@ syscall-wrappers.s: syscall-wrappers.cc.s
 
 # target to generate assembly for a file
 syscall-wrappers.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/syscall-wrappers.cc.s
 .PHONY : syscall-wrappers.cc.s
 
 utils.o: utils.cc.o
@@ -1142,7 +1142,7 @@ utils.o: utils.cc.o
 
 # target to build an object file
 utils.cc.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.o
 .PHONY : utils.cc.o
 
 utils.i: utils.cc.i
@@ -1150,7 +1150,7 @@ utils.i: utils.cc.i
 
 # target to preprocess a source file
 utils.cc.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.i
 .PHONY : utils.cc.i
 
 utils.s: utils.cc.s
@@ -1158,7 +1158,7 @@ utils.s: utils.cc.s
 
 # target to generate assembly for a file
 utils.cc.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f tools/translator/CMakeFiles/xcibyl-translator.dir/build.make tools/translator/CMakeFiles/xcibyl-translator.dir/utils.cc.s
 .PHONY : utils.cc.s
 
 # Help Target
@@ -1311,6 +1311,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

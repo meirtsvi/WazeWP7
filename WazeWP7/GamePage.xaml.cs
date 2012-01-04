@@ -217,8 +217,10 @@ namespace WazeWP7
             basicEffect.EnableDefaultLighting();
             basicEffect.LightingEnabled = false;
          //   SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(true);
-            //SharedGraphicsDeviceManager.Current.MultiSampleCount = 10;
-            //SharedGraphicsDeviceManager.Current.ApplyChanges();
+
+            SharedGraphicsDeviceManager.Current.MultiSampleCount = 4;
+            SharedGraphicsDeviceManager.Current.ApplyChanges();
+
         }
 
         void XNARendering_LayoutUpdated(object sender, EventArgs e)
@@ -266,8 +268,11 @@ namespace WazeWP7
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            // Stop the timer
-            timer.Stop();
+            if (timer != null)
+            {
+                // Stop the timer
+                timer.Stop();
+            }
 
             // Set the sharing mode of the graphics device to turn off XNA rendering
             SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(false);
@@ -336,10 +341,11 @@ namespace WazeWP7
         /// </summary>
         private void OnDraw(object sender, GameTimerEventArgs e)
         {
+
+            SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.White);
+
             //Rendering Silverlight content into the UIElementRenderer object and the rendering its texture using the SpriteBatch object
             elementRenderer.Render();
-
-
 
             if (VertexActiveIndex > 3)
             {
@@ -373,7 +379,7 @@ namespace WazeWP7
                     {
                         TextString textString = textStrings[ActiveIndex][i];
                         // Find the center of the string
-                        Vector2 FontOrigin = Fonts[textString.size].MeasureString(textString.text) / 2;
+                        Vector2 FontOrigin = new Vector2(0, textString.size + 5);
 
                         int x = textString.x;
                         int y = textString.y;
@@ -397,12 +403,19 @@ namespace WazeWP7
                         }
                         else
                         {
-                            y -= 20;
+//                            y -= 20;
                         }
 
                         // Draw the string
-                        spriteBatch.DrawString(Fonts[textString.size], textString.text, new Vector2(x, y), textString.color, MathHelper.ToRadians(textString.angle), FontOrigin,
-                            1.0f, SpriteEffects.None, 0);
+                        try
+                        {
+                            spriteBatch.DrawString(Fonts[textString.size], textString.text, new Vector2(x, y), textString.color, MathHelper.ToRadians(textString.angle), FontOrigin,
+                                1.0f, SpriteEffects.None, 0);
+                        }
+                        catch (ArgumentException)
+                        {
+                            // Sometimes the C code sends illegal chars - just ignore them
+                        }
                     }
                     spriteBatch.End();
                 }
@@ -732,16 +745,7 @@ namespace WazeWP7
                     {
                         appBarMenuItem.Click += delegate
                         {
-                            string name = System.Reflection.Assembly.GetExecutingAssembly().FullName;
-                            System.Reflection.AssemblyName asmName = new System.Reflection.AssemblyName(name);
-
-                            //System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                            Version version = asmName.Version;
-                            String s = String.Format("{0}.{1}.{2}.{3}",
-                                                                version.Major,
-                                                                version.Minor,
-                                                                version.Build,
-                                                                version.Revision);
+                            String s = GetAppVersion();
                             AboutDialog ad = new AboutDialog();
                             ad.SetVersion(s);
 
@@ -752,58 +756,24 @@ namespace WazeWP7
                             ApplicationBar.IsVisible = false;
 
                         };
-                        ApplicationBar.MenuItems.Add(appBarMenuItem);
 
-                        appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
-                        appBarMenuItem.Click += delegate
-                        {
-                            /*                        TileStorage ts = (TileStorage)CRunTime.objectRepository[Syscalls.ts_id];
-                                                    UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles.zip", UriKind.Relative)).Stream);
-                                                    int index = 0;
-                                                    foreach (string filename in uz.FileNamesInZip)
-                                                    {
-                                                        int tile_index = int.Parse(filename);
-                                                        Stream st = uz.GetFileStream(filename);
-                                                        BinaryReader br = new BinaryReader(st);
-                                                        byte[] tile_bytes = new byte[st.Length];
-                                                        br.Read(tile_bytes, 0, tile_bytes.Length);
-                                                        ts.storeTileEx(77001, tile_index, tile_bytes);
-                                                        index++;
-                                                    }*/
+                        //appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
+                        //appBarMenuItem.Click += delegate
+                        //{
+                        //    UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tel_aviv_till_hod_hasharon.zip", UriKind.Relative)).Stream);
+                        //    foreach (string filename in uz.FileNamesInZip)
+                        //    {
+                        //        Stream st = uz.GetFileStream(filename);
+                        //        Syscalls.CopyFileFromStream(st, filename);
+                        //    }
 
+                        //    Syscalls.NOPH_TileStorage_initialize(Syscalls.ts_id);
 
-                            UnZipper uz = new UnZipper(Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tel_aviv_till_hod_hasharon.zip", UriKind.Relative)).Stream);
-                            foreach (string filename in uz.FileNamesInZip)
-                            {
-                                Stream st = uz.GetFileStream(filename);
-                                Syscalls.CopyFileFromStream(st, filename);
-                            }
+                        //    // Hide bar after asking to show me
+                        //    ApplicationBar.IsVisible = false;
 
-                            Syscalls.NOPH_TileStorage_initialize(Syscalls.ts_id);
-
-                            /*
-                            StreamResourceInfo info = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/file_list.txt", UriKind.Relative));
-                            using (StreamReader reader = new StreamReader(info.Stream))
-                            {
-                                string line = reader.ReadLine();
-                                while (line != null)
-                                {
-                                    int tile_index = int.Parse(line);
-                                    Stream tile = Application.GetResourceStream(new Uri("/WazeWP7;component/resources/tiles/" + line, UriKind.Relative)).Stream;
-                                    BinaryReader br = new BinaryReader(tile);
-                                    byte[] tile_bytes = new byte[tile.Length];
-                                    br.Read(tile_bytes, 0, tile_bytes.Length);
-                                    ts.storeTileEx(77001, tile_index, tile_bytes);
-                                    line = reader.ReadLine();
-                                }
-                            }*/
-
-
-                            // Hide bar after asking to show me
-                            ApplicationBar.IsVisible = false;
-
-                            MessageBox.Show("Finished");
-                        };
+                        //    MessageBox.Show("Finished");
+                        //};
                     }
                     else
                     {
@@ -818,8 +788,24 @@ namespace WazeWP7
                     }
 
                     ApplicationBar.MenuItems.Add(appBarMenuItem);
+
                 });
             }
+        }
+
+        public String GetAppVersion()
+        {
+            string name = System.Reflection.Assembly.GetExecutingAssembly().FullName;
+            System.Reflection.AssemblyName asmName = new System.Reflection.AssemblyName(name);
+
+            //System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            Version version = asmName.Version;
+            String s = String.Format("{0}.{1}.{2}.{3}",
+                                                version.Major,
+                                                version.Minor,
+                                                version.Build,
+                                                version.Revision);
+            return s;
         }
         /*
         private static bool isSendMailAdded = false;

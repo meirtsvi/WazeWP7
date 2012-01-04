@@ -35,10 +35,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Include any dependencies generated for this target.
 include libs/src/libcrt0/CMakeFiles/crt0.dir/depend.make
@@ -51,17 +51,17 @@ include libs/src/libcrt0/CMakeFiles/crt0.dir/flags.make
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o: libs/src/libcrt0/CMakeFiles/crt0.dir/flags.make
 libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o: ../libs/src/libcrt0/fileops.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/fileops.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/fileops.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/fileops.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/fileops.c
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/crt0.dir/fileops.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/fileops.c > CMakeFiles/crt0.dir/fileops.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/fileops.c > CMakeFiles/crt0.dir/fileops.c.i
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/crt0.dir/fileops.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/fileops.c -o CMakeFiles/crt0.dir/fileops.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/fileops.c -o CMakeFiles/crt0.dir/fileops.c.s
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o.requires:
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o.requires
@@ -74,17 +74,17 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/fileops.c.o.provides.build: libs/src/libcrt
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o: libs/src/libcrt0/CMakeFiles/crt0.dir/flags.make
 libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o: ../libs/src/libcrt0/helpers.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/helpers.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/helpers.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/helpers.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/helpers.c
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/crt0.dir/helpers.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/helpers.c > CMakeFiles/crt0.dir/helpers.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/helpers.c > CMakeFiles/crt0.dir/helpers.c.i
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/crt0.dir/helpers.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/helpers.c -o CMakeFiles/crt0.dir/helpers.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/helpers.c -o CMakeFiles/crt0.dir/helpers.c.s
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o.requires:
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o.requires
@@ -97,17 +97,17 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/helpers.c.o.provides.build: libs/src/libcrt
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o: libs/src/libcrt0/CMakeFiles/crt0.dir/flags.make
 libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o: ../libs/src/libcrt0/memory-filesystem.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/memory-filesystem.c.o   -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/memory-filesystem.c
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/crt0.dir/memory-filesystem.c.o   -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/memory-filesystem.c
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/crt0.dir/memory-filesystem.c.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/memory-filesystem.c > CMakeFiles/crt0.dir/memory-filesystem.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/memory-filesystem.c > CMakeFiles/crt0.dir/memory-filesystem.c.i
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/crt0.dir/memory-filesystem.c.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0/memory-filesystem.c -o CMakeFiles/crt0.dir/memory-filesystem.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && mips-cibyl-elf-gcc  $(C_DEFINES) $(C_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0/memory-filesystem.c -o CMakeFiles/crt0.dir/memory-filesystem.c.s
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o.requires:
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/memory-filesystem.c.o.requires
@@ -133,8 +133,8 @@ mips-cibyl-elf/sys-root/lib/libcrt0.a: libs/src/libcrt0/CMakeFiles/crt0.dir/memo
 mips-cibyl-elf/sys-root/lib/libcrt0.a: libs/src/libcrt0/CMakeFiles/crt0.dir/build.make
 mips-cibyl-elf/sys-root/lib/libcrt0.a: libs/src/libcrt0/CMakeFiles/crt0.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library ../../../mips-cibyl-elf/sys-root/lib/libcrt0.a"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -P CMakeFiles/crt0.dir/cmake_clean_target.cmake
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crt0.dir/link.txt --verbose=$(VERBOSE)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -P CMakeFiles/crt0.dir/cmake_clean_target.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crt0.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libs/src/libcrt0/CMakeFiles/crt0.dir/build: mips-cibyl-elf/sys-root/lib/libcrt0.a
@@ -146,10 +146,10 @@ libs/src/libcrt0/CMakeFiles/crt0.dir/requires: libs/src/libcrt0/CMakeFiles/crt0.
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/requires
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -P CMakeFiles/crt0.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 && $(CMAKE_COMMAND) -P CMakeFiles/crt0.dir/cmake_clean.cmake
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/clean
 
 libs/src/libcrt0/CMakeFiles/crt0.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libcrt0 /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0 /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libcrt0/CMakeFiles/crt0.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libcrt0 /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0 /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libcrt0/CMakeFiles/crt0.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/src/libcrt0/CMakeFiles/crt0.dir/depend
 

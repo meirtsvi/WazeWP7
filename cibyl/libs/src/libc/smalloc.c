@@ -140,7 +140,7 @@ static void delete(list l, node *n)
 static void insert(list l, node *n)
 {
     node *c, *p, **head;
-
+	
     head = (l == ALLOCATED) ? &allocated : &available;
 
     c = p = *head;

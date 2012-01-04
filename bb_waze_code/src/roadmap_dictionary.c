@@ -49,7 +49,6 @@
 #include "roadmap_dbread.h"
 #include "roadmap_tile_model.h"
 #include "roadmap_dictionary.h"
-#include "roadmap_hash.h"
 
 
 struct dictionary_volume {
@@ -76,7 +75,6 @@ struct dictionary_volume {
 #define ROADMAP_DICTIONARY_MAX   16
 
 static struct dictionary_volume *DictionaryVolume = NULL;
-static RoadMapHash *HashDictionaryVolume = NULL;
 
 
 struct dictionary_cursor {
@@ -351,35 +349,15 @@ static void *roadmap_dictionary_map (const roadmap_db_data_file *file) {
 
 static void roadmap_dictionary_activate (void *context) {
 
-   int size = 0;
-   struct dictionary_volume *volume;
-   int hash, index;
-
    DictionaryVolume = (struct dictionary_volume *) context;
-   
-   for (volume = DictionaryVolume; volume != NULL; volume = volume->next) {
-		size++;
-   }
-   HashDictionaryVolume = roadmap_hash_new ("DictionaryVolumeHash", size);
-
-   index = 0;
-   for (volume = DictionaryVolume; volume != NULL; volume = volume->next) {
-	     hash = roadmap_hash_string (volume->name);
-		 roadmap_hash_add (HashDictionaryVolume, hash, index);
-		 roadmap_hash_set_value(HashDictionaryVolume, index++, volume);
-   }
-
 }
 
 static void roadmap_dictionary_unmap (void *context) {
 
    struct dictionary_volume *this = (struct dictionary_volume *) context;
 
-   if (this == DictionaryVolume)
-   {
+   if (this == DictionaryVolume) {
       DictionaryVolume = NULL;
-	  roadmap_hash_free (HashDictionaryVolume);
-	  HashDictionaryVolume = NULL;
    }
 
    while (this != NULL) {
@@ -461,18 +439,8 @@ static void roadmap_dictionary_build_substrees
 
 RoadMapDictionary roadmap_dictionary_open (char *name) {
 
-	int index, hash;
    struct dictionary_volume *volume;
 
-   hash = roadmap_hash_string (name);
-   index = roadmap_hash_get_first (HashDictionaryVolume, hash);
-   if (index == -1)
-	   return NULL;
-
-   return roadmap_hash_get_value (HashDictionaryVolume, index);
-   
-
-	   /*
    for (volume = DictionaryVolume; volume != NULL; volume = volume->next) {
 
       if (strcmp (volume->name, name) == 0) {
@@ -480,7 +448,7 @@ RoadMapDictionary roadmap_dictionary_open (char *name) {
       }
    }
 
-   return NULL;*/
+   return NULL;
 }
 
 
@@ -991,4 +959,3 @@ void roadmap_dictionary_mask_set (RoadMapDictionary d,
    str = d->data + d->string_index[index];
    roadmap_dictionary_set_mask (d, d->tree, str, strlen(str), mask, &pos);
 }
-

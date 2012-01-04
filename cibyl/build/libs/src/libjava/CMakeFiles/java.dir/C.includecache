@@ -18,7 +18,7 @@ dirent.h
 cibyl-syscall_defs.h
 ../include/cibyl-syscall_defs.h
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjava/inputstream-filesystem.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjava/inputstream-filesystem.c
 cibyl-fileops.h
 -
 javax/microedition/lcdui/game.h
@@ -28,7 +28,7 @@ java/io.h
 java/lang.h
 -
 
-/cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjava/outputstream-filesystem.c
+/cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjava/outputstream-filesystem.c
 cibyl-fileops.h
 -
 java/io.h

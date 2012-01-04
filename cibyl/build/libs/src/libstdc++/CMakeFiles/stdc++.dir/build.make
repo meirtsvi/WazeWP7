@@ -35,10 +35,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Include any dependencies generated for this target.
 include libs/src/libstdc++/CMakeFiles/stdc++.dir/depend.make
@@ -51,17 +51,17 @@ include libs/src/libstdc++/CMakeFiles/stdc++.dir/flags.make
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o: libs/src/libstdc++/CMakeFiles/stdc++.dir/flags.make
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o: ../libs/src/libstdc++/alloc.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/stdc++.dir/alloc.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/alloc.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/stdc++.dir/alloc.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/alloc.cc
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stdc++.dir/alloc.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/alloc.cc > CMakeFiles/stdc++.dir/alloc.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/alloc.cc > CMakeFiles/stdc++.dir/alloc.cc.i
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stdc++.dir/alloc.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/alloc.cc -o CMakeFiles/stdc++.dir/alloc.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/alloc.cc -o CMakeFiles/stdc++.dir/alloc.cc.s
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o.requires:
 .PHONY : libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o.requires
@@ -74,17 +74,17 @@ libs/src/libstdc++/CMakeFiles/stdc++.dir/alloc.cc.o.provides.build: libs/src/lib
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o: libs/src/libstdc++/CMakeFiles/stdc++.dir/flags.make
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o: ../libs/src/libstdc++/virtual.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/stdc++.dir/virtual.cc.o -c /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/virtual.cc
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/stdc++.dir/virtual.cc.o -c /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/virtual.cc
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stdc++.dir/virtual.cc.i"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/virtual.cc > CMakeFiles/stdc++.dir/virtual.cc.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/virtual.cc > CMakeFiles/stdc++.dir/virtual.cc.i
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stdc++.dir/virtual.cc.s"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++/virtual.cc -o CMakeFiles/stdc++.dir/virtual.cc.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && mips-cibyl-elf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++/virtual.cc -o CMakeFiles/stdc++.dir/virtual.cc.s
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o.requires:
 .PHONY : libs/src/libstdc++/CMakeFiles/stdc++.dir/virtual.cc.o.requires
@@ -108,8 +108,8 @@ mips-cibyl-elf/sys-root/lib/libstdc++.a: libs/src/libstdc++/CMakeFiles/stdc++.di
 mips-cibyl-elf/sys-root/lib/libstdc++.a: libs/src/libstdc++/CMakeFiles/stdc++.dir/build.make
 mips-cibyl-elf/sys-root/lib/libstdc++.a: libs/src/libstdc++/CMakeFiles/stdc++.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../../../mips-cibyl-elf/sys-root/lib/libstdc++.a"
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -P CMakeFiles/stdc++.dir/cmake_clean_target.cmake
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stdc++.dir/link.txt --verbose=$(VERBOSE)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -P CMakeFiles/stdc++.dir/cmake_clean_target.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stdc++.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libs/src/libstdc++/CMakeFiles/stdc++.dir/build: mips-cibyl-elf/sys-root/lib/libstdc++.a
@@ -120,10 +120,10 @@ libs/src/libstdc++/CMakeFiles/stdc++.dir/requires: libs/src/libstdc++/CMakeFiles
 .PHONY : libs/src/libstdc++/CMakeFiles/stdc++.dir/requires
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -P CMakeFiles/stdc++.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ && $(CMAKE_COMMAND) -P CMakeFiles/stdc++.dir/cmake_clean.cmake
 .PHONY : libs/src/libstdc++/CMakeFiles/stdc++.dir/clean
 
 libs/src/libstdc++/CMakeFiles/stdc++.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libstdc++ /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++ /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libstdc++/CMakeFiles/stdc++.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libstdc++ /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++ /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libstdc++/CMakeFiles/stdc++.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/src/libstdc++/CMakeFiles/stdc++.dir/depend
 

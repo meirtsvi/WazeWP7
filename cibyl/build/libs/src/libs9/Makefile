@@ -39,10 +39,10 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libs9/CMakeFiles/progress.marks
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/downloads/shared/cibylnet/cibyl/build/CMakeFiles 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libs9/CMakeFiles/progress.marks
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/users/meir/WazeWP7/cibyl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/clean
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/preinstall
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libs/src/libs9/CMakeFiles/s9.dir/rule:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/CMakeFiles/s9.dir/rule
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f CMakeFiles/Makefile2 libs/src/libs9/CMakeFiles/s9.dir/rule
 .PHONY : libs/src/libs9/CMakeFiles/s9.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ s9: libs/src/libs9/CMakeFiles/s9.dir/rule
 
 # fast build rule for target.
 s9/fast:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/build
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/build
 .PHONY : s9/fast
 
 s9.o: s9.c.o
@@ -158,7 +158,7 @@ s9.o: s9.c.o
 
 # target to build an object file
 s9.c.o:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.o
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.o
 .PHONY : s9.c.o
 
 s9.i: s9.c.i
@@ -166,7 +166,7 @@ s9.i: s9.c.i
 
 # target to preprocess a source file
 s9.c.i:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.i
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.i
 .PHONY : s9.c.i
 
 s9.s: s9.c.s
@@ -174,7 +174,7 @@ s9.s: s9.c.s
 
 # target to generate assembly for a file
 s9.c.s:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.s
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(MAKE) -f libs/src/libs9/CMakeFiles/s9.dir/build.make libs/src/libs9/CMakeFiles/s9.dir/s9.c.s
 .PHONY : s9.c.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

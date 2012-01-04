@@ -35,15 +35,15 @@ RM = /usr/bin/cmake.exe -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake.exe
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl
+CMAKE_SOURCE_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/downloads/shared/cibylnet/cibyl/build
+CMAKE_BINARY_DIR = /cygdrive/c/users/meir/WazeWP7/cibyl/build
 
 # Utility rule file for libmidp.a.
 
 libs/src/libmidp/CMakeFiles/libmidp.a:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libmidp && mips-cibyl-elf-gcc -Os -c -I /cygdrive/c/downloads/shared/cibylnet/cibyl/include -I/cygdrive/c/downloads/shared/cibylnet/cibyl/build/mips-cibyl-elf/sys-root/usr/include /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libmidp/connector-filesystem.c -o /cygdrive/c/downloads/shared/cibylnet/cibyl/build/mips-cibyl-elf/sys-root/lib/libmidp.a
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libmidp && mips-cibyl-elf-gcc -Os -c -I /cygdrive/c/users/meir/WazeWP7/cibyl/include -I/cygdrive/c/users/meir/WazeWP7/cibyl/build/mips-cibyl-elf/sys-root/usr/include /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libmidp/connector-filesystem.c -o /cygdrive/c/users/meir/WazeWP7/cibyl/build/mips-cibyl-elf/sys-root/lib/libmidp.a
 
 libmidp.a: libs/src/libmidp/CMakeFiles/libmidp.a
 libmidp.a: libs/src/libmidp/CMakeFiles/libmidp.a.dir/build.make
@@ -54,10 +54,10 @@ libs/src/libmidp/CMakeFiles/libmidp.a.dir/build: libmidp.a
 .PHONY : libs/src/libmidp/CMakeFiles/libmidp.a.dir/build
 
 libs/src/libmidp/CMakeFiles/libmidp.a.dir/clean:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libmidp && $(CMAKE_COMMAND) -P CMakeFiles/libmidp.a.dir/cmake_clean.cmake
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libmidp && $(CMAKE_COMMAND) -P CMakeFiles/libmidp.a.dir/cmake_clean.cmake
 .PHONY : libs/src/libmidp/CMakeFiles/libmidp.a.dir/clean
 
 libs/src/libmidp/CMakeFiles/libmidp.a.dir/depend:
-	cd /cygdrive/c/downloads/shared/cibylnet/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/downloads/shared/cibylnet/cibyl /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libmidp /cygdrive/c/downloads/shared/cibylnet/cibyl/build /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libmidp /cygdrive/c/downloads/shared/cibylnet/cibyl/build/libs/src/libmidp/CMakeFiles/libmidp.a.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/users/meir/WazeWP7/cibyl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/users/meir/WazeWP7/cibyl /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libmidp /cygdrive/c/users/meir/WazeWP7/cibyl/build /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libmidp /cygdrive/c/users/meir/WazeWP7/cibyl/build/libs/src/libmidp/CMakeFiles/libmidp.a.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/src/libmidp/CMakeFiles/libmidp.a.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/downloads/shared/cibylnet/cibyl/libs/src/libjava
+# Install script for directory: /cygdrive/c/users/meir/WazeWP7/cibyl/libs/src/libjava
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
