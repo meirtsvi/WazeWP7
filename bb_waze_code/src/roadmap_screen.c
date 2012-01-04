@@ -4199,7 +4199,7 @@ static void zoom_timer (void) {
 void roadmap_screen_zoom_in  (void)
 {
    roadmap_view_auto_zoom_suspend();
-   set_scale(roadmap_math_get_scale(roadmap_screen_height())/2, roadmap_screen_height(), 300, ANIMATION_TIMING_EASY_OUT);
+   set_scale(roadmap_math_get_scale(roadmap_screen_height())/1.5, roadmap_screen_height(), 300, ANIMATION_TIMING_EASY_OUT);
    return;
 #ifdef OPENGLxxx
    AnimationStartZoom = roadmap_math_get_zoom();
@@ -4217,7 +4217,7 @@ void roadmap_screen_zoom_in  (void)
 
 void roadmap_screen_zoom_out (void) {
    roadmap_view_auto_zoom_suspend();
-   set_scale(roadmap_math_get_scale(roadmap_screen_height())*2, roadmap_screen_height(), 300, ANIMATION_TIMING_EASY_OUT);
+   set_scale(roadmap_math_get_scale(roadmap_screen_height())*1.5, roadmap_screen_height(), 300, ANIMATION_TIMING_EASY_OUT);
    return;
 #ifdef OPENGLxxx
    AnimationStartZoom = roadmap_math_get_zoom();

@@ -132,8 +132,8 @@ namespace WazeWP7
                 System.Diagnostics.Debugger.Break();
             }
 
-/*            if (!(e.ExceptionObject is InvalidProgramException))
-            {*/
+            if (!(e.ExceptionObject is InvalidProgramException))
+            {
                 MessageBoxResult result = MessageBox.Show("Waze crashed to to an unexpected exception. Please press OK to send an error report to the developers",
                                                            "Unexpected error", MessageBoxButton.OKCancel);
 
@@ -146,7 +146,7 @@ namespace WazeWP7
                     emailComposer.Show();
                     Thread.Sleep(30000);
                 }
-            //}
+            }
         }
 
         #region Phone application initialization
