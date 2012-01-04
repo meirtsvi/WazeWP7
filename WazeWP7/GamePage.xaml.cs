@@ -632,6 +632,9 @@ namespace WazeWP7
 
         //private static bool perf_button_added = false;
         public static WazeMenuItem MeOnMapItem = null;
+        public static WazeMenuItem ZoomIn = null;
+        public static WazeMenuItem ZoomOut = null;
+
         private static ManualResetEvent graphic_sync = new ManualResetEvent(false);
 
         private void addIconMenuItem (string iconResouce, string text, WazeMenuItem wazeMenuItem)
@@ -697,6 +700,17 @@ namespace WazeWP7
                 addIconMenuItem("Resources/favorites.png", text, new_item);
                 addMenuItem = false;
             }
+            else if (text.ToLower().Equals("zoom in"))
+            {
+                ZoomIn = new_item;
+                addMenuItem = false;
+            }
+            else if (text.ToLower().Equals("zoom out"))
+            {
+                ZoomOut = new_item;
+                addMenuItem = false;
+            }
+
             //else if (text.ToLower().Equals("settings") || text.Equals("הגדרות"))
             //{
             //    addIconMenuItem("Resources/appbar.feature.settings.rest.png", text, new_item);
@@ -1572,6 +1586,26 @@ namespace WazeWP7
         public static Texture2D LoadBitmap(Stream stream)
         {
             return Texture2D.FromStream(SharedGraphicsDeviceManager.Current.GraphicsDevice, stream);
+        }
+
+        private void WazeApplicationPage_ManipulationDelta(object sender, ManipulationDeltaEventArgs e)
+        {
+            Logger.log("X: " + e.DeltaManipulation.Scale.X + " y: " + e.DeltaManipulation.Scale.Y);
+            if (e.DeltaManipulation.Scale.X > 1 || e.DeltaManipulation.Scale.Y > 1)
+            {
+                if (ZoomIn != null)
+                {
+                    ZoomIn.CallCallback();
+                }
+            }
+            else if ((e.DeltaManipulation.Scale.X > 0 && e.DeltaManipulation.Scale.X < 1) ||
+                     (e.DeltaManipulation.Scale.Y > 0 && e.DeltaManipulation.Scale.Y < 1))
+            {
+                if (ZoomOut != null)
+                {
+                    ZoomOut.CallCallback();
+                }
+            }
         }
     }
 }

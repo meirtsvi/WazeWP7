@@ -2047,9 +2047,9 @@ __CIBYL_javamethod_begin:
 // 0x0103bddc: 0x103bddc: addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
-// 0x0103bde0: 0x103bde0: jal   0x109c40c addiu a0, s0, 12756
+// 0x0103bde0: 0x103bde0: jal   0x109c40c addiu a0, s0, 12764
 	ldloc 8
-	ldc.i4 12756
+	ldc.i4 12764
 	add
 	stloc.1
 	ldloc.0
@@ -2080,9 +2080,9 @@ __CIBYL_javamethod_begin:
 // 0x0103bdf8: 0x103bdf8: addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
-// 0x0103bdfc: 0x103bdfc: jal   0x109c40c addiu a0, s0, 12756
+// 0x0103bdfc: 0x103bdfc: jal   0x109c40c addiu a0, s0, 12764
 	ldloc 8
-	ldc.i4 12756
+	ldc.i4 12764
 	add
 	stloc.1
 	ldloc.0
@@ -2107,9 +2107,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.1
 	clt.un
 	stloc.3
-// 0x0103be10: 0x103be10: addiu a0, s0, 12756
+// 0x0103be10: 0x103be10: addiu a0, s0, 12764
 	ldloc 8
-	ldc.i4 12756
+	ldc.i4 12764
 	add
 	stloc.1
 // 0x0103be14: 0x103be14: addiu a1, zero, 2
@@ -2128,9 +2128,9 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0103be20: 0x103be20: addiu a0, s0, 12756
+// 0x0103be20: 0x103be20: addiu a0, s0, 12764
 	ldloc 8
-	ldc.i4 12756
+	ldc.i4 12764
 	add
 	stloc.1
 // 0x0103be24: 0x103be24: addiu a1, zero, 3
@@ -2175,9 +2175,9 @@ __CIBYL_javamethod_begin:
 // 0x0103be44: 0x103be44: addu  a0, s1, zero
 	ldloc 9
 	stloc.1
-// 0x0103be48: 0x103be48: addiu a2, s0, 12756
+// 0x0103be48: 0x103be48: addiu a2, s0, 12764
 	ldloc 8
-	ldc.i4 12756
+	ldc.i4 12764
 	add
 	stloc.3
 // 0x0103be4c: 0x103be4c: addiu v0, zero, 1
@@ -3002,9 +3002,9 @@ L_103c03c:
 	ldc.i4 -8452
 	add
 	stloc.2
-// 0x0103c078: 0x103c078: addiu a2, a2, 12884
+// 0x0103c078: 0x103c078: addiu a2, a2, 12892
 	ldloc.3
-	ldc.i4 12884
+	ldc.i4 12892
 	add
 	stloc.3
 // 0x0103c07c: 0x103c07c: addiu a3, zero, 2
@@ -3318,9 +3318,9 @@ __CIBYL_javamethod_begin:
 // 0x0103c128: 0x103c128: addu  a0, v0, zero
 	ldloc 6
 	stloc.1
-// 0x0103c12c: 0x103c12c: addiu a1, a1, 12884
+// 0x0103c12c: 0x103c12c: addiu a1, a1, 12892
 	ldloc.2
-	ldc.i4 12884
+	ldc.i4 12892
 	add
 	stloc.2
 // 0x0103c130: 0x103c130: addiu a3, a3, -8348
@@ -3634,9 +3634,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4 12676
 	add
 	stloc.1
-// 0x0103c1f0: 0x103c1f0: addiu a1, a1, 12900
+// 0x0103c1f0: 0x103c1f0: addiu a1, a1, 12908
 	ldloc.2
-	ldc.i4 12900
+	ldc.i4 12908
 	add
 	stloc.2
 // 0x0103c1f4: 0x103c1f4: addiu a2, a2, 18616
@@ -3673,9 +3673,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s 0
 	stloc 9
 L_103c20c:
-// 0x0103c20c: 0x103c20c: jal   0x100e368 addiu a0, s1, 12900
+// 0x0103c20c: 0x103c20c: jal   0x100e368 addiu a0, s1, 12908
 	ldloc 9
-	ldc.i4 12900
+	ldc.i4 12908
 	add
 	stloc.1
 	ldloc.0
@@ -3688,9 +3688,9 @@ L_103c20c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x0103c214: 0x103c214: addiu a0, s1, 12900
+// 0x0103c214: 0x103c214: addiu a0, s1, 12908
 	ldloc 9
-	ldc.i4 12900
+	ldc.i4 12908
 	add
 	stloc.1
 // 0x0103c218: 0x103c218: jal   0x100e368 addu  s0, v0, zero

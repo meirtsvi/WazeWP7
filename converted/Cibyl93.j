@@ -462,12 +462,12 @@ L_107bd94:
 // 0x0107bda0: 0x107bda0: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x0107bda4: 0x107bda4: jal   0x101cd74 sw    v1, 15864(v0)
+// 0x0107bda4: 0x107bda4: jal   0x101cd74 sw    v1, 15872(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3966
+	ldc.i4 3968
 	add
 	ldloc 6
 	stelem.i4
@@ -1161,9 +1161,9 @@ L_107bf6c:
 	ldc.i4 -25432
 	add
 	stloc 6
-// 0x0107bff0: 0x107bff0: addiu s6, s6, 15820
+// 0x0107bff0: 0x107bff0: addiu s6, s6, 15828
 	ldloc 12
-	ldc.i4 15820
+	ldc.i4 15828
 	add
 	stloc 12
 // 0x0107bff4: 0x107bff4: addiu s8, s8, -27012
@@ -2618,12 +2618,12 @@ L_107c40c:
 // 0x0107c414: 0x107c414: addu  a1, s0, zero
 	ldloc 8
 	stloc.2
-// 0x0107c418: 0x107c418: jal   0x107b4b4 sw    v1, 15928(v0)
+// 0x0107c418: 0x107c418: jal   0x107b4b4 sw    v1, 15936(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3982
+	ldc.i4 3984
 	add
 	ldloc 7
 	stelem.i4
@@ -2646,12 +2646,12 @@ L_107c428:
 // 0x0107c428: 0x107c428: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x0107c42c: 0x107c42c: sw    v1, 15928(v0)
+// 0x0107c42c: 0x107c42c: sw    v1, 15936(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3982
+	ldc.i4 3984
 	add
 	ldloc 7
 	stelem.i4
@@ -2849,9 +2849,9 @@ __CIBYL_javamethod_begin:
 // 0x0107c498: 0x107c498: lui   v1, 0x0
 	ldc.i4.s 0
 	stloc 7
-// 0x0107c49c: 0x107c49c: sb    zero, 15872(v1)
+// 0x0107c49c: 0x107c49c: sb    zero, 15880(v1)
 	ldloc 7
-	ldc.i4 15872
+	ldc.i4 15880
 	add
 	ldc.i4.s 0
 	call void [WazeWP7]CRunTime::memoryWriteByte(int32, int32)

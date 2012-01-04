@@ -5174,9 +5174,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -48
 	add
 	stloc.0
-// 0x01099754: 0x1099754: addiu a2, v0, 17504
+// 0x01099754: 0x1099754: addiu a2, v0, 17512
 	ldloc 5
-	ldc.i4 17504
+	ldc.i4 17512
 	add
 	stloc.3
 // 0x01099758: 0x1099758: sw    s5, 40(sp)
@@ -5246,12 +5246,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 13
-// 0x0109977c: 0x109977c: lw    s3, 17504(v0)
+// 0x0109977c: 0x109977c: lw    s3, 17512(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 4376
+	ldc.i4 4378
 	add
 	ldelem.i4
 	stloc 12
@@ -6246,12 +6246,12 @@ __CIBYL_javamethod_begin:
 // 0x01099a2c: 0x1099a2c: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x01099a30: 0x1099a30: sw    v1, 17504(v0)
+// 0x01099a30: 0x1099a30: sw    v1, 17512(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 4376
+	ldc.i4 4378
 	add
 	ldloc 8
 	stelem.i4
@@ -6264,9 +6264,9 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 8
-// 0x01099a38: 0x1099a38: addiu v0, v0, 17504
+// 0x01099a38: 0x1099a38: addiu v0, v0, 17512
 	ldloc 5
-	ldc.i4 17504
+	ldc.i4 17512
 	add
 	stloc 5
 // 0x01099a3c: 0x1099a3c: sw    v1, 4(v0)

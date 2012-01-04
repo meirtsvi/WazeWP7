@@ -1246,6 +1246,8 @@ static const char *RoadMapStartCfgActions[] = {
 #ifdef J2ME
 static const char *RoadMapStartMenu[] = {
 #ifdef RIMAPI
+	"zoomin",
+	"zoomout",
    "show_me",
    "report",
    "real_time_alerts_list",

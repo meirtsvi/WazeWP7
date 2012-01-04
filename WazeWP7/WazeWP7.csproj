@@ -2266,6 +2266,7 @@
     <Resource Include="Resources\schema6.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Resources\NBidi.dll" />
     <Content Include="Resources\search.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

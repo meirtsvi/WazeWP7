@@ -3893,9 +3893,9 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x010bab64: 0x10bab64: sw    ra, 20(sp)
-// 0x010bab68: 0x10bab68: jal   0x10b3dd0 addiu a0, a0, 19468
+// 0x010bab68: 0x10bab68: jal   0x10b3dd0 addiu a0, a0, 19476
 	ldloc.1
-	ldc.i4 19468
+	ldc.i4 19476
 	add
 	stloc.1
 	ldloc.1
@@ -7506,12 +7506,12 @@ L_10bb5c8:
 	ldc.i4.s 0
 	stloc 5
 L_10bb644:
-// 0x010bb644: 0x10bb644: lw    v0, 18800(v0)
+// 0x010bb644: 0x10bb644: lw    v0, 18808(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 4700
+	ldc.i4 4702
 	add
 	ldelem.i4
 	stloc 5

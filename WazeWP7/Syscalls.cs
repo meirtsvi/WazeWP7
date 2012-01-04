@@ -1474,7 +1474,9 @@ public class Syscalls
         //FreeMapMainScreen screen = (FreeMapMainScreen)CRunTime.objectRepository[__screen];
         String text = CRunTime.charPtrToString(__text);
         WazeMenuItem menuItem = new WazeMenuItem(text, ordinal, 0, wrapper_callback, callback);
-
+        int r = 1;
+        if (text.Contains("zoom"))
+            r = 3;
         miniMenuItems.Add(menuItem);
         MiniMenuIsOn = true;
         /*

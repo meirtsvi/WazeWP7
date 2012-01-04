@@ -6382,9 +6382,9 @@ L_1046678:
 // 0x01046678: 0x1046678: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x0104667c: 0x104667c: jal   0x100e7a8 addiu a0, a0, 13436
+// 0x0104667c: 0x104667c: jal   0x100e7a8 addiu a0, a0, 13444
 	ldloc.1
-	ldc.i4 13436
+	ldc.i4 13444
 	add
 	stloc.1
 	ldloc.0

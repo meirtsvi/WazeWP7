@@ -14,7 +14,7 @@
     mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
     shell:SystemTray.IsVisible="False"
     BackKeyPress="PhoneApplicationPage_BackKeyPress" 
-    OrientationChanged="PhoneApplicationPage_OrientationChanged">
+    OrientationChanged="PhoneApplicationPage_OrientationChanged" ManipulationDelta="WazeApplicationPage_ManipulationDelta">
 
    <!-- xnamt SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="False" -->

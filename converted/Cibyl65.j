@@ -87,9 +87,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010576c4: 0x10576c4: addiu a0, a0, 14104
+// 0x010576c4: 0x10576c4: addiu a0, a0, 14112
 	ldloc.1
-	ldc.i4 14104
+	ldc.i4 14112
 	add
 	stloc.1
 // 0x010576c8: 0x10576c8: sw    ra, 20(sp)
@@ -172,9 +172,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010576f0: 0x10576f0: addiu a0, a0, 14444
+// 0x010576f0: 0x10576f0: addiu a0, a0, 14452
 	ldloc.1
-	ldc.i4 14444
+	ldc.i4 14452
 	add
 	stloc.1
 // 0x010576f4: 0x10576f4: sw    ra, 20(sp)
@@ -257,9 +257,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x0105771c: 0x105771c: addiu a0, a0, 14120
+// 0x0105771c: 0x105771c: addiu a0, a0, 14128
 	ldloc.1
-	ldc.i4 14120
+	ldc.i4 14128
 	add
 	stloc.1
 // 0x01057720: 0x1057720: sw    ra, 20(sp)
@@ -342,9 +342,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x01057748: 0x1057748: addiu a0, a0, 14136
+// 0x01057748: 0x1057748: addiu a0, a0, 14144
 	ldloc.1
-	ldc.i4 14136
+	ldc.i4 14144
 	add
 	stloc.1
 // 0x0105774c: 0x105774c: sw    ra, 20(sp)
@@ -6054,9 +6054,9 @@ L_1058644:
 	ldc.i4 9516
 	add
 	stloc.1
-// 0x01058664: 0x1058664: j	 0x105867c addiu a1, a1, 14316
+// 0x01058664: 0x1058664: j	 0x105867c addiu a1, a1, 14324
 	ldloc.2
-	ldc.i4 14316
+	ldc.i4 14324
 	add
 	stloc.2
 	br L_105867c
@@ -6073,9 +6073,9 @@ L_105866c:
 	ldc.i4 9536
 	add
 	stloc.1
-// 0x01058678: 0x1058678: addiu a1, a1, 14332
+// 0x01058678: 0x1058678: addiu a1, a1, 14340
 	ldloc.2
-	ldc.i4 14332
+	ldc.i4 14340
 	add
 	stloc.2
 L_105867c:
@@ -7164,9 +7164,9 @@ L_1058944:
 	ldc.i4.s 0
 	stloc 7
 L_10589b4:
-// 0x010589b4: 0x10589b4: addiu v0, v1, 14204
+// 0x010589b4: 0x10589b4: addiu v0, v1, 14212
 	ldloc 7
-	ldc.i4 14204
+	ldc.i4 14212
 	add
 	stloc 5
 // 0x010589b8: 0x10589b8: lw    a2, 8(v0)
@@ -7178,12 +7178,12 @@ L_10589b4:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010589bc: 0x10589bc: lw    a0, 14204(v1)
+// 0x010589bc: 0x10589bc: lw    a0, 14212(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 3551
+	ldc.i4 3553
 	add
 	ldelem.i4
 	stloc.1

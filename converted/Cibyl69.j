@@ -212,9 +212,9 @@ __CIBYL_javamethod_begin:
 	stloc.1
 	beq  L_105cc88
 // --- basic block ---
-// 0x0105cc6c: 0x105cc6c: addiu a0, a0, 14168
+// 0x0105cc6c: 0x105cc6c: addiu a0, a0, 14176
 	ldloc.1
-	ldc.i4 14168
+	ldc.i4 14176
 	add
 	stloc.1
 // 0x0105cc70: 0x105cc70: jal   0x100e630 addu  a1, zero, zero
@@ -267,12 +267,12 @@ L_105cc88:
 // 0x0105cc94: 0x105cc94: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x0105cc98: 0x105cc98: jal   0x105c5f8 sw    zero, 14360(v0)
+// 0x0105cc98: 0x105cc98: jal   0x105c5f8 sw    zero, 14368(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3590
+	ldc.i4 3592
 	add
 	ldc.i4.s 0
 	stelem.i4

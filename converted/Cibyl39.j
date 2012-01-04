@@ -866,12 +866,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 12
 	stelem.i4
-// 0x0103561c: 0x103561c: sw    a0, 12544(v0)
+// 0x0103561c: 0x103561c: sw    a0, 12552(v0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
 	shr.un
-	ldc.i4 3136
+	ldc.i4 3138
 	add
 	ldloc.1
 	stelem.i4
@@ -1050,9 +1050,9 @@ L_1035648:
 // 0x010356a4: 0x10356a4: addu  v1, zero, zero
 	ldc.i4.s 0
 	stloc 6
-// 0x010356a8: 0x10356a8: addiu a3, a3, 12540
+// 0x010356a8: 0x10356a8: addiu a3, a3, 12548
 	ldloc 4
-	ldc.i4 12540
+	ldc.i4 12548
 	add
 	stloc 4
 // 0x010356ac: 0x10356ac: addiu a2, zero, 14

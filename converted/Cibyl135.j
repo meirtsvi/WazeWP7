@@ -6773,12 +6773,12 @@ __CIBYL_javamethod_begin:
 // 0x010b65a0: 0x10b65a0: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 6
-// 0x010b65a4: 0x10b65a4: lw    v0, 18800(v0)
+// 0x010b65a4: 0x10b65a4: lw    v0, 18808(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 4700
+	ldc.i4 4702
 	add
 	ldelem.i4
 	stloc 6

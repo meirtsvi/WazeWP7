@@ -3985,9 +3985,9 @@ L_1092a5c:
 // 0x01092aac: 0x1092aac: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x01092ab0: 0x1092ab0: jal   0x10990b4 addiu a1, s1, 17484
+// 0x01092ab0: 0x1092ab0: jal   0x10990b4 addiu a1, s1, 17492
 	ldloc 9
-	ldc.i4 17484
+	ldc.i4 17492
 	add
 	stloc.2
 	ldloc.0
@@ -4003,9 +4003,9 @@ L_1092a5c:
 // 0x01092ab8: 0x1092ab8: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x01092abc: 0x1092abc: jal   0x10990b4 addiu a1, s1, 17484
+// 0x01092abc: 0x1092abc: jal   0x10990b4 addiu a1, s1, 17492
 	ldloc 9
-	ldc.i4 17484
+	ldc.i4 17492
 	add
 	stloc.2
 	ldloc.0

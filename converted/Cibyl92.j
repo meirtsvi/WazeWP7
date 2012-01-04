@@ -2379,12 +2379,12 @@ L_107afbc:
 	ldloc 5
 	brtrue L_107afd0
 // --- basic block ---
-// 0x0107afcc: 0x107afcc: sw    s4, 15812(s5)
+// 0x0107afcc: 0x107afcc: sw    s4, 15820(s5)
 	ldloc 7
 	ldloc 13
 	ldc.i4.2
 	shr.un
-	ldc.i4 3953
+	ldc.i4 3955
 	add
 	ldloc 12
 	stelem.i4
@@ -6483,9 +6483,9 @@ __CIBYL_javamethod_begin:
 // 0x0107bad0: 0x107bad0: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x0107bad4: 0x107bad4: jal   0x1033128 addiu a0, a0, 15732
+// 0x0107bad4: 0x107bad4: jal   0x1033128 addiu a0, a0, 15740
 	ldloc.1
-	ldc.i4 15732
+	ldc.i4 15740
 	add
 	stloc.1
 	ldloc.1
@@ -6653,12 +6653,12 @@ L_107baf4:
 // 0x0107bb54: 0x107bb54: lui   t0, 0x0
 	ldc.i4.s 0
 	stloc 8
-// 0x0107bb58: 0x107bb58: sw    v0, 15948(t0)
+// 0x0107bb58: 0x107bb58: sw    v0, 15956(t0)
 	ldloc 6
 	ldloc 8
 	ldc.i4.2
 	shr.un
-	ldc.i4 3987
+	ldc.i4 3989
 	add
 	ldloc 5
 	stelem.i4
@@ -6697,9 +6697,9 @@ L_107baf4:
 	ldc.i4 18364
 	add
 	stloc.1
-// 0x0107bb70: 0x107bb70: addiu a1, a1, 15968
+// 0x0107bb70: 0x107bb70: addiu a1, a1, 15976
 	ldloc.2
-	ldc.i4 15968
+	ldc.i4 15976
 	add
 	stloc.2
 // 0x0107bb74: 0x107bb74: addiu a2, s0, 9656
@@ -6746,9 +6746,9 @@ L_107baf4:
 	ldc.i4 18364
 	add
 	stloc.1
-// 0x0107bb90: 0x107bb90: addiu a1, a1, 15984
+// 0x0107bb90: 0x107bb90: addiu a1, a1, 15992
 	ldloc.2
-	ldc.i4 15984
+	ldc.i4 15992
 	add
 	stloc.2
 // 0x0107bb94: 0x107bb94: addiu a2, s0, 9656
@@ -6778,9 +6778,9 @@ L_107baf4:
 // 0x0107bba8: 0x107bba8: lui   a2, 0x20000
 	ldc.i4 131072
 	stloc.3
-// 0x0107bbac: 0x107bbac: addiu a1, a1, 15952
+// 0x0107bbac: 0x107bbac: addiu a1, a1, 15960
 	ldloc.2
-	ldc.i4 15952
+	ldc.i4 15960
 	add
 	stloc.2
 // 0x0107bbb0: 0x107bbb0: addiu a2, a2, -25592
@@ -6831,9 +6831,9 @@ L_107baf4:
 // 0x0107bbd4: 0x107bbd4: lui   a2, 0x10000
 	ldc.i4 65536
 	stloc.3
-// 0x0107bbd8: 0x107bbd8: addiu a1, s0, 16000
+// 0x0107bbd8: 0x107bbd8: addiu a1, s0, 16008
 	ldloc 9
-	ldc.i4 16000
+	ldc.i4 16008
 	add
 	stloc.2
 // 0x0107bbdc: 0x107bbdc: addiu a2, a2, 18616
@@ -6859,9 +6859,9 @@ L_107baf4:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x0107bbec: 0x107bbec: jal   0x100e368 addiu a0, s0, 16000
+// 0x0107bbec: 0x107bbec: jal   0x100e368 addiu a0, s0, 16008
 	ldloc 9
-	ldc.i4 16000
+	ldc.i4 16008
 	add
 	stloc.1
 	ldloc.0

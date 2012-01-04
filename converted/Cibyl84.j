@@ -505,12 +505,12 @@ L_107094c:
 // 0x01070954: 0x1070954: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x01070958: 0x1070958: lw    v0, 14980(v0)
+// 0x01070958: 0x1070958: lw    v0, 14988(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3745
+	ldc.i4 3747
 	add
 	ldelem.i4
 	stloc 5
@@ -3659,12 +3659,12 @@ L_10712a0:
 // 0x010712c8: 0x10712c8: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x010712cc: 0x10712cc: jal   0x1070a84 sw    zero, 15048(v0)
+// 0x010712cc: 0x10712cc: jal   0x1070a84 sw    zero, 15056(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 3762
+	ldc.i4 3764
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -5425,9 +5425,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -40
 	add
 	stloc.0
-// 0x010717c0: 0x10717c0: addiu a0, a0, 15156
+// 0x010717c0: 0x10717c0: addiu a0, a0, 15164
 	ldloc.1
-	ldc.i4 15156
+	ldc.i4 15164
 	add
 	stloc.1
 // 0x010717c4: 0x10717c4: sw    ra, 36(sp)
@@ -5698,9 +5698,9 @@ __CIBYL_javamethod_begin:
 // 0x01071854: 0x1071854: addu  a3, s4, zero
 	ldloc 14
 	stloc 4
-// 0x01071858: 0x1071858: addiu a0, a0, 15108
+// 0x01071858: 0x1071858: addiu a0, a0, 15116
 	ldloc.1
-	ldc.i4 15108
+	ldc.i4 15116
 	add
 	stloc.1
 // 0x0107185c: 0x107185c: sw    ra, 52(sp)
@@ -5909,9 +5909,9 @@ __CIBYL_javamethod_begin:
 // 0x010718e8: 0x10718e8: addu  a1, s1, zero
 	ldloc 9
 	stloc.2
-// 0x010718ec: 0x10718ec: addiu a0, a0, 15124
+// 0x010718ec: 0x10718ec: addiu a0, a0, 15132
 	ldloc.1
-	ldc.i4 15124
+	ldc.i4 15132
 	add
 	stloc.1
 // 0x010718f0: 0x10718f0: jal   0x10716e0 addu  a3, v0, zero
@@ -6149,9 +6149,9 @@ __CIBYL_javamethod_begin:
 // 0x010719a0: 0x10719a0: addu  a2, s5, zero
 	ldloc 15
 	stloc.3
-// 0x010719a4: 0x10719a4: addiu a0, a0, 15140
+// 0x010719a4: 0x10719a4: addiu a0, a0, 15148
 	ldloc.1
-	ldc.i4 15140
+	ldc.i4 15148
 	add
 	stloc.1
 // 0x010719a8: 0x10719a8: jal   0x10716e0 addu  a3, v0, zero
@@ -6237,9 +6237,9 @@ __CIBYL_javamethod_begin:
 // 0x010719e8: 0x10719e8: addu  a3, s4, zero
 	ldloc 14
 	stloc 4
-// 0x010719ec: 0x10719ec: jal   0x10716e0 addiu a0, a0, 15172
+// 0x010719ec: 0x10719ec: jal   0x10716e0 addiu a0, a0, 15180
 	ldloc.1
-	ldc.i4 15172
+	ldc.i4 15180
 	add
 	stloc.1
 	ldloc.0

@@ -1475,8 +1475,8 @@ L_102ee58:
 	ldc.i4 -25228
 	add
 	stloc.1
-// 0x0102ee90: 0x102ee90: jal   0x1004a38 addiu a1, zero, 1998
-	ldc.i4 1998
+// 0x0102ee90: 0x102ee90: jal   0x1004a38 addiu a1, zero, 2000
+	ldc.i4 2000
 	stloc.2
 	ldloc.0
 	ldloc.1

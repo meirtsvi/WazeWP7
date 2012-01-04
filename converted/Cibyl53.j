@@ -233,9 +233,9 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01047a48: 0x1047a48: sw    ra, 20(sp)
-// 0x01047a4c: 0x1047a4c: jal   0x100e630 addiu a0, a0, 13436
+// 0x01047a4c: 0x1047a4c: jal   0x100e630 addiu a0, a0, 13444
 	ldloc.1
-	ldc.i4 13436
+	ldc.i4 13444
 	add
 	stloc.1
 	ldloc.0

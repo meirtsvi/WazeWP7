@@ -4558,12 +4558,12 @@ __CIBYL_javamethod_begin:
 // 0x0104c5e0: 0x104c5e0: lui   a1, 0x70000
 	ldc.i4 458752
 	stloc.2
-// 0x0104c5e4: 0x104c5e4: lw    a2, 13696(a0)
+// 0x0104c5e4: 0x104c5e4: lw    a2, 13704(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 3424
+	ldc.i4 3426
 	add
 	ldelem.i4
 	stloc.3
@@ -4590,12 +4590,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldc.i4.s 0
 	call void [WazeWP7]CRunTime::memoryWriteByte(int32, int32)
-// 0x0104c600: 0x104c600: sw    zero, 13696(a0)
+// 0x0104c600: 0x104c600: sw    zero, 13704(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 3424
+	ldc.i4 3426
 	add
 	ldc.i4.s 0
 	stelem.i4

@@ -2298,9 +2298,9 @@ L_1033014:
 	ldc.i4 12676
 	add
 	stloc.1
-// 0x01033020: 0x1033020: addiu a1, a1, 12432
+// 0x01033020: 0x1033020: addiu a1, a1, 12440
 	ldloc.2
-	ldc.i4 12432
+	ldc.i4 12440
 	add
 	stloc.2
 // 0x01033024: 0x1033024: addiu a2, a2, 21180
@@ -2660,9 +2660,9 @@ L_1033104:
 	add
 	stloc.0
 // 0x0103310c: 0x103310c: sw    ra, 20(sp)
-// 0x01033110: 0x1033110: jal   0x100e7a8 addiu a0, a0, 12432
+// 0x01033110: 0x1033110: jal   0x100e7a8 addiu a0, a0, 12440
 	ldloc.1
-	ldc.i4 12432
+	ldc.i4 12440
 	add
 	stloc.1
 	ldloc.0

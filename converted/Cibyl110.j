@@ -1706,12 +1706,12 @@ L_1093d1c:
 // 0x01093d38: 0x1093d38: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x01093d3c: 0x1093d3c: lw    v1, 17500(v0)
+// 0x01093d3c: 0x1093d3c: lw    v1, 17508(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 4375
+	ldc.i4 4377
 	add
 	ldelem.i4
 	stloc 7
@@ -1969,12 +1969,12 @@ L_1093df4:
 // 0x01093e04: 0x1093e04: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x01093e08: 0x1093e08: sw    v1, 17500(v0)
+// 0x01093e08: 0x1093e08: sw    v1, 17508(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 4375
+	ldc.i4 4377
 	add
 	ldloc 7
 	stelem.i4

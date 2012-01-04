@@ -7100,8 +7100,8 @@ L_102ce90:
 // 0x0102ceb8: 0x102ceb8: addiu a0, zero, 4
 	ldc.i4.4
 	stloc.1
-// 0x0102cebc: 0x102cebc: jal   0x100449c addiu a2, zero, 3303
-	ldc.i4 3303
+// 0x0102cebc: 0x102cebc: jal   0x100449c addiu a2, zero, 3305
+	ldc.i4 3305
 	stloc.3
 	ldloc.0
 	ldloc.1
