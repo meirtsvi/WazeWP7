@@ -49,6 +49,15 @@ namespace WazeWP7
         {
             NavigationService.GoBack();
         }
+
+        private void RestoreFavorites_Click(object sender, RoutedEventArgs e)
+        {
+            if (GamePage.RestoreFavorites!= null)
+            {
+                GamePage.RestoreFavorites.CallCallback();
+            }
+
+        }
     }
 
     public class SettingsPageViewModel

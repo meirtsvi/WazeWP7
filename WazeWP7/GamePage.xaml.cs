@@ -629,6 +629,7 @@ namespace WazeWP7
 
         //private static bool perf_button_added = false;
         public static WazeMenuItem MeOnMapItem = null;
+        public static WazeMenuItem RestoreFavorites = null;
         public static WazeMenuItem ZoomIn = null;
         public static WazeMenuItem ZoomOut = null;
 
@@ -709,7 +710,8 @@ namespace WazeWP7
             }
             else if (text.ToLower().Contains("favorites"))
             {
-                addMenuItem = true;
+                RestoreFavorites = new_item;
+                addMenuItem = false;
             }
 
             //else if (text.ToLower().Equals("settings") || text.Equals("הגדרות"))

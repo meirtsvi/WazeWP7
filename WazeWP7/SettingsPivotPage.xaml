@@ -234,6 +234,22 @@
                     </StackPanel>
                 </ScrollViewer>
             </controls:PivotItem>
+
+            <!--Pivot item six-->
+            <controls:PivotItem Header="Other">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical" Margin="5,0">
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" Text="Would you like to restore your favorites?"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+
+                                <Button Name="RestoreFavorites" Height="73" Width="146" Click="RestoreFavorites_Click">Yes</Button>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
         </controls:Pivot>
     </Grid>
 
