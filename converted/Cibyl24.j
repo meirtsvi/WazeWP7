@@ -100,12 +100,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4.1
 	stloc 8
 // 0x010203fc: 0x10203fc: sw    ra, 20(sp)
-// 0x01020400: 0x1020400: jal   0x10109ac sw    s0, 28488(v0)
+// 0x01020400: 0x1020400: jal   0x10109ac sw    s0, 28520(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7122
+	ldc.i4 7130
 	add
 	ldloc 8
 	stelem.i4
@@ -151,12 +151,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4 6092
 	add
 	stloc.1
-// 0x01020424: 0x1020424: jal   0x100e368 sw    v0, 28504(v1)
+// 0x01020424: 0x1020424: jal   0x100e368 sw    v0, 28536(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7126
+	ldc.i4 7134
 	add
 	ldloc 5
 	stelem.i4
@@ -210,12 +210,12 @@ __CIBYL_javamethod_begin:
 // 0x01020448: 0x1020448: addiu a0, zero, 4
 	ldc.i4.4
 	stloc.1
-// 0x0102044c: 0x102044c: jal   0x104defc sw    v0, 28584(v1)
+// 0x0102044c: 0x102044c: jal   0x104defc sw    v0, 28616(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7146
+	ldc.i4 7154
 	add
 	ldloc 5
 	stelem.i4
@@ -257,24 +257,24 @@ __CIBYL_javamethod_begin:
 // 0x01020468: 0x1020468: lui   v0, 0xf0000
 	ldc.i4 983040
 	stloc 5
-// 0x0102046c: 0x102046c: lw    a0, -30036(v0)
+// 0x0102046c: 0x102046c: lw    a0, -30004(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -7509
+	ldc.i4 -7501
 	add
 	ldelem.i4
 	stloc.1
 // 0x01020470: 0x1020470: lui   v0, 0xf0000
 	ldc.i4 983040
 	stloc 5
-// 0x01020474: 0x1020474: lw    v1, -30040(v0)
+// 0x01020474: 0x1020474: lw    v1, -30008(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -7510
+	ldc.i4 -7502
 	add
 	ldelem.i4
 	stloc 6
@@ -290,24 +290,24 @@ __CIBYL_javamethod_begin:
 	stloc 5
 	brfalse L_1020490
 // --- basic block ---
-// 0x01020488: 0x1020488: j	 0x1020494 sw    s0, 28768(v0)
+// 0x01020488: 0x1020488: j	 0x1020494 sw    s0, 28800(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7192
+	ldc.i4 7200
 	add
 	ldloc 8
 	stelem.i4
 	br L_1020494
 // --- basic block ---
 L_1020490:
-// 0x01020490: 0x1020490: sw    zero, 28768(v0)
+// 0x01020490: 0x1020490: sw    zero, 28800(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7192
+	ldc.i4 7200
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -407,12 +407,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4 6092
 	add
 	stloc.1
-// 0x010204c8: 0x10204c8: jal   0x100e368 sw    v0, 28504(v1)
+// 0x010204c8: 0x10204c8: jal   0x100e368 sw    v0, 28536(v1)
 	ldloc 8
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7126
+	ldc.i4 7134
 	add
 	ldloc 5
 	stelem.i4
@@ -494,9 +494,9 @@ __CIBYL_javamethod_begin:
 // 0x010204e8: 0x10204e8: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x010204ec: 0x10204ec: addiu v0, a0, 28680
+// 0x010204ec: 0x10204ec: addiu v0, a0, 28712
 	ldloc.1
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc 5
 // 0x010204f0: 0x10204f0: lw    v1, 4(v0)
@@ -516,21 +516,21 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -48
 	add
 	stloc.0
-// 0x010204fc: 0x10204fc: lw    v0, 28696(v0)
+// 0x010204fc: 0x10204fc: lw    v0, 28728(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldelem.i4
 	stloc 5
-// 0x01020500: 0x1020500: lw    a2, 28680(a0)
+// 0x01020500: 0x1020500: lw    a2, 28712(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7170
+	ldc.i4 7178
 	add
 	ldelem.i4
 	stloc.3
@@ -597,12 +597,12 @@ __CIBYL_javamethod_begin:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x0102052c: 0x102052c: lw    v0, 28580(s0)
+// 0x0102052c: 0x102052c: lw    v0, 28612(s0)
 	ldloc 6
 	ldloc 8
 	ldc.i4.2
 	shr.un
-	ldc.i4 7145
+	ldc.i4 7153
 	add
 	ldelem.i4
 	stloc 5
@@ -631,12 +631,12 @@ __CIBYL_javamethod_begin:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x01020548: 0x1020548: sw    zero, 28580(s0)
+// 0x01020548: 0x1020548: sw    zero, 28612(s0)
 	ldloc 6
 	ldloc 8
 	ldc.i4.2
 	shr.un
-	ldc.i4 7145
+	ldc.i4 7153
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -648,12 +648,12 @@ L_1020550:
 	ldc.i4.1
 	stloc 7
 // 0x01020554: 0x1020554: lw    ra, 44(sp)
-// 0x01020558: 0x1020558: sw    v1, 28492(v0)
+// 0x01020558: 0x1020558: sw    v1, 28524(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7123
+	ldc.i4 7131
 	add
 	ldloc 7
 	stelem.i4
@@ -669,12 +669,12 @@ L_1020550:
 	add
 	ldelem.i4
 	stloc 8
-// 0x01020564: 0x1020564: sw    zero, 28488(v0)
+// 0x01020564: 0x1020564: sw    zero, 28520(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7122
+	ldc.i4 7130
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -833,12 +833,12 @@ __CIBYL_javamethod_begin:
 // 0x010205b0: 0x10205b0: addiu a1, zero, 4294
 	ldc.i4 4294
 	stloc.2
-// 0x010205b4: 0x10205b4: jal   0x1004a38 sw    s0, 28516(v0)
+// 0x010205b4: 0x10205b4: jal   0x1004a38 sw    s0, 28548(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7129
+	ldc.i4 7137
 	add
 	ldloc 8
 	stelem.i4
@@ -861,9 +861,9 @@ __CIBYL_javamethod_begin:
 // 0x010205c4: 0x10205c4: lui   a2, 0x0
 	ldc.i4.s 0
 	stloc.3
-// 0x010205c8: 0x10205c8: addiu a0, s0, 12676
+// 0x010205c8: 0x10205c8: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x010205cc: 0x10205cc: addiu a1, a1, 6108
@@ -935,14 +935,14 @@ __CIBYL_javamethod_begin:
 // 0x01020604: 0x1020604: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x01020608: 0x1020608: addiu s1, s1, 9300
+// 0x01020608: 0x1020608: addiu s1, s1, 9340
 	ldloc 9
-	ldc.i4 9300
+	ldc.i4 9340
 	add
 	stloc 9
-// 0x0102060c: 0x102060c: addiu a0, s0, 12676
+// 0x0102060c: 0x102060c: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x01020610: 0x1020610: addiu a3, s2, 20820
@@ -995,9 +995,9 @@ __CIBYL_javamethod_begin:
 // 0x01020630: 0x1020630: lui   v0, 0x10000
 	ldc.i4 65536
 	stloc 5
-// 0x01020634: 0x1020634: addiu a0, s0, 12676
+// 0x01020634: 0x1020634: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x01020638: 0x1020638: addiu a1, a1, 6124
@@ -1049,9 +1049,9 @@ __CIBYL_javamethod_begin:
 // 0x01020654: 0x1020654: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x01020658: 0x1020658: addiu a0, s0, 12676
+// 0x01020658: 0x1020658: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x0102065c: 0x102065c: addiu a3, s2, 20820
@@ -1098,9 +1098,9 @@ __CIBYL_javamethod_begin:
 // 0x01020674: 0x1020674: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x01020678: 0x1020678: addiu a0, s0, 12676
+// 0x01020678: 0x1020678: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x0102067c: 0x102067c: addiu a3, s2, 20820
@@ -1153,9 +1153,9 @@ __CIBYL_javamethod_begin:
 // 0x0102069c: 0x102069c: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010206a0: 0x10206a0: addiu a0, s0, 12676
+// 0x010206a0: 0x10206a0: addiu a0, s0, 12716
 	ldloc 8
-	ldc.i4 12676
+	ldc.i4 12716
 	add
 	stloc.1
 // 0x010206a4: 0x10206a4: addiu a1, a1, 6172
@@ -1163,17 +1163,17 @@ __CIBYL_javamethod_begin:
 	ldc.i4 6172
 	add
 	stloc.2
-// 0x010206a8: 0x10206a8: addiu a3, a3, -19000
+// 0x010206a8: 0x10206a8: addiu a3, a3, -18960
 	ldloc 4
-	ldc.i4 -19000
+	ldc.i4 -18960
 	add
 	stloc 4
 // 0x010206ac: 0x10206ac: addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
-// 0x010206b0: 0x10206b0: addiu v0, v0, -6940
+// 0x010206b0: 0x10206b0: addiu v0, v0, -6900
 	ldloc 5
-	ldc.i4 -6940
+	ldc.i4 -6900
 	add
 	stloc 5
 // 0x010206b4: 0x10206b4: lui   s0, 0x20000
@@ -1216,9 +1216,9 @@ __CIBYL_javamethod_begin:
 // 0x010206cc: 0x10206cc: lui   v0, 0x10000
 	ldc.i4 65536
 	stloc 5
-// 0x010206d0: 0x10206d0: addiu a0, s0, -26772
+// 0x010206d0: 0x10206d0: addiu a0, s0, -26732
 	ldloc 8
-	ldc.i4 -26772
+	ldc.i4 -26732
 	add
 	stloc.1
 // 0x010206d4: 0x10206d4: addiu a1, a1, 6188
@@ -1278,9 +1278,9 @@ __CIBYL_javamethod_begin:
 // 0x010206f8: 0x10206f8: addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
-// 0x010206fc: 0x10206fc: addiu a0, s0, -26772
+// 0x010206fc: 0x10206fc: addiu a0, s0, -26732
 	ldloc 8
-	ldc.i4 -26772
+	ldc.i4 -26732
 	add
 	stloc.1
 // 0x01020700: 0x1020700: addiu a1, a1, 6052
@@ -1478,14 +1478,14 @@ __CIBYL_javamethod_begin:
 // 0x0102078c: 0x102078c: lui   t4, 0x40000
 	ldc.i4 262144
 	stloc 15
-// 0x01020790: 0x1020790: addiu t4, t4, -20372
+// 0x01020790: 0x1020790: addiu t4, t4, -20340
 	ldloc 15
-	ldc.i4 -20372
+	ldc.i4 -20340
 	add
 	stloc 15
-// 0x01020794: 0x1020794: addiu t3, t2, 28772
+// 0x01020794: 0x1020794: addiu t3, t2, 28804
 	ldloc 11
-	ldc.i4 28772
+	ldc.i4 28804
 	add
 	stloc 13
 // 0x01020798: 0x1020798: sw    t4, 4(t3)
@@ -1500,42 +1500,42 @@ __CIBYL_javamethod_begin:
 // 0x0102079c: 0x102079c: lui   t3, 0x30000
 	ldc.i4 196608
 	stloc 13
-// 0x010207a0: 0x10207a0: addiu t3, t3, 28780
+// 0x010207a0: 0x10207a0: addiu t3, t3, 28812
 	ldloc 13
-	ldc.i4 28780
+	ldc.i4 28812
 	add
 	stloc 13
-// 0x010207a4: 0x10207a4: sw    t3, 28772(t2)
+// 0x010207a4: 0x10207a4: sw    t3, 28804(t2)
 	ldloc 7
 	ldloc 11
 	ldc.i4.2
 	shr.un
-	ldc.i4 7193
+	ldc.i4 7201
 	add
 	ldloc 13
 	stelem.i4
 // 0x010207a8: 0x10207a8: lui   t2, 0x40000
 	ldc.i4 262144
 	stloc 11
-// 0x010207ac: 0x10207ac: addiu t2, t2, -20360
+// 0x010207ac: 0x10207ac: addiu t2, t2, -20328
 	ldloc 11
-	ldc.i4 -20360
+	ldc.i4 -20328
 	add
 	stloc 11
 // 0x010207b0: 0x10207b0: lui   t1, 0x40000
 	ldc.i4 262144
 	stloc 10
-// 0x010207b4: 0x10207b4: addiu a2, t1, -20372
+// 0x010207b4: 0x10207b4: addiu a2, t1, -20340
 	ldloc 10
-	ldc.i4 -20372
+	ldc.i4 -20340
 	add
 	stloc.3
-// 0x010207b8: 0x10207b8: sw    t2, -20372(t1)
+// 0x010207b8: 0x10207b8: sw    t2, -20340(t1)
 	ldloc 7
 	ldloc 10
 	ldc.i4.2
 	shr.un
-	ldc.i4 -5093
+	ldc.i4 -5085
 	add
 	ldloc 11
 	stelem.i4
@@ -1551,24 +1551,24 @@ __CIBYL_javamethod_begin:
 // 0x010207c8: 0x10207c8: lui   t1, 0x40000
 	ldc.i4 262144
 	stloc 10
-// 0x010207cc: 0x10207cc: addiu v0, t0, 28792
+// 0x010207cc: 0x10207cc: addiu v0, t0, 28824
 	ldloc 14
-	ldc.i4 28792
+	ldc.i4 28824
 	add
 	stloc 5
-// 0x010207d0: 0x10207d0: addiu a3, a3, 12408
+// 0x010207d0: 0x10207d0: addiu a3, a3, 12440
 	ldloc 4
-	ldc.i4 12408
+	ldc.i4 12440
 	add
 	stloc 4
-// 0x010207d4: 0x10207d4: addiu v1, v1, -3964
+// 0x010207d4: 0x10207d4: addiu v1, v1, -3932
 	ldloc 6
-	ldc.i4 -3964
+	ldc.i4 -3932
 	add
 	stloc 6
-// 0x010207d8: 0x10207d8: addiu t1, t1, 28804
+// 0x010207d8: 0x10207d8: addiu t1, t1, 28836
 	ldloc 10
-	ldc.i4 28804
+	ldc.i4 28836
 	add
 	stloc 10
 // 0x010207dc: 0x10207dc: lui   a0, 0x10000
@@ -1577,12 +1577,12 @@ __CIBYL_javamethod_begin:
 // 0x010207e0: 0x10207e0: lui   a1, 0x1020000
 	ldc.i4 16908288
 	stloc.2
-// 0x010207e4: 0x10207e4: sw    t1, 28792(t0)
+// 0x010207e4: 0x10207e4: sw    t1, 28824(t0)
 	ldloc 7
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7198
+	ldc.i4 7206
 	add
 	ldloc 10
 	stelem.i4
@@ -1635,12 +1635,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4 -1908
 	add
 	stloc.2
-// 0x01020804: 0x1020804: jal   0x100f4ac sw    zero, 28688(t0)
+// 0x01020804: 0x1020804: jal   0x100f4ac sw    zero, 28720(t0)
 	ldloc 7
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7172
+	ldc.i4 7180
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -1912,24 +1912,24 @@ __CIBYL_javamethod_begin:
 // 0x0102089c: 0x102089c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x010208a0: 0x10208a0: lw    t0, 28700(v0)
+// 0x010208a0: 0x10208a0: lw    t0, 28732(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7175
+	ldc.i4 7183
 	add
 	ldelem.i4
 	stloc 15
 // 0x010208a4: 0x10208a4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x010208a8: 0x10208a8: lw    a3, 28704(v0)
+// 0x010208a8: 0x10208a8: lw    a3, 28736(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 4
@@ -1952,21 +1952,21 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010208c0: 0x10208c0: lw    t5, 28708(t3)
+// 0x010208c0: 0x10208c0: lw    t5, 28740(t3)
 	ldloc 5
 	ldloc 13
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldelem.i4
 	stloc 10
-// 0x010208c4: 0x10208c4: lw    t4, 28712(t2)
+// 0x010208c4: 0x10208c4: lw    t4, 28744(t2)
 	ldloc 5
 	ldloc 12
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldelem.i4
 	stloc 9
@@ -2003,30 +2003,30 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s 16
 	add
 	stloc.1
-// 0x010208e4: 0x10208e4: addiu a1, s0, 28680
+// 0x010208e4: 0x10208e4: addiu a1, s0, 28712
 	ldloc 8
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.2
 // 0x010208e8: 0x10208e8: addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
 // 0x010208ec: 0x10208ec: sw    ra, 28(sp)
-// 0x010208f0: 0x10208f0: sw    t5, 28708(t3)
+// 0x010208f0: 0x10208f0: sw    t5, 28740(t3)
 	ldloc 5
 	ldloc 13
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldloc 10
 	stelem.i4
-// 0x010208f4: 0x10208f4: sw    t4, 28712(t2)
+// 0x010208f4: 0x10208f4: sw    t4, 28744(t2)
 	ldloc 5
 	ldloc 12
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldloc 9
 	stelem.i4
@@ -2079,9 +2079,9 @@ __CIBYL_javamethod_begin:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020918: 0x1020918: jal   0x1008768 addiu a0, s0, 28680
+// 0x01020918: 0x1020918: jal   0x1008768 addiu a0, s0, 28712
 	ldloc 8
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.1
 	ldloc.0
@@ -2189,12 +2189,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -96
 	add
 	stloc.0
-// 0x01020938: 0x1020938: lw    v0, 28496(v0)
+// 0x01020938: 0x1020938: lw    v0, 28528(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc 6
@@ -2280,11 +2280,11 @@ __CIBYL_javamethod_begin:
 // 0x01020968: 0x1020968: addu  s0, a0, zero
 	ldloc.1
 	stloc 8
-// 0x0102096c: 0x102096c: bne   v0, v1, 0x10209c0 addiu s1, s2, 28672
+// 0x0102096c: 0x102096c: bne   v0, v1, 0x10209c0 addiu s1, s2, 28704
 	ldloc 6
 	ldloc 7
 	ldloc 13
-	ldc.i4 28672
+	ldc.i4 28704
 	add
 	stloc 12
 	bne.un L_10209c0
@@ -2314,12 +2314,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 6
-// 0x01020980: 0x1020980: lw    v1, 28672(s2)
+// 0x01020980: 0x1020980: lw    v1, 28704(s2)
 	ldloc 5
 	ldloc 13
 	ldc.i4.2
 	shr.un
-	ldc.i4 7168
+	ldc.i4 7176
 	add
 	ldelem.i4
 	stloc 7
@@ -2510,30 +2510,30 @@ L_10209c0:
 // 0x010209f4: 0x10209f4: lui   s3, 0x30000
 	ldc.i4 196608
 	stloc 14
-// 0x010209f8: 0x10209f8: lw    a3, 23700(s5)
+// 0x010209f8: 0x10209f8: lw    a3, 23732(s5)
 	ldloc 5
 	ldloc 10
 	ldc.i4.2
 	shr.un
-	ldc.i4 5925
+	ldc.i4 5933
 	add
 	ldelem.i4
 	stloc 4
-// 0x010209fc: 0x10209fc: lw    a2, 23696(s5)
+// 0x010209fc: 0x10209fc: lw    a2, 23728(s5)
 	ldloc 5
 	ldloc 10
 	ldc.i4.2
 	shr.un
-	ldc.i4 5924
+	ldc.i4 5932
 	add
 	ldelem.i4
 	stloc.3
 // 0x01020a00: 0x1020a00: addu  a1, v1, zero
 	ldloc 7
 	stloc.2
-// 0x01020a04: 0x1020a04: addiu s6, s3, 28760
+// 0x01020a04: 0x1020a04: addiu s6, s3, 28792
 	ldloc 14
-	ldc.i4 28760
+	ldc.i4 28792
 	add
 	stloc 11
 // 0x01020a08: 0x1020a08: jal   0x10c0978 addu  a0, v0, zero
@@ -2589,21 +2589,21 @@ L_10209c0:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020a28: 0x1020a28: lw    a3, 23644(s4)
+// 0x01020a28: 0x1020a28: lw    a3, 23676(s4)
 	ldloc 5
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 5911
+	ldc.i4 5919
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020a2c: 0x1020a2c: lw    a2, 23640(s4)
+// 0x01020a2c: 0x1020a2c: lw    a2, 23672(s4)
 	ldloc 5
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 5910
+	ldc.i4 5918
 	add
 	ldelem.i4
 	stloc.3
@@ -2716,21 +2716,21 @@ L_10209c0:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020a78: 0x1020a78: lw    a3, 23700(s5)
+// 0x01020a78: 0x1020a78: lw    a3, 23732(s5)
 	ldloc 5
 	ldloc 10
 	ldc.i4.2
 	shr.un
-	ldc.i4 5925
+	ldc.i4 5933
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020a7c: 0x1020a7c: lw    a2, 23696(s5)
+// 0x01020a7c: 0x1020a7c: lw    a2, 23728(s5)
 	ldloc 5
 	ldloc 10
 	ldc.i4.2
 	shr.un
-	ldc.i4 5924
+	ldc.i4 5932
 	add
 	ldelem.i4
 	stloc.3
@@ -2750,12 +2750,12 @@ L_10209c0:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020a8c: 0x1020a8c: lw    a0, 28760(s3)
+// 0x01020a8c: 0x1020a8c: lw    a0, 28792(s3)
 	ldloc 5
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7190
+	ldc.i4 7198
 	add
 	ldelem.i4
 	stloc.1
@@ -2772,21 +2772,21 @@ L_10209c0:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020a9c: 0x1020a9c: lw    a3, 23644(s4)
+// 0x01020a9c: 0x1020a9c: lw    a3, 23676(s4)
 	ldloc 5
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 5911
+	ldc.i4 5919
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020aa0: 0x1020aa0: lw    a2, 23640(s4)
+// 0x01020aa0: 0x1020aa0: lw    a2, 23672(s4)
 	ldloc 5
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 5910
+	ldc.i4 5918
 	add
 	ldelem.i4
 	stloc.3
@@ -2842,21 +2842,21 @@ L_10209c0:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020ad0: 0x1020ad0: sw    v0, 28760(s3)
+// 0x01020ad0: 0x1020ad0: sw    v0, 28792(s3)
 	ldloc 5
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7190
+	ldc.i4 7198
 	add
 	ldloc 6
 	stelem.i4
-// 0x01020ad4: 0x1020ad4: lw    a0, 28672(s2)
+// 0x01020ad4: 0x1020ad4: lw    a0, 28704(s2)
 	ldloc 5
 	ldloc 13
 	ldc.i4.2
 	shr.un
-	ldc.i4 7168
+	ldc.i4 7176
 	add
 	ldelem.i4
 	stloc.1
@@ -2916,12 +2916,12 @@ L_1020ae8:
 // 0x01020af4: 0x1020af4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01020af8: 0x1020af8: sw    v1, 28672(v0)
+// 0x01020af8: 0x1020af8: sw    v1, 28704(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7168
+	ldc.i4 7176
 	add
 	ldloc 7
 	stelem.i4
@@ -2934,9 +2934,9 @@ L_1020ae8:
 	add
 	ldelem.i4
 	stloc 7
-// 0x01020b00: 0x1020b00: addiu v0, v0, 28672
+// 0x01020b00: 0x1020b00: addiu v0, v0, 28704
 	ldloc 6
-	ldc.i4 28672
+	ldc.i4 28704
 	add
 	stloc 6
 // 0x01020b04: 0x1020b04: jal   0x101fc68 sw    v1, 4(v0)
@@ -3088,12 +3088,12 @@ L_1020b3c:
 // 0x01020b3c: 0x1020b3c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020b40: 0x1020b40: lw    a0, 28704(v0)
+// 0x01020b40: 0x1020b40: lw    a0, 28736(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc.1
@@ -3194,12 +3194,12 @@ L_1020b78:
 // 0x01020b78: 0x1020b78: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020b7c: 0x1020b7c: lw    a0, 28704(v0)
+// 0x01020b7c: 0x1020b7c: lw    a0, 28736(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc.1
@@ -3300,12 +3300,12 @@ L_1020bb4:
 // 0x01020bb4: 0x1020bb4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020bb8: 0x1020bb8: lw    a1, 28704(v0)
+// 0x01020bb8: 0x1020bb8: lw    a1, 28736(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc.2
@@ -3406,12 +3406,12 @@ L_1020bf0:
 // 0x01020bf0: 0x1020bf0: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020bf4: 0x1020bf4: lw    a1, 28704(v0)
+// 0x01020bf4: 0x1020bf4: lw    a1, 28736(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc.2
@@ -3607,12 +3607,12 @@ __CIBYL_javamethod_begin:
 // 0x01020c58: 0x1020c58: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020c5c: 0x1020c5c: sw    v1, 28680(v0)
+// 0x01020c5c: 0x1020c5c: sw    v1, 28712(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7170
+	ldc.i4 7178
 	add
 	ldloc 7
 	stelem.i4
@@ -3628,17 +3628,17 @@ __CIBYL_javamethod_begin:
 // 0x01020c64: 0x1020c64: lui   a1, 0x30000
 	ldc.i4 196608
 	stloc.2
-// 0x01020c68: 0x1020c68: addiu v0, v0, 28680
+// 0x01020c68: 0x1020c68: addiu v0, v0, 28712
 	ldloc 5
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc 5
-// 0x01020c6c: 0x1020c6c: sw    zero, 28708(a1)
+// 0x01020c6c: 0x1020c6c: sw    zero, 28740(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -3662,12 +3662,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-// 0x01020c80: 0x1020c80: sw    zero, 28712(a1)
+// 0x01020c80: 0x1020c80: sw    zero, 28744(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -3684,12 +3684,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x01020c90: 0x1020c90: jal   0x1008768 sw    zero, 28696(a1)
+// 0x01020c90: 0x1020c90: jal   0x1008768 sw    zero, 28728(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -3706,24 +3706,24 @@ __CIBYL_javamethod_begin:
 // 0x01020c98: 0x1020c98: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020c9c: 0x1020c9c: lw    t1, 28704(v0)
+// 0x01020c9c: 0x1020c9c: lw    t1, 28736(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 8
 // 0x01020ca0: 0x1020ca0: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020ca4: 0x1020ca4: lw    t0, 28700(v0)
+// 0x01020ca4: 0x1020ca4: lw    t0, 28732(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7175
+	ldc.i4 7183
 	add
 	ldelem.i4
 	stloc 10
@@ -3738,21 +3738,21 @@ __CIBYL_javamethod_begin:
 // 0x01020cb0: 0x1020cb0: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 7
-// 0x01020cb4: 0x1020cb4: lw    t1, 28716(v1)
+// 0x01020cb4: 0x1020cb4: lw    t1, 28748(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc 8
 // 0x01020cb8: 0x1020cb8: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 7
-// 0x01020cbc: 0x1020cbc: addiu a3, v1, 28720
+// 0x01020cbc: 0x1020cbc: addiu a3, v1, 28752
 	ldloc 7
-	ldc.i4 28720
+	ldc.i4 28752
 	add
 	stloc 4
 // 0x01020cc0: 0x1020cc0: addiu s0, sp, 16
@@ -3794,12 +3794,12 @@ __CIBYL_javamethod_begin:
 // 0x01020ce0: 0x1020ce0: mflo  lo
 	ldloc 11
 	stloc 10
-// 0x01020ce4: 0x1020ce4: jal   0x1007a6c sw    t0, 28720(v1)
+// 0x01020ce4: 0x1020ce4: jal   0x1007a6c sw    t0, 28752(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 7180
+	ldc.i4 7188
 	add
 	ldloc 10
 	stelem.i4
@@ -4054,9 +4054,9 @@ L_1020d5c:
 // 0x01020d60: 0x1020d60: addu  a0, s2, zero
 	ldloc 13
 	stloc.1
-// 0x01020d64: 0x1020d64: addiu a1, s1, 28672
+// 0x01020d64: 0x1020d64: addiu a1, s1, 28704
 	ldloc 11
-	ldc.i4 28672
+	ldc.i4 28704
 	add
 	stloc.2
 // 0x01020d68: 0x1020d68: jal   0x10096b4 addu  a2, zero, zero
@@ -4077,9 +4077,9 @@ L_1020d5c:
 	ldloc 6
 	mul
 	stloc 9
-// 0x01020d74: 0x1020d74: addiu a0, s1, 28672
+// 0x01020d74: 0x1020d74: addiu a0, s1, 28704
 	ldloc 11
-	ldc.i4 28672
+	ldc.i4 28704
 	add
 	stloc.1
 // 0x01020d78: 0x1020d78: addiu a1, sp, 16
@@ -4168,21 +4168,21 @@ L_1020d5c:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020db8: 0x1020db8: lw    a3, 23708(s8)
+// 0x01020db8: 0x1020db8: lw    a3, 23740(s8)
 	ldloc 5
 	ldloc 16
 	ldc.i4.2
 	shr.un
-	ldc.i4 5927
+	ldc.i4 5935
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020dbc: 0x1020dbc: lw    a2, 23704(s8)
+// 0x01020dbc: 0x1020dbc: lw    a2, 23736(s8)
 	ldloc 5
 	ldloc 16
 	ldc.i4.2
 	shr.un
-	ldc.i4 5926
+	ldc.i4 5934
 	add
 	ldelem.i4
 	stloc.3
@@ -4205,9 +4205,9 @@ L_1020d5c:
 // 0x01020dcc: 0x1020dcc: addu  t0, v0, zero
 	ldloc 6
 	stloc 10
-// 0x01020dd0: 0x1020dd0: addiu v0, s3, 28760
+// 0x01020dd0: 0x1020dd0: addiu v0, s3, 28792
 	ldloc 14
-	ldc.i4 28760
+	ldc.i4 28792
 	add
 	stloc 6
 // 0x01020dd4: 0x1020dd4: lw    a0, 4(v0)
@@ -4244,21 +4244,21 @@ L_1020d5c:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020de4: 0x1020de4: lw    a3, 23716(s7)
+// 0x01020de4: 0x1020de4: lw    a3, 23748(s7)
 	ldloc 5
 	ldloc 15
 	ldc.i4.2
 	shr.un
-	ldc.i4 5929
+	ldc.i4 5937
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020de8: 0x1020de8: lw    a2, 23712(s7)
+// 0x01020de8: 0x1020de8: lw    a2, 23744(s7)
 	ldloc 5
 	ldloc 15
 	ldc.i4.2
 	shr.un
-	ldc.i4 5928
+	ldc.i4 5936
 	add
 	ldelem.i4
 	stloc.3
@@ -4335,9 +4335,9 @@ L_1020d5c:
 // 0x01020e20: 0x1020e20: addu  s5, v0, zero
 	ldloc 6
 	stloc 19
-// 0x01020e24: 0x1020e24: addiu v0, s3, 28760
+// 0x01020e24: 0x1020e24: addiu v0, s3, 28792
 	ldloc 14
-	ldc.i4 28760
+	ldc.i4 28792
 	add
 	stloc 6
 // 0x01020e28: 0x1020e28: sw    s5, 4(v0)
@@ -4379,21 +4379,21 @@ L_1020d5c:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020e3c: 0x1020e3c: lw    a3, 23708(s8)
+// 0x01020e3c: 0x1020e3c: lw    a3, 23740(s8)
 	ldloc 5
 	ldloc 16
 	ldc.i4.2
 	shr.un
-	ldc.i4 5927
+	ldc.i4 5935
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020e40: 0x1020e40: lw    a2, 23704(s8)
+// 0x01020e40: 0x1020e40: lw    a2, 23736(s8)
 	ldloc 5
 	ldloc 16
 	ldc.i4.2
 	shr.un
-	ldc.i4 5926
+	ldc.i4 5934
 	add
 	ldelem.i4
 	stloc.3
@@ -4413,12 +4413,12 @@ L_1020d5c:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020e50: 0x1020e50: lw    a0, 28760(s3)
+// 0x01020e50: 0x1020e50: lw    a0, 28792(s3)
 	ldloc 5
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7190
+	ldc.i4 7198
 	add
 	ldelem.i4
 	stloc.1
@@ -4450,21 +4450,21 @@ L_1020d5c:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x01020e64: 0x1020e64: lw    a3, 23716(s7)
+// 0x01020e64: 0x1020e64: lw    a3, 23748(s7)
 	ldloc 5
 	ldloc 15
 	ldc.i4.2
 	shr.un
-	ldc.i4 5929
+	ldc.i4 5937
 	add
 	ldelem.i4
 	stloc 4
-// 0x01020e68: 0x1020e68: lw    a2, 23712(s7)
+// 0x01020e68: 0x1020e68: lw    a2, 23744(s7)
 	ldloc 5
 	ldloc 15
 	ldc.i4.2
 	shr.un
-	ldc.i4 5928
+	ldc.i4 5936
 	add
 	ldelem.i4
 	stloc.3
@@ -4546,12 +4546,12 @@ L_1020d5c:
 // 0x01020ea4: 0x1020ea4: addiu a1, zero, -30
 	ldc.i4.s -30
 	stloc.2
-// 0x01020ea8: 0x1020ea8: sw    v0, 28760(s3)
+// 0x01020ea8: 0x1020ea8: sw    v0, 28792(s3)
 	ldloc 5
 	ldloc 14
 	ldc.i4.2
 	shr.un
-	ldc.i4 7190
+	ldc.i4 7198
 	add
 	ldloc 6
 	stelem.i4
@@ -4568,35 +4568,35 @@ L_1020d5c:
 // 0x01020eb4: 0x1020eb4: lui   a2, 0x30000
 	ldc.i4 196608
 	stloc.3
-// 0x01020eb8: 0x1020eb8: addiu v1, a0, 28680
+// 0x01020eb8: 0x1020eb8: addiu v1, a0, 28712
 	ldloc.1
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc 7
-// 0x01020ebc: 0x1020ebc: sw    a3, 28672(s1)
+// 0x01020ebc: 0x1020ebc: sw    a3, 28704(s1)
 	ldloc 5
 	ldloc 11
 	ldc.i4.2
 	shr.un
-	ldc.i4 7168
+	ldc.i4 7176
 	add
 	ldloc 4
 	stelem.i4
-// 0x01020ec0: 0x1020ec0: lw    a0, 28680(a0)
+// 0x01020ec0: 0x1020ec0: lw    a0, 28712(a0)
 	ldloc 5
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7170
+	ldc.i4 7178
 	add
 	ldelem.i4
 	stloc.1
-// 0x01020ec4: 0x1020ec4: lw    t1, 28468(a2)
+// 0x01020ec4: 0x1020ec4: lw    t1, 28500(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
 	shr.un
-	ldc.i4 7117
+	ldc.i4 7125
 	add
 	ldelem.i4
 	stloc 17
@@ -4626,9 +4626,9 @@ L_1020d5c:
 	ldloc 4
 	and
 	stloc 4
-// 0x01020ed8: 0x1020ed8: addiu s1, s1, 28672
+// 0x01020ed8: 0x1020ed8: addiu s1, s1, 28704
 	ldloc 11
-	ldc.i4 28672
+	ldc.i4 28704
 	add
 	stloc 11
 // 0x01020edc: 0x1020edc: sw    t0, 4(s1)
@@ -4640,12 +4640,12 @@ L_1020d5c:
 	add
 	ldloc 10
 	stelem.i4
-// 0x01020ee0: 0x1020ee0: sw    a3, 28468(a2)
+// 0x01020ee0: 0x1020ee0: sw    a3, 28500(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
 	shr.un
-	ldc.i4 7117
+	ldc.i4 7125
 	add
 	ldloc 4
 	stelem.i4
@@ -4954,12 +4954,12 @@ __CIBYL_javamethod_begin:
 // 0x01020f90: 0x1020f90: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020f94: 0x1020f94: lw    v1, 28704(v0)
+// 0x01020f94: 0x1020f94: lw    v1, 28736(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 6
@@ -4982,21 +4982,21 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x01020fac: 0x1020fac: sw    v1, 28716(a3)
+// 0x01020fac: 0x1020fac: sw    v1, 28748(a3)
 	ldloc 7
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldloc 6
 	stelem.i4
 // 0x01020fb0: 0x1020fb0: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01020fb4: 0x1020fb4: addiu v0, v0, 28720
+// 0x01020fb4: 0x1020fb4: addiu v0, v0, 28752
 	ldloc 5
-	ldc.i4 28720
+	ldc.i4 28752
 	add
 	stloc 5
 // 0x01020fb8: 0x1020fb8: sw    s0, 16(sp)
@@ -5014,9 +5014,9 @@ __CIBYL_javamethod_begin:
 // 0x01020fc0: 0x1020fc0: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x01020fc4: 0x1020fc4: addiu a1, s0, 28680
+// 0x01020fc4: 0x1020fc4: addiu a1, s0, 28712
 	ldloc 8
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.2
 // 0x01020fc8: 0x1020fc8: addu  a2, zero, zero
@@ -5050,9 +5050,9 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x01020fe0: 0x1020fe0: jal   0x1020c54 addiu a0, s0, 28680
+// 0x01020fe0: 0x1020fe0: jal   0x1020c54 addiu a0, s0, 28712
 	ldloc 8
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.1
 	ldloc.0
@@ -5217,9 +5217,9 @@ L_1021018:
 // 0x01021030: 0x1021030: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x01021034: 0x1021034: jal   0x1020c54 addiu a0, a0, 28680
+// 0x01021034: 0x1021034: jal   0x1020c54 addiu a0, a0, 28712
 	ldloc.1
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.1
 	ldloc.0
@@ -5327,36 +5327,36 @@ L_1021054:
 // 0x01021064: 0x1021064: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021068: 0x1021068: lw    a0, 28716(v0)
+// 0x01021068: 0x1021068: lw    a0, 28748(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc.1
 // 0x0102106c: 0x102106c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021070: 0x1021070: lw    v0, 28704(v0)
+// 0x01021070: 0x1021070: lw    v0, 28736(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 6
 // 0x01021074: 0x1021074: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021078: 0x1021078: lw    v1, 28496(v1)
+// 0x01021078: 0x1021078: lw    v1, 28528(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc 5
@@ -5398,36 +5398,36 @@ L_1021094:
 // 0x0102109c: 0x102109c: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010210a0: 0x10210a0: lw    s0, 28716(v1)
+// 0x010210a0: 0x10210a0: lw    s0, 28748(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc 8
 // 0x010210a4: 0x10210a4: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010210a8: 0x10210a8: lw    v1, 28704(v1)
+// 0x010210a8: 0x10210a8: lw    v1, 28736(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 5
 // 0x010210ac: 0x10210ac: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x010210b0: 0x10210b0: lw    a0, 28496(a0)
+// 0x010210b0: 0x10210b0: lw    a0, 28528(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc.1
@@ -5468,21 +5468,21 @@ L_10210cc:
 // 0x010210d4: 0x10210d4: lui   a0, 0x20000
 	ldc.i4 131072
 	stloc.1
-// 0x010210d8: 0x10210d8: lw    a3, 23724(a0)
+// 0x010210d8: 0x10210d8: lw    a3, 23756(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 5931
+	ldc.i4 5939
 	add
 	ldelem.i4
 	stloc 4
-// 0x010210dc: 0x10210dc: lw    a2, 23720(a0)
+// 0x010210dc: 0x10210dc: lw    a2, 23752(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 5930
+	ldc.i4 5938
 	add
 	ldelem.i4
 	stloc.3
@@ -5640,36 +5640,36 @@ L_1021124:
 // 0x01021134: 0x1021134: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021138: 0x1021138: lw    a0, 28716(v0)
+// 0x01021138: 0x1021138: lw    a0, 28748(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc.1
 // 0x0102113c: 0x102113c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021140: 0x1021140: lw    v0, 28704(v0)
+// 0x01021140: 0x1021140: lw    v0, 28736(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 6
 // 0x01021144: 0x1021144: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021148: 0x1021148: lw    v1, 28496(v1)
+// 0x01021148: 0x1021148: lw    v1, 28528(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc 5
@@ -5711,36 +5711,36 @@ L_1021164:
 // 0x0102116c: 0x102116c: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021170: 0x1021170: lw    s0, 28716(v1)
+// 0x01021170: 0x1021170: lw    s0, 28748(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc 8
 // 0x01021174: 0x1021174: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021178: 0x1021178: lw    v1, 28704(v1)
+// 0x01021178: 0x1021178: lw    v1, 28736(v1)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 5
 // 0x0102117c: 0x102117c: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x01021180: 0x1021180: lw    a0, 28496(a0)
+// 0x01021180: 0x1021180: lw    a0, 28528(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc.1
@@ -5781,21 +5781,21 @@ L_102119c:
 // 0x010211a4: 0x10211a4: lui   a0, 0x20000
 	ldc.i4 131072
 	stloc.1
-// 0x010211a8: 0x10211a8: lw    a3, 23732(a0)
+// 0x010211a8: 0x10211a8: lw    a3, 23764(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 5933
+	ldc.i4 5941
 	add
 	ldelem.i4
 	stloc 4
-// 0x010211ac: 0x10211ac: lw    a2, 23728(a0)
+// 0x010211ac: 0x10211ac: lw    a2, 23760(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 5932
+	ldc.i4 5940
 	add
 	ldelem.i4
 	stloc.3
@@ -5922,12 +5922,12 @@ L_10211f4:
 // 0x010211f4: 0x10211f4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010211f8: 0x10211f8: lw    v1, 28496(v0)
+// 0x010211f8: 0x10211f8: lw    v1, 28528(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc 6
@@ -5947,12 +5947,12 @@ L_10211f4:
 // 0x0102120c: 0x102120c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021210: 0x1021210: lw    v1, 28688(v0)
+// 0x01021210: 0x1021210: lw    v1, 28720(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7172
+	ldc.i4 7180
 	add
 	ldelem.i4
 	stloc 6
@@ -5965,12 +5965,12 @@ L_10211f4:
 // 0x0102121c: 0x102121c: addu  a0, v1, zero
 	ldloc 6
 	stloc.1
-// 0x01021220: 0x1021220: jal   0x1008744 sw    v1, 28688(v0)
+// 0x01021220: 0x1021220: jal   0x1008744 sw    v1, 28720(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7172
+	ldc.i4 7180
 	add
 	ldloc 6
 	stelem.i4
@@ -6049,12 +6049,12 @@ L_1021240:
 // 0x01021240: 0x1021240: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021244: 0x1021244: lw    v1, 28496(v0)
+// 0x01021244: 0x1021244: lw    v1, 28528(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc 5
@@ -6074,12 +6074,12 @@ L_1021240:
 // 0x01021258: 0x1021258: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x0102125c: 0x102125c: lw    v1, 28688(v0)
+// 0x0102125c: 0x102125c: lw    v1, 28720(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7172
+	ldc.i4 7180
 	add
 	ldelem.i4
 	stloc 5
@@ -6100,12 +6100,12 @@ L_1021240:
 // 0x01021270: 0x1021270: addu  a0, v1, zero
 	ldloc 5
 	stloc.1
-// 0x01021274: 0x1021274: jal   0x1008744 sw    v1, 28688(v0)
+// 0x01021274: 0x1021274: jal   0x1008744 sw    v1, 28720(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7172
+	ldc.i4 7180
 	add
 	ldloc 5
 	stelem.i4
@@ -6191,12 +6191,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010212a0: 0x10212a0: sw    v1, 28588(v0)
+// 0x010212a0: 0x10212a0: sw    v1, 28620(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7147
+	ldc.i4 7155
 	add
 	ldloc 7
 	stelem.i4
@@ -6207,12 +6207,12 @@ __CIBYL_javamethod_begin:
 	ldc.i4 196608
 	stloc 5
 // 0x010212ac: 0x10212ac: sw    ra, 20(sp)
-// 0x010212b0: 0x10212b0: jal   0x1007b74 sw    zero, 28696(v0)
+// 0x010212b0: 0x10212b0: jal   0x1007b74 sw    zero, 28728(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -6295,12 +6295,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010212d4: 0x10212d4: lw    s0, 28696(v0)
+// 0x010212d4: 0x10212d4: lw    s0, 28728(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldelem.i4
 	stloc 5
@@ -6347,12 +6347,12 @@ L_10212f0:
 // 0x010212fc: 0x10212fc: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021300: 0x1021300: lw    v0, 28588(v0)
+// 0x01021300: 0x1021300: lw    v0, 28620(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7147
+	ldc.i4 7155
 	add
 	ldelem.i4
 	stloc 6
@@ -6393,17 +6393,17 @@ L_102131c:
 // 0x0102132c: 0x102132c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021330: 0x1021330: addiu a0, a0, 28680
+// 0x01021330: 0x1021330: addiu a0, a0, 28712
 	ldloc.1
-	ldc.i4 28680
+	ldc.i4 28712
 	add
 	stloc.1
-// 0x01021334: 0x1021334: jal   0x1020c54 sw    s0, 28696(v0)
+// 0x01021334: 0x1021334: jal   0x1020c54 sw    s0, 28728(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldloc 5
 	stelem.i4
@@ -6521,9 +6521,9 @@ __CIBYL_javamethod_begin:
 // 0x01021364: 0x1021364: lui   s0, 0x10000
 	ldc.i4 65536
 	stloc 8
-// 0x01021368: 0x1021368: addiu a0, s1, 28596
+// 0x01021368: 0x1021368: addiu a0, s1, 28628
 	ldloc 5
-	ldc.i4 28596
+	ldc.i4 28628
 	add
 	stloc.1
 // 0x0102136c: 0x102136c: addiu a1, s0, -29352
@@ -6532,9 +6532,9 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.2
 // 0x01021370: 0x1021370: sw    ra, 28(sp)
-// 0x01021374: 0x1021374: jal   0x1001b68 addiu s1, s1, 28596
+// 0x01021374: 0x1021374: jal   0x1001b68 addiu s1, s1, 28628
 	ldloc 5
-	ldc.i4 28596
+	ldc.i4 28628
 	add
 	stloc 5
 	ldloc.1
@@ -6720,12 +6720,12 @@ __CIBYL_javamethod_begin:
 // 0x010213d4: 0x10213d4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010213d8: 0x10213d8: sw    zero, 28708(v0)
+// 0x010213d8: 0x10213d8: sw    zero, 28740(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -6738,24 +6738,24 @@ __CIBYL_javamethod_begin:
 // 0x010213e4: 0x10213e4: addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
-// 0x010213e8: 0x10213e8: sw    zero, 28712(v0)
+// 0x010213e8: 0x10213e8: sw    zero, 28744(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldc.i4.s 0
 	stelem.i4
 // 0x010213ec: 0x10213ec: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010213f0: 0x10213f0: jal   0x1020f90 sw    zero, 28696(v0)
+// 0x010213f0: 0x10213f0: jal   0x1020f90 sw    zero, 28728(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -6769,9 +6769,9 @@ __CIBYL_javamethod_begin:
 	stloc 9
 	stloc 5
 // --- basic block ---
-// 0x010213f8: 0x10213f8: addiu a0, s1, 28596
+// 0x010213f8: 0x10213f8: addiu a0, s1, 28628
 	ldloc 8
-	ldc.i4 28596
+	ldc.i4 28628
 	add
 	stloc.1
 // 0x010213fc: 0x10213fc: jal   0x1001b68 addiu a1, s0, -29352
@@ -6786,9 +6786,9 @@ __CIBYL_javamethod_begin:
 	stloc 9
 	stloc 5
 // --- basic block ---
-// 0x01021404: 0x1021404: addiu s1, s1, 28596
+// 0x01021404: 0x1021404: addiu s1, s1, 28628
 	ldloc 8
-	ldc.i4 28596
+	ldc.i4 28628
 	add
 	stloc 8
 // 0x01021408: 0x1021408: lui   v0, 0x1020000
@@ -7052,12 +7052,12 @@ __CIBYL_javamethod_begin:
 // 0x01021480: 0x1021480: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021484: 0x1021484: lw    v0, 28492(v0)
+// 0x01021484: 0x1021484: lw    v0, 28524(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7123
+	ldc.i4 7131
 	add
 	ldelem.i4
 	stloc 5
@@ -7107,36 +7107,36 @@ __CIBYL_javamethod_begin:
 	stloc 5
 	brfalse L_10216dc
 // --- basic block ---
-// 0x010214bc: 0x10214bc: sw    zero, 28708(v0)
+// 0x010214bc: 0x10214bc: sw    zero, 28740(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldc.i4.s 0
 	stelem.i4
 // 0x010214c0: 0x10214c0: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010214c4: 0x10214c4: sw    zero, 28712(v0)
+// 0x010214c4: 0x10214c4: sw    zero, 28744(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldc.i4.s 0
 	stelem.i4
 // 0x010214c8: 0x10214c8: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010214cc: 0x10214cc: jal   0x1025cfc sw    zero, 28696(v0)
+// 0x010214cc: 0x10214cc: jal   0x1025cfc sw    zero, 28728(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -7153,12 +7153,12 @@ __CIBYL_javamethod_begin:
 // 0x010214d4: 0x10214d4: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x010214d8: 0x10214d8: lw    v1, 28588(v0)
+// 0x010214d8: 0x10214d8: lw    v1, 28620(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7147
+	ldc.i4 7155
 	add
 	ldelem.i4
 	stloc 6
@@ -7209,36 +7209,36 @@ L_10214f8:
 // 0x01021500: 0x1021500: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x01021504: 0x1021504: lw    a1, 28716(v1)
+// 0x01021504: 0x1021504: lw    a1, 28748(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc.2
 // 0x01021508: 0x1021508: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x0102150c: 0x102150c: lw    v1, 28704(v1)
+// 0x0102150c: 0x102150c: lw    v1, 28736(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 6
 // 0x01021510: 0x1021510: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x01021514: 0x1021514: lw    a0, 28496(a0)
+// 0x01021514: 0x1021514: lw    a0, 28528(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc.1
@@ -7330,12 +7330,12 @@ L_1021548:
 	br L_1021674
 // --- basic block ---
 L_1021570:
-// 0x01021570: 0x1021570: lw    v0, 28592(v0)
+// 0x01021570: 0x1021570: lw    v0, 28624(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7148
+	ldc.i4 7156
 	add
 	ldelem.i4
 	stloc 5
@@ -7350,12 +7350,12 @@ L_1021570:
 	ldc.i4 196608
 	stloc 5
 L_1021584:
-// 0x01021584: 0x1021584: jal   0x1025cfc sw    zero, 28592(v0)
+// 0x01021584: 0x1021584: jal   0x1025cfc sw    zero, 28624(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7148
+	ldc.i4 7156
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -7372,12 +7372,12 @@ L_1021584:
 // 0x0102158c: 0x102158c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021590: 0x1021590: lw    v1, 28588(v0)
+// 0x01021590: 0x1021590: lw    v1, 28620(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7147
+	ldc.i4 7155
 	add
 	ldelem.i4
 	stloc 6
@@ -7403,12 +7403,12 @@ L_1021584:
 // 0x010215a8: 0x10215a8: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x010215ac: 0x10215ac: lw    a0, 28696(v1)
+// 0x010215ac: 0x10215ac: lw    a0, 28728(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7174
+	ldc.i4 7182
 	add
 	ldelem.i4
 	stloc.1
@@ -7442,36 +7442,36 @@ L_10215b8:
 // 0x010215c0: 0x10215c0: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x010215c4: 0x10215c4: lw    a1, 28716(v1)
+// 0x010215c4: 0x10215c4: lw    a1, 28748(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7179
+	ldc.i4 7187
 	add
 	ldelem.i4
 	stloc.2
 // 0x010215c8: 0x10215c8: lui   v1, 0x30000
 	ldc.i4 196608
 	stloc 6
-// 0x010215cc: 0x10215cc: lw    v1, 28704(v1)
+// 0x010215cc: 0x10215cc: lw    v1, 28736(v1)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 7176
+	ldc.i4 7184
 	add
 	ldelem.i4
 	stloc 6
 // 0x010215d0: 0x10215d0: lui   a0, 0x30000
 	ldc.i4 196608
 	stloc.1
-// 0x010215d4: 0x10215d4: lw    a0, 28496(a0)
+// 0x010215d4: 0x10215d4: lw    a0, 28528(a0)
 	ldloc 7
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 7124
+	ldc.i4 7132
 	add
 	ldelem.i4
 	stloc.1
@@ -7561,12 +7561,12 @@ L_1021608:
 	ldc.i4 196608
 	stloc 5
 L_102162c:
-// 0x0102162c: 0x102162c: lw    a0, 28708(v0)
+// 0x0102162c: 0x102162c: lw    a0, 28740(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldelem.i4
 	stloc.1
@@ -7577,12 +7577,12 @@ L_102162c:
 	stloc 5
 	brtrue L_102164c
 // --- basic block ---
-// 0x0102163c: 0x102163c: lw    v0, 28712(v0)
+// 0x0102163c: 0x102163c: lw    v0, 28744(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldelem.i4
 	stloc 5
@@ -7595,33 +7595,33 @@ L_102164c:
 // 0x0102164c: 0x102164c: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x01021650: 0x1021650: lw    a1, 28712(v0)
+// 0x01021650: 0x1021650: lw    a1, 28744(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldelem.i4
 	stloc.2
-// 0x01021654: 0x1021654: sw    zero, 28712(v0)
+// 0x01021654: 0x1021654: sw    zero, 28744(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7178
+	ldc.i4 7186
 	add
 	ldc.i4.s 0
 	stelem.i4
 // 0x01021658: 0x1021658: lui   v0, 0x30000
 	ldc.i4 196608
 	stloc 5
-// 0x0102165c: 0x102165c: jal   0x102089c sw    zero, 28708(v0)
+// 0x0102165c: 0x102165c: jal   0x102089c sw    zero, 28740(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7177
+	ldc.i4 7185
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -7682,12 +7682,12 @@ L_1021674:
 	ldc.i4.1
 	stloc 8
 L_1021690:
-// 0x01021690: 0x1021690: lw    v1, 28756(v0)
+// 0x01021690: 0x1021690: lw    v1, 28788(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7189
+	ldc.i4 7197
 	add
 	ldelem.i4
 	stloc 6
@@ -7696,12 +7696,12 @@ L_1021690:
 	ldloc 6
 	brfalse L_10216a8
 // --- basic block ---
-// 0x010216a0: 0x10216a0: sw    zero, 28756(v0)
+// 0x010216a0: 0x10216a0: sw    zero, 28788(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 7189
+	ldc.i4 7197
 	add
 	ldc.i4.s 0
 	stelem.i4

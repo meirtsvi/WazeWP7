@@ -51,7 +51,6 @@ const char* on_suggested_trips(int NumParams, const char*  pData);
 const char* on_get_pois_res(int NumParams, const char*  pData);
 const char* on_get_num_pois_res(int NumParams, const char*  pData);
 const char* on_create_poi_res(int NumParams, const char*  pData);
-void roadmap_trip_server_restore_favorites(void);
 
 static TripServeHandlers tripserver_handlers[] =
 {

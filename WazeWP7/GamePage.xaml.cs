@@ -710,6 +710,10 @@ namespace WazeWP7
                 ZoomOut = new_item;
                 addMenuItem = false;
             }
+            else if (text.ToLower().Contains("favorites"))
+            {
+                addMenuItem = true;
+            }
 
             //else if (text.ToLower().Equals("settings") || text.Equals("הגדרות"))
             //{
