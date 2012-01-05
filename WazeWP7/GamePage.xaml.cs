@@ -1374,6 +1374,12 @@ namespace WazeWP7
                 PopApplicationBar();
             }
 
+            // If Dialog is in progress, ignore map touches that are not GPS emulation or app bar requests.
+            if (Syscalls.DialogIsOn)
+            {
+                return;
+            }
+
 
             try
             {

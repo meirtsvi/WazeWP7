@@ -1468,6 +1468,7 @@ public class Syscalls
 
     static List<WazeMenuItem> miniMenuItems = new List<WazeMenuItem>();
     public static bool MiniMenuIsOn { get; private set; }
+    public static bool DialogIsOn { get; private set; }
 
     public static void NOPH_FreemapMainScreen_setMiniMenuItem(int __screen, int __text, int ordinal, int wrapper_callback, int callback)
     {
@@ -2180,7 +2181,9 @@ public class Syscalls
         String title = CRunTime.charPtrToString(__title);
         String message = CRunTime.charPtrToString(__message);
         String buttonText = CRunTime.charPtrToString(__buttonText);
+        DialogIsOn = true;
         MessageBoxFactory.messageBox(title, message, buttonText);
+        DialogIsOn = false;
     }
 
     public static void NOPH_MessageBoxFactory_messageBoxCb(int __title, int __message, int __buttonText, int cb)
@@ -2188,7 +2191,9 @@ public class Syscalls
         String title = CRunTime.charPtrToString(__title);
         String message = CRunTime.charPtrToString(__message);
         String buttonText = CRunTime.charPtrToString(__buttonText);
+        DialogIsOn = true;
         MessageBoxFactory.messageBoxCb(title, message, buttonText, cb);
+        DialogIsOn = false;
     }
 
     public static void NOPH_MessageBoxFactory_messageBoxCustom(int __title, int title_font_size, int __text, int text_font_size, int __buttonText)
@@ -2196,7 +2201,9 @@ public class Syscalls
         String title = CRunTime.charPtrToString(__title);
         String text = CRunTime.charPtrToString(__text);
         String buttonText = CRunTime.charPtrToString(__buttonText);
+        DialogIsOn = true;
         MessageBoxFactory.messageBoxCustom(title, title_font_size, text, text_font_size, buttonText);
+        DialogIsOn = false;
     }
 
     public static void NOPH_MessageBoxFactory_messageBoxTimed(int __title, int __text, int __buttonText, int seconds)
@@ -3113,6 +3120,8 @@ public class Syscalls
                 {
                     UIWorker.addUIEvent(alternative_routes_callback, 0, 0, 0, 0, true);
                 }
+
+                DialogIsOn = false;
             });
         };
 
@@ -3121,6 +3130,7 @@ public class Syscalls
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             var dialog = new NavigateResultControl();
+            DialogIsOn = true;
             dialog.Show(viewModel);
         });
     }
