@@ -126,6 +126,10 @@ namespace WazeWP7
             {
                 PerformSearch();
             }
+            else
+            {
+                base.OnKeyUp(e);
+            }
         }
 
         private void MessageOkButton_Click(object sender, RoutedEventArgs e)

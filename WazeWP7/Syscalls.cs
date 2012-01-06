@@ -785,15 +785,24 @@ public class Syscalls
 
         }
 
-        Stream stream = GetFileStream(name, FileMode.Open);
-        Texture2D bitmap = GamePage.LoadBitmap(stream);
-        int bitmap_registeredHandle = CRunTime.registerObject(bitmap);
-        BitmapInfo info = new BitmapInfo(bitmap.Width, bitmap.Height);
-        if (!bitmaps_info.ContainsKey(bitmap_registeredHandle))
+        try
         {
-            bitmaps_info.Add(bitmap_registeredHandle, info);
+            Stream stream = GetFileStream(name, FileMode.Open);
+            Texture2D bitmap = GamePage.LoadBitmap(stream);
+            int bitmap_registeredHandle = CRunTime.registerObject(bitmap);
+            BitmapInfo info = new BitmapInfo(bitmap.Width, bitmap.Height);
+            if (!bitmaps_info.ContainsKey(bitmap_registeredHandle))
+            {
+                bitmaps_info.Add(bitmap_registeredHandle, info);
+            }
+            return bitmap_registeredHandle;
         }
-        return bitmap_registeredHandle;
+        catch(Exception)
+        {
+            // Handle - This XNA Framework graphics operation is not valid when Silverlight rendering is active.  To use XNA Framework graphics, call GraphicsDevice.SetDirectRenderingMode(true).
+            // if C code is trying to load hazard picture in XNA while we are showing silverlight search address dialog
+            return 0;
+        }
 
         //// Try to get the bitmap from the cache store:
         //if (bitmapCacheStore.ContainsKey(__name))

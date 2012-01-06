@@ -78,7 +78,7 @@
             </Grid.RowDefinitions>
 
             <TextBox Grid.Column="0" Grid.Row="0" x:Name="SearchTextBox" 
-                     InputScope="Search" KeyUp="SearchTextBox_KeyUp"/>
+                     KeyUp="SearchTextBox_KeyUp"/>
                      
             <Button Grid.Column="1" Grid.Row="0" x:Name="SearchButton" 
                     BorderThickness="0" Margin="0"

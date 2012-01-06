@@ -124,16 +124,6 @@ namespace WazeWP7
 
         #endregion
 
-/*
-        private static Timer t = new Timer(MyTimerCallback, null, 20000, 1);
-
-        private static int y = 200;
-        private static void MyTimerCallback(object sender)
-        {
-            c_on_canvas_button_pressed = 1;
-            GamePage.get().touchMovedEvent(200, y++);
-        }*/
-
         public GamePage()
         {
             InitializeComponent();
