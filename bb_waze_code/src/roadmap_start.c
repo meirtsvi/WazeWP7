@@ -129,6 +129,7 @@
 #include "roadmap_groups_settings.h"
 #include "Realtime/RealtimeBonus.h"
 #include "roadmap_speedometer.h"
+#include "roadmap_tripserver.h"
 
 #ifdef SSD
 #include "ssd/ssd_widget.h"
@@ -672,6 +673,9 @@ RoadMapAction RoadMapStartActions[MAX_ACTIONS + 1] = {
 
    {"quit", "Quit", NULL, NULL,
       "Quit RoadMap", roadmap_confirmed_exit},
+
+   {"restore_favorites", "Restore Favorites", NULL, NULL,
+      "Restore Favorites", roadmap_trip_server_restore_favorites},
 
    {"zoomin", "Zoom In", "+", NULL,
       "Enlarge the central part of the map", roadmap_screen_zoom_in},
@@ -1248,6 +1252,7 @@ static const char *RoadMapStartMenu[] = {
 #ifdef RIMAPI
 	"zoomin",
 	"zoomout",
+	"restore_favorites",
    "show_me",
    "report",
    "real_time_alerts_list",

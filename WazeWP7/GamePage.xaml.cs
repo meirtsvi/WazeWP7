@@ -619,6 +619,7 @@ namespace WazeWP7
 
         //private static bool perf_button_added = false;
         public static WazeMenuItem MeOnMapItem = null;
+        public static WazeMenuItem RestoreFavorites = null;
         public static WazeMenuItem ZoomIn = null;
         public static WazeMenuItem ZoomOut = null;
 
@@ -695,6 +696,11 @@ namespace WazeWP7
             else if (text.ToLower().Equals("zoom out"))
             {
                 ZoomOut = new_item;
+                addMenuItem = false;
+            }
+            else if (text.ToLower().Contains("favorites"))
+            {
+                RestoreFavorites = new_item;
                 addMenuItem = false;
             }
 
@@ -1358,6 +1364,12 @@ namespace WazeWP7
             if (appBarArea < 60)
             {
                 PopApplicationBar();
+            }
+
+            // If Dialog is in progress, ignore map touches that are not GPS emulation or app bar requests.
+            if (Syscalls.DialogIsOn)
+            {
+                return;
             }
 
 

@@ -26,6 +26,7 @@
 #ifndef ROADMAP_TRIPSERVER_H_
 #define ROADMAP_TRIPSERVER_H_
 
+void roadmap_trip_server_restore_favorites(void);
 typedef const char*  (*CB_TripServerResponse)(  int   NumParams, const char*  pData);
 
 typedef struct tag_TripServeHandlers
