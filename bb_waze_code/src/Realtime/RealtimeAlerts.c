@@ -3487,15 +3487,16 @@ static void RTAlerts_popup_alert(int alertId, int iCenterAround)
     ssd_widget_set_color( spacer, NULL, NULL );
     ssd_widget_add( popup, spacer );
 
+/*    button = ssd_button_label("Comment_button", roadmap_lang_get("Comment"), SSD_ALIGN_CENTER, on_add_comment);
+    ssd_widget_add(popup, button);*/
+
     button = ssd_button_label("Close_button", roadmap_lang_get("Close"), SSD_ALIGN_CENTER, on_button_close);
     ssd_widget_add(popup, button);
 
-    button = ssd_button_label("Comment_button", roadmap_lang_get("Comment"), SSD_ALIGN_CENTER, on_add_comment);
-    ssd_widget_add(popup, button);
-
+	/*
     if ((pAlert->iType == RT_ALERT_TYPE_TRAFFIC_INFO) || (pAlert->iNumComments != 0)){
        ssd_widget_hide(button);
-    }
+    }*/
 
     button = ssd_button_label("ViewComments_button", roadmap_lang_get("Comments"), SSD_ALIGN_CENTER, on_view_comments);
     ssd_widget_add(popup, button);
@@ -3724,10 +3725,10 @@ static void RTAlerts_popup_PingWazer(RTAlert *pAlert)
     ssd_widget_set_color( spacer, NULL, NULL );
     ssd_widget_add( pingWazerPopUP, spacer );
 
-    button = ssd_button_label("Close_button", roadmap_lang_get("Close"), SSD_ALIGN_CENTER, on_ping_wazer_button_close);
+    button = ssd_button_label("Comment_button", roadmap_lang_get("Reply"), SSD_ALIGN_CENTER, on_add_comment);
     ssd_widget_add(pingWazerPopUP, button);
 
-    button = ssd_button_label("Comment_button", roadmap_lang_get("Reply"), SSD_ALIGN_CENTER, on_add_comment);
+    button = ssd_button_label("Close_button", roadmap_lang_get("Close"), SSD_ALIGN_CENTER, on_ping_wazer_button_close);
     ssd_widget_add(pingWazerPopUP, button);
 
     icon[0] = "button_report_abuse";
@@ -4977,7 +4978,7 @@ static void RTAlerts_Comment_PopUp(RTAlertComment *Comment, RTAlert *Alert)
    ssd_widget_set_color(text,"#ffffff", NULL);
    ssd_widget_add(dialog, text_con);
 
-#if defined(TOUCH_SCREEN)	
+#if defined(TOUCH_SCREEN)
 	ssd_widget_add(dialog, space(2));
    ssd_widget_add (dialog,
                   ssd_button_label ("Close", roadmap_lang_get ("Close"),

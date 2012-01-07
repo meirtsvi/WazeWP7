@@ -103,9 +103,9 @@ __CIBYL_javamethod_begin:
 // 0x010677b4: 0x10677b4: lui   a0, 0x70000
 	ldc.i4 458752
 	stloc.1
-// 0x010677b8: 0x10677b8: addiu a0, a0, 16580
+// 0x010677b8: 0x10677b8: addiu a0, a0, 16564
 	ldloc.1
-	ldc.i4 16580
+	ldc.i4 16564
 	add
 	stloc.1
 // 0x010677bc: 0x10677bc: addu  v1, zero, zero
@@ -143,9 +143,9 @@ L_10677c4:
 // 0x010677dc: 0x10677dc: lui   a0, 0x70000
 	ldc.i4 458752
 	stloc.1
-// 0x010677e0: 0x10677e0: addiu a0, a0, 16572
+// 0x010677e0: 0x10677e0: addiu a0, a0, 16556
 	ldloc.1
-	ldc.i4 16572
+	ldc.i4 16556
 	add
 	stloc.1
 // 0x010677e4: 0x10677e4: mflo  lo
@@ -192,9 +192,9 @@ L_1067804:
 // 0x0106781c: 0x106781c: lui   t0, 0x70000
 	ldc.i4 458752
 	stloc 5
-// 0x01067820: 0x1067820: addiu t0, t0, 16624
+// 0x01067820: 0x1067820: addiu t0, t0, 16608
 	ldloc 5
-	ldc.i4 16624
+	ldc.i4 16608
 	add
 	stloc 5
 // 0x01067824: 0x1067824: addu  a0, zero, zero
@@ -250,9 +250,9 @@ L_106782c:
 // 0x01067858: 0x1067858: lui   t0, 0x70000
 	ldc.i4 458752
 	stloc 5
-// 0x0106785c: 0x106785c: addiu t0, t0, 16572
+// 0x0106785c: 0x106785c: addiu t0, t0, 16556
 	ldloc 5
-	ldc.i4 16572
+	ldc.i4 16556
 	add
 	stloc 5
 // 0x01067860: 0x1067860: mflo  lo
@@ -541,9 +541,9 @@ __CIBYL_javamethod_begin:
 // 0x01067914: 0x1067914: lui   s5, 0x70000
 	ldc.i4 458752
 	stloc 9
-// 0x01067918: 0x1067918: addiu s5, s5, 16572
+// 0x01067918: 0x1067918: addiu s5, s5, 16556
 	ldloc 9
-	ldc.i4 16572
+	ldc.i4 16556
 	add
 	stloc 9
 // 0x0106791c: 0x106791c: addu  s1, zero, zero
@@ -831,9 +831,9 @@ __CIBYL_javamethod_begin:
 // 0x010679cc: 0x10679cc: lui   v1, 0x70000
 	ldc.i4 458752
 	stloc 7
-// 0x010679d0: 0x10679d0: addiu v1, v1, 16580
+// 0x010679d0: 0x10679d0: addiu v1, v1, 16564
 	ldloc 7
-	ldc.i4 16580
+	ldc.i4 16564
 	add
 	stloc 7
 // 0x010679d4: 0x10679d4: addu  v0, zero, zero
@@ -871,9 +871,9 @@ L_10679dc:
 // 0x010679f4: 0x10679f4: lui   s0, 0x70000
 	ldc.i4 458752
 	stloc 5
-// 0x010679f8: 0x10679f8: addiu s0, s0, 16572
+// 0x010679f8: 0x10679f8: addiu s0, s0, 16556
 	ldloc 5
-	ldc.i4 16572
+	ldc.i4 16556
 	add
 	stloc 5
 // 0x010679fc: 0x10679fc: mflo  lo

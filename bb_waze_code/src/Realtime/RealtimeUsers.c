@@ -601,7 +601,7 @@ void RTUsers_Popup (LPRTUsers this, const char *id, int iCenterAround)
    SsdWidget facebook_image;
    SsdSize size;
    SsdWidget spacer;
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
    SsdWidget button;
 #endif
 
@@ -824,7 +824,7 @@ void RTUsers_Popup (LPRTUsers this, const char *id, int iCenterAround)
    ssd_widget_add(popup, position_con);
 
 
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
    spacer = ssd_container_new( "space", "", SSD_MIN_SIZE, 5, SSD_END_ROW );
    ssd_widget_set_color( spacer, NULL, NULL );
    ssd_widget_add( popup, spacer );
@@ -832,13 +832,13 @@ void RTUsers_Popup (LPRTUsers this, const char *id, int iCenterAround)
    button = ssd_button_label("Close_button", roadmap_lang_get("Close"), SSD_ALIGN_CENTER|SSD_WS_DEFWIDGET|SSD_WS_TABSTOP, on_close);
    ssd_widget_add(popup, button);
 
-   button = ssd_button_label("Ping_button", roadmap_lang_get("Ping"), SSD_ALIGN_CENTER|SSD_WS_TABSTOP, on_ping);
+/*   button = ssd_button_label("Ping_button", roadmap_lang_get("Ping"), SSD_ALIGN_CENTER|SSD_WS_TABSTOP, on_ping);
    if (user->iPingFlag == RT_USERS_PING_FLAG_ALLOW)
       ssd_button_enable(button);
    else
       ssd_button_disable(button);
    ssd_widget_set_context(button, (void *)user);
-   ssd_widget_add(popup, button);
+   ssd_widget_add(popup, button);*/
 #else
    if (user->iPingFlag == RT_USERS_PING_FLAG_ALLOW){
       g_user = user;

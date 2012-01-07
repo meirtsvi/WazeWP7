@@ -853,9 +853,9 @@ L_10c34e4:
 // 0x010c34fc: 0x10c34fc: lui   a0, 0x20000
 	ldc.i4 131072
 	stloc.1
-// 0x010c3500: 0x10c3500: jal   0x10001a0 addiu a0, a0, 23704
+// 0x010c3500: 0x10c3500: jal   0x10001a0 addiu a0, a0, 23696
 	ldloc.1
-	ldc.i4 23704
+	ldc.i4 23696
 	add
 	stloc.1
 	ldloc.0
@@ -1899,9 +1899,9 @@ L_10c3854:
 // 0x010c385c: 0x10c385c: lui   v1, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010c3860: 0x10c3860: addiu v1, v1, 30340
+// 0x010c3860: 0x10c3860: addiu v1, v1, 30324
 	ldloc 5
-	ldc.i4 30340
+	ldc.i4 30324
 	add
 	stloc 5
 // 0x010c3864: 0x10c3864: addiu a0, zero, 11
@@ -2051,9 +2051,9 @@ __CIBYL_javamethod_begin:
 // 0x010c38b4: 0x10c38b4: lui   s0, 0xe0000
 	ldc.i4 917504
 	stloc 5
-// 0x010c38b8: 0x10c38b8: addiu a2, s0, 29572
+// 0x010c38b8: 0x10c38b8: addiu a2, s0, 29556
 	ldloc 5
-	ldc.i4 29572
+	ldc.i4 29556
 	add
 	stloc.3
 // 0x010c38bc: 0x10c38bc: sw    ra, 20(sp)
@@ -2071,9 +2071,9 @@ __CIBYL_javamethod_begin:
 	stloc 8
 // --- basic block ---
 // 0x010c38c8: 0x10c38c8: lw    ra, 20(sp)
-// 0x010c38cc: 0x10c38cc: addiu v0, s0, 29572
+// 0x010c38cc: 0x10c38cc: addiu v0, s0, 29556
 	ldloc 5
-	ldc.i4 29572
+	ldc.i4 29556
 	add
 	stloc 8
 // 0x010c38d0: 0x10c38d0: lw    s0, 16(sp)
@@ -2280,9 +2280,9 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x010c3940: 0x10c3940: sw    ra, 20(sp)
-// 0x010c3944: 0x10c3944: jal   0x10c38dc addiu a1, a1, 29536
+// 0x010c3944: 0x10c3944: jal   0x10c38dc addiu a1, a1, 29520
 	ldloc.2
-	ldc.i4 29536
+	ldc.i4 29520
 	add
 	stloc.2
 	ldloc.0
@@ -4493,9 +4493,9 @@ __CIBYL_javamethod_begin:
 	ldc.i4.2
 	clt.un
 	stloc.1
-// 0x010c3eb8: 0x10c3eb8: addiu a1, a1, 23752
+// 0x010c3eb8: 0x10c3eb8: addiu a1, a1, 23744
 	ldloc.2
-	ldc.i4 23752
+	ldc.i4 23744
 	add
 	stloc.2
 // 0x010c3ebc: 0x10c3ebc: jal   0x10001f8 addu  a2, s4, zero
@@ -4760,9 +4760,9 @@ L_10c3f78:
 	ldc.i4 131072
 	stloc.2
 L_10c3f98:
-// 0x010c3f98: 0x10c3f98: addiu a1, a1, 23784
+// 0x010c3f98: 0x10c3f98: addiu a1, a1, 23776
 	ldloc.2
-	ldc.i4 23784
+	ldc.i4 23776
 	add
 	stloc.2
 // 0x010c3f9c: 0x10c3f9c: jal   0x10001f8 sltiu a0, s0, 1
