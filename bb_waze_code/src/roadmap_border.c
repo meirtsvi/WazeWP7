@@ -179,7 +179,9 @@ BOOL roadmap_border_initialize()
 
 static RoadMapImage create_sides_image (int style, int header, int pointer_type, RoadMapGuiPoint *bottom, RoadMapGuiPoint *top, int num_items) {
    RoadMapImage image;
+
    int image_width = abs(bottom->x  - top->x);
+
    RoadMapGuiPoint point;
    int i, image_height;
    
@@ -193,18 +195,22 @@ static RoadMapImage create_sides_image (int style, int header, int pointer_type,
 
    image = roadmap_canvas_new_image (image_width,image_height);
 
-   for (i = 0; i<num_items; i++){
-      point.x = image_width - s_images[border_white_right+style].width ;
-      point.y = i* s_images[border_white_right+style].height;
-      if (point.y > roadmap_canvas_height()){
-    	  break; // don't create side images that have a bigger height than the screen
-      }
-      roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_right+style].image, CANVAS_COPY_NORMAL);
-      point.x = 0;
-      point.y = i* s_images[border_white_left+style].height;
-      roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_left+style].image, CANVAS_COPY_NORMAL);
-   }
+   RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+   rect->minx = 0;
+   rect->miny = num_items;
 
+//   for (i = 0; i<num_items; i++){
+      point.x = image_width - s_images[border_white_right+style].width ;
+      point.y = 0;//i* s_images[border_white_right+style].height;
+//      if (point.y > roadmap_canvas_height()){
+//    	  break; // don't create side images that have a bigger height than the screen
+//      }
+	  roadmap_canvas_copy_image (image, &point, rect, s_images[border_white_right+style].image, CANVAS_COPY_NORMAL);
+
+      point.x = 0;
+      point.y = 0;//i* s_images[border_white_left+style].height;
+      roadmap_canvas_copy_image (image, &point, rect, s_images[border_white_left+style].image, CANVAS_COPY_NORMAL);
+//   }
 
    return image;
 }
@@ -255,19 +261,24 @@ static RoadMapImage create_top_image (int style, int header, int pointer_type, R
 
       point.x = 0;
       point.y = 0;
-      roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_top_left+style].image, CANVAS_COPY_NORMAL);
 
+      roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_top_left+style].image, CANVAS_COPY_NORMAL);
 
        point.x = right_point.x;
        point.y = 0;
        roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_top_right+style].image, CANVAS_COPY_NORMAL);
 
       num_items = (image_width - s_images[border_white_right+style].width - s_images[border_white_left+style].width)/s_images[border_white_top+style].width;
-      for (i = 0; i<num_items; i++){
-         point.x = s_images[border_white_top_left+style].width + i * s_images[border_white_top+style].width ;
+
+	  RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+	  rect->minx = num_items;
+	  rect->miny = 0;
+
+//      for (i = 0; i<num_items; i++){
+         point.x = s_images[border_white_top_left+style].width;// + i * s_images[border_white_top+style].width ;
          point.y = 0;
-         roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_top+style].image, CANVAS_COPY_NORMAL);
-      }
+         roadmap_canvas_copy_image (image, &point, rect, s_images[border_white_top+style].image, CANVAS_COPY_NORMAL);
+//      }
 
    return image;
 }
@@ -325,11 +336,16 @@ static RoadMapImage create_top_header_image (int style, int header, int pointer_
        point.y = 0;
        roadmap_canvas_copy_image (image, &point, NULL, s_images[header+2].image, CANVAS_COPY_NORMAL);
       num_items = (image_width - s_images[header].width - s_images[header+2].width)/s_images[header+1].width;
-      for (i = 0; i<num_items; i++){
-         point.x = s_images[header].width + i * s_images[header+1].width ;
+
+ 	  RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+	  rect->minx = num_items;
+	  rect->miny = 0;
+
+//      for (i = 0; i<num_items; i++){
+         point.x = s_images[header].width;// + i * s_images[header+1].width ;
          point.y = 0;
-         roadmap_canvas_copy_image (image, &point, NULL, s_images[header+1].image, CANVAS_COPY_NORMAL);
-      }
+         roadmap_canvas_copy_image (image, &point, rect, s_images[header+1].image, CANVAS_COPY_NORMAL);
+//      }
 
    return image;
 }
@@ -389,11 +405,16 @@ static RoadMapImage create_bottom_image (int style, int header, int pointer_type
 
 
       num_items = (image_width - s_images[border_white_right+style].width - s_images[border_white_left+style].width)/s_images[border_white_top+style].width;
-      for (i = 0; i<num_items; i++){
-         point.x = s_images[border_white_top_left+style].width + i * s_images[border_white_bottom+style].width ;
+
+ 	  RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+	  rect->minx = num_items;
+	  rect->miny = 0;
+
+//      for (i = 0; i<num_items; i++){
+         point.x = s_images[border_white_top_left+style].width;// + i * s_images[border_white_bottom+style].width ;
          point.y = 0;
-         roadmap_canvas_copy_image (image, &point, NULL, s_images[border_white_bottom+style].image, CANVAS_COPY_NORMAL);
-      }
+         roadmap_canvas_copy_image (image, &point, rect, s_images[border_white_bottom+style].image, CANVAS_COPY_NORMAL);
+//      }
 
    return image;
 }
@@ -403,14 +424,22 @@ static RoadMapImage create_image (int side, int style, int header, int pointer_t
    switch (side){
       case border_top:
          if (header == HEADER_NONE)
+		 {
             return create_top_image(style, header, pointer_type, bottom, top);
+		 }
          else
+		 {
             return create_top_header_image(style, header, pointer_type, bottom, top);
+		 }
       case border_bottom:
+		  {
          return create_bottom_image(style, header, pointer_type, bottom, top);
+		  }
 
       case border_sides:
+		  {
          return create_sides_image(style, header, pointer_type, bottom, top, num_items);
+		  }
 
       default:
          return NULL;
@@ -463,8 +492,6 @@ static RoadMapImage get_image (int side, int style, int header, int pointer_type
 	   }
    }
 
-
-
 #ifdef __ROADMAP_BORDER_CACHE__
 
 
@@ -495,7 +522,6 @@ static RoadMapImage get_image (int side, int style, int header, int pointer_type
     		   least_recent_age = res->age;
 			   lru_index = i;
 		   }
-
        }
 
    }
@@ -512,14 +538,12 @@ static RoadMapImage get_image (int side, int style, int header, int pointer_type
 	  			       border_cached_table.resource[index].width, image_width);
 
 	   roadmap_canvas_free_image( border_cached_table.resource[index].image );
-
    }
    else
    {
 	   index = border_cached_table.count;
 	   border_cached_table.count++;
    }
-
 
    border_cached_table.resource[index].style = style;
    border_cached_table.resource[index].header = header;
@@ -529,6 +553,7 @@ static RoadMapImage get_image (int side, int style, int header, int pointer_type
    border_cached_table.resource[index].image = create_image( side, style, header, pointer_type, bottom, top, num_items );
    border_cached_table.resource[index].age = counter;
    // border_cached_table.resource[index].cache_hit_count = 1; Deprecated
+
    return border_cached_table.resource[index].image;
 #endif
 
@@ -640,7 +665,9 @@ int roadmap_display_border(int style, int header, int pointer_type, RoadMapGuiPo
 	   }
 
 	   if(in_screen_sides_starting_point.y!=-1)
+	   {
 		   roadmap_canvas_draw_image (image, &in_screen_sides_starting_point, 0, IMAGE_NORMAL);
+	   }
 
 	   point.y = end_sides_y -1;
     }
@@ -648,6 +675,7 @@ int roadmap_display_border(int style, int header, int pointer_type, RoadMapGuiPo
 	num_items = ( sign_height - start_sides_point.y +sign_top.y - s_images[border_white_bottom+style].height ) / s_images[border_white_right+style].height;
 	if (num_items < 0 )
 	   return;
+
 	image  = get_image(border_sides, style, header, pointer_type, bottom, top, 1);
 
 	for (i = 0; i < num_items; i++){
@@ -663,17 +691,17 @@ int roadmap_display_border(int style, int header, int pointer_type, RoadMapGuiPo
 	roadmap_canvas_free_image( image );
 #endif
 
-	if (pointer_type == POINTER_NONE){
-	   RoadMapImage image;
-	   left_point.y = point.y +  s_images[border_white_left+style].height ;
-	   image =  get_image(border_bottom, style, header, pointer_type, bottom, top, 0);
-	   roadmap_canvas_draw_image (image, &left_point, 0, IMAGE_NORMAL);
+	RoadMapImage bottom_image;
+	left_point.y = point.y +  s_images[border_white_left+style].height ;
+	bottom_image =  get_image(border_bottom, style, header, pointer_type, bottom, top, 0);
+	roadmap_canvas_draw_image (bottom_image, &left_point, 0, IMAGE_NORMAL);
 #ifndef __ROADMAP_BORDER_CACHE__
-	   // Release after drawing
-		roadmap_canvas_free_image( image );
+	// Release after drawing
+	roadmap_canvas_free_image( bottom_image );
 #endif
-	}
-	else{
+
+	if (pointer_type != POINTER_NONE)
+    {
 	   left_point.y = point.y +  s_images[border_white_left+style].height ;
 	   roadmap_canvas_draw_image (s_images[border_white_bottom_left+style].image, &left_point, 0, IMAGE_NORMAL);
 

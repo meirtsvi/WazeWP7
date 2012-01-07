@@ -2658,7 +2658,7 @@ static void on_popup_close(int exit_code, void* context){
 
 }
 
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
 static int on_button_close (SsdWidget widget, const char *new_value){
    ssd_dialog_hide("AlertPopUPDlg", dec_close);
    return 1;
@@ -3025,7 +3025,7 @@ static void update_popup(SsdWidget popup, RTAlert *pAlert, int iCenterAround){
       ssd_widget_hide(ssd_widget_get(popup, "addition_text_container"));
    }
 
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
    button = ssd_widget_get(popup,"Comment_button");
    if (button){
       if ((pAlert->iType == RT_ALERT_TYPE_TRAFFIC_INFO) || (pAlert->iNumComments != 0))
@@ -3219,7 +3219,7 @@ static void RTAlerts_popup_alert(int alertId, int iCenterAround)
     int num_addOns, i;
     int fb_width = 34;
     int fb_height = 34;
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
     SsdWidget button;
 #endif
     AlertStr[0] = 0;
@@ -3439,7 +3439,7 @@ static void RTAlerts_popup_alert(int alertId, int iCenterAround)
       ssd_container_new ("IMAGE_container", "", image_container_width, SSD_MIN_SIZE, SSD_ALIGN_RIGHT);
     ssd_widget_set_color(image_con, NULL, NULL);
 
-#ifndef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN)
       bitmap->key_pressed = Alert_OnKeyPressed;
 #endif
 
@@ -3481,7 +3481,7 @@ static void RTAlerts_popup_alert(int alertId, int iCenterAround)
 
     ssd_widget_add(popup,addition_text_container);
 
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
 
     spacer = ssd_container_new( "space", "", SSD_MIN_SIZE, 5, SSD_END_ROW );
     ssd_widget_set_color( spacer, NULL, NULL );
@@ -3552,7 +3552,7 @@ static void RTAlerts_popup_PingWazer(RTAlert *pAlert)
     int f_width = 52;
     int f_height = 52;
     char *icon[3];
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
     SsdWidget button;
 #endif
     AlertStr[0] = 0;
@@ -3677,7 +3677,7 @@ static void RTAlerts_popup_PingWazer(RTAlert *pAlert)
       ssd_container_new ("IMAGE_container", "", image_container_width, SSD_MIN_SIZE, SSD_ALIGN_RIGHT);
     ssd_widget_set_color(image_con, NULL, NULL);
 
-#ifndef TOUCH_SCREEN
+#ifdef TOUCH_SCREEN
       bitmap->key_pressed = Alert_OnKeyPressed;
 #endif
 
@@ -3718,7 +3718,7 @@ static void RTAlerts_popup_PingWazer(RTAlert *pAlert)
    ssd_widget_add(pingWazerPopUP, image_con);
 
     ssd_widget_add(pingWazerPopUP, position_con);
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
 
     spacer = ssd_container_new( "space", "", SSD_MIN_SIZE, 5, SSD_END_ROW );
     ssd_widget_set_color( spacer, NULL, NULL );
@@ -3873,7 +3873,7 @@ static void RTAlerts_Show_Image( int alertId, RoadMapImage image )
 
     if ( !dialog )
     {
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
         SsdWidget close_btn;
      	SsdWidget top_space;
     	char* icon[2];
@@ -3887,7 +3887,7 @@ static void RTAlerts_Show_Image( int alertId, RoadMapImage image )
 			roadmap_log( ROADMAP_ERROR, "Error creating view image dialog" );
 			return;
 		}
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
 		// Top space container
 		top_space = ssd_container_new( "RT Alert View Image Dialog.Top Space", NULL,
 				50, SSD_MIN_SIZE, SSD_ALIGN_RIGHT|SSD_END_ROW );
@@ -4897,7 +4897,7 @@ static void RTAlerts_Comment_PopUp(RTAlertComment *Comment, RTAlert *Alert)
 	SsdWidget text_con;
    char *icon[3];
    int i, num_addOns;
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN) || defined(POINTER_SCREEN)
    SsdWidget button;
 #endif
    int image_container_width = 52;
@@ -4977,7 +4977,7 @@ static void RTAlerts_Comment_PopUp(RTAlertComment *Comment, RTAlert *Alert)
    ssd_widget_set_color(text,"#ffffff", NULL);
    ssd_widget_add(dialog, text_con);
 
-#ifdef TOUCH_SCREEN
+#if defined(TOUCH_SCREEN)	
 	ssd_widget_add(dialog, space(2));
    ssd_widget_add (dialog,
                   ssd_button_label ("Close", roadmap_lang_get ("Close"),

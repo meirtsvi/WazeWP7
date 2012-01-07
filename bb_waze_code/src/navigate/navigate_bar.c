@@ -251,11 +251,16 @@ RoadMapImage CreateBgImage(){
    num_images = width / image_width +1 ;
 
    BarLocation.y = 0;
-   for (i = 0; i < num_images; i++){
-       BarLocation.x = i * image_width;
+
+   RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+   rect->minx = num_images;
+   rect->miny = 0;
+
+   //for (i = 0; i < num_images; i++){
+       BarLocation.x = 0;//i * image_width;
        roadmap_canvas_copy_image
-          (image, &BarLocation, NULL, NavigateBarAddressImage ,CANVAS_COPY_NORMAL);
-    }
+          (image, &BarLocation, rect, NavigateBarAddressImage ,CANVAS_COPY_NORMAL);
+    //}
 
    return image;
 }
@@ -802,13 +807,14 @@ static void navigate_bar_draw_street (const char *street) {
 
 
       	if (ssd_widget_rtl(NULL))
-      	   position.x = roadmap_canvas_width() - width - NavigatePanel->street_start;
+      	   position.x = roadmap_canvas_width() - width - NavigatePanel->street_start - 20;
       	else
       	   position.x = 5;
 
    		nav_bar_pen = roadmap_canvas_create_pen ("nav_bar_pen", FALSE);
   	   	roadmap_canvas_set_foreground(NAV_BAR_TEXT_COLOR);
 
+		position.y -= 6;
   	   	roadmap_canvas_draw_string_size(&position, ROADMAP_CANVAS_CENTERLEFT, size, line);
    }
    free(text);
@@ -833,7 +839,7 @@ void navigate_bar_draw (void){
    }
 
 
-   BarLocation.y = roadmap_canvas_height() - get_AddressBarHeight() - roadmap_bar_bottom_height();
+   BarLocation.y = roadmap_canvas_height() - get_AddressBarHeight() - roadmap_bar_bottom_height() + 3;
    BarLocation.x = 0;
 #ifndef OPENGL
    roadmap_canvas_draw_image ( NavigateBarStretchedAddressImage, &BarLocation, 0,  IMAGE_NORMAL );

@@ -211,6 +211,7 @@ static void roadmap_skin_gps_listener
    }
 
    now = gps_time;
+   now = time(NULL);
 
 
    //realtime = localtime (&now);
@@ -241,6 +242,8 @@ static void roadmap_skin_gps_listener
 
    //sprintf(msg, "sunset:  %d:%d %d-%d\n sunrise: %d:%d %d-%d\n", realtime2->tm_hour, realtime2->tm_min, realtime2->tm_mday, realtime2->tm_mon+1,realtime->tm_hour, realtime->tm_min, realtime->tm_mday, realtime->tm_mon+1);
    //printf("%s\n", msg);
+
+   //roadmap_log(ROADMAP_ERROR, "sunset %d sunrise %d", realtime2->tm_hour, realtime.tm_hour);
 
    if (rawtime_sunset > rawtime_sunrise){
       roadmap_skin_set_subskin ("night");

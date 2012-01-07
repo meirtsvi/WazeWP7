@@ -943,14 +943,14 @@ void roadmap_bar_draw_top_bar (BOOL draw_bg) {
       RoadMapGuiPoint BarLocation;
       BarLocation.y = 0;
       BarLocation.x = 0;
-      if ( TopBarFullBg )
-      {
-    	  roadmap_canvas_draw_image (TopBarFullBg, &BarLocation, 0, 2 );
-      }
-      else
-      {
-    	  drawBarBGImage(  TOP_BAR_IMAGE, &BarLocation );
-      }
+      //if ( TopBarFullBg )
+      //{
+    	 // roadmap_canvas_draw_image (TopBarFullBg, &BarLocation, 0, 2 );
+      //}
+      //else
+      //{
+    	 // drawBarBGImage(  TOP_BAR_IMAGE, &BarLocation );
+      //}
    }
 
    draw_objects(&TopBarObjectTable);
@@ -1200,13 +1200,17 @@ static RoadMapImage createBGImage (RoadMapImage BarBgImage) {
 
    num_images = width / image_width ;
 
-   for (i = 0; i < num_images; i++){
+   RoadMapGuiRect *rect = malloc(sizeof(RoadMapGuiRect));
+   rect->minx = num_images;
+   rect->miny = 0;
+
+//   for (i = 0; i < num_images; i++){
       RoadMapGuiPoint BarLocation;
       BarLocation.y = 0;
-      BarLocation.x = i * image_width;
+      BarLocation.x = 0;//i * image_width;
          roadmap_canvas_copy_image
-         (image, &BarLocation, NULL, BarBgImage ,CANVAS_COPY_NORMAL);
-   }
+         (image, &BarLocation, rect, BarBgImage ,CANVAS_COPY_NORMAL);
+//   }
    return image;
 }
 

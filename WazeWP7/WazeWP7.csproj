@@ -2269,6 +2269,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Resources\NBidi.dll" />
+    <Resource Include="Resources\record_new_roads.png" />
     <Content Include="Resources\search.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

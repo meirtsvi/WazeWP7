@@ -1020,11 +1020,14 @@ void roadmap_canvas_copy_image(RoadMapImage dst_image,
 #endif
 	if (rect) {
 #ifdef RIMAPI
-		NOPH_Graphics_drawBitmap(dst_image->graphics,
+		int dst_width = NOPH_Bitmap_getWidth(dst_image->bitmap);
+		int dst_height = NOPH_Bitmap_getHeight(dst_image->bitmap);
+		NOPH_Graphics_drawBitmap(dst_image->graphics, pos->x, pos->y, dst_width - pos->x, dst_height - pos->y, src_image->bitmap, rect->minx, rect->miny);
+/*		NOPH_Graphics_drawBitmap(dst_image->graphics,
 				rect->minx, rect->miny,
 				rect->maxx - rect->minx + 1,
 				rect->maxy - rect->miny + 1,
-				src_image->bitmap, rect->minx, rect->miny);
+				src_image->bitmap, rect->minx, rect->miny);*/
 #else
 		NOPH_Graphics_drawRegion(dst_image->graphics, src_image->image,
 				rect->minx, rect->miny, rect->maxx - rect->minx + 1, rect->maxy

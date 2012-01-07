@@ -248,6 +248,7 @@ static void format_cached_text(SsdWidget widget, int draw, RoadMapGuiRect *rect)
 				p.x += width - ctx->size_of_lines[i].width;
 			}
 
+			p.x -= 20;
 			roadmap_canvas_draw_formated_string_angle(&p, NULL, 0, ctx->size,
 					font_type, ctx->line_starts[i]);
 		}

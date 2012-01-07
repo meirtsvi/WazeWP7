@@ -24,6 +24,7 @@ using GenericListItem = WazeWP7.GenericListPageContext.ListItem;
 using GenericListContextMenuItem = WazeWP7.GenericListPageContext.ContextMenuItem;
 using System.Collections.ObjectModel;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 using WazeWP7;
 
@@ -95,6 +96,12 @@ public class Syscalls
 
         GetFileTypeAndName(filename, out file_type, out name);
 
+        if (filename.StartsWith("default_day") || filename.StartsWith("default_night"))
+        {
+            file_type = FileType.RESOURCE;
+            name = "/WazeWP7;component/resources/" + filename;
+        }
+
         if (file_type == FileType.RESOURCE)
         {
             var res = App.GetResourceStream(new Uri(name, UriKind.Relative));
@@ -112,11 +119,8 @@ public class Syscalls
             var store = IsolatedStorageFile.GetUserStoreForApplication();
             try
             {
-                if (!store.DirectoryExists("skins"))
-                    store.CreateDirectory("skins");
-                if (!store.DirectoryExists("skins\\default"))
-                    store.CreateDirectory("skins\\default");
-
+                if (name.StartsWith("skins\\default\\"))
+                    name = name.Substring(14);
                 if (store.FileExists(name) || mode == FileMode.OpenOrCreate)
                 {
                     return new IsolatedStorageFileStream(name, mode, FileAccess.ReadWrite, FileShare.Read, store);
@@ -303,7 +307,7 @@ public class Syscalls
 
     public static void __NOPH_System_currentTimeMillis(int ptr)
     {
-        DateTime Now = DateTime.Now;
+        DateTime Now = DateTime.UtcNow;
         DateTime baseTime = new DateTime(1970, 1, 1, 0, 0, 0);
         long currentTimeMillis = (Now - baseTime).Ticks / 10000;
 
@@ -658,7 +662,7 @@ public class Syscalls
     /* This will be a problem 2038 */
     public static int time(int ptr)
     {
-        DateTime Now = DateTime.Now;
+        DateTime Now = DateTime.UtcNow;
         DateTime baseTime = new DateTime(1970, 1, 1, 0, 0, 0);
         long currentTimeMillis = (Now - baseTime).Ticks / 10000;
 
@@ -772,7 +776,6 @@ public class Syscalls
     {
         String name = "/WazeWP7;component/resources/" + CRunTime.charPtrToString(__name);
 
-
         if (!FileExists(name))
         {
             name = "Userstore://" + CRunTime.charPtrToString(__name);
@@ -856,17 +859,12 @@ public class Syscalls
 
     public static int NOPH_Bitmap_new(int width, int height)
     {
-        mre.Reset();
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            bitmap_object = new BitmapImage();
-            mre.Set();
-        });
-        mre.WaitOne();
-        int registeredHandle = CRunTime.registerObject(bitmap_object);
+        Texture2D newBitmap = new Texture2D(SharedGraphicsDeviceManager.Current.GraphicsDevice, width, height, false, SurfaceFormat.Color);
+        int registeredHandle = CRunTime.registerObject(newBitmap);
         bitmaps_info.Add(registeredHandle, new BitmapInfo(width, height));
         return registeredHandle;
     }
+
     #endregion
 
     #region Calendar/Timezone/TimerTask methods
@@ -896,7 +894,7 @@ public class Syscalls
 
     public static int NOPH_Calendar_getInstance()
     {
-        DateTime ret = DateTime.Now;
+        DateTime ret = DateTime.UtcNow;
         int registeredHandle = CRunTime.registerObject(ret);
         return registeredHandle;
     }
@@ -914,7 +912,7 @@ public class Syscalls
             return 0;
 
         TimeZoneInfo tz = (TimeZoneInfo)CRunTime.objectRepository[__tz];
-        int ret = (int)tz.GetUtcOffset(DateTime.UtcNow).TotalMilliseconds;//todomt .getRawOffset();
+        int ret = (int)tz.GetUtcOffset(DateTime.UtcNow).TotalMilliseconds / 1000 / 60 * (-1);
         return ret;
     }
 
@@ -1484,9 +1482,6 @@ public class Syscalls
         //FreeMapMainScreen screen = (FreeMapMainScreen)CRunTime.objectRepository[__screen];
         String text = CRunTime.charPtrToString(__text);
         WazeMenuItem menuItem = new WazeMenuItem(text, ordinal, 0, wrapper_callback, callback);
-        int r = 1;
-        if (text.Contains("zoom"))
-            r = 3;
         miniMenuItems.Add(menuItem);
         MiniMenuIsOn = true;
         /*
@@ -1649,60 +1644,60 @@ public class Syscalls
     public static void NOPH_Graphics_drawArc(int __graphics, int x, int y, int width, int height, int startAngle, int arcAngle)
     {
         return;
-        //mre.Reset();
-        int copy_x, copy_y, copy_width, copy_height, copy_start_angle, copy_arc_angle;
-        copy_x = x; copy_y = y; copy_width = width; copy_height = height; copy_start_angle = startAngle; copy_arc_angle = arcAngle;
-        Color pen_color = curr_color;
+        ////mre.Reset();
+        //int copy_x, copy_y, copy_width, copy_height, copy_start_angle, copy_arc_angle;
+        //copy_x = x; copy_y = y; copy_width = width; copy_height = height; copy_start_angle = startAngle; copy_arc_angle = arcAngle;
+        //System.Windows.Media.Color pen_color = curr_color;
 
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            if (copy_arc_angle - copy_start_angle == 360)
-            {
-                Ellipse myEllipse = new Ellipse();
+        //System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        //{
+        //    if (copy_arc_angle - copy_start_angle == 360)
+        //    {
+        //        Ellipse myEllipse = new Ellipse();
 
-                SolidColorBrush mySolidColorBrush = new SolidColorBrush();
+        //        SolidColorBrush mySolidColorBrush = new SolidColorBrush();
 
-                mySolidColorBrush.Color = pen_color;
-                myEllipse.StrokeThickness = 1;
-                myEllipse.Stroke = mySolidColorBrush;
+        //        mySolidColorBrush.Color = pen_color;
+        //        myEllipse.StrokeThickness = 1;
+        //        myEllipse.Stroke = mySolidColorBrush;
 
-                myEllipse.Width = copy_width;
-                myEllipse.Height = copy_height;
-                myEllipse.SetValue(Canvas.LeftProperty, (double)copy_x);
-                myEllipse.SetValue(Canvas.TopProperty, (double)copy_y);
+        //        myEllipse.Width = copy_width;
+        //        myEllipse.Height = copy_height;
+        //        myEllipse.SetValue(Canvas.LeftProperty, (double)copy_x);
+        //        myEllipse.SetValue(Canvas.TopProperty, (double)copy_y);
                 
-                next_canvas.Children.Add(myEllipse);// graphics.Children.Add(myEllipse);
-            }
-            else
-            {
+        //        next_canvas.Children.Add(myEllipse);// graphics.Children.Add(myEllipse);
+        //    }
+        //    else
+        //    {
 
-                SolidColorBrush fb = new SolidColorBrush(pen_color);
-                System.Windows.Shapes.Path path1 = new System.Windows.Shapes.Path();
-                PathGeometry pg1 = new PathGeometry();
-                PathFigure pf1 = new PathFigure();
-                pf1.StartPoint = new Point(copy_x, copy_y);
-                //set up the segments collection
-                PathSegmentCollection segments = new PathSegmentCollection();
-                //arc1    
-                ArcSegment arc1 = new ArcSegment();
-                arc1.Point = new Point(copy_width + copy_x, copy_height + copy_y);
-                arc1.Size = new Size(copy_width, copy_height);
-                arc1.IsLargeArc = (copy_arc_angle - copy_start_angle) > 180 ? true : false;
-                arc1.SweepDirection = SweepDirection.Clockwise;
-                segments.Add(arc1);
+        //        SolidColorBrush fb = new SolidColorBrush(pen_color);
+        //        System.Windows.Shapes.Path path1 = new System.Windows.Shapes.Path();
+        //        PathGeometry pg1 = new PathGeometry();
+        //        PathFigure pf1 = new PathFigure();
+        //        pf1.StartPoint = new Point(copy_x, copy_y);
+        //        //set up the segments collection
+        //        PathSegmentCollection segments = new PathSegmentCollection();
+        //        //arc1    
+        //        ArcSegment arc1 = new ArcSegment();
+        //        arc1.Point = new Point(copy_width + copy_x, copy_height + copy_y);
+        //        arc1.Size = new Size(copy_width, copy_height);
+        //        arc1.IsLargeArc = (copy_arc_angle - copy_start_angle) > 180 ? true : false;
+        //        arc1.SweepDirection = SweepDirection.Clockwise;
+        //        segments.Add(arc1);
 
-                //Set up the path
-                pf1.Segments = segments;
-                pg1.Figures.Add(pf1);
-                path1.Data = pg1;
-                path1.Stroke = fb;
-                path1.StrokeThickness = 1;
+        //        //Set up the path
+        //        pf1.Segments = segments;
+        //        pg1.Figures.Add(pf1);
+        //        path1.Data = pg1;
+        //        path1.Stroke = fb;
+        //        path1.StrokeThickness = 1;
 
-                next_canvas.Children.Add(path1);// graphics.Children.Add(path1);
-            }
-            //mre.Set();
-        });
-        //mre.WaitOne();
+        //        next_canvas.Children.Add(path1);// graphics.Children.Add(path1);
+        //    }
+        //    //mre.Set();
+        //});
+        ////mre.WaitOne();
     }
 
     public static void NOPH_Graphics_drawBitmap(int __graphics, int x, int y, int width, int height, int __bitmap, int left, int top)
@@ -1714,12 +1709,91 @@ public class Syscalls
         if (bitmap == null)
             return;
 
-        bitmap.Tag = x + "," + y;
-        GamePage.get().bitmaps[GamePage.get().whichPolygonAndTextAndBitmapArrayIsInWork][GamePage.get().bitmapWorkIndex++] = bitmap;
-        return;
+        // If we need to copy one image to another == draw image with __graphics handle into __bitmap
+        if (__graphics != 1)
+        {
+            Texture2D srcBitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
+            Texture2D dstBitmap = CRunTime.objectRepository[__graphics] as Texture2D;
+            if (srcBitmap == null || dstBitmap == null)
+                return;
 
+            if (x == dstBitmap.Width || y == dstBitmap.Height)
+                return;
+
+            int h = srcBitmap.Height;
+            int w = srcBitmap.Width;
+
+            Microsoft.Xna.Framework.Color[] retrievedColor;
+            if (left > 0)
+            {
+/*                if (left > w)
+                    left = dstBitmap.Width / w;*/
+
+                retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                for (int i = 0; i < left; i++)
+                {
+                    try
+                    {
+                        int xPos = x + (i * w);
+                        if (xPos >= dstBitmap.Width)
+                            break;
+                        dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(xPos, y, w, h), retrievedColor, 0, w * h);
+                    }
+                    catch (ArgumentException)
+                    {
+                        // Should not happen but just in case - ignore drawing to the dstBitmap
+                    }
+                }
+            }
+            else if (top > 0)
+            {
+                /*
+                if (top > h)
+                    top = dstBitmap.Height / h;
+                 */
+
+                retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                for (int i = 0; i < top; i++)
+                {
+                    try
+                    {
+                        int yPos = y + (i * h);
+                        if (yPos >= dstBitmap.Height)
+                            break;
+                        dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, yPos, w, h), retrievedColor, 0, w * h);
+                    }
+                    catch (ArgumentException)
+                    {
+                        // Should not happen but just in case - ignore drawing to the dstBitmap
+                    }
+                }
+            }
+            else
+            {
+                try
+                {
+                    retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                    srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                    dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), retrievedColor, 0, w * h);
+                }
+                catch (ArgumentException)
+                {
+                    // Should not happen but just in case - ignore drawing to the dstBitmap
+                }
+
+            }
+
+            CRunTime.objectRepository[__graphics] = dstBitmap;
+        }
+        else
+        {
+
+            bitmap.Tag = x + "," + y;
+            GamePage.get().bitmaps[GamePage.get().whichPolygonAndTextAndBitmapArrayIsInWork][GamePage.get().bitmapWorkIndex++] = bitmap;
+        }
     }
-
     /// <summary>
     /// 
     ///
@@ -1778,12 +1852,12 @@ public class Syscalls
         yPtsAddr /= 4;
         offsetsAddr /= 4;
 
-        List<System.Windows.Point> points = new List<Point>();
+        List<System.Windows.Point> points = new List<System.Windows.Point>();
         for (int i = 0; i < count; ++i)
         {
             int x = CRunTime.memory[xPtsAddr + i];
             int y =  CRunTime.memory[yPtsAddr + i];
-            points.Add(new Point(x,y));
+            points.Add(new System.Windows.Point(x, y));
         }
 
         List<System.Windows.Point> triagnlesPoints = Triangulator.triangulate(points);
@@ -1799,7 +1873,7 @@ public class Syscalls
     private static char illegalChar2 = (char)8;
     public static void NOPH_Graphics_drawTextAngle(int c_graphics, int c_text, int x, int y, int flags, int angle)
     {
-        int font_size = currFontSize - 4;
+        int font_size = currFontSize - 5;
         String text = NBidi.NBidi.LogicalToVisual(CRunTime.charPtrToString(c_text)).Replace(illegalChar1,' ').Replace(illegalChar2, ' ');
         Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
         GamePage gamePage = GamePage.get();
@@ -1811,7 +1885,7 @@ public class Syscalls
         //        mre.Reset();
         int copy_c_text, copy_x, copy_y, copy_flags, copy_angle;
         copy_c_text = c_text; copy_x = x; copy_y = y; copy_flags = flags; copy_angle = angle;
-        Color curr_pen = curr_color;
+        System.Windows.Media.Color curr_pen = curr_color;
 
         //todomt2 - what about flags?
 
@@ -1923,17 +1997,18 @@ public class Syscalls
         AddVertext(x+width, y+height, color);
     }
 
-    //todomt - what's that?
     public static int NOPH_Graphics_new(int __bitmap)
     {
-        // Notice - do not return 0, in case someone checks this is not null before doing something with it
-        return 1;
+        // This is the value of the graphic handler for new bitmaps. It should be different than the global graphics handler address (==1).
+        // We return __bitmap so it will help us fetch the right bitmap to copy in case drawBitmap will be called just to copy (draw) one image
+        // to another one.
+        return __bitmap;
     }
 
-    private static Color curr_color = Colors.Cyan;
+    private static System.Windows.Media.Color curr_color = Colors.Cyan;
     public static void NOPH_Graphics_setColor(int __graphics, int rgb)
     {
-        curr_color = Color.FromArgb(0xff, (byte)((rgb >> 0x10) & 0xff), (byte)((rgb >> 8) & 0xff), (byte)(rgb & 0xff));
+        curr_color = System.Windows.Media.Color.FromArgb(0xff, (byte)((rgb >> 0x10) & 0xff), (byte)((rgb >> 8) & 0xff), (byte)(rgb & 0xff));
     }
 
     public static void NOPH_Graphics_setDrawingStyle(int __graphics, int drawStyle, int __on)
@@ -2075,7 +2150,12 @@ public class Syscalls
 
         try
         {
-            if (iis.Length == iis.Position) throw new EndOfStreamException();
+            if (iis.Length == iis.Position)
+            {
+                CRunTime.memoryWriteShort(eof_addr, 1);
+                goto end;
+            }
+
             int r = iis.Read(buff, 0, size);
             if (r <= 0) throw new EndOfStreamException();
             CRunTime.memcpy(ptr, buff, 0, r);
@@ -2085,6 +2165,8 @@ public class Syscalls
         {
             CRunTime.memoryWriteShort(eof_addr, 1);
         }
+
+end:
         buff = null;
 
         return count;

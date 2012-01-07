@@ -337,7 +337,6 @@ namespace WazeWP7
         /// </summary>
         private void OnDraw(object sender, GameTimerEventArgs e)
         {
-
             SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.White);
 
             //Rendering Silverlight content into the UIElementRenderer object and the rendering its texture using the SpriteBatch object
@@ -355,6 +354,7 @@ namespace WazeWP7
                     //SharedGraphicsDeviceManager.Current.GraphicsDevice.BlendState = BlendState.NonPremultiplied;    // use alpha blending
                     SharedGraphicsDeviceManager.Current.GraphicsDevice.DepthStencilState = DepthStencilState.None;  // don't bother with the depth/stencil buffer
 
+                    
                     foreach (EffectPass pass in basicEffect.CurrentTechnique.Passes)
                     {
                         pass.Apply();
@@ -399,7 +399,7 @@ namespace WazeWP7
                         }
                         else
                         {
-//                            y -= 20;
+                            // y -= 20;
                         }
 
                         // Draw the string
@@ -1587,7 +1587,6 @@ namespace WazeWP7
 
         private void WazeApplicationPage_ManipulationDelta(object sender, ManipulationDeltaEventArgs e)
         {
-            Logger.log("X: " + e.DeltaManipulation.Scale.X + " y: " + e.DeltaManipulation.Scale.Y);
             if (e.DeltaManipulation.Scale.X > 1 || e.DeltaManipulation.Scale.Y > 1)
             {
                 if (ZoomIn != null)
