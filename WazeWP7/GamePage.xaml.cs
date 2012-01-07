@@ -545,8 +545,7 @@ namespace WazeWP7
         /// <summary>
         /// Refresh the graphics.
         /// Repaint the screen using the update graphic element list.
-        /// This is heavy as eache change in the MainGraphics children wil trigger dependencies code.
-        /// </summary>
+          /// </summary>
         /// <param name="list"></param>
         public void refresh(Canvas newGraphics)
         {
