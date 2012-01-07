@@ -45,16 +45,21 @@ namespace WazeWP7
 
             // First remove all the elements from this page's popup panel 
             var popupPanel = this.GetPopupPanel();
-            var popupElements = new List<UIElement>(popupPanel.Children);
-            popupPanel.Children.Clear();
-
-            // And put them back into the new page's panel
-            var newPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
-            foreach (var element in popupElements)
+            if (popupPanel != null)
             {
-                newPage.GetPopupPanel().Children.Add(element);
-            }
+                var popupElements = new List<UIElement>(popupPanel.Children);
+                popupPanel.Children.Clear();
 
+                // And put them back into the new page's panel
+                var newPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
+                if (newPage != null)
+                {
+                    foreach (var element in popupElements)
+                    {
+                        newPage.GetPopupPanel().Children.Add(element);
+                    }
+                }
+            }
             base.OnNavigatedFrom(e);
         }
 
