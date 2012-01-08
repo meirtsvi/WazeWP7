@@ -138,18 +138,11 @@ public class TileStorage
 
         for (int i = 0; i < NUM_RECORDSTORES; i++)
         {
-            /* may need to close more than once... */
-            while (true)
-            {
                 try
                 {
                     recordstore[i].closeRecordStore();
                 }
-                catch (Exception ex)
-                {
-                    break;
-                }
-            }
+            catch (Exception) {}
         }
 
         for (int i = 0; i < NUM_RECORDSTORES; i++)

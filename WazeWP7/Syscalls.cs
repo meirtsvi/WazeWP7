@@ -1702,96 +1702,103 @@ public class Syscalls
 
     public static void NOPH_Graphics_drawBitmap(int __graphics, int x, int y, int width, int height, int __bitmap, int left, int top)
     {
-        if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
-            return; //todmt2 - understand why i get such numbers
-
-        Texture2D bitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
-        if (bitmap == null)
-            return;
-
-        // If we need to copy one image to another == draw image with __graphics handle into __bitmap
-        if (__graphics != 1)
+        try
         {
-            Texture2D srcBitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
-            Texture2D dstBitmap = CRunTime.objectRepository[__graphics] as Texture2D;
-            if (srcBitmap == null || dstBitmap == null)
+            if (width < 0 || height < 0 || x < 0 || y < 0 || top < 0 || left < 0 || __bitmap == 16777216)
+                return; //todmt2 - understand why i get such numbers
+
+            Texture2D bitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
+            if (bitmap == null)
                 return;
 
-            if (x == dstBitmap.Width || y == dstBitmap.Height)
-                return;
-
-            int h = srcBitmap.Height;
-            int w = srcBitmap.Width;
-
-            Microsoft.Xna.Framework.Color[] retrievedColor;
-            if (left > 0)
+            // If we need to copy one image to another == draw image with __graphics handle into __bitmap
+            if (__graphics != 1)
             {
-/*                if (left > w)
-                    left = dstBitmap.Width / w;*/
+                Texture2D srcBitmap = CRunTime.objectRepository[__bitmap] as Texture2D;
+                Texture2D dstBitmap = CRunTime.objectRepository[__graphics] as Texture2D;
+                if (srcBitmap == null || dstBitmap == null)
+                    return;
 
-                retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
-                srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
-                for (int i = 0; i < left; i++)
+                if (x == dstBitmap.Width || y == dstBitmap.Height)
+                    return;
+
+                int h = srcBitmap.Height;
+                int w = srcBitmap.Width;
+
+                Microsoft.Xna.Framework.Color[] retrievedColor;
+                if (left > 0)
+                {
+                    /*                if (left > w)
+                                        left = dstBitmap.Width / w;*/
+
+                    retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                    srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                    for (int i = 0; i < left; i++)
+                    {
+                        try
+                        {
+                            int xPos = x + (i * w);
+                            if (xPos >= dstBitmap.Width)
+                                break;
+                            dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(xPos, y, w, h), retrievedColor, 0, w * h);
+                        }
+                        catch (ArgumentException)
+                        {
+                            // Should not happen but just in case - ignore drawing to the dstBitmap
+                        }
+                    }
+                }
+                else if (top > 0)
+                {
+                    /*
+                    if (top > h)
+                        top = dstBitmap.Height / h;
+                     */
+
+                    retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                    srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                    for (int i = 0; i < top; i++)
+                    {
+                        try
+                        {
+                            int yPos = y + (i * h);
+                            if (yPos >= dstBitmap.Height)
+                                break;
+                            dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, yPos, w, h), retrievedColor, 0, w * h);
+                        }
+                        catch (ArgumentException)
+                        {
+                            // Should not happen but just in case - ignore drawing to the dstBitmap
+                        }
+                    }
+                }
+                else
                 {
                     try
                     {
-                        int xPos = x + (i * w);
-                        if (xPos >= dstBitmap.Width)
-                            break;
-                        dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(xPos, y, w, h), retrievedColor, 0, w * h);
+                        retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
+                        srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
+                        dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), retrievedColor, 0, w * h);
                     }
                     catch (ArgumentException)
                     {
                         // Should not happen but just in case - ignore drawing to the dstBitmap
                     }
-                }
-            }
-            else if (top > 0)
-            {
-                /*
-                if (top > h)
-                    top = dstBitmap.Height / h;
-                 */
 
-                retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
-                srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
-                for (int i = 0; i < top; i++)
-                {
-                    try
-                    {
-                        int yPos = y + (i * h);
-                        if (yPos >= dstBitmap.Height)
-                            break;
-                        dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, yPos, w, h), retrievedColor, 0, w * h);
-                    }
-                    catch (ArgumentException)
-                    {
-                        // Should not happen but just in case - ignore drawing to the dstBitmap
-                    }
                 }
+
+                CRunTime.objectRepository[__graphics] = dstBitmap;
             }
             else
             {
-                try
-                {
-                    retrievedColor = new Microsoft.Xna.Framework.Color[w * h];
-                    srcBitmap.GetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(0, 0, w, h), retrievedColor, 0, w * h);
-                    dstBitmap.SetData<Microsoft.Xna.Framework.Color>(0, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), retrievedColor, 0, w * h);
-                }
-                catch (ArgumentException)
-                {
-                    // Should not happen but just in case - ignore drawing to the dstBitmap
-                }
 
+                bitmap.Tag = x + "," + y;
+                GamePage.get().bitmaps[GamePage.get().whichPolygonAndTextAndBitmapArrayIsInWork][GamePage.get().bitmapWorkIndex++] = bitmap;
             }
-
-            CRunTime.objectRepository[__graphics] = dstBitmap;
         }
-        else
+        catch (Exception)
         {
-
-            bitmap.Tag = x + "," + y;
-            GamePage.get().bitmaps[GamePage.get().whichPolygonAndTextAndBitmapArrayIsInWork][GamePage.get().bitmapWorkIndex++] = bitmap;
+            // Ignore drawing exceptions in order to keep XNA thread running
         }
     }
     /// <summary>
@@ -1806,41 +1813,65 @@ public class Syscalls
     /// <param name="count"></param>
     public static void NOPH_Graphics_drawFilledPath(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count)
     {
-        xPtsAddr /= 4;
-        yPtsAddr /= 4;
-        offsetsAddr /= 4;
+        try
+        {
+            xPtsAddr /= 4;
+            yPtsAddr /= 4;
+            offsetsAddr /= 4;
 
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
-        AddVertext((float)(CRunTime.memory[xPtsAddr+1]), (float)(CRunTime.memory[yPtsAddr+1]), color);
-        AddVertext((float)(CRunTime.memory[xPtsAddr+2]), (float)(CRunTime.memory[yPtsAddr+2]), color);
-        AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
-        AddVertext((float)(CRunTime.memory[xPtsAddr+3]), (float)(CRunTime.memory[yPtsAddr+3]), color);
-        AddVertext((float)(CRunTime.memory[xPtsAddr+2]), (float)(CRunTime.memory[yPtsAddr+2]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr + 1]), (float)(CRunTime.memory[yPtsAddr + 1]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr + 2]), (float)(CRunTime.memory[yPtsAddr + 2]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr]), (float)(CRunTime.memory[yPtsAddr]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr + 3]), (float)(CRunTime.memory[yPtsAddr + 3]), color);
+            AddVertext((float)(CRunTime.memory[xPtsAddr + 2]), (float)(CRunTime.memory[yPtsAddr + 2]), color);
+        }
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
+        }
     }
 
     public static void NOPH_Graphics_drawLine(int __graphics, int x1, int y1, int x2, int y2)
     {
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+        try
+        {
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        AddVertext( (float)(x1), (float)(y1),color);
-        AddVertext((float)(x2), (float)(y2), color);
-        AddVertext((float)(x2), (float)(y2), color);
+            AddVertext((float)(x1), (float)(y1), color);
+            AddVertext((float)(x2), (float)(y2), color);
+            AddVertext((float)(x2), (float)(y2), color);
+        }
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
+        }
+
     }
 
     public static void NOPH_Graphics_drawPathOutline(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count, int closed)
     {
         xPtsAddr /= 4;
         yPtsAddr /= 4;
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        for (int i=0; i<count-1; i++)
+        try
         {
-            AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
-            AddVertext(CRunTime.memory[xPtsAddr + i+1], CRunTime.memory[yPtsAddr + i+1], color);
-            AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+
+            for (int i = 0; i < count - 1; i++)
+            {
+                AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
+                AddVertext(CRunTime.memory[xPtsAddr + i + 1], CRunTime.memory[yPtsAddr + i + 1], color);
+                AddVertext(CRunTime.memory[xPtsAddr + i], CRunTime.memory[yPtsAddr + i], color);
+            }
         }
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
+        }
+
     }
 
     public static void NOPH_Graphics_drawShadedFilledPath(int c_graphics, int xPtsAddr, int yPtsAddr, int pointTypesAddr, int offsetsAddr, int count)
@@ -1852,149 +1883,181 @@ public class Syscalls
         yPtsAddr /= 4;
         offsetsAddr /= 4;
 
-        List<System.Windows.Point> points = new List<System.Windows.Point>();
-        for (int i = 0; i < count; ++i)
+        try
         {
-            int x = CRunTime.memory[xPtsAddr + i];
-            int y =  CRunTime.memory[yPtsAddr + i];
-            points.Add(new System.Windows.Point(x, y));
+            List<System.Windows.Point> points = new List<System.Windows.Point>();
+            for (int i = 0; i < count; ++i)
+            {
+                int x = CRunTime.memory[xPtsAddr + i];
+                int y = CRunTime.memory[yPtsAddr + i];
+                points.Add(new System.Windows.Point(x, y));
+            }
+
+            List<System.Windows.Point> triagnlesPoints = Triangulator.triangulate(points);
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+
+            for (int i = 0; i < triagnlesPoints.Count; i++)
+            {
+                AddVertext((float)(triagnlesPoints[i].X), (float)(triagnlesPoints[i].Y), color);
+            }
+        }
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
         }
 
-        List<System.Windows.Point> triagnlesPoints = Triangulator.triangulate(points);
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
-
-        for (int i = 0; i < triagnlesPoints.Count; i++)
-        {
-            AddVertext( (float)(triagnlesPoints[i].X), (float)(triagnlesPoints[i].Y), color);
-        }
     }
 
     private static char illegalChar1 = (char)4;
     private static char illegalChar2 = (char)8;
     public static void NOPH_Graphics_drawTextAngle(int c_graphics, int c_text, int x, int y, int flags, int angle)
     {
-        int font_size = currFontSize - 5;
-        String text = NBidi.NBidi.LogicalToVisual(CRunTime.charPtrToString(c_text)).Replace(illegalChar1,' ').Replace(illegalChar2, ' ');
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
-        GamePage gamePage = GamePage.get();
+        try
+        {
+            int font_size = currFontSize - 5;
+            String text = NBidi.NBidi.LogicalToVisual(CRunTime.charPtrToString(c_text)).Replace(illegalChar1, ' ').Replace(illegalChar2, ' ');
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+            GamePage gamePage = GamePage.get();
 
-        TextString textString = new TextString(text, font_size, x, y, angle, color);
-        gamePage.textStrings[gamePage.whichPolygonAndTextAndBitmapArrayIsInWork][gamePage.textStringWorkIndex++] = textString;
+            TextString textString = new TextString(text, font_size, x, y, angle, color);
+            gamePage.textStrings[gamePage.whichPolygonAndTextAndBitmapArrayIsInWork][gamePage.textStringWorkIndex++] = textString;
+        }
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
+        }
+
 
         return;
-        //        mre.Reset();
-        int copy_c_text, copy_x, copy_y, copy_flags, copy_angle;
-        copy_c_text = c_text; copy_x = x; copy_y = y; copy_flags = flags; copy_angle = angle;
-        System.Windows.Media.Color curr_pen = curr_color;
+        ////        mre.Reset();
+        //int copy_c_text, copy_x, copy_y, copy_flags, copy_angle;
+        //copy_c_text = c_text; copy_x = x; copy_y = y; copy_flags = flags; copy_angle = angle;
+        //System.Windows.Media.Color curr_pen = curr_color;
 
-        //todomt2 - what about flags?
+        ////todomt2 - what about flags?
 
-        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-        {
-            if (copy_angle == 0)
-            {
+        //System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        //{
+        //    if (copy_angle == 0)
+        //    {
 
-                TextBlock tb = new TextBlock();
-                tb.FontFamily = new FontFamily("FreeSans");
-                tb.FontSize = font_size;
-                tb.FontStyle = FontStyles.Normal;
-                tb.Foreground = new SolidColorBrush(curr_pen);
+        //        TextBlock tb = new TextBlock();
+        //        tb.FontFamily = new FontFamily("FreeSans");
+        //        tb.FontSize = font_size;
+        //        tb.FontStyle = FontStyles.Normal;
+        //        tb.Foreground = new SolidColorBrush(curr_pen);
 
-                // Align to Right
-                tb.FlowDirection = FlowDirection.RightToLeft;
+        //        // Align to Right
+        //        tb.FlowDirection = FlowDirection.RightToLeft;
                 
 
-                tb.Text = text;
+        //        tb.Text = text;
 
-                //Logger.log("Draw Text: " + text);
-
-
-
-                // Fix location of upper notification. for some reason the C code is sending x values that are outside the canvas...
-                if (copy_y == 67)
-                {
-                    copy_x -= 32;
-                }
-
-                // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
-                if (
-                    ((copy_y == 472) && GamePage.get().IsPhoneLandscape()) || 
-                    ((copy_y == 792) && !GamePage.get().IsPhoneLandscape())
-                    )
-                {
-                    copy_x -= 37;
-                }
-                // End fix
+        //        //Logger.log("Draw Text: " + text);
 
 
-                tb.SetValue(Canvas.LeftProperty, (double)(copy_x + tb.ActualWidth));
-                tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight + 5 ));
 
-                next_canvas.Children.Add(tb);
-            }
-            else
-            {
-                TextBlock tb = new TextBlock();
-                tb.FontFamily = new FontFamily("FreeSans");
-                tb.FontSize = font_size;
-                tb.FontStyle = FontStyles.Normal;
-                tb.Foreground = new SolidColorBrush(curr_pen);
-                tb.SetValue(Canvas.LeftProperty, (double)(copy_x));// - (tb.ActualWidth / 2)));
-                tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight - 20.0));
-                tb.Text = text;
+        //        // Fix location of upper notification. for some reason the C code is sending x values that are outside the canvas...
+        //        if (copy_y == 67)
+        //        {
+        //            copy_x -= 32;
+        //        }
 
-                RotateTransform rt = new RotateTransform();
-                rt.Angle = copy_angle;
+        //        // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
+        //        if (
+        //            ((copy_y == 472) && GamePage.get().IsPhoneLandscape()) || 
+        //            ((copy_y == 792) && !GamePage.get().IsPhoneLandscape())
+        //            )
+        //        {
+        //            copy_x -= 37;
+        //        }
+        //        // End fix
 
-                tb.RenderTransform = rt;
 
-                next_canvas.Children.Add(tb);
-            }
+        //        tb.SetValue(Canvas.LeftProperty, (double)(copy_x + tb.ActualWidth));
+        //        tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight + 5 ));
 
-            //mre.Set();
-        });
-        //mre.WaitOne();
+        //        next_canvas.Children.Add(tb);
+        //    }
+        //    else
+        //    {
+        //        TextBlock tb = new TextBlock();
+        //        tb.FontFamily = new FontFamily("FreeSans");
+        //        tb.FontSize = font_size;
+        //        tb.FontStyle = FontStyles.Normal;
+        //        tb.Foreground = new SolidColorBrush(curr_pen);
+        //        tb.SetValue(Canvas.LeftProperty, (double)(copy_x));// - (tb.ActualWidth / 2)));
+        //        tb.SetValue(Canvas.TopProperty, (double)(copy_y - tb.ActualHeight - 20.0));
+        //        tb.Text = text;
+
+        //        RotateTransform rt = new RotateTransform();
+        //        rt.Angle = copy_angle;
+
+        //        tb.RenderTransform = rt;
+
+        //        next_canvas.Children.Add(tb);
+        //    }
+
+        //    //mre.Set();
+        //});
+        ////mre.WaitOne();
     }
 
     public static void NOPH_Graphics_fillArc(int __graphics, int x, int y, int width, int height, int startAngle, int arcAngle)
     {
-        float radius = (float)width;
-        int sides = 40;
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
-
-        float max = 2 * (float)Math.PI; 
-        float step = max / (float)sides; 
-        for (float theta = 0; theta < max; theta += step)
+        try
         {
-            float xPos = (float)(radius * (float)Math.Cos((double)theta)); 
-            float yPos = (float)(radius * (float)Math.Sin((double)theta));
+            float radius = (float)width;
+            int sides = 40;
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
+            float max = 2 * (float)Math.PI;
+            float step = max / (float)sides;
+            for (float theta = 0; theta < max; theta += step)
+            {
+                float xPos = (float)(radius * (float)Math.Cos((double)theta));
+                float yPos = (float)(radius * (float)Math.Sin((double)theta));
+
+                for (int j = 0; j < 3; j++)
+                {
+                    AddVertext(xPos, yPos, color);
+                }
+            }
+
+            // then add the first vector again so it's a complete loop
             for (int j = 0; j < 3; j++)
             {
-                AddVertext(xPos, yPos, color);
+                AddVertext((float)(radius * (float)Math.Cos(0)), (float)(radius * (float)Math.Sin(0)), color);
             }
         }
-
-        // then add the first vector again so it's a complete loop
-        for (int j = 0; j < 3; j++)
+        catch (Exception)
         {
-            AddVertext( (float)(radius * (float)Math.Cos(0)), (float)(radius * (float)Math.Sin(0)) ,color);
+            // ignore exception for not stopping the map from beging drawn
         }
+
     }
 
     public static void NOPH_Graphics_fillRect(int __graphics, int x, int y, int width, int height)
     {
-        Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
+        try
+        {
+            Microsoft.Xna.Framework.Color color = Microsoft.Xna.Framework.Color.FromNonPremultiplied(curr_color.R, curr_color.G, curr_color.B, curr_color.A);
 
-        // 1st triangle
-        AddVertext(x,y,color);
-        AddVertext(x+width, y, color);
-        AddVertext(x+width, y+height, color);
+            // 1st triangle
+            AddVertext(x, y, color);
+            AddVertext(x + width, y, color);
+            AddVertext(x + width, y + height, color);
 
-        // 2nd triangle
-        AddVertext(x, y, color);
-        AddVertext(x, y+height, color);
-        AddVertext(x+width, y+height, color);
+            // 2nd triangle
+            AddVertext(x, y, color);
+            AddVertext(x, y + height, color);
+            AddVertext(x + width, y + height, color);
+        }        
+        catch (Exception)
+        {
+            // ignore exception for not stopping the map from beging drawn
+        }
+
     }
 
     public static int NOPH_Graphics_new(int __bitmap)

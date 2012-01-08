@@ -135,8 +135,8 @@ namespace WazeWP7
             // Get the content manager from the application
             contentManager = (Application.Current as App).Content;
 
-            filledPathPolygons[0] = new VertexPositionColor[50000];
-            filledPathPolygons[1] = new VertexPositionColor[50000];
+            filledPathPolygons[0] = new VertexPositionColor[55000];
+            filledPathPolygons[1] = new VertexPositionColor[55000];
 
             textStrings[0] = new TextString[2000];
             textStrings[1] = new TextString[2000];
@@ -1585,21 +1585,41 @@ namespace WazeWP7
             return Texture2D.FromStream(SharedGraphicsDeviceManager.Current.GraphicsDevice, stream);
         }
 
+        private static int numOfZoomOutPinches = 0;
+        private static int numOfZoominPinches = 0;
         private void WazeApplicationPage_ManipulationDelta(object sender, ManipulationDeltaEventArgs e)
         {
             if (e.DeltaManipulation.Scale.X > 1 || e.DeltaManipulation.Scale.Y > 1)
             {
+                numOfZoomOutPinches = 0;
                 if (ZoomIn != null)
                 {
-                    ZoomIn.CallCallback();
+                    if (numOfZoominPinches > 10)
+                    {
+                        ZoomIn.CallCallback();
+                        numOfZoominPinches = 0;
+                    }
+                    else
+                    {
+                        numOfZoominPinches++;
+                    }
                 }
             }
             else if ((e.DeltaManipulation.Scale.X > 0 && e.DeltaManipulation.Scale.X < 1) ||
                      (e.DeltaManipulation.Scale.Y > 0 && e.DeltaManipulation.Scale.Y < 1))
             {
+                numOfZoominPinches = 0;
                 if (ZoomOut != null)
                 {
-                    ZoomOut.CallCallback();
+                    if (numOfZoomOutPinches > 10)
+                    {
+                        ZoomOut.CallCallback();
+                        numOfZoomOutPinches = 0;
+                    }
+                    else
+                    {
+                        numOfZoomOutPinches++;
+                    }
                 }
             }
         }
