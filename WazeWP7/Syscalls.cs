@@ -894,7 +894,7 @@ public class Syscalls
 
     public static int NOPH_Calendar_getInstance()
     {
-        DateTime ret = DateTime.UtcNow;
+        DateTime ret = DateTime.Now;
         int registeredHandle = CRunTime.registerObject(ret);
         return registeredHandle;
     }
