@@ -247,6 +247,18 @@
                                 <Button Name="RestoreFavorites" Height="66" Width="239" Click="RestoreFavorites_Click">Restore Now</Button>
                             </StackPanel>
                         </Border>
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" Text="Rotation Control"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+
+                                <local:SimpleToggleSwitch x:Name="EnableRotation"
+                                                          ViewModel="{Binding EnableRotation}"/>
+
+                            </StackPanel>
+                        </Border>
+
                     </StackPanel>
                 </ScrollViewer>
             </controls:PivotItem>
