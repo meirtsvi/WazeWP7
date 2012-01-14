@@ -1526,6 +1526,7 @@ namespace WazeWP7
         /// <param name="e"></param>
         private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
+
             //Keep the latest oreientation   
             m_CurrentOrientation = e.Orientation;
 

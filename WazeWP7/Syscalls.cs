@@ -3405,12 +3405,32 @@ end:
         int currentPtr = all_settings_addr;
         for (int i = 0; i < (int)SettingsPageViewModel.Settings.SettingsMaxValue; i++)
         {
-            bool isValid = CRunTime.memory[currentPtr / 4] == 1;
-            currentPtr += sizeof(int);
-            string value = CRunTime.charPtrToString(currentPtr);
-            currentPtr += 40;
+            if (i < (int)SettingsPageViewModel.Settings.SettingsMaxCValue)
+            {
+                bool isValid = CRunTime.memory[currentPtr / 4] == 1;
+                currentPtr += sizeof(int);
+                string value = CRunTime.charPtrToString(currentPtr);
+                currentPtr += 40;
+                viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, isValid, value);
+            }
+            // This is saved locally in isolated storage
+            else if (i > (int)SettingsPageViewModel.Settings.SettingsMaxCValue) 
+            {
+                 string propertyName = ((SettingsPageViewModel.Settings)i).ToString().Split('_')[1];
+                 if (IsolatedStorageSettings.ApplicationSettings.Contains(propertyName))
+                 {
+                     string value = IsolatedStorageSettings.ApplicationSettings[propertyName].ToString();
+                     viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, true, value);
+                 }
+                 else // If no settings exist assume Yes.
+                 {
+                     viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, true, "Yes");
 
-            viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, isValid, value);
+                 }
+            }
+
+
+            
         }
 
 
@@ -3421,17 +3441,56 @@ end:
             currentPtr = all_settings_addr;
             for (int i = 0; i < (int)SettingsPageViewModel.Settings.SettingsMaxValue; i++)
             {
-                currentPtr += sizeof(int); // Skip the is valid - we don't update this
-                CRunTime.stringToCharPtr(viewModel.GetSettingsValue((SettingsPageViewModel.Settings)i), currentPtr);
-                string value = CRunTime.charPtrToString(currentPtr);
-                currentPtr += 40;
-            }
+                if (i < (int)SettingsPageViewModel.Settings.SettingsMaxCValue)
+                {
+                    currentPtr += sizeof(int); // Skip the is valid - we don't update this
+                    CRunTime.stringToCharPtr(viewModel.GetSettingsValue((SettingsPageViewModel.Settings)i), currentPtr);
+                    string value = CRunTime.charPtrToString(currentPtr);
+                    currentPtr += 40;
 
-            // And call the callback
-            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-                UIWorker.addUIEvent(on_save_callback, 0, 0, 0, 0, true);
-            });
+                    // And call the callback
+                    System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        UIWorker.addUIEvent(on_save_callback, 0, 0, 0, 0, true);
+                    });
+                }
+                // This is saved locally in isolated storage
+                else if (i > (int)SettingsPageViewModel.Settings.SettingsMaxCValue) 
+                {
+                    string propertyName = ((SettingsPageViewModel.Settings)i).ToString().Split('_')[1];
+                    if (!IsolatedStorageSettings.ApplicationSettings.Contains(propertyName))
+                    {
+                        IsolatedStorageSettings.ApplicationSettings.Add(propertyName, viewModel.GetSettingsValue((SettingsPageViewModel.Settings)i));
+                    }
+                    else
+                    {
+                        IsolatedStorageSettings.ApplicationSettings[propertyName]=viewModel.GetSettingsValue((SettingsPageViewModel.Settings)i);
+                    }
+                    IsolatedStorageSettings.ApplicationSettings.Save();
+
+                        
+                }
+
+                // After settings saved we need to update the app with new behaivour:
+
+                string isRotationEnabled;
+                bool rotationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableRotation", out isRotationEnabled);
+
+                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    // Do not rotate if user selected to avoid rotation.
+                    if (rotationSettingsExist && (isRotationEnabled == "No"))
+                    {
+                        GamePage.get().SupportedOrientations = SupportedPageOrientation.Portrait;
+                    }
+                    else
+                    {
+                        GamePage.get().SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+
+                    }
+                });
+
+            }
         };
 
         // And navigate to the dialog
