@@ -67,6 +67,12 @@ namespace WazeWP7
 
                 StreamResourceInfo sri = Application.GetResourceStream(localResourceFile);
 
+                if (sri == null)
+                {
+                    Logger.log("Local resource for language: " + language + " Not found.");
+                    return;
+                }
+
                 using (StreamReader sr = new StreamReader(sri.Stream))
                 {
 
@@ -75,8 +81,8 @@ namespace WazeWP7
                     {
                         string translationLine = sr.ReadLine();
 
-                        // Skip comment lines
-                        if (translationLine.StartsWith("#"))
+                        // Skip comment lines, or empty lines
+                        if (translationLine.StartsWith("#") || (translationLine.Length < 3))
                         {
                             continue;
                         }
@@ -99,9 +105,9 @@ namespace WazeWP7
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Logger.log("No local resource found for language: " + language);
+                Logger.log("Error loading local resource for language: " + language + " Exception: " + ex.ToString() );
 
             }
                        

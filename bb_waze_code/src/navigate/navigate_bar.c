@@ -807,7 +807,7 @@ static void navigate_bar_draw_street (const char *street) {
 
 
       	if (ssd_widget_rtl(NULL))
-      	   position.x = roadmap_canvas_width() - width - NavigatePanel->street_start - 20;
+      	   position.x = roadmap_canvas_width() - width - NavigatePanel->street_start - 40;
       	else
       	   position.x = 5;
 
