@@ -128,6 +128,9 @@
     <Compile Include="RTLMessageBox.xaml.cs">
       <DependentUpon>RTLMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectLanguagePage.xaml.cs">
+      <DependentUpon>SelectLanguagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SetjmpException.cs" />
     <Compile Include="SettingsPivotPage.xaml.cs">
       <DependentUpon>SettingsPivotPage.xaml</DependentUpon>
@@ -195,6 +198,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RTLMessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectLanguagePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

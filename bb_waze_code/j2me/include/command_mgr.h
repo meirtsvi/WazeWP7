@@ -26,11 +26,11 @@
 /* CommandMgr class (this is not in J2ME) */
 typedef int NOPH_CommandMgr_t;
 
-#define __NR_NOPH_CommandMgr_getInstance 211 /* command_mgr */
+#define __NR_NOPH_CommandMgr_getInstance 212 /* command_mgr */
 static inline _syscall0(NOPH_CommandMgr_t,NOPH_CommandMgr_getInstance) 
-#define __NR_NOPH_CommandMgr_addCommand 212 /* command_mgr */
+#define __NR_NOPH_CommandMgr_addCommand 213 /* command_mgr */
 static inline _syscall3(void,NOPH_CommandMgr_addCommand, NOPH_CommandMgr_t, cm, const char*, name, void*, callback) 
-#define __NR_NOPH_CommandMgr_setResultMem 213 /* command_mgr */
+#define __NR_NOPH_CommandMgr_setResultMem 214 /* command_mgr */
 static inline _syscall2(void,NOPH_CommandMgr_setResultMem, NOPH_CommandMgr_t, cm, int*, addr) 
 
 #endif /* !__COMMAND_MGR_H__ */

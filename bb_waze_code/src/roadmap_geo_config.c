@@ -50,6 +50,7 @@
 #ifdef IPHONE
 #include "iphone/roadmap_location.h"
 #endif //IPHONE
+#include <rimapi.h>
 
 #define SYSTEM_DEFAULT_ID ("-1")
 
@@ -295,6 +296,7 @@ static void on_recieved_completed (void) {
    roadmap_main_remove_periodic (GeoConfigTimer);
 
    roadmap_log (ROADMAP_DEBUG,"GeoServerConfig Completed setting all parameters!!" );
+   roadmap_log (ROADMAP_INFO, "GeoServerConfig: user_lang='%s' newServerId=%d", user_lang, newServerId );
 
    if ((user_lang[0] == 0) && (newServerId != 2)){
       roadmap_lang_download_conf_file(on_lang_conf_downloaded);
@@ -742,10 +744,30 @@ static void lang_loaded (void) {
 ////////////////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////////////
+static void lang_selected_new(void){
+   roadmap_main_remove_periodic(lang_selected_new);
+   ssd_progress_msg_dialog_show("Downloading language");
+}
+
+////////////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////
 static void lang_selected(void){
    roadmap_main_remove_periodic(lang_selected);
    ssd_dialog_hide ("Select Language Dialog", dec_ok);
    ssd_progress_msg_dialog_show("Downloading language");
+}
+
+////////////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////
+static int lang_callback_new (const char *value) 
+{
+    roadmap_log( ROADMAP_DEBUG, "New language selected: '%s'", value );
+    roadmap_lang_set_system_lang(value, lang_loaded);
+    roadmap_screen_redraw ();
+    roadmap_main_set_periodic (300, lang_selected_new);
+    return 1;
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -772,9 +794,13 @@ static void lang_dlg(void){
    SsdWidget dialog, container,box, text, space;
    int i;
    int       height = 45;
+   static char selected_lang[200];
    const void ** lang_values = roadmap_lang_get_available_langs_values();
    const char ** lang_labels = roadmap_lang_get_available_langs_labels();
    int lang_count = roadmap_lang_get_available_langs_count();
+   NOPH_SelectLanguageDialog_showDialog( lang_labels, lang_values, lang_count, selected_lang, lang_callback_new);
+   return;
+
 
    if ( roadmap_screen_is_hd_screen() )
    {

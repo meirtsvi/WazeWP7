@@ -24,13 +24,13 @@
 typedef int NOPH_Alert_t;
 typedef int NOPH_AlertType_t;
 
-#define __NR_NOPH_Alert_new 377 /* javax.microedition */
+#define __NR_NOPH_Alert_new 378 /* javax.microedition */
 static inline _syscall4(NOPH_Alert_t,NOPH_Alert_new, const char*, title, const char*, alertText, NOPH_Image_t, alertImage, NOPH_AlertType_t, alertType) 
 
-#define __NR_NOPH_Alert_setTimeout 378 /* javax.microedition */
+#define __NR_NOPH_Alert_setTimeout 379 /* javax.microedition */
 static inline _syscall2(void,NOPH_Alert_setTimeout, NOPH_Alert_t, alert, int, time) 
 
-#define __NR_NOPH_AlertType_get 379 /* javax.microedition */
+#define __NR_NOPH_AlertType_get 380 /* javax.microedition */
 static inline _syscall1(NOPH_AlertType_t,NOPH_AlertType_get, int, type) /* Not generated */
 
 #endif /* !__JAVAX__MICROEDITION__LCDUI_ALERT_H__ */

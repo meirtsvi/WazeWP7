@@ -19,9 +19,9 @@ extern "C" {
 
 typedef int NOPH_MIDlet_t;
 
-#define __NR_NOPH_MIDlet_get 375 /* javax.microedition */
+#define __NR_NOPH_MIDlet_get 376 /* javax.microedition */
 static inline _syscall0(NOPH_MIDlet_t,NOPH_MIDlet_get) /* Not generated */
-#define __NR_NOPH_MIDlet_platformRequest 376 /* javax.microedition */
+#define __NR_NOPH_MIDlet_platformRequest 377 /* javax.microedition */
 static inline _syscall2(bool_t,NOPH_MIDlet_platformRequest, NOPH_MIDlet_t, midlet, char*, URL) /* Throws */
 
 #if defined(__cplusplus)

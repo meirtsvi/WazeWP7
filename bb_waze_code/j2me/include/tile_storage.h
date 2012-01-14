@@ -26,18 +26,18 @@
 
 typedef int NOPH_TileStorage_t;
 
-#define __NR_NOPH_TileStorage_new 203 /* tile_storage */
+#define __NR_NOPH_TileStorage_new 204 /* tile_storage */
 static inline _syscall0(NOPH_TileStorage_t,NOPH_TileStorage_new) 
 
-#define __NR_NOPH_TileStorage_initialize 204 /* tile_storage */
+#define __NR_NOPH_TileStorage_initialize 205 /* tile_storage */
 static inline _syscall1(int,NOPH_TileStorage_initialize, NOPH_TileStorage_t, ts) 
-#define __NR_NOPH_TileStorage_findTile 205 /* tile_storage */
+#define __NR_NOPH_TileStorage_findTile 206 /* tile_storage */
 static inline _syscall4(int,NOPH_TileStorage_findTile, NOPH_TileStorage_t, ts, int, fips, int, tile_index, int*, size) 
-#define __NR_NOPH_TileStorage_loadTile 206 /* tile_storage */
+#define __NR_NOPH_TileStorage_loadTile 207 /* tile_storage */
 static inline _syscall5(int,NOPH_TileStorage_loadTile, NOPH_TileStorage_t, ts, int, fips, int, tile_index, int, store_id, void*, data) 
-#define __NR_NOPH_TileStorage_storeTile 207 /* tile_storage */
+#define __NR_NOPH_TileStorage_storeTile 208 /* tile_storage */
 static inline _syscall5(int,NOPH_TileStorage_storeTile, NOPH_TileStorage_t, ts, int, fips, int, tile_index, void*, data, int, size) 
-#define __NR_NOPH_TileStorage_shutdown 208 /* tile_storage */
+#define __NR_NOPH_TileStorage_shutdown 209 /* tile_storage */
 static inline _syscall1(int,NOPH_TileStorage_shutdown, NOPH_TileStorage_t, ts) 
 
 #endif /* !__TILE_STORAGE_H__ */
