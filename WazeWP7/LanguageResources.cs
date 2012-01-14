@@ -67,6 +67,11 @@ namespace WazeWP7
 
                 StreamResourceInfo sri = Application.GetResourceStream(localResourceFile);
 
+                if (sri == null)
+                {
+                    Logger.log("Local resource for language: " + language + "Not found.");
+                }
+
                 using (StreamReader sr = new StreamReader(sri.Stream))
                 {
 
