@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using System.Windows;
+using System.Windows.Resources;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Ink;
@@ -44,9 +46,65 @@ namespace WazeWP7
         public static LanguageResources LoadLanaguage(string lanaguage)
         {
             LanguageResources newInstance = new LanguageResources(lanaguage);
+            newInstance.InitFromLocalResource(lanaguage);
             Interlocked.Exchange<LanguageResources>(ref instance, newInstance);
             Interlocked.Exchange<string>(ref currentLanguage, lanaguage);
             return newInstance;
+        }
+
+        /// <summary>
+        /// Read translation data from local resources
+        /// </summary>
+        /// <param name="language">The language to load</param>
+        private void InitFromLocalResource(string language)
+        {
+
+            Uri localResourceFile = new Uri("/WazeWP7;component/resources/lang/" + string.Format("lang.{0}_j2me", language), UriKind.Relative);
+
+
+            try
+            {
+
+                StreamResourceInfo sri = Application.GetResourceStream(localResourceFile);
+
+                using (StreamReader sr = new StreamReader(sri.Stream))
+                {
+
+
+                    while (!sr.EndOfStream)
+                    {
+                        string translationLine = sr.ReadLine();
+
+                        // Skip comment lines
+                        if (translationLine.StartsWith("#"))
+                        {
+                            continue;
+                        }
+
+                        string[] transform = translationLine.Split('|');
+                        string key = transform[0];
+                        string value = transform[1];
+
+                        // If no translation - add it
+                        if (!translationDictionary.ContainsKey(key))
+                        {
+                            translationDictionary.Add(key, value);
+                        }
+                        else // Else Overwrite it
+                        {
+                            Logger.log("Translation override: " + translationLine);
+                            translationDictionary[key] = value;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                Logger.log("No local resource found for language: " + language);
+
+            }
+                       
         }
 
         #endregion
