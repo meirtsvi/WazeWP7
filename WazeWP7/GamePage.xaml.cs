@@ -380,28 +380,6 @@ namespace WazeWP7
                         int x = textString.x;
                         int y = textString.y;
 
-                        if (textString.angle == 0)
-                        {
-                            // Fix location of upper notification. for some reason the C code is sending x values that are outside the canvas...
-                            if (y == 67)
-                            {
-                                x -= 32;
-                            }
-
-                            // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
-                            if (
-                                ((y == 472) && GamePage.get().IsPhoneLandscape()) ||
-                                ((y == 792) && !GamePage.get().IsPhoneLandscape())
-                                )
-                            {
-                                x -= 37;
-                            }
-                        }
-                        else
-                        {
-                            // y -= 20;
-                        }
-
                         // Draw the string
                         try
                         {
@@ -567,8 +545,7 @@ namespace WazeWP7
         /// <summary>
         /// Refresh the graphics.
         /// Repaint the screen using the update graphic element list.
-        /// This is heavy as eache change in the MainGraphics children wil trigger dependencies code.
-        /// </summary>
+          /// </summary>
         /// <param name="list"></param>
         public void refresh(Canvas newGraphics)
         {
