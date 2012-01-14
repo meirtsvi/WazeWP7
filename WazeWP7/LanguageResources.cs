@@ -69,7 +69,7 @@ namespace WazeWP7
 
                 if (sri == null)
                 {
-                    Logger.log("Local resource for language: " + language + "Not found.");
+                    Logger.log("Local resource for language: " + language + " Not found.");
                     return;
                 }
 
@@ -81,8 +81,8 @@ namespace WazeWP7
                     {
                         string translationLine = sr.ReadLine();
 
-                        // Skip comment lines
-                        if (translationLine.StartsWith("#"))
+                        // Skip comment lines, or empty lines
+                        if (translationLine.StartsWith("#") || (translationLine.Length < 3))
                         {
                             continue;
                         }
