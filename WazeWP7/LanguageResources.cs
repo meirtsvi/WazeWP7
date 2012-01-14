@@ -99,9 +99,9 @@ namespace WazeWP7
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Logger.log("No local resource found for language: " + language);
+                Logger.log("Error loading local resource for language: " + language + " Exception: " + ex.ToString() );
 
             }
                        
