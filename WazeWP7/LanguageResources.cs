@@ -70,6 +70,7 @@ namespace WazeWP7
                 if (sri == null)
                 {
                     Logger.log("Local resource for language: " + language + "Not found.");
+                    return;
                 }
 
                 using (StreamReader sr = new StreamReader(sri.Stream))
