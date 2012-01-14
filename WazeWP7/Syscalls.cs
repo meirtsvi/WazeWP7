@@ -2798,11 +2798,11 @@ end:
     public static void NOPH_delete(int a0)
     {
         // todomt2 - avoid begininvoke still not running and noph_delete already called
-        if (CRunTime.objectRepository[a0] is BitmapImage)
+        if (CRunTime.objectRepository[a0] is Texture2D)
             return;
 
         // todomt2 when i will handle the above this will keep memory stable
-        if (CRunTime.objectRepository[a0] is BitmapImage)
+        if (CRunTime.objectRepository[a0] is Texture2D)
             bitmaps_info.Remove(a0);
 
         CRunTime.deRegisterObject(a0);
