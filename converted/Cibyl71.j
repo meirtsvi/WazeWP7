@@ -2249,9 +2249,9 @@ L_105fce4:
 	ldloc 7
 	sub
 	stloc 5
-// 0x0105fd2c: 0x105fd2c: addiu v0, v0, -20
+// 0x0105fd2c: 0x105fd2c: addiu v0, v0, -40
 	ldloc 5
-	ldc.i4.s -20
+	ldc.i4.s -40
 	add
 	stloc 5
 // 0x0105fd30: 0x105fd30: j	 0x105fd3c sw    v0, 44(sp)
