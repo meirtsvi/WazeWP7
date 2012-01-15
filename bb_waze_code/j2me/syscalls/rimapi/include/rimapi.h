@@ -239,5 +239,10 @@ void NOPH_LanguagesLoaded(int labels, int values, int count);
 void NOPH_PromptsLoaded(int labels, int values, int count);
 void NOPH_SettingsDialog_showDialog(int all_settings, int is_metric_system, int on_save_callback);
 
+//
+// Select language dialog
+//
+void NOPH_SelectLanguageDialog_showDialog(int languages_labels, int languages_values, int count, int selected_language_addr, int language_selected_callback);
+
 #endif// __RIMAPI_H__
 

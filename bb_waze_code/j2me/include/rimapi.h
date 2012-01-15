@@ -338,5 +338,11 @@ static inline _syscall3(void,NOPH_PromptsLoaded, int, labels, int, values, int, 
 #define __NR_NOPH_SettingsDialog_showDialog 163 /* rimapi */
 static inline _syscall3(void,NOPH_SettingsDialog_showDialog, int, all_settings, int, is_metric_system, int, on_save_callback) 
 
+//
+// Select language dialog
+//
+#define __NR_NOPH_SelectLanguageDialog_showDialog 164 /* rimapi */
+static inline _syscall5(void,NOPH_SelectLanguageDialog_showDialog, int, languages_labels, int, languages_values, int, count, int, selected_language_addr, int, language_selected_callback) 
+
 #endif// __RIMAPI_H__
 

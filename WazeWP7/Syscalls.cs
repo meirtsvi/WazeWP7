@@ -3525,5 +3525,44 @@ end:
 
     #endregion
 
+    #region SelectLanguagePage methods
+    public static void NOPH_SelectLanguageDialog_showDialog(int languages_labels_addr, int languages_values_addr, int count, int selected_language_addr, int language_selected_callback)
+    {
+        // Offset the array points
+        languages_labels_addr /= 4;
+        languages_values_addr /= 4;
+
+        // Convert to strings
+        SelectLanguagePageViewModel viewModel = new SelectLanguagePageViewModel();
+        for (int i = 0; i < count; ++i)
+        {
+            string label = CRunTime.charPtrToString(CRunTime.memory[languages_labels_addr + i]);
+            string value = CRunTime.charPtrToString(CRunTime.memory[languages_values_addr + i]);
+            viewModel.Languages.Add(label, value);
+        }
+
+        // Set the callback
+        viewModel.OnLanguageSelected += (sender, args) =>
+        {
+            // Save the result
+            CRunTime.stringToCharPtr(args.SelectedValue, selected_language_addr);
+
+            // And call the callback
+            System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                UIWorker.addUIEvent(language_selected_callback, selected_language_addr, 0, 0, 0, true);
+            });
+        };
+
+        // And navigate to the dialog
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
+            currentPage.NavigationService.Navigate<SelectLanguagePage>(viewModel);
+        });
+    }
+
+    #endregion
+
 }
 

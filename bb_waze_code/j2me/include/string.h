@@ -19,23 +19,23 @@ extern "C" {
 #include <stddef.h>
 
 /* GCC builtin functions */
-#define __NR___strcpy 192 /* ansi */
+#define __NR___strcpy 193 /* ansi */
 static inline _syscall2(char*,__strcpy, char*, dest, const char*, src) /* Not generated */
-#define __NR___strncpy 193 /* ansi */
+#define __NR___strncpy 194 /* ansi */
 static inline _syscall3(char*,__strncpy, char*, dest, const char*, src, size_t, n) /* Not generated */
-#define __NR___strcat 194 /* ansi */
+#define __NR___strcat 195 /* ansi */
 static inline _syscall2(char*,__strcat, char*, dest, const char*, src) /* Not generated */
-#define __NR___strncat 195 /* ansi */
+#define __NR___strncat 196 /* ansi */
 static inline _syscall3(char*,__strncat, char*, dest, const char*, src, size_t, n) /* Not generated */
-#define __NR___strcmp 196 /* ansi */
+#define __NR___strcmp 197 /* ansi */
 static inline _syscall2(int,__strcmp, const char*, s1, const char*, s2) /* Not generated */
-#define __NR___strncmp 197 /* ansi */
+#define __NR___strncmp 198 /* ansi */
 static inline _syscall3(int,__strncmp, const char*, s1, const char*, s2, size_t, n) /* Not generated */
-#define __NR___strlen 198 /* ansi */
+#define __NR___strlen 199 /* ansi */
 static inline _syscall1(size_t,__strlen, const char*, s) /* Not generated */
-#define __NR___memset 199 /* ansi */
+#define __NR___memset 200 /* ansi */
 static inline _syscall3(void*,__memset, void*, s, int, c, size_t, n) /* Not generated */
-#define __NR___memcmp 200 /* ansi */
+#define __NR___memcmp 201 /* ansi */
 static inline _syscall3(int,__memcmp, const void*, s1, const void*, s2, size_t, n) /* Not generated */
 
 /* These are not syscalls but implemented in ansi.c. They are here in
