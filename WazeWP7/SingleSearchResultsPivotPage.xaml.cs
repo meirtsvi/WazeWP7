@@ -50,6 +50,8 @@ namespace WazeWP7
             // Start with calling the base implementation
             base.OnNavigatedTo(e);
 
+            this.SupportedOrientations = GamePage.get().SupportedOrientations;
+
             // Set the page's state according to the context
             if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {

@@ -233,6 +233,9 @@
   <ItemGroup>
     <None Include="Resources\font.ttf" />
     <None Include="Resources\font_normal.ttf" />
+    <Resource Include="Resources\lang\lang.heb_j2me">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="waze_logo.png" />
     <Resource Include="waze.png" />
     <None Include="Properties\AppManifest.xml" />
@@ -719,6 +722,7 @@
     <Resource Include="Resources\menu_bg_top.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <None Include="en2he_online_trans.txt" />
     <Content Include="Resources\menu_icon.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

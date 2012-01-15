@@ -29,6 +29,8 @@ namespace WazeWP7
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+            this.SupportedOrientations = GamePage.get().SupportedOrientations;
+
             if (e.NavigationMode != System.Windows.Navigation.NavigationMode.Back)
             {
                 base.OnNavigatedTo(e);
@@ -115,9 +117,17 @@ namespace WazeWP7
             DataUsageSettings_DisplayNetworkMonitor,
             DataUsageSettings_DownloadTrafficInfo,
             #endregion
+            
+            SettingsMaxCValue, // Settings Enum beyond this one will be save by the C# code in the Isolated storage.
+                                // Previous settings are saved by the C code.
+
+            #region Other settings members
+            OtherSettings_EnableRotation,
+            #endregion
 
             SettingsMaxValue
         }
+
 
         public class ListViewModel
         {
@@ -381,6 +391,13 @@ namespace WazeWP7
 
         public SimpleToggleSwitchViewModel DisplayNetworkMonitor { get { return displayNetworkMonitor; } }
         public SimpleToggleSwitchViewModel DownloadTrafficInfo { get { return downloadTrafficInfo; } }
+        #endregion
+
+        #region Other Settings
+
+        private SimpleToggleSwitchViewModel enableRotation = new SimpleToggleSwitchViewModel("Enable Rotation");
+        public SimpleToggleSwitchViewModel EnableRotation { get { return enableRotation; } }
+
         #endregion
     }
 }
