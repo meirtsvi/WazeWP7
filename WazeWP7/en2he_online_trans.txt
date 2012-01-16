@@ -1,0 +1,2206 @@
+FREEMAP LOG: TRANSLATION: RTL:Yes
+FREEMAP LOG: TRANSLATION: lang:Hebrew
+FREEMAP LOG: TRANSLATION: Number:מספר
+FREEMAP LOG: TRANSLATION: Street:רחוב
+FREEMAP LOG: TRANSLATION: City:עיר
+FREEMAP LOG: TRANSLATION: Ok:אישור
+FREEMAP LOG: TRANSLATION: Cancel:ביטול
+FREEMAP LOG: TRANSLATION: Next:הבא
+FREEMAP LOG: TRANSLATION: Back:הקודם
+FREEMAP LOG: TRANSLATION: Address:כתובת
+FREEMAP LOG: TRANSLATION: Location:כתובת
+FREEMAP LOG: TRANSLATION: Search:נווט
+FREEMAP LOG: TRANSLATION: Drive to:נווט
+FREEMAP LOG: TRANSLATION: Drive_to:נווט
+FREEMAP LOG: TRANSLATION: Name:שם
+FREEMAP LOG: TRANSLATION: found:נמצאו
+FREEMAP LOG: TRANSLATION: .results:.תוצאות
+FREEMAP LOG: TRANSLATION: Done:אישור
+FREEMAP LOG: TRANSLATION: Address...:חפש כתובת
+FREEMAP LOG: TRANSLATION: Sync:עדכן מפה
+FREEMAP LOG: TRANSLATION: Detect GPS receiver:הגדרת GPS
+FREEMAP LOG: TRANSLATION: Preferences:אפשרויות
+FREEMAP LOG: TRANSLATION: Properties:פרטים
+FREEMAP LOG: TRANSLATION: Delete:מחק
+FREEMAP LOG: TRANSLATION: Navigate:נווט
+FREEMAP LOG: TRANSLATION: Set as Departure:קבע נקודת התחלה
+FREEMAP LOG: TRANSLATION: Set as Destination:קבע נקודת יעד
+FREEMAP LOG: TRANSLATION: Length:אורך
+FREEMAP LOG: TRANSLATION: Time:זמן
+FREEMAP LOG: TRANSLATION: meters:מטרים
+FREEMAP LOG: TRANSLATION: seconds:שניות
+FREEMAP LOG: TRANSLATION: Israel:ישראל
+FREEMAP LOG: TRANSLATION: County:ארץ
+FREEMAP LOG: TRANSLATION: State:מדינה
+FREEMAP LOG: TRANSLATION: From:מקור
+FREEMAP LOG: TRANSLATION: To:יעד
+FREEMAP LOG: TRANSLATION: Size:גודל
+FREEMAP LOG: TRANSLATION: Download:הורדה
+FREEMAP LOG: TRANSLATION: Status:מצב
+FREEMAP LOG: TRANSLATION: Warning:אזהרה
+FREEMAP LOG: TRANSLATION: Error:שגיאה
+FREEMAP LOG: TRANSLATION: Can't find a route.:לא ניתן לחשב מסלול אל היעד הרצוי עקב חוסר נתונים. אנא פנה לאתר הפרויקט ודווח על הבעיה. לחילופין ניתן לעדכן את הנתונים החסרים בממשק העדכון שבאתר.
+FREEMAP LOG: TRANSLATION: Route found:נמצא מסלול
+FREEMAP LOG: TRANSLATION: m:מ'
+FREEMAP LOG: TRANSLATION: km.:ק"מ
+FREEMAP LOG: TRANSLATION: kmh:קמ"ש
+FREEMAP LOG: TRANSLATION: minutes:דקות
+FREEMAP LOG: TRANSLATION: Can't find a road near departure point.:לא ניתן למצוא כביש ליד נקודת המוצא.
+FREEMAP LOG: TRANSLATION: Can't find a road near destination point.:לא ניתן למצוא כביש ליד נקודת היעד.
+FREEMAP LOG: TRANSLATION: Progress status:מסנכרן נתונים
+FREEMAP LOG: TRANSLATION: Preparing export data...:מכין מידע לייצוא...
+FREEMAP LOG: TRANSLATION: Uploading data...:שולח נתונים...
+FREEMAP LOG: TRANSLATION: Downloading new maps...:מקבל נתוני מפה...
+FREEMAP LOG: TRANSLATION: Update house number:עדכן מספר בית
+FREEMAP LOG: TRANSLATION: Force:שמור
+FREEMAP LOG: TRANSLATION: Show:הצג
+FREEMAP LOG: TRANSLATION: Can't find current street.:לא ניתן למצוא רחוב בנקודה הנוכחית.
+FREEMAP LOG: TRANSLATION: Type:סוג
+FREEMAP LOG: TRANSLATION: User note:הערת מפה
+FREEMAP LOG: TRANSLATION: Send to server:שלח לשרת
+FREEMAP LOG: TRANSLATION: Note:הערה
+FREEMAP LOG: TRANSLATION: Close:סגור
+FREEMAP LOG: TRANSLATION: Play:השמע
+FREEMAP LOG: TRANSLATION: Yes:כן
+FREEMAP LOG: TRANSLATION: No:לא
+FREEMAP LOG: TRANSLATION: The calculated route may have incorrect turn instructions.:המסלול שנמצא הינו משוער וייתכן שיש בו פניות שאינן אפשריות.
+FREEMAP LOG: TRANSLATION: Unable to provide route to destination. Taking you to nearest location.:מציג מסלול לנקודה המקושרת הקרובה ביותר ליעד.
+FREEMAP LOG: TRANSLATION: Showing route using alternative departure point.:מציג מסלול מנקודה קרובה ביותר שממנה ניתן לנווט.
+FREEMAP LOG: TRANSLATION: Estimated:משוער
+FREEMAP LOG: TRANSLATION: Left:שמאל
+FREEMAP LOG: TRANSLATION: Right:ימין
+FREEMAP LOG: TRANSLATION: Update left:עדכן צד שמאל
+FREEMAP LOG: TRANSLATION: Update right:עדכן צד ימין
+FREEMAP LOG: TRANSLATION: There are no markers.:אין הערות.
+FREEMAP LOG: TRANSLATION: Save:שמור
+FREEMAP LOG: TRANSLATION: No map available:לא ניתן למצוא מפה
+FREEMAP LOG: TRANSLATION: About:אודות
+FREEMAP LOG: TRANSLATION: General:כללי
+FREEMAP LOG: TRANSLATION: Info:מידע
+FREEMAP LOG: TRANSLATION: Road type:סוג הכביש
+FREEMAP LOG: TRANSLATION: Freeways:כביש מהיר
+FREEMAP LOG: TRANSLATION: Primary:בין עירוני
+FREEMAP LOG: TRANSLATION: Secondary:בין עירוני משני
+FREEMAP LOG: TRANSLATION: Ramps:מחלף
+FREEMAP LOG: TRANSLATION: Highways:רחוב ראשי
+FREEMAP LOG: TRANSLATION: Exit:יציאה לכביש ראשי
+FREEMAP LOG: TRANSLATION: Streets:רחוב משני
+FREEMAP LOG: TRANSLATION: Pedestrian:מדרחוב
+FREEMAP LOG: TRANSLATION: 4X4 Trails:דרך 4X4
+FREEMAP LOG: TRANSLATION: Trails:כביש עפר
+FREEMAP LOG: TRANSLATION: Walkway:טיילת
+FREEMAP LOG: TRANSLATION: Error downloading map update:עדכון המפה נכשל. אנא וודא שהמכשיר מחובר לרשת האינטרנט.
+FREEMAP LOG: TRANSLATION: No city with that name could be found:לא ניתן למצוא עיר בשם זה.
+FREEMAP LOG: TRANSLATION: No street with that name could be found:לא ניתן למצוא רחוב בשם זה.
+FREEMAP LOG: TRANSLATION: Address could not be found:הכתובת המבוקשת לא נמצאה
+FREEMAP LOG: TRANSLATION: House number was not found in that street. Please enter a valid house number, or erase the house number entry:מספר הבית לא נמצא ברחוב זה. אנא נסה מספר אחר או מחק את מספר הבית והמערכת תנווט אל אחד מקטעי הרחוב.
+FREEMAP LOG: TRANSLATION: Found GPS Receiver.:מכשיר ה-GPS נמצא.
+FREEMAP LOG: TRANSLATION: GPS already connected!:מכשיר ה-GPS מחובר!
+FREEMAP LOG: TRANSLATION: Running, please wait...:אנא המתן...
+FREEMAP LOG: TRANSLATION: Please wait...:אנא המתן...
+FREEMAP LOG: TRANSLATION: GPS Receiver not found. Make sure your receiver is connected and turned on.:מכשיר ה-GPS לא נמצא. בדוק שה-GPS מחובר ומופעל.
+FREEMAP LOG: TRANSLATION: Detect GPS:חפש GPS
+FREEMAP LOG: TRANSLATION: Setup wizard:אשף ההגדרות
+FREEMAP LOG: TRANSLATION: Welcome to Waze!:.ברוכים הבאים ל-Waze!
+FREEMAP LOG: TRANSLATION: .Enter your username if you registered one.:.אם נרשמת באתר מלא את הפרטים.
+FREEMAP LOG: TRANSLATION: .Otherwise leave these fields empty.:.אם לא נרשמת השאר את השדה ריק.
+FREEMAP LOG: TRANSLATION: Username:שם משתמש
+FREEMAP LOG: TRANSLATION: User name:שם משתמש
+FREEMAP LOG: TRANSLATION: Password:סיסמא
+FREEMAP LOG: TRANSLATION: RoadMap:Waze
+FREEMAP LOG: TRANSLATION: Main Menu:תפריט ראשי
+FREEMAP LOG: TRANSLATION: Traffic data:נתוני תנועה
+FREEMAP LOG: TRANSLATION: Speed:מהירות
+FREEMAP LOG: TRANSLATION: Traffic preferences:נתוני תנועה
+FREEMAP LOG: TRANSLATION: Use for calculating routes:חישוב מסלולי ניווט
+FREEMAP LOG: TRANSLATION: Display traffic information:הצג נתוני תנועה
+FREEMAP LOG: TRANSLATION: SPC:רווח
+FREEMAP LOG: TRANSLATION: Del:מחק
+FREEMAP LOG: TRANSLATION: SWCH:החלף
+FREEMAP LOG: TRANSLATION: Segment Properties:פרטים
+FREEMAP LOG: TRANSLATION: House number:מספר בית
+FREEMAP LOG: TRANSLATION: History:היסטוריה
+FREEMAP LOG: TRANSLATION: New address:כתובת חדשה
+FREEMAP LOG: TRANSLATION: Quit:יציאה
+FREEMAP LOG: TRANSLATION: GPS Position:הצג מיקום GPS
+FREEMAP LOG: TRANSLATION: Destination:הצג יעד
+FREEMAP LOG: TRANSLATION: Toggle view mode:2D/3D
+FREEMAP LOG: TRANSLATION: Toggle orientation mode:הצפן מפה
+FREEMAP LOG: TRANSLATION: Hold Map:עצור מפה
+FREEMAP LOG: TRANSLATION: Routing preferences:אפשרויות ניווט
+FREEMAP LOG: TRANSLATION: Use traffic statistics:השתמש בנתוני תנועה
+FREEMAP LOG: TRANSLATION: Fastest:מהיר ביותר
+FREEMAP LOG: TRANSLATION: Shortest:קצר ביותר
+FREEMAP LOG: TRANSLATION: Prefer same street:מינימום פניות
+FREEMAP LOG: TRANSLATION: Avoid highways:המנע מכבישים בין עירוניים
+FREEMAP LOG: TRANSLATION: Avoid unpaved:המנע מכבישי עפר
+FREEMAP LOG: TRANSLATION: Long unpaved:כבישים ארוכים
+FREEMAP LOG: TRANSLATION: Recalculate:חשב מחדש
+FREEMAP LOG: TRANSLATION: Speed cam:מצלמת מהירות
+FREEMAP LOG: TRANSLATION: Alerts Menu:תפריט דיווחים
+FREEMAP LOG: TRANSLATION: Description:פרטים
+FREEMAP LOG: TRANSLATION: Traps:מצלמות
+FREEMAP LOG: TRANSLATION: Speed Cam:מצלמות מהירות
+FREEMAP LOG: TRANSLATION: Dummy Speed Cam:מצלמות דמה
+FREEMAP LOG: TRANSLATION: Report a police:משטרה 
+FREEMAP LOG: TRANSLATION: Report an accident:תאונה
+FREEMAP LOG: TRANSLATION: Accident:תאונת דרכים
+FREEMAP LOG: TRANSLATION: Live Alert:דיווח חי
+FREEMAP LOG: TRANSLATION: Reported at:דווח בשעה
+FREEMAP LOG: TRANSLATION: by:ע"י
+FREEMAP LOG: TRANSLATION: Real Time Alerts:מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Real Time Alert:דיווח בזמן אמת
+FREEMAP LOG: TRANSLATION: alerts menu:שלח דיווחים 
+FREEMAP LOG: TRANSLATION: %d seconds ago:לפני %d שניות
+FREEMAP LOG: TRANSLATION: %d minutes ago:לפני %d דקות
+FREEMAP LOG: TRANSLATION: %2.1f hours ago:לפני %2.1f שעות
+FREEMAP LOG: TRANSLATION: %s %s Away:%s %s מהמיקום הנוכחי
+FREEMAP LOG: TRANSLATION: Scroll through alerts on the map:הצג את כל הדיווחים על המפה
+FREEMAP LOG: TRANSLATION: No Real Time Alerts:אין דיווחים בזמן אמת
+FREEMAP LOG: TRANSLATION: Sending report failed:שליחת הדיווח נכשלה
+FREEMAP LOG: TRANSLATION: Sending report failed. Please resend later:שליחת הדיווח נכשלה. אנא שלח שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Route calculation:חישוב מסלול
+FREEMAP LOG: TRANSLATION: Calculating route, please wait...:מחשב מסלול, אנא המתן...
+FREEMAP LOG: TRANSLATION: Recalculating route...:מחשב מסלול מחדש...
+FREEMAP LOG: TRANSLATION: Internal GPS:מקלט פנימי
+FREEMAP LOG: TRANSLATION: External GPS:מקלט חיצוני (BT)
+FREEMAP LOG: TRANSLATION: Auto zoom:זום אוטומטי
+FREEMAP LOG: TRANSLATION: Toggle GPS recording:הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Chit chat:פטפטת
+FREEMAP LOG: TRANSLATION: Navigation guidance:ניווט קולי
+FREEMAP LOG: TRANSLATION: Settings menu:הגדרות
+FREEMAP LOG: TRANSLATION: Select your car:הגדרות מכונית
+FREEMAP LOG: TRANSLATION: New accident on your route:יש תאונה על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: New Alert:דיווח חדש
+FREEMAP LOG: TRANSLATION: Login details:פרופיל
+FREEMAP LOG: TRANSLATION: Traffic jam:פקק תנועה
+FREEMAP LOG: TRANSLATION: Report a traffic jam on the opposite direction:דווח על פקק בכוון השני
+FREEMAP LOG: TRANSLATION: New traffic jam on your route:יש פקק על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: New incident on your route:יש דיווח חדש על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: Exit_key:ביטול
+FREEMAP LOG: TRANSLATION: Back_key:חזרה
+FREEMAP LOG: TRANSLATION: car_red.png:מכונית אדומה
+FREEMAP LOG: TRANSLATION: car_green.png:מכונית ירוקה
+FREEMAP LOG: TRANSLATION: car_yellow.png:מכונית צהובה
+FREEMAP LOG: TRANSLATION: car_blue.png:מכונית כחולה
+FREEMAP LOG: TRANSLATION: car_race.png:מכונית מרוץ
+FREEMAP LOG: TRANSLATION: red_ferrari.png:פרארי אדומה
+FREEMAP LOG: TRANSLATION: Arrow.png:חץ
+FREEMAP LOG: TRANSLATION: Additional Details:פרטים נוספים
+FREEMAP LOG: TRANSLATION: Comment:תגובה
+FREEMAP LOG: TRANSLATION: Sending comment failed:שליחת התגובה נכשלה
+FREEMAP LOG: TRANSLATION: Comments:תגובות
+FREEMAP LOG: TRANSLATION: Commented %d seconds ago:תגובה מלפני %d שניות
+FREEMAP LOG: TRANSLATION: Commented %d minutes ago:תגובה מלפני %d דקות
+FREEMAP LOG: TRANSLATION: Commented %2.1f hours ago:תגובה מלפני %2.1f שעות
+FREEMAP LOG: TRANSLATION: Real Time Alerts Comments:תגובות
+FREEMAP LOG: TRANSLATION: Add comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Exit?:לצאת?
+FREEMAP LOG: TRANSLATION: Exit Application:יציאה
+FREEMAP LOG: TRANSLATION: A newer version of Waze is available. Would you like to install the new version?:נמצאה גרסה חדשה של Waze. האם ברצונך לעדכן את התוכנה?
+FREEMAP LOG: TRANSLATION: Software Update:עדכון תוכנה
+FREEMAP LOG: TRANSLATION: Nickname:כינוי
+FREEMAP LOG: TRANSLATION: Delete History:מחיקה מהסטוריה
+FREEMAP LOG: TRANSLATION: Delete history entry:האם למחוק את:
+FREEMAP LOG: TRANSLATION: Delete Alert:ביטול דיווח
+FREEMAP LOG: TRANSLATION: Delete Alert::האם לבקש ביטול דיווח:
+FREEMAP LOG: TRANSLATION: Your request was sent to the server:בקשה נשלחה לשרת
+FREEMAP LOG: TRANSLATION: To destination:ליעד
+FREEMAP LOG: TRANSLATION: My direction:בצד שלי
+FREEMAP LOG: TRANSLATION: Opposite direction:בצד השני
+FREEMAP LOG: TRANSLATION: zoom:זום
+FREEMAP LOG: TRANSLATION: Toggle skin:יום/לילה
+FREEMAP LOG: TRANSLATION: rotate:סובב מפה
+FREEMAP LOG: TRANSLATION: Reported :דווח 
+FREEMAP LOG: TRANSLATION: Updated :עודכן 
+FREEMAP LOG: TRANSLATION: %s in the neighborhood of %s:%s באזור %s
+FREEMAP LOG: TRANSLATION: %s between %s and %s:%s מ%s עד %s
+FREEMAP LOG: TRANSLATION: Average speed %d %s:מהירות: %d %s
+FREEMAP LOG: TRANSLATION: Options:אפשרויות
+FREEMAP LOG: TRANSLATION: Auto Connection:חיבור אוטומטי
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_0:^ 0" 
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_1:.,1'?!"@
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_2:דהו2abc
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_3:אבג3def
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_4:מםנן4ghi
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_5:יכךל5jkl
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_6:זחט6mno
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_7:רשת7pqrs
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_8:צץק8tuv
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_9:סעפף9wxyz
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_*:*=/+-:
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_#:#
+FREEMAP LOG: TRANSLATION: All:הכל
+FREEMAP LOG: TRANSLATION: Traffic Jams:פקקים
+FREEMAP LOG: TRANSLATION: Roads Info:עומסים
+FREEMAP LOG: TRANSLATION: Chit Chats:פטפטת
+FREEMAP LOG: TRANSLATION: Accidents:תאונות
+FREEMAP LOG: TRANSLATION: Sort by recency:מיין לפי זמן
+FREEMAP LOG: TRANSLATION: Sort by proximity:מיין לפי מרחק
+FREEMAP LOG: TRANSLATION: View comments:הצג תגובות
+FREEMAP LOG: TRANSLATION: Show on map:הצג על המפה
+FREEMAP LOG: TRANSLATION: Erase from history:מחק מההיסטוריה
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove item from history?:האם למחוק מההיסטוריה?
+FREEMAP LOG: TRANSLATION: Back Light On:מסך מואר תמיד
+FREEMAP LOG: TRANSLATION: Volume Control:עוצמת צליל
+FREEMAP LOG: TRANSLATION: New Road Recording is ON. Please turn it off once you've finished recording a new road.:הקלטת כבישים חדשים מופעלת. אנא כבו אופציה זו בסיום הקלטת הכביש החדש.
+FREEMAP LOG: TRANSLATION: New Road Recording is now OFF:הקלטת כבישים חדשים הופסקה
+FREEMAP LOG: TRANSLATION: New roads:כבישים חדשים
+FREEMAP LOG: TRANSLATION: Record new roads:הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Search menu:נווט
+FREEMAP LOG: TRANSLATION: Recent searches:חיפושים אחרונים
+FREEMAP LOG: TRANSLATION: My favorites:המועדפים שלי
+FREEMAP LOG: TRANSLATION: Google local search:עסק או מקום בילוי
+FREEMAP LOG: TRANSLATION: Favorites:מועדפים
+FREEMAP LOG: TRANSLATION: poi:נקודות ענין
+FREEMAP LOG: TRANSLATION: Add to favorites:הוסף למועדפים
+FREEMAP LOG: TRANSLATION: Are you sure you want to Add item to favorites?:האם להוסיף למועדפים?
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove item from favorites?:האם למחוק מהמועדפים?
+FREEMAP LOG: TRANSLATION: Sort by name:מיין לפי שם
+FREEMAP LOG: TRANSLATION: Download requires large amount of data, continue?:הורדת המפה דורש תעבורת מידע גבוהה, להמשיך?
+FREEMAP LOG: TRANSLATION: Due to new traffic information, ETA is longer by:בעקבות עדכון בנתוני התנועה, זמן הנסיעה המשוער התארך ב-
+FREEMAP LOG: TRANSLATION: Due to new traffic information, ETA is shorter by:בעקבות עדכון בנתוני התנועה, זמן הנסיעה המשוער התקצר ב-
+FREEMAP LOG: TRANSLATION: Silent:שקט
+FREEMAP LOG: TRANSLATION: Low:נמוך
+FREEMAP LOG: TRANSLATION: Medium:בינוני
+FREEMAP LOG: TRANSLATION: High:גבוה
+FREEMAP LOG: TRANSLATION: Only when Driving in Major roads:רק בכבישים מהירים
+FREEMAP LOG: TRANSLATION: Only when I report or Comment:רק כאשר אני מדווח
+FREEMAP LOG: TRANSLATION: Everywhere:תמיד
+FREEMAP LOG: TRANSLATION: Never:אף פעם
+FREEMAP LOG: TRANSLATION: Privacy settings:פרטיות
+FREEMAP LOG: TRANSLATION: Display my location on waze mobile and web maps as follows::הצג את מיקומי על מפת וייז (בסלולרי ובמפת האתר) באופן הבא:
+FREEMAP LOG: TRANSLATION: Menu:תפריט
+FREEMAP LOG: TRANSLATION: Report:דווח
+FREEMAP LOG: TRANSLATION: Hide:הסתר
+FREEMAP LOG: TRANSLATION: Add Comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Me on map:הצג אותי
+FREEMAP LOG: TRANSLATION: Response:תגובה לדיווח
+FREEMAP LOG: TRANSLATION: Ignore:התעלם
+FREEMAP LOG: TRANSLATION: Reply:הגב
+FREEMAP LOG: TRANSLATION: Shortcuts:תפעול מפה
+FREEMAP LOG: TRANSLATION: Car:מכונית
+FREEMAP LOG: TRANSLATION: General settings:הגדרות כלליות
+FREEMAP LOG: TRANSLATION: Profile:פרופיל
+FREEMAP LOG: TRANSLATION: Address search:חיפוש כתובת
+FREEMAP LOG: TRANSLATION: Other city:עיר אחרת
+FREEMAP LOG: TRANSLATION: Edit:עדכן
+FREEMAP LOG: TRANSLATION: Stop navigation:הפסק ניווט
+FREEMAP LOG: TRANSLATION: Thank you!!!:תודה!!!
+FREEMAP LOG: TRANSLATION: Your report was sent to the community:הדיווח נשלח לחברי הקהילה
+FREEMAP LOG: TRANSLATION: Not there:בטל דיווח
+FREEMAP LOG: TRANSLATION: Report irrelevant:בטל דיווח
+FREEMAP LOG: TRANSLATION: Approaching:מתקרב ל
+FREEMAP LOG: TRANSLATION: Speed trap:מצלמת מהירות
+FREEMAP LOG: TRANSLATION: Anonymous:כמשתמש אנונימי
+FREEMAP LOG: TRANSLATION: Using my nickname:בשם הכינוי שלי
+FREEMAP LOG: TRANSLATION: When driving:כשאני נוהג
+FREEMAP LOG: TRANSLATION: When reporting:כשאני מדווח או מגיב
+FREEMAP LOG: TRANSLATION: anonymous:אנונימי
+FREEMAP LOG: TRANSLATION: Hazard:סכנה
+FREEMAP LOG: TRANSLATION: Don't show me:אל תציג אותי
+FREEMAP LOG: TRANSLATION: In:בעוד
+FREEMAP LOG: TRANSLATION: Message sent:ההודעה נשלחה
+FREEMAP LOG: TRANSLATION: Sending message failed:שליחת ההודעה נכשלה
+FREEMAP LOG: TRANSLATION: Recommend Waze to a friend:שלח לחבר
+FREEMAP LOG: TRANSLATION: Phone number:מספר טלפון
+FREEMAP LOG: TRANSLATION: View menu:תצוגה
+FREEMAP LOG: TRANSLATION: Commute view:תצוגת נסיעה
+FREEMAP LOG: TRANSLATION: Navigation view:תצוגת ניווט
+FREEMAP LOG: TRANSLATION: No GPS reception!:אין קליטת GPS!
+FREEMAP LOG: TRANSLATION: Help:עזרה
+FREEMAP LOG: TRANSLATION: Help menu:עזרה
+FREEMAP LOG: TRANSLATION: Help/Support:עזרה/תמיכה
+FREEMAP LOG: TRANSLATION: Please confirm that the following alert is not relevant::אנא אשר כי הדיווח אינו רלוונטי:
+FREEMAP LOG: TRANSLATION: To recommend to a friend, please enter their phone number. Send?:על מנת לשלוח את התוכנה אל חבר/ה, יש להקיש את המספר הסלולרי שלו/ה. האם להמשיך?
+FREEMAP LOG: TRANSLATION: Chat:הודעה
+FREEMAP LOG: TRANSLATION: Turn left:פנה שמאלה
+FREEMAP LOG: TRANSLATION: At the roundabout, turn left:בכיכר פנה שמאלה
+FREEMAP LOG: TRANSLATION: Keep left:צא שמאלה
+FREEMAP LOG: TRANSLATION: Turn right:פנה ימינה
+FREEMAP LOG: TRANSLATION: At the roundabout, turn right:בכיכר פנה ימינה
+FREEMAP LOG: TRANSLATION: Keep right:צא ימינה
+FREEMAP LOG: TRANSLATION: Approaching destination:ליעד
+FREEMAP LOG: TRANSLATION: continue straight:המשך ישר
+FREEMAP LOG: TRANSLATION: At the roundabout, continue straight:בכיכר המשך ישר
+FREEMAP LOG: TRANSLATION: At the roundabout, exit number:בכיכר צא ביציאה ה
+FREEMAP LOG: TRANSLATION: At the roundabout, exit:בכיכר צא
+FREEMAP LOG: TRANSLATION: At the roundabout, make a u turn:בכיכר בצע פניית פרסה
+FREEMAP LOG: TRANSLATION: to :ל
+FREEMAP LOG: TRANSLATION: in:עוד
+FREEMAP LOG: TRANSLATION: Navigation list:מסלול
+FREEMAP LOG: TRANSLATION: Continue:המשך
+FREEMAP LOG: TRANSLATION: Report a hazard condition:סכנה
+FREEMAP LOG: TRANSLATION: Report other:אחר
+FREEMAP LOG: TRANSLATION: alerts:דווח
+FREEMAP LOG: TRANSLATION: alerts_offline:דווח
+FREEMAP LOG: TRANSLATION: Update map:עדכון מפה
+FREEMAP LOG: TRANSLATION: Road construction:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Report road construction:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Offline data file is currupt: Re-Initializing data:קובץ נתוני העריכה משובש: מאתחל נתונים מחדש
+FREEMAP LOG: TRANSLATION: Route information:מידע חדש
+FREEMAP LOG: TRANSLATION: More:עוד
+FREEMAP LOG: TRANSLATION: Events:דיווחים
+FREEMAP LOG: TRANSLATION: Me_on_map:הצג אותי
+FREEMAP LOG: TRANSLATION: Measurement system:מערכת מדידה
+FREEMAP LOG: TRANSLATION: bored:משועמם
+FREEMAP LOG: TRANSLATION: happy:שמח
+FREEMAP LOG: TRANSLATION: mad:כועס
+FREEMAP LOG: TRANSLATION: sad:עצוב
+FREEMAP LOG: TRANSLATION: sleepy:עייף
+FREEMAP LOG: TRANSLATION: speedy:זריז
+FREEMAP LOG: TRANSLATION: starving:רעב
+FREEMAP LOG: TRANSLATION: Mood:מצב רוח
+FREEMAP LOG: TRANSLATION: Select your mood:הגדרת מצב רוח
+FREEMAP LOG: TRANSLATION: Near:באזור
+FREEMAP LOG: TRANSLATION: Come back in 30 sec:חזור בעוד 30 שניות
+FREEMAP LOG: TRANSLATION: Come back in 1 min:חזור בעוד דקה
+FREEMAP LOG: TRANSLATION: Remain in background:השאר ברקע
+FREEMAP LOG: TRANSLATION: Suspend Waze:השהה את WAZE
+FREEMAP LOG: TRANSLATION: Home:בית
+FREEMAP LOG: TRANSLATION: Work:עבודה
+FREEMAP LOG: TRANSLATION: home:בית
+FREEMAP LOG: TRANSLATION: work:עבודה
+FREEMAP LOG: TRANSLATION: map updates:עדכוני מפה
+FREEMAP LOG: TRANSLATION: Traffic:עומסים
+FREEMAP LOG: TRANSLATION: Add image:הוסף תמונה
+FREEMAP LOG: TRANSLATION: <Add description>:פרטים נוספים
+FREEMAP LOG: TRANSLATION: Note: Location and time saved:מיקום הדיווח נשמר
+FREEMAP LOG: TRANSLATION: Send:שלח
+FREEMAP LOG: TRANSLATION: www.waze.com:www.waze.co.il
+FREEMAP LOG: TRANSLATION: Add speed camera on your lane?:האם להוסיף מצלמת מהירות?
+FREEMAP LOG: TRANSLATION: UserName:שם משתמש
+FREEMAP LOG: TRANSLATION: TwitterUserName:שם משתמש
+FREEMAP LOG: TRANSLATION: TwitterPassword:סיסמא
+FREEMAP LOG: TRANSLATION: Display:תצוגה
+FREEMAP LOG: TRANSLATION: Less than %d%% battery remaining. Would you like to exit waze?:פחות מ %d%% מהסוללה נשארו. האם לצאת מ-waze?
+FREEMAP LOG: TRANSLATION: Saved locations:מקומות שמורים
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove saved location?:האם למחוק מקום שמור?
+FREEMAP LOG: TRANSLATION: Report map problem:טעות במפה
+FREEMAP LOG: TRANSLATION: Map error:טעות במפה
+FREEMAP LOG: TRANSLATION: Available parking:חניה
+FREEMAP LOG: TRANSLATION: Incorrect turn:פניה לא נכונה
+FREEMAP LOG: TRANSLATION: Incorrect address:כתובת לא נכונה
+FREEMAP LOG: TRANSLATION: Incorrect route:ניווט שגוי
+FREEMAP LOG: TRANSLATION: Missing roundabout:כיכר חסרה
+FREEMAP LOG: TRANSLATION: General map error:בעיה כללית
+FREEMAP LOG: TRANSLATION: Resume in 30 seconds:השהה ל 30 שניות
+FREEMAP LOG: TRANSLATION: Resume manually:השהה
+FREEMAP LOG: TRANSLATION: Add a comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Light traffic:עומס קל
+FREEMAP LOG: TRANSLATION: Moderate traffic:עומס בינוני
+FREEMAP LOG: TRANSLATION: Heavy traffic:עומס כבד
+FREEMAP LOG: TRANSLATION: Sending report . . . :שולח דיווח . . . 
+FREEMAP LOG: TRANSLATION: Searching . . . :מחפש . . .
+FREEMAP LOG: TRANSLATION: No network, unable to display live data:אין חיבור לרשת, לא ניתן להציג מידע עדכני
+FREEMAP LOG: TRANSLATION: smart.png:סמארט
+FREEMAP LOG: TRANSLATION: SUV.png:4X4
+FREEMAP LOG: TRANSLATION: taxi.png:מונית
+FREEMAP LOG: TRANSLATION: car_gray.png:מכונית אפורה
+FREEMAP LOG: TRANSLATION: beetle.png:חיפושית
+FREEMAP LOG: TRANSLATION: Approaching %N, %C|Approaching %N:מתקרב ל-%N, %C|מתקרב ל- %N
+FREEMAP LOG: TRANSLATION: No network connection, unable to report:אין חיבור רשת, לא ניתן לדווח
+FREEMAP LOG: TRANSLATION: Save location:שמירת מיקום
+FREEMAP LOG: TRANSLATION: Would you like to add  (%s %s, %s) to Saved Locations?:האם לשמור כתובת  (%s %s ,%s)  במקומות שמורים?
+FREEMAP LOG: TRANSLATION: There is no network connection.Updating your twitter account details failed.:יש צורך בחיבוריות לרשת על מנת לעדכן את פרטי המשתמש של טוייטר. אנא בדוק חיבוריות לרשת
+FREEMAP LOG: TRANSLATION: Updating your twitter account details failed. Please ensure you entered the correct user name and password:עדכון פרטי משתמש טוייטר נכשל. אנא בדקו אם הקלדתם נכון את שם המשתמש והסיסמא
+FREEMAP LOG: TRANSLATION: Your report was successfully send to wazers in your area:הדווח נשלח בהצלחה לוייזרים בסביבתך
+FREEMAP LOG: TRANSLATION: No GPS connection. Make sure you are outdoors. Currently showing approximate location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: No GPS, unable to determine location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: Search requires internet connection.:חיפוש מצריך חיבוריות לאינטרנט.
+FREEMAP LOG: TRANSLATION: Please make sure you are connected.:אנא ודא כי הנך מחובר.
+FREEMAP LOG: TRANSLATION: No matches found for this search.:לא נמצאו תוצאות עבור חיפוש זה. 
+FREEMAP LOG: TRANSLATION: Please check spelling, or add more information:אנא ודא שהקלדת את הכתובת במלואה
+FREEMAP LOG: TRANSLATION: Change of username and password should be done on www.waze.com, and only then entered here. Continue?:. שינוי שם משתמש וסיסמא צריכים להתבצע באתר ב  www.waze.co.il  ורק לאחר מכן כאן.להמשיך?
+FREEMAP LOG: TRANSLATION: Show points ticker:הצג סרגל ניקוד
+FREEMAP LOG: TRANSLATION: Hmm... the map data may be insufficient to provide a valid or optimal route, but Waze learns quickly...:אהם... נתוני המפה אינם מספקים מסלול מאומת או מיטבי, אבל Waze לומד מהר...
+FREEMAP LOG: TRANSLATION: Teach Waze:לא תודה
+FREEMAP LOG: TRANSLATION: Try route:נסה בכל זאת
+FREEMAP LOG: TRANSLATION: The service failed to provide a valid route (This may be a bug).:הניווט ליעד נכשל (ייתכן שיש באג)
+FREEMAP LOG: TRANSLATION: Login details are missing:פרטי משתמש חסרים
+FREEMAP LOG: TRANSLATION: Please enter your Username and Password:אנא הזן שם וסיסמא
+FREEMAP LOG: TRANSLATION: Login Failed: Wrong login details:תהליך אימות פרטי המשתמש נכשל
+FREEMAP LOG: TRANSLATION: Please verify login details are accurate:אנא ודא כי פרטי המשתמש נכונים
+FREEMAP LOG: TRANSLATION: Routing service timed out:לא התקבלה תוצאת ניווט בזמן הקצוב
+FREEMAP LOG: TRANSLATION: Log In:כניסה
+FREEMAP LOG: TRANSLATION: Signing in . . . :מתחבר . . . 
+FREEMAP LOG: TRANSLATION: Downloading . . . :מוריד תמונה . . . 
+FREEMAP LOG: TRANSLATION: View image:הצג תמונה
+FREEMAP LOG: TRANSLATION: Traffic jams:עומסים
+FREEMAP LOG: TRANSLATION: Traffic detected:המערכת מזהה פקק
+FREEMAP LOG: TRANSLATION: Are you experiencing traffic?:האם לדווח על נסיעה בפקק?
+FREEMAP LOG: TRANSLATION: Your phone's GPS is  turned OFF:מערכת GPS במכשיר לא זמינה
+FREEMAP LOG: TRANSLATION: Waze requires GPS connection. Please turn on your GPS from Menu > Settings > Security & Location > Enable GPS satellites:תוכנת Waze צריכה חיבור GPS. אנא הפעל חיבור GPS דרך < Menu Settings > Security & Location > Enable GPS satellites
+FREEMAP LOG: TRANSLATION: Retype password:חזור על הסיסמא
+FREEMAP LOG: TRANSLATION: Desired Username:בחר שם משתמש
+FREEMAP LOG: TRANSLATION: Desired password:בחר סיסמא
+FREEMAP LOG: TRANSLATION: Email Address:דוא"ל
+FREEMAP LOG: TRANSLATION: Email:דוא"ל
+FREEMAP LOG: TRANSLATION: New Account:חשבון חדש
+FREEMAP LOG: TRANSLATION: Create Account:צור חשבון
+FREEMAP LOG: TRANSLATION: Sign up:צור חשבון
+FREEMAP LOG: TRANSLATION: Password must be between 6 and 16 characters and may contain only alpha characters and digits:סיסמא חייבת לכלול בין 6 ל 16 סימנים שחייבים להיות אותיות לועזיות ו/או ספרות
+FREEMAP LOG: TRANSLATION: Two passwords are not identical:שתי הסיסמאות שהוקלדו אינן תואמות
+FREEMAP LOG: TRANSLATION: Invalid email address:כתובת דוא"ל לא חוקית
+FREEMAP LOG: TRANSLATION: Username must start with alpha characters and may contain only alpha characters, digits and '-':שם משתמש חייב להתחיל באות לטינית, להכיל רק אותיות לטיניות וספרות ואת הסימן '-' (ללא רווחים)
+FREEMAP LOG: TRANSLATION: Automatic night mode:מצב לילה אוטומטי
+FREEMAP LOG: TRANSLATION: username already exists:שם משתמש זה כבר קיים במערכת
+FREEMAP LOG: TRANSLATION: Invalid password:סיסמא לא חוקית
+FREEMAP LOG: TRANSLATION: Invalid username:שם משתמש אינו חוקי
+FREEMAP LOG: TRANSLATION: Failed to create account, please try again:לא ניתן ליצר כרגע חשבון. אנא נסה מאוחר יותר
+FREEMAP LOG: TRANSLATION: Failed to update account, please try again:לא ניתן לעדכן כרגע חשבון. אנא נסה מאוחר יותר
+FREEMAP LOG: TRANSLATION: Email address already exist:כתובת דוא"ל כבר מופיעה במערכת
+FREEMAP LOG: TRANSLATION: You must have a valid username and password.:אנא הזן שם וסיסמא.
+FREEMAP LOG: TRANSLATION: Haven't got an account yet?:אין לך עדיין חשבון?
+FREEMAP LOG: TRANSLATION: Username is empty:בחר שם משתמש
+FREEMAP LOG: TRANSLATION: Route preference:העדף מסלול
+FREEMAP LOG: TRANSLATION: Minimize turns:מזער מספר פניות
+FREEMAP LOG: TRANSLATION: Dirt roads:כבישי עפר
+FREEMAP LOG: TRANSLATION: Allow:כן
+FREEMAP LOG: TRANSLATION: Don't allow:המנע
+FREEMAP LOG: TRANSLATION: Avoid long ones:המנע מארוכים
+FREEMAP LOG: TRANSLATION: Avoid toll roads:המנע מכבישי אגרה
+FREEMAP LOG: TRANSLATION: Confirm password:אישור סיסמא
+FREEMAP LOG: TRANSLATION: Welcome to waze.:ברוך הבא ל waze.
+FREEMAP LOG: TRANSLATION: Please create an account :אנא צור חשבון
+FREEMAP LOG: TRANSLATION: Already have one? :כבר יש לך?
+FREEMAP LOG: TRANSLATION: Sign In:כניסה
+FREEMAP LOG: TRANSLATION: Create your account:יצירת חשבון חדש
+FREEMAP LOG: TRANSLATION: There are no saved addresses:אין כתובות שמורות
+FREEMAP LOG: TRANSLATION: Total:סה"כ
+FREEMAP LOG: TRANSLATION: Rank:דירוג
+FREEMAP LOG: TRANSLATION: Map problems are fixed by wazers like you. you can edit the map too on www.waze.com:בעיות מפה מתוקנות ע"י קהילת הנהגים. גם אתה יוכל לתקן ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: Thanks for reporting:תודה
+FREEMAP LOG: TRANSLATION: Navigation was discontinued before reaching destination. Would you like to resume last route?:נווט הופסק לפני ההגעה ליעד. האם להמשיך בנווט?
+FREEMAP LOG: TRANSLATION: Resume navigation:המשך ניווט
+FREEMAP LOG: TRANSLATION: Accept:אשר
+FREEMAP LOG: TRANSLATION: Decline:בטל
+FREEMAP LOG: TRANSLATION: Typing is disabled when driving.:לא ניתן להקליד בנסיעה.
+FREEMAP LOG: TRANSLATION: You can minimize the 'Report' screen and type later:הינך יכול להקטין את חלון הדיווח ולהקליד מאוחר יותר
+FREEMAP LOG: TRANSLATION: Hi there!:שלום!
+FREEMAP LOG: TRANSLATION: Add red light camera on your lane?:האם להוסיף מצלמת רמזור?
+FREEMAP LOG: TRANSLATION: Red light cam:מצלמת רמזור
+FREEMAP LOG: TRANSLATION: If you already have an account choose existing, otherwise choose new:אם יש לך חשבון בחר קיים אחרת בחר חדש
+FREEMAP LOG: TRANSLATION: New:חדש
+FREEMAP LOG: TRANSLATION: Existing:קיים
+FREEMAP LOG: TRANSLATION: Welcome:ברוך הבא
+FREEMAP LOG: TRANSLATION: NEW user:משתמש חדש
+FREEMAP LOG: TRANSLATION: EXISTING user:משתמש קיים
+FREEMAP LOG: TRANSLATION: You can personalize your account from Settings->profile:ניתן ליצור חשבון אישי בשלב מאוחר יותר דרך  אפשרויות > פרופיל
+FREEMAP LOG: TRANSLATION: Personalize your account:צור חשבון אישי
+FREEMAP LOG: TRANSLATION: You are signed-in with a randomly generated login:הנך רשום במערכת כמשתמש זמני. 
+FREEMAP LOG: TRANSLATION: To easily access your web account, send road tweets and more, personalize your account now:לגישה נוחה לחשבון ולשירותים נוספים צור חשבון אישי.
+FREEMAP LOG: TRANSLATION: Skip:לא עכשיו
+FREEMAP LOG: TRANSLATION: Not now:לא עכשיו
+FREEMAP LOG: TRANSLATION: Personalize:המשך
+FREEMAP LOG: TRANSLATION: Send me updates:שלחו לי עדכונים
+FREEMAP LOG: TRANSLATION: Enter twitter details:פרטי חשבון טוויטר
+FREEMAP LOG: TRANSLATION: Your account has been updated:חשבונך עודכן בהצלחה!
+FREEMAP LOG: TRANSLATION: Way to go!:כל הכבוד!
+FREEMAP LOG: TRANSLATION: Tweet your road reports:דווחי התנועה שלך ישלחו גם לחבריך בטוויטר
+FREEMAP LOG: TRANSLATION: Update your account:עדכון פרטי חשבון
+FREEMAP LOG: TRANSLATION: Complete standstill:עומס כבד מאוד
+FREEMAP LOG: TRANSLATION: Seems you've gotten off the route:נראה שסטית מהמסלול המוצע
+FREEMAP LOG: TRANSLATION: Get Started:התחל
+FREEMAP LOG: TRANSLATION: Save address as::שמור כתובת בשם
+FREEMAP LOG: TRANSLATION: Finish:סיים
+FREEMAP LOG: TRANSLATION: Failed to Communicate with Routing Server:התקשורת עם שרת הניווט נכשלה
+FREEMAP LOG: TRANSLATION: cool:מגניב
+FREEMAP LOG: TRANSLATION: inlove:מאוהב
+FREEMAP LOG: TRANSLATION: peaceful:.שנטי
+FREEMAP LOG: TRANSLATION: singing:שר
+FREEMAP LOG: TRANSLATION: wondering:מהרהר
+FREEMAP LOG: TRANSLATION: LOL:צוחק
+FREEMAP LOG: TRANSLATION: LOL-female:צוחקת
+FREEMAP LOG: TRANSLATION: bored-female:משועממת
+FREEMAP LOG: TRANSLATION: happy-female:שמחה
+FREEMAP LOG: TRANSLATION: mad-female:כועסת
+FREEMAP LOG: TRANSLATION: sad-female:עצובה
+FREEMAP LOG: TRANSLATION: sleepy-female:עייפה
+FREEMAP LOG: TRANSLATION: speedy-female:זריזה
+FREEMAP LOG: TRANSLATION: starving-female:רעבה
+FREEMAP LOG: TRANSLATION: cool-female:מגניבה
+FREEMAP LOG: TRANSLATION: inlove-female:מאוהבת
+FREEMAP LOG: TRANSLATION: peaceful-female:שנטי
+FREEMAP LOG: TRANSLATION: singing-female:שרה
+FREEMAP LOG: TRANSLATION: wondering-female:מהרהרת
+FREEMAP LOG: TRANSLATION: Local search:נקודות עניין
+FREEMAP LOG: TRANSLATION: Local search results:תוצאות חיפוש
+FREEMAP LOG: TRANSLATION: Downloading:מוריד את
+FREEMAP LOG: TRANSLATION: Map Download Complete:הורדת המפה הסתיימה
+FREEMAP LOG: TRANSLATION: Please restart Waze:אנא אתחל את Waze
+FREEMAP LOG: TRANSLATION: Map Download Failed -- Not Enough Space:הורדת המפה נכשלה -- אין מספיק מקום פנוי
+FREEMAP LOG: TRANSLATION: Map Download Failed:הורדת המפה נכשלה
+FREEMAP LOG: TRANSLATION: map::מפה:
+FREEMAP LOG: TRANSLATION: Map Download:הורדת מפה
+FREEMAP LOG: TRANSLATION: Updating Files, Please Wait...:מעדכן קבצים, נא להמתין...
+FREEMAP LOG: TRANSLATION: No results found:לא נמצאו תוצאות
+FREEMAP LOG: TRANSLATION: Search location:חיפוש מקום
+FREEMAP LOG: TRANSLATION: Road report:דווח לקהילה
+FREEMAP LOG: TRANSLATION: Event comment:מענה לדווח
+FREEMAP LOG: TRANSLATION: Prompt response:אישור עומס 
+FREEMAP LOG: TRANSLATION: Road munching:אישרור כביש
+FREEMAP LOG: TRANSLATION: Traffic detection:דווח פסיבי: פקק 
+FREEMAP LOG: TRANSLATION: New points:נקודות חדשות
+FREEMAP LOG: TRANSLATION: hr.:ש'
+FREEMAP LOG: TRANSLATION: Updating Map Tiles...:מעדכן רכיבי מפה...
+FREEMAP LOG: TRANSLATION: Send logs:שלח קבצי לוג
+FREEMAP LOG: TRANSLATION: Your Points (updated once a day):הנקודות שלך (מתעדכן פעם ביום)
+FREEMAP LOG: TRANSLATION: Watch the guided tour:צפה בסיור המודרך
+FREEMAP LOG: TRANSLATION: Submit logs:שליחת קבצי לוג
+FREEMAP LOG: TRANSLATION: Sending logs requires large amount of data, continue?:שליחת קבצים דורשת תעבורת מידע גבוהה, להמשיך?
+FREEMAP LOG: TRANSLATION: We seem to have encountered a bug. Help us improve by sending us an error report.:נתקלנו בתקלה. עזור לנו להשתפר ע"י שליחת דו"ח שגיאה
+FREEMAP LOG: TRANSLATION: No GPS reception:אין קליטת ג'י פי אס.
+FREEMAP LOG: TRANSLATION: Make sure you are outdoors. Currently showing approximate location using cell ID.:אנא וודא שהנך במקום פתוח. מיקומך מוצג באופן לא מדוייק.
+FREEMAP LOG: TRANSLATION: Poor GPS reception:קליטת ג'י פי אס חלקית
+FREEMAP LOG: TRANSLATION: Make sure you are outdoors.:אנא וודא שהנך במקום פתוח.
+FREEMAP LOG: TRANSLATION: Good GPS reception:קליטת ג'י.פי.אס טובה
+FREEMAP LOG: TRANSLATION: No network connection:אין חיבור רשת
+FREEMAP LOG: TRANSLATION: Functionality and navigation may be impaired.:השירות יתפקד באופן חלקי.
+FREEMAP LOG: TRANSLATION: Connected to network:מחובר לרשת
+FREEMAP LOG: TRANSLATION: You are connected to waze.:הינך מחובר ל Waze.
+FREEMAP LOG: TRANSLATION: map77001.wzm:מפת ישראל
+FREEMAP LOG: TRANSLATION: Already have a login?  :כבר יש לך שם משתמש?
+FREEMAP LOG: TRANSLATION: Sign in:כניסה
+FREEMAP LOG: TRANSLATION: Couldn't find the address I wanted. Notify waze.:לא מצאתי את הכתובת הנכונה. הודע לwaze.
+FREEMAP LOG: TRANSLATION: Sending address search info...:שולח...
+FREEMAP LOG: TRANSLATION: Seeking GPS. Try going outdoors...:מחפש לוויני GPS. וודא שהנך במקום פתוח   
+FREEMAP LOG: TRANSLATION: Searching network . . .    :מנסה להתחבר לרשת . . .
+FREEMAP LOG: TRANSLATION: Sorry, only registered users can record new roads. Go to Settings > Profile to register.:הקלטת כבישים חדשים יכולה להיעשות רק על ידי משתמשים רשומים. אנא הרשם באפשרויות -  פרופיל 
+FREEMAP LOG: TRANSLATION: Display map controls on tap:הצג מכווני מפה עם נגיעה במסך 
+FREEMAP LOG: TRANSLATION: Road successfully recorded.  A link to edit it will be sent to your email and to you Dashboard on www.waze.com. (May take 24 hrs.):הכביש הוקלט בהצלחה. קישור לעריכת הכביש יופיע בדשבורד (עשוי לקחת כ 24 שעות)
+FREEMAP LOG: TRANSLATION: My mood:מצב הרוח שלי
+FREEMAP LOG: TRANSLATION: More characters are needed to perform a search:דרושות יותר אותיות לביצוע חיפוש
+FREEMAP LOG: TRANSLATION: Resolve Address:חיפוש כתובת
+FREEMAP LOG: TRANSLATION: String could not be resolved to a valid address:לא נמצאו תוצאות
+FREEMAP LOG: TRANSLATION: Logs submitted successfully to waze:קבצי לוג נשלחו בהצלחה לwaze
+FREEMAP LOG: TRANSLATION: Can't find alert position.:לא נמצא מקום הדיווח
+FREEMAP LOG: TRANSLATION: ETA Update:עדכון זמן הגעה
+FREEMAP LOG: TRANSLATION: Due to change in traffic conditions ETA was updated:עקב שינוי במצב התנועה זמן ההגעה המשוער עודכן
+FREEMAP LOG: TRANSLATION: Shortest Route:הסלול המהיר ביותר
+FREEMAP LOG: TRANSLATION: Your routes::המסלולים שלך:
+FREEMAP LOG: TRANSLATION: Don't ask me again:אל תשאל אותי שוב
+FREEMAP LOG: TRANSLATION: Would you like to see the fastest route to::האם תרצה לראות את הדרך המהירה ביותר ל:
+FREEMAP LOG: TRANSLATION: pt.:נק'
+FREEMAP LOG: TRANSLATION: Joined:הצטרף
+FREEMAP LOG: TRANSLATION: %d days ago:לפני %d ימים
+FREEMAP LOG: TRANSLATION: %d months ago:לפני %d חודשים
+FREEMAP LOG: TRANSLATION: one month ago:לפני חודש
+FREEMAP LOG: TRANSLATION: %d years ago:לפני %d שנים
+FREEMAP LOG: TRANSLATION: one year ago:לפני שנה
+FREEMAP LOG: TRANSLATION: Missing road:דרך חסרה
+FREEMAP LOG: TRANSLATION: Map:מפה
+FREEMAP LOG: TRANSLATION: Show wazers on map:הצג משתמשים על המפה 
+FREEMAP LOG: TRANSLATION: Show user reports on map:הצג דווחים על המפה 
+FREEMAP LOG: TRANSLATION: Show traffic jams:הצג פקקים על המפה
+FREEMAP LOG: TRANSLATION: Display house numbers:הצג מספרי בתים 
+FREEMAP LOG: TRANSLATION: Show map problems:הצג בעיות מפה 
+FREEMAP LOG: TRANSLATION: Space:רווח
+FREEMAP LOG: TRANSLATION: Recording new roads::כבישים חדשים:
+FREEMAP LOG: TRANSLATION: satellites:לווינים
+FREEMAP LOG: TRANSLATION: Display top bar on tap:הצג סרגל עליון עם נגיעה במסך
+FREEMAP LOG: TRANSLATION: Use native keyboard:השתמש במקלדת של המכשיר
+FREEMAP LOG: TRANSLATION: Route Update:עדכון מסלול
+FREEMAP LOG: TRANSLATION: Map Update:עדכון מפה
+FREEMAP LOG: TRANSLATION: Recalculating route due to traffic updates:מחשב מסלול מחדש בעקבות שינויים במצב התנועה
+FREEMAP LOG: TRANSLATION: Recalculating route due to map updates:מחשב מסלול מחדש בעקבות שינויים במפה
+FREEMAP LOG: TRANSLATION: Current ETA::זמן נסיעה משוער במסלול הנוכחי
+FREEMAP LOG: TRANSLATION: Expected New ETA::זמן נסיעה צפוי במסלול החדש
+FREEMAP LOG: TRANSLATION: New Geo-Reminder:תזכורת חדשה
+FREEMAP LOG: TRANSLATION: Add Geo-Reminder:הוסף תזכורת
+FREEMAP LOG: TRANSLATION: Title:כותרת
+FREEMAP LOG: TRANSLATION: Distance to alert:מרחק לתזכורת
+FREEMAP LOG: TRANSLATION: Repeat reminder:תזכורת חוזרת
+FREEMAP LOG: TRANSLATION: Once:פעם אחת
+FREEMAP LOG: TRANSLATION: Every time:בכל פעם
+FREEMAP LOG: TRANSLATION: Distance to remind: %.1f %s:מרחק לתזכורת: %.1f %s
+FREEMAP LOG: TRANSLATION: Distance:::מרחק
+FREEMAP LOG: TRANSLATION: Geo-Reminders:תזכורות
+FREEMAP LOG: TRANSLATION: Reminder:תזכורת
+FREEMAP LOG: TRANSLATION: Reminder saved:התזכורת נשמרה
+FREEMAP LOG: TRANSLATION: Are you sure you want to delete reminder?:האם למחוק תזכורת?
+FREEMAP LOG: TRANSLATION: Avoid areas under Palestinian authority supervision:המנע משטחי הרשות הפלסטינית 
+FREEMAP LOG: TRANSLATION: Wazers:משתמשים אחרים
+FREEMAP LOG: TRANSLATION: Speed cams:מצלמות מהירות
+FREEMAP LOG: TRANSLATION: Hazards:סכנות בכביש
+FREEMAP LOG: TRANSLATION: Data Usage:צריכת נתונים
+FREEMAP LOG: TRANSLATION: Download map of my area:הורד מפה
+FREEMAP LOG: TRANSLATION: Download traffic info:הורד מידע תנועה בזמן אמת 
+FREEMAP LOG: TRANSLATION: Reduce data usage::צמצם צריכת נתונים:
+FREEMAP LOG: TRANSLATION: General map settings:הגדרות מפה כלליות
+FREEMAP LOG: TRANSLATION: Terms of use:תנאי שימוש
+FREEMAP LOG: TRANSLATION: * Changes won't affect routing. Your route is always calculated based on real-time traffic conditions.:* ביטול 'הורדת מידע בזמן אמת' לא ישפיע על חישוב המסלול. חישוב המסלול מבוסס תמיד על מצב התנועה בזמן אמת
+FREEMAP LOG: TRANSLATION: * Traffic and updates will not be seen on the map if you disable their download.:* פקקים ועדכונים לא יופיעו על המפה אם תבחר שלא להוריד מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Note::שים לב:
+FREEMAP LOG: TRANSLATION: Road constructions:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Stop recording roads:הפסק הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Traffic layer (color coded):עומסים (חומרה ע"פ צבע)
+FREEMAP LOG: TRANSLATION: Police traps:משטרה
+FREEMAP LOG: TRANSLATION: Police trap:משטרה
+FREEMAP LOG: TRANSLATION: Police:משטרה
+FREEMAP LOG: TRANSLATION: Traffic jams :דיווחי פקקים
+FREEMAP LOG: TRANSLATION: GPS already connected.:אין צורך לחפש ג'י פי אס - כבר מחובר
+FREEMAP LOG: TRANSLATION: Bonus points:נקודות בונוס
+FREEMAP LOG: TRANSLATION: points!:נקודות!
+FREEMAP LOG: TRANSLATION: Map color scheme:צבעי מפה
+FREEMAP LOG: TRANSLATION: Select map color scheme:בחר צבעי מפה
+FREEMAP LOG: TRANSLATION: Default:ברירת המחדל
+FREEMAP LOG: TRANSLATION: Mute:השתק
+FREEMAP LOG: TRANSLATION: Unmute:הפעל קול
+FREEMAP LOG: TRANSLATION: Others:דיווחי קהילה
+FREEMAP LOG: TRANSLATION: Language:שפה
+FREEMAP LOG: TRANSLATION: Prompts:קול דיבור
+FREEMAP LOG: TRANSLATION: Downloading new prompts:מוריד קבצי קול חדשים
+FREEMAP LOG: TRANSLATION: Downloading new voice files failed. Please try again later:הורדת קבצי קול חדש נכשלה. נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Prompt set:קבצי קול
+FREEMAP LOG: TRANSLATION: is not installed on your device, Do you want to download prompt files?:לא מותקנים על המכשיר שלך, האם להוריד את הקבצים ?
+FREEMAP LOG: TRANSLATION: The Blues:צבאי אלגנט
+FREEMAP LOG: TRANSLATION: Mochaccino:מוקצ'ינו
+FREEMAP LOG: TRANSLATION: Snow Day:קפה הפוך
+FREEMAP LOG: TRANSLATION: Twilight:יום אביב
+FREEMAP LOG: TRANSLATION: Tutti-fruiti:פונץ' בננה
+FREEMAP LOG: TRANSLATION: Rosebud:וניל תות
+FREEMAP LOG: TRANSLATION: Treasure chest:תיבת אוצר
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest! You'll know when you drive over it.:תיבת אוצר זו עשויה להכיל מתנה אמיתית! עבור על פני התיבה על מנת לגלות.
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest! You'll know when you drive over it. Note: You need to be a registered user in order to receive the gift inside. Register in 'Settings > Profile':תיבת אוצר זו 'עשויה להכיל מתנה אמיתית! עבור על פני התיבה על מנת לגלות. רק משתמשים רשומים יכולים לפתוח תיבות אוצר. הרשם ב"'גדרות> פרופיל
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest but you need to be a registered user in order to get them. Register in 'Settings > Profile':תיבת אוצר זו עשויה להכיל מתנה אמיתית! רק משתמשים רשומים יכולים לפתוח תיבות אוצר. הרשם ב"הגדרות> פרופיל"
+FREEMAP LOG: TRANSLATION: Bummer, this treasure chest was emptied. Keep searching for other chests, some have valuable prizes in them.:אופס! תיבת אוצר זו ריקה. המשך לבדוק בתיבות אחרות. בחלקן יש פרסים יקרי ערך
+FREEMAP LOG: TRANSLATION: Huray! You just won %s and an extra %d points. Check your email for info.:יוהו!.. זכית ב %s וב %d נקודות נוספות. בדוק את דוא"ל האלקטרוני שלך לפרטים נוספים.
+FREEMAP LOG: TRANSLATION: Huray!!! You won the big prize:  %s . Check your email for info.:ברכות ואיחולים! זכית ב %s. בדוק את הדוא"ל שלך לפרטים נוספים.
+FREEMAP LOG: TRANSLATION: Huray! You just won %s. Check your email for info.:יוהו!.. זכית ב %s. בדוק את דוא"ל האלקטרוני שלך לפרטים נוספים. 
+FREEMAP LOG: TRANSLATION: We've made a few infrastructural changes that require re-start. Please exit and re-start waze.:הכנסנו מספר שינויים תשתיתיים המצריכים אתחול. אנא סגור את וייז ואתחל שוב
+FREEMAP LOG: TRANSLATION: Account details:פרטי משתמש
+FREEMAP LOG: TRANSLATION: Automatically tweet to my followers::שלח אוטומטית דיווחים לTwitter:
+FREEMAP LOG: TRANSLATION: My road reports:הדיווחים שלי
+FREEMAP LOG: TRANSLATION: e.g:  Just reported a traffic jam on Geary St. SF, CA using @waze Social GPS.:הרגע דווחתי על עומס תנועה ברח' השחף תל אביב דרך @waze  תוכנת גי. פי. אס  חינמית קהילתית
+FREEMAP LOG: TRANSLATION: My destination and ETA:יעד וזמן הגעה משוערך
+FREEMAP LOG: TRANSLATION: Disabled:מבוטל
+FREEMAP LOG: TRANSLATION: City & state only:עיר בלבד
+FREEMAP LOG: TRANSLATION: Street, City & State:עיר ורחוב
+FREEMAP LOG: TRANSLATION: House #, Street, City, State:עיר, רחוב ומספר בית
+FREEMAP LOG: TRANSLATION: e.g:  Driving to Greary St. SF, using @waze social GPS. ETA 2:32pm.:בדרך לרח' דיזנגוף תל אביב. זמן הגעה משוערך  14:25. נוהג עם @waze תוכנת ג'י. פי. אס  חינמית קהילתית 
+FREEMAP LOG: TRANSLATION: My road munching:זכייה בנקודות
+FREEMAP LOG: TRANSLATION: e.g:  Just munched a 'waze road goodie' worth 200 points on Geary St. SF driving with @waze social GPS:הרגע זכיתי ב-200 נקודות על אכילת הפתעות בדרך בנהיגה עם  @waze תוכנת ג'י. פי. אס חינמית קהילתית
+FREEMAP LOG: TRANSLATION: Missing exit:יציאה חסרה
+FREEMAP LOG: TRANSLATION: Wrong driving directions:הוראות נסיעה לא נכונות
+FREEMAP LOG: TRANSLATION: Missing bridge or overpass:גשר חסר
+FREEMAP LOG: TRANSLATION: Incorrect junction:צומת לא נכונה
+FREEMAP LOG: TRANSLATION: Turn not allowed:פנייה אסורה
+FREEMAP LOG: TRANSLATION: Prefer cookie munching:העדף דרכים לא ממופות 
+FREEMAP LOG: TRANSLATION: back:חזרה
+FREEMAP LOG: TRANSLATION: Live info:דיווחים
+FREEMAP LOG: TRANSLATION: Contacts:ספר טלפונים
+FREEMAP LOG: TRANSLATION: Go to my music player:נגן המוסיקה
+FREEMAP LOG: TRANSLATION: Quick actions:פעולות מהירות
+FREEMAP LOG: TRANSLATION: Settings:הגדרות
+FREEMAP LOG: TRANSLATION: (no playlist selected):(לא נבחרה רשימת השמעה)
+FREEMAP LOG: TRANSLATION: We could not send your report due to problems in the network connection - Your reports will be sent automatically when your network connection is restored. Map problems are fixed by wazers like you. you can edit the map too on www.waze.com:בעיות מפה מתוקנות ע"י קהילת הנהגים. גם אתה יוכל לתקן ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: 24 hour clock:שעון 24 שעות
+FREEMAP LOG: TRANSLATION: Twitter user name is empty. You are not logged in:שם המשתמש בטוייטר ריק. אינך מחובר לשירות.
+FREEMAP LOG: TRANSLATION: Twitter password is empty. You are not logged in:סיסמת טוייטר ריקה. אינך מחובר לשירות.
+FREEMAP LOG: TRANSLATION: Status: logged in:מצב: מחובר
+FREEMAP LOG: TRANSLATION: Status: not logged in:מצב: מנותק
+FREEMAP LOG: TRANSLATION: There is no network connection. Updating your Foursquare account details failed.:יש צורך בחיבוריות לרשת על מנת לעדכן את פרטי המשתמש של Foursquare. אנא בדוק חיבוריות לרשת
+FREEMAP LOG: TRANSLATION: Foursquare - Nearby:Foursquare - בקירבת מקום
+FREEMAP LOG: TRANSLATION: Foursquare - Check-in:Foursquare - הירשמות
+FREEMAP LOG: TRANSLATION: Full details on this check-in are available for you on foursquare.com.:לקבלת הפרטים המלאים אודות הרשמות זו בקר בחשבונך ב Foursquare
+FREEMAP LOG: TRANSLATION: Points::נקודות:
+FREEMAP LOG: TRANSLATION: We've partnered with Foursquare to give you quick access to check-in to nearby venues.:חברנו אל Foursquare על מנת לתת לך גישה מהירה להרשמות באתרים בסביבתך.
+FREEMAP LOG: TRANSLATION: What is Foursquare?:מהו Foursquare?
+FREEMAP LOG: TRANSLATION: It's a cool way to discover and promote cool places in your city and be rewarded for doing so.:זהו שירות חברתי שנותן דרך מגניבה לגלות מקומות מעניינים סביבך ולקבל קרדיט על כל ביקור.
+FREEMAP LOG: TRANSLATION: Don't have an account? Sign up on::אם אין לך חשבון, הרשם ב:
+FREEMAP LOG: TRANSLATION: Check-in with Foursquare:הירשמות עם Foursquare
+FREEMAP LOG: TRANSLATION: Connecting Foursquare . . .:מתחבר ל- Foursquare . . .
+FREEMAP LOG: TRANSLATION: Could not connect with Foursquare. Try again later.:לא ניתן להתחבר ל- Foursquare. נסה מאוחר יותר.
+FREEMAP LOG: TRANSLATION: We can't find anything nearby.:לא נמצאו מקומות בקירבתך.
+FREEMAP LOG: TRANSLATION: View my points:הנקודות שלי
+FREEMAP LOG: TRANSLATION: Creating new account . . . :מייצר חשבון חדש . . .
+FREEMAP LOG: TRANSLATION: End:סיים
+FREEMAP LOG: TRANSLATION: Note: route may not be optimal, but waze learns quickly...:הערה: ייתכן שהמסלול אינו אופטימלי, אך waze לומדת במהירות
+FREEMAP LOG: TRANSLATION: ETA:ETA
+FREEMAP LOG: TRANSLATION: Connecting...:מתחבר...
+FREEMAP LOG: TRANSLATION: Uploading logs...:שולח קבצים
+FREEMAP LOG: TRANSLATION: Your ping was successfully sent:ההודעה נשלחה בהצלחה
+FREEMAP LOG: TRANSLATION: Sending ping failed. Please again try later:שליחת ההודעה נכשלה. אנא שלח שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Sending Ping . . .:שולח . . .
+FREEMAP LOG: TRANSLATION: Ping:פינג
+FREEMAP LOG: TRANSLATION: You need to be a registered user in order to send Pings. Register in 'Settings > Profile':שליחת פינג יכולה להיעשות רק על ידי משתמשים רשומים. אנא הרשם ב'אפשרויות -  פרופיל'
+FREEMAP LOG: TRANSLATION: Be good! Your message will pop on this user's screen but is also seen publicly in chit chat.:היה אדיב! הודעתך תופיע על מסך המשתמש אך תיראה גם בשיח הציבורי על ידי יתר המשתמשים
+FREEMAP LOG: TRANSLATION: I agree to be pinged:אני מסכים שיפנו אליי לשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer agrees to be pinged:משתמש זה מסכים לשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer's version doesn't support ping:למשתמש זה גרסא ישנה שאינה תומכת בשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer's ping feature is turned off:משתמש זה לא הפעיל שיח נהגים
+FREEMAP LOG: TRANSLATION: FYI, Pings are publicly viewable.:לידיעתך שיח נהגים זה הוא פומבי
+FREEMAP LOG: TRANSLATION: Ping from: :פינג מ:
+FREEMAP LOG: TRANSLATION: Hi:הי
+FREEMAP LOG: TRANSLATION: bus.png:אוטובוס
+FREEMAP LOG: TRANSLATION: motorbike.png:אופנוע
+FREEMAP LOG: TRANSLATION: less than 10:פחות מ-10
+FREEMAP LOG: TRANSLATION: around 25:כ-25
+FREEMAP LOG: TRANSLATION: over 40:מעל 40
+FREEMAP LOG: TRANSLATION: Email/phone:דוא"ל/טלפון
+FREEMAP LOG: TRANSLATION: Am checking out this integration:אני בודק את האינטגרציה עם Foursquare
+FREEMAP LOG: TRANSLATION: Have unlocked the Roadwarrior Badge:השגתי את תג 'חורש הכבישים'
+FREEMAP LOG: TRANSLATION: Automatically tweet to my followers that I::שלח אוטומטית דיווחים לTwitter כאשר:
+FREEMAP LOG: TRANSLATION: Driving to:נוסע ל
+FREEMAP LOG: TRANSLATION: Good morning:בוקר טוב
+FREEMAP LOG: TRANSLATION: Good evening:ערב טוב
+FREEMAP LOG: TRANSLATION: Drive:סע
+FREEMAP LOG: TRANSLATION: Route %d:מסלול %d
+FREEMAP LOG: TRANSLATION: Compare routes:השוואת מסלולים
+FREEMAP LOG: TRANSLATION: Calculating alternative routes, please wait...:מחשב מסלולים, אנא המתן...
+FREEMAP LOG: TRANSLATION: Show Route:הצג מסלול
+FREEMAP LOG: TRANSLATION: Show All Routes:הצג מסלולים
+FREEMAP LOG: TRANSLATION: Show Routes:הצג מסלולים
+FREEMAP LOG: TRANSLATION: Alternatives:מסלולים
+FREEMAP LOG: TRANSLATION: Recommended routes::המלצת waze:
+FREEMAP LOG: TRANSLATION: (your frequent):(מסלול קבוע)
+FREEMAP LOG: TRANSLATION: Via:דרך
+FREEMAP LOG: TRANSLATION: Recommended route may take a bit more time but has less turns and junctions:המסלול המומלץ עשוי לקחת מעט יותר זמן אך מכיל פחות פניות וצמתים
+FREEMAP LOG: TRANSLATION: Image download failed:הורדת התמונה נכשלה
+FREEMAP LOG: TRANSLATION: Hello:שלום
+FREEMAP LOG: TRANSLATION: min.:דק'
+FREEMAP LOG: TRANSLATION: No valid alternatives were found for this destination:לא נמצאו מסלולים שונים משמעותית ליעד זה  
+FREEMAP LOG: TRANSLATION: Could not download scoreboard:הורדת טבלת ניקוד נכשלה
+FREEMAP LOG: TRANSLATION: Scoreboard is currently not available in your area:בקרוב: טבלת ניקוד משתמשים איזורית.
+FREEMAP LOG: TRANSLATION: Weekly:שבועי
+FREEMAP LOG: TRANSLATION: All times:בכל הזמנים
+FREEMAP LOG: TRANSLATION: Scoreboard:ניקוד
+FREEMAP LOG: TRANSLATION: Up:למעלה
+FREEMAP LOG: TRANSLATION: (loading):(טוען)
+FREEMAP LOG: TRANSLATION: Don't auto-learn my frequent routes:אל תלמד את המסלולים הנפוצים שלי
+FREEMAP LOG: TRANSLATION: Auto-learn routes to your frequent destination:זכור את המסלולים הנפוצים שלי
+FREEMAP LOG: TRANSLATION: USA & Canada:ארה"ב וקנדה
+FREEMAP LOG: TRANSLATION: World:עולם
+FREEMAP LOG: TRANSLATION: Daily updated:מעודכן יומית
+FREEMAP LOG: TRANSLATION: From Monday:מיום שני
+FREEMAP LOG: TRANSLATION: Calculating alternative routes...:מחשב מסלולים...
+FREEMAP LOG: TRANSLATION: Route 1 [1]:מסלול 1 [1]
+FREEMAP LOG: TRANSLATION: Route 2 [2]:מסלול 2 [2]
+FREEMAP LOG: TRANSLATION: Route 3 [3]:מסלול 3 [3]
+FREEMAP LOG: TRANSLATION: All routes [0]:כל המסלולים [0]
+FREEMAP LOG: TRANSLATION: Report abuse:דווח שיח לא ראוי
+FREEMAP LOG: TRANSLATION: Reports by several users will disable this user from reporting:דווחים ע"י מספר משתמשים יגרמו לחסימת יכולות השיח של משתמש זה
+FREEMAP LOG: TRANSLATION: Yellow pages:דפי זהב
+FREEMAP LOG: TRANSLATION: Speedometer:מד מהירות
+FREEMAP LOG: TRANSLATION: and then:ומייד
+FREEMAP LOG: TRANSLATION: No GPS. Showing approximate location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: No Network Connection:אין חיבור רשת
+FREEMAP LOG: TRANSLATION: Sorry, you have no network connection right now. Please try later:מצטערים, אין חיבור רשת. נסה שוב מאוחר יותר 
+FREEMAP LOG: TRANSLATION: Sorry, there's no GPS reception in this location. Make sure you are outdoors:מצטערים,אין קליטת ג'י פי אס. אנא וודא שהנך במקום פתוח
+FREEMAP LOG: TRANSLATION: No Network & GPS:אין חיבור רשת וקליטת ג'י פי אס
+FREEMAP LOG: TRANSLATION: Sorry, you need Network & GPS connection when reporting an event. Please re-try later:מצטערים, אין חיבור רשת וקליטת ג'י פי אס. נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Automatically post to Facebook::שלח אוטומטית דיווחים לFacebook:
+FREEMAP LOG: TRANSLATION: Connect to Facebook:התחבר ל Facebook
+FREEMAP LOG: TRANSLATION: Email your friends:שלח אימייל לחברים
+FREEMAP LOG: TRANSLATION: Invite Facebook friends:הזמן חברים מ Facebook
+FREEMAP LOG: TRANSLATION: Review us on Appstore:דרג אותנו ב Appstore
+FREEMAP LOG: TRANSLATION: Review us on Chomp:דרג אותנו ב Chomp
+FREEMAP LOG: TRANSLATION: Thanks for reviewing Waze:תודה על דירוג Waze
+FREEMAP LOG: TRANSLATION: Could not send email:לא ניתן לשלוח אימייל
+FREEMAP LOG: TRANSLATION: Spread the word:הפץ את השמועה
+FREEMAP LOG: TRANSLATION: Thanks!:תודה!
+FREEMAP LOG: TRANSLATION: Waze will now close and you'll be redirected to the Appstore:Waze תיסגר ותועבר ל Appstore
+FREEMAP LOG: TRANSLATION: I found a fun app called waze:מצאתי אפליקציה נחמדה בשם waze
+FREEMAP LOG: TRANSLATION: Hey,:הי,
+FREEMAP LOG: TRANSLATION: Wanted to tell you about a free social GPS app called waze. Waze has all kinds of fun social elements that give drivers the ability to actively update one another on traffic, police traps, construction, speed cams and a whole lot more...:רציתי לספר לך על אפליקציית GPS חברתית חינמית בשם waze. ב Waze כל מיני אלמנטים חברתיים כיפיים המאפשרים לנהגים לעדכן באופן פעיל אחד את השני לגבי מצב התנועה, משטרה, מצלמות מהירות ועוד...
+FREEMAP LOG: TRANSLATION: Download for:הורד עבור
+FREEMAP LOG: TRANSLATION: iPhone:אייפון
+FREEMAP LOG: TRANSLATION: Android, Windows Mobile or Symbian:אנדרואיד, Windows Mobile או סימביאן
+FREEMAP LOG: TRANSLATION: My waze username is::שם המשתמש שלי הוא:
+FREEMAP LOG: TRANSLATION: Enter city name:הכנס שם עיר
+FREEMAP LOG: TRANSLATION: Enter road name:הכנס שם כביש
+FREEMAP LOG: TRANSLATION: Oops:אופס
+FREEMAP LOG: TRANSLATION: Search failed:החיפוש נכשל
+FREEMAP LOG: TRANSLATION: Please try again later:נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: ETA Updated:עדכון זמן הגעה
+FREEMAP LOG: TRANSLATION: Update details:עדכן פרטים
+FREEMAP LOG: TRANSLATION: Prompt me to edit road info:הצע עדכון פרטי כביש
+FREEMAP LOG: TRANSLATION: Sorry, no results were found for this search:לצערנו לא נמצאו תוצאות עבור חיפוש זה
+FREEMAP LOG: TRANSLATION: Sorry we were unable to complete the search:החיפוש נכשל
+FREEMAP LOG: TRANSLATION: wazer_gold:זהב
+FREEMAP LOG: TRANSLATION: wazer_silver:כסף
+FREEMAP LOG: TRANSLATION: wazer_bronze:ארד
+FREEMAP LOG: TRANSLATION: Exclusive moods:מצבי רוח אקסקלוסיביים
+FREEMAP LOG: TRANSLATION: Everyday moods:מצבי רוח יום יומיים
+FREEMAP LOG: TRANSLATION: (Available only to top weekly scoring wazers):(זמינים לבעלי הניקוד השבועי הגבוה בלבד)
+FREEMAP LOG: TRANSLATION: (Available to all):(זמינים לכל המשתמשים)
+FREEMAP LOG: TRANSLATION: Road goodies:נקודות בונוס
+FREEMAP LOG: TRANSLATION: My points:הנקודות שלי
+FREEMAP LOG: TRANSLATION: View real time alerts:מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Map settings:הגדרות מפה
+FREEMAP LOG: TRANSLATION: Data usage:צריכת נתונים
+FREEMAP LOG: TRANSLATION: Use data compression:השתמש בדחיסת מידע
+FREEMAP LOG: TRANSLATION: Refresh map of my area:רענן מפה
+FREEMAP LOG: TRANSLATION: Display network monitor:הצג מד צריכת נתונים
+FREEMAP LOG: TRANSLATION: Refreshing map tiles:מרענן מפה
+FREEMAP LOG: TRANSLATION: Removing old tiles...:מסיר מפה נוכחית...
+FREEMAP LOG: TRANSLATION: busy:עסוק
+FREEMAP LOG: TRANSLATION: busy-female:עסוקה
+FREEMAP LOG: TRANSLATION: in_a_hurry:ממהר
+FREEMAP LOG: TRANSLATION: in_a_hurry-female:ממהרת
+FREEMAP LOG: TRANSLATION: Update Waze! A great new version is available. Would you like to install it now?:עדכון גרסא ל waze! יש גירסה חדשה עם המון שיפורים ויכולות מגניבות. עדכן גרסא כעת?
+FREEMAP LOG: TRANSLATION: Sign Up:צור חשבון
+FREEMAP LOG: TRANSLATION: Your Points (updated daily):הנקודות שלך (מתעדכן פעם ביום)
+FREEMAP LOG: TRANSLATION: I certify that i am over the age of 13:אני מצהיר בזאת שאני מעל גיל 13
+FREEMAP LOG: TRANSLATION: Primary Street:רחוב ראשי
+FREEMAP LOG: TRANSLATION: Connected to waze:מחובר ל Waze
+FREEMAP LOG: TRANSLATION: The service failed to provide a valid route:הניווט ליעד נכשל
+FREEMAP LOG: TRANSLATION: Traffic tweets via twitter:דווחים ישירים מטוויטר
+FREEMAP LOG: TRANSLATION: your comment is also tweeted to the twitter user:תשובתך תישלח גם למשתמש טוויטר
+FREEMAP LOG: TRANSLATION: Show my Facebook pic (on app & web):הצג את תמונת הפייסבוק שלי
+FREEMAP LOG: TRANSLATION: Show my Facebook name (on app & web):הצג את שם הפייסבוק שלי
+FREEMAP LOG: TRANSLATION: Show my twitter username:הצג את שם משתמש הטוויטר שלי
+FREEMAP LOG: TRANSLATION: Drive over this road goodie to earn:עבור על פני הבונוס על מנת לזכות ב
+FREEMAP LOG: TRANSLATION: Notifications:עדכונים לטלפון
+FREEMAP LOG: TRANSLATION: Your score and rank:ניקוד ודירוג
+FREEMAP LOG: TRANSLATION: Contests and updates:תחרויות ומבצעים
+FREEMAP LOG: TRANSLATION: Friends:חברים
+FREEMAP LOG: TRANSLATION: Login:התחבר
+FREEMAP LOG: TRANSLATION: New user:משתמש חדש
+FREEMAP LOG: TRANSLATION: Existing user:משתמש קיים
+FREEMAP LOG: TRANSLATION: Your Details:פרטי משתמש
+FREEMAP LOG: TRANSLATION: Tweet that I'm checking-out waze:צייץ שאני בודק את וייז
+FREEMAP LOG: TRANSLATION: Allow wazers to ping you.:אפשר למשתמשים לפנות אליך.
+FREEMAP LOG: TRANSLATION: It's useful, fun and you can always turn it off.:זה שימושי וחביב, וניתן לכבות בכל עת.
+FREEMAP LOG: TRANSLATION: Connect to Facebook to see how your friends are wazing:התחבר לפייסבוק ופגוש את חבריך בוייז
+FREEMAP LOG: TRANSLATION: Display my FB name & picture in my user profile:הצג את שם הפייסבוק ותמונתי בפרטי המשתמש וייז שלי
+FREEMAP LOG: TRANSLATION: Events Radius:רדיוס דיווחים
+FREEMAP LOG: TRANSLATION: Km:ק"מ
+FREEMAP LOG: TRANSLATION: miles:מייל
+FREEMAP LOG: TRANSLATION: Start wazing:התחל
+FREEMAP LOG: TRANSLATION: On route:במסלול
+FREEMAP LOG: TRANSLATION: Welcome back:שמחים לראותך שוב
+FREEMAP LOG: TRANSLATION: Would you like to restore your favorites?:האם ברצונך לשחזר את המועדפים?
+FREEMAP LOG: TRANSLATION: Restoring favorites...:משחזר מועדפים...
+FREEMAP LOG: TRANSLATION: No favorite destinations were found:לא נמצאו יעדים שמורים במועדפים
+FREEMAP LOG: TRANSLATION: 1 destination was restored to your favorites:יעד אחד שוחזר לרשימת המועדפים
+FREEMAP LOG: TRANSLATION: destinations were restored to your favorites:יעדים שוחזרו לרשימת המועדפים
+FREEMAP LOG: TRANSLATION: more:עוד
+FREEMAP LOG: TRANSLATION: Waze newbie:משתמש דנדש
+FREEMAP LOG: TRANSLATION: Baby:משתמש דנדש
+FREEMAP LOG: TRANSLATION: (Gotta drive %d+ %s to access other moods):(נהג %d+ %s כדי לפתוח גישה למצבי רוח חדשים)
+FREEMAP LOG: TRANSLATION: Search address or Place:חיפוש כתובת או מקום
+FREEMAP LOG: TRANSLATION: Address or Place:כתובת או מקום
+FREEMAP LOG: TRANSLATION: No route:לא הוגדר יעד
+FREEMAP LOG: TRANSLATION: You should be in navigation mode to view events on your route:ניתן להציג דווחים על המסלול רק כאשר הנך מנווט ליעד מוגדר
+FREEMAP LOG: TRANSLATION: No groups:כרגע אינך משוייך לקבוצה
+FREEMAP LOG: TRANSLATION: You're not following any groups - but you should!:מסך זה מציג דווחים של הקבוצות שבחרת
+FREEMAP LOG: TRANSLATION: Go to 'Groups' in main menu to find or create a group:ניתן להצטרף או להקים קבוצה במסך "קבוצות" בתפריט הראשי
+FREEMAP LOG: TRANSLATION: From my main group:מהקבוצה העיקרית שלי
+FREEMAP LOG: TRANSLATION: From all groups I follow:מכל הקבוצות שלי
+FREEMAP LOG: TRANSLATION: None:מאף קבוצה
+FREEMAP LOG: TRANSLATION: My main group only:חברי הקבוצה העיקרית שלי
+FREEMAP LOG: TRANSLATION: The groups I follow:חברי כל הקבוצות שלי
+FREEMAP LOG: TRANSLATION: All groups:על כל משתמש
+FREEMAP LOG: TRANSLATION: Pop-up reports:הקפץ דווחים למסך
+FREEMAP LOG: TRANSLATION: Wazers group icons:הצג אייקון קבוצה ליד משתמש
+FREEMAP LOG: TRANSLATION: Show Group:הצג קבוצה
+FREEMAP LOG: TRANSLATION: My Groups:קבוצות
+FREEMAP LOG: TRANSLATION: group:קבוצה
+FREEMAP LOG: TRANSLATION: Around me:באיזורי
+FREEMAP LOG: TRANSLATION: Groups:קבוצות
+FREEMAP LOG: TRANSLATION: No groups events :(:כרגע אינך משוייך לקבוצה :(
+FREEMAP LOG: TRANSLATION: Turn off:כבה
+FREEMAP LOG: TRANSLATION: Are you sure you want to turn off waze?:האם אתה בטוח שברצונך לכבות את waze?
+FREEMAP LOG: TRANSLATION: FYI waze automatically shuts down when not used in background:לידיעתך, waze תיכבה אוטומטית לאחר חוסר שימוש ברקע
+FREEMAP LOG: TRANSLATION: No items:אין פריטים
+FREEMAP LOG: TRANSLATION: My Facebook details::פרטי ה Facebook שלי:
+FREEMAP LOG: TRANSLATION: Show name:הצג שם
+FREEMAP LOG: TRANSLATION: Show picture:הצג תמונה
+FREEMAP LOG: TRANSLATION: Don't show:אל תציג
+FREEMAP LOG: TRANSLATION: To friends only:לחברים בלבד
+FREEMAP LOG: TRANSLATION: To everyone:לכולם
+FREEMAP LOG: TRANSLATION: Day:יום
+FREEMAP LOG: TRANSLATION: Night:לילה
+FREEMAP LOG: TRANSLATION: Meters:מטרים
+FREEMAP LOG: TRANSLATION: Miles:מיילים
+FREEMAP LOG: TRANSLATION: Are you sure you want to submit this update?:האם אתה בטוח שברצונך לשלוח העידכון?
+FREEMAP LOG: TRANSLATION: Waze Groups Tip:טיפ
+FREEMAP LOG: TRANSLATION: Want group messages to pop-up to you? Go to Settings >Groups:ניתן הקפיץ הודעות קבוצה עם הגעתן. הגדרות > קבוצות
+FREEMAP LOG: TRANSLATION: Vitamin C:ויטמין סי
+FREEMAP LOG: TRANSLATION: Electrolytes:סטיק-לייט
+FREEMAP LOG: TRANSLATION: Cartouche:קרטוש
+FREEMAP LOG: TRANSLATION: Map editors:עורכי מפה
+FREEMAP LOG: TRANSLATION: Send error logs:שלח דוח שגיאה
+FREEMAP LOG: TRANSLATION: Is this still:האם שם הרחוב עדיין
+FREEMAP LOG: TRANSLATION: Live events:דיווחים חיים
+FREEMAP LOG: TRANSLATION: no relevant events:אין דיווחים רלוונטיים
+FREEMAP LOG: TRANSLATION: Previous events:דיווחים קודמים
+FREEMAP LOG: TRANSLATION: Show me as:הצג אותי כך
+FREEMAP LOG: TRANSLATION: Show Facebook details::הצג פרטי Facebook:
+FREEMAP LOG: TRANSLATION: My FB name:השם שלי
+FREEMAP LOG: TRANSLATION: My FB picture:התמונה שלי
+FREEMAP LOG: TRANSLATION: My profile link:קישור לפרופיל
+FREEMAP LOG: TRANSLATION: Show Twitter details::הצג פרטי Twitter
+FREEMAP LOG: TRANSLATION: Privacy:פרטיות
+FREEMAP LOG: TRANSLATION: Your privacy was previously set to invisible. Since this option was removed,  you are now set to 'Anonymous'. Check your privacy settings for new options:הפרטיות שלך היתה מוגדרת כבלתי נראה. כיוון שאפשרות זו בוטלה, הוגדרת כעת כ'אנונימי'. בדוק את הגדרות הפרטיות שלך לאפשרויות חדשות
+FREEMAP LOG: TRANSLATION: Hey there:היי
+FREEMAP LOG: TRANSLATION: When pinging,  chit-chatting or commenting you can't be 'Anonymous'. Go to Settings > Profile > Privacy to change your status:כששולחים פינג, פטפטת או תגובה לא ניתן להיות אנונימיים. כדי לשנות את הסטטוס שלך עבור ל- הגדרות > פרופיל > פרטיות
+FREEMAP LOG: TRANSLATION: Register:הרשם
+FREEMAP LOG: TRANSLATION: Disconnect from Facebook?:האם להתנתק מ Facebook?
+FREEMAP LOG: TRANSLATION: Can we assume that the feeling's mutual? If you've been enjoyning our app, we'd really appreciate it if you could leave us a nice review in the %s.:האם אפשר להניח שהתחושה הדדית? אם נהנית מ-waze, נודה לך מאוד אם תוכל להשאיר לנו דירוג חיובי ב-%s
+FREEMAP LOG: TRANSLATION: Market:Market
+FREEMAP LOG: TRANSLATION: Appstore:Appstore
+FREEMAP LOG: TRANSLATION: It'll really help us grow :):זה יעזור ל-waze לצמוח ולגדול :)
+FREEMAP LOG: TRANSLATION: Rate us:דרג אותנו
+FREEMAP LOG: TRANSLATION: we love you!:אנחנו אוהבים אותך!
+FREEMAP LOG: TRANSLATION: Rate:דרג
+FREEMAP LOG: TRANSLATION: Thanks for reviewing waze!:תודה שדירגת את waze!
+FREEMAP LOG: TRANSLATION: Groups settings:אפשרויות קבוצות
+FREEMAP LOG: TRANSLATION: Group alerts:דיווחי קבוצות
+FREEMAP LOG: TRANSLATION: Road successfully recorded.  A link to edit it will be available on your Dashboard at www.waze.com. (May take a couple of days):הכביש הוקלט בהצלחה. חפש את המסלול ולינק לעריכתו ב'לוח הבקרה שלי' (יופיע תוך יום או יומיים)
+FREEMAP LOG: TRANSLATION: Add Picture:הוסף תמונה
+FREEMAP LOG: TRANSLATION: Nickname field must be non-empty. :עליך לבחור לעצמך כינוי
+FREEMAP LOG: TRANSLATION: Your account has been created! :החשבון נוצר בהצלחה!
+FREEMAP LOG: TRANSLATION: Your temporary account has been created! :חשבון זמני נוצר בהצלחה!
+FREEMAP LOG: TRANSLATION: Take a moment to click through the following screens to familiarize yourself with waze... :קח כמה רגעים וצפה בכמה מסכים שיסבירו לך על waze...
+FREEMAP LOG: TRANSLATION: Report will also be sent to group::דווח ישלח גם לקבוצה:
+FREEMAP LOG: TRANSLATION: No group:אף קבוצה
+FREEMAP LOG: TRANSLATION: Thanks sent to user:תודה נשלחה למדווח
+FREEMAP LOG: TRANSLATION: Thumbs up from:תודה מ
+FREEMAP LOG: TRANSLATION: users:משתמשים
+FREEMAP LOG: TRANSLATION: one user:משתמש אחד
+FREEMAP LOG: TRANSLATION: Thumbs up:שלח תודה
+FREEMAP LOG: TRANSLATION: Re::לדיווח:
+FREEMAP LOG: TRANSLATION: Thanks from::תודה מ:
+FREEMAP LOG: TRANSLATION: ahead:לפניך
+FREEMAP LOG: TRANSLATION: Visible:גלויה
+FREEMAP LOG: TRANSLATION: Hidden:חבויה
+FREEMAP LOG: TRANSLATION: Minor:קלה
+FREEMAP LOG: TRANSLATION: Major:קשה
+FREEMAP LOG: TRANSLATION: Road:על הכביש
+FREEMAP LOG: TRANSLATION: Shoulder:בשוליים
+FREEMAP LOG: TRANSLATION: Weather:מזג אויר
+FREEMAP LOG: TRANSLATION: Police (visible):משטרה (גלויה)
+FREEMAP LOG: TRANSLATION: Police (hidden):משטרה (חבויה)
+FREEMAP LOG: TRANSLATION: Red light:מצלמת רמזור
+FREEMAP LOG: TRANSLATION: Fake:מצלמת דמה
+FREEMAP LOG: TRANSLATION: Object on road:חפץ על הכביש
+FREEMAP LOG: TRANSLATION: Pot hole on road:בור בכביש
+FREEMAP LOG: TRANSLATION: Road kill on road:סכנה בדרך
+FREEMAP LOG: TRANSLATION: Car stopped on shoulder:רכב עומד בשולי הכביש
+FREEMAP LOG: TRANSLATION: Animals near road:בעל חיים בשולי הכביש
+FREEMAP LOG: TRANSLATION: Missing sign:סימון חסר
+FREEMAP LOG: TRANSLATION: Foggy weather:ערפל
+FREEMAP LOG: TRANSLATION: Hail:ברד
+FREEMAP LOG: TRANSLATION: Heavy rain:מבול
+FREEMAP LOG: TRANSLATION: Heavy snow:שלג כבד
+FREEMAP LOG: TRANSLATION: Flood:הצפה
+FREEMAP LOG: TRANSLATION: Hazard on road:סכנה על הכביש
+FREEMAP LOG: TRANSLATION: Hazard on shoulder:סכנה בשולי הכביש
+FREEMAP LOG: TRANSLATION: Weather hazard:מזג אויר
+FREEMAP LOG: TRANSLATION: Mode:תאורה
+FREEMAP LOG: TRANSLATION: Light:תאורה
+FREEMAP LOG: TRANSLATION: Moderate:בינוני
+FREEMAP LOG: TRANSLATION: Heavy:כבד
+FREEMAP LOG: TRANSLATION: Standstill:כבד מאוד
+FREEMAP LOG: TRANSLATION: My lane:בצד שלי
+FREEMAP LOG: TRANSLATION: Other lane:בצד השני
+FREEMAP LOG: TRANSLATION: Also send this report to::שלח דווח גם לקבוצה:
+FREEMAP LOG: TRANSLATION: Fixed camera:מצלמה קבועה
+FREEMAP LOG: TRANSLATION: Minor accident:תאונה קלה
+FREEMAP LOG: TRANSLATION: Major accident:תאונה קשה
+FREEMAP LOG: TRANSLATION: According to speed:מהירות 
+FREEMAP LOG: TRANSLATION: According to distance:מרחק
+FREEMAP LOG: TRANSLATION: Car stopped:רכב עומד
+FREEMAP LOG: TRANSLATION: Animals:בעל חיים
+FREEMAP LOG: TRANSLATION: Fog:ערפל
+FREEMAP LOG: TRANSLATION: Object:חפץ
+FREEMAP LOG: TRANSLATION: Pot hole:בור
+FREEMAP LOG: TRANSLATION: Road kill:סכנה
+FREEMAP LOG: TRANSLATION: Are you in traffic?:האם לדווח על נסיעה בפקק?
+FREEMAP LOG: TRANSLATION: We're detecting a slow down:המערכת מזהה האטה
+FREEMAP LOG: TRANSLATION: This route is still the fastest:מסלול זה הוא עדיין המהיר ביותר
+FREEMAP LOG: TRANSLATION: Location and time saved:מיקום הדיווח נשמר
+FREEMAP LOG: TRANSLATION: Promotion:מבצע
+FREEMAP LOG: TRANSLATION: Street/road without a name:רחוב ללא שם
+FREEMAP LOG: TRANSLATION: Note: New speed cams need to be validated by community map editors. You can do it, too: www.waze.com:מצלמות חדשות מאושרות ע"י קהילת הנהגים. גם אתה יוכל ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: Wazers are notified of speed cams only when approaching at an excessive speed.:התראה על מצלמות מתקבלת רק כאשר מתקרבים במהירות מופרזת
+FREEMAP LOG: TRANSLATION: Speed trap ahead:מצלמת מהירות לפניך
+FREEMAP LOG: TRANSLATION: Red light cam ahead:מצלמת רמזור לפניך
+FREEMAP LOG: TRANSLATION: Downloading voice ...:מוריד הודעה קולית ...
+FREEMAP LOG: TRANSLATION: Use:אישור
+FREEMAP LOG: TRANSLATION: Tap "Record" when ready:לחץ "הקלט" כדי להתחיל
+FREEMAP LOG: TRANSLATION: Tap "Stop" when finished:לחץ "עצור" כדי לסיים
+FREEMAP LOG: TRANSLATION: Recording complete:הקלטה הסתיימה
+FREEMAP LOG: TRANSLATION: Recording in:מתחיל בעוד
+FREEMAP LOG: TRANSLATION: My Coupons:הקופונים שלי
+FREEMAP LOG: TRANSLATION: Stop:עצור
+FREEMAP LOG: TRANSLATION: Record:הקלט
+FREEMAP LOG: TRANSLATION: Recording...:מקליט...
+FREEMAP LOG: TRANSLATION: Take a picture:הוסף תמונה
+FREEMAP LOG: TRANSLATION: Picture added:תמונה נוספה
+FREEMAP LOG: TRANSLATION: Oil spill:כתם שמן
+FREEMAP LOG: TRANSLATION: Ice on road:קרח על הכביש
+FREEMAP LOG: TRANSLATION: Construction zone:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Lane closed:מסלול סגור
+FREEMAP LOG: TRANSLATION: It only takes a handful of wazers driving in your area to significantly improve the real-time traffic & road info you need for a better commute.:צריך רק קומץ של משתמשי waze  באזורך בשביל לשפר את הדיווחים ואת המידע החי מהכבישים.
+FREEMAP LOG: TRANSLATION: So tell your friends and help build the waze driving community in your 'hood'!:אז ספר לחבריך, וביחד תוכלו לבנות את קהילת waze באזור שלכם!
+FREEMAP LOG: TRANSLATION: Share on Facebook:שתף ב- Facebook
+FREEMAP LOG: TRANSLATION: We'd love to know how you heard about waze:נשמח לדעת איך שמעת על וייז
+FREEMAP LOG: TRANSLATION: Heard about waze:שמעתי על וייז
+FREEMAP LOG: TRANSLATION: Friend told me (in person):חבר סיפר לי
+FREEMAP LOG: TRANSLATION: Friend tweeted:חבר צייץ
+FREEMAP LOG: TRANSLATION: Friend shared on Facebook:חבר שיתף ב- Facebook
+FREEMAP LOG: TRANSLATION: Found it in '%s' in the %s:מצאתי בקטגוריית '%s' ב- %s
+FREEMAP LOG: TRANSLATION: Navigation:ניווט
+FREEMAP LOG: TRANSLATION: Travel:נסיעות
+FREEMAP LOG: TRANSLATION: It was promoted in the %s %s:פורסם ב- %s %s
+FREEMAP LOG: TRANSLATION: Blog / newspaper / TV  / Radio:בלוג / עיתון / טלוויזיה / רדיו
+FREEMAP LOG: TRANSLATION: A waze advertisement:פרסומת של וייז
+FREEMAP LOG: TRANSLATION: Other:אחר
+FREEMAP LOG: TRANSLATION: Home (Touch to add):בית (לחץ להוספה)
+FREEMAP LOG: TRANSLATION: Work (Touch to add):עבודה (לחץ להוספה)
+FREEMAP LOG: TRANSLATION: My Home:הבית שלי
+FREEMAP LOG: TRANSLATION: My Work:העבודה שלי
+FREEMAP LOG: TRANSLATION: Waze is best used for commuting.:waze מיועד בעיקר לנסיעות מוכרות ויומיומיות
+FREEMAP LOG: TRANSLATION: Once you add 'Home' and 'Work' to your favorites, waze'll learn your preferred routes and departure times to these destinations.:לאחר שתוסיף את 'בית' ו'עבודה' למועדפים, waze תלמד את המסלולים המועדפים עליך, ואת הזמנים הקבועים בהם אתה נוסע ליעדים אלו.
+FREEMAP LOG: TRANSLATION: The address was successfully added to your Favorites:הכתובת הוספה בהצלחה למועדפים.
+FREEMAP LOG: TRANSLATION: Enter your address in the search box above.:הכנס את הכתובת בתיבת החיפוש שמופיעה למעלה.
+FREEMAP LOG: TRANSLATION: Not listed:לא נמצא
+FREEMAP LOG: TRANSLATION: Not listed?:לא נמצא?
+FREEMAP LOG: TRANSLATION: Can't find what you're:לא מוצא את
+FREEMAP LOG: TRANSLATION: looking for?:מה שחיפשת?
+FREEMAP LOG: TRANSLATION: If your street is not on the map, note that you can record it and add it yourself!:אם הרחוב שלך לא נמצא על המפה, שים לב שאתה יכול להקליט ולהוסיף אותו בעצמך!
+FREEMAP LOG: TRANSLATION: Find out how in the forum.:פרטים נוספים - בפורום.
+FREEMAP LOG: TRANSLATION: Exit right:צא ימינה
+FREEMAP LOG: TRANSLATION: Exit left:צא שמאלה
+FREEMAP LOG: TRANSLATION: Routes:מסלולים
+FREEMAP LOG: TRANSLATION: Proceed to highlighted route:המשך לעבר המסלול המוצג
+FREEMAP LOG: TRANSLATION: Recalculate route:חשב מסלול חדש
+FREEMAP LOG: TRANSLATION: Viewed::צפיות:
+FREEMAP LOG: TRANSLATION: Comments::תגובות:
+FREEMAP LOG: TRANSLATION: Thanks::תודות:
+FREEMAP LOG: TRANSLATION: Alternative routes:מסלולים
+FREEMAP LOG: TRANSLATION: Confirm:אישור
+FREEMAP LOG: TRANSLATION: min:דק'
+FREEMAP LOG: TRANSLATION: New ETA::זמן הגעה משוער:
+FREEMAP LOG: TRANSLATION: Note: Waze constantly checks alternatives:הערה: waze בודקת מסלולים חלופיים ברקע
+FREEMAP LOG: TRANSLATION: and re-routes when needed:ומשנה את מסלול הניווט בשעת הצורך
+FREEMAP LOG: TRANSLATION: Your preferred route:המסלול המועדף עליך
+FREEMAP LOG: TRANSLATION: Tip: Teach waze your preferred routes by simply driving them several times.:טיפ: למד את waze על המסלולים המועדפים עליך על ידי כך שתסע בהם כמה פעמים
+FREEMAP LOG: TRANSLATION: Things have freed up ahead:הפקקים בהמשך הדרך השתחררו
+FREEMAP LOG: TRANSLATION: Traffic is building up ahead:מתחיל להיווצר פקק בהמשך הדרך
+FREEMAP LOG: TRANSLATION: sooner:מוקדם יותר
+FREEMAP LOG: TRANSLATION: later:מאוחר יותר
+FREEMAP LOG: TRANSLATION: Arrival::זמן הגעה:
+FREEMAP LOG: TRANSLATION: Changing route!:משנה מסלול!
+FREEMAP LOG: TRANSLATION: There's a better route:קיים מסלול טוב יותר
+FREEMAP LOG: TRANSLATION: Time saved::הזמן שחסכת:
+FREEMAP LOG: TRANSLATION: min delay:דקות עיכוב
+FREEMAP LOG: TRANSLATION: min early:דקות שנחסכו
+FREEMAP LOG: TRANSLATION: My Waze:שלי waze -ה
+FREEMAP LOG: TRANSLATION: My inbox:ה-inbox שלי
+FREEMAP LOG: TRANSLATION: Waze Groups:קבוצות waze
+FREEMAP LOG: TRANSLATION: My Scoreboard:לוח הניקוד שלי
+FREEMAP LOG: TRANSLATION: My Profile:הפרופיל שלי
+FREEMAP LOG: TRANSLATION: My Mood:מצב הרוח שלי
+FREEMAP LOG: TRANSLATION: Get Social:רשתות חברתיות
+FREEMAP LOG: TRANSLATION: Recommend Waze:שלח לחבר
+FREEMAP LOG: TRANSLATION: Always play sound to speaker:השתמש ברמקול של המכשיר
+FREEMAP LOG: TRANSLATION: Sure you wanna shut down?:האם לכבות את waze?
+A first chance exception of type 'System.IO.EndOfStreamException' occurred in WazeWP7.dll
+FREEMAP LOG: TRANSLATION: RTL:Yes
+FREEMAP LOG: TRANSLATION: lang:Hebrew
+FREEMAP LOG: TRANSLATION: Number:מספר
+FREEMAP LOG: TRANSLATION: Street:רחוב
+FREEMAP LOG: TRANSLATION: City:עיר
+FREEMAP LOG: TRANSLATION: Ok:אישור
+FREEMAP LOG: TRANSLATION: Cancel:ביטול
+FREEMAP LOG: TRANSLATION: Next:הבא
+FREEMAP LOG: TRANSLATION: Back:הקודם
+FREEMAP LOG: TRANSLATION: Address:כתובת
+FREEMAP LOG: TRANSLATION: Location:כתובת
+FREEMAP LOG: TRANSLATION: Search:נווט
+FREEMAP LOG: TRANSLATION: Drive to:נווט
+FREEMAP LOG: TRANSLATION: Drive_to:נווט
+FREEMAP LOG: TRANSLATION: Name:שם
+FREEMAP LOG: TRANSLATION: found:נמצאו
+FREEMAP LOG: TRANSLATION: .results:.תוצאות
+FREEMAP LOG: TRANSLATION: Done:אישור
+FREEMAP LOG: TRANSLATION: Address...:חפש כתובת
+FREEMAP LOG: TRANSLATION: Sync:עדכן מפה
+FREEMAP LOG: TRANSLATION: Detect GPS receiver:הגדרת GPS
+FREEMAP LOG: TRANSLATION: Preferences:אפשרויות
+FREEMAP LOG: TRANSLATION: Properties:פרטים
+FREEMAP LOG: TRANSLATION: Delete:מחק
+FREEMAP LOG: TRANSLATION: Navigate:נווט
+FREEMAP LOG: TRANSLATION: Set as Departure:קבע נקודת התחלה
+FREEMAP LOG: TRANSLATION: Set as Destination:קבע נקודת יעד
+FREEMAP LOG: TRANSLATION: Length:אורך
+FREEMAP LOG: TRANSLATION: Time:זמן
+FREEMAP LOG: TRANSLATION: meters:מטרים
+FREEMAP LOG: TRANSLATION: seconds:שניות
+FREEMAP LOG: TRANSLATION: Israel:ישראל
+FREEMAP LOG: TRANSLATION: County:ארץ
+FREEMAP LOG: TRANSLATION: State:מדינה
+FREEMAP LOG: TRANSLATION: From:מקור
+FREEMAP LOG: TRANSLATION: To:יעד
+FREEMAP LOG: TRANSLATION: Size:גודל
+FREEMAP LOG: TRANSLATION: Download:הורדה
+FREEMAP LOG: TRANSLATION: Status:מצב
+FREEMAP LOG: TRANSLATION: Warning:אזהרה
+FREEMAP LOG: TRANSLATION: Error:שגיאה
+FREEMAP LOG: TRANSLATION: Can't find a route.:לא ניתן לחשב מסלול אל היעד הרצוי עקב חוסר נתונים. אנא פנה לאתר הפרויקט ודווח על הבעיה. לחילופין ניתן לעדכן את הנתונים החסרים בממשק העדכון שבאתר.
+FREEMAP LOG: TRANSLATION: Route found:נמצא מסלול
+FREEMAP LOG: TRANSLATION: m:מ'
+FREEMAP LOG: TRANSLATION: km.:ק"מ
+FREEMAP LOG: TRANSLATION: kmh:קמ"ש
+FREEMAP LOG: TRANSLATION: minutes:דקות
+FREEMAP LOG: TRANSLATION: Can't find a road near departure point.:לא ניתן למצוא כביש ליד נקודת המוצא.
+FREEMAP LOG: TRANSLATION: Can't find a road near destination point.:לא ניתן למצוא כביש ליד נקודת היעד.
+FREEMAP LOG: TRANSLATION: Progress status:מסנכרן נתונים
+FREEMAP LOG: TRANSLATION: Preparing export data...:מכין מידע לייצוא...
+FREEMAP LOG: TRANSLATION: Uploading data...:שולח נתונים...
+FREEMAP LOG: TRANSLATION: Downloading new maps...:מקבל נתוני מפה...
+FREEMAP LOG: TRANSLATION: Update house number:עדכן מספר בית
+FREEMAP LOG: TRANSLATION: Force:שמור
+FREEMAP LOG: TRANSLATION: Show:הצג
+FREEMAP LOG: TRANSLATION: Can't find current street.:לא ניתן למצוא רחוב בנקודה הנוכחית.
+FREEMAP LOG: TRANSLATION: Type:סוג
+FREEMAP LOG: TRANSLATION: User note:הערת מפה
+FREEMAP LOG: TRANSLATION: Send to server:שלח לשרת
+FREEMAP LOG: TRANSLATION: Note:הערה
+FREEMAP LOG: TRANSLATION: Close:סגור
+FREEMAP LOG: TRANSLATION: Play:השמע
+FREEMAP LOG: TRANSLATION: Yes:כן
+FREEMAP LOG: TRANSLATION: No:לא
+FREEMAP LOG: TRANSLATION: The calculated route may have incorrect turn instructions.:המסלול שנמצא הינו משוער וייתכן שיש בו פניות שאינן אפשריות.
+FREEMAP LOG: TRANSLATION: Unable to provide route to destination. Taking you to nearest location.:מציג מסלול לנקודה המקושרת הקרובה ביותר ליעד.
+FREEMAP LOG: TRANSLATION: Showing route using alternative departure point.:מציג מסלול מנקודה קרובה ביותר שממנה ניתן לנווט.
+FREEMAP LOG: TRANSLATION: Estimated:משוער
+FREEMAP LOG: TRANSLATION: Left:שמאל
+FREEMAP LOG: TRANSLATION: Right:ימין
+FREEMAP LOG: TRANSLATION: Update left:עדכן צד שמאל
+FREEMAP LOG: TRANSLATION: Update right:עדכן צד ימין
+FREEMAP LOG: TRANSLATION: There are no markers.:אין הערות.
+FREEMAP LOG: TRANSLATION: Save:שמור
+FREEMAP LOG: TRANSLATION: No map available:לא ניתן למצוא מפה
+FREEMAP LOG: TRANSLATION: About:אודות
+FREEMAP LOG: TRANSLATION: General:כללי
+FREEMAP LOG: TRANSLATION: Info:מידע
+FREEMAP LOG: TRANSLATION: Road type:סוג הכביש
+FREEMAP LOG: TRANSLATION: Freeways:כביש מהיר
+FREEMAP LOG: TRANSLATION: Primary:בין עירוני
+FREEMAP LOG: TRANSLATION: Secondary:בין עירוני משני
+FREEMAP LOG: TRANSLATION: Ramps:מחלף
+FREEMAP LOG: TRANSLATION: Highways:רחוב ראשי
+FREEMAP LOG: TRANSLATION: Exit:יציאה לכביש ראשי
+FREEMAP LOG: TRANSLATION: Streets:רחוב משני
+FREEMAP LOG: TRANSLATION: Pedestrian:מדרחוב
+FREEMAP LOG: TRANSLATION: 4X4 Trails:דרך 4X4
+FREEMAP LOG: TRANSLATION: Trails:כביש עפר
+FREEMAP LOG: TRANSLATION: Walkway:טיילת
+FREEMAP LOG: TRANSLATION: Error downloading map update:עדכון המפה נכשל. אנא וודא שהמכשיר מחובר לרשת האינטרנט.
+FREEMAP LOG: TRANSLATION: No city with that name could be found:לא ניתן למצוא עיר בשם זה.
+FREEMAP LOG: TRANSLATION: No street with that name could be found:לא ניתן למצוא רחוב בשם זה.
+FREEMAP LOG: TRANSLATION: Address could not be found:הכתובת המבוקשת לא נמצאה
+FREEMAP LOG: TRANSLATION: House number was not found in that street. Please enter a valid house number, or erase the house number entry:מספר הבית לא נמצא ברחוב זה. אנא נסה מספר אחר או מחק את מספר הבית והמערכת תנווט אל אחד מקטעי הרחוב.
+FREEMAP LOG: TRANSLATION: Found GPS Receiver.:מכשיר ה-GPS נמצא.
+FREEMAP LOG: TRANSLATION: GPS already connected!:מכשיר ה-GPS מחובר!
+FREEMAP LOG: TRANSLATION: Running, please wait...:אנא המתן...
+FREEMAP LOG: TRANSLATION: Please wait...:אנא המתן...
+FREEMAP LOG: TRANSLATION: GPS Receiver not found. Make sure your receiver is connected and turned on.:מכשיר ה-GPS לא נמצא. בדוק שה-GPS מחובר ומופעל.
+FREEMAP LOG: TRANSLATION: Detect GPS:חפש GPS
+FREEMAP LOG: TRANSLATION: Setup wizard:אשף ההגדרות
+FREEMAP LOG: TRANSLATION: Welcome to Waze!:.ברוכים הבאים ל-Waze!
+FREEMAP LOG: TRANSLATION: .Enter your username if you registered one.:.אם נרשמת באתר מלא את הפרטים.
+FREEMAP LOG: TRANSLATION: .Otherwise leave these fields empty.:.אם לא נרשמת השאר את השדה ריק.
+FREEMAP LOG: TRANSLATION: Username:שם משתמש
+FREEMAP LOG: TRANSLATION: User name:שם משתמש
+FREEMAP LOG: TRANSLATION: Password:סיסמא
+FREEMAP LOG: TRANSLATION: RoadMap:Waze
+FREEMAP LOG: TRANSLATION: Main Menu:תפריט ראשי
+FREEMAP LOG: TRANSLATION: Traffic data:נתוני תנועה
+FREEMAP LOG: TRANSLATION: Speed:מהירות
+FREEMAP LOG: TRANSLATION: Traffic preferences:נתוני תנועה
+FREEMAP LOG: TRANSLATION: Use for calculating routes:חישוב מסלולי ניווט
+FREEMAP LOG: TRANSLATION: Display traffic information:הצג נתוני תנועה
+FREEMAP LOG: TRANSLATION: SPC:רווח
+FREEMAP LOG: TRANSLATION: Del:מחק
+FREEMAP LOG: TRANSLATION: SWCH:החלף
+FREEMAP LOG: TRANSLATION: Segment Properties:פרטים
+FREEMAP LOG: TRANSLATION: House number:מספר בית
+FREEMAP LOG: TRANSLATION: History:היסטוריה
+FREEMAP LOG: TRANSLATION: New address:כתובת חדשה
+FREEMAP LOG: TRANSLATION: Quit:יציאה
+FREEMAP LOG: TRANSLATION: GPS Position:הצג מיקום GPS
+FREEMAP LOG: TRANSLATION: Destination:הצג יעד
+FREEMAP LOG: TRANSLATION: Toggle view mode:2D/3D
+FREEMAP LOG: TRANSLATION: Toggle orientation mode:הצפן מפה
+FREEMAP LOG: TRANSLATION: Hold Map:עצור מפה
+FREEMAP LOG: TRANSLATION: Routing preferences:אפשרויות ניווט
+FREEMAP LOG: TRANSLATION: Use traffic statistics:השתמש בנתוני תנועה
+FREEMAP LOG: TRANSLATION: Fastest:מהיר ביותר
+FREEMAP LOG: TRANSLATION: Shortest:קצר ביותר
+FREEMAP LOG: TRANSLATION: Prefer same street:מינימום פניות
+FREEMAP LOG: TRANSLATION: Avoid highways:המנע מכבישים בין עירוניים
+FREEMAP LOG: TRANSLATION: Avoid unpaved:המנע מכבישי עפר
+FREEMAP LOG: TRANSLATION: Long unpaved:כבישים ארוכים
+FREEMAP LOG: TRANSLATION: Recalculate:חשב מחדש
+FREEMAP LOG: TRANSLATION: Speed cam:מצלמת מהירות
+FREEMAP LOG: TRANSLATION: Alerts Menu:תפריט דיווחים
+FREEMAP LOG: TRANSLATION: Description:פרטים
+FREEMAP LOG: TRANSLATION: Traps:מצלמות
+FREEMAP LOG: TRANSLATION: Speed Cam:מצלמות מהירות
+FREEMAP LOG: TRANSLATION: Dummy Speed Cam:מצלמות דמה
+FREEMAP LOG: TRANSLATION: Report a police:משטרה 
+FREEMAP LOG: TRANSLATION: Report an accident:תאונה
+FREEMAP LOG: TRANSLATION: Accident:תאונת דרכים
+FREEMAP LOG: TRANSLATION: Live Alert:דיווח חי
+FREEMAP LOG: TRANSLATION: Reported at:דווח בשעה
+FREEMAP LOG: TRANSLATION: by:ע"י
+FREEMAP LOG: TRANSLATION: Real Time Alerts:מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Real Time Alert:דיווח בזמן אמת
+FREEMAP LOG: TRANSLATION: alerts menu:שלח דיווחים 
+FREEMAP LOG: TRANSLATION: %d seconds ago:לפני %d שניות
+FREEMAP LOG: TRANSLATION: %d minutes ago:לפני %d דקות
+FREEMAP LOG: TRANSLATION: %2.1f hours ago:לפני %2.1f שעות
+FREEMAP LOG: TRANSLATION: %s %s Away:%s %s מהמיקום הנוכחי
+FREEMAP LOG: TRANSLATION: Scroll through alerts on the map:הצג את כל הדיווחים על המפה
+FREEMAP LOG: TRANSLATION: No Real Time Alerts:אין דיווחים בזמן אמת
+FREEMAP LOG: TRANSLATION: Sending report failed:שליחת הדיווח נכשלה
+FREEMAP LOG: TRANSLATION: Sending report failed. Please resend later:שליחת הדיווח נכשלה. אנא שלח שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Route calculation:חישוב מסלול
+FREEMAP LOG: TRANSLATION: Calculating route, please wait...:מחשב מסלול, אנא המתן...
+FREEMAP LOG: TRANSLATION: Recalculating route...:מחשב מסלול מחדש...
+FREEMAP LOG: TRANSLATION: Internal GPS:מקלט פנימי
+FREEMAP LOG: TRANSLATION: External GPS:מקלט חיצוני (BT)
+FREEMAP LOG: TRANSLATION: Auto zoom:זום אוטומטי
+FREEMAP LOG: TRANSLATION: Toggle GPS recording:הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Chit chat:פטפטת
+FREEMAP LOG: TRANSLATION: Navigation guidance:ניווט קולי
+FREEMAP LOG: TRANSLATION: Settings menu:הגדרות
+FREEMAP LOG: TRANSLATION: Select your car:הגדרות מכונית
+FREEMAP LOG: TRANSLATION: New accident on your route:יש תאונה על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: New Alert:דיווח חדש
+FREEMAP LOG: TRANSLATION: Login details:פרופיל
+FREEMAP LOG: TRANSLATION: Traffic jam:פקק תנועה
+FREEMAP LOG: TRANSLATION: Report a traffic jam on the opposite direction:דווח על פקק בכוון השני
+FREEMAP LOG: TRANSLATION: New traffic jam on your route:יש פקק על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: New incident on your route:יש דיווח חדש על המסלול הנוכחי
+FREEMAP LOG: TRANSLATION: Exit_key:ביטול
+FREEMAP LOG: TRANSLATION: Back_key:חזרה
+FREEMAP LOG: TRANSLATION: car_red.png:מכונית אדומה
+FREEMAP LOG: TRANSLATION: car_green.png:מכונית ירוקה
+FREEMAP LOG: TRANSLATION: car_yellow.png:מכונית צהובה
+FREEMAP LOG: TRANSLATION: car_blue.png:מכונית כחולה
+FREEMAP LOG: TRANSLATION: car_race.png:מכונית מרוץ
+FREEMAP LOG: TRANSLATION: red_ferrari.png:פרארי אדומה
+FREEMAP LOG: TRANSLATION: Arrow.png:חץ
+FREEMAP LOG: TRANSLATION: Additional Details:פרטים נוספים
+FREEMAP LOG: TRANSLATION: Comment:תגובה
+FREEMAP LOG: TRANSLATION: Sending comment failed:שליחת התגובה נכשלה
+FREEMAP LOG: TRANSLATION: Comments:תגובות
+FREEMAP LOG: TRANSLATION: Commented %d seconds ago:תגובה מלפני %d שניות
+FREEMAP LOG: TRANSLATION: Commented %d minutes ago:תגובה מלפני %d דקות
+FREEMAP LOG: TRANSLATION: Commented %2.1f hours ago:תגובה מלפני %2.1f שעות
+FREEMAP LOG: TRANSLATION: Real Time Alerts Comments:תגובות
+FREEMAP LOG: TRANSLATION: Add comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Exit?:לצאת?
+FREEMAP LOG: TRANSLATION: Exit Application:יציאה
+FREEMAP LOG: TRANSLATION: A newer version of Waze is available. Would you like to install the new version?:נמצאה גרסה חדשה של Waze. האם ברצונך לעדכן את התוכנה?
+FREEMAP LOG: TRANSLATION: Software Update:עדכון תוכנה
+FREEMAP LOG: TRANSLATION: Nickname:כינוי
+FREEMAP LOG: TRANSLATION: Delete History:מחיקה מהסטוריה
+FREEMAP LOG: TRANSLATION: Delete history entry:האם למחוק את:
+FREEMAP LOG: TRANSLATION: Delete Alert:ביטול דיווח
+FREEMAP LOG: TRANSLATION: Delete Alert::האם לבקש ביטול דיווח:
+FREEMAP LOG: TRANSLATION: Your request was sent to the server:בקשה נשלחה לשרת
+FREEMAP LOG: TRANSLATION: To destination:ליעד
+FREEMAP LOG: TRANSLATION: My direction:בצד שלי
+FREEMAP LOG: TRANSLATION: Opposite direction:בצד השני
+FREEMAP LOG: TRANSLATION: zoom:זום
+FREEMAP LOG: TRANSLATION: Toggle skin:יום/לילה
+FREEMAP LOG: TRANSLATION: rotate:סובב מפה
+FREEMAP LOG: TRANSLATION: Reported :דווח 
+FREEMAP LOG: TRANSLATION: Updated :עודכן 
+FREEMAP LOG: TRANSLATION: %s in the neighborhood of %s:%s באזור %s
+FREEMAP LOG: TRANSLATION: %s between %s and %s:%s מ%s עד %s
+FREEMAP LOG: TRANSLATION: Average speed %d %s:מהירות: %d %s
+FREEMAP LOG: TRANSLATION: Options:אפשרויות
+FREEMAP LOG: TRANSLATION: Auto Connection:חיבור אוטומטי
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_0:^ 0" 
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_1:.,1'?!"@
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_2:דהו2abc
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_3:אבג3def
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_4:מםנן4ghi
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_5:יכךל5jkl
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_6:זחט6mno
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_7:רשת7pqrs
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_8:צץק8tuv
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_9:סעפף9wxyz
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_*:*=/+-:
+FREEMAP LOG: TRANSLATION: CombinationKeyboardKey_#:#
+FREEMAP LOG: TRANSLATION: All:הכל
+FREEMAP LOG: TRANSLATION: Traffic Jams:פקקים
+FREEMAP LOG: TRANSLATION: Roads Info:עומסים
+FREEMAP LOG: TRANSLATION: Chit Chats:פטפטת
+FREEMAP LOG: TRANSLATION: Accidents:תאונות
+FREEMAP LOG: TRANSLATION: Sort by recency:מיין לפי זמן
+FREEMAP LOG: TRANSLATION: Sort by proximity:מיין לפי מרחק
+FREEMAP LOG: TRANSLATION: View comments:הצג תגובות
+FREEMAP LOG: TRANSLATION: Show on map:הצג על המפה
+FREEMAP LOG: TRANSLATION: Erase from history:מחק מההיסטוריה
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove item from history?:האם למחוק מההיסטוריה?
+FREEMAP LOG: TRANSLATION: Back Light On:מסך מואר תמיד
+FREEMAP LOG: TRANSLATION: Volume Control:עוצמת צליל
+FREEMAP LOG: TRANSLATION: New Road Recording is ON. Please turn it off once you've finished recording a new road.:הקלטת כבישים חדשים מופעלת. אנא כבו אופציה זו בסיום הקלטת הכביש החדש.
+FREEMAP LOG: TRANSLATION: New Road Recording is now OFF:הקלטת כבישים חדשים הופסקה
+FREEMAP LOG: TRANSLATION: New roads:כבישים חדשים
+FREEMAP LOG: TRANSLATION: Record new roads:הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Search menu:נווט
+FREEMAP LOG: TRANSLATION: Recent searches:חיפושים אחרונים
+FREEMAP LOG: TRANSLATION: My favorites:המועדפים שלי
+FREEMAP LOG: TRANSLATION: Google local search:עסק או מקום בילוי
+FREEMAP LOG: TRANSLATION: Favorites:מועדפים
+FREEMAP LOG: TRANSLATION: poi:נקודות ענין
+FREEMAP LOG: TRANSLATION: Add to favorites:הוסף למועדפים
+FREEMAP LOG: TRANSLATION: Are you sure you want to Add item to favorites?:האם להוסיף למועדפים?
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove item from favorites?:האם למחוק מהמועדפים?
+FREEMAP LOG: TRANSLATION: Sort by name:מיין לפי שם
+FREEMAP LOG: TRANSLATION: Download requires large amount of data, continue?:הורדת המפה דורש תעבורת מידע גבוהה, להמשיך?
+FREEMAP LOG: TRANSLATION: Due to new traffic information, ETA is longer by:בעקבות עדכון בנתוני התנועה, זמן הנסיעה המשוער התארך ב-
+FREEMAP LOG: TRANSLATION: Due to new traffic information, ETA is shorter by:בעקבות עדכון בנתוני התנועה, זמן הנסיעה המשוער התקצר ב-
+FREEMAP LOG: TRANSLATION: Silent:שקט
+FREEMAP LOG: TRANSLATION: Low:נמוך
+FREEMAP LOG: TRANSLATION: Medium:בינוני
+FREEMAP LOG: TRANSLATION: High:גבוה
+FREEMAP LOG: TRANSLATION: Only when Driving in Major roads:רק בכבישים מהירים
+FREEMAP LOG: TRANSLATION: Only when I report or Comment:רק כאשר אני מדווח
+FREEMAP LOG: TRANSLATION: Everywhere:תמיד
+FREEMAP LOG: TRANSLATION: Never:אף פעם
+FREEMAP LOG: TRANSLATION: Privacy settings:פרטיות
+FREEMAP LOG: TRANSLATION: Display my location on waze mobile and web maps as follows::הצג את מיקומי על מפת וייז (בסלולרי ובמפת האתר) באופן הבא:
+FREEMAP LOG: TRANSLATION: Menu:תפריט
+FREEMAP LOG: TRANSLATION: Report:דווח
+FREEMAP LOG: TRANSLATION: Hide:הסתר
+FREEMAP LOG: TRANSLATION: Add Comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Me on map:הצג אותי
+FREEMAP LOG: TRANSLATION: Response:תגובה לדיווח
+FREEMAP LOG: TRANSLATION: Ignore:התעלם
+FREEMAP LOG: TRANSLATION: Reply:הגב
+FREEMAP LOG: TRANSLATION: Shortcuts:תפעול מפה
+FREEMAP LOG: TRANSLATION: Car:מכונית
+FREEMAP LOG: TRANSLATION: General settings:הגדרות כלליות
+FREEMAP LOG: TRANSLATION: Profile:פרופיל
+FREEMAP LOG: TRANSLATION: Address search:חיפוש כתובת
+FREEMAP LOG: TRANSLATION: Other city:עיר אחרת
+FREEMAP LOG: TRANSLATION: Edit:עדכן
+FREEMAP LOG: TRANSLATION: Stop navigation:הפסק ניווט
+FREEMAP LOG: TRANSLATION: Thank you!!!:תודה!!!
+FREEMAP LOG: TRANSLATION: Your report was sent to the community:הדיווח נשלח לחברי הקהילה
+FREEMAP LOG: TRANSLATION: Not there:בטל דיווח
+FREEMAP LOG: TRANSLATION: Report irrelevant:בטל דיווח
+FREEMAP LOG: TRANSLATION: Approaching:מתקרב ל
+FREEMAP LOG: TRANSLATION: Speed trap:מצלמת מהירות
+FREEMAP LOG: TRANSLATION: Anonymous:כמשתמש אנונימי
+FREEMAP LOG: TRANSLATION: Using my nickname:בשם הכינוי שלי
+FREEMAP LOG: TRANSLATION: When driving:כשאני נוהג
+FREEMAP LOG: TRANSLATION: When reporting:כשאני מדווח או מגיב
+FREEMAP LOG: TRANSLATION: anonymous:אנונימי
+FREEMAP LOG: TRANSLATION: Hazard:סכנה
+FREEMAP LOG: TRANSLATION: Don't show me:אל תציג אותי
+FREEMAP LOG: TRANSLATION: In:בעוד
+FREEMAP LOG: TRANSLATION: Message sent:ההודעה נשלחה
+FREEMAP LOG: TRANSLATION: Sending message failed:שליחת ההודעה נכשלה
+FREEMAP LOG: TRANSLATION: Recommend Waze to a friend:שלח לחבר
+FREEMAP LOG: TRANSLATION: Phone number:מספר טלפון
+FREEMAP LOG: TRANSLATION: View menu:תצוגה
+FREEMAP LOG: TRANSLATION: Commute view:תצוגת נסיעה
+FREEMAP LOG: TRANSLATION: Navigation view:תצוגת ניווט
+FREEMAP LOG: TRANSLATION: No GPS reception!:אין קליטת GPS!
+FREEMAP LOG: TRANSLATION: Help:עזרה
+FREEMAP LOG: TRANSLATION: Help menu:עזרה
+FREEMAP LOG: TRANSLATION: Help/Support:עזרה/תמיכה
+FREEMAP LOG: TRANSLATION: Please confirm that the following alert is not relevant::אנא אשר כי הדיווח אינו רלוונטי:
+FREEMAP LOG: TRANSLATION: To recommend to a friend, please enter their phone number. Send?:על מנת לשלוח את התוכנה אל חבר/ה, יש להקיש את המספר הסלולרי שלו/ה. האם להמשיך?
+FREEMAP LOG: TRANSLATION: Chat:הודעה
+FREEMAP LOG: TRANSLATION: Turn left:פנה שמאלה
+FREEMAP LOG: TRANSLATION: At the roundabout, turn left:בכיכר פנה שמאלה
+FREEMAP LOG: TRANSLATION: Keep left:צא שמאלה
+FREEMAP LOG: TRANSLATION: Turn right:פנה ימינה
+FREEMAP LOG: TRANSLATION: At the roundabout, turn right:בכיכר פנה ימינה
+FREEMAP LOG: TRANSLATION: Keep right:צא ימינה
+FREEMAP LOG: TRANSLATION: Approaching destination:ליעד
+FREEMAP LOG: TRANSLATION: continue straight:המשך ישר
+FREEMAP LOG: TRANSLATION: At the roundabout, continue straight:בכיכר המשך ישר
+FREEMAP LOG: TRANSLATION: At the roundabout, exit number:בכיכר צא ביציאה ה
+FREEMAP LOG: TRANSLATION: At the roundabout, exit:בכיכר צא
+FREEMAP LOG: TRANSLATION: At the roundabout, make a u turn:בכיכר בצע פניית פרסה
+FREEMAP LOG: TRANSLATION: to :ל
+FREEMAP LOG: TRANSLATION: in:עוד
+FREEMAP LOG: TRANSLATION: Navigation list:מסלול
+FREEMAP LOG: TRANSLATION: Continue:המשך
+FREEMAP LOG: TRANSLATION: Report a hazard condition:סכנה
+FREEMAP LOG: TRANSLATION: Report other:אחר
+FREEMAP LOG: TRANSLATION: alerts:דווח
+FREEMAP LOG: TRANSLATION: alerts_offline:דווח
+FREEMAP LOG: TRANSLATION: Update map:עדכון מפה
+FREEMAP LOG: TRANSLATION: Road construction:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Report road construction:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Offline data file is currupt: Re-Initializing data:קובץ נתוני העריכה משובש: מאתחל נתונים מחדש
+FREEMAP LOG: TRANSLATION: Route information:מידע חדש
+FREEMAP LOG: TRANSLATION: More:עוד
+FREEMAP LOG: TRANSLATION: Events:דיווחים
+FREEMAP LOG: TRANSLATION: Me_on_map:הצג אותי
+FREEMAP LOG: TRANSLATION: Measurement system:מערכת מדידה
+FREEMAP LOG: TRANSLATION: bored:משועמם
+FREEMAP LOG: TRANSLATION: happy:שמח
+FREEMAP LOG: TRANSLATION: mad:כועס
+FREEMAP LOG: TRANSLATION: sad:עצוב
+FREEMAP LOG: TRANSLATION: sleepy:עייף
+FREEMAP LOG: TRANSLATION: speedy:זריז
+FREEMAP LOG: TRANSLATION: starving:רעב
+FREEMAP LOG: TRANSLATION: Mood:מצב רוח
+FREEMAP LOG: TRANSLATION: Select your mood:הגדרת מצב רוח
+FREEMAP LOG: TRANSLATION: Near:באזור
+FREEMAP LOG: TRANSLATION: Come back in 30 sec:חזור בעוד 30 שניות
+FREEMAP LOG: TRANSLATION: Come back in 1 min:חזור בעוד דקה
+FREEMAP LOG: TRANSLATION: Remain in background:השאר ברקע
+FREEMAP LOG: TRANSLATION: Suspend Waze:השהה את WAZE
+FREEMAP LOG: TRANSLATION: Home:בית
+FREEMAP LOG: TRANSLATION: Work:עבודה
+FREEMAP LOG: TRANSLATION: home:בית
+FREEMAP LOG: TRANSLATION: work:עבודה
+FREEMAP LOG: TRANSLATION: map updates:עדכוני מפה
+FREEMAP LOG: TRANSLATION: Traffic:עומסים
+FREEMAP LOG: TRANSLATION: Add image:הוסף תמונה
+FREEMAP LOG: TRANSLATION: <Add description>:פרטים נוספים
+FREEMAP LOG: TRANSLATION: Note: Location and time saved:מיקום הדיווח נשמר
+FREEMAP LOG: TRANSLATION: Send:שלח
+FREEMAP LOG: TRANSLATION: www.waze.com:www.waze.co.il
+FREEMAP LOG: TRANSLATION: Add speed camera on your lane?:האם להוסיף מצלמת מהירות?
+FREEMAP LOG: TRANSLATION: UserName:שם משתמש
+FREEMAP LOG: TRANSLATION: TwitterUserName:שם משתמש
+FREEMAP LOG: TRANSLATION: TwitterPassword:סיסמא
+FREEMAP LOG: TRANSLATION: Display:תצוגה
+FREEMAP LOG: TRANSLATION: Less than %d%% battery remaining. Would you like to exit waze?:פחות מ %d%% מהסוללה נשארו. האם לצאת מ-waze?
+FREEMAP LOG: TRANSLATION: Saved locations:מקומות שמורים
+FREEMAP LOG: TRANSLATION: Are you sure you want to remove saved location?:האם למחוק מקום שמור?
+FREEMAP LOG: TRANSLATION: Report map problem:טעות במפה
+FREEMAP LOG: TRANSLATION: Map error:טעות במפה
+FREEMAP LOG: TRANSLATION: Available parking:חניה
+FREEMAP LOG: TRANSLATION: Incorrect turn:פניה לא נכונה
+FREEMAP LOG: TRANSLATION: Incorrect address:כתובת לא נכונה
+FREEMAP LOG: TRANSLATION: Incorrect route:ניווט שגוי
+FREEMAP LOG: TRANSLATION: Missing roundabout:כיכר חסרה
+FREEMAP LOG: TRANSLATION: General map error:בעיה כללית
+FREEMAP LOG: TRANSLATION: Resume in 30 seconds:השהה ל 30 שניות
+FREEMAP LOG: TRANSLATION: Resume manually:השהה
+FREEMAP LOG: TRANSLATION: Add a comment:הוסף תגובה
+FREEMAP LOG: TRANSLATION: Light traffic:עומס קל
+FREEMAP LOG: TRANSLATION: Moderate traffic:עומס בינוני
+FREEMAP LOG: TRANSLATION: Heavy traffic:עומס כבד
+FREEMAP LOG: TRANSLATION: Sending report . . . :שולח דיווח . . . 
+FREEMAP LOG: TRANSLATION: Searching . . . :מחפש . . .
+FREEMAP LOG: TRANSLATION: No network, unable to display live data:אין חיבור לרשת, לא ניתן להציג מידע עדכני
+FREEMAP LOG: TRANSLATION: smart.png:סמארט
+FREEMAP LOG: TRANSLATION: SUV.png:4X4
+FREEMAP LOG: TRANSLATION: taxi.png:מונית
+FREEMAP LOG: TRANSLATION: car_gray.png:מכונית אפורה
+FREEMAP LOG: TRANSLATION: beetle.png:חיפושית
+FREEMAP LOG: TRANSLATION: Approaching %N, %C|Approaching %N:מתקרב ל-%N, %C|מתקרב ל- %N
+FREEMAP LOG: TRANSLATION: No network connection, unable to report:אין חיבור רשת, לא ניתן לדווח
+FREEMAP LOG: TRANSLATION: Save location:שמירת מיקום
+FREEMAP LOG: TRANSLATION: Would you like to add  (%s %s, %s) to Saved Locations?:האם לשמור כתובת  (%s %s ,%s)  במקומות שמורים?
+FREEMAP LOG: TRANSLATION: There is no network connection.Updating your twitter account details failed.:יש צורך בחיבוריות לרשת על מנת לעדכן את פרטי המשתמש של טוייטר. אנא בדוק חיבוריות לרשת
+FREEMAP LOG: TRANSLATION: Updating your twitter account details failed. Please ensure you entered the correct user name and password:עדכון פרטי משתמש טוייטר נכשל. אנא בדקו אם הקלדתם נכון את שם המשתמש והסיסמא
+FREEMAP LOG: TRANSLATION: Your report was successfully send to wazers in your area:הדווח נשלח בהצלחה לוייזרים בסביבתך
+FREEMAP LOG: TRANSLATION: No GPS connection. Make sure you are outdoors. Currently showing approximate location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: No GPS, unable to determine location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: Search requires internet connection.:חיפוש מצריך חיבוריות לאינטרנט.
+FREEMAP LOG: TRANSLATION: Please make sure you are connected.:אנא ודא כי הנך מחובר.
+FREEMAP LOG: TRANSLATION: No matches found for this search.:לא נמצאו תוצאות עבור חיפוש זה. 
+FREEMAP LOG: TRANSLATION: Please check spelling, or add more information:אנא ודא שהקלדת את הכתובת במלואה
+FREEMAP LOG: TRANSLATION: Change of username and password should be done on www.waze.com, and only then entered here. Continue?:. שינוי שם משתמש וסיסמא צריכים להתבצע באתר ב  www.waze.co.il  ורק לאחר מכן כאן.להמשיך?
+FREEMAP LOG: TRANSLATION: Show points ticker:הצג סרגל ניקוד
+FREEMAP LOG: TRANSLATION: Hmm... the map data may be insufficient to provide a valid or optimal route, but Waze learns quickly...:אהם... נתוני המפה אינם מספקים מסלול מאומת או מיטבי, אבל Waze לומד מהר...
+FREEMAP LOG: TRANSLATION: Teach Waze:לא תודה
+FREEMAP LOG: TRANSLATION: Try route:נסה בכל זאת
+FREEMAP LOG: TRANSLATION: The service failed to provide a valid route (This may be a bug).:הניווט ליעד נכשל (ייתכן שיש באג)
+FREEMAP LOG: TRANSLATION: Login details are missing:פרטי משתמש חסרים
+FREEMAP LOG: TRANSLATION: Please enter your Username and Password:אנא הזן שם וסיסמא
+FREEMAP LOG: TRANSLATION: Login Failed: Wrong login details:תהליך אימות פרטי המשתמש נכשל
+FREEMAP LOG: TRANSLATION: Please verify login details are accurate:אנא ודא כי פרטי המשתמש נכונים
+FREEMAP LOG: TRANSLATION: Routing service timed out:לא התקבלה תוצאת ניווט בזמן הקצוב
+FREEMAP LOG: TRANSLATION: Log In:כניסה
+FREEMAP LOG: TRANSLATION: Signing in . . . :מתחבר . . . 
+FREEMAP LOG: TRANSLATION: Downloading . . . :מוריד תמונה . . . 
+FREEMAP LOG: TRANSLATION: View image:הצג תמונה
+FREEMAP LOG: TRANSLATION: Traffic jams:עומסים
+FREEMAP LOG: TRANSLATION: Traffic detected:המערכת מזהה פקק
+FREEMAP LOG: TRANSLATION: Are you experiencing traffic?:האם לדווח על נסיעה בפקק?
+FREEMAP LOG: TRANSLATION: Your phone's GPS is  turned OFF:מערכת GPS במכשיר לא זמינה
+FREEMAP LOG: TRANSLATION: Waze requires GPS connection. Please turn on your GPS from Menu > Settings > Security & Location > Enable GPS satellites:תוכנת Waze צריכה חיבור GPS. אנא הפעל חיבור GPS דרך < Menu Settings > Security & Location > Enable GPS satellites
+FREEMAP LOG: TRANSLATION: Retype password:חזור על הסיסמא
+FREEMAP LOG: TRANSLATION: Desired Username:בחר שם משתמש
+FREEMAP LOG: TRANSLATION: Desired password:בחר סיסמא
+FREEMAP LOG: TRANSLATION: Email Address:דוא"ל
+FREEMAP LOG: TRANSLATION: Email:דוא"ל
+FREEMAP LOG: TRANSLATION: New Account:חשבון חדש
+FREEMAP LOG: TRANSLATION: Create Account:צור חשבון
+FREEMAP LOG: TRANSLATION: Sign up:צור חשבון
+FREEMAP LOG: TRANSLATION: Password must be between 6 and 16 characters and may contain only alpha characters and digits:סיסמא חייבת לכלול בין 6 ל 16 סימנים שחייבים להיות אותיות לועזיות ו/או ספרות
+FREEMAP LOG: TRANSLATION: Two passwords are not identical:שתי הסיסמאות שהוקלדו אינן תואמות
+FREEMAP LOG: TRANSLATION: Invalid email address:כתובת דוא"ל לא חוקית
+FREEMAP LOG: TRANSLATION: Username must start with alpha characters and may contain only alpha characters, digits and '-':שם משתמש חייב להתחיל באות לטינית, להכיל רק אותיות לטיניות וספרות ואת הסימן '-' (ללא רווחים)
+FREEMAP LOG: TRANSLATION: Automatic night mode:מצב לילה אוטומטי
+FREEMAP LOG: TRANSLATION: username already exists:שם משתמש זה כבר קיים במערכת
+FREEMAP LOG: TRANSLATION: Invalid password:סיסמא לא חוקית
+FREEMAP LOG: TRANSLATION: Invalid username:שם משתמש אינו חוקי
+FREEMAP LOG: TRANSLATION: Failed to create account, please try again:לא ניתן ליצר כרגע חשבון. אנא נסה מאוחר יותר
+FREEMAP LOG: TRANSLATION: Failed to update account, please try again:לא ניתן לעדכן כרגע חשבון. אנא נסה מאוחר יותר
+FREEMAP LOG: TRANSLATION: Email address already exist:כתובת דוא"ל כבר מופיעה במערכת
+FREEMAP LOG: TRANSLATION: You must have a valid username and password.:אנא הזן שם וסיסמא.
+FREEMAP LOG: TRANSLATION: Haven't got an account yet?:אין לך עדיין חשבון?
+FREEMAP LOG: TRANSLATION: Username is empty:בחר שם משתמש
+FREEMAP LOG: TRANSLATION: Route preference:העדף מסלול
+FREEMAP LOG: TRANSLATION: Minimize turns:מזער מספר פניות
+FREEMAP LOG: TRANSLATION: Dirt roads:כבישי עפר
+FREEMAP LOG: TRANSLATION: Allow:כן
+FREEMAP LOG: TRANSLATION: Don't allow:המנע
+FREEMAP LOG: TRANSLATION: Avoid long ones:המנע מארוכים
+FREEMAP LOG: TRANSLATION: Avoid toll roads:המנע מכבישי אגרה
+FREEMAP LOG: TRANSLATION: Confirm password:אישור סיסמא
+FREEMAP LOG: TRANSLATION: Welcome to waze.:ברוך הבא ל waze.
+FREEMAP LOG: TRANSLATION: Please create an account :אנא צור חשבון
+FREEMAP LOG: TRANSLATION: Already have one? :כבר יש לך?
+FREEMAP LOG: TRANSLATION: Sign In:כניסה
+FREEMAP LOG: TRANSLATION: Create your account:יצירת חשבון חדש
+FREEMAP LOG: TRANSLATION: There are no saved addresses:אין כתובות שמורות
+FREEMAP LOG: TRANSLATION: Total:סה"כ
+FREEMAP LOG: TRANSLATION: Rank:דירוג
+FREEMAP LOG: TRANSLATION: Map problems are fixed by wazers like you. you can edit the map too on www.waze.com:בעיות מפה מתוקנות ע"י קהילת הנהגים. גם אתה יוכל לתקן ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: Thanks for reporting:תודה
+FREEMAP LOG: TRANSLATION: Navigation was discontinued before reaching destination. Would you like to resume last route?:נווט הופסק לפני ההגעה ליעד. האם להמשיך בנווט?
+FREEMAP LOG: TRANSLATION: Resume navigation:המשך ניווט
+FREEMAP LOG: TRANSLATION: Accept:אשר
+FREEMAP LOG: TRANSLATION: Decline:בטל
+FREEMAP LOG: TRANSLATION: Typing is disabled when driving.:לא ניתן להקליד בנסיעה.
+FREEMAP LOG: TRANSLATION: You can minimize the 'Report' screen and type later:הינך יכול להקטין את חלון הדיווח ולהקליד מאוחר יותר
+FREEMAP LOG: TRANSLATION: Hi there!:שלום!
+FREEMAP LOG: TRANSLATION: Add red light camera on your lane?:האם להוסיף מצלמת רמזור?
+FREEMAP LOG: TRANSLATION: Red light cam:מצלמת רמזור
+FREEMAP LOG: TRANSLATION: If you already have an account choose existing, otherwise choose new:אם יש לך חשבון בחר קיים אחרת בחר חדש
+FREEMAP LOG: TRANSLATION: New:חדש
+FREEMAP LOG: TRANSLATION: Existing:קיים
+FREEMAP LOG: TRANSLATION: Welcome:ברוך הבא
+FREEMAP LOG: TRANSLATION: NEW user:משתמש חדש
+FREEMAP LOG: TRANSLATION: EXISTING user:משתמש קיים
+FREEMAP LOG: TRANSLATION: You can personalize your account from Settings->profile:ניתן ליצור חשבון אישי בשלב מאוחר יותר דרך  אפשרויות > פרופיל
+FREEMAP LOG: TRANSLATION: Personalize your account:צור חשבון אישי
+FREEMAP LOG: TRANSLATION: You are signed-in with a randomly generated login:הנך רשום במערכת כמשתמש זמני. 
+FREEMAP LOG: TRANSLATION: To easily access your web account, send road tweets and more, personalize your account now:לגישה נוחה לחשבון ולשירותים נוספים צור חשבון אישי.
+FREEMAP LOG: TRANSLATION: Skip:לא עכשיו
+FREEMAP LOG: TRANSLATION: Not now:לא עכשיו
+FREEMAP LOG: TRANSLATION: Personalize:המשך
+FREEMAP LOG: TRANSLATION: Send me updates:שלחו לי עדכונים
+FREEMAP LOG: TRANSLATION: Enter twitter details:פרטי חשבון טוויטר
+FREEMAP LOG: TRANSLATION: Your account has been updated:חשבונך עודכן בהצלחה!
+FREEMAP LOG: TRANSLATION: Way to go!:כל הכבוד!
+FREEMAP LOG: TRANSLATION: Tweet your road reports:דווחי התנועה שלך ישלחו גם לחבריך בטוויטר
+FREEMAP LOG: TRANSLATION: Update your account:עדכון פרטי חשבון
+FREEMAP LOG: TRANSLATION: Complete standstill:עומס כבד מאוד
+FREEMAP LOG: TRANSLATION: Seems you've gotten off the route:נראה שסטית מהמסלול המוצע
+FREEMAP LOG: TRANSLATION: Get Started:התחל
+FREEMAP LOG: TRANSLATION: Save address as::שמור כתובת בשם
+FREEMAP LOG: TRANSLATION: Finish:סיים
+FREEMAP LOG: TRANSLATION: Failed to Communicate with Routing Server:התקשורת עם שרת הניווט נכשלה
+FREEMAP LOG: TRANSLATION: cool:מגניב
+FREEMAP LOG: TRANSLATION: inlove:מאוהב
+FREEMAP LOG: TRANSLATION: peaceful:.שנטי
+FREEMAP LOG: TRANSLATION: singing:שר
+FREEMAP LOG: TRANSLATION: wondering:מהרהר
+FREEMAP LOG: TRANSLATION: LOL:צוחק
+FREEMAP LOG: TRANSLATION: LOL-female:צוחקת
+FREEMAP LOG: TRANSLATION: bored-female:משועממת
+FREEMAP LOG: TRANSLATION: happy-female:שמחה
+FREEMAP LOG: TRANSLATION: mad-female:כועסת
+FREEMAP LOG: TRANSLATION: sad-female:עצובה
+FREEMAP LOG: TRANSLATION: sleepy-female:עייפה
+FREEMAP LOG: TRANSLATION: speedy-female:זריזה
+FREEMAP LOG: TRANSLATION: starving-female:רעבה
+FREEMAP LOG: TRANSLATION: cool-female:מגניבה
+FREEMAP LOG: TRANSLATION: inlove-female:מאוהבת
+FREEMAP LOG: TRANSLATION: peaceful-female:שנטי
+FREEMAP LOG: TRANSLATION: singing-female:שרה
+FREEMAP LOG: TRANSLATION: wondering-female:מהרהרת
+FREEMAP LOG: TRANSLATION: Local search:נקודות עניין
+FREEMAP LOG: TRANSLATION: Local search results:תוצאות חיפוש
+FREEMAP LOG: TRANSLATION: Downloading:מוריד את
+FREEMAP LOG: TRANSLATION: Map Download Complete:הורדת המפה הסתיימה
+FREEMAP LOG: TRANSLATION: Please restart Waze:אנא אתחל את Waze
+FREEMAP LOG: TRANSLATION: Map Download Failed -- Not Enough Space:הורדת המפה נכשלה -- אין מספיק מקום פנוי
+FREEMAP LOG: TRANSLATION: Map Download Failed:הורדת המפה נכשלה
+FREEMAP LOG: TRANSLATION: map::מפה:
+FREEMAP LOG: TRANSLATION: Map Download:הורדת מפה
+FREEMAP LOG: TRANSLATION: Updating Files, Please Wait...:מעדכן קבצים, נא להמתין...
+FREEMAP LOG: TRANSLATION: No results found:לא נמצאו תוצאות
+FREEMAP LOG: TRANSLATION: Search location:חיפוש מקום
+FREEMAP LOG: TRANSLATION: Road report:דווח לקהילה
+FREEMAP LOG: TRANSLATION: Event comment:מענה לדווח
+FREEMAP LOG: TRANSLATION: Prompt response:אישור עומס 
+FREEMAP LOG: TRANSLATION: Road munching:אישרור כביש
+FREEMAP LOG: TRANSLATION: Traffic detection:דווח פסיבי: פקק 
+FREEMAP LOG: TRANSLATION: New points:נקודות חדשות
+FREEMAP LOG: TRANSLATION: hr.:ש'
+FREEMAP LOG: TRANSLATION: Updating Map Tiles...:מעדכן רכיבי מפה...
+FREEMAP LOG: TRANSLATION: Send logs:שלח קבצי לוג
+FREEMAP LOG: TRANSLATION: Your Points (updated once a day):הנקודות שלך (מתעדכן פעם ביום)
+FREEMAP LOG: TRANSLATION: Watch the guided tour:צפה בסיור המודרך
+FREEMAP LOG: TRANSLATION: Submit logs:שליחת קבצי לוג
+FREEMAP LOG: TRANSLATION: Sending logs requires large amount of data, continue?:שליחת קבצים דורשת תעבורת מידע גבוהה, להמשיך?
+FREEMAP LOG: TRANSLATION: We seem to have encountered a bug. Help us improve by sending us an error report.:נתקלנו בתקלה. עזור לנו להשתפר ע"י שליחת דו"ח שגיאה
+FREEMAP LOG: TRANSLATION: No GPS reception:אין קליטת ג'י פי אס.
+FREEMAP LOG: TRANSLATION: Make sure you are outdoors. Currently showing approximate location using cell ID.:אנא וודא שהנך במקום פתוח. מיקומך מוצג באופן לא מדוייק.
+FREEMAP LOG: TRANSLATION: Poor GPS reception:קליטת ג'י פי אס חלקית
+FREEMAP LOG: TRANSLATION: Make sure you are outdoors.:אנא וודא שהנך במקום פתוח.
+FREEMAP LOG: TRANSLATION: Good GPS reception:קליטת ג'י.פי.אס טובה
+FREEMAP LOG: TRANSLATION: No network connection:אין חיבור רשת
+FREEMAP LOG: TRANSLATION: Functionality and navigation may be impaired.:השירות יתפקד באופן חלקי.
+FREEMAP LOG: TRANSLATION: Connected to network:מחובר לרשת
+FREEMAP LOG: TRANSLATION: You are connected to waze.:הינך מחובר ל Waze.
+FREEMAP LOG: TRANSLATION: map77001.wzm:מפת ישראל
+FREEMAP LOG: TRANSLATION: Already have a login?  :כבר יש לך שם משתמש?
+FREEMAP LOG: TRANSLATION: Sign in:כניסה
+FREEMAP LOG: TRANSLATION: Couldn't find the address I wanted. Notify waze.:לא מצאתי את הכתובת הנכונה. הודע לwaze.
+FREEMAP LOG: TRANSLATION: Sending address search info...:שולח...
+FREEMAP LOG: TRANSLATION: Seeking GPS. Try going outdoors...:מחפש לוויני GPS. וודא שהנך במקום פתוח   
+FREEMAP LOG: TRANSLATION: Searching network . . .    :מנסה להתחבר לרשת . . .
+FREEMAP LOG: TRANSLATION: Sorry, only registered users can record new roads. Go to Settings > Profile to register.:הקלטת כבישים חדשים יכולה להיעשות רק על ידי משתמשים רשומים. אנא הרשם באפשרויות -  פרופיל 
+FREEMAP LOG: TRANSLATION: Display map controls on tap:הצג מכווני מפה עם נגיעה במסך 
+FREEMAP LOG: TRANSLATION: Road successfully recorded.  A link to edit it will be sent to your email and to you Dashboard on www.waze.com. (May take 24 hrs.):הכביש הוקלט בהצלחה. קישור לעריכת הכביש יופיע בדשבורד (עשוי לקחת כ 24 שעות)
+FREEMAP LOG: TRANSLATION: My mood:מצב הרוח שלי
+FREEMAP LOG: TRANSLATION: More characters are needed to perform a search:דרושות יותר אותיות לביצוע חיפוש
+FREEMAP LOG: TRANSLATION: Resolve Address:חיפוש כתובת
+FREEMAP LOG: TRANSLATION: String could not be resolved to a valid address:לא נמצאו תוצאות
+FREEMAP LOG: TRANSLATION: Logs submitted successfully to waze:קבצי לוג נשלחו בהצלחה לwaze
+FREEMAP LOG: TRANSLATION: Can't find alert position.:לא נמצא מקום הדיווח
+FREEMAP LOG: TRANSLATION: ETA Update:עדכון זמן הגעה
+FREEMAP LOG: TRANSLATION: Due to change in traffic conditions ETA was updated:עקב שינוי במצב התנועה זמן ההגעה המשוער עודכן
+FREEMAP LOG: TRANSLATION: Shortest Route:הסלול המהיר ביותר
+FREEMAP LOG: TRANSLATION: Your routes::המסלולים שלך:
+FREEMAP LOG: TRANSLATION: Don't ask me again:אל תשאל אותי שוב
+FREEMAP LOG: TRANSLATION: Would you like to see the fastest route to::האם תרצה לראות את הדרך המהירה ביותר ל:
+FREEMAP LOG: TRANSLATION: pt.:נק'
+FREEMAP LOG: TRANSLATION: Joined:הצטרף
+FREEMAP LOG: TRANSLATION: %d days ago:לפני %d ימים
+FREEMAP LOG: TRANSLATION: %d months ago:לפני %d חודשים
+FREEMAP LOG: TRANSLATION: one month ago:לפני חודש
+FREEMAP LOG: TRANSLATION: %d years ago:לפני %d שנים
+FREEMAP LOG: TRANSLATION: one year ago:לפני שנה
+FREEMAP LOG: TRANSLATION: Missing road:דרך חסרה
+FREEMAP LOG: TRANSLATION: Map:מפה
+FREEMAP LOG: TRANSLATION: Show wazers on map:הצג משתמשים על המפה 
+FREEMAP LOG: TRANSLATION: Show user reports on map:הצג דווחים על המפה 
+FREEMAP LOG: TRANSLATION: Show traffic jams:הצג פקקים על המפה
+FREEMAP LOG: TRANSLATION: Display house numbers:הצג מספרי בתים 
+FREEMAP LOG: TRANSLATION: Show map problems:הצג בעיות מפה 
+FREEMAP LOG: TRANSLATION: Space:רווח
+FREEMAP LOG: TRANSLATION: Recording new roads::כבישים חדשים:
+FREEMAP LOG: TRANSLATION: satellites:לווינים
+FREEMAP LOG: TRANSLATION: Display top bar on tap:הצג סרגל עליון עם נגיעה במסך
+FREEMAP LOG: TRANSLATION: Use native keyboard:השתמש במקלדת של המכשיר
+FREEMAP LOG: TRANSLATION: Route Update:עדכון מסלול
+FREEMAP LOG: TRANSLATION: Map Update:עדכון מפה
+FREEMAP LOG: TRANSLATION: Recalculating route due to traffic updates:מחשב מסלול מחדש בעקבות שינויים במצב התנועה
+FREEMAP LOG: TRANSLATION: Recalculating route due to map updates:מחשב מסלול מחדש בעקבות שינויים במפה
+FREEMAP LOG: TRANSLATION: Current ETA::זמן נסיעה משוער במסלול הנוכחי
+FREEMAP LOG: TRANSLATION: Expected New ETA::זמן נסיעה צפוי במסלול החדש
+FREEMAP LOG: TRANSLATION: New Geo-Reminder:תזכורת חדשה
+FREEMAP LOG: TRANSLATION: Add Geo-Reminder:הוסף תזכורת
+FREEMAP LOG: TRANSLATION: Title:כותרת
+FREEMAP LOG: TRANSLATION: Distance to alert:מרחק לתזכורת
+FREEMAP LOG: TRANSLATION: Repeat reminder:תזכורת חוזרת
+FREEMAP LOG: TRANSLATION: Once:פעם אחת
+FREEMAP LOG: TRANSLATION: Every time:בכל פעם
+FREEMAP LOG: TRANSLATION: Distance to remind: %.1f %s:מרחק לתזכורת: %.1f %s
+FREEMAP LOG: TRANSLATION: Distance:::מרחק
+FREEMAP LOG: TRANSLATION: Geo-Reminders:תזכורות
+FREEMAP LOG: TRANSLATION: Reminder:תזכורת
+FREEMAP LOG: TRANSLATION: Reminder saved:התזכורת נשמרה
+FREEMAP LOG: TRANSLATION: Are you sure you want to delete reminder?:האם למחוק תזכורת?
+FREEMAP LOG: TRANSLATION: Avoid areas under Palestinian authority supervision:המנע משטחי הרשות הפלסטינית 
+FREEMAP LOG: TRANSLATION: Wazers:משתמשים אחרים
+FREEMAP LOG: TRANSLATION: Speed cams:מצלמות מהירות
+FREEMAP LOG: TRANSLATION: Hazards:סכנות בכביש
+FREEMAP LOG: TRANSLATION: Data Usage:צריכת נתונים
+FREEMAP LOG: TRANSLATION: Download map of my area:הורד מפה
+FREEMAP LOG: TRANSLATION: Download traffic info:הורד מידע תנועה בזמן אמת 
+FREEMAP LOG: TRANSLATION: Reduce data usage::צמצם צריכת נתונים:
+FREEMAP LOG: TRANSLATION: General map settings:הגדרות מפה כלליות
+FREEMAP LOG: TRANSLATION: Terms of use:תנאי שימוש
+FREEMAP LOG: TRANSLATION: * Changes won't affect routing. Your route is always calculated based on real-time traffic conditions.:* ביטול 'הורדת מידע בזמן אמת' לא ישפיע על חישוב המסלול. חישוב המסלול מבוסס תמיד על מצב התנועה בזמן אמת
+FREEMAP LOG: TRANSLATION: * Traffic and updates will not be seen on the map if you disable their download.:* פקקים ועדכונים לא יופיעו על המפה אם תבחר שלא להוריד מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Note::שים לב:
+FREEMAP LOG: TRANSLATION: Road constructions:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Stop recording roads:הפסק הקלטת כבישים
+FREEMAP LOG: TRANSLATION: Traffic layer (color coded):עומסים (חומרה ע"פ צבע)
+FREEMAP LOG: TRANSLATION: Police traps:משטרה
+FREEMAP LOG: TRANSLATION: Police trap:משטרה
+FREEMAP LOG: TRANSLATION: Police:משטרה
+FREEMAP LOG: TRANSLATION: Traffic jams :דיווחי פקקים
+FREEMAP LOG: TRANSLATION: GPS already connected.:אין צורך לחפש ג'י פי אס - כבר מחובר
+FREEMAP LOG: TRANSLATION: Bonus points:נקודות בונוס
+FREEMAP LOG: TRANSLATION: points!:נקודות!
+FREEMAP LOG: TRANSLATION: Map color scheme:צבעי מפה
+FREEMAP LOG: TRANSLATION: Select map color scheme:בחר צבעי מפה
+FREEMAP LOG: TRANSLATION: Default:ברירת המחדל
+FREEMAP LOG: TRANSLATION: Mute:השתק
+FREEMAP LOG: TRANSLATION: Unmute:הפעל קול
+FREEMAP LOG: TRANSLATION: Others:דיווחי קהילה
+FREEMAP LOG: TRANSLATION: Language:שפה
+FREEMAP LOG: TRANSLATION: Prompts:קול דיבור
+FREEMAP LOG: TRANSLATION: Downloading new prompts:מוריד קבצי קול חדשים
+FREEMAP LOG: TRANSLATION: Downloading new voice files failed. Please try again later:הורדת קבצי קול חדש נכשלה. נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Prompt set:קבצי קול
+FREEMAP LOG: TRANSLATION: is not installed on your device, Do you want to download prompt files?:לא מותקנים על המכשיר שלך, האם להוריד את הקבצים ?
+FREEMAP LOG: TRANSLATION: The Blues:צבאי אלגנט
+FREEMAP LOG: TRANSLATION: Mochaccino:מוקצ'ינו
+FREEMAP LOG: TRANSLATION: Snow Day:קפה הפוך
+FREEMAP LOG: TRANSLATION: Twilight:יום אביב
+FREEMAP LOG: TRANSLATION: Tutti-fruiti:פונץ' בננה
+FREEMAP LOG: TRANSLATION: Rosebud:וניל תות
+FREEMAP LOG: TRANSLATION: Treasure chest:תיבת אוצר
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest! You'll know when you drive over it.:תיבת אוצר זו עשויה להכיל מתנה אמיתית! עבור על פני התיבה על מנת לגלות.
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest! You'll know when you drive over it. Note: You need to be a registered user in order to receive the gift inside. Register in 'Settings > Profile':תיבת אוצר זו 'עשויה להכיל מתנה אמיתית! עבור על פני התיבה על מנת לגלות. רק משתמשים רשומים יכולים לפתוח תיבות אוצר. הרשם ב"'גדרות> פרופיל
+FREEMAP LOG: TRANSLATION: There may be presents in this treasure chest but you need to be a registered user in order to get them. Register in 'Settings > Profile':תיבת אוצר זו עשויה להכיל מתנה אמיתית! רק משתמשים רשומים יכולים לפתוח תיבות אוצר. הרשם ב"הגדרות> פרופיל"
+FREEMAP LOG: TRANSLATION: Bummer, this treasure chest was emptied. Keep searching for other chests, some have valuable prizes in them.:אופס! תיבת אוצר זו ריקה. המשך לבדוק בתיבות אחרות. בחלקן יש פרסים יקרי ערך
+FREEMAP LOG: TRANSLATION: Huray! You just won %s and an extra %d points. Check your email for info.:יוהו!.. זכית ב %s וב %d נקודות נוספות. בדוק את דוא"ל האלקטרוני שלך לפרטים נוספים.
+FREEMAP LOG: TRANSLATION: Huray!!! You won the big prize:  %s . Check your email for info.:ברכות ואיחולים! זכית ב %s. בדוק את הדוא"ל שלך לפרטים נוספים.
+FREEMAP LOG: TRANSLATION: Huray! You just won %s. Check your email for info.:יוהו!.. זכית ב %s. בדוק את דוא"ל האלקטרוני שלך לפרטים נוספים. 
+FREEMAP LOG: TRANSLATION: We've made a few infrastructural changes that require re-start. Please exit and re-start waze.:הכנסנו מספר שינויים תשתיתיים המצריכים אתחול. אנא סגור את וייז ואתחל שוב
+FREEMAP LOG: TRANSLATION: Account details:פרטי משתמש
+FREEMAP LOG: TRANSLATION: Automatically tweet to my followers::שלח אוטומטית דיווחים לTwitter:
+FREEMAP LOG: TRANSLATION: My road reports:הדיווחים שלי
+FREEMAP LOG: TRANSLATION: e.g:  Just reported a traffic jam on Geary St. SF, CA using @waze Social GPS.:הרגע דווחתי על עומס תנועה ברח' השחף תל אביב דרך @waze  תוכנת גי. פי. אס  חינמית קהילתית
+FREEMAP LOG: TRANSLATION: My destination and ETA:יעד וזמן הגעה משוערך
+FREEMAP LOG: TRANSLATION: Disabled:מבוטל
+FREEMAP LOG: TRANSLATION: City & state only:עיר בלבד
+FREEMAP LOG: TRANSLATION: Street, City & State:עיר ורחוב
+FREEMAP LOG: TRANSLATION: House #, Street, City, State:עיר, רחוב ומספר בית
+FREEMAP LOG: TRANSLATION: e.g:  Driving to Greary St. SF, using @waze social GPS. ETA 2:32pm.:בדרך לרח' דיזנגוף תל אביב. זמן הגעה משוערך  14:25. נוהג עם @waze תוכנת ג'י. פי. אס  חינמית קהילתית 
+FREEMAP LOG: TRANSLATION: My road munching:זכייה בנקודות
+FREEMAP LOG: TRANSLATION: e.g:  Just munched a 'waze road goodie' worth 200 points on Geary St. SF driving with @waze social GPS:הרגע זכיתי ב-200 נקודות על אכילת הפתעות בדרך בנהיגה עם  @waze תוכנת ג'י. פי. אס חינמית קהילתית
+FREEMAP LOG: TRANSLATION: Missing exit:יציאה חסרה
+FREEMAP LOG: TRANSLATION: Wrong driving directions:הוראות נסיעה לא נכונות
+FREEMAP LOG: TRANSLATION: Missing bridge or overpass:גשר חסר
+FREEMAP LOG: TRANSLATION: Incorrect junction:צומת לא נכונה
+FREEMAP LOG: TRANSLATION: Turn not allowed:פנייה אסורה
+FREEMAP LOG: TRANSLATION: Prefer cookie munching:העדף דרכים לא ממופות 
+FREEMAP LOG: TRANSLATION: back:חזרה
+FREEMAP LOG: TRANSLATION: Live info:דיווחים
+FREEMAP LOG: TRANSLATION: Contacts:ספר טלפונים
+FREEMAP LOG: TRANSLATION: Go to my music player:נגן המוסיקה
+FREEMAP LOG: TRANSLATION: Quick actions:פעולות מהירות
+FREEMAP LOG: TRANSLATION: Settings:הגדרות
+FREEMAP LOG: TRANSLATION: (no playlist selected):(לא נבחרה רשימת השמעה)
+FREEMAP LOG: TRANSLATION: We could not send your report due to problems in the network connection - Your reports will be sent automatically when your network connection is restored. Map problems are fixed by wazers like you. you can edit the map too on www.waze.com:בעיות מפה מתוקנות ע"י קהילת הנהגים. גם אתה יוכל לתקן ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: 24 hour clock:שעון 24 שעות
+FREEMAP LOG: TRANSLATION: Twitter user name is empty. You are not logged in:שם המשתמש בטוייטר ריק. אינך מחובר לשירות.
+FREEMAP LOG: TRANSLATION: Twitter password is empty. You are not logged in:סיסמת טוייטר ריקה. אינך מחובר לשירות.
+FREEMAP LOG: TRANSLATION: Status: logged in:מצב: מחובר
+FREEMAP LOG: TRANSLATION: Status: not logged in:מצב: מנותק
+FREEMAP LOG: TRANSLATION: There is no network connection. Updating your Foursquare account details failed.:יש צורך בחיבוריות לרשת על מנת לעדכן את פרטי המשתמש של Foursquare. אנא בדוק חיבוריות לרשת
+FREEMAP LOG: TRANSLATION: Foursquare - Nearby:Foursquare - בקירבת מקום
+FREEMAP LOG: TRANSLATION: Foursquare - Check-in:Foursquare - הירשמות
+FREEMAP LOG: TRANSLATION: Full details on this check-in are available for you on foursquare.com.:לקבלת הפרטים המלאים אודות הרשמות זו בקר בחשבונך ב Foursquare
+FREEMAP LOG: TRANSLATION: Points::נקודות:
+FREEMAP LOG: TRANSLATION: We've partnered with Foursquare to give you quick access to check-in to nearby venues.:חברנו אל Foursquare על מנת לתת לך גישה מהירה להרשמות באתרים בסביבתך.
+FREEMAP LOG: TRANSLATION: What is Foursquare?:מהו Foursquare?
+FREEMAP LOG: TRANSLATION: It's a cool way to discover and promote cool places in your city and be rewarded for doing so.:זהו שירות חברתי שנותן דרך מגניבה לגלות מקומות מעניינים סביבך ולקבל קרדיט על כל ביקור.
+FREEMAP LOG: TRANSLATION: Don't have an account? Sign up on::אם אין לך חשבון, הרשם ב:
+FREEMAP LOG: TRANSLATION: Check-in with Foursquare:הירשמות עם Foursquare
+FREEMAP LOG: TRANSLATION: Connecting Foursquare . . .:מתחבר ל- Foursquare . . .
+FREEMAP LOG: TRANSLATION: Could not connect with Foursquare. Try again later.:לא ניתן להתחבר ל- Foursquare. נסה מאוחר יותר.
+FREEMAP LOG: TRANSLATION: We can't find anything nearby.:לא נמצאו מקומות בקירבתך.
+FREEMAP LOG: TRANSLATION: View my points:הנקודות שלי
+FREEMAP LOG: TRANSLATION: Creating new account . . . :מייצר חשבון חדש . . .
+FREEMAP LOG: TRANSLATION: End:סיים
+FREEMAP LOG: TRANSLATION: Note: route may not be optimal, but waze learns quickly...:הערה: ייתכן שהמסלול אינו אופטימלי, אך waze לומדת במהירות
+FREEMAP LOG: TRANSLATION: ETA:ETA
+FREEMAP LOG: TRANSLATION: Connecting...:מתחבר...
+FREEMAP LOG: TRANSLATION: Uploading logs...:שולח קבצים
+FREEMAP LOG: TRANSLATION: Your ping was successfully sent:ההודעה נשלחה בהצלחה
+FREEMAP LOG: TRANSLATION: Sending ping failed. Please again try later:שליחת ההודעה נכשלה. אנא שלח שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Sending Ping . . .:שולח . . .
+FREEMAP LOG: TRANSLATION: Ping:פינג
+FREEMAP LOG: TRANSLATION: You need to be a registered user in order to send Pings. Register in 'Settings > Profile':שליחת פינג יכולה להיעשות רק על ידי משתמשים רשומים. אנא הרשם ב'אפשרויות -  פרופיל'
+FREEMAP LOG: TRANSLATION: Be good! Your message will pop on this user's screen but is also seen publicly in chit chat.:היה אדיב! הודעתך תופיע על מסך המשתמש אך תיראה גם בשיח הציבורי על ידי יתר המשתמשים
+FREEMAP LOG: TRANSLATION: I agree to be pinged:אני מסכים שיפנו אליי לשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer agrees to be pinged:משתמש זה מסכים לשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer's version doesn't support ping:למשתמש זה גרסא ישנה שאינה תומכת בשיח נהגים
+FREEMAP LOG: TRANSLATION: This wazer's ping feature is turned off:משתמש זה לא הפעיל שיח נהגים
+FREEMAP LOG: TRANSLATION: FYI, Pings are publicly viewable.:לידיעתך שיח נהגים זה הוא פומבי
+FREEMAP LOG: TRANSLATION: Ping from: :פינג מ:
+FREEMAP LOG: TRANSLATION: Hi:הי
+FREEMAP LOG: TRANSLATION: bus.png:אוטובוס
+FREEMAP LOG: TRANSLATION: motorbike.png:אופנוע
+FREEMAP LOG: TRANSLATION: less than 10:פחות מ-10
+FREEMAP LOG: TRANSLATION: around 25:כ-25
+FREEMAP LOG: TRANSLATION: over 40:מעל 40
+FREEMAP LOG: TRANSLATION: Email/phone:דוא"ל/טלפון
+FREEMAP LOG: TRANSLATION: Am checking out this integration:אני בודק את האינטגרציה עם Foursquare
+FREEMAP LOG: TRANSLATION: Have unlocked the Roadwarrior Badge:השגתי את תג 'חורש הכבישים'
+FREEMAP LOG: TRANSLATION: Automatically tweet to my followers that I::שלח אוטומטית דיווחים לTwitter כאשר:
+FREEMAP LOG: TRANSLATION: Driving to:נוסע ל
+FREEMAP LOG: TRANSLATION: Good morning:בוקר טוב
+FREEMAP LOG: TRANSLATION: Good evening:ערב טוב
+FREEMAP LOG: TRANSLATION: Drive:סע
+FREEMAP LOG: TRANSLATION: Route %d:מסלול %d
+FREEMAP LOG: TRANSLATION: Compare routes:השוואת מסלולים
+FREEMAP LOG: TRANSLATION: Calculating alternative routes, please wait...:מחשב מסלולים, אנא המתן...
+FREEMAP LOG: TRANSLATION: Show Route:הצג מסלול
+FREEMAP LOG: TRANSLATION: Show All Routes:הצג מסלולים
+FREEMAP LOG: TRANSLATION: Show Routes:הצג מסלולים
+FREEMAP LOG: TRANSLATION: Alternatives:מסלולים
+FREEMAP LOG: TRANSLATION: Recommended routes::המלצת waze:
+FREEMAP LOG: TRANSLATION: (your frequent):(מסלול קבוע)
+FREEMAP LOG: TRANSLATION: Via:דרך
+FREEMAP LOG: TRANSLATION: Recommended route may take a bit more time but has less turns and junctions:המסלול המומלץ עשוי לקחת מעט יותר זמן אך מכיל פחות פניות וצמתים
+FREEMAP LOG: TRANSLATION: Image download failed:הורדת התמונה נכשלה
+FREEMAP LOG: TRANSLATION: Hello:שלום
+FREEMAP LOG: TRANSLATION: min.:דק'
+FREEMAP LOG: TRANSLATION: No valid alternatives were found for this destination:לא נמצאו מסלולים שונים משמעותית ליעד זה  
+FREEMAP LOG: TRANSLATION: Could not download scoreboard:הורדת טבלת ניקוד נכשלה
+FREEMAP LOG: TRANSLATION: Scoreboard is currently not available in your area:בקרוב: טבלת ניקוד משתמשים איזורית.
+FREEMAP LOG: TRANSLATION: Weekly:שבועי
+FREEMAP LOG: TRANSLATION: All times:בכל הזמנים
+FREEMAP LOG: TRANSLATION: Scoreboard:ניקוד
+FREEMAP LOG: TRANSLATION: Up:למעלה
+FREEMAP LOG: TRANSLATION: (loading):(טוען)
+FREEMAP LOG: TRANSLATION: Don't auto-learn my frequent routes:אל תלמד את המסלולים הנפוצים שלי
+FREEMAP LOG: TRANSLATION: Auto-learn routes to your frequent destination:זכור את המסלולים הנפוצים שלי
+FREEMAP LOG: TRANSLATION: USA & Canada:ארה"ב וקנדה
+FREEMAP LOG: TRANSLATION: World:עולם
+FREEMAP LOG: TRANSLATION: Daily updated:מעודכן יומית
+FREEMAP LOG: TRANSLATION: From Monday:מיום שני
+FREEMAP LOG: TRANSLATION: Calculating alternative routes...:מחשב מסלולים...
+FREEMAP LOG: TRANSLATION: Route 1 [1]:מסלול 1 [1]
+FREEMAP LOG: TRANSLATION: Route 2 [2]:מסלול 2 [2]
+FREEMAP LOG: TRANSLATION: Route 3 [3]:מסלול 3 [3]
+FREEMAP LOG: TRANSLATION: All routes [0]:כל המסלולים [0]
+FREEMAP LOG: TRANSLATION: Report abuse:דווח שיח לא ראוי
+FREEMAP LOG: TRANSLATION: Reports by several users will disable this user from reporting:דווחים ע"י מספר משתמשים יגרמו לחסימת יכולות השיח של משתמש זה
+FREEMAP LOG: TRANSLATION: Yellow pages:דפי זהב
+FREEMAP LOG: TRANSLATION: Speedometer:מד מהירות
+FREEMAP LOG: TRANSLATION: and then:ומייד
+FREEMAP LOG: TRANSLATION: No GPS. Showing approximate location:אין קליטת ג'י פי אס, לא ניתן לקבוע מיקום
+FREEMAP LOG: TRANSLATION: No Network Connection:אין חיבור רשת
+FREEMAP LOG: TRANSLATION: Sorry, you have no network connection right now. Please try later:מצטערים, אין חיבור רשת. נסה שוב מאוחר יותר 
+FREEMAP LOG: TRANSLATION: Sorry, there's no GPS reception in this location. Make sure you are outdoors:מצטערים,אין קליטת ג'י פי אס. אנא וודא שהנך במקום פתוח
+FREEMAP LOG: TRANSLATION: No Network & GPS:אין חיבור רשת וקליטת ג'י פי אס
+FREEMAP LOG: TRANSLATION: Sorry, you need Network & GPS connection when reporting an event. Please re-try later:מצטערים, אין חיבור רשת וקליטת ג'י פי אס. נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: Automatically post to Facebook::שלח אוטומטית דיווחים לFacebook:
+FREEMAP LOG: TRANSLATION: Connect to Facebook:התחבר ל Facebook
+FREEMAP LOG: TRANSLATION: Email your friends:שלח אימייל לחברים
+FREEMAP LOG: TRANSLATION: Invite Facebook friends:הזמן חברים מ Facebook
+FREEMAP LOG: TRANSLATION: Review us on Appstore:דרג אותנו ב Appstore
+FREEMAP LOG: TRANSLATION: Review us on Chomp:דרג אותנו ב Chomp
+FREEMAP LOG: TRANSLATION: Thanks for reviewing Waze:תודה על דירוג Waze
+FREEMAP LOG: TRANSLATION: Could not send email:לא ניתן לשלוח אימייל
+FREEMAP LOG: TRANSLATION: Spread the word:הפץ את השמועה
+FREEMAP LOG: TRANSLATION: Thanks!:תודה!
+FREEMAP LOG: TRANSLATION: Waze will now close and you'll be redirected to the Appstore:Waze תיסגר ותועבר ל Appstore
+FREEMAP LOG: TRANSLATION: I found a fun app called waze:מצאתי אפליקציה נחמדה בשם waze
+FREEMAP LOG: TRANSLATION: Hey,:הי,
+FREEMAP LOG: TRANSLATION: Wanted to tell you about a free social GPS app called waze. Waze has all kinds of fun social elements that give drivers the ability to actively update one another on traffic, police traps, construction, speed cams and a whole lot more...:רציתי לספר לך על אפליקציית GPS חברתית חינמית בשם waze. ב Waze כל מיני אלמנטים חברתיים כיפיים המאפשרים לנהגים לעדכן באופן פעיל אחד את השני לגבי מצב התנועה, משטרה, מצלמות מהירות ועוד...
+FREEMAP LOG: TRANSLATION: Download for:הורד עבור
+FREEMAP LOG: TRANSLATION: iPhone:אייפון
+FREEMAP LOG: TRANSLATION: Android, Windows Mobile or Symbian:אנדרואיד, Windows Mobile או סימביאן
+FREEMAP LOG: TRANSLATION: My waze username is::שם המשתמש שלי הוא:
+FREEMAP LOG: TRANSLATION: Enter city name:הכנס שם עיר
+FREEMAP LOG: TRANSLATION: Enter road name:הכנס שם כביש
+FREEMAP LOG: TRANSLATION: Oops:אופס
+FREEMAP LOG: TRANSLATION: Search failed:החיפוש נכשל
+FREEMAP LOG: TRANSLATION: Please try again later:נסה שוב מאוחר יותר
+FREEMAP LOG: TRANSLATION: ETA Updated:עדכון זמן הגעה
+FREEMAP LOG: TRANSLATION: Update details:עדכן פרטים
+FREEMAP LOG: TRANSLATION: Prompt me to edit road info:הצע עדכון פרטי כביש
+FREEMAP LOG: TRANSLATION: Sorry, no results were found for this search:לצערנו לא נמצאו תוצאות עבור חיפוש זה
+FREEMAP LOG: TRANSLATION: Sorry we were unable to complete the search:החיפוש נכשל
+FREEMAP LOG: TRANSLATION: wazer_gold:זהב
+FREEMAP LOG: TRANSLATION: wazer_silver:כסף
+FREEMAP LOG: TRANSLATION: wazer_bronze:ארד
+FREEMAP LOG: TRANSLATION: Exclusive moods:מצבי רוח אקסקלוסיביים
+FREEMAP LOG: TRANSLATION: Everyday moods:מצבי רוח יום יומיים
+FREEMAP LOG: TRANSLATION: (Available only to top weekly scoring wazers):(זמינים לבעלי הניקוד השבועי הגבוה בלבד)
+FREEMAP LOG: TRANSLATION: (Available to all):(זמינים לכל המשתמשים)
+FREEMAP LOG: TRANSLATION: Road goodies:נקודות בונוס
+FREEMAP LOG: TRANSLATION: My points:הנקודות שלי
+FREEMAP LOG: TRANSLATION: View real time alerts:מידע בזמן אמת
+FREEMAP LOG: TRANSLATION: Map settings:הגדרות מפה
+FREEMAP LOG: TRANSLATION: Data usage:צריכת נתונים
+FREEMAP LOG: TRANSLATION: Use data compression:השתמש בדחיסת מידע
+FREEMAP LOG: TRANSLATION: Refresh map of my area:רענן מפה
+FREEMAP LOG: TRANSLATION: Display network monitor:הצג מד צריכת נתונים
+FREEMAP LOG: TRANSLATION: Refreshing map tiles:מרענן מפה
+FREEMAP LOG: TRANSLATION: Removing old tiles...:מסיר מפה נוכחית...
+FREEMAP LOG: TRANSLATION: busy:עסוק
+FREEMAP LOG: TRANSLATION: busy-female:עסוקה
+FREEMAP LOG: TRANSLATION: in_a_hurry:ממהר
+FREEMAP LOG: TRANSLATION: in_a_hurry-female:ממהרת
+FREEMAP LOG: TRANSLATION: Update Waze! A great new version is available. Would you like to install it now?:עדכון גרסא ל waze! יש גירסה חדשה עם המון שיפורים ויכולות מגניבות. עדכן גרסא כעת?
+FREEMAP LOG: TRANSLATION: Sign Up:צור חשבון
+FREEMAP LOG: TRANSLATION: Your Points (updated daily):הנקודות שלך (מתעדכן פעם ביום)
+FREEMAP LOG: TRANSLATION: I certify that i am over the age of 13:אני מצהיר בזאת שאני מעל גיל 13
+FREEMAP LOG: TRANSLATION: Primary Street:רחוב ראשי
+FREEMAP LOG: TRANSLATION: Connected to waze:מחובר ל Waze
+FREEMAP LOG: TRANSLATION: The service failed to provide a valid route:הניווט ליעד נכשל
+FREEMAP LOG: TRANSLATION: Traffic tweets via twitter:דווחים ישירים מטוויטר
+FREEMAP LOG: TRANSLATION: your comment is also tweeted to the twitter user:תשובתך תישלח גם למשתמש טוויטר
+FREEMAP LOG: TRANSLATION: Show my Facebook pic (on app & web):הצג את תמונת הפייסבוק שלי
+FREEMAP LOG: TRANSLATION: Show my Facebook name (on app & web):הצג את שם הפייסבוק שלי
+FREEMAP LOG: TRANSLATION: Show my twitter username:הצג את שם משתמש הטוויטר שלי
+FREEMAP LOG: TRANSLATION: Drive over this road goodie to earn:עבור על פני הבונוס על מנת לזכות ב
+FREEMAP LOG: TRANSLATION: Notifications:עדכונים לטלפון
+FREEMAP LOG: TRANSLATION: Your score and rank:ניקוד ודירוג
+FREEMAP LOG: TRANSLATION: Contests and updates:תחרויות ומבצעים
+FREEMAP LOG: TRANSLATION: Friends:חברים
+FREEMAP LOG: TRANSLATION: Login:התחבר
+FREEMAP LOG: TRANSLATION: New user:משתמש חדש
+FREEMAP LOG: TRANSLATION: Existing user:משתמש קיים
+FREEMAP LOG: TRANSLATION: Your Details:פרטי משתמש
+FREEMAP LOG: TRANSLATION: Tweet that I'm checking-out waze:צייץ שאני בודק את וייז
+FREEMAP LOG: TRANSLATION: Allow wazers to ping you.:אפשר למשתמשים לפנות אליך.
+FREEMAP LOG: TRANSLATION: It's useful, fun and you can always turn it off.:זה שימושי וחביב, וניתן לכבות בכל עת.
+FREEMAP LOG: TRANSLATION: Connect to Facebook to see how your friends are wazing:התחבר לפייסבוק ופגוש את חבריך בוייז
+FREEMAP LOG: TRANSLATION: Display my FB name & picture in my user profile:הצג את שם הפייסבוק ותמונתי בפרטי המשתמש וייז שלי
+FREEMAP LOG: TRANSLATION: Events Radius:רדיוס דיווחים
+FREEMAP LOG: TRANSLATION: Km:ק"מ
+FREEMAP LOG: TRANSLATION: miles:מייל
+FREEMAP LOG: TRANSLATION: Start wazing:התחל
+FREEMAP LOG: TRANSLATION: On route:במסלול
+FREEMAP LOG: TRANSLATION: Welcome back:שמחים לראותך שוב
+FREEMAP LOG: TRANSLATION: Would you like to restore your favorites?:האם ברצונך לשחזר את המועדפים?
+FREEMAP LOG: TRANSLATION: Restoring favorites...:משחזר מועדפים...
+FREEMAP LOG: TRANSLATION: No favorite destinations were found:לא נמצאו יעדים שמורים במועדפים
+FREEMAP LOG: TRANSLATION: 1 destination was restored to your favorites:יעד אחד שוחזר לרשימת המועדפים
+FREEMAP LOG: TRANSLATION: destinations were restored to your favorites:יעדים שוחזרו לרשימת המועדפים
+FREEMAP LOG: TRANSLATION: more:עוד
+FREEMAP LOG: TRANSLATION: Waze newbie:משתמש דנדש
+FREEMAP LOG: TRANSLATION: Baby:משתמש דנדש
+FREEMAP LOG: TRANSLATION: (Gotta drive %d+ %s to access other moods):(נהג %d+ %s כדי לפתוח גישה למצבי רוח חדשים)
+FREEMAP LOG: TRANSLATION: Search address or Place:חיפוש כתובת או מקום
+FREEMAP LOG: TRANSLATION: Address or Place:כתובת או מקום
+FREEMAP LOG: TRANSLATION: No route:לא הוגדר יעד
+FREEMAP LOG: TRANSLATION: You should be in navigation mode to view events on your route:ניתן להציג דווחים על המסלול רק כאשר הנך מנווט ליעד מוגדר
+FREEMAP LOG: TRANSLATION: No groups:כרגע אינך משוייך לקבוצה
+FREEMAP LOG: TRANSLATION: You're not following any groups - but you should!:מסך זה מציג דווחים של הקבוצות שבחרת
+FREEMAP LOG: TRANSLATION: Go to 'Groups' in main menu to find or create a group:ניתן להצטרף או להקים קבוצה במסך "קבוצות" בתפריט הראשי
+FREEMAP LOG: TRANSLATION: From my main group:מהקבוצה העיקרית שלי
+FREEMAP LOG: TRANSLATION: From all groups I follow:מכל הקבוצות שלי
+FREEMAP LOG: TRANSLATION: None:מאף קבוצה
+FREEMAP LOG: TRANSLATION: My main group only:חברי הקבוצה העיקרית שלי
+FREEMAP LOG: TRANSLATION: The groups I follow:חברי כל הקבוצות שלי
+FREEMAP LOG: TRANSLATION: All groups:על כל משתמש
+FREEMAP LOG: TRANSLATION: Pop-up reports:הקפץ דווחים למסך
+FREEMAP LOG: TRANSLATION: Wazers group icons:הצג אייקון קבוצה ליד משתמש
+FREEMAP LOG: TRANSLATION: Show Group:הצג קבוצה
+FREEMAP LOG: TRANSLATION: My Groups:קבוצות
+FREEMAP LOG: TRANSLATION: group:קבוצה
+FREEMAP LOG: TRANSLATION: Around me:באיזורי
+FREEMAP LOG: TRANSLATION: Groups:קבוצות
+FREEMAP LOG: TRANSLATION: No groups events :(:כרגע אינך משוייך לקבוצה :(
+FREEMAP LOG: TRANSLATION: Turn off:כבה
+FREEMAP LOG: TRANSLATION: Are you sure you want to turn off waze?:האם אתה בטוח שברצונך לכבות את waze?
+FREEMAP LOG: TRANSLATION: FYI waze automatically shuts down when not used in background:לידיעתך, waze תיכבה אוטומטית לאחר חוסר שימוש ברקע
+FREEMAP LOG: TRANSLATION: No items:אין פריטים
+FREEMAP LOG: TRANSLATION: My Facebook details::פרטי ה Facebook שלי:
+FREEMAP LOG: TRANSLATION: Show name:הצג שם
+FREEMAP LOG: TRANSLATION: Show picture:הצג תמונה
+FREEMAP LOG: TRANSLATION: Don't show:אל תציג
+FREEMAP LOG: TRANSLATION: To friends only:לחברים בלבד
+FREEMAP LOG: TRANSLATION: To everyone:לכולם
+FREEMAP LOG: TRANSLATION: Day:יום
+FREEMAP LOG: TRANSLATION: Night:לילה
+FREEMAP LOG: TRANSLATION: Meters:מטרים
+FREEMAP LOG: TRANSLATION: Miles:מיילים
+FREEMAP LOG: TRANSLATION: Are you sure you want to submit this update?:האם אתה בטוח שברצונך לשלוח העידכון?
+FREEMAP LOG: TRANSLATION: Waze Groups Tip:טיפ
+FREEMAP LOG: TRANSLATION: Want group messages to pop-up to you? Go to Settings >Groups:ניתן הקפיץ הודעות קבוצה עם הגעתן. הגדרות > קבוצות
+FREEMAP LOG: TRANSLATION: Vitamin C:ויטמין סי
+FREEMAP LOG: TRANSLATION: Electrolytes:סטיק-לייט
+FREEMAP LOG: TRANSLATION: Cartouche:קרטוש
+FREEMAP LOG: TRANSLATION: Map editors:עורכי מפה
+FREEMAP LOG: TRANSLATION: Send error logs:שלח דוח שגיאה
+FREEMAP LOG: TRANSLATION: Is this still:האם שם הרחוב עדיין
+FREEMAP LOG: TRANSLATION: Live events:דיווחים חיים
+FREEMAP LOG: TRANSLATION: no relevant events:אין דיווחים רלוונטיים
+FREEMAP LOG: TRANSLATION: Previous events:דיווחים קודמים
+FREEMAP LOG: TRANSLATION: Show me as:הצג אותי כך
+FREEMAP LOG: TRANSLATION: Show Facebook details::הצג פרטי Facebook:
+FREEMAP LOG: TRANSLATION: My FB name:השם שלי
+FREEMAP LOG: TRANSLATION: My FB picture:התמונה שלי
+FREEMAP LOG: TRANSLATION: My profile link:קישור לפרופיל
+FREEMAP LOG: TRANSLATION: Show Twitter details::הצג פרטי Twitter
+FREEMAP LOG: TRANSLATION: Privacy:פרטיות
+FREEMAP LOG: TRANSLATION: Your privacy was previously set to invisible. Since this option was removed,  you are now set to 'Anonymous'. Check your privacy settings for new options:הפרטיות שלך היתה מוגדרת כבלתי נראה. כיוון שאפשרות זו בוטלה, הוגדרת כעת כ'אנונימי'. בדוק את הגדרות הפרטיות שלך לאפשרויות חדשות
+FREEMAP LOG: TRANSLATION: Hey there:היי
+FREEMAP LOG: TRANSLATION: When pinging,  chit-chatting or commenting you can't be 'Anonymous'. Go to Settings > Profile > Privacy to change your status:כששולחים פינג, פטפטת או תגובה לא ניתן להיות אנונימיים. כדי לשנות את הסטטוס שלך עבור ל- הגדרות > פרופיל > פרטיות
+FREEMAP LOG: TRANSLATION: Register:הרשם
+FREEMAP LOG: TRANSLATION: Disconnect from Facebook?:האם להתנתק מ Facebook?
+FREEMAP LOG: TRANSLATION: Can we assume that the feeling's mutual? If you've been enjoyning our app, we'd really appreciate it if you could leave us a nice review in the %s.:האם אפשר להניח שהתחושה הדדית? אם נהנית מ-waze, נודה לך מאוד אם תוכל להשאיר לנו דירוג חיובי ב-%s
+FREEMAP LOG: TRANSLATION: Market:Market
+FREEMAP LOG: TRANSLATION: Appstore:Appstore
+FREEMAP LOG: TRANSLATION: It'll really help us grow :):זה יעזור ל-waze לצמוח ולגדול :)
+FREEMAP LOG: TRANSLATION: Rate us:דרג אותנו
+FREEMAP LOG: TRANSLATION: we love you!:אנחנו אוהבים אותך!
+FREEMAP LOG: TRANSLATION: Rate:דרג
+FREEMAP LOG: TRANSLATION: Thanks for reviewing waze!:תודה שדירגת את waze!
+FREEMAP LOG: TRANSLATION: Groups settings:אפשרויות קבוצות
+FREEMAP LOG: TRANSLATION: Group alerts:דיווחי קבוצות
+FREEMAP LOG: TRANSLATION: Road successfully recorded.  A link to edit it will be available on your Dashboard at www.waze.com. (May take a couple of days):הכביש הוקלט בהצלחה. חפש את המסלול ולינק לעריכתו ב'לוח הבקרה שלי' (יופיע תוך יום או יומיים)
+FREEMAP LOG: TRANSLATION: Add Picture:הוסף תמונה
+FREEMAP LOG: TRANSLATION: Nickname field must be non-empty. :עליך לבחור לעצמך כינוי
+FREEMAP LOG: TRANSLATION: Your account has been created! :החשבון נוצר בהצלחה!
+FREEMAP LOG: TRANSLATION: Your temporary account has been created! :חשבון זמני נוצר בהצלחה!
+FREEMAP LOG: TRANSLATION: Take a moment to click through the following screens to familiarize yourself with waze... :קח כמה רגעים וצפה בכמה מסכים שיסבירו לך על waze...
+FREEMAP LOG: TRANSLATION: Report will also be sent to group::דווח ישלח גם לקבוצה:
+FREEMAP LOG: TRANSLATION: No group:אף קבוצה
+FREEMAP LOG: TRANSLATION: Thanks sent to user:תודה נשלחה למדווח
+FREEMAP LOG: TRANSLATION: Thumbs up from:תודה מ
+FREEMAP LOG: TRANSLATION: users:משתמשים
+FREEMAP LOG: TRANSLATION: one user:משתמש אחד
+FREEMAP LOG: TRANSLATION: Thumbs up:שלח תודה
+FREEMAP LOG: TRANSLATION: Re::לדיווח:
+FREEMAP LOG: TRANSLATION: Thanks from::תודה מ:
+FREEMAP LOG: TRANSLATION: ahead:לפניך
+FREEMAP LOG: TRANSLATION: Visible:גלויה
+FREEMAP LOG: TRANSLATION: Hidden:חבויה
+FREEMAP LOG: TRANSLATION: Minor:קלה
+FREEMAP LOG: TRANSLATION: Major:קשה
+FREEMAP LOG: TRANSLATION: Road:על הכביש
+FREEMAP LOG: TRANSLATION: Shoulder:בשוליים
+FREEMAP LOG: TRANSLATION: Weather:מזג אויר
+FREEMAP LOG: TRANSLATION: Police (visible):משטרה (גלויה)
+FREEMAP LOG: TRANSLATION: Police (hidden):משטרה (חבויה)
+FREEMAP LOG: TRANSLATION: Red light:מצלמת רמזור
+FREEMAP LOG: TRANSLATION: Fake:מצלמת דמה
+FREEMAP LOG: TRANSLATION: Object on road:חפץ על הכביש
+FREEMAP LOG: TRANSLATION: Pot hole on road:בור בכביש
+FREEMAP LOG: TRANSLATION: Road kill on road:סכנה בדרך
+FREEMAP LOG: TRANSLATION: Car stopped on shoulder:רכב עומד בשולי הכביש
+FREEMAP LOG: TRANSLATION: Animals near road:בעל חיים בשולי הכביש
+FREEMAP LOG: TRANSLATION: Missing sign:סימון חסר
+FREEMAP LOG: TRANSLATION: Foggy weather:ערפל
+FREEMAP LOG: TRANSLATION: Hail:ברד
+FREEMAP LOG: TRANSLATION: Heavy rain:מבול
+FREEMAP LOG: TRANSLATION: Heavy snow:שלג כבד
+FREEMAP LOG: TRANSLATION: Flood:הצפה
+FREEMAP LOG: TRANSLATION: Hazard on road:סכנה על הכביש
+FREEMAP LOG: TRANSLATION: Hazard on shoulder:סכנה בשולי הכביש
+FREEMAP LOG: TRANSLATION: Weather hazard:מזג אויר
+FREEMAP LOG: TRANSLATION: Mode:תאורה
+FREEMAP LOG: TRANSLATION: Light:תאורה
+FREEMAP LOG: TRANSLATION: Moderate:בינוני
+FREEMAP LOG: TRANSLATION: Heavy:כבד
+FREEMAP LOG: TRANSLATION: Standstill:כבד מאוד
+FREEMAP LOG: TRANSLATION: My lane:בצד שלי
+FREEMAP LOG: TRANSLATION: Other lane:בצד השני
+FREEMAP LOG: TRANSLATION: Also send this report to::שלח דווח גם לקבוצה:
+FREEMAP LOG: TRANSLATION: Fixed camera:מצלמה קבועה
+FREEMAP LOG: TRANSLATION: Minor accident:תאונה קלה
+FREEMAP LOG: TRANSLATION: Major accident:תאונה קשה
+FREEMAP LOG: TRANSLATION: According to speed:מהירות 
+FREEMAP LOG: TRANSLATION: According to distance:מרחק
+FREEMAP LOG: TRANSLATION: Car stopped:רכב עומד
+FREEMAP LOG: TRANSLATION: Animals:בעל חיים
+FREEMAP LOG: TRANSLATION: Fog:ערפל
+FREEMAP LOG: TRANSLATION: Object:חפץ
+FREEMAP LOG: TRANSLATION: Pot hole:בור
+FREEMAP LOG: TRANSLATION: Road kill:סכנה
+FREEMAP LOG: TRANSLATION: Are you in traffic?:האם לדווח על נסיעה בפקק?
+FREEMAP LOG: TRANSLATION: We're detecting a slow down:המערכת מזהה האטה
+FREEMAP LOG: TRANSLATION: This route is still the fastest:מסלול זה הוא עדיין המהיר ביותר
+FREEMAP LOG: TRANSLATION: Location and time saved:מיקום הדיווח נשמר
+FREEMAP LOG: TRANSLATION: Promotion:מבצע
+FREEMAP LOG: TRANSLATION: Street/road without a name:רחוב ללא שם
+FREEMAP LOG: TRANSLATION: Note: New speed cams need to be validated by community map editors. You can do it, too: www.waze.com:מצלמות חדשות מאושרות ע"י קהילת הנהגים. גם אתה יוכל ב www.waze.co.il
+FREEMAP LOG: TRANSLATION: Wazers are notified of speed cams only when approaching at an excessive speed.:התראה על מצלמות מתקבלת רק כאשר מתקרבים במהירות מופרזת
+FREEMAP LOG: TRANSLATION: Speed trap ahead:מצלמת מהירות לפניך
+FREEMAP LOG: TRANSLATION: Red light cam ahead:מצלמת רמזור לפניך
+FREEMAP LOG: TRANSLATION: Downloading voice ...:מוריד הודעה קולית ...
+FREEMAP LOG: TRANSLATION: Use:אישור
+FREEMAP LOG: TRANSLATION: Tap "Record" when ready:לחץ "הקלט" כדי להתחיל
+FREEMAP LOG: TRANSLATION: Tap "Stop" when finished:לחץ "עצור" כדי לסיים
+FREEMAP LOG: TRANSLATION: Recording complete:הקלטה הסתיימה
+FREEMAP LOG: TRANSLATION: Recording in:מתחיל בעוד
+FREEMAP LOG: TRANSLATION: My Coupons:הקופונים שלי
+FREEMAP LOG: TRANSLATION: Stop:עצור
+FREEMAP LOG: TRANSLATION: Record:הקלט
+FREEMAP LOG: TRANSLATION: Recording...:מקליט...
+FREEMAP LOG: TRANSLATION: Take a picture:הוסף תמונה
+FREEMAP LOG: TRANSLATION: Picture added:תמונה נוספה
+FREEMAP LOG: TRANSLATION: Oil spill:כתם שמן
+FREEMAP LOG: TRANSLATION: Ice on road:קרח על הכביש
+The thread '<No Name>' (0xf1e0782) has exited with code 0 (0x0).
+FREEMAP LOG: TRANSLATION: Construction zone:עבודות בכביש
+FREEMAP LOG: TRANSLATION: Lane closed:מסלול סגור
+FREEMAP LOG: TRANSLATION: It only takes a handful of wazers driving in your area to significantly improve the real-time traffic & road info you need for a better commute.:צריך רק קומץ של משתמשי waze  באזורך בשביל לשפר את הדיווחים ואת המידע החי מהכבישים.
+FREEMAP LOG: TRANSLATION: So tell your friends and help build the waze driving community in your 'hood'!:אז ספר לחבריך, וביחד תוכלו לבנות את קהילת waze באזור שלכם!
+FREEMAP LOG: TRANSLATION: Share on Facebook:שתף ב- Facebook
+FREEMAP LOG: TRANSLATION: We'd love to know how you heard about waze:נשמח לדעת איך שמעת על וייז
+FREEMAP LOG: TRANSLATION: Heard about waze:שמעתי על וייז
+FREEMAP LOG: TRANSLATION: Friend told me (in person):חבר סיפר לי
+FREEMAP LOG: TRANSLATION: Friend tweeted:חבר צייץ
+FREEMAP LOG: TRANSLATION: Friend shared on Facebook:חבר שיתף ב- Facebook
+FREEMAP LOG: TRANSLATION: Found it in '%s' in the %s:מצאתי בקטגוריית '%s' ב- %s
+FREEMAP LOG: TRANSLATION: Navigation:ניווט
+FREEMAP LOG: TRANSLATION: Travel:נסיעות
+FREEMAP LOG: TRANSLATION: It was promoted in the %s %s:פורסם ב- %s %s
+FREEMAP LOG: TRANSLATION: Blog / newspaper / TV  / Radio:בלוג / עיתון / טלוויזיה / רדיו
+FREEMAP LOG: TRANSLATION: A waze advertisement:פרסומת של וייז
+FREEMAP LOG: TRANSLATION: Other:אחר
+FREEMAP LOG: TRANSLATION: Home (Touch to add):בית (לחץ להוספה)
+FREEMAP LOG: TRANSLATION: Work (Touch to add):עבודה (לחץ להוספה)
+FREEMAP LOG: TRANSLATION: My Home:הבית שלי
+FREEMAP LOG: TRANSLATION: My Work:העבודה שלי
+FREEMAP LOG: TRANSLATION: Waze is best used for commuting.:waze מיועד בעיקר לנסיעות מוכרות ויומיומיות
+FREEMAP LOG: TRANSLATION: Once you add 'Home' and 'Work' to your favorites, waze'll learn your preferred routes and departure times to these destinations.:לאחר שתוסיף את 'בית' ו'עבודה' למועדפים, waze תלמד את המסלולים המועדפים עליך, ואת הזמנים הקבועים בהם אתה נוסע ליעדים אלו.
+FREEMAP LOG: TRANSLATION: The address was successfully added to your Favorites:הכתובת הוספה בהצלחה למועדפים.
+FREEMAP LOG: TRANSLATION: Enter your address in the search box above.:הכנס את הכתובת בתיבת החיפוש שמופיעה למעלה.
+FREEMAP LOG: TRANSLATION: Not listed:לא נמצא
+FREEMAP LOG: TRANSLATION: Not listed?:לא נמצא?
+FREEMAP LOG: TRANSLATION: Can't find what you're:לא מוצא את
+FREEMAP LOG: TRANSLATION: looking for?:מה שחיפשת?
+FREEMAP LOG: TRANSLATION: If your street is not on the map, note that you can record it and add it yourself!:אם הרחוב שלך לא נמצא על המפה, שים לב שאתה יכול להקליט ולהוסיף אותו בעצמך!
+FREEMAP LOG: TRANSLATION: Find out how in the forum.:פרטים נוספים - בפורום.
+FREEMAP LOG: TRANSLATION: Exit right:צא ימינה
+FREEMAP LOG: TRANSLATION: Exit left:צא שמאלה
+FREEMAP LOG: TRANSLATION: Routes:מסלולים
+FREEMAP LOG: TRANSLATION: Proceed to highlighted route:המשך לעבר המסלול המוצג
+FREEMAP LOG: TRANSLATION: Recalculate route:חשב מסלול חדש
+FREEMAP LOG: TRANSLATION: Viewed::צפיות:
+FREEMAP LOG: TRANSLATION: Comments::תגובות:
+FREEMAP LOG: TRANSLATION: Thanks::תודות:
+FREEMAP LOG: TRANSLATION: Alternative routes:מסלולים
+FREEMAP LOG: TRANSLATION: Confirm:אישור
+FREEMAP LOG: TRANSLATION: min:דק'
+FREEMAP LOG: TRANSLATION: New ETA::זמן הגעה משוער:
+FREEMAP LOG: TRANSLATION: Note: Waze constantly checks alternatives:הערה: waze בודקת מסלולים חלופיים ברקע
+FREEMAP LOG: TRANSLATION: and re-routes when needed:ומשנה את מסלול הניווט בשעת הצורך
+FREEMAP LOG: TRANSLATION: Your preferred route:המסלול המועדף עליך
+FREEMAP LOG: TRANSLATION: Tip: Teach waze your preferred routes by simply driving them several times.:טיפ: למד את waze על המסלולים המועדפים עליך על ידי כך שתסע בהם כמה פעמים
+FREEMAP LOG: TRANSLATION: Things have freed up ahead:הפקקים בהמשך הדרך השתחררו
+FREEMAP LOG: TRANSLATION: Traffic is building up ahead:מתחיל להיווצר פקק בהמשך הדרך
+FREEMAP LOG: TRANSLATION: sooner:מוקדם יותר
+FREEMAP LOG: TRANSLATION: later:מאוחר יותר
+FREEMAP LOG: TRANSLATION: Arrival::זמן הגעה:
+FREEMAP LOG: TRANSLATION: Changing route!:משנה מסלול!
+FREEMAP LOG: TRANSLATION: There's a better route:קיים מסלול טוב יותר
+FREEMAP LOG: TRANSLATION: Time saved::הזמן שחסכת:
+FREEMAP LOG: TRANSLATION: min delay:דקות עיכוב
+FREEMAP LOG: TRANSLATION: min early:דקות שנחסכו
+FREEMAP LOG: TRANSLATION: My Waze:שלי waze -ה
+FREEMAP LOG: TRANSLATION: My inbox:ה-inbox שלי
+FREEMAP LOG: TRANSLATION: Waze Groups:קבוצות waze
+FREEMAP LOG: TRANSLATION: My Scoreboard:לוח הניקוד שלי
+FREEMAP LOG: TRANSLATION: My Profile:הפרופיל שלי
+FREEMAP LOG: TRANSLATION: My Mood:מצב הרוח שלי
+FREEMAP LOG: TRANSLATION: Get Social:רשתות חברתיות
+FREEMAP LOG: TRANSLATION: Recommend Waze:שלח לחבר
+FREEMAP LOG: TRANSLATION: Always play sound to speaker:השתמש ברמקול של המכשיר
+FREEMAP LOG: TRANSLATION: Sure you wanna shut down?:האם לכבות את waze?

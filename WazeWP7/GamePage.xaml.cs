@@ -380,28 +380,6 @@ namespace WazeWP7
                         int x = textString.x;
                         int y = textString.y;
 
-                        if (textString.angle == 0)
-                        {
-                            // Fix location of upper notification. for some reason the C code is sending x values that are outside the canvas...
-                            if (y == 67)
-                            {
-                                x -= 32;
-                            }
-
-                            // Fix location of the steet name. for some reason the C code is sending x values that are outside the canvas...
-                            if (
-                                ((y == 472) && GamePage.get().IsPhoneLandscape()) ||
-                                ((y == 792) && !GamePage.get().IsPhoneLandscape())
-                                )
-                            {
-                                x -= 37;
-                            }
-                        }
-                        else
-                        {
-                            // y -= 20;
-                        }
-
                         // Draw the string
                         try
                         {
@@ -427,14 +405,10 @@ namespace WazeWP7
         void BuildApplicationBar()
         {
             // Set the page's ApplicationBar to a new instance of ApplicationBar
-            ApplicationBar = new ApplicationBar();
-
-            // Hide the app bar by default:
-            ApplicationBar.IsVisible = true;
-            PopApplicationBar();
-
-            ApplicationBar.StateChanged += new EventHandler<ApplicationBarStateChangedEventArgs>(ApplicationBar_StateChanged);
-
+            ApplicationBar = new ApplicationBar()
+            {
+                Mode = ApplicationBarMode.Minimized
+            };
         }
 
         void CopySounds()
@@ -567,8 +541,7 @@ namespace WazeWP7
         /// <summary>
         /// Refresh the graphics.
         /// Repaint the screen using the update graphic element list.
-        /// This is heavy as eache change in the MainGraphics children wil trigger dependencies code.
-        /// </summary>
+          /// </summary>
         /// <param name="list"></param>
         public void refresh(Canvas newGraphics)
         {
@@ -632,10 +605,6 @@ namespace WazeWP7
             appBarButton.Click += delegate
             {
                 wazeMenuItem.CallCallback();
-
-                // Hide bar after asking to show me
-                ApplicationBar.IsVisible = false;
-
             };
             System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
@@ -757,11 +726,6 @@ namespace WazeWP7
                             ad.SetVersion(s);
 
                             GamePage.get().GetPopupPanel().Children.Add(ad);
-
-
-                            // Hide bar after asking to show me
-                            ApplicationBar.IsVisible = false;
-
                         };
 
                         //appBarMenuItem = new ApplicationBarMenuItem("טען מפה");
@@ -776,9 +740,6 @@ namespace WazeWP7
 
                         //    Syscalls.NOPH_TileStorage_initialize(Syscalls.ts_id);
 
-                        //    // Hide bar after asking to show me
-                        //    ApplicationBar.IsVisible = false;
-
                         //    MessageBox.Show("Finished");
                         //};
                     }
@@ -787,10 +748,6 @@ namespace WazeWP7
                         appBarMenuItem.Click += (delegate
                         {
                             new_item.CallCallback();
-
-                            // Hide bar after asking to show me
-                            ApplicationBar.IsVisible = false;
-
                         });
                     }
 
@@ -1359,13 +1316,6 @@ namespace WazeWP7
 
             //}
 
-
-            // Handle appbar visibility
-            if (appBarArea < 60)
-            {
-                PopApplicationBar();
-            }
-
             // If Dialog is in progress, ignore map touches that are not GPS emulation or app bar requests.
             if (Syscalls.DialogIsOn)
             {
@@ -1398,33 +1348,6 @@ namespace WazeWP7
 
 
 
-        }
-
-        private void PopApplicationBar()
-        {
-            // Open the application bar
-            ApplicationBar.IsVisible = true;
-
-            // Auto hide after 15 sec if menu is closed.
-            Thread threadAutoHide = new Thread(new ThreadStart(
-                delegate()
-                {
-
-                    // Wait before autohide if appbar menu is open:
-                    do
-                    {
-                        Thread.Sleep(15000);
-
-                    } while (m_isMenuVisible);
-
-                    // Menu is minimized, we are allowed to hide it.
-                    Dispatcher.BeginInvoke(() =>
-                    {
-                        ApplicationBar.IsVisible = false;
-                    });
-                }));
-
-            threadAutoHide.Start();
         }
 
         private void touchUpEvent(int x, int y)
@@ -1549,6 +1472,7 @@ namespace WazeWP7
         /// <param name="e"></param>
         private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
+
             //Keep the latest oreientation   
             m_CurrentOrientation = e.Orientation;
 
@@ -1565,12 +1489,6 @@ namespace WazeWP7
             // Call the changed event for more internal updates.
             checkOrientationChanged();
 
-        }
-
-
-        void ApplicationBar_StateChanged(object sender, ApplicationBarStateChangedEventArgs e)
-        {
-            m_isMenuVisible = e.IsMenuVisible;
         }
 
         public override Panel GetPopupPanel()

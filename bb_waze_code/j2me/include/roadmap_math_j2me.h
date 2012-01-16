@@ -25,9 +25,9 @@
 
 typedef int NOPH_RoadMapMath_t;
 
-#define __NR_NOPH_RoadMapMath_setLonUnits 209 /* waze */
+#define __NR_NOPH_RoadMapMath_setLonUnits 210 /* waze */
 static inline _syscall1(void,NOPH_RoadMapMath_setLonUnits, int, cosine) 
-#define __NR_NOPH_RoadMapMath_distFromSeg 210 /* waze */
+#define __NR_NOPH_RoadMapMath_distFromSeg 211 /* waze */
 static inline _syscall5(int,NOPH_RoadMapMath_distFromSeg, void*, pos_addr, void*, pos1_addr, void*, pos2_addr, void*, intersection_addr, void*, which_addr) 
 
 #endif /* !__ROADMAP_MATH_J2ME_H__ */

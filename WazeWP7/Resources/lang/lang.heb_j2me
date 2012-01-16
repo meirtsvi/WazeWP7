@@ -1,0 +1,17 @@
+﻿# This is a translation file for Waze WP7 that is not updated online.
+# this file resides in the local resources folder and enables developers to add new translated text
+# For Hebrew, please first check is there is an existing translatoin in Waze online repository before adding a new translation here
+# as any translation here will override the online translation.
+# see a copy of existing translation in solution file: en2he_online_trans.txt
+# Usage Format: Use the pipe char to translate english text to the new language text.
+# notice we are keeping the same filename convention of the online files waze hosts.
+# Use the Diaz (#) char to start a comment line that will be ignored.
+# For example:
+# Hellow World!|שלום עולם!
+#
+# Hebrew
+#
+Start favorites restoration|הפעלת שחזור מועדפים 
+Restore Now|שחזר עכשיו
+Rotation Control|שליטה בסיבוב מסך
+Enable Rotation|אפשר סיבוב

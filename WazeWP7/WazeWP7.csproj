@@ -128,6 +128,9 @@
     <Compile Include="RTLMessageBox.xaml.cs">
       <DependentUpon>RTLMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectLanguagePage.xaml.cs">
+      <DependentUpon>SelectLanguagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SetjmpException.cs" />
     <Compile Include="SettingsPivotPage.xaml.cs">
       <DependentUpon>SettingsPivotPage.xaml</DependentUpon>
@@ -198,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="SelectLanguagePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SettingsPivotPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -226,6 +233,12 @@
   <ItemGroup>
     <None Include="Resources\font.ttf" />
     <None Include="Resources\font_normal.ttf" />
+    <Resource Include="Resources\lang\lang.eng_j2me">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\lang\lang.heb_j2me">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="waze_logo.png" />
     <Resource Include="waze.png" />
     <None Include="Properties\AppManifest.xml" />
@@ -712,6 +725,7 @@
     <Resource Include="Resources\menu_bg_top.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <None Include="en2he_online_trans.txt" />
     <Content Include="Resources\menu_icon.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
