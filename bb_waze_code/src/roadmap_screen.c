@@ -230,7 +230,7 @@ static const char* ANALYTICS_EVENT_VIEWMODE_3D   = "3D";
 #define SQUARE_DRAWN   0x2
 
 #ifdef J2ME
-#define REFRESH_FLOW_CONTROL_TIMEOUT 50
+#define REFRESH_FLOW_CONTROL_TIMEOUT 35
 #elif (defined (OPENGL) && defined (IPHONE))
 #define REFRESH_FLOW_CONTROL_TIMEOUT 35
 #else

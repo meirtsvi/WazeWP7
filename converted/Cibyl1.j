@@ -5928,7 +5928,7 @@ L_1002840:
 // 0x01002840: 0x1002840: addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
-// 0x01002844: 0x1002844: jal   0x10a1a60 addiu a1, zero, 19
+// 0x01002844: 0x1002844: jal   0x10a1a6c addiu a1, zero, 19
 	ldc.i4.s 19
 	stloc.2
 	ldloc.0
@@ -5936,7 +5936,7 @@ L_1002840:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1a60(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1a6c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6454,7 +6454,7 @@ __CIBYL_javamethod_begin:
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x01002984: 0x1002984: jal   0x106b360 addu  a0, v0, zero
+// 0x01002984: 0x1002984: jal   0x106b36c addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -6462,7 +6462,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl79::Realtime_NotifySplashUpdateTime_106b360(int32,int32,int32,int32,int32)
+	call int32 Cibyl79::Realtime_NotifySplashUpdateTime_106b36c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -7167,7 +7167,7 @@ __CIBYL_javamethod_begin:
 	stloc 5
 	brfalse L_1002b94
 // --- basic block ---
-// 0x01002b8c: 0x1002b8c: jal   0x106a6f8 addu  a0, s1, zero
+// 0x01002b8c: 0x1002b8c: jal   0x106a704 addu  a0, s1, zero
 	ldloc 9
 	stloc.1
 	ldloc.0
@@ -7175,7 +7175,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl79::WDF_TimeFromModifiedSince_106a6f8(int32,int32,int32,int32,int32)
+	call int32 Cibyl79::WDF_TimeFromModifiedSince_106a704(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -7241,7 +7241,7 @@ L_1002b94:
 	add
 	ldloc 5
 	stelem.i4
-// 0x01002bc4: 0x1002bc4: jal   0x10a2da0 sw    zero, 28(sp)
+// 0x01002bc4: 0x1002bc4: jal   0x10a2dac sw    zero, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7255,7 +7255,7 @@ L_1002b94:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl122::roadmap_res_download_10a2da0(int32,int32,int32,int32,int32)
+	call int32 Cibyl122::roadmap_res_download_10a2dac(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

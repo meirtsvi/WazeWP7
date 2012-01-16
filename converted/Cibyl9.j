@@ -1056,13 +1056,13 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0100cb00: 0x100cb00: jal   0x10595e0 sll   zero, zero, 0
+// 0x0100cb00: 0x100cb00: jal   0x10595ec sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl66::navigate_main_stop_navigation_10595e0(int32,int32,int32,int32,int32)
+	call int32 Cibyl66::navigate_main_stop_navigation_10595ec(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -4732,7 +4732,7 @@ L_100d4c0:
 	ldc.i4 -9936
 	add
 	stloc.1
-// 0x0100d4dc: 0x100d4dc: jal   0x106be68 sw    v1, 31436(v0)
+// 0x0100d4dc: 0x100d4dc: jal   0x106be74 sw    v1, 31436(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
@@ -4746,7 +4746,7 @@ L_100d4c0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl80::Realtime_NotifyOnLogin_106be68(int32,int32,int32,int32,int32)
+	call int32 Cibyl80::Realtime_NotifyOnLogin_106be74(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5079,7 +5079,7 @@ L_100d528:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x0100d598: 0x100d598: jal   0x10bfbfc sw    v1, 31456(v0)
+// 0x0100d598: 0x100d598: jal   0x10bfc08 sw    v1, 31456(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
@@ -5088,10 +5088,10 @@ L_100d528:
 	add
 	ldloc 7
 	stelem.i4
-	call int32 Cibyl142::roadmap_label_clear_10bfbfc()
+	call int32 Cibyl142::roadmap_label_clear_10bfc08()
 	stloc 5
 // --- basic block ---
-// 0x0100d5a0: 0x100d5a0: jal   0x1060b04 addu  a0, s0, zero
+// 0x0100d5a0: 0x100d5a0: jal   0x1060b10 addu  a0, s0, zero
 	ldloc 9
 	stloc.1
 	ldloc.0
@@ -5099,7 +5099,7 @@ L_100d528:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl71::navigate_graph_clear_1060b04(int32,int32,int32,int32,int32)
+	call int32 Cibyl71::navigate_graph_clear_1060b10(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5709,7 +5709,7 @@ L_100d710:
 	ldloc 9
 	stloc.1
 // 0x0100d740: 0x100d740: sw    ra, 1068(sp)
-// 0x0100d744: 0x100d744: jal   0x10c0bb0 sw    v0, 24(sp)
+// 0x0100d744: 0x100d744: jal   0x10c0bc0 sw    v0, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5723,7 +5723,7 @@ L_100d710:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::vsnprintf_10c0bb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::vsnprintf_10c0bc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6

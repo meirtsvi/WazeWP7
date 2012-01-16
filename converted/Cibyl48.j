@@ -6828,7 +6828,7 @@ L_10424e8:
 	add
 	stloc.0
 // 0x010424ec: 0x10424ec: sw    ra, 20(sp)
-// 0x010424f0: 0x10424f0: jal   0x1078bd0 sw    s0, 16(sp)
+// 0x010424f0: 0x10424f0: jal   0x1078bdc sw    s0, 16(sp)
 	ldloc 8
 	ldloc.0
 	ldc.i4.2
@@ -6842,7 +6842,7 @@ L_10424e8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl90::RTAlerts_CurrentAlert_Has_Comments_1078bd0(int32,int32,int32,int32,int32)
+	call int32 Cibyl90::RTAlerts_CurrentAlert_Has_Comments_1078bdc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6861,20 +6861,20 @@ L_10424e8:
 	br L_1042530
 // --- basic block ---
 L_1042508:
-// 0x01042508: 0x1042508: jal   0x1077c78 lui   s0, 0x60000
+// 0x01042508: 0x1042508: jal   0x1077c84 lui   s0, 0x60000
 	ldc.i4 393216
 	stloc 6
-	call int32 Cibyl89::RTAlerts_Get_Current_Alert_Id_1077c78()
+	call int32 Cibyl89::RTAlerts_Get_Current_Alert_Id_1077c84()
 	stloc 5
 // --- basic block ---
-// 0x01042510: 0x1042510: jal   0x1077344 addu  a0, v0, zero
+// 0x01042510: 0x1042510: jal   0x1077350 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl89::RTAlerts_Get_Number_of_Comments_1077344(int32,int32,int32,int32)
+	call int32 Cibyl89::RTAlerts_Get_Number_of_Comments_1077350(int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

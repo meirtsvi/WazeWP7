@@ -122,7 +122,7 @@ namespace WazeWP7
             }
             else // currently real - switch to emulated.
             {
-                timerEmulator.Change(1000, 2000);
+                timerEmulator.Change(1000, 1000);
                 timer.Change(1000, Timeout.Infinite);
                 m_GPSEmulationIsOn = true;
             }
@@ -141,7 +141,7 @@ namespace WazeWP7
         // private static DateTime last_update_time = DateTime.UtcNow;
         
         /// <summary>
-        /// Force update into wase every 2000 ms
+        /// Force update into waze every 1000 ms
         /// </summary>
         /// <param name="state"></param>
         private void TimerCallback(object state)

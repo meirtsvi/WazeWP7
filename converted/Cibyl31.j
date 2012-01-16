@@ -7072,7 +7072,7 @@ __CIBYL_javamethod_begin:
 	ldloc.1
 	add
 	stloc.1
-// 0x0102b210: 0x102b210: jal   0x10b99fc addu  a1, zero, zero
+// 0x0102b210: 0x102b210: jal   0x10b9a08 addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.0
@@ -7080,7 +7080,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl138::editor_cleanup_test_10b99fc(int32,int32,int32,int32,int32)
+	call int32 Cibyl138::editor_cleanup_test_10b9a08(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5

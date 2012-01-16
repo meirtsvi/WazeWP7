@@ -294,7 +294,7 @@ namespace WazeWP7
             {
                 currentMouseState_X = location.Position.X;
                 currentMouseState_Y = location.Position.Y;
-
+                
                 switch (location.State)
                 {
                     case TouchLocationState.Pressed:
@@ -313,14 +313,15 @@ namespace WazeWP7
 
             if (isPressed)
             {
-                if (!prevIsPressed)
+                // fire click event only if one finger is down. Multitouch events are handled inside ManipulationDelta event handler
+                if (!prevIsPressed && col.Count == 1)
                 {
                     touchDownEvent((int)currentMouseState_X, (int)currentMouseState_Y);
                 }
-                else if (currentMouseState_X != prevMouseState_X || currentMouseState_Y != prevMouseState_Y)
-                {
-                    touchMovedEvent((int)currentMouseState_X, (int)currentMouseState_Y);
-                }
+                //else if (currentMouseState_X != prevMouseState_X || currentMouseState_Y != prevMouseState_Y)
+                //{
+                //    touchMovedEvent((int)currentMouseState_X, (int)currentMouseState_Y);
+                //}
             }
             else if (prevIsPressed)
             {
@@ -1540,6 +1541,15 @@ namespace WazeWP7
                     }
                 }
             }
+            else if (e.DeltaManipulation.Translation.X != 0 || e.DeltaManipulation.Translation.Y != 0)
+            {
+                TouchCollection col = TouchPanel.GetState();
+                foreach (TouchLocation location in col)
+                {
+                    touchMovedEvent((int)location.Position.X, (int)location.Position.Y);
+                }
+            }
         }
+
     }
 }

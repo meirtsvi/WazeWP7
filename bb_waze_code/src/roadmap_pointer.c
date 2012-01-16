@@ -55,7 +55,7 @@
 #define	DRAG_MOVEMENT_THR	0	// Default value
 #endif
 
-#define LONG_CLICK_TIMEOUT          600
+#define LONG_CLICK_TIMEOUT          1200
 #define DOUBLE_CLICK_TIMEOUT        300
 #define DRAG_FLOW_CONTROL_TIMEOUT   30
 

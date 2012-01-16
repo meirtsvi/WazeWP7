@@ -5464,7 +5464,7 @@ L_101c5c4:
 // 0x0101c644: 0x101c644: addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
-// 0x0101c648: 0x101c648: jal   0x10a1a60 addiu a1, zero, 1
+// 0x0101c648: 0x101c648: jal   0x10a1a6c addiu a1, zero, 1
 	ldc.i4.1
 	stloc.2
 	ldloc.0
@@ -5472,7 +5472,7 @@ L_101c5c4:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1a60(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1a6c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6

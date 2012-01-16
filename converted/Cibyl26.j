@@ -1275,13 +1275,13 @@ L_1023084:
 	ldloc 5
 	brfalse L_10237ac
 // --- basic block ---
-// 0x01023108: 0x1023108: jal   0x10bd824 sll   zero, zero, 0
+// 0x01023108: 0x1023108: jal   0x10bd830 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_screen_gray_scale_10bd824(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_screen_gray_scale_10bd830(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6333,7 +6333,7 @@ L_1023f28:
 	stloc.1
 	beq  L_1023f94
 // --- basic block ---
-// 0x01023f8c: 0x1023f8c: jal   0x10bfcdc addu  a1, s1, zero
+// 0x01023f8c: 0x1023f8c: jal   0x10bfce8 addu  a1, s1, zero
 	ldloc 10
 	stloc.2
 	ldloc.0
@@ -6341,7 +6341,7 @@ L_1023f28:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl142::roadmap_label_add_10bfcdc(int32,int32,int32,int32,int32)
+	call int32 Cibyl142::roadmap_label_add_10bfce8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

@@ -2150,8 +2150,8 @@ L_1025be0:
 	ldloc 5
 	bne.un L_1025c04
 // --- basic block ---
-// 0x01025bf4: 0x1025bf4: jal   0x1060020 sll   zero, zero, 0
-	call int32 Cibyl71::navigate_zoom_get_scale_1060020()
+// 0x01025bf4: 0x1025bf4: jal   0x106002c sll   zero, zero, 0
+	call int32 Cibyl71::navigate_zoom_get_scale_106002c()
 	stloc 5
 // --- basic block ---
 // 0x01025bfc: 0x1025bfc: j	 0x1025c40 sll   zero, zero, 0
@@ -3981,7 +3981,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01026254: 0x1026254: sw    ra, 20(sp)
-// 0x01026258: 0x1026258: jal   0x1094c98 addiu a0, zero, 1
+// 0x01026258: 0x1026258: jal   0x1094ca4 addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
 	ldloc.0
@@ -3989,7 +3989,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_hide_current_1094c98(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_hide_current_1094ca4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
@@ -5105,13 +5105,13 @@ L_102655c:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0102656c: 0x102656c: jal   0x106e404 sll   zero, zero, 0
+// 0x0102656c: 0x102656c: jal   0x106e410 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl82::OnSettingsChanged_VisabilityGroup_106e404(int32,int32,int32,int32,int32)
+	call int32 Cibyl82::OnSettingsChanged_VisabilityGroup_106e410(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5261,13 +5261,13 @@ L_10265d0:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010265e0: 0x10265e0: jal   0x106e404 sll   zero, zero, 0
+// 0x010265e0: 0x10265e0: jal   0x106e410 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl82::OnSettingsChanged_VisabilityGroup_106e404(int32,int32,int32,int32,int32)
+	call int32 Cibyl82::OnSettingsChanged_VisabilityGroup_106e410(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5

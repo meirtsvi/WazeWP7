@@ -903,8 +903,8 @@ __CIBYL_javamethod_begin:
 	ldc.i4 -16588
 	add
 	stloc.2
-// 0x0104bbc0: 0x104bbc0: addiu a0, zero, 600
-	ldc.i4 600
+// 0x0104bbc0: 0x104bbc0: addiu a0, zero, 1200
+	ldc.i4 1200
 	stloc.1
 // 0x0104bbc4: 0x104bbc4: jal   0x104ffc4 sw    zero, -5108(v0)
 	ldloc 6

@@ -3437,7 +3437,7 @@ L_1045d08:
 // 0x01045d10: 0x1045d10: addiu a1, zero, 3
 	ldc.i4.3
 	stloc.2
-// 0x01045d14: 0x1045d14: jal   0x10a1a60 addu  a2, s0, zero
+// 0x01045d14: 0x1045d14: jal   0x10a1a6c addu  a2, s0, zero
 	ldloc 10
 	stloc.3
 	ldloc.0
@@ -3445,7 +3445,7 @@ L_1045d08:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1a60(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1a6c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 11
 	stloc 6
@@ -6191,8 +6191,8 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01046480: 0x1046480: sw    ra, 20(sp)
-// 0x01046484: 0x1046484: jal   0x10940f4 sll   zero, zero, 0
-	call int32 Cibyl110::ssd_dialog_currently_active_name_10940f4()
+// 0x01046484: 0x1046484: jal   0x1094100 sll   zero, zero, 0
+	call int32 Cibyl110::ssd_dialog_currently_active_name_1094100()
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6726,7 +6726,7 @@ L_104661c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x01046654: 0x1046654: jal   0x106cc7c addu  a0, v0, zero
+// 0x01046654: 0x1046654: jal   0x106cc88 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -6734,7 +6734,7 @@ L_104661c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl81::Realtime_TripServer_FindTrip_106cc7c(int32,int32,int32,int32,int32)
+	call int32 Cibyl81::Realtime_TripServer_FindTrip_106cc88(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
