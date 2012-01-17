@@ -3473,22 +3473,7 @@ end:
 
                 // After settings saved we need to update the app with new behaivour:
 
-                string isRotationEnabled;
-                bool rotationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableRotation", out isRotationEnabled);
-
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    // Do not rotate if user selected to avoid rotation.
-                    if (rotationSettingsExist && (isRotationEnabled == "No"))
-                    {
-                        GamePage.get().SupportedOrientations = SupportedPageOrientation.Portrait;
-                    }
-                    else
-                    {
-                        GamePage.get().SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-                    }
-                });
+                SetSupportedPageOrientation();
 
             }
         };
@@ -3498,6 +3483,26 @@ end:
         {
             var currentPage = ((App)Application.Current).RootFrame.Content as PhoneApplicationPage;
             currentPage.NavigationService.Navigate<SettingsPivotPage>(viewModel);
+        });
+    }
+
+    public static void SetSupportedPageOrientation()
+    {
+        string isRotationEnabled;
+        bool rotationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableRotation", out isRotationEnabled);
+
+        System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+        {
+            // Do not rotate if user selected to avoid rotation.
+            if (rotationSettingsExist && (isRotationEnabled == "No"))
+            {
+                GamePage.get().SupportedOrientations = SupportedPageOrientation.Portrait;
+            }
+            else
+            {
+                GamePage.get().SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+
+            }
         });
     }
 

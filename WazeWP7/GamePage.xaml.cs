@@ -158,6 +158,8 @@ namespace WazeWP7
 
         private void InitWorld()
         {
+            Syscalls.SetSupportedPageOrientation();
+
             contentManager = (App.Current as App).Content; 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(SharedGraphicsDeviceManager.Current.GraphicsDevice);
