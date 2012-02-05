@@ -154,11 +154,15 @@ namespace WazeWP7
             // Use the LayoutUpdate event to know when the page layout has completed so we can
             // create the UIElementRenderer
             LayoutUpdated += new EventHandler(XNARendering_LayoutUpdated);
+
+
+
         }
 
         private void InitWorld()
         {
             Syscalls.SetSupportedPageOrientation();
+            
 
             contentManager = (App.Current as App).Content; 
             // Create a new SpriteBatch, which can be used to draw textures.

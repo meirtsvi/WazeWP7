@@ -13,6 +13,7 @@ using System.Windows.Resources;
 using System.Windows.Shapes;
 using Microsoft.Phone;
 using Microsoft.Phone.Tasks;
+using Microsoft.Phone.Scheduler;
 
 using NBidi;
 
@@ -3373,6 +3374,10 @@ end:
 
         SettingsPageViewModel.SetLanguages(languageItems);
         languagesLoaded.Set();
+
+        // We can set tile after we have language
+        Syscalls.SetLiveTile(false);
+
     }
 
     public static void NOPH_PromptsLoaded(int labels_addr, int values_addr, int count)
@@ -3422,9 +3427,9 @@ end:
                      string value = IsolatedStorageSettings.ApplicationSettings[propertyName].ToString();
                      viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, true, value);
                  }
-                 else // If no settings exist assume Yes.
+                 else // If no settings exist assume null.
                  {
-                     viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, true, "Yes");
+                     viewModel.SetSettingsValue((SettingsPageViewModel.Settings)i, true, null);
 
                  }
             }
@@ -3471,11 +3476,14 @@ end:
                         
                 }
 
-                // After settings saved we need to update the app with new behaivour:
-
-                SetSupportedPageOrientation();
 
             }
+
+            // After settings saved we need to update the app with new behaivour:
+
+            SetSupportedPageOrientation();
+            SetLiveTile(true);
+
         };
 
         // And navigate to the dialog
@@ -3504,6 +3512,112 @@ end:
 
             }
         });
+    }
+
+    /// <summary>
+    /// Set the live tile status
+    /// </summary>
+    /// <param name="fromSettings">indicate if called from seettings window, which means the user will get notifications</param>
+    public static void SetLiveTile(bool fromSettings)
+    {
+        string isTileEnabled;
+        bool tileSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableTile", out isTileEnabled);
+        string taskName = "Waze Periodic Task";
+
+
+        Mutex mLiveTileStorageMutex = new Mutex(true,"LiveTileStorageMutex");
+
+        try
+        {
+
+            mLiveTileStorageMutex.WaitOne();
+
+            IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
+
+            if (!isf.DirectoryExists("LiveTile"))
+            {
+                isf.CreateDirectory("LiveTile");
+            }
+
+            // Save the home name in selected language so the task can search for it later on.     
+            using (IsolatedStorageFileStream fsHomeName =  isf.OpenFile("LiveTile\\HomeName", FileMode.Create,FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fsHomeName))
+                {
+                    sw.Write(LanguageResources.Instance.Translate("Home"));
+                }
+
+            }
+
+            // Save the refresh interval so the task can search for it later on.     
+            using (IsolatedStorageFileStream fsInterval =  isf.OpenFile("LiveTile\\Interval",FileMode.Create,FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fsInterval))
+                {
+                    if (IsolatedStorageSettings.ApplicationSettings.Contains("TileRefreshInterval"))
+                    {
+                        sw.Write(IsolatedStorageSettings.ApplicationSettings["TileRefreshInterval"].ToString());
+                    }
+                    else
+                    {
+                        sw.Write("10");
+                    }
+                }
+
+            }
+
+
+        }
+        finally
+        {
+            mLiveTileStorageMutex.ReleaseMutex();
+        }
+
+        PeriodicTask periodicTask = new PeriodicTask(taskName);
+        periodicTask.Description = "Waze Task to update Live Tile";
+
+        // Make the task alive for atnoher 14 days. If the user didn't run waze for 14 days, the task will auto delete by the system.
+        periodicTask.ExpirationTime = System.DateTime.Now.AddDays(14);
+
+        // If the agent is already registered with the system, remove it first
+
+        if (ScheduledActionService.Find(periodicTask.Name) != null) 
+        {     
+            ScheduledActionService.Remove(taskName); 
+        }
+
+        // Place the call to Add in a try block in case the user has disabled agents, but selected to turn it on from the app:
+        try
+        {
+            // If the user selected to turn it on, add the task:
+            if(isTileEnabled != "No")
+            {
+                ScheduledActionService.Add(periodicTask);
+
+                // Update the Tile now within 10 seconds (Won't work for marketplace app):
+                ScheduledActionService.LaunchForTest(taskName,TimeSpan.FromSeconds(2));
+            }
+        }
+        catch (InvalidOperationException exception)
+        {
+          if (exception.Message.Contains("BNS Error: The action is disabled"))
+          {
+              if (fromSettings)
+              {
+                  MessageBox.Show(LanguageResources.Instance.Translate("Background agents for this application have been disabled by the user."));
+              }
+          }
+          if (exception.Message.Contains("BNS Error: The maximum number of ScheduledActions of this type have already been added."))
+          {              
+            // No user action required. The system prompts the user when the hard limit of periodic tasks has been reached.
+          }
+        }
+        catch (SchedulerServiceException)
+        {
+          // No user action required.
+        }
+        
+    
     }
 
     #endregion

@@ -17,6 +17,9 @@
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="GamePage.xaml" />
+      <ExtendedTask Name="BackgroundTask">
+        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="WazeScheduledTaskAgent" Source="WazeScheduledTaskAgent" Type="WazeScheduledTaskAgent.ScheduledAgent" />
+      </ExtendedTask>
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="SlXnaApp1Token" TaskName="_default">
