@@ -18,7 +18,7 @@
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="WazeSettingsListPickerItemDataTemplate">
-            <StackPanel Orientation="Horizontal">
+           <StackPanel Orientation="Horizontal">
                 <Image Source="{Binding IconSource}"/>
                 <TextBlock Text="{Binding Label}" VerticalAlignment="Center"/>
             </StackPanel>
@@ -156,7 +156,7 @@
                 <StackPanel Orientation="Vertical">
                     <toolkit:ListPicker x:Name="PopUpReportsPicker"
                                         Header="Pop-up reports"
-                                        DataContext="{Binding PopupReports}"
+                                        DataContext="{Binding TileRefreshInterval}"
                                         ItemsSource="{Binding Items}"
                                         ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
                                         FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
@@ -258,6 +258,27 @@
 
                             </StackPanel>
                         </Border>
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" Text="Live Tile"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+                                <TextBlock TextWrapping="Wrap" Text="Make sure to set home favorite"  />
+
+                                <toolkit:ListPicker x:Name="TileRefreshIntervalPicker"
+                                                    Header="Tile Refresh Interval (min)"
+                                                    DataContext="{Binding TileRefreshInterval}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+
+                                <local:SimpleToggleSwitch x:Name="EnableTile"
+                                                          ViewModel="{Binding EnableTile}"/>
+
+
+                            </StackPanel>
+                        </Border>
+
 
                     </StackPanel>
                 </ScrollViewer>

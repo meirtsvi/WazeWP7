@@ -14,4 +14,8 @@
 Start favorites restoration|הפעלת שחזור מועדפים 
 Restore Now|שחזר עכשיו
 Rotation Control|שליטה בסיבוב מסך
-Enable Rotation|אפשר סיבוב
+Enable Rotation|אפשר סיבובLive Tile|אריח חי
+Enable Tile|אפשר אריח
+Background agents for this application have been disabled by the user.|תהליך העדכון ברקע נוטרל ע"י המשתמש מהגדרות הטלפון.
+Make sure to set home favorite|יש לוודא שהוגדר מועדף בית
+Tile Refresh Interval (min)|תדירות עדכון אריח (דקות)

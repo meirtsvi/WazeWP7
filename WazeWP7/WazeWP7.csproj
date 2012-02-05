@@ -2836,6 +2836,10 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WazeScheduledTaskAgent\WazeScheduledTaskAgent.csproj">
+      <Project>{5B25CBFB-AE3E-42E1-8610-834F40E65158}</Project>
+      <Name>WazeScheduledTaskAgent</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WazeWP7Lib\WazeWP7Lib.csproj">
       <Project>{F2A9743D-63BD-4E70-8269-08952EDC1602}</Project>
       <Name>WazeWP7Lib</Name>

@@ -325,7 +325,8 @@ using WazeWP7;
             catch (Exception e)
             {
                 Logger.log("could not call c_malloc_stack" + e);
-                MessageBox.Show("Exception in c_malloc_stack");
+                safe_exit();
+                //MessageBox.Show("Exception in c_malloc_stack");
 
             }
             if (c_malloc_stack != 0)
