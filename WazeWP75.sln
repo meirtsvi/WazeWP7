@@ -9,10 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WazeWP7LibContent", "WazeWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZlibWP7", "ZlibWP7\ZlibWP7.csproj", "{B0EDE0F5-4C4B-498C-B08D-35B8CE76F6B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WazeScheduledTaskAgent", "WazeScheduledTaskAgent\WazeScheduledTaskAgent.csproj", "{5B25CBFB-AE3E-42E1-8610-834F40E65158}"
+EndProject
 Global
-	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
-		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -62,8 +61,21 @@ Global
 		{B0EDE0F5-4C4B-498C-B08D-35B8CE76F6B5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B0EDE0F5-4C4B-498C-B08D-35B8CE76F6B5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B0EDE0F5-4C4B-498C-B08D-35B8CE76F6B5}.Release|Windows Phone.ActiveCfg = Release|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5B25CBFB-AE3E-42E1-8610-834F40E65158}.Release|Windows Phone.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
 	EndGlobalSection
 EndGlobal

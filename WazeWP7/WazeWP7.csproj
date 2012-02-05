@@ -233,6 +233,8 @@
   <ItemGroup>
     <None Include="Resources\font.ttf" />
     <None Include="Resources\font_normal.ttf" />
+    <None Include="WazeWP7_2012_01_17_13_36_58.sap" />
+    <None Include="WazeWP7_2012_01_17_13_44_03.sap" />
     <Resource Include="Resources\lang\lang.eng_j2me">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -2836,6 +2838,10 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WazeScheduledTaskAgent\WazeScheduledTaskAgent.csproj">
+      <Project>{5B25CBFB-AE3E-42E1-8610-834F40E65158}</Project>
+      <Name>WazeScheduledTaskAgent</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WazeWP7Lib\WazeWP7Lib.csproj">
       <Project>{F2A9743D-63BD-4E70-8269-08952EDC1602}</Project>
       <Name>WazeWP7Lib</Name>

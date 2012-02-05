@@ -123,6 +123,8 @@ namespace WazeWP7
 
             #region Other settings members
             OtherSettings_EnableRotation,
+            OtherSettings_EnableTile,
+            OtherSettings_TileRefreshInterval,
             #endregion
 
             SettingsMaxValue
@@ -215,11 +217,21 @@ namespace WazeWP7
 
             if (property.PropertyType.Equals(typeof(ListViewModel)))
             {
+                if (value == null)
+                {
+                    value = "10";
+                }
+
                 var listViewModel = property.GetValue(this, null) as ListViewModel;
                 listViewModel.SelectedValue = value;
             }
             else
             {
+                if (value == null)
+                {
+                    value = "Yes";
+                }
+
                 var toggleSwitchViewModel = property.GetValue(this, null) as SimpleToggleSwitchViewModel;
                 toggleSwitchViewModel.IsValid = isValid;
                 toggleSwitchViewModel.IsChecked = value.Equals("Yes");
@@ -297,7 +309,8 @@ namespace WazeWP7
 
         private static readonly string[] mapColorSchemeLabels = new string[] { "Vitamin C", "The Blues", "Mochaccino", "Snow Day", "Twilight", "Tutti-fruiti", "Rosebud", "Electrolytes", "Map editors" };
         private static readonly string[] mapColorSchemeValues = new string[] { "",          "1",         "2",          "3",        "4",        "5",            "6",       "7",            "8"};
-        private static readonly string[] mapColorSchemeIcons  = new string[] { "schema",    "schema1",   "schema2",    "schema3",  "schema4",  "schema5",      "schema6", "schema7",      "schema8" };
+        private static readonly string[] mapColorSchemeIcons = new string[] { "schema", "schema1", "schema2", "schema3", "schema4", "schema5", "schema6", "schema7", "schema8" };
+        
         private ListViewModel mapColorScheme = new ListViewModel( mapColorSchemeLabels.Select((label, index) => 
             new ListItemViewModel( label, 
                                    string.Format("Resources/{0}.png", mapColorSchemeIcons[index]), 
@@ -397,6 +410,16 @@ namespace WazeWP7
 
         private SimpleToggleSwitchViewModel enableRotation = new SimpleToggleSwitchViewModel("Enable Rotation");
         public SimpleToggleSwitchViewModel EnableRotation { get { return enableRotation; } }
+
+        private SimpleToggleSwitchViewModel enableTile = new SimpleToggleSwitchViewModel("Enable Tile");
+        public SimpleToggleSwitchViewModel EnableTile { get { return enableTile; } }
+
+        private static readonly string[] tileRefreshIntervals = new string[] { "1", "3", "5", "10", "15", "20", "25", "30" };
+        private ListViewModel tileRefreshInterval = new ListViewModel(tileRefreshIntervals.Select((interval) =>
+                                                                        new ListItemViewModel(interval)).ToList());
+
+        public ListViewModel TileRefreshInterval { get { return tileRefreshInterval;} }
+
 
         #endregion
     }
