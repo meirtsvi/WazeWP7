@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Tasks;
 
 namespace WazeWP7
 {
@@ -58,6 +59,22 @@ namespace WazeWP7
             {
                 GamePage.RestoreFavorites.CallCallback();
             }
+
+        }
+
+        /// <summary>
+        /// Let the user email the log from the isolated storage for debugging.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SendTileLog_Click(object sender, RoutedEventArgs e)
+        {
+            EmailComposeTask emailComposer = new EmailComposeTask();
+            emailComposer.To = "wazelog@ofeks.com";
+            emailComposer.Subject = "Waze Tile Log";
+            emailComposer.Body = WazeScheduledTaskAgent.BackgroundNavigator.ReadLog();            
+            emailComposer.Show();
+            //System.Threading.Thread.Sleep(30000);
 
         }
     }

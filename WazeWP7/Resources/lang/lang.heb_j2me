@@ -18,5 +18,6 @@ Enable Rotation|אפשר סיבוב
 Live Tile|אריח חי
 Enable Tile|אפשר אריח
 Background agents for this application have been disabled by the user.|תהליך העדכון ברקע נוטרל ע"י המשתמש מהגדרות הטלפון.
-Make sure to set home favorite|יש לוודא שהוגדר מועדף בית
+Make sure to set home/work favorites|יש לוודא שהוגדרו מועדפי בית/עבודה
 Tile Refresh Interval (min)|תדירות עדכון אריח (דקות)
+Send Tile Log|שלח לוג אריח
