@@ -127,6 +127,7 @@ namespace WazeScheduledTaskAgent
                     catch (Exception we)
                     {
                         System.Diagnostics.Debug.WriteLine(we.ToString());
+                        WriteLog(we.ToString());
 
                         resp = null;
                         mre.Set();
@@ -135,7 +136,17 @@ namespace WazeScheduledTaskAgent
 
                 // we can't wait more then 6 seconds or else the OS will kill us.
                 if (!mre.WaitOne(6000))
-                    return -1;
+                {
+                    WriteLog(to.ToString() + " : timed out reset event");
+                    return -4;
+                }
+                    
+
+                // The server request failed.
+                if (resp == null)
+                {
+                    return -3;
+                }
 
                 StreamReader sr = new StreamReader(resp.GetResponseStream());
                 string respString = sr.ReadToEnd();
