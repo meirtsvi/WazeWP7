@@ -236,6 +236,38 @@
             </controls:PivotItem>
 
             <!--Pivot item six-->
+            <controls:PivotItem Header="Live Tile">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical" Margin="5,0">
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" Text="Live Tile"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+                                <TextBlock TextWrapping="Wrap" Text="Make sure to set home/work favorites" Margin="10,10,10,10" />
+
+
+                                <local:SimpleToggleSwitch x:Name="EnableTile"
+                                                          ViewModel="{Binding EnableTile}"/>
+
+                                <toolkit:ListPicker x:Name="TileRefreshIntervalPicker"
+                                                    Header="Tile Refresh Interval (min)"
+                                                    DataContext="{Binding TileRefreshInterval}"
+                                                    ItemsSource="{Binding Items}"
+                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
+                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
+                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
+                                <Button Name="SendTileLog" Height="83" Width="239" Click="SendTileLog_Click">Send Tile Log</Button>
+
+
+                            </StackPanel>
+                        </Border>
+
+
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+
+            <!--Pivot item seven-->
             <controls:PivotItem Header="Other">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Orientation="Vertical" Margin="5,0">
@@ -258,31 +290,12 @@
 
                             </StackPanel>
                         </Border>
-                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock TextWrapping="Wrap" Text="Live Tile"
-                                   Style="{StaticResource PhoneTextLargeStyle}"/>
-                                <TextBlock TextWrapping="Wrap" Text="Make sure to set home favorite"  />
-
-                                <toolkit:ListPicker x:Name="TileRefreshIntervalPicker"
-                                                    Header="Tile Refresh Interval (min)"
-                                                    DataContext="{Binding TileRefreshInterval}"
-                                                    ItemsSource="{Binding Items}"
-                                                    ItemTemplate="{StaticResource WazeSettingsListPickerItemDataTemplate}"
-                                                    FullModeItemTemplate="{StaticResource WazeSettingsListPickerFullItemDataTemplate}"
-                                                    SelectedIndex="{Binding SelectedItemIndex,Mode=TwoWay}"/>
-
-                                <local:SimpleToggleSwitch x:Name="EnableTile"
-                                                          ViewModel="{Binding EnableTile}"/>
-
-
-                            </StackPanel>
-                        </Border>
-
+       
 
                     </StackPanel>
                 </ScrollViewer>
             </controls:PivotItem>
+            
         </controls:Pivot>
     </Grid>
 

@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using Microsoft.Phone.Shell;
 
 namespace WazeScheduledTaskAgent
 {
@@ -44,7 +45,23 @@ namespace WazeScheduledTaskAgent
         /// <returns></returns>
         public static GeoCoordinate GetHomeLocation(string homeName)
         {
-             FileStream historyFile = null;
+            return GetLocationByName("home", homeName);
+        }
+
+        /// <summary>
+        /// Return the Work location from favorites
+        /// </summary>
+        /// <param name="homeName"></param>
+        /// <returns></returns>
+        public static GeoCoordinate GetWorkLocation(string workName)
+        {
+            return GetLocationByName("work", workName);
+        }
+
+
+        private static GeoCoordinate GetLocationByName(string englishName, string langName)
+        {
+            FileStream historyFile = null;
             try
             {
                 var store = IsolatedStorageFile.GetUserStoreForApplication();
@@ -69,7 +86,7 @@ namespace WazeScheduledTaskAgent
                 string line = sr.ReadLine();
                 string[] tokens = line.Split(new[] { ',' }, StringSplitOptions.None);
                 string placeName = tokens[5];
-                if ((placeName.ToLower() == homeName) || (placeName == "home"))
+                if ((placeName.ToLower() == langName) || (placeName == englishName))
                 {
 
                     double destLongitude = double.Parse(tokens[7]) / 1000000;
@@ -116,8 +133,8 @@ namespace WazeScheduledTaskAgent
                     }
                 }, null);
 
-                // we can't wait more then 14 seconds or else the OS will kill us.
-                if (!mre.WaitOne(14000))
+                // we can't wait more then 6 seconds or else the OS will kill us.
+                if (!mre.WaitOne(6000))
                     return -1;
 
                 StreamReader sr = new StreamReader(resp.GetResponseStream());
@@ -140,7 +157,7 @@ namespace WazeScheduledTaskAgent
             }
             catch (Exception exc)
             {
-
+                WriteLog(exc.ToString());
                 System.Diagnostics.Debug.WriteLine(exc.ToString());
 
                 if (System.Diagnostics.Debugger.IsAttached)
@@ -149,11 +166,52 @@ namespace WazeScheduledTaskAgent
                     System.Diagnostics.Debugger.Break();
                 }
 
-                return -1;
+               // ErrorToast(exc);
+
+                return -2;
             }
 
             
         }
 
+        public static void ErrorToast(Exception exc)
+        {
+           
+            ShellToast toast = new ShellToast();
+            toast.Content = DateTime.Now.ToShortTimeString() + " " + exc.ToString();
+            toast.Title = "Waze Task Error";
+            toast.Show();
+
+        }
+
+        public static void WriteLog(string text)
+        {
+            IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
+            using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.Append, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fsInterval))
+                {
+                        sw.WriteLine(DateTime.Now.ToString());
+                        sw.WriteLine(text);
+                        sw.WriteLine("____________________________");                       
+                 
+                }
+
+            }
+        }
+
+        public static string ReadLog()
+        {
+            IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
+            using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.OpenOrCreate, FileAccess.Read))
+            {
+                using (StreamReader sr = new StreamReader(fsInterval))
+                {
+                       return sr.ReadToEnd();
+                    
+                }
+
+            }
+        }
     }
 }

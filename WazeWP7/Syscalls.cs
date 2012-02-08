@@ -3549,6 +3549,17 @@ end:
 
             }
 
+            // Save the home name in selected language so the task can search for it later on.     
+            using (IsolatedStorageFileStream fsWorkName = isf.OpenFile("LiveTile\\WorkName", FileMode.Create, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fsWorkName))
+                {
+                    sw.Write(LanguageResources.Instance.Translate("Work"));
+                }
+
+            }
+
+
             // Save the refresh interval so the task can search for it later on.     
             using (IsolatedStorageFileStream fsInterval =  isf.OpenFile("LiveTile\\Interval",FileMode.Create,FileAccess.Write))
             {
@@ -3569,6 +3580,7 @@ end:
         finally
         {
             mLiveTileStorageMutex.ReleaseMutex();
+            mLiveTileStorageMutex.Dispose();
         }
 
         PeriodicTask periodicTask = new PeriodicTask(taskName);

@@ -54,6 +54,7 @@ namespace WazeScheduledTaskAgent
         protected override void OnInvoke(ScheduledTask task)
         {
             string langHomeName = string.Empty;
+            string langWorkName = string.Empty;
             string interval = string.Empty;
 
             try
@@ -78,6 +79,17 @@ namespace WazeScheduledTaskAgent
 
                     }
 
+                    // Save the work name in selected language so the task can search for it later on.     
+                    using (IsolatedStorageFileStream fsWorkName = IsolatedStorageFile.GetUserStoreForApplication().OpenFile("LiveTile\\WorkName", FileMode.Open, FileAccess.Read))
+                    {
+                        using (StreamReader sr = new StreamReader(fsWorkName))
+                        {
+                            langWorkName = sr.ReadLine();
+                        }
+
+                    }
+
+
                     // Save the refresh interval so the task can search for it later on.     
                     using (IsolatedStorageFileStream fsInterval =  IsolatedStorageFile.GetUserStoreForApplication().OpenFile("LiveTile\\Interval",FileMode.Open,FileAccess.Read))
                     {
@@ -91,6 +103,7 @@ namespace WazeScheduledTaskAgent
                 finally
                 {
                     mLiveTileStorageMutex.ReleaseMutex();
+                    mLiveTileStorageMutex.Dispose();
                 }
 
 
@@ -99,44 +112,56 @@ namespace WazeScheduledTaskAgent
                 // Get current location:
                 GeoCoordinate from = BackgroundNavigator.GetCurrentLocation();
 
-                // Find home location:
-
-                GeoCoordinate to = BackgroundNavigator.GetHomeLocation(langHomeName);
+                // Find home /work locations:
+                GeoCoordinate toHome = BackgroundNavigator.GetHomeLocation(langHomeName);
+                GeoCoordinate toWork = BackgroundNavigator.GetWorkLocation(langWorkName);
 
                 // Calculate time to home:
 
-                int etaMin = 0;
+                int homeEtaMin = -1;
+                int workEtaMin = -1;
 
                 if (from == GeoCoordinate.Unknown)
                 {
                     tileData = "No GPS available";               
                 }
-                else if (to == GeoCoordinate.Unknown)
+                else if ((toHome == GeoCoordinate.Unknown) && (toWork == GeoCoordinate.Unknown))
                 {
-                    // default back message in case user did not set home:
-                    tileData = "Please set 'Home' favorite";
+                    // deafult back message in case user did not set home or work:
+                    tileData = "Please set home / work favorites";
                 }
                 else 
                 {
-                   etaMin = BackgroundNavigator.GetRouteTime(from, to);
+
+                    if (toHome != GeoCoordinate.Unknown)
+                    {
+                        homeEtaMin = BackgroundNavigator.GetRouteTime(from, toHome);
+                    }
+
+                    if (toWork != GeoCoordinate.Unknown)
+                    {
+
+                        workEtaMin = BackgroundNavigator.GetRouteTime(from, toWork);
+                    }
 
                    // Prepare data for tile:
-                   if (etaMin >= 0)
-                   {
-                       tileData = etaMin + " min" + Environment.NewLine + "Last Update:" + Environment.NewLine + DateTime.Now.ToShortTimeString();
+                    if ((homeEtaMin >= 0) || (workEtaMin >= 0))
+                    {
+                        tileData = homeEtaMin + "/" + workEtaMin + " min" + Environment.NewLine + "refresh time:" + Environment.NewLine + DateTime.Now.ToShortTimeString();
                    }
                    else
                    {
-                       etaMin = 0;
-                       tileData = "Failed to find route";
+                       tileData = "Failed to find routes: " + Environment.NewLine + DateTime.Now.ToShortTimeString();
                    }
 
                 }
 
                 // Update Tile:
 
-                // On the front tile we can show a max of 99 min.
-                int frontETA = (etaMin < 100) ? etaMin : 99;
+                // On the front tile we can show a max of 99 min on the longer route.
+                int maxEta = Math.Max(homeEtaMin, workEtaMin);
+
+                int frontETA = (maxEta < 100) ? maxEta : 99;
 
                 string taskName = "Waze Periodic Task";
 
@@ -146,7 +171,7 @@ namespace WazeScheduledTaskAgent
                     Title = "Waze",
                     BackgroundImage = new Uri("waze_logo.png", UriKind.Relative),
                     Count = frontETA,
-                    BackTitle = "Home ETA",
+                    BackTitle = "home/work ETA",
                     BackContent = tileData
 
                 };
@@ -165,6 +190,8 @@ namespace WazeScheduledTaskAgent
             catch (Exception exc)
             {
                 System.Diagnostics.Debug.WriteLine(exc.ToString());
+                BackgroundNavigator.WriteLog(exc.ToString());
+                //BackgroundNavigator.ErrorToast(exc);
 
                 if (System.Diagnostics.Debugger.IsAttached)
                 {
