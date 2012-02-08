@@ -1,7 +1,12 @@
 using System;
 using System.IO;
 using System.Windows.Controls;
+using System.Windows.Threading;
 using System.Threading;
+
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework;
+using Microsoft.Phone.BackgroundAudio;
 
 namespace WazeWP7
 {
@@ -116,36 +121,71 @@ namespace WazeWP7
                         {
                             lock (sound_lists)
                             {
-                                // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
-                                mediaElement = new MediaElement();
-                                GamePage.get().LayoutRoot.Children.Add(mediaElement);
-                                mediaElement.SetSource(current_list.streams[copy_index]);
-                                mediaElement.Volume = 1.0;//todomt (double)((double)sound_level / 100.0);
-                                mediaElement.MediaEnded += delegate
-                                {
-                                    lock (sound_lists)
-                                    {
-                                        if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
-                                        {
-                                            current_list.streams[copy_index].Close();
-                                        }
-                                    }
-                                    GamePage.get().LayoutRoot.Children.Remove(mediaElement);
-                                    playNextItem();
-                                };
 
-                                mediaElement.MediaOpened += delegate
+                                SoundEffect effect = SoundEffect.FromStream(current_list.streams[copy_index]);
+                                FrameworkDispatcher.Update();
+
+                                SoundEffectInstance instance = effect.CreateInstance();
+
+
+                                //double originalVolume = 0;
+                                //originalVolume = BackgroundAudioPlayer.Instance.Volume;
+                                //BackgroundAudioPlayer.Instance.Volume *= 0.60; // Reduce Background volume by 40%
+                                
+                                // Play the sound concurrently 
+                                instance.Volume = 1;
+                                instance.Play();
+
+                                // Wait for the sound to finish playing.
+                                Thread.Sleep((int)effect.Duration.TotalMilliseconds +1);
+                                instance.Dispose();
+
+                                // Restore original background volume :
+                                //BackgroundAudioPlayer.Instance.Volume = originalVolume;
+
+                                if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
                                 {
-                                    try
-                                    {
-                                        mediaElement.Play();
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        Logger.log("Error playing sound " + e);
-                                    }
-                                };
+                                    current_list.streams[copy_index].Close();
+                                }
+
+                                
                             }
+
+                            playNextItem();
+
+
+
+
+                            //    // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
+                            //    mediaElement = new MediaElement();
+                            //    GamePage.get().LayoutRoot.Children.Add(mediaElement);
+                            //    mediaElement.SetSource(current_list.streams[copy_index]);
+                            //    mediaElement.Volume = 1.0;//todomt (double)((double)sound_level / 100.0);
+                            //    mediaElement.MediaEnded += delegate
+                            //    {
+                            //        lock (sound_lists)
+                            //        {
+                            //            if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
+                            //            {
+                            //                current_list.streams[copy_index].Close();
+                            //            }
+                            //        }
+                            //        GamePage.get().LayoutRoot.Children.Remove(mediaElement);
+                            //        playNextItem();
+                            //    };
+
+                            //    mediaElement.MediaOpened += delegate
+                            //    {
+                            //        try
+                            //        {
+                            //            mediaElement.Play();
+                            //        }
+                            //        catch (Exception e)
+                            //        {
+                            //            Logger.log("Error playing sound " + e);
+                            //        }
+                            //    };
+                            //}
                             
                             
                         }
