@@ -189,8 +189,18 @@ namespace WazeScheduledTaskAgent
 
                 if (userInterval < 30)
                 {
-                    // Update the Tile again in selected interval min (Won't work for marketplace app) if less then 30:
-                    ScheduledActionService.LaunchForTest(taskName, TimeSpan.FromMinutes(userInterval));
+                    try
+                    {
+                        // Update the Tile again in selected interval min (Won't work for marketplace app) if less then 30:
+                        ScheduledActionService.LaunchForTest(taskName, TimeSpan.FromMinutes(userInterval));
+                    }
+                    catch (ArgumentException)
+                    {
+                        BackgroundNavigator.WriteLog(string.Format("LaunchForTest failed. task name: {0}, Timespan: {1}",
+                                                taskName, TimeSpan.FromMinutes(userInterval).ToString()));
+                        throw;
+                    }
+
                 }
 
             }

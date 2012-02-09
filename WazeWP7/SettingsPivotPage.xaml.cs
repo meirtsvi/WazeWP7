@@ -72,9 +72,20 @@ namespace WazeWP7
             EmailComposeTask emailComposer = new EmailComposeTask();
             emailComposer.To = "wazelog@ofeks.com";
             emailComposer.Subject = "Waze Tile Log";
-            emailComposer.Body = WazeScheduledTaskAgent.BackgroundNavigator.ReadLog();            
+            string logData = WazeScheduledTaskAgent.BackgroundNavigator.ReadLog();
+            int limit64K = 32000; // each unicode char is 2 bytes, so in 64K we can hold  ~32000 chars after overhead.
+            
+            // Trim to 64K so we can send the end of the log via email.
+            if (logData.Length > limit64K)
+            {
+                logData = logData.Remove(0, logData.Length - limit64K);
+            }
+            emailComposer.Body = logData;
             emailComposer.Show();
-            //System.Threading.Thread.Sleep(30000);
+
+            // Delete the log after we sent it
+            WazeScheduledTaskAgent.BackgroundNavigator.DeleteLog();
+
 
         }
     }
