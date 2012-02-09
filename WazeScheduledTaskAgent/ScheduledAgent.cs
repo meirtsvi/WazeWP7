@@ -197,7 +197,7 @@ namespace WazeScheduledTaskAgent
                     catch (ArgumentException)
                     {
                         BackgroundNavigator.WriteLog(string.Format("LaunchForTest failed. task name: {0}, Timespan: {1}",
-                                                taskName, TimeSpan.FromMinutes(userInterval).ToString()));
+                                                taskName,userInterval.ToString()));
                         throw;
                     }
 
