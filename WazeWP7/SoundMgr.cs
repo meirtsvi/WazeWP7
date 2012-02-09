@@ -27,6 +27,8 @@ namespace WazeWP7
             public string[] list = new string[MAX_SOUND_LIST];
             public Stream[] streams;
 
+
+
             public SoundList(int flags)
             {
                 this.flags = flags;
@@ -43,7 +45,10 @@ namespace WazeWP7
 
         private static SoundMgr instance;
         private static int sound_level = 80;
-        public MediaElement mediaElement;
+//        public MediaElement mediaElement;
+
+        private SoundEffectInstance _lastSoundInstance;
+        private SoundEffect _lastSound;
 
 
         //private ManualResetEvent mre = new ManualResetEvent(false);
@@ -122,39 +127,51 @@ namespace WazeWP7
                             lock (sound_lists)
                             {
 
+                                // Cleanup previously played sound.
+
+                                if (_lastSoundInstance != null)
+                                {
+                                    _lastSoundInstance.Dispose();
+                                }
+                                if (_lastSound != null)
+                                {
+                                    _lastSound.Dispose();
+                                }
+
+
                                 // Get the audio stream
-                                SoundEffect effect = SoundEffect.FromStream(current_list.streams[copy_index]);
+                                _lastSound = SoundEffect.FromStream(current_list.streams[copy_index]);
                                 // Update XNA on new Sound Effect
                                 FrameworkDispatcher.Update();
 
                                 // Create instance we can play concurrently
-                                SoundEffectInstance instance = effect.CreateInstance();
+                                _lastSoundInstance = _lastSound.CreateInstance();
 
                                 
                                 // Play the sound concurrently with max relative volume 
-                                instance.Volume = 1;
-                                instance.Play();
+                                _lastSoundInstance.Volume = 1;
+                                _lastSoundInstance.Play();
 
-                                // Wait for the sound to finish playing. we are sleeping for a short time as we speak "words"
-                                // If we find that the delay is a problem, we will need to replace the Sleep, keep the instance as a member
-                                // to avoid premature collection, and Ccall PlaynextItem & stream cleanup code using a Thread that sleeps instead,
-                                // Or a DispatcherTimer.
-                                Thread.Sleep((int)effect.Duration.TotalMilliseconds +1);
+                                Thread nextSoundThread = new Thread(new ThreadStart(
+                                    delegate
+                                    {
 
-                                // Cleanup
-                                instance.Dispose();
-                                effect.Dispose();
+                                        // Wait for the sound to finish playing on an other thread so we won't block the UI.
+                                        Thread.Sleep((int)_lastSound.Duration.TotalMilliseconds + 1);
 
 
-                                if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
-                                {
-                                    current_list.streams[copy_index].Close();
-                                }
+                                        // Cleanup Stream
+                                        if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
+                                        {
+                                            current_list.streams[copy_index].Close();
+                                        }
 
+                                        // Play Next item 
+                                        playNextItem();
+                                    }));
+                                nextSoundThread.Start();
                             }
 
-                            // Play Next item recursively
-                            playNextItem();
 
 
                             #region Old Playback code
