@@ -122,39 +122,42 @@ namespace WazeWP7
                             lock (sound_lists)
                             {
 
+                                // Get the audio stream
                                 SoundEffect effect = SoundEffect.FromStream(current_list.streams[copy_index]);
+                                // Update XNA on new Sound Effect
                                 FrameworkDispatcher.Update();
 
+                                // Create instance we can play concurrently
                                 SoundEffectInstance instance = effect.CreateInstance();
 
-
-                                //double originalVolume = 0;
-                                //originalVolume = BackgroundAudioPlayer.Instance.Volume;
-                                //BackgroundAudioPlayer.Instance.Volume *= 0.60; // Reduce Background volume by 40%
                                 
-                                // Play the sound concurrently 
+                                // Play the sound concurrently with max relative volume 
                                 instance.Volume = 1;
                                 instance.Play();
 
-                                // Wait for the sound to finish playing.
+                                // Wait for the sound to finish playing. we are sleeping for a short time as we speak "words"
+                                // If we find that the delay is a problem, we will need to replace the Sleep, keep the instance as a member
+                                // to avoid premature collection, and Ccall PlaynextItem & stream cleanup code using a Thread that sleeps instead,
+                                // Or a DispatcherTimer.
                                 Thread.Sleep((int)effect.Duration.TotalMilliseconds +1);
-                                instance.Dispose();
 
-                                // Restore original background volume :
-                                //BackgroundAudioPlayer.Instance.Volume = originalVolume;
+                                // Cleanup
+                                instance.Dispose();
+                                effect.Dispose();
+
 
                                 if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
                                 {
                                     current_list.streams[copy_index].Close();
                                 }
 
-                                
                             }
 
+                            // Play Next item recursively
                             playNextItem();
 
 
-
+                            #region Old Playback code
 
                             //    // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
                             //    mediaElement = new MediaElement();
@@ -186,8 +189,9 @@ namespace WazeWP7
                             //        }
                             //    };
                             //}
-                            
-                            
+
+                            #endregion Old Playback code
+
                         }
                         catch (Exception e)
                         {
@@ -272,6 +276,7 @@ namespace WazeWP7
             playNextItem();
         }
 
+        #region OldPlayerUpdate Code
         //public void playerUpdate(Player p, string theevent, Object eventData) {
         // //System.out.println("playerUpdate: " + event);
 
@@ -308,6 +313,8 @@ namespace WazeWP7
         //  }.start();
         // }
         //}
+
+        #endregion OldPlayerUpdate Code
 
         public int listCreate(int flags)
         {
