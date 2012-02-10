@@ -1,7 +1,12 @@
 using System;
 using System.IO;
 using System.Windows.Controls;
+using System.Windows.Threading;
 using System.Threading;
+
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework;
+using Microsoft.Phone.BackgroundAudio;
 
 namespace WazeWP7
 {
@@ -22,6 +27,8 @@ namespace WazeWP7
             public string[] list = new string[MAX_SOUND_LIST];
             public Stream[] streams;
 
+
+
             public SoundList(int flags)
             {
                 this.flags = flags;
@@ -38,7 +45,10 @@ namespace WazeWP7
 
         private static SoundMgr instance;
         private static int sound_level = 80;
-        public MediaElement mediaElement;
+//        public MediaElement mediaElement;
+
+        private SoundEffectInstance _lastSoundInstance;
+        private SoundEffect _lastSound;
 
 
         //private ManualResetEvent mre = new ManualResetEvent(false);
@@ -116,38 +126,89 @@ namespace WazeWP7
                         {
                             lock (sound_lists)
                             {
-                                // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
-                                mediaElement = new MediaElement();
-                                GamePage.get().LayoutRoot.Children.Add(mediaElement);
-                                mediaElement.SetSource(current_list.streams[copy_index]);
-                                mediaElement.Volume = 1.0;//todomt (double)((double)sound_level / 100.0);
-                                mediaElement.MediaEnded += delegate
+
+                                // Cleanup previously played sound.
+
+                                if (_lastSoundInstance != null)
                                 {
-                                    lock (sound_lists)
+                                    _lastSoundInstance.Dispose();
+                                }
+                                if (_lastSound != null)
+                                {
+                                    _lastSound.Dispose();
+                                }
+
+
+                                // Get the audio stream
+                                _lastSound = SoundEffect.FromStream(current_list.streams[copy_index]);
+                                // Update XNA on new Sound Effect
+                                FrameworkDispatcher.Update();
+
+                                // Create instance we can play concurrently
+                                _lastSoundInstance = _lastSound.CreateInstance();
+
+                                
+                                // Play the sound concurrently with max relative volume 
+                                _lastSoundInstance.Volume = 1;
+                                _lastSoundInstance.Play();
+
+                                Thread nextSoundThread = new Thread(new ThreadStart(
+                                    delegate
                                     {
+
+                                        // Wait for the sound to finish playing on an other thread so we won't block the UI.
+                                        Thread.Sleep((int)_lastSound.Duration.TotalMilliseconds + 1);
+
+
+                                        // Cleanup Stream
                                         if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
                                         {
                                             current_list.streams[copy_index].Close();
                                         }
-                                    }
-                                    GamePage.get().LayoutRoot.Children.Remove(mediaElement);
-                                    playNextItem();
-                                };
 
-                                mediaElement.MediaOpened += delegate
-                                {
-                                    try
-                                    {
-                                        mediaElement.Play();
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        Logger.log("Error playing sound " + e);
-                                    }
-                                };
+                                        // Play Next item 
+                                        playNextItem();
+                                    }));
+                                nextSoundThread.Start();
                             }
-                            
-                            
+
+
+
+                            #region Old Playback code
+
+                            //    // re-create media element each time in order to avoid multiple subscribers to MediaEnded event
+                            //    mediaElement = new MediaElement();
+                            //    GamePage.get().LayoutRoot.Children.Add(mediaElement);
+                            //    mediaElement.SetSource(current_list.streams[copy_index]);
+                            //    mediaElement.Volume = 1.0;//todomt (double)((double)sound_level / 100.0);
+                            //    mediaElement.MediaEnded += delegate
+                            //    {
+                            //        lock (sound_lists)
+                            //        {
+                            //            if (current_list != null && current_list.streams != null && current_list.streams[copy_index] != null)
+                            //            {
+                            //                current_list.streams[copy_index].Close();
+                            //            }
+                            //        }
+                            //        GamePage.get().LayoutRoot.Children.Remove(mediaElement);
+                            //        playNextItem();
+                            //    };
+
+                            //    mediaElement.MediaOpened += delegate
+                            //    {
+                            //        try
+                            //        {
+                            //            mediaElement.Play();
+                            //        }
+                            //        catch (Exception e)
+                            //        {
+                            //            Logger.log("Error playing sound " + e);
+                            //        }
+                            //    };
+                            //}
+
+                            #endregion Old Playback code
+
                         }
                         catch (Exception e)
                         {
@@ -232,6 +293,7 @@ namespace WazeWP7
             playNextItem();
         }
 
+        #region OldPlayerUpdate Code
         //public void playerUpdate(Player p, string theevent, Object eventData) {
         // //System.out.println("playerUpdate: " + event);
 
@@ -268,6 +330,8 @@ namespace WazeWP7
         //  }.start();
         // }
         //}
+
+        #endregion OldPlayerUpdate Code
 
         public int listCreate(int flags)
         {

@@ -137,7 +137,7 @@ namespace WazeScheduledTaskAgent
                 // we can't wait more then 6 seconds or else the OS will kill us.
                 if (!mre.WaitOne(6000))
                 {
-                    WriteLog(to.ToString() + " : timed out reset event");
+                    WriteLog(to.ToString() + " : Reset event timed out.");
                     return -4;
                 }
                     
@@ -145,6 +145,8 @@ namespace WazeScheduledTaskAgent
                 // The server request failed.
                 if (resp == null)
                 {
+                    WriteLog(to.ToString() + " : Server Response Null.");
+
                     return -3;
                 }
 
@@ -197,32 +199,49 @@ namespace WazeScheduledTaskAgent
 
         public static void WriteLog(string text)
         {
-            IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
-            using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.Append, FileAccess.Write))
+            using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
             {
-                using (StreamWriter sw = new StreamWriter(fsInterval))
+                using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.Append, FileAccess.Write))
                 {
+                    using (StreamWriter sw = new StreamWriter(fsInterval))
+                    {
                         sw.WriteLine(DateTime.Now.ToString());
                         sw.WriteLine(text);
-                        sw.WriteLine("____________________________");                       
-                 
-                }
+                        sw.WriteLine("____________________________");
 
+                    }
+
+                }
             }
         }
 
         public static string ReadLog()
         {
-            IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
-            using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.OpenOrCreate, FileAccess.Read))
+            using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
             {
-                using (StreamReader sr = new StreamReader(fsInterval))
+                using (IsolatedStorageFileStream fsInterval = isf.OpenFile("LiveTile\\Log", FileMode.OpenOrCreate, FileAccess.Read))
                 {
-                       return sr.ReadToEnd();
-                    
-                }
+                    using (StreamReader sr = new StreamReader(fsInterval))
+                    {
+                        return sr.ReadToEnd();
 
+                    }
+
+                }
             }
+        }
+
+        public static void DeleteLog()
+        {
+            using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
+            {
+                if (isf.FileExists("LiveTile\\Log"))
+                {
+                    isf.DeleteFile("LiveTile\\Log");
+                }
+            }
+
+
         }
     }
 }
