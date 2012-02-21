@@ -16,6 +16,7 @@ using Microsoft.Phone;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using Microsoft.Phone.Scheduler;
+using System.Windows.Navigation;
 
 using NBidi;
 
@@ -452,7 +453,10 @@ public class Syscalls
             else
             {
                 // throw unhandled exception in order to free app from memory
-                throw new InvalidProgramException();
+                //throw new InvalidProgramException();
+
+                // no need for that any more, the user can exit using the back button.
+                
             }
         });
     }
@@ -3582,7 +3586,7 @@ end:
             }
         }
         finally
-        {
+        {   
             mLiveTileStorageMutex.ReleaseMutex();
             mLiveTileStorageMutex.Dispose();
         }
