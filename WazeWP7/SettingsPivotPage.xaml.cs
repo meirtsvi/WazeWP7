@@ -153,6 +153,7 @@ namespace WazeWP7
             OtherSettings_EnableRotation,
             OtherSettings_EnableTile,
             OtherSettings_TileRefreshInterval,
+            OtherSettings_EnableExitConfirmation,
             #endregion
 
             SettingsMaxValue
@@ -452,6 +453,9 @@ namespace WazeWP7
 
         private SimpleToggleSwitchViewModel enableRotation = new SimpleToggleSwitchViewModel("Enable Rotation");
         public SimpleToggleSwitchViewModel EnableRotation { get { return enableRotation; } }
+
+        private SimpleToggleSwitchViewModel enableExitConfirmation = new SimpleToggleSwitchViewModel("Confirm");
+        public SimpleToggleSwitchViewModel EnableExitConfirmation { get { return enableExitConfirmation; } }
 
         #endregion
 

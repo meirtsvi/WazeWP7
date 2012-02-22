@@ -1448,10 +1448,23 @@ namespace WazeWP7
 
         private void PhoneApplicationPage_BackKeyPress(object sender, CancelEventArgs e)
         {
-            MessageBoxResult res =  MessageBox.Show(LanguageResources.Instance.Translate("Do you want to Exit Waze?"), 
+
+            string isCoinfirmationEnabled;
+            bool confirmationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableExitConfirmation", out isCoinfirmationEnabled);
+            // Do not Confirm if the user asked not to.
+
+            MessageBoxResult res;
+
+            if (confirmationSettingsExist && (isCoinfirmationEnabled == "No"))
+            {
+                res = MessageBoxResult.OK;
+            }
+            else
+            {
+                res =  MessageBox.Show(LanguageResources.Instance.Translate("Do you want to Exit Waze?"), 
                                                     LanguageResources.Instance.Translate("Exit Waze"), 
                                                     MessageBoxButton.OKCancel);
-            
+            }
 
 
             if (res != MessageBoxResult.OK)
