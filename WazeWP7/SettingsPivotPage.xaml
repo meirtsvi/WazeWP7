@@ -290,7 +290,20 @@
 
                             </StackPanel>
                         </Border>
-       
+
+                        <Border BorderThickness="3" Margin="5" BorderBrush="White">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" Text="App Exit"
+                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+                                <TextBlock TextWrapping="Wrap" Text="Confirm before exiting the application" Margin="10,10,10,10" />
+
+                                <local:SimpleToggleSwitch x:Name="EnableExitConfirmation"
+                                                          ViewModel="{Binding EnableExitConfirmation}"/>
+
+
+                            </StackPanel>
+                        </Border>
+
 
                     </StackPanel>
                 </ScrollViewer>

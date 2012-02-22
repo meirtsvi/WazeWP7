@@ -86,7 +86,7 @@ namespace WazeScheduledTaskAgent
                 string line = sr.ReadLine();
                 string[] tokens = line.Split(new[] { ',' }, StringSplitOptions.None);
                 string placeName = tokens[5];
-                if ((placeName.ToLower() == langName) || (placeName == englishName))
+                if ((placeName == langName) || (placeName.ToLower() == englishName.ToLower()))
                 {
 
                     double destLongitude = double.Parse(tokens[7]) / 1000000;
