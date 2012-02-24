@@ -11,9 +11,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using System.Linq;
 using Microsoft.Phone;
+using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using Microsoft.Phone.Scheduler;
+using System.Windows.Navigation;
 
 using NBidi;
 
@@ -450,7 +453,10 @@ public class Syscalls
             else
             {
                 // throw unhandled exception in order to free app from memory
-                throw new InvalidProgramException();
+                //throw new InvalidProgramException();
+
+                // no need for that any more, the user can exit using the back button.
+                
             }
         });
     }
@@ -3555,6 +3561,7 @@ end:
                 using (StreamWriter sw = new StreamWriter(fsWorkName))
                 {
                     sw.Write(LanguageResources.Instance.Translate("Work"));
+                    sw.Flush();
                 }
 
             }
@@ -3573,12 +3580,13 @@ end:
                     {
                         sw.Write("10");
                     }
+                    sw.Flush();
                 }
 
             }
         }
         finally
-        {
+        {   
             mLiveTileStorageMutex.ReleaseMutex();
             mLiveTileStorageMutex.Dispose();
         }
@@ -3596,6 +3604,21 @@ end:
             ScheduledActionService.Remove(taskName); 
         }
 
+        // Clear the current tile
+
+        ShellTile currentTiles = ShellTile.ActiveTiles.First();
+        StandardTileData tilesUpdatedData = new StandardTileData
+        {
+            Title = "Waze",
+            BackgroundImage = new Uri("waze_logo.png", UriKind.Relative),
+            Count = 0,
+            BackTitle = string.Empty,
+            BackContent = string.Empty
+
+        };
+
+        currentTiles.Update(tilesUpdatedData);
+
         // Place the call to Add in a try block in case the user has disabled agents, but selected to turn it on from the app:
         try
         {
@@ -3604,8 +3627,8 @@ end:
             {
                 ScheduledActionService.Add(periodicTask);
 
-                // Update the Tile now within 10 seconds (Won't work for marketplace app):
-                ScheduledActionService.LaunchForTest(taskName,TimeSpan.FromSeconds(2));
+                // Update the Tile for the first time within 5 seconds (Won't work for marketplace app):
+                ScheduledActionService.LaunchForTest(taskName,TimeSpan.FromSeconds(5));
             }
         }
         catch (InvalidOperationException exception)

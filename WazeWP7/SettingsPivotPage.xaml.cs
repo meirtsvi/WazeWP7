@@ -153,6 +153,7 @@ namespace WazeWP7
             OtherSettings_EnableRotation,
             OtherSettings_EnableTile,
             OtherSettings_TileRefreshInterval,
+            OtherSettings_EnableExitConfirmation,
             #endregion
 
             SettingsMaxValue
@@ -433,11 +434,8 @@ namespace WazeWP7
         public SimpleToggleSwitchViewModel DisplayNetworkMonitor { get { return displayNetworkMonitor; } }
         public SimpleToggleSwitchViewModel DownloadTrafficInfo { get { return downloadTrafficInfo; } }
         #endregion
-
-        #region Other Settings
-
-        private SimpleToggleSwitchViewModel enableRotation = new SimpleToggleSwitchViewModel("Enable Rotation");
-        public SimpleToggleSwitchViewModel EnableRotation { get { return enableRotation; } }
+        
+        #region Live Tile Settings
 
         private SimpleToggleSwitchViewModel enableTile = new SimpleToggleSwitchViewModel("Enable Tile");
         public SimpleToggleSwitchViewModel EnableTile { get { return enableTile; } }
@@ -446,9 +444,20 @@ namespace WazeWP7
         private ListViewModel tileRefreshInterval = new ListViewModel(tileRefreshIntervals.Select((interval) =>
                                                                         new ListItemViewModel(interval)).ToList());
 
-        public ListViewModel TileRefreshInterval { get { return tileRefreshInterval;} }
+        public ListViewModel TileRefreshInterval { get { return tileRefreshInterval; } }
 
 
         #endregion
+
+        #region Other Settings
+
+        private SimpleToggleSwitchViewModel enableRotation = new SimpleToggleSwitchViewModel("Enable Rotation");
+        public SimpleToggleSwitchViewModel EnableRotation { get { return enableRotation; } }
+
+        private SimpleToggleSwitchViewModel enableExitConfirmation = new SimpleToggleSwitchViewModel("Confirm");
+        public SimpleToggleSwitchViewModel EnableExitConfirmation { get { return enableExitConfirmation; } }
+
+        #endregion
+
     }
 }

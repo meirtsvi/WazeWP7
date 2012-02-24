@@ -630,6 +630,12 @@ namespace WazeWP7
                 }
             }
 
+            // Do not add the exit menu item any more
+            if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
+            {
+                return;
+            }
+
             WazeMenuItem new_item = new WazeMenuItem(text, ordinal, priority, wrapper_callback, callback);
             if (push_at_start == 1)
             {
@@ -1442,11 +1448,39 @@ namespace WazeWP7
 
         private void PhoneApplicationPage_BackKeyPress(object sender, CancelEventArgs e)
         {
-            if (MeOnMapItem != null)
+
+            string isCoinfirmationEnabled;
+            bool confirmationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableExitConfirmation", out isCoinfirmationEnabled);
+            // Do not Confirm if the user asked not to.
+
+            MessageBoxResult res;
+
+            if (confirmationSettingsExist && (isCoinfirmationEnabled == "No"))
             {
-                MeOnMapItem.CallCallback();
+                res = MessageBoxResult.OK;
             }
-            e.Cancel = true;
+            else
+            {
+                res =  MessageBox.Show(LanguageResources.Instance.Translate("Do you want to Exit Waze?"), 
+                                                    LanguageResources.Instance.Translate("Exit Waze"), 
+                                                    MessageBoxButton.OKCancel);
+            }
+
+
+            if (res != MessageBoxResult.OK)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+
+            //if (MeOnMapItem != null)
+            //{
+            //    MeOnMapItem.CallCallback();
+            //}
+            //e.Cancel = true;
         }
 
         private void LayoutRoot_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
