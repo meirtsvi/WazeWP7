@@ -344,7 +344,7 @@ namespace WazeWP7
         /// </summary>
         private void OnDraw(object sender, GameTimerEventArgs e)
         {
-            SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.White);
+            SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.Black);
 
             //Rendering Silverlight content into the UIElementRenderer object and the rendering its texture using the SpriteBatch object
             elementRenderer.Render();

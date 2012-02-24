@@ -144,6 +144,9 @@ namespace WazeScheduledTaskAgent
                         workEtaMin = BackgroundNavigator.GetRouteTime(from, toWork);
                     }
 
+                    workEtaMin = workEtaMin >= 0 ? workEtaMin : 0;
+                    homeEtaMin = homeEtaMin >= 0 ? homeEtaMin : 0;
+
                    // Prepare data for tile:
                     if ((homeEtaMin >= 0) || (workEtaMin >= 0))
                     {

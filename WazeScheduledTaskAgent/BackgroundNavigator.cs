@@ -65,8 +65,7 @@ namespace WazeScheduledTaskAgent
             try
             {
                 var store = IsolatedStorageFile.GetUserStoreForApplication();
-
-                historyFile = store.OpenFile("/history", FileMode.Open);
+                historyFile = store.OpenFile("/history", FileMode.Open, FileAccess.Read); 
             }
             catch (FileNotFoundException)
             {
