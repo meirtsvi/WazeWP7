@@ -1481,7 +1481,7 @@ public class Syscalls
     }
 
     static List<WazeMenuItem> miniMenuItems = new List<WazeMenuItem>();
-    public static bool MiniMenuIsOn { get; private set; }
+    public static bool MiniMenuIsOn { get;  set; }
     public static bool DialogIsOn { get; private set; }
 
     public static void NOPH_FreemapMainScreen_setMiniMenuItem(int __screen, int __text, int ordinal, int wrapper_callback, int callback)
@@ -1501,54 +1501,79 @@ public class Syscalls
         //mre.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
-                ListBox miniMenu = new ListBox();
-                miniMenu.FlowDirection = FlowDirection.RightToLeft;
-
-                miniMenu.SetValue(Canvas.LeftProperty, (double)150);
-                miniMenu.SetValue(Canvas.TopProperty, (double)300);
-                miniMenu.BorderBrush = new SolidColorBrush(Colors.White);
-                miniMenu.Foreground = new SolidColorBrush(Colors.White);
-                miniMenu.Background = new SolidColorBrush(Colors.Black);
-                miniMenu.FontSize = 40;
-
-                // Build the menu items to display:
-                foreach (WazeMenuItem menuItem in miniMenuItems)
-                {
-                    miniMenu.Items.Add(menuItem);
-                }
 
                 // Add Me on map as the last menu:
-                WazeMenuItem meOnMapL2V = new WazeMenuItem("Cancel",
+                WazeMenuItem meOnMapL2V = new WazeMenuItem(LanguageResources.Instance.Translate("Cancel"),
                                                            GamePage.MeOnMapItem.ordinal,
                                                            GamePage.MeOnMapItem.priority,
                                                            GamePage.MeOnMapItem.wrapper_callback,
                                                            GamePage.MeOnMapItem.callback);
 
-                miniMenu.Items.Add(meOnMapL2V);
-                
-                // Handle user choice:
-                miniMenu.SelectionChanged += delegate(object sender, SelectionChangedEventArgs e)
-                    {
-                        if (GamePage.get().GetPopupPanel() != null)
-                        {
-                            ListBox lb = (ListBox)sender;
-                            WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
-                            GamePage.get().GetPopupPanel().Children.Remove(miniMenu);
-                            miniMenu = null;
+                miniMenuItems.Add(meOnMapL2V);
 
-                            // Clear the menu
-                            miniMenuItems.Clear();
-                            MiniMenuIsOn = false;
+                GamePage mainScreen = (GamePage)GamePage.get();
 
-                            // Fire the user selection:
-                            selectedItem.CallCallback();
-                        }
-                    };
-
-                var popupPanel = GamePage.get().GetPopupPanel();
-                if (popupPanel != null)
+                if ((miniMenuItems.Count == 8) && (miniMenuItems[0].text == LanguageResources.Instance.Translate("Police"))) // Report type menu
                 {
-                    popupPanel.Children.Add(miniMenu);
+                    mainScreen.NavigationService.Navigate<ReportPage>(miniMenuItems);
+                    miniMenuItems = new List<WazeMenuItem>();
+                    Syscalls.MiniMenuIsOn = false;
+
+
+                }
+                else if ((miniMenuItems.Count == 3) && (miniMenuItems[0].text == LanguageResources.Instance.Translate("My direction"))) // Direction menu
+                {
+                    mainScreen.NavigationService.Navigate<ChooseDirectionPage>(miniMenuItems);
+                    miniMenuItems = new List<WazeMenuItem>();
+                    Syscalls.MiniMenuIsOn = false;
+                    
+                }
+                else // Other menu
+                {
+
+                    ListBox miniMenu = new ListBox();
+                    miniMenu.FlowDirection = FlowDirection.RightToLeft;
+
+                    miniMenu.SetValue(Canvas.LeftProperty, (double)150);
+                    miniMenu.SetValue(Canvas.TopProperty, (double)300);
+                    miniMenu.BorderBrush = new SolidColorBrush(Colors.White);
+                    miniMenu.Foreground = new SolidColorBrush(Colors.White);
+                    miniMenu.Background = new SolidColorBrush(Colors.Black);
+                    miniMenu.FontSize = 40;
+
+                    // Build the menu items to display:
+                    foreach (WazeMenuItem menuItem in miniMenuItems)
+                    {
+                        miniMenu.Items.Add(menuItem);
+                    }
+
+
+
+                    // Handle user choice:
+                    miniMenu.SelectionChanged += delegate(object sender, SelectionChangedEventArgs e)
+                        {
+                            if (GamePage.get().GetPopupPanel() != null)
+                            {
+                                ListBox lb = (ListBox)sender;
+                                WazeMenuItem selectedItem = (WazeMenuItem)lb.SelectedItem;
+                                GamePage.get().GetPopupPanel().Children.Remove(miniMenu);
+                                miniMenu = null;
+
+                                // Clear the menu
+                                miniMenuItems = new List<WazeMenuItem>();
+                                //miniMenuItems.Clear();
+                                MiniMenuIsOn = false;
+
+                                // Fire the user selection:
+                                selectedItem.CallCallback();
+                            }
+                        };
+
+                    var popupPanel = GamePage.get().GetPopupPanel();
+                    if (popupPanel != null)
+                    {
+                        popupPanel.Children.Add(miniMenu);
+                    }
                 }
                 
                 //mre.Set();

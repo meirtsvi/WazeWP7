@@ -598,6 +598,7 @@ namespace WazeWP7
         }
 
         //private static bool perf_button_added = false;
+        public static WazeMenuItem Report = null;
         public static WazeMenuItem MeOnMapItem = null;
         public static WazeMenuItem RestoreFavorites = null;
         public static WazeMenuItem ZoomIn = null;
@@ -663,6 +664,7 @@ namespace WazeWP7
             else if (text.ToLower().Equals("report") || text.Equals("דווח"))
             {
                 addIconMenuItem("Resources/i.png", text, new_item);
+                Report = new_item;
                 addMenuItem = false;
             }
             else if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי"))

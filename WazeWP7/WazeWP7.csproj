@@ -94,6 +94,9 @@
     <Compile Include="CachedBitmap.cs" />
     <Compile Include="CibylCallTable.cs" />
     <Compile Include="CibylConfig.cs" />
+    <Compile Include="ChooseDirectionPage.xaml.cs">
+      <DependentUpon>ChooseDirectionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CRunTime.cs" />
     <Compile Include="CRunTimeMemoryInputStream.cs" />
     <Compile Include="FileConnection.cs" />
@@ -123,6 +126,9 @@
     </Compile>
     <Compile Include="RecordStore.cs" />
     <Compile Include="RecordStoreException.cs" />
+    <Compile Include="ReportPage.xaml.cs">
+      <DependentUpon>ReportPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RimTimerMgr.cs" />
     <Compile Include="RoadMapMath.cs" />
     <Compile Include="RTLMessageBox.xaml.cs">
@@ -177,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ChooseDirectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="GenericListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,6 +204,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ReportPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

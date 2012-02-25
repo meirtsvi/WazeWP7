@@ -1,0 +1,121 @@
+﻿<local:WazeApplicationPage 
+    x:Class="WazeWP7.ReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:local="clr-namespace:WazeWP7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" shell:SystemTray.IsVisible="False" 
+    d:DesignHeight="800" d:DesignWidth="480" 
+    OrientationChanged="WazeApplicationPage_OrientationChanged" BackKeyPress="WazeApplicationPage_BackKeyPress">
+    <!--Resources defining the look and feel of the list-->
+    <phone:PhoneApplicationPage.Resources>
+     
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF46CBFF">
+      
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--Grid for displaying popups-->
+        <Grid x:Name="PopupsGrid" Canvas.ZIndex="1"
+              HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+        
+        <toolkit:WrapPanel Grid.Row="1"  Name="wrapPanelReport"
+                           HorizontalAlignment="Left" Margin="50,0,0,0"  
+                           VerticalAlignment="Top"  >
+            <Button Name="ButtonPolice" Height="190" Width="185" Click="ButtonPolice_Click">
+                <StackPanel >
+                <Image   Source="/WazeWP7;component/Resources/alert_icon_police.png" DataContext="{Binding}" />
+                <TextBlock  
+                            TextAlignment="Center"
+                           Text="Police" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black"/>
+                </StackPanel>
+
+            </Button>
+            <Button Name="ButtonTrafficJam" Height="190" Width="185" Click="ButtonTrafficJam_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/alert_icon_traffic_jam.png" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Traffic jam" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black" FontSize="22" />
+                </StackPanel>
+                
+            </Button>
+            <Button Name="ButtonAccident" Height="190" Width="185" Click="ButtonAccident_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/alert_icon_accident.png" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Accident" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black" FontSize="22" />
+                </StackPanel>
+                
+            </Button>
+            <Button Name="ButtonHazard" Height="190" Width="185" Click="ButtonHazard_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/alert_icon_hazard.png" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Hazard" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black"/>
+                </StackPanel>
+                
+            </Button>
+            <Button Name="ButtonChitChat" Height="190" Width="185" Click="ButtonChitChat_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/alert_icon_chit_chat.png" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Chit Chat" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black"/>
+
+                </StackPanel>
+            </Button>
+            <Button Name="ButtonUpdate" Height="190" Width="185" Click="ButtonUpdate_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/map_updates_menu.png" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Update map" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black" FontSize="22" />
+
+                </StackPanel>
+            </Button>
+            <Button Name="ButtonCheckIn" Height="190" Width="185" Click="ButtonCheckIn_Click">
+                <StackPanel >
+                    <Image   Source="/WazeWP7;component/Resources/foursquare.png" Height="103" Width="130" />
+                    <TextBlock  
+                            TextAlignment="Center"
+                           Text="Foursquare" 
+                           TextWrapping="Wrap" 
+                           Foreground="Black" FontSize="24" />
+
+                </StackPanel>
+            </Button>
+        
+
+        </toolkit:WrapPanel>
+
+    </Grid>
+</local:WazeApplicationPage>
