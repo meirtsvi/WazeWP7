@@ -94,6 +94,7 @@ namespace WazeWP7
                         // If no translation - add it
                         if (!translationDictionary.ContainsKey(key))
                         {
+                            //System.Diagnostics.Debug.WriteLine("Lang:" + key + "|" + value);
                             translationDictionary.Add(key, value);
                         }
                         else // Else Overwrite it
@@ -164,6 +165,7 @@ namespace WazeWP7
                         string value = ReadNextStringFromLanguageFile(file, intBuffer, ref stringBuffer);
                         if (!translationDictionary.ContainsKey(key))
                         {
+                          //  System.Diagnostics.Debug.WriteLine("Lang:" + key + "|" + value);
                             translationDictionary.Add(key, value);
                             if ("RTL".Equals(key))
                             {

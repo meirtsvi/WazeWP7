@@ -622,6 +622,7 @@ namespace WazeWP7
 
         public void addMenuItem(String text, int ordinal, int priority, int wrapper_callback, int callback, int push_at_start)
         {
+
             for (int i = 0; i < m_menuItems.Count; i++)
             {
                 WazeMenuItem m = (WazeMenuItem)m_menuItems[i];
@@ -632,7 +633,7 @@ namespace WazeWP7
             }
 
             // Do not add the exit menu item any more
-            if (text.ToLower().Equals("exit") || text.Equals("יציאה"))
+            if (text.ToLower().Equals("exit") || text.Equals("יציאה") || text.Equals(LanguageResources.Instance.Translate("Quit")))
             {
                 return;
             }
@@ -649,40 +650,40 @@ namespace WazeWP7
 
             bool addMenuItem = true;
 
-            if (text.ToLower().Equals("me on map") || text.Equals("הצג אותי"))
+            if (text.ToLower().Equals("me on map") || text.Equals("הצג אותי") || text.Equals(LanguageResources.Instance.Translate("Me on map")))
             {
                 MeOnMapItem = new_item;
 
                 addIconMenuItem("Resources/compas.png", text, MeOnMapItem);
                 addMenuItem = false;
             }
-            else if (text.ToLower().Equals("drive to") || text.Equals("נווט"))
+            else if (text.ToLower().Equals("drive to") || text.Equals("נווט") || text.Equals(LanguageResources.Instance.Translate("Drive to")))
             {
                 addIconMenuItem("Resources/search.png", text, new_item);
                 addMenuItem = false;
             }
-            else if (text.ToLower().Equals("report") || text.Equals("דווח"))
+            else if (text.ToLower().Equals("report") || text.Equals("דווח") || text.Equals(LanguageResources.Instance.Translate("Report")))
             {
                 addIconMenuItem("Resources/i.png", text, new_item);
                 Report = new_item;
                 addMenuItem = false;
             }
-            else if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי"))
+            else if (text.ToLower().Equals("my favorites") || text.Equals("המועדפים שלי") || text.Equals(LanguageResources.Instance.Translate("My favorites")))
             {
                 addIconMenuItem("Resources/favorites.png", text, new_item);
                 addMenuItem = false;
             }
-            else if (text.ToLower().Equals("zoom in"))
+            else if (text.ToLower().Equals("zoom in") || text.Equals(LanguageResources.Instance.Translate("Zoom In")))
             {
                 ZoomIn = new_item;
                 addMenuItem = false;
             }
-            else if (text.ToLower().Equals("zoom out"))
+            else if (text.ToLower().Equals("zoom out") || text.Equals(LanguageResources.Instance.Translate("Zoom Out")))
             {
                 ZoomOut = new_item;
                 addMenuItem = false;
             }
-            else if (text.ToLower().Contains("favorites"))
+            else if (text.ToLower().Contains("favorites") || text.Equals(LanguageResources.Instance.Translate("Restore Favorites")))
             {
                 RestoreFavorites = new_item;
                 addMenuItem = false;
@@ -732,7 +733,7 @@ namespace WazeWP7
                 {
                     // Create a new menu item with the localized string from AppResources
                     ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(text);
-                    if (text.ToLower().Equals("about") || text.Equals("אודות"))
+                    if (text.ToLower().Equals("about") || text.Equals("אודות") || text.Equals(LanguageResources.Instance.Translate("About")))
                     {
                         appBarMenuItem.Click += delegate
                         {
