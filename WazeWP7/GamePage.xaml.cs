@@ -161,6 +161,8 @@ namespace WazeWP7
 
         private void InitWorld()
         {
+         
+
             Syscalls.SetSupportedPageOrientation();
             
 
