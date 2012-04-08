@@ -51,6 +51,9 @@
     <Reference Include="cibyl">
       <HintPath>..\converted\cibyl.dll</HintPath>
     </Reference>
+    <Reference Include="Data.Services.Client">
+      <HintPath>..\packages\Phone.Storage.1.0.1\lib\sl40-wp71\Data.Services.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
@@ -66,6 +69,12 @@
     <Reference Include="mscorlib.extensions" />
     <Reference Include="NBidi">
       <HintPath>.\NBidi.dll</HintPath>
+    </Reference>
+    <Reference Include="Phone.Storage">
+      <HintPath>..\packages\Phone.Storage.1.0.1\lib\sl40-wp71\Phone.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightActivator">
+      <HintPath>..\packages\SilverlightActivator.1.0.4\lib\sl4-wp71\SilverlightActivator.dll</HintPath>
     </Reference>
     <Reference Include="System.Device" />
     <Reference Include="System.Windows" />
@@ -89,6 +98,7 @@
     <Compile Include="AppServiceProvider.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\StorageInitializer.cs" />
     <Compile Include="AsyncNet.cs" />
     <Compile Include="BitmapInfo.cs" />
     <Compile Include="CachedBitmap.cs" />
@@ -166,6 +176,7 @@
     <Compile Include="UIWorker.cs" />
     <Compile Include="WazeApplicationPage.cs" />
     <Compile Include="WazeMenuItem.cs" />
+    <Compile Include="WebStats.cs" />
     <Compile Include="WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
@@ -245,6 +256,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\font.ttf" />
     <None Include="Resources\font_normal.ttf" />
     <None Include="WazeWP7_2012_01_17_13_36_58.sap" />
@@ -742,6 +754,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <None Include="en2he_online_trans.txt" />
+    <Resource Include="App_Readme\Content\StorageInitializer.png" />
+    <Resource Include="App_Readme\Content\CloudTableInterfaces.png" />
+    <Resource Include="App_Readme\Content\CloudStorageClientResolver.png" />
+    <Resource Include="App_Readme\Content\CloudQueueInterfaces.png" />
+    <Resource Include="App_Readme\Content\CloudBlobInterfaces.png" />
+    <Content Include="App_Readme\Content\Site.css" />
+    <Content Include="App_Readme\Phone.Storage.Readme.htm" />
     <Content Include="Resources\menu_icon.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
