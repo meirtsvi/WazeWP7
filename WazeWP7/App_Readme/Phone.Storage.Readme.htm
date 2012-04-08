@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Azure Storage Client Library for Windows Phone</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="header">
+                <div id="title">
+                    <h1>Windows Azure Storage Client Library for Windows Phone</h1>
+                </div>                        
+            
+                <div class="clear"></div>
+            </div>
+        </header>
+        <section id="main">
+            <h2>Introduction</h2>
+            <p>
+                The Windows Azure Storage Client library for Windows Phone 
+                contains a set of classes to provide client access for Windows 
+                Azure storage services such as Blobs, Tables and Queues.</p>
+            <h3>Prerequisites</h3>
+            <ul>
+                <li><a href="http://www.microsoft.com/download/en/details.aspx?id=27570">Windows Phone SDK 7.1</a></li>
+                <li><a href="http://www.nuget.org/">NuGet 1.5 or above</a></li>
+            </ul>
+            
+            <h2>Configuration</h2>
+            <h3>Configuring your Windows Azure Storage settings</h3>
+            <ol>
+                <li>The Windows Azure Storage Client library for Windows Phone works against any of the following 
+                    services:
+					<ul>
+						<li>Windows Azure storage services (and Storage Emulator)</li>
+						<li><a href="http://nuget.org/Packages/WindowsAzure.Storage.Proxy">Windows Azure storage proxy cloud services</a></li>
+					</ul>
+				</li>
+			
+                <li>By default, this package is configured to access the Windows Azure Storage Emulator 
+                    directly. If you wish to change this, modify the <strong>App_Start\StorageInitializer.cs</strong> file, and set 
+                    the account type you desire for your application.</li><br/>
+                <img src="Content/StorageInitializer.png" title="Configuring the Windows Azure Storage Client library for Windows Phone" /><br/>
+            </ol>
+            <!------------------------------------------>
+
+			<h2>How to use it</h2>
+			<h3>Storage Context Resolver</h3>
+			<p>
+				This library provides an <strong>ICloudStorageClientResolver</strong> 
+                interface to create the clients for Blobs, Tables and Queues according to the Windows Azure 
+                storage settings configured. There are two implementations for this interface: 
+			</p>
+            <ul>
+            <li><strong>CloudStorageClientResolverAccountAndKey</strong>: Lets you configure 
+                your Windows Azure storage account settings (account name, account key, blob 
+                service endpoint, queue service endpoint and table service endpoint) so your 
+                phone application can 
+                access them directly.</li>
+            <li><strong>CloudStorageClientResolverProxies</strong>: Lets you configure your 
+                Windows Azure storage proxy&nbsp;cloud services&#39; settings (custom authorization 
+                header, shared access signature service endpoint, queue proxy service endpoint 
+                and table proxy service endpoint) so your phone application can access the 
+                Queues and Tables services indirectly through the proxies, and using shared 
+                access signatures for Blobs.</li>
+            </ul>
+            <img src="Content/CloudStorageClientResolver.png" title="ICloudStorageClientResolver interface" /><br/>
+			<!------------------------------------------>
+			
+            <h3>Cloud Queues</h3>
+			<p>
+				After creating a 
+                cloud queue client using the resolver, you can get a queue reference and operate with it using the following interface.  
+				<br/><img src="Content/CloudQueueInterfaces.png" title="Cloud Queue interfaces" /><br/>
+			</p>
+			<h4>Queues Sample</h4>
+			<p>
+				The following sample code shows how to create a new queue and immediately add a message 
+                to it.
+			</p>
+			<pre class="code">
+var queueClient = CloudStorageContext.Current.Resolver.CreateCloudQueueClient();
+var queue = queueClient.GetQueueReference("queuename");
+queue.Create(
+   r => queue.AddMessage(
+            new CloudQueueMessage { AsBytes = Encoding.UTF8.GetBytes("Message content") },
+            c =>
+            {
+                // Some logic here.
+            }));
+</pre>
+			
+			<!------------------------------------------>
+			
+			<h3>Cloud Tables</h3>
+			<p>
+				After creating a 
+                cloud table client using the resolver, you can create and delete tables or get the 
+                <strong>TableServiceContext</strong> (which inherits from <strong>
+                DataServiceContext</strong>) to work with rows within a single table.
+				<br/><img src="Content/CloudTableInterfaces.png" title="Cloud Table interfaces" /><br/>
+			</p>
+			<h4>Tables Sample</h4>
+            <p>In order to operate with rows on a table, you need to first create a class that 
+                inherits from <strong>TableServiceEntity</strong> to define the table structure. 
+                Make sure to add the <strong>DataServiceEntity</strong> and <strong>EntitySet</strong> 
+                attributes to the class definition, passing the table name as constructor 
+                parameter for the latter.</p>
+			<pre class="code">
+using System;
+using System.Globalization;
+using Microsoft.WindowsAzure.Samples.Data.Services.Client;
+using Microsoft.WindowsAzure.Samples.Phone.Storage;
+
+[DataServiceEntity]
+[EntitySet("SampleData")]
+public class SampleData : TableServiceEntity
+{
+    private string name;
+
+    public SampleData()
+        : base(
+              "PartitionKey",
+              string.Format(
+                  CultureInfo.InvariantCulture,
+                  "{0:10}_{1}",
+                  DateTime.MaxValue.Ticks - DateTime.Now.Ticks,
+                  Guid.NewGuid()))
+    {
+    }
+
+    public SampleData(string partitionKey, string rowKey)
+        : base(partitionKey, rowKey)
+    {
+    }
+
+    public string Name
+    {
+        get
+        {
+            return this.name;
+        }
+
+        set
+        {
+            this.name = value;
+            this.OnPropertyChanged("Name");
+        }
+    }
+}
+</pre>
+			<p>
+				Now 
+                that we have the <strong>SampleData</strong> class,
+				you can use the following code to create a new <em>SampleData</em> table and immediately add a row 
+                to it using the <strong>TableServiceContext</strong>.
+			</p>
+			<pre class="code">
+var tableClient = CloudStorageContext.Current.Resolver.CreateCloudTableClient();
+var tableName = "SampleData";
+
+tableClient.CreateTableIfNotExist(
+    tableName,
+    p =>
+    {
+        var context = CloudStorageContext.Current.Resolver.CreateTableServiceContext();
+        var sampleData = new SampleData { Name = &quot;John Doe&quot; };
+
+        context.AddObject(tableName, sampleData);
+        context.BeginSaveChanges(
+            asyncResult =>
+            {
+                var response = context.EndSaveChanges(asyncResult);
+
+                // Some logic here.
+            },
+            null);
+    });
+</pre>
+			
+			<!------------------------------------------>
+			
+			<h3>Cloud Blobs</h3>
+			<p>
+				After creating a 
+                cloud blob client using the resolver, you can get a container reference and operate with it and 
+                its contained blobs using the following interfaces.  
+				<br/><img src="Content/CloudBlobInterfaces.png" title="Cloud Blob interfaces" /><br/>
+			</p>
+			<h4>Blobs Sample</h4>
+			<p>
+				The following sample shows how to create a new public container with sample metadata and immediately add a blob 
+                to it. 
+			</p>
+			<pre class="code">
+var blobClient = CloudStorageContext.Current.Resolver.CreateCloudBlobClient();
+var container = blobClient.GetContainerReference("sample-container");
+container.Metadata.Add("samplekey", "samplevalue");
+
+container.CreateIfNotExist(
+    BlobContainerPublicAccessType.Container,
+    response =>
+    {
+        var blob = container.GetBlobReference("sample-blob");
+        var sampleStream = new MemoryStream(Encoding.UTF8.GetBytes("sample content"));
+
+        blob.UploadFromStream(
+            sampleStream,
+            response2 =>
+            {
+                // Some logic here.
+            });
+    });
+</pre>
+			
+        <!------------------------------------------>
+        </section>
+    </div>
+</body>
+</html>

@@ -2959,6 +2959,8 @@ end:
     {
         String langugae = CRunTime.charPtrToString(i_langugae);
         LanguageResources.LoadLanaguage(langugae);
+
+        WebStats.ReportWebStat();
     }
     #endregion
 
