@@ -429,7 +429,8 @@ namespace WazeWP7
             // Set the page's ApplicationBar to a new instance of ApplicationBar
             ApplicationBar = new ApplicationBar()
             {
-                Mode = ApplicationBarMode.Default
+                Mode = ApplicationBarMode.Default,
+                Opacity = 0.99
             };
         }
 
