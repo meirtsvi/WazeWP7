@@ -259,8 +259,6 @@
     <None Include="packages.config" />
     <None Include="Resources\font.ttf" />
     <None Include="Resources\font_normal.ttf" />
-    <None Include="WazeWP7_2012_01_17_13_36_58.sap" />
-    <None Include="WazeWP7_2012_01_17_13_44_03.sap" />
     <Resource Include="Resources\lang\lang.eng_j2me">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -161,8 +161,6 @@ namespace WazeWP7
 
         private void InitWorld()
         {
-         
-
             Syscalls.SetSupportedPageOrientation();
             
 
@@ -346,68 +344,83 @@ namespace WazeWP7
         /// </summary>
         private void OnDraw(object sender, GameTimerEventArgs e)
         {
-            SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.Black);
+            try
+            {
+                SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.Black);
 
-            //Rendering Silverlight content into the UIElementRenderer object and the rendering its texture using the SpriteBatch object
-            elementRenderer.Render();
+                //Rendering Silverlight content into the UIElementRenderer object and the rendering its texture using the SpriteBatch object
+                elementRenderer.Render();
+            }
+            catch (Exception)
+            { }
 
             if (VertexActiveIndex > 3)
             {
 
                 lock (this)
                 {
-                    int ActiveIndex = whichPolygonArrayActive;
-
-                    // Draw textured box
-                    SharedGraphicsDeviceManager.Current.GraphicsDevice.RasterizerState = RasterizerState.CullNone;  // vertex order doesn't matter
-                    //SharedGraphicsDeviceManager.Current.GraphicsDevice.BlendState = BlendState.NonPremultiplied;    // use alpha blending
-                    SharedGraphicsDeviceManager.Current.GraphicsDevice.DepthStencilState = DepthStencilState.None;  // don't bother with the depth/stencil buffer
-
-                    
-                    foreach (EffectPass pass in basicEffect.CurrentTechnique.Passes)
+                    try
                     {
-                        pass.Apply();
-                        SharedGraphicsDeviceManager.Current.GraphicsDevice.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.TriangleList, filledPathPolygons[ActiveIndex], 0, VertexActiveIndex / 3);
-                    }
 
-                    spriteBatch.Begin();
-                    for (int i = 0; i < bitmapActiveIndex; i++)
-                    {
-                        Texture2D bitmap = bitmaps[ActiveIndex][i];
-                        string[] xandy = ((string)(bitmap.Tag)).Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries);
-                        int x = int.Parse(xandy[0]);
-                        int y = int.Parse(xandy[1]);
-                        spriteBatch.Draw(bitmap, new Microsoft.Xna.Framework.Rectangle(x,y,bitmap.Width, bitmap.Height), Color.Azure);
-                    }
+                        int ActiveIndex = whichPolygonArrayActive;
 
-                    for (int i = 0; i < textStringActiveIndex; i++)
-                    {
-                        TextString textString = textStrings[ActiveIndex][i];
-                        // Find the center of the string
-                        Vector2 FontOrigin = new Vector2(0, textString.size + 5);
+                        // Draw textured box
+                        SharedGraphicsDeviceManager.Current.GraphicsDevice.RasterizerState = RasterizerState.CullNone;  // vertex order doesn't matter
+                        //SharedGraphicsDeviceManager.Current.GraphicsDevice.BlendState = BlendState.NonPremultiplied;    // use alpha blending
+                        SharedGraphicsDeviceManager.Current.GraphicsDevice.DepthStencilState = DepthStencilState.None;  // don't bother with the depth/stencil buffer
 
-                        int x = textString.x;
-                        int y = textString.y;
 
-                        // Draw the string
-                        try
+                        foreach (EffectPass pass in basicEffect.CurrentTechnique.Passes)
                         {
-                            spriteBatch.DrawString(Fonts[textString.size], textString.text, new Vector2(x, y), textString.color, MathHelper.ToRadians(textString.angle), FontOrigin,
-                                1.0f, SpriteEffects.None, 0);
+                            pass.Apply();
+                            SharedGraphicsDeviceManager.Current.GraphicsDevice.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.TriangleList, filledPathPolygons[ActiveIndex], 0, VertexActiveIndex / 3);
                         }
-                        catch (ArgumentException)
+
+                        spriteBatch.Begin();
+                        for (int i = 0; i < bitmapActiveIndex; i++)
                         {
-                            // Sometimes the C code sends illegal chars - just ignore them
+                            Texture2D bitmap = bitmaps[ActiveIndex][i];
+                            string[] xandy = ((string)(bitmap.Tag)).Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                            int x = int.Parse(xandy[0]);
+                            int y = int.Parse(xandy[1]);
+                            spriteBatch.Draw(bitmap, new Microsoft.Xna.Framework.Rectangle(x, y, bitmap.Width, bitmap.Height), Color.Azure);
                         }
+
+                        for (int i = 0; i < textStringActiveIndex; i++)
+                        {
+                            TextString textString = textStrings[ActiveIndex][i];
+                            // Find the center of the string
+                            Vector2 FontOrigin = new Vector2(0, textString.size + 5);
+
+                            int x = textString.x;
+                            int y = textString.y;
+
+                            // Draw the string
+                            try
+                            {
+                                spriteBatch.DrawString(Fonts[textString.size], textString.text, new Vector2(x, y), textString.color, MathHelper.ToRadians(textString.angle), FontOrigin,
+                                    1.0f, SpriteEffects.None, 0);
+                            }
+                            catch (ArgumentException)
+                            {
+                                // Sometimes the C code sends illegal chars - just ignore them
+                            }
+                        }
+                        spriteBatch.End();
                     }
-                    spriteBatch.End();
+                    catch (Exception)
+                    { }
                 }
             }
-            
-            // Using the texture from the UIElementRenderer, draw the SL content to the screen
-            spriteBatch.Begin();
-            spriteBatch.Draw(elementRenderer.Texture, Vector2.Zero, Microsoft.Xna.Framework.Color.White);
-            spriteBatch.End();        
+
+            try
+            {
+                // Using the texture from the UIElementRenderer, draw the SL content to the screen
+                spriteBatch.Begin();
+                spriteBatch.Draw(elementRenderer.Texture, Vector2.Zero, Microsoft.Xna.Framework.Color.White);
+                spriteBatch.End();
+            }
+            catch (Exception) { }
             
         }
     
@@ -416,7 +429,7 @@ namespace WazeWP7
             // Set the page's ApplicationBar to a new instance of ApplicationBar
             ApplicationBar = new ApplicationBar()
             {
-                Mode = ApplicationBarMode.Minimized
+                Mode = ApplicationBarMode.Default
             };
         }
 
@@ -624,7 +637,6 @@ namespace WazeWP7
 
         public void addMenuItem(String text, int ordinal, int priority, int wrapper_callback, int callback, int push_at_start)
         {
-
             for (int i = 0; i < m_menuItems.Count; i++)
             {
                 WazeMenuItem m = (WazeMenuItem)m_menuItems[i];
@@ -1453,6 +1465,11 @@ namespace WazeWP7
 
         private void PhoneApplicationPage_BackKeyPress(object sender, CancelEventArgs e)
         {
+
+            if (MeOnMapItem != null)
+            {
+                MeOnMapItem.CallCallback();
+            }
 
             string isCoinfirmationEnabled;
             bool confirmationSettingsExist = IsolatedStorageSettings.ApplicationSettings.TryGetValue<string>("EnableExitConfirmation", out isCoinfirmationEnabled);
