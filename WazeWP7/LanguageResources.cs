@@ -23,7 +23,9 @@ namespace WazeWP7
         #region Private members
         private static readonly string defaultLanguage = "eng";
         private static string currentLanguage = defaultLanguage;
-        private static LanguageResources instance = new LanguageResources();
+        private static volatile LanguageResources instance = new LanguageResources();
+        private static object syncRoot = new Object();
+
 
         private Dictionary<string, string> translationDictionary = new Dictionary<string,string>();
         #endregion
@@ -37,7 +39,13 @@ namespace WazeWP7
                 var result = instance;
                 if (result.translationDictionary.Count == 0)
                 {
-                    return LoadLanaguage(currentLanguage);
+                    lock (syncRoot)
+                    {
+                        if (result.translationDictionary.Count == 0)
+                        {
+                            return LoadLanaguage(currentLanguage);
+                        }
+                    }
                 }
                 return result;
             }
