@@ -1,0 +1,329 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #ffffff;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: "Segoe UI" , "Helvetica" , "Tahoma" , "Arial";
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}
+
+a
+{
+    color: #3387dd;
+}
+
+a:link
+{
+    color: #3387dd;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #3387dd;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2
+{
+    padding: 0 0 10px 0;
+    font-size: 2.8em;
+    font-weight: lighter;
+    color: #6cbd45;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+h3
+{
+    font-size: 22px;
+    font-weight: normal;
+    color: #939896;
+    margin-bottom: 4px;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+#header h1
+{
+    font-weight: normal;
+    padding: 5px 0px 0px 47px;
+    margin: 0;
+    color: #000;
+    border: none;
+    line-height: 2em;
+    font-size: 24px !important;
+}
+
+#main
+{
+    padding: 0px 0px 0px 0px;
+    background-color: #fff;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu
+{
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: left;
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li a
+{
+    font-weight: normal;
+    font-size: 19px;
+    text-decoration: none;
+    color: #939896;
+    margin-right: 15px;
+}
+
+ul#menu li a:hover
+{
+    color: #202020;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    color: #202020;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    padding: 1em;
+    border: none;
+    background-color: #eeeeee;
+}
+
+fieldset.group:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset div.user
+{
+    float: left;
+    width: 200px;
+    margin: 5px;
+}
+
+label
+{
+    color: #202020;
+    font-size: 15px;
+}
+
+input[type="text"]
+{
+    width: 200px;
+    height: 20px;
+    border: none;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table
+{
+    border: none;
+    border-collapse: collapse;
+}
+
+table td
+{
+    padding: 10px 12px;
+    border: none;
+    border-right: 2px solid white;
+    text-align: center;
+    min-width: 100px;
+}
+
+table th
+{
+    padding: 10px 5px;
+    text-align: center;
+    background-color: #fff;
+    color: #939896;
+    font-size: 22px;
+    font-weight: normal;
+    border: none;
+    min-width: 100px;
+}
+
+table tr
+{
+    min-height: 32px;
+}
+
+table tr.d0
+{
+    background-color: #eeeeee;
+}
+
+table tr.d1
+{
+    background-color: #e0e1e1;
+}
+
+table tr td
+{
+    color: #202020;
+}
+
+table td p
+{
+    margin: 0px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.left-aligned
+{
+    text-align: left;
+    min-width: 150px;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+#menucontainer
+{
+    margin-top: 10px;
+}
+
+div#title
+{
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.code  
+{
+    background-color: #F7F7F7; 
+    padding: 10px; 
+    margin: 10px 10px 10px 0px; 
+    border: #696969 2px solid; 
+    max-width: 1000px;
+    min-width: 1000px;    
+    color:#383838;
+    font-size: 90%;
+}
+
+.note 
+{
+    font-size: 85%;
+}

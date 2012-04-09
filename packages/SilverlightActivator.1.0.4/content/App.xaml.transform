@@ -1,0 +1,14 @@
+﻿<Application
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:silverlightactivator="clr-namespace:SilverlightActivator;assembly=SilverlightActivator">
+
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary.MergedDictionaries>
+      <silverlightactivator:ActivationManager x:Name="SilverlightActivator" LoadAssemblyParts="False" />
+    </ResourceDictionary>
+  </Application.Resources>
+
+</Application>
