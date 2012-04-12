@@ -254,6 +254,7 @@ namespace WazeWP7
             // Set the sharing mode of the graphics device to turn on XNA rendering
             SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(true);
 
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(SharedGraphicsDeviceManager.Current.GraphicsDevice);
 
@@ -344,6 +345,9 @@ namespace WazeWP7
         /// </summary>
         private void OnDraw(object sender, GameTimerEventArgs e)
         {
+            // Crop the XNA viewport to avoid drawing under the AppBar
+            SharedGraphicsDeviceManager.Current.GraphicsDevice.Viewport = new Viewport(0, 0, getVisibleWidth(), getVisibleHeight());
+
             try
             {
                 SharedGraphicsDeviceManager.Current.GraphicsDevice.Clear(Color.Black);
@@ -424,16 +428,6 @@ namespace WazeWP7
             
         }
     
-        void BuildApplicationBar()
-        {
-            // Set the page's ApplicationBar to a new instance of ApplicationBar
-            ApplicationBar = new ApplicationBar()
-            {
-                Mode = ApplicationBarMode.Default,
-                Opacity = 0.99
-            };
-        }
-
         void CopySounds()
         {
             try
@@ -458,13 +452,17 @@ namespace WazeWP7
         static FreemapApp app;
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+
+            // Set the real appbar size
+            _appBarSize = (int)ApplicationBar.DefaultSize;
+
             if (m_mainGraphics == null)
             {
                 m_mainGraphics = new Canvas();
 
-                LayoutRoot.Children.Add(m_mainGraphics);
+                // no need for canvas in XNA
+               // LayoutRoot.Children.Add(m_mainGraphics);
 
-                BuildApplicationBar();
 
                 CopySounds();
 
@@ -489,6 +487,8 @@ namespace WazeWP7
             return (m_CurrentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
         }
 
+        // Used for reducing 72 pixels from 800 because of default app bar size.
+        private static int _appBarSize = 72;
         private static int _deviceHight = 800;
         private static int _deviceWidth = 480;
 
@@ -501,7 +501,7 @@ namespace WazeWP7
 
             if (IsPhoneLandscape())
             {
-                return _deviceHight;
+                return _deviceHight - _appBarSize;
             }
             else
             {
@@ -525,7 +525,7 @@ namespace WazeWP7
             }
             else
             {
-                return _deviceHight;
+                return _deviceHight - _appBarSize;
             }
 
 

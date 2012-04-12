@@ -25,7 +25,7 @@
           MouseMove="LayoutRoot_MouseMove" -->
 
     <Grid x:Name="LayoutRoot" 
-          Background="Transparent" Height="800" Width="480" 
+          Background="Transparent" Height="728" Width="480" 
         >  
 
         <Grid.RowDefinitions>
@@ -39,5 +39,9 @@
 
     </Grid>
 
-
+    <local:WazeApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.99" >
+        </shell:ApplicationBar>
+    </local:WazeApplicationPage.ApplicationBar>
+    
 </local:WazeApplicationPage>
