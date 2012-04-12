@@ -162,7 +162,7 @@ namespace WazeWP7
             if (languageFiles.Length > 0)
             {
                 CurrentLanguage = language;
-                using (IsolatedStorageFileStream file = store.OpenFile(languageFiles[languageFiles.Length - 1], System.IO.FileMode.Open))
+                using (IsolatedStorageFileStream file = store.OpenFile(languageFiles[languageFiles.Length - 1], System.IO.FileMode.Open,FileAccess.Read))
                 {
                     byte[] intBuffer = new byte[4];
                     byte[] stringBuffer = new byte[50];
