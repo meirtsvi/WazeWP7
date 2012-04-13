@@ -4471,8 +4471,8 @@ L_10372d4:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010372d8: 0x10372d8: jal   0x10ac668 sll   zero, zero, 0
-	call void Cibyl129::roadmap_spawn_close_pipe_10ac668()
+// 0x010372d8: 0x10372d8: jal   0x10ac6a0 sll   zero, zero, 0
+	call void Cibyl129::roadmap_spawn_close_pipe_10ac6a0()
 // --- basic block ---
 L_10372e0:
 // 0x010372e0: 0x10372e0: lw    ra, 20(sp)
@@ -4688,10 +4688,10 @@ L_1037374:
 	add
 	ldelem.i4
 	stloc.1
-// 0x01037378: 0x1037378: jal   0x10ac658 addu  a2, v0, zero
+// 0x01037378: 0x1037378: jal   0x10ac690 addu  a2, v0, zero
 	ldloc 6
 	stloc.3
-	call int32 Cibyl129::roadmap_spawn_write_pipe_10ac658()
+	call int32 Cibyl129::roadmap_spawn_write_pipe_10ac690()
 	stloc 6
 // --- basic block ---
 L_1037380:
@@ -4908,8 +4908,8 @@ L_1037410:
 	add
 	ldelem.i4
 	stloc.1
-// 0x01037414: 0x1037414: jal   0x10ac660 sll   zero, zero, 0
-	call int32 Cibyl129::roadmap_spawn_read_pipe_10ac660()
+// 0x01037414: 0x1037414: jal   0x10ac698 sll   zero, zero, 0
+	call int32 Cibyl129::roadmap_spawn_read_pipe_10ac698()
 	stloc 5
 // --- basic block ---
 L_103741c:

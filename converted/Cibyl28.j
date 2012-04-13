@@ -3981,7 +3981,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01026254: 0x1026254: sw    ra, 20(sp)
-// 0x01026258: 0x1026258: jal   0x1094ca4 addiu a0, zero, 1
+// 0x01026258: 0x1026258: jal   0x1094cdc addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
 	ldloc.0
@@ -3989,7 +3989,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_hide_current_1094ca4(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_hide_current_1094cdc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6

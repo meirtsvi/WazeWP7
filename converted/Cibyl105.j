@@ -1935,7 +1935,7 @@ __CIBYL_javamethod_begin:
 	ldc.i4 18656
 	add
 	stloc.2
-// 0x0108d678: 0x108d678: jal   0x1095b48 addu  a2, zero, zero
+// 0x0108d678: 0x108d678: jal   0x1095b80 addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
 	ldloc.0
@@ -1943,7 +1943,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl111::ssd_dialog_new_1095b48(int32,int32,int32,int32,int32)
+	call int32 Cibyl111::ssd_dialog_new_1095b80(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -1973,7 +1973,7 @@ L_108d694:
 // 0x0108d69c: 0x108d69c: addiu a2, zero, 8
 	ldc.i4.8
 	stloc.3
-// 0x0108d6a0: 0x108d6a0: jal   0x1094428 sw    a3, 88(sp)
+// 0x0108d6a0: 0x108d6a0: jal   0x1094460 sw    a3, 88(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -1987,7 +1987,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_add_vspace_1094428(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_add_vspace_1094460(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2018,7 +2018,7 @@ L_108d694:
 // 0x0108d6bc: 0x108d6bc: addiu a2, zero, -2
 	ldc.i4.s -2
 	stloc.3
-// 0x0108d6c0: 0x108d6c0: jal   0x1093b64 sw    s2, 16(sp)
+// 0x0108d6c0: 0x108d6c0: jal   0x1093b9c sw    s2, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2032,7 +2032,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2046,13 +2046,13 @@ L_108d694:
 // 0x0108d6d0: 0x108d6d0: addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
-// 0x0108d6d4: 0x108d6d4: jal   0x1099134 addu  s4, v0, zero
+// 0x0108d6d4: 0x108d6d4: jal   0x109916c addu  s4, v0, zero
 	ldloc 5
 	stloc 11
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108d6dc: 0x108d6dc: lui   a0, 0x20000
 	ldc.i4 131072
@@ -2068,7 +2068,7 @@ L_108d694:
 	ldc.i4 -6528
 	add
 	stloc.1
-// 0x0108d6ec: 0x108d6ec: jal   0x109e290 addiu a1, a1, -6508
+// 0x0108d6ec: 0x108d6ec: jal   0x109e2c8 addiu a1, a1, -6508
 	ldloc.2
 	ldc.i4 -6508
 	add
@@ -2078,7 +2078,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_bitmap_new_109e290(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_bitmap_new_109e2c8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2086,12 +2086,12 @@ L_108d694:
 // 0x0108d6f4: 0x108d6f4: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108d6f8: 0x108d6f8: jal   0x1099018 addu  a0, s4, zero
+// 0x0108d6f8: 0x108d6f8: jal   0x1099050 addu  a0, s4, zero
 	ldloc 11
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2099,12 +2099,12 @@ L_108d694:
 // 0x0108d700: 0x108d700: addu  a1, s4, zero
 	ldloc 11
 	stloc.2
-// 0x0108d704: 0x108d704: jal   0x1099018 addu  a0, s0, zero
+// 0x0108d704: 0x108d704: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2115,7 +2115,7 @@ L_108d694:
 // 0x0108d710: 0x108d710: addiu a1, zero, 5
 	ldc.i4.5
 	stloc.2
-// 0x0108d714: 0x108d714: jal   0x1094428 addiu a2, zero, 8
+// 0x0108d714: 0x108d714: jal   0x1094460 addiu a2, zero, 8
 	ldc.i4.8
 	stloc.3
 	ldloc.0
@@ -2123,7 +2123,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_add_vspace_1094428(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_add_vspace_1094460(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2145,7 +2145,7 @@ L_108d694:
 // 0x0108d72c: 0x108d72c: addiu a2, zero, -2
 	ldc.i4.s -2
 	stloc.3
-// 0x0108d730: 0x108d730: jal   0x1093b64 sw    s2, 16(sp)
+// 0x0108d730: 0x108d730: jal   0x1093b9c sw    s2, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2159,7 +2159,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2176,13 +2176,13 @@ L_108d694:
 // 0x0108d744: 0x108d744: addu  s2, v0, zero
 	ldloc 5
 	stloc 9
-// 0x0108d748: 0x108d748: jal   0x1099134 lui   s4, 0x10000
+// 0x0108d748: 0x108d748: jal   0x109916c lui   s4, 0x10000
 	ldc.i4 65536
 	stloc 11
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108d750: 0x108d750: lui   a0, 0x10000
 	ldc.i4 65536
@@ -2198,7 +2198,7 @@ L_108d694:
 	ldc.i4 352
 	add
 	stloc.1
-// 0x0108d760: 0x108d760: jal   0x1098e64 addiu a1, s4, 18656
+// 0x0108d760: 0x108d760: jal   0x1098e9c addiu a1, s4, 18656
 	ldloc 11
 	ldc.i4 18656
 	add
@@ -2208,7 +2208,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2224,7 +2224,7 @@ L_108d694:
 	ldc.i4 17328
 	add
 	stloc.2
-// 0x0108d774: 0x108d774: jal   0x1097c4c sw    v0, 88(sp)
+// 0x0108d774: 0x108d774: jal   0x1097c84 sw    v0, 88(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2235,7 +2235,7 @@ L_108d694:
 	stelem.i4
 	ldloc.1
 	ldloc.2
-	call void Cibyl113::ssd_text_set_color_1097c4c(int32,int32)
+	call void Cibyl113::ssd_text_set_color_1097c84(int32,int32)
 // --- basic block ---
 // 0x0108d77c: 0x108d77c: lw    v0, 88(sp)
 	ldloc 7
@@ -2249,12 +2249,12 @@ L_108d694:
 // 0x0108d780: 0x108d780: addu  a0, s2, zero
 	ldloc 9
 	stloc.1
-// 0x0108d784: 0x108d784: jal   0x1099018 addu  a1, v0, zero
+// 0x0108d784: 0x108d784: jal   0x1099050 addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2262,12 +2262,12 @@ L_108d694:
 // 0x0108d78c: 0x108d78c: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x0108d790: 0x108d790: jal   0x1099018 addu  a1, s2, zero
+// 0x0108d790: 0x108d790: jal   0x1099050 addu  a1, s2, zero
 	ldloc 9
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2278,7 +2278,7 @@ L_108d694:
 // 0x0108d79c: 0x108d79c: addiu a1, zero, 5
 	ldc.i4.5
 	stloc.2
-// 0x0108d7a0: 0x108d7a0: jal   0x1094428 addiu a2, zero, 8
+// 0x0108d7a0: 0x108d7a0: jal   0x1094460 addiu a2, zero, 8
 	ldc.i4.8
 	stloc.3
 	ldloc.0
@@ -2286,7 +2286,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_add_vspace_1094428(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_add_vspace_1094460(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2307,7 +2307,7 @@ L_108d694:
 	ldc.i4 18656
 	add
 	stloc.2
-// 0x0108d7b8: 0x108d7b8: jal   0x1098e64 addiu a0, a0, -2528
+// 0x0108d7b8: 0x108d7b8: jal   0x1098e9c addiu a0, a0, -2528
 	ldloc.1
 	ldc.i4 -2528
 	add
@@ -2317,7 +2317,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2333,7 +2333,7 @@ L_108d694:
 	ldc.i4 17336
 	add
 	stloc.2
-// 0x0108d7cc: 0x108d7cc: jal   0x1097c4c sw    v0, 88(sp)
+// 0x0108d7cc: 0x108d7cc: jal   0x1097c84 sw    v0, 88(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2344,7 +2344,7 @@ L_108d694:
 	stelem.i4
 	ldloc.1
 	ldloc.2
-	call void Cibyl113::ssd_text_set_color_1097c4c(int32,int32)
+	call void Cibyl113::ssd_text_set_color_1097c84(int32,int32)
 // --- basic block ---
 // 0x0108d7d4: 0x108d7d4: lw    v0, 88(sp)
 	ldloc 7
@@ -2358,12 +2358,12 @@ L_108d694:
 // 0x0108d7d8: 0x108d7d8: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x0108d7dc: 0x108d7dc: jal   0x1099018 addu  a1, v0, zero
+// 0x0108d7dc: 0x108d7dc: jal   0x1099050 addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2374,7 +2374,7 @@ L_108d694:
 // 0x0108d7e8: 0x108d7e8: addiu a2, zero, 8
 	ldc.i4.8
 	stloc.3
-// 0x0108d7ec: 0x108d7ec: jal   0x1094428 addu  a0, s0, zero
+// 0x0108d7ec: 0x108d7ec: jal   0x1094460 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.0
@@ -2382,7 +2382,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_add_vspace_1094428(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_add_vspace_1094460(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2445,12 +2445,12 @@ L_108d694:
 // 0x0108d820: 0x108d820: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108d824: 0x108d824: jal   0x1099018 addu  a0, s0, zero
+// 0x0108d824: 0x108d824: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2461,7 +2461,7 @@ L_108d694:
 // 0x0108d830: 0x108d830: addiu a1, zero, 10
 	ldc.i4.s 10
 	stloc.2
-// 0x0108d834: 0x108d834: jal   0x1094428 addiu a2, zero, 8
+// 0x0108d834: 0x108d834: jal   0x1094460 addiu a2, zero, 8
 	ldc.i4.8
 	stloc.3
 	ldloc.0
@@ -2469,7 +2469,7 @@ L_108d694:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_add_vspace_1094428(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_add_vspace_1094460(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2505,7 +2505,7 @@ L_108d848:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d854: 0x108d854: jal   0x109b458 addiu a1, a1, 7188
+// 0x0108d854: 0x108d854: jal   0x109b490 addiu a1, a1, 7188
 	ldloc.2
 	ldc.i4 7188
 	add
@@ -2515,16 +2515,16 @@ L_108d848:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d85c: 0x108d85c: jal   0x10991ec addu  a0, v0, zero
+// 0x0108d85c: 0x108d85c: jal   0x1099224 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.1
-	call int32 Cibyl114::ssd_widget_hide_10991ec(int32)
+	call int32 Cibyl114::ssd_widget_hide_1099224(int32)
 	stloc 5
 // --- basic block ---
 // 0x0108d864: 0x108d864: j	 0x108d880 sll   zero, zero, 0
@@ -2540,7 +2540,7 @@ L_108d86c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d870: 0x108d870: jal   0x109b458 addiu a1, a1, 7188
+// 0x0108d870: 0x108d870: jal   0x109b490 addiu a1, a1, 7188
 	ldloc.2
 	ldc.i4 7188
 	add
@@ -2550,16 +2550,16 @@ L_108d86c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d878: 0x108d878: jal   0x1099200 addu  a0, v0, zero
+// 0x0108d878: 0x108d878: jal   0x1099238 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.1
-	call int32 Cibyl114::ssd_widget_show_1099200(int32)
+	call int32 Cibyl114::ssd_widget_show_1099238(int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2583,7 +2583,7 @@ L_108d880:
 // 0x0108d88c: 0x108d88c: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x0108d890: 0x108d890: jal   0x109b458 addiu a1, a1, -6536
+// 0x0108d890: 0x108d890: jal   0x109b490 addiu a1, a1, -6536
 	ldloc.2
 	ldc.i4 -6536
 	add
@@ -2593,16 +2593,16 @@ L_108d880:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d898: 0x108d898: jal   0x10991ec addu  a0, v0, zero
+// 0x0108d898: 0x108d898: jal   0x1099224 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.1
-	call int32 Cibyl114::ssd_widget_hide_10991ec(int32)
+	call int32 Cibyl114::ssd_widget_hide_1099224(int32)
 	stloc 5
 // --- basic block ---
 // 0x0108d8a0: 0x108d8a0: j	 0x108d920 lui   s0, 0x80000
@@ -2617,7 +2617,7 @@ L_108d8a8:
 // 0x0108d8ac: 0x108d8ac: addiu a1, zero, 1
 	ldc.i4.1
 	stloc.2
-// 0x0108d8b0: 0x108d8b0: jal   0x10a1a6c addu  a2, s1, zero
+// 0x0108d8b0: 0x108d8b0: jal   0x10a1aa4 addu  a2, s1, zero
 	ldloc 10
 	stloc.3
 	ldloc.0
@@ -2625,7 +2625,7 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1a6c(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1aa4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2648,7 +2648,7 @@ L_108d8a8:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d8c8: 0x108d8c8: jal   0x109b458 addiu a1, s2, -6528
+// 0x0108d8c8: 0x108d8c8: jal   0x109b490 addiu a1, s2, -6528
 	ldloc 9
 	ldc.i4 -6528
 	add
@@ -2658,7 +2658,7 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2666,7 +2666,7 @@ L_108d8a8:
 // 0x0108d8d0: 0x108d8d0: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x0108d8d4: 0x108d8d4: jal   0x109e064 addu  a1, s1, zero
+// 0x0108d8d4: 0x108d8d4: jal   0x109e09c addu  a1, s1, zero
 	ldloc 10
 	stloc.2
 	ldloc.0
@@ -2674,7 +2674,7 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_bitmap_update_109e064(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_bitmap_update_109e09c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2688,7 +2688,7 @@ L_108d8a8:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d8e0: 0x108d8e0: jal   0x109b458 addiu a1, s2, -6528
+// 0x0108d8e0: 0x108d8e0: jal   0x109b490 addiu a1, s2, -6528
 	ldloc 9
 	ldc.i4 -6528
 	add
@@ -2698,12 +2698,12 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d8e8: 0x108d8e8: jal   0x109919c addu  a0, v0, zero
+// 0x0108d8e8: 0x108d8e8: jal   0x10991d4 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2711,7 +2711,7 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_position_109919c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_position_10991d4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2725,7 +2725,7 @@ L_108d8a8:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d8f4: 0x108d8f4: jal   0x109b458 addiu a1, s2, -6528
+// 0x0108d8f4: 0x108d8f4: jal   0x109b490 addiu a1, s2, -6528
 	ldloc 9
 	ldc.i4 -6528
 	add
@@ -2735,12 +2735,12 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d8fc: 0x108d8fc: jal   0x109914c addu  a0, v0, zero
+// 0x0108d8fc: 0x108d8fc: jal   0x1099184 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2748,7 +2748,7 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_cache_109914c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_cache_1099184(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2765,7 +2765,7 @@ L_108d8a8:
 // 0x0108d908: 0x108d908: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x0108d90c: 0x108d90c: jal   0x109b458 addiu a1, a1, -6536
+// 0x0108d90c: 0x108d90c: jal   0x109b490 addiu a1, a1, -6536
 	ldloc.2
 	ldc.i4 -6536
 	add
@@ -2775,16 +2775,16 @@ L_108d8a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d914: 0x108d914: jal   0x1099200 addu  a0, v0, zero
+// 0x0108d914: 0x108d914: jal   0x1099238 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.1
-	call int32 Cibyl114::ssd_widget_show_1099200(int32)
+	call int32 Cibyl114::ssd_widget_show_1099238(int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2806,7 +2806,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d928: 0x108d928: jal   0x109b458 addiu a1, s1, 352
+// 0x0108d928: 0x108d928: jal   0x109b490 addiu a1, s1, 352
 	ldloc 10
 	ldc.i4 352
 	add
@@ -2816,7 +2816,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2824,7 +2824,7 @@ L_108d920:
 // 0x0108d930: 0x108d930: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x0108d934: 0x108d934: jal   0x1097fb0 addu  a1, s3, zero
+// 0x0108d934: 0x108d934: jal   0x1097fe8 addu  a1, s3, zero
 	ldloc 12
 	stloc.2
 	ldloc.0
@@ -2832,7 +2832,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl113::ssd_text_set_text_1097fb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl113::ssd_text_set_text_1097fe8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2846,7 +2846,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d940: 0x108d940: jal   0x109b458 addiu a1, s1, 352
+// 0x0108d940: 0x108d940: jal   0x109b490 addiu a1, s1, 352
 	ldloc 10
 	ldc.i4 352
 	add
@@ -2856,7 +2856,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2882,12 +2882,12 @@ L_108d920:
 // 0x0108d954: 0x108d954: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108d958: 0x108d958: jal   0x1097c4c addu  a0, s2, zero
+// 0x0108d958: 0x108d958: jal   0x1097c84 addu  a0, s2, zero
 	ldloc 9
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call void Cibyl113::ssd_text_set_color_1097c4c(int32,int32)
+	call void Cibyl113::ssd_text_set_color_1097c84(int32,int32)
 // --- basic block ---
 // 0x0108d960: 0x108d960: lw    a0, -1944(s0)
 	ldloc 7
@@ -2898,7 +2898,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d964: 0x108d964: jal   0x109b458 addiu a1, s1, 352
+// 0x0108d964: 0x108d964: jal   0x109b490 addiu a1, s1, 352
 	ldloc 10
 	ldc.i4 352
 	add
@@ -2908,7 +2908,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2916,12 +2916,12 @@ L_108d920:
 // 0x0108d96c: 0x108d96c: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x0108d970: 0x108d970: jal   0x1097c70 addu  a1, s7, zero
+// 0x0108d970: 0x108d970: jal   0x1097ca8 addu  a1, s7, zero
 	ldloc 15
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl113::ssd_text_set_font_size_1097c70(int32,int32)
+	call int32 Cibyl113::ssd_text_set_font_size_1097ca8(int32,int32)
 	stloc 5
 // --- basic block ---
 // 0x0108d978: 0x108d978: lui   s2, 0x10000
@@ -2936,7 +2936,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d980: 0x108d980: jal   0x109b458 addiu a1, s2, 7188
+// 0x0108d980: 0x108d980: jal   0x109b490 addiu a1, s2, 7188
 	ldloc 9
 	ldc.i4 7188
 	add
@@ -2946,12 +2946,12 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d988: 0x108d988: jal   0x109919c addu  a0, v0, zero
+// 0x0108d988: 0x108d988: jal   0x10991d4 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2959,7 +2959,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_position_109919c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_position_10991d4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -2973,7 +2973,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d994: 0x108d994: jal   0x109b458 addiu a1, s2, 7188
+// 0x0108d994: 0x108d994: jal   0x109b490 addiu a1, s2, 7188
 	ldloc 9
 	ldc.i4 7188
 	add
@@ -2983,12 +2983,12 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d99c: 0x108d99c: jal   0x109914c addu  a0, v0, zero
+// 0x0108d99c: 0x108d99c: jal   0x1099184 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2996,7 +2996,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_cache_109914c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_cache_1099184(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3010,7 +3010,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d9a8: 0x108d9a8: jal   0x109b458 addiu a1, s1, 352
+// 0x0108d9a8: 0x108d9a8: jal   0x109b490 addiu a1, s1, 352
 	ldloc 10
 	ldc.i4 352
 	add
@@ -3020,12 +3020,12 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d9b0: 0x108d9b0: jal   0x109919c addu  a0, v0, zero
+// 0x0108d9b0: 0x108d9b0: jal   0x10991d4 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -3033,7 +3033,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_position_109919c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_position_10991d4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3047,7 +3047,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d9bc: 0x108d9bc: jal   0x109b458 addiu a1, s1, 352
+// 0x0108d9bc: 0x108d9bc: jal   0x109b490 addiu a1, s1, 352
 	ldloc 10
 	ldc.i4 352
 	add
@@ -3057,12 +3057,12 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0108d9c4: 0x108d9c4: jal   0x109914c addu  a0, v0, zero
+// 0x0108d9c4: 0x108d9c4: jal   0x1099184 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -3070,7 +3070,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_widget_reset_cache_109914c(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_widget_reset_cache_1099184(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3087,7 +3087,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d9d4: 0x108d9d4: jal   0x109b458 addiu a1, s1, -2528
+// 0x0108d9d4: 0x108d9d4: jal   0x109b490 addiu a1, s1, -2528
 	ldloc 10
 	ldc.i4 -2528
 	add
@@ -3097,7 +3097,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3105,7 +3105,7 @@ L_108d920:
 // 0x0108d9dc: 0x108d9dc: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x0108d9e0: 0x108d9e0: jal   0x1097fb0 addu  a1, s6, zero
+// 0x0108d9e0: 0x108d9e0: jal   0x1097fe8 addu  a1, s6, zero
 	ldloc 14
 	stloc.2
 	ldloc.0
@@ -3113,7 +3113,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl113::ssd_text_set_text_1097fb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl113::ssd_text_set_text_1097fe8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3127,7 +3127,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108d9ec: 0x108d9ec: jal   0x109b458 addiu a1, s1, -2528
+// 0x0108d9ec: 0x108d9ec: jal   0x109b490 addiu a1, s1, -2528
 	ldloc 10
 	ldc.i4 -2528
 	add
@@ -3137,7 +3137,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3163,12 +3163,12 @@ L_108d920:
 // 0x0108da00: 0x108da00: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108da04: 0x108da04: jal   0x1097c4c addu  a0, s2, zero
+// 0x0108da04: 0x108da04: jal   0x1097c84 addu  a0, s2, zero
 	ldloc 9
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call void Cibyl113::ssd_text_set_color_1097c4c(int32,int32)
+	call void Cibyl113::ssd_text_set_color_1097c84(int32,int32)
 // --- basic block ---
 // 0x0108da0c: 0x108da0c: lw    a0, -1944(s0)
 	ldloc 7
@@ -3179,7 +3179,7 @@ L_108d920:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108da10: 0x108da10: jal   0x109b458 addiu a1, s1, -2528
+// 0x0108da10: 0x108da10: jal   0x109b490 addiu a1, s1, -2528
 	ldloc 10
 	ldc.i4 -2528
 	add
@@ -3189,7 +3189,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl115::ssd_widget_get_109b458(int32,int32,int32,int32,int32)
+	call int32 Cibyl115::ssd_widget_get_109b490(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3197,12 +3197,12 @@ L_108d920:
 // 0x0108da18: 0x108da18: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x0108da1c: 0x108da1c: jal   0x1097c70 addu  a1, s5, zero
+// 0x0108da1c: 0x108da1c: jal   0x1097ca8 addu  a1, s5, zero
 	ldloc 13
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl113::ssd_text_set_font_size_1097c70(int32,int32)
+	call int32 Cibyl113::ssd_text_set_font_size_1097ca8(int32,int32)
 	stloc 5
 // --- basic block ---
 // 0x0108da24: 0x108da24: lui   a0, 0x20000
@@ -3213,7 +3213,7 @@ L_108d920:
 	ldc.i4 -29120
 	add
 	stloc.1
-// 0x0108da2c: 0x108da2c: jal   0x1096040 addu  a1, zero, zero
+// 0x0108da2c: 0x108da2c: jal   0x1096078 addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.0
@@ -3221,7 +3221,7 @@ L_108d920:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl111::ssd_dialog_activate_1096040(int32,int32,int32,int32,int32)
+	call int32 Cibyl111::ssd_dialog_activate_1096078(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3364,7 +3364,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x0108da6c: 0x108da6c: sw    ra, 20(sp)
-// 0x0108da70: 0x108da70: jal   0x1094ca4 addu  a0, zero, zero
+// 0x0108da70: 0x108da70: jal   0x1094cdc addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -3372,7 +3372,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_hide_current_1094ca4(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_hide_current_1094cdc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -3776,7 +3776,7 @@ L_108dba0:
 	stloc.1
 	brfalse L_108dbe8
 // --- basic block ---
-// 0x0108dbb0: 0x108dbb0: jal   0x10a1a6c addiu a1, zero, 1
+// 0x0108dbb0: 0x108dbb0: jal   0x10a1aa4 addiu a1, zero, 1
 	ldc.i4.1
 	stloc.2
 	ldloc.0
@@ -3784,7 +3784,7 @@ L_108dba0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1a6c(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1aa4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -3845,7 +3845,7 @@ L_108dba0:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x0108dbe0: 0x108dbe0: jal   0x10a2dac sw    zero, 28(sp)
+// 0x0108dbe0: 0x108dbe0: jal   0x10a2de4 sw    zero, 28(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -3859,7 +3859,7 @@ L_108dba0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl122::roadmap_res_download_10a2dac(int32,int32,int32,int32,int32)
+	call int32 Cibyl122::roadmap_res_download_10a2de4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -4608,13 +4608,13 @@ L_108ddac:
 	add
 	stloc.2
 L_108ddb4:
-// 0x0108ddb4: 0x108ddb4: jal   0x1094874 sll   zero, zero, 0
+// 0x0108ddb4: 0x108ddb4: jal   0x10948ac sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_set_data_1094874(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_set_data_10948ac(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -4697,13 +4697,13 @@ L_108ddf8:
 	add
 	stloc.2
 L_108de04:
-// 0x0108de04: 0x108de04: jal   0x1094874 sll   zero, zero, 0
+// 0x0108de04: 0x108de04: jal   0x10948ac sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_set_data_1094874(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_set_data_10948ac(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -4911,7 +4911,7 @@ L_108de1c:
 	ldc.i4 -6452
 	add
 	stloc.1
-// 0x0108de54: 0x108de54: jal   0x1096040 addu  a1, zero, zero
+// 0x0108de54: 0x108de54: jal   0x1096078 addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.0
@@ -4919,7 +4919,7 @@ L_108de1c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl111::ssd_dialog_activate_1096040(int32,int32,int32,int32,int32)
+	call int32 Cibyl111::ssd_dialog_activate_1096078(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -4982,7 +4982,7 @@ L_108de78:
 // 0x0108de98: 0x108de98: addiu a3, zero, 8192
 	ldc.i4 8192
 	stloc 4
-// 0x0108de9c: 0x108de9c: jal   0x1095b48 sw    t3, 56(sp)
+// 0x0108de9c: 0x108de9c: jal   0x1095b80 sw    t3, 56(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -4996,7 +4996,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl111::ssd_dialog_new_1095b48(int32,int32,int32,int32,int32)
+	call int32 Cibyl111::ssd_dialog_new_1095b80(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5024,7 +5024,7 @@ L_108de78:
 // 0x0108debc: 0x108debc: addu  s2, v0, zero
 	ldloc 5
 	stloc 15
-// 0x0108dec0: 0x108dec0: jal   0x1093b64 sw    s3, 16(sp)
+// 0x0108dec0: 0x108dec0: jal   0x1093b9c sw    s3, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5038,7 +5038,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5083,7 +5083,7 @@ L_108de78:
 	ldc.i4 -6352
 	add
 	stloc.1
-// 0x0108deec: 0x108deec: jal   0x1098e64 addu  a1, v0, zero
+// 0x0108deec: 0x108deec: jal   0x1098e9c addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.0
@@ -5091,7 +5091,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5099,12 +5099,12 @@ L_108de78:
 // 0x0108def4: 0x108def4: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108def8: 0x108def8: jal   0x1099018 addu  a0, s0, zero
+// 0x0108def8: 0x108def8: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5115,13 +5115,13 @@ L_108de78:
 // 0x0108df04: 0x108df04: addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
-// 0x0108df08: 0x108df08: jal   0x1099134 addu  a2, zero, zero
+// 0x0108df08: 0x108df08: jal   0x109916c addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108df10: 0x108df10: addu  a0, s0, zero
 	ldloc 8
@@ -5129,13 +5129,13 @@ L_108de78:
 // 0x0108df14: 0x108df14: addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
-// 0x0108df18: 0x108df18: jal   0x1099134 addu  a2, zero, zero
+// 0x0108df18: 0x108df18: jal   0x109916c addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108df20: 0x108df20: lui   a0, 0x20000
 	ldc.i4 131072
@@ -5162,7 +5162,7 @@ L_108de78:
 	ldc.i4 20608
 	or
 	stloc 5
-// 0x0108df3c: 0x108df3c: jal   0x1093b64 sw    v0, 16(sp)
+// 0x0108df3c: 0x108df3c: jal   0x1093b9c sw    v0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5176,7 +5176,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5187,12 +5187,12 @@ L_108de78:
 // 0x0108df48: 0x108df48: addu  a1, s0, zero
 	ldloc 8
 	stloc.2
-// 0x0108df4c: 0x108df4c: jal   0x1099018 addu  s1, v0, zero
+// 0x0108df4c: 0x108df4c: jal   0x1099050 addu  s1, v0, zero
 	ldloc 5
 	stloc 12
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5214,7 +5214,7 @@ L_108de78:
 	ldc.i4 -6312
 	add
 	stloc.1
-// 0x0108df68: 0x108df68: jal   0x1093b64 sw    s3, 16(sp)
+// 0x0108df68: 0x108df68: jal   0x1093b9c sw    s3, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5228,7 +5228,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5268,7 +5268,7 @@ L_108de78:
 	ldc.i4 -6272
 	add
 	stloc.1
-// 0x0108df90: 0x108df90: jal   0x1098e64 addu  a1, v0, zero
+// 0x0108df90: 0x108df90: jal   0x1098e9c addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.0
@@ -5276,7 +5276,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5287,12 +5287,12 @@ L_108de78:
 // 0x0108df9c: 0x108df9c: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x0108dfa0: 0x108dfa0: jal   0x1099018 lui   s3, 0x0
+// 0x0108dfa0: 0x108dfa0: jal   0x1099050 lui   s3, 0x0
 	ldc.i4.s 0
 	stloc 9
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5302,7 +5302,7 @@ L_108de78:
 	ldc.i4 32268
 	add
 	stloc.1
-// 0x0108dfac: 0x108dfac: jal   0x109e824 addiu a1, zero, 512
+// 0x0108dfac: 0x108dfac: jal   0x109e85c addiu a1, zero, 512
 	ldc.i4 512
 	stloc.2
 	ldloc.0
@@ -5310,7 +5310,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_separator_new_109e824(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_separator_new_109e85c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5318,12 +5318,12 @@ L_108de78:
 // 0x0108dfb4: 0x108dfb4: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108dfb8: 0x108dfb8: jal   0x1099018 addu  a0, s0, zero
+// 0x0108dfb8: 0x108dfb8: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5334,23 +5334,23 @@ L_108de78:
 // 0x0108dfc4: 0x108dfc4: addu  a2, zero, zero
 	ldc.i4.s 0
 	stloc.3
-// 0x0108dfc8: 0x108dfc8: jal   0x1099134 addu  a1, zero, zero
+// 0x0108dfc8: 0x108dfc8: jal   0x109916c addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108dfd0: 0x108dfd0: addu  a1, s0, zero
 	ldloc 8
 	stloc.2
-// 0x0108dfd4: 0x108dfd4: jal   0x1099018 addu  a0, s1, zero
+// 0x0108dfd4: 0x108dfd4: jal   0x1099050 addu  a0, s1, zero
 	ldloc 12
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5398,7 +5398,7 @@ L_108de78:
 	add
 	ldloc 16
 	stelem.i4
-// 0x0108e000: 0x108e000: jal   0x1093b64 sw    t0, 52(sp)
+// 0x0108e000: 0x108e000: jal   0x1093b9c sw    t0, 52(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5412,7 +5412,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5497,7 +5497,7 @@ L_108de78:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x0108e040: 0x108e040: jal   0x109c2a0 sw    s8, 24(sp)
+// 0x0108e040: 0x108e040: jal   0x109c2d8 sw    s8, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5511,7 +5511,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl116::ssd_checkbox_new_109c2a0(int32,int32,int32,int32,int32)
+	call int32 Cibyl116::ssd_checkbox_new_109c2d8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5525,7 +5525,7 @@ L_108de78:
 // 0x0108e050: 0x108e050: lui   s7, 0x80000
 	ldc.i4 524288
 	stloc 13
-// 0x0108e054: 0x108e054: jal   0x1099018 sw    v0, -656(s7)
+// 0x0108e054: 0x108e054: jal   0x1099050 sw    v0, -656(s7)
 	ldloc 7
 	ldloc 13
 	ldc.i4.2
@@ -5536,7 +5536,7 @@ L_108de78:
 	stelem.i4
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5627,12 +5627,12 @@ L_108de78:
 // 0x0108e094: 0x108e094: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e098: 0x108e098: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e098: 0x108e098: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5643,23 +5643,23 @@ L_108de78:
 // 0x0108e0a4: 0x108e0a4: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x0108e0a8: 0x108e0a8: jal   0x1099134 addu  a1, zero, zero
+// 0x0108e0a8: 0x108e0a8: jal   0x109916c addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108e0b0: 0x108e0b0: addu  a1, s0, zero
 	ldloc 8
 	stloc.2
-// 0x0108e0b4: 0x108e0b4: jal   0x1099018 addu  a0, s1, zero
+// 0x0108e0b4: 0x108e0b4: jal   0x1099050 addu  a0, s1, zero
 	ldloc 12
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5688,7 +5688,7 @@ L_108de78:
 // 0x0108e0cc: 0x108e0cc: addiu a2, zero, 12
 	ldc.i4.s 12
 	stloc.3
-// 0x0108e0d0: 0x108e0d0: jal   0x1098e64 addiu a0, s5, 31896
+// 0x0108e0d0: 0x108e0d0: jal   0x1098e9c addiu a0, s5, 31896
 	ldloc 11
 	ldc.i4 31896
 	add
@@ -5698,7 +5698,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5706,12 +5706,12 @@ L_108de78:
 // 0x0108e0d8: 0x108e0d8: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e0dc: 0x108e0dc: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e0dc: 0x108e0dc: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5727,7 +5727,7 @@ L_108de78:
 // 0x0108e0ec: 0x108e0ec: addiu a2, zero, 16
 	ldc.i4.s 16
 	stloc.3
-// 0x0108e0f0: 0x108e0f0: jal   0x109e290 addu  a1, a0, zero
+// 0x0108e0f0: 0x108e0f0: jal   0x109e2c8 addu  a1, a0, zero
 	ldloc.1
 	stloc.2
 	ldloc.0
@@ -5735,7 +5735,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_bitmap_new_109e290(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_bitmap_new_109e2c8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5743,12 +5743,12 @@ L_108de78:
 // 0x0108e0f8: 0x108e0f8: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e0fc: 0x108e0fc: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e0fc: 0x108e0fc: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5758,7 +5758,7 @@ L_108de78:
 	ldc.i4 32268
 	add
 	stloc.1
-// 0x0108e108: 0x108e108: jal   0x109e824 addiu a1, zero, 512
+// 0x0108e108: 0x108e108: jal   0x109e85c addiu a1, zero, 512
 	ldc.i4 512
 	stloc.2
 	ldloc.0
@@ -5766,7 +5766,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_separator_new_109e824(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_separator_new_109e85c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5774,12 +5774,12 @@ L_108de78:
 // 0x0108e110: 0x108e110: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e114: 0x108e114: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e114: 0x108e114: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5810,7 +5810,7 @@ L_108de78:
 // 0x0108e130: 0x108e130: addiu a2, zero, -1
 	ldc.i4.m1
 	stloc.3
-// 0x0108e134: 0x108e134: jal   0x1093b64 sw    t1, 16(sp)
+// 0x0108e134: 0x108e134: jal   0x1093b9c sw    t1, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5824,7 +5824,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_container_new_1093b64(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_container_new_1093b9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5903,7 +5903,7 @@ L_108de78:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x0108e16c: 0x108e16c: jal   0x109c2a0 sw    zero, 20(sp)
+// 0x0108e16c: 0x108e16c: jal   0x109c2d8 sw    zero, 20(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5917,7 +5917,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl116::ssd_checkbox_new_109c2a0(int32,int32,int32,int32,int32)
+	call int32 Cibyl116::ssd_checkbox_new_109c2d8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5933,7 +5933,7 @@ L_108de78:
 	ldc.i4 -656
 	add
 	stloc 13
-// 0x0108e180: 0x108e180: jal   0x1099018 sw    v0, 4(s7)
+// 0x0108e180: 0x108e180: jal   0x1099050 sw    v0, 4(s7)
 	ldloc 7
 	ldloc 13
 	ldc.i4.2
@@ -5944,7 +5944,7 @@ L_108de78:
 	stelem.i4
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6027,12 +6027,12 @@ L_108de78:
 // 0x0108e1b8: 0x108e1b8: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e1bc: 0x108e1bc: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e1bc: 0x108e1bc: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6066,7 +6066,7 @@ L_108de78:
 	ldc.i4 -6160
 	add
 	stloc.1
-// 0x0108e1dc: 0x108e1dc: jal   0x1098e64 addu  a1, v0, zero
+// 0x0108e1dc: 0x108e1dc: jal   0x1098e9c addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.0
@@ -6074,7 +6074,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl114::ssd_text_new_1098e64(int32,int32,int32,int32,int32)
+	call int32 Cibyl114::ssd_text_new_1098e9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6082,12 +6082,12 @@ L_108de78:
 // 0x0108e1e4: 0x108e1e4: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e1e8: 0x108e1e8: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e1e8: 0x108e1e8: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6103,7 +6103,7 @@ L_108de78:
 // 0x0108e1f8: 0x108e1f8: addiu a2, zero, 16
 	ldc.i4.s 16
 	stloc.3
-// 0x0108e1fc: 0x108e1fc: jal   0x109e290 addu  a1, a0, zero
+// 0x0108e1fc: 0x108e1fc: jal   0x109e2c8 addu  a1, a0, zero
 	ldloc.1
 	stloc.2
 	ldloc.0
@@ -6111,7 +6111,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_bitmap_new_109e290(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_bitmap_new_109e2c8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6119,12 +6119,12 @@ L_108de78:
 // 0x0108e204: 0x108e204: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e208: 0x108e208: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e208: 0x108e208: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6134,7 +6134,7 @@ L_108de78:
 	ldc.i4 32268
 	add
 	stloc.1
-// 0x0108e214: 0x108e214: jal   0x109e824 addiu a1, zero, 512
+// 0x0108e214: 0x108e214: jal   0x109e85c addiu a1, zero, 512
 	ldc.i4 512
 	stloc.2
 	ldloc.0
@@ -6142,7 +6142,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl118::ssd_separator_new_109e824(int32,int32,int32,int32,int32)
+	call int32 Cibyl118::ssd_separator_new_109e85c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6150,12 +6150,12 @@ L_108de78:
 // 0x0108e21c: 0x108e21c: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e220: 0x108e220: jal   0x1099018 addu  a0, s0, zero
+// 0x0108e220: 0x108e220: jal   0x1099050 addu  a0, s0, zero
 	ldloc 8
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6166,23 +6166,23 @@ L_108de78:
 // 0x0108e22c: 0x108e22c: addu  a0, s0, zero
 	ldloc 8
 	stloc.1
-// 0x0108e230: 0x108e230: jal   0x1099134 addu  a1, zero, zero
+// 0x0108e230: 0x108e230: jal   0x109916c addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
 	ldloc.1
 	ldloc.2
 	ldloc.3
-	call void Cibyl114::ssd_widget_set_color_1099134(int32,int32,int32)
+	call void Cibyl114::ssd_widget_set_color_109916c(int32,int32,int32)
 // --- basic block ---
 // 0x0108e238: 0x108e238: addu  a0, s1, zero
 	ldloc 12
 	stloc.1
-// 0x0108e23c: 0x108e23c: jal   0x1099018 addu  a1, s0, zero
+// 0x0108e23c: 0x108e23c: jal   0x1099050 addu  a1, s0, zero
 	ldloc 8
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6190,12 +6190,12 @@ L_108de78:
 // 0x0108e244: 0x108e244: addu  a1, s1, zero
 	ldloc 12
 	stloc.2
-// 0x0108e248: 0x108e248: jal   0x1099018 addu  a0, s2, zero
+// 0x0108e248: 0x108e248: jal   0x1099050 addu  a0, s2, zero
 	ldloc 15
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl114::ssd_widget_add_1099018(int32,int32)
+	call int32 Cibyl114::ssd_widget_add_1099050(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6221,7 +6221,7 @@ L_108de78:
 // 0x0108e25c: 0x108e25c: addu  a1, v0, zero
 	ldloc 5
 	stloc.2
-// 0x0108e260: 0x108e260: jal   0x109b588 addu  a0, s2, zero
+// 0x0108e260: 0x108e260: jal   0x109b5c0 addu  a0, s2, zero
 	ldloc 15
 	stloc.1
 	ldloc.0
@@ -6229,7 +6229,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl116::ssd_widget_set_left_softkey_text_109b588(int32,int32,int32,int32,int32)
+	call int32 Cibyl116::ssd_widget_set_left_softkey_text_109b5c0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6240,14 +6240,14 @@ L_108de78:
 // 0x0108e26c: 0x108e26c: addu  a0, s2, zero
 	ldloc 15
 	stloc.1
-// 0x0108e270: 0x108e270: jal   0x10992c8 addiu a1, a1, -7244
+// 0x0108e270: 0x108e270: jal   0x1099300 addiu a1, a1, -7244
 	ldloc.2
 	ldc.i4 -7244
 	add
 	stloc.2
 	ldloc.1
 	ldloc.2
-	call void Cibyl114::ssd_widget_set_left_softkey_callback_10992c8(int32,int32)
+	call void Cibyl114::ssd_widget_set_left_softkey_callback_1099300(int32,int32)
 // --- basic block ---
 // 0x0108e278: 0x108e278: lw    t3, 56(sp)
 	ldloc 7
@@ -6261,7 +6261,7 @@ L_108de78:
 // 0x0108e27c: 0x108e27c: addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
-// 0x0108e280: 0x108e280: jal   0x1096040 addiu a0, t3, -6452
+// 0x0108e280: 0x108e280: jal   0x1096078 addiu a0, t3, -6452
 	ldloc 18
 	ldc.i4 -6452
 	add
@@ -6271,7 +6271,7 @@ L_108de78:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl111::ssd_dialog_activate_1096040(int32,int32,int32,int32,int32)
+	call int32 Cibyl111::ssd_dialog_activate_1096078(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6527,7 +6527,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108e2f8: 0x108e2f8: jal   0x10948ec sw    s0, 20(sp)
+// 0x0108e2f8: 0x108e2f8: jal   0x1094924 sw    s0, 20(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -6541,7 +6541,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_get_data_10948ec(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_get_data_1094924(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6592,13 +6592,13 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108e328: 0x108e328: jal   0x10948ec sll   zero, zero, 0
+// 0x0108e328: 0x108e328: jal   0x1094924 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_get_data_10948ec(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_get_data_1094924(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -6840,7 +6840,7 @@ __CIBYL_javamethod_begin:
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x0108e3c4: 0x108e3c4: jal   0x1094ca4 addu  a0, zero, zero
+// 0x0108e3c4: 0x108e3c4: jal   0x1094cdc addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -6848,7 +6848,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_hide_current_1094ca4(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_hide_current_1094cdc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6

@@ -3426,7 +3426,7 @@ L_100f76c:
 	ldc.i4 1024
 	stloc.2
 // 0x0100f794: 0x100f794: sw    ra, 1060(sp)
-// 0x0100f798: 0x100f798: jal   0x10c0bc0 sw    v0, 16(sp)
+// 0x0100f798: 0x100f798: jal   0x10c0bf0 sw    v0, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -3440,7 +3440,7 @@ L_100f76c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::vsnprintf_10c0bc0(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::vsnprintf_10c0bf0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 9
 	stloc 6
@@ -3848,7 +3848,7 @@ L_100f84c:
 // 0x0100f880: 0x100f880: addiu a1, zero, 500
 	ldc.i4 500
 	stloc.2
-// 0x0100f884: 0x100f884: jal   0x10c0bc0 sw    v0, 24(sp)
+// 0x0100f884: 0x100f884: jal   0x10c0bf0 sw    v0, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -3862,7 +3862,7 @@ L_100f84c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::vsnprintf_10c0bc0(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::vsnprintf_10c0bf0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
@@ -8110,7 +8110,7 @@ L_10105b8:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x01010600: 0x1010600: jal   0x10bd830 sw    v0, 64(sp)
+// 0x01010600: 0x1010600: jal   0x10bd868 sw    v0, 64(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8124,7 +8124,7 @@ L_10105b8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_screen_gray_scale_10bd830(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_screen_gray_scale_10bd868(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -8355,13 +8355,13 @@ L_101068c:
 	ldloc 5
 	bne.un L_10106b4
 // --- basic block ---
-// 0x010106a4: 0x10106a4: jal   0x10bd830 sll   zero, zero, 0
+// 0x010106a4: 0x10106a4: jal   0x10bd868 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_screen_gray_scale_10bd830(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_screen_gray_scale_10bd868(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

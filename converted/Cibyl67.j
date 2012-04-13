@@ -94,7 +94,7 @@ L_105a10c:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x0105a11c: 0x105a11c: jal   0x1094bd4 addu  a0, zero, zero
+// 0x0105a11c: 0x105a11c: jal   0x1094c0c addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -102,7 +102,7 @@ L_105a10c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl110::ssd_dialog_hide_all_1094bd4(int32,int32,int32,int32,int32)
+	call int32 Cibyl110::ssd_dialog_hide_all_1094c0c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5

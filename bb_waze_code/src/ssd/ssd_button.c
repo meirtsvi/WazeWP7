@@ -460,18 +460,23 @@ SsdWidget ssd_button_label (const char *name, const char *label,
    SsdWidget text;
    SsdWidget button;
    const char *button_icon[]   = {"button_up", "button_down", "button_disabled"};
-   if(image_width == 0){
+   if(image_width <= 0){
 	   RoadMapImage button_image = (RoadMapImage) roadmap_res_get(RES_BITMAP, RES_SKIN|RES_NOCACHE, button_icon[0]);
 	   image_width = roadmap_canvas_image_width(button_image);
    }
    roadmap_canvas_get_text_extents
-   	  		  (label, font_size, &width, &ascent, &descent, NULL);
-   while(width > image_width - 5){
+   	  		  (label, font_size, &width, &ascent, &descent, NULL);   
+   
+   while(width > (image_width - 5) && font_size >= 0 && width >= 0 && image_width > 0) {
 	   font_size -= 2;
 	   roadmap_canvas_get_text_extents
 	  		  (label, font_size, &width, &ascent, &descent, NULL);
    }
 
+   if (font_size <= 0) {
+	   font_size = 14;
+   }
+	   
    button = ssd_button_new (name, "", button_icon, 3,
                                       flags, callback);
 
