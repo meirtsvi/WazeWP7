@@ -126,7 +126,13 @@ namespace WazeWP7
 
         #region Public methods and properties
 
-        public string CurrentLanguage {get; private set;}
+        public string CurrentLanguage
+        {
+            get
+            {
+                return currentLanguage;
+            }
+        }
 
         public FlowDirection FlowDirection { get; private set; }
 
@@ -151,7 +157,6 @@ namespace WazeWP7
 
         private LanguageResources()
         {
-            CurrentLanguage = "";
             FlowDirection = FlowDirection.LeftToRight;
         }
 
@@ -161,7 +166,6 @@ namespace WazeWP7
             string[] languageFiles = store.GetFileNames(string.Format("lang.{0}_j2me", language));
             if (languageFiles.Length > 0)
             {
-                CurrentLanguage = language;
                 using (IsolatedStorageFileStream file = store.OpenFile(languageFiles[languageFiles.Length - 1], System.IO.FileMode.Open,FileAccess.Read))
                 {
                     byte[] intBuffer = new byte[4];

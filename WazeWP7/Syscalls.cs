@@ -2955,11 +2955,33 @@ end:
     #endregion
 
     #region Language methods
+
+
+    private static bool _languageLoaded = false;
     public static void NOPH_SetSystemLanguage (int i_langugae)
     {
         String langugae = CRunTime.charPtrToString(i_langugae);
         LanguageResources.LoadLanaguage(langugae);
 
+
+        // We need to do this only after the full translation was loaded.
+        // When we are running waze for the first time, the user selects a language,
+        // so this event happens twice.
+        if (!_languageLoaded)
+        {
+            _languageLoaded = true;
+
+            // We can set tile after we have language
+            Syscalls.SetLiveTile(false);
+
+
+            // And report stats
+            // This should not run while running in the emulator
+            if (!(Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator))
+            {
+                WebStats.ReportWebStat();
+            }
+        }
         
     }
     #endregion
@@ -3408,11 +3430,6 @@ end:
         SettingsPageViewModel.SetLanguages(languageItems);
         languagesLoaded.Set();
 
-        // We can set tile after we have language
-        Syscalls.SetLiveTile(false);
-
-        // And report stats
-        WebStats.ReportWebStat();
     }
 
     public static void NOPH_PromptsLoaded(int labels_addr, int values_addr, int count)
