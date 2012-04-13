@@ -2960,7 +2960,7 @@ end:
         String langugae = CRunTime.charPtrToString(i_langugae);
         LanguageResources.LoadLanaguage(langugae);
 
-        WebStats.ReportWebStat();
+        
     }
     #endregion
 
@@ -3411,6 +3411,8 @@ end:
         // We can set tile after we have language
         Syscalls.SetLiveTile(false);
 
+        // And report stats
+        WebStats.ReportWebStat();
     }
 
     public static void NOPH_PromptsLoaded(int labels_addr, int values_addr, int count)
