@@ -3411,8 +3411,13 @@ end:
         // We can set tile after we have language
         Syscalls.SetLiveTile(false);
 
+
         // And report stats
-        WebStats.ReportWebStat();
+        // This should not run while running in the emulator
+        if (!(Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator))
+        {
+            WebStats.ReportWebStat();
+        }
     }
 
     public static void NOPH_PromptsLoaded(int labels_addr, int values_addr, int count)
