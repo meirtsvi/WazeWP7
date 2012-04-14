@@ -177,7 +177,16 @@ namespace WazeWP7
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
-            RootFrame = new PhoneApplicationFrame();
+            //RootFrame = new PhoneApplicationFrame();
+
+            // Adding Cool animation for screen rotation:
+            RootFrame = new Delay.HybridOrientationChangesFrame();  // Use the rotation-enhanced custom Frame that 
+            // derives from the Toolkit TransitionFrame
+            ((Delay.HybridOrientationChangesFrame)RootFrame).Duration = TimeSpan.FromSeconds(0.6);
+
+
+
+
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Handle navigation failures
