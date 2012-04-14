@@ -3703,7 +3703,7 @@ __CIBYL_javamethod_begin:
 	ldloc 8
 	stelem.i4
 // 0x010723d0: 0x10723d0: sw    ra, 44(sp)
-// 0x010723d4: 0x10723d4: jal   0x10b5940 addu  s0, a0, zero
+// 0x010723d4: 0x10723d4: jal   0x10b592c addu  s0, a0, zero
 	ldloc.1
 	stloc 8
 	ldloc.0
@@ -3711,7 +3711,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_committed_10b5940(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_committed_10b592c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3750,7 +3750,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010723fc: 0x10723fc: jal   0x10b5ebc sw    zero, 16(sp)
+// 0x010723fc: 0x10723fc: jal   0x10b5ea8 sw    zero, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -3764,7 +3764,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_get_10b5ebc(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_get_10b5ea8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -3812,7 +3812,7 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s 36
 	add
 	stloc 4
-// 0x01072428: 0x1072428: jal   0x10b4a84 sw    zero, 16(sp)
+// 0x01072428: 0x1072428: jal   0x10b4a70 sw    zero, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -3826,7 +3826,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_trkseg_get_10b4a84(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_trkseg_get_10b4a70(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5338,7 +5338,7 @@ __CIBYL_javamethod_begin:
 // 0x0107282c: 0x107282c: addu  s2, a1, zero
 	ldloc.2
 	stloc 11
-// 0x01072830: 0x1072830: jal   0x10b5940 sw    v0, 72(sp)
+// 0x01072830: 0x1072830: jal   0x10b592c sw    v0, 72(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5352,7 +5352,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_committed_10b5940(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_committed_10b592c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5397,7 +5397,7 @@ __CIBYL_javamethod_begin:
 	ldc.i4.s 32
 	add
 	stloc 4
-// 0x01072858: 0x1072858: jal   0x10b5ebc sw    v0, 20(sp)
+// 0x01072858: 0x1072858: jal   0x10b5ea8 sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5411,7 +5411,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_get_10b5ebc(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_get_10b5ea8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5469,7 +5469,7 @@ L_107287c:
 	ldc.i4.s 44
 	add
 	stloc 4
-// 0x0107288c: 0x107288c: jal   0x10b4a84 sw    v0, 16(sp)
+// 0x0107288c: 0x107288c: jal   0x10b4a70 sw    v0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5483,7 +5483,7 @@ L_107287c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_trkseg_get_10b4a84(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_trkseg_get_10b4a70(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5540,7 +5540,7 @@ L_10728b4:
 	ldc.i4.s 64
 	add
 	stloc.2
-// 0x010728bc: 0x10728bc: jal   0x10b4b34 addiu a2, sp, 68
+// 0x010728bc: 0x10728bc: jal   0x10b4b20 addiu a2, sp, 68
 	ldloc.0
 	ldc.i4.s 68
 	add
@@ -5550,7 +5550,7 @@ L_10728b4:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_trkseg_get_time_10b4b34(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_trkseg_get_time_10b4b20(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5565,7 +5565,7 @@ L_10728b4:
 	ldc.i4.s 60
 	add
 	stloc.3
-// 0x010728cc: 0x10728cc: jal   0x10b5ab0 addu  a0, s2, zero
+// 0x010728cc: 0x10728cc: jal   0x10b5a9c addu  a0, s2, zero
 	ldloc 11
 	stloc.1
 	ldloc.0
@@ -5573,7 +5573,7 @@ L_10728b4:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_get_points_10b5ab0(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_get_points_10b5a9c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5587,13 +5587,13 @@ L_10728b4:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010728d8: 0x10728d8: jal   0x10b47fc sll   zero, zero, 0
+// 0x010728d8: 0x10728d8: jal   0x10b47e8 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_point_db_id_10b47fc(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_point_db_id_10b47e8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5607,7 +5607,7 @@ L_10728b4:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010728e4: 0x10728e4: jal   0x10b47fc addu  s3, v0, zero
+// 0x010728e4: 0x10728e4: jal   0x10b47e8 addu  s3, v0, zero
 	ldloc 5
 	stloc 10
 	ldloc.0
@@ -5615,7 +5615,7 @@ L_10728b4:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_point_db_id_10b47fc(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_point_db_id_10b47e8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5940,13 +5940,13 @@ L_1072948:
 	br L_10729ec
 // --- basic block ---
 L_10729b4:
-// 0x010729b4: 0x10729b4: jal   0x10b4750 sll   zero, zero, 0
+// 0x010729b4: 0x10729b4: jal   0x10b473c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_shape_position_10b4750(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_shape_position_10b473c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -5954,7 +5954,7 @@ L_10729b4:
 // 0x010729bc: 0x10729bc: addu  a0, s1, zero
 	ldloc 8
 	stloc.1
-// 0x010729c0: 0x10729c0: jal   0x10b46d4 addu  a1, s4, zero
+// 0x010729c0: 0x10729c0: jal   0x10b46c0 addu  a1, s4, zero
 	ldloc 12
 	stloc.2
 	ldloc.0
@@ -5962,7 +5962,7 @@ L_10729b4:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_shape_time_10b46d4(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_shape_time_10b46c0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6069,7 +6069,7 @@ L_1072a00:
 	stloc.1
 	brtrue L_1072abc
 // --- basic block ---
-// 0x01072a14: 0x1072a14: jal   0x10b5a54 addiu a1, sp, 72
+// 0x01072a14: 0x1072a14: jal   0x10b5a40 addiu a1, sp, 72
 	ldloc.0
 	ldc.i4.s 72
 	add
@@ -6079,7 +6079,7 @@ L_1072a00:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_get_street_10b5a54(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_get_street_10b5a40(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6099,7 +6099,7 @@ L_1072a00:
 	ldc.i4.s 0
 	blt L_1072abc
 // --- basic block ---
-// 0x01072a2c: 0x1072a2c: jal   0x10b4d88 addiu s3, sp, 248
+// 0x01072a2c: 0x1072a2c: jal   0x10b4d74 addiu s3, sp, 248
 	ldloc.0
 	ldc.i4 248
 	add
@@ -6109,7 +6109,7 @@ L_1072a00:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_street_get_street_name_10b4d88(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_street_get_street_name_10b4d74(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6141,7 +6141,7 @@ L_1072a00:
 	add
 	ldelem.i4
 	stloc.1
-// 0x01072a48: 0x1072a48: jal   0x10b4c20 addiu s2, sp, 764
+// 0x01072a48: 0x1072a48: jal   0x10b4c0c addiu s2, sp, 764
 	ldloc.0
 	ldc.i4 764
 	add
@@ -6151,7 +6151,7 @@ L_1072a00:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_street_get_street_t2s_10b4c20(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_street_get_street_t2s_10b4c0c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6183,7 +6183,7 @@ L_1072a00:
 	add
 	ldelem.i4
 	stloc.1
-// 0x01072a64: 0x1072a64: jal   0x10b4c78 addiu s1, sp, 1280
+// 0x01072a64: 0x1072a64: jal   0x10b4c64 addiu s1, sp, 1280
 	ldloc.0
 	ldc.i4 1280
 	add
@@ -6193,7 +6193,7 @@ L_1072a00:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_street_get_street_city_10b4c78(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_street_get_street_city_10b4c64(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

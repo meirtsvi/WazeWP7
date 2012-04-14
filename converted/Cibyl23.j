@@ -5131,13 +5131,13 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x0101fd4c: 0x101fd4c: sw    ra, 20(sp)
-// 0x0101fd50: 0x101fd50: jal   0x10a717c sll   zero, zero, 0
+// 0x0101fd50: 0x101fd50: jal   0x10a7168 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl124::roadmap_map_settings_isShowTopBarOnTap_10a717c(int32,int32,int32,int32,int32)
+	call int32 Cibyl124::roadmap_map_settings_isShowTopBarOnTap_10a7168(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
@@ -6824,7 +6824,7 @@ __CIBYL_javamethod_begin:
 	stloc.1
 	brfalse L_1020308
 // --- basic block ---
-// 0x010201a4: 0x10201a4: jal   0x10a1aa4 addiu a1, zero, 1
+// 0x010201a4: 0x10201a4: jal   0x10a1a90 addiu a1, zero, 1
 	ldc.i4.1
 	stloc.2
 	ldloc.0
@@ -6832,7 +6832,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1aa4(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1a90(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6

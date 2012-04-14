@@ -2971,10 +2971,10 @@ L_108a3bc:
 	add
 	ldelem.i4
 	stloc.1
-// 0x0108a3c0: 0x108a3c0: jal   0x10c0b40 sll   zero, zero, 0
+// 0x0108a3c0: 0x108a3c0: jal   0x10c0b30 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
-	call int32 Cibyl143::__floatsidf_10c0b40(int32,int32)
+	call int32 Cibyl143::__floatsidf_10c0b30(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -3003,7 +3003,7 @@ L_108a3bc:
 // 0x0108a3d4: 0x108a3d4: addu  a1, v1, zero
 	ldloc 7
 	stloc.2
-// 0x0108a3d8: 0x108a3d8: jal   0x10c0918 addu  a0, v0, zero
+// 0x0108a3d8: 0x108a3d8: jal   0x10c0908 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -3011,7 +3011,7 @@ L_108a3bc:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::__muldf3_10c0918(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::__muldf3_10c0908(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

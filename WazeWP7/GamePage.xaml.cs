@@ -380,7 +380,16 @@ namespace WazeWP7
                             SharedGraphicsDeviceManager.Current.GraphicsDevice.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.TriangleList, filledPathPolygons[ActiveIndex], 0, VertexActiveIndex / 3);
                         }
 
-                        spriteBatch.Begin();
+                        try
+                        {
+                            spriteBatch.Begin();
+                        }
+                        catch (InvalidOperationException)
+                        {
+                            spriteBatch.End();
+                            spriteBatch.Begin();
+                        }
+
                         for (int i = 0; i < bitmapActiveIndex; i++)
                         {
                             Texture2D bitmap = bitmaps[ActiveIndex][i];
@@ -420,7 +429,17 @@ namespace WazeWP7
             try
             {
                 // Using the texture from the UIElementRenderer, draw the SL content to the screen
-                spriteBatch.Begin();
+
+                try
+                {
+                    spriteBatch.Begin();
+                }
+                catch (InvalidOperationException)
+                {
+                    spriteBatch.End();
+                    spriteBatch.Begin();
+                }
+
                 spriteBatch.Draw(elementRenderer.Texture, Vector2.Zero, Microsoft.Xna.Framework.Color.White);
                 spriteBatch.End();
             }

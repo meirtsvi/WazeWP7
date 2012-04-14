@@ -410,10 +410,10 @@ void ssd_dialog_align_focus(void){
          RoadMapDialogCurrent->scroll_container->offset_y +=20;
       }
       ssd_widget_get_size(RoadMapDialogCurrent->in_focus, &size, NULL);
-      while ( RoadMapDialogCurrent->in_focus->position.y == 0){ // scroll down by half the screen's height until you reach widgets
+//      while ( RoadMapDialogCurrent->in_focus->position.y == 0){ // scroll down by half the screen's height until you reach widgets
             ssd_widget_set_offset(RoadMapDialogCurrent->scroll_container, 0, RoadMapDialogCurrent->scroll_container->offset_y  - height/2);
             ssd_dialog_recalculate( NULL );
-      }
+//      }
 
       if ((size.height + RoadMapDialogCurrent->in_focus->position.y) > height){
           int diff_to_add =  height - RoadMapDialogCurrent->in_focus->position.y - size.height - 5 ; // add a bit so it won't be glued to the bottom

@@ -2208,12 +2208,12 @@ L_106bd58:
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x0106bd78: 0x106bd78: jal   0x10a0670 sll   zero, zero, 0
+// 0x0106bd78: 0x106bd78: jal   0x10a065c sll   zero, zero, 0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl119::roadmap_login_new_existing_dlg_10a0670(int32,int32,int32,int32)
+	call int32 Cibyl119::roadmap_login_new_existing_dlg_10a065c(int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -5050,7 +5050,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x0106c454: 0x106c454: jal   0x10b5e94 sw    s2, 24(sp)
+// 0x0106c454: 0x106c454: jal   0x10b5e80 sw    s2, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -5064,7 +5064,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_get_count_10b5e94(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_get_count_10b5e80(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 9
 	stloc 5
@@ -5151,13 +5151,13 @@ L_106c478:
 	br L_106c504
 // --- basic block ---
 L_106c4ac:
-// 0x0106c4ac: 0x106c4ac: jal   0x10b5940 sll   zero, zero, 0
+// 0x0106c4ac: 0x106c4ac: jal   0x10b592c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl135::editor_line_committed_10b5940(int32,int32,int32,int32,int32)
+	call int32 Cibyl135::editor_line_committed_10b592c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 9
 	stloc 5
@@ -5687,7 +5687,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.3
 // 0x0106c600: 0x106c600: sw    ra, 132(sp)
-// 0x0106c604: 0x106c604: jal   0x10b408c sw    s1, 120(sp)
+// 0x0106c604: 0x106c604: jal   0x10b4078 sw    s1, 120(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5701,7 +5701,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_marker_position_10b408c(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_marker_position_10b4078(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 6
@@ -5741,7 +5741,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x0106c628: 0x106c628: jal   0x10b3f48 sw    v0, 20(sp)
+// 0x0106c628: 0x106c628: jal   0x10b3f34 sw    v0, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5755,12 +5755,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_marker_export_10b3f48(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_marker_export_10b3f34(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 6
 // --- basic block ---
-// 0x0106c630: 0x106c630: jal   0x10b4044 addu  a0, s0, zero
+// 0x0106c630: 0x106c630: jal   0x10b4030 addu  a0, s0, zero
 	ldloc 7
 	stloc.1
 	ldloc.0
@@ -5768,7 +5768,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_marker_type_10b4044(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_marker_type_10b4030(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 6
@@ -6051,7 +6051,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-// 0x0106c6b4: 0x106c6b4: jal   0x10b4380 sw    s0, 16(sp)
+// 0x0106c6b4: 0x106c6b4: jal   0x10b436c sw    s0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6065,7 +6065,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_marker_count_10b4380(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_marker_count_10b436c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -6113,13 +6113,13 @@ __CIBYL_javamethod_begin:
 	br L_106c740
 // --- basic block ---
 L_106c6e8:
-// 0x0106c6e8: 0x106c6e8: jal   0x10b3e4c sll   zero, zero, 0
+// 0x0106c6e8: 0x106c6e8: jal   0x10b3e38 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl134::editor_marker_committed_10b3e4c(int32,int32,int32,int32,int32)
+	call int32 Cibyl134::editor_marker_committed_10b3e38(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5

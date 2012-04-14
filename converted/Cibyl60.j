@@ -1068,7 +1068,7 @@ L_1050edc:
 	ldc.i4 -2528
 	add
 	stloc.2
-// 0x01050ef4: 0x1050ef4: jal   0x109b7c0 addu  a0, v0, zero
+// 0x01050ef4: 0x1050ef4: jal   0x109b7ac addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -1076,7 +1076,7 @@ L_1050edc:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl116::ssd_widget_get_value_109b7c0(int32,int32,int32,int32,int32)
+	call int32 Cibyl116::ssd_widget_get_value_109b7ac(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -4329,7 +4329,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x01051844: 0x1051844: sw    ra, 20(sp)
-// 0x01051848: 0x1051848: jal   0x10ac840 addiu a0, zero, 1
+// 0x01051848: 0x1051848: jal   0x10ac82c addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
 	ldloc.0
@@ -4337,7 +4337,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::editor_main_set_10ac840(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::editor_main_set_10ac82c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7

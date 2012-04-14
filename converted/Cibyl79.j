@@ -1660,7 +1660,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.1
 // 0x0106a678: 0x106a678: sw    ra, 52(sp)
-// 0x0106a67c: 0x106a67c: jal   0x10c364c sw    a1, 40(sp)
+// 0x0106a67c: 0x106a67c: jal   0x10c363c sw    a1, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -1674,7 +1674,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl145::gmtime_10c364c(int32,int32,int32,int32,int32)
+	call int32 Cibyl145::gmtime_10c363c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 7
@@ -3096,7 +3096,7 @@ L_106a988:
 // 0x0106a988: 0x106a988: addu  a0, s4, zero
 	ldloc 12
 	stloc.1
-// 0x0106a98c: 0x106a98c: jal   0x10c364c sw    v1, 56(sp)
+// 0x0106a98c: 0x106a98c: jal   0x10c363c sw    v1, 56(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -3110,7 +3110,7 @@ L_106a988:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl145::gmtime_10c364c(int32,int32,int32,int32,int32)
+	call int32 Cibyl145::gmtime_10c363c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
@@ -3802,13 +3802,13 @@ __CIBYL_javamethod_begin:
 	ldloc 5
 	bne.un L_106acd8
 // --- basic block ---
-// 0x0106acd0: 0x106acd0: jal   0x10a99e0 sll   zero, zero, 0
+// 0x0106acd0: 0x106acd0: jal   0x10a99cc sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl126::roadmap_login_details_dialog_show_10a99e0(int32,int32,int32,int32,int32)
+	call int32 Cibyl126::roadmap_login_details_dialog_show_10a99cc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
@@ -4778,7 +4778,7 @@ __CIBYL_javamethod_begin:
 // 0x0106af88: 0x106af88: addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
-// 0x0106af8c: 0x106af8c: jal   0x10b9a40 addiu a1, zero, 1
+// 0x0106af8c: 0x106af8c: jal   0x10b9a2c addiu a1, zero, 1
 	ldc.i4.1
 	stloc.2
 	ldloc.0
@@ -4786,7 +4786,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl138::editor_cleanup_test_10b9a40(int32,int32,int32,int32,int32)
+	call int32 Cibyl138::editor_cleanup_test_10b9a2c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
@@ -5012,7 +5012,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x0106b014: 0x106b014: sw    ra, 20(sp)
-// 0x0106b018: 0x106b018: jal   0x10a92e4 addiu a0, a0, -18896
+// 0x0106b018: 0x106b018: jal   0x10a92d0 addiu a0, a0, -18896
 	ldloc.1
 	ldc.i4 -18896
 	add
@@ -5022,7 +5022,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl126::roadmap_login_set_nickname_10a92e4(int32,int32,int32,int32,int32)
+	call int32 Cibyl126::roadmap_login_set_nickname_10a92d0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7
@@ -5088,7 +5088,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x0106b03c: 0x106b03c: sw    ra, 20(sp)
-// 0x0106b040: 0x106b040: jal   0x10a9308 addiu a0, a0, -18896
+// 0x0106b040: 0x106b040: jal   0x10a92f4 addiu a0, a0, -18896
 	ldloc.1
 	ldc.i4 -18896
 	add
@@ -5098,7 +5098,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl126::roadmap_login_set_pwd_10a9308(int32,int32,int32,int32,int32)
+	call int32 Cibyl126::roadmap_login_set_pwd_10a92f4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7
@@ -5164,7 +5164,7 @@ __CIBYL_javamethod_begin:
 	add
 	stloc.0
 // 0x0106b064: 0x106b064: sw    ra, 20(sp)
-// 0x0106b068: 0x106b068: jal   0x10a932c addiu a0, a0, -18896
+// 0x0106b068: 0x106b068: jal   0x10a9318 addiu a0, a0, -18896
 	ldloc.1
 	ldc.i4 -18896
 	add
@@ -5174,7 +5174,7 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl126::roadmap_login_set_username_10a932c(int32,int32,int32,int32,int32)
+	call int32 Cibyl126::roadmap_login_set_username_10a9318(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7

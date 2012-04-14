@@ -3437,7 +3437,7 @@ L_1045d08:
 // 0x01045d10: 0x1045d10: addiu a1, zero, 3
 	ldc.i4.3
 	stloc.2
-// 0x01045d14: 0x1045d14: jal   0x10a1aa4 addu  a2, s0, zero
+// 0x01045d14: 0x1045d14: jal   0x10a1a90 addu  a2, s0, zero
 	ldloc 10
 	stloc.3
 	ldloc.0
@@ -3445,7 +3445,7 @@ L_1045d08:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl121::roadmap_res_get_10a1aa4(int32,int32,int32,int32,int32)
+	call int32 Cibyl121::roadmap_res_get_10a1a90(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 11
 	stloc 6

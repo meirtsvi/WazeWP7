@@ -6428,10 +6428,10 @@ L_1061ce0:
 // 0x01061d08: 0x1061d08: mflo  lo
 	ldloc 18
 	stloc.1
-// 0x01061d0c: 0x1061d0c: jal   0x10c0b40 sll   zero, zero, 0
+// 0x01061d0c: 0x1061d0c: jal   0x10c0b30 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
-	call int32 Cibyl143::__floatsidf_10c0b40(int32,int32)
+	call int32 Cibyl143::__floatsidf_10c0b30(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6463,7 +6463,7 @@ L_1061ce0:
 	shr.un
 	ldelem.i4
 	stloc.3
-// 0x01061d28: 0x1061d28: jal   0x10c0918 addu  a1, v1, zero
+// 0x01061d28: 0x1061d28: jal   0x10c0908 addu  a1, v1, zero
 	ldloc 7
 	stloc.2
 	ldloc.0
@@ -6471,7 +6471,7 @@ L_1061ce0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::__muldf3_10c0918(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::__muldf3_10c0908(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6491,7 +6491,7 @@ L_1061ce0:
 	add
 	ldloc.3
 	stelem.i4
-// 0x01061d3c: 0x1061d3c: jal   0x10c0b40 sw    v1, 100(sp)
+// 0x01061d3c: 0x1061d3c: jal   0x10c0b30 sw    v1, 100(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6502,7 +6502,7 @@ L_1061ce0:
 	stelem.i4
 	ldloc.0
 	ldloc.1
-	call int32 Cibyl143::__floatsidf_10c0b40(int32,int32)
+	call int32 Cibyl143::__floatsidf_10c0b30(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6534,7 +6534,7 @@ L_1061ce0:
 // 0x01061d54: 0x1061d54: addu  a2, v0, zero
 	ldloc 5
 	stloc.3
-// 0x01061d58: 0x1061d58: jal   0x10c0970 addu  a3, v1, zero
+// 0x01061d58: 0x1061d58: jal   0x10c0960 addu  a3, v1, zero
 	ldloc 7
 	stloc 4
 	ldloc.0
@@ -6542,7 +6542,7 @@ L_1061ce0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl143::__divdf3_10c0970(int32,int32,int32,int32,int32)
+	call int32 Cibyl143::__divdf3_10c0960(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
@@ -6550,13 +6550,13 @@ L_1061ce0:
 // 0x01061d60: 0x1061d60: addu  a1, v1, zero
 	ldloc 7
 	stloc.2
-// 0x01061d64: 0x1061d64: jal   0x10c0a50 addu  a0, v0, zero
+// 0x01061d64: 0x1061d64: jal   0x10c0a40 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl143::__fixdfsi_10c0a50(int32,int32,int32)
+	call int32 Cibyl143::__fixdfsi_10c0a40(int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5

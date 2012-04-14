@@ -4585,7 +4585,7 @@ L_1068ac0:
 	ldloc 8
 	brfalse L_1068b00
 // --- basic block ---
-// 0x01068ac8: 0x1068ac8: jal   0x10c1de0 addiu a0, sp, 16
+// 0x01068ac8: 0x1068ac8: jal   0x10c1dd0 addiu a0, sp, 16
 	ldloc.0
 	ldc.i4.s 16
 	add
@@ -4595,17 +4595,17 @@ L_1068ac0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl144::atof_10c1de0(int32,int32,int32,int32,int32)
+	call int32 Cibyl144::atof_10c1dd0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 5
 // --- basic block ---
-// 0x01068ad0: 0x1068ad0: jal   0x10c09f4 addu  a0, v0, zero
+// 0x01068ad0: 0x1068ad0: jal   0x10c09e4 addu  a0, v0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
 	ldloc.1
-	call int32 Cibyl143::__extendsfdf2_10c09f4(int32,int32)
+	call int32 Cibyl143::__extendsfdf2_10c09e4(int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 10
 	stloc 5

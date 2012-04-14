@@ -155,8 +155,9 @@ public class AsyncNet : UIWorker.ValidityCheck
                         {
                             try
                             {
+                                var request = (HttpWebRequest)result.AsyncState;
                                 Logger.log("downloading " + conn.RequestUri);
-                                resp = (HttpWebResponse)conn.EndGetResponse(result);
+                                resp = (HttpWebResponse)request.EndGetResponse(result);
                                 http_response_sync.Set();
                             }
                             catch (Exception we)
@@ -165,7 +166,7 @@ public class AsyncNet : UIWorker.ValidityCheck
                                 exp = we;
                                 http_response_sync.Set();
                             }
-                        }, null);
+                        }, conn);
                     }
                     catch (Exception ioe)
                     {

@@ -2173,13 +2173,14 @@ public class Syscalls
             http_request_sync.Reset();
             hc.BeginGetRequestStream(delegate(IAsyncResult result)
             {
-                Stream ret = hc.EndGetRequestStream(result);
+                var request = (HttpWebRequest)result.AsyncState;
+                Stream ret = request.EndGetRequestStream(result);
                 http_request_register_handle = CRunTime.registerObject(ret);
                 int val = -1;
                 if (!stream_to_request.TryGetValue(http_request_register_handle, out val))
                     stream_to_request.Add(http_request_register_handle, __hc);
                 http_request_sync.Set();
-            }, null);
+            }, hc);
 
             http_request_sync.WaitOne();
             return http_request_register_handle;
