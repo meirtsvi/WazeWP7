@@ -2977,11 +2977,7 @@ end:
 
 
             // And report stats
-            // This should not run while running in the emulator
-            if (!(Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator))
-            {
-                WebStats.ReportWebStat();
-            }
+            WebStats.ReportWebStatEventAsync("Open");
         }
         
     }
@@ -3240,6 +3236,9 @@ end:
             };
             pageContext.OnListItemSelected += (listItem, menuItem) =>
                 {
+                    // Report stats on Generic selection type (no PII transferred!).
+                    WebStats.ReportWebStatEventDetailsAsync("Generic List Selection",title);
+
                     int offset = listItem.ReferenceIndex * 4;
                     int menuOffset = menuItem.ReferenceIndex * 4;
                     UIWorker.addUIEvent(in_action_callback, labels_addr + offset, values_addr + offset, menu_values_addr + menuOffset, context_addr, true);
@@ -3495,6 +3494,8 @@ end:
         // Set the callback
         viewModel.OnSettingsSaved += (sender, args) =>
         {
+            WebStats.ReportWebStatEventAsync("Save Settings");
+
             // Save the settings
             currentPtr = all_settings_addr;
             for (int i = 0; i < (int)SettingsPageViewModel.Settings.SettingsMaxValue; i++)

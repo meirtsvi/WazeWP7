@@ -114,6 +114,13 @@ namespace WazeWP7
 
         private void OptionSelected (AlternativeRoutesPageViewModel.OptionSelectedEventArgs.Options selectedOption)
         {
+
+            //Report statistics:
+            string optionString = selectedOption.ToString();
+            string optionName = optionString.Substring(optionString.LastIndexOf(".") + 1);
+            WebStats.ReportWebStatEventDetailsAsync("AlternativeRoutes", optionName);
+
+
             ViewModel.NotifyOptionSelected(selectedOption, (currentItem == null) ? 0 : currentItem.ContextPointer);
             if (selectedOption != AlternativeRoutesPageViewModel.OptionSelectedEventArgs.Options.Cancel)
             {
