@@ -93,6 +93,8 @@ namespace WazeWP7
 
         private void DriveButton_Click(object sender, RoutedEventArgs e)
         {
+            
+
             CloseDialog(NavigateResultControlViewModel.DialogClosingEventArgs.ClosingActions.Drive);
         }
 
@@ -103,6 +105,11 @@ namespace WazeWP7
 
         private void CloseDialog (NavigateResultControlViewModel.DialogClosingEventArgs.ClosingActions action)
         {
+            //Report statistics:
+            string actionString = action.ToString();
+            string actionName = actionString.Substring(actionString.LastIndexOf(".") + 1);
+            WebStats.ReportWebStatEventAsync(actionName);
+
             lock (viewModel)
             {
                 countdownThread = null;

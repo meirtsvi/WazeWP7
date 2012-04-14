@@ -95,6 +95,9 @@ namespace WazeWP7
 
         private void DoCallBack(string callbackName)
         {
+
+            WebStats.ReportWebStatEventDetailsAsync("Report", callbackName);
+
             foreach (WazeMenuItem menuItem in miniMenuItems)
             {
                 if (menuItem.text == callbackName || menuItem.text == LanguageResources.Instance.Translate(callbackName))

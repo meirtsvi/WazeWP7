@@ -2869,6 +2869,10 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DynamicOrientationChanges\DynamicOrientationChanges.csproj">
+      <Project>{33913A51-53D1-4CA1-A8E0-57FE5314B705}</Project>
+      <Name>DynamicOrientationChanges</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WazeScheduledTaskAgent\WazeScheduledTaskAgent.csproj">
       <Project>{5B25CBFB-AE3E-42E1-8610-834F40E65158}</Project>
       <Name>WazeScheduledTaskAgent</Name>
