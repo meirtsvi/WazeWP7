@@ -47,6 +47,7 @@ namespace WazeWP7
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
+            WebStats.ReportWebStatEventAsync("Login");
             this.pageContext.OnSignin(this.UsernameTexBox.Text, this.PasswordBox.Password);
         }
     }

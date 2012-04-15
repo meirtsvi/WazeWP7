@@ -73,6 +73,10 @@ namespace WazeWP7
                 AddressResults = new ObservableCollection<SingleSearchResultsPivotPageContext.SearchResult>(addressResults),
                 LocalSearchResults = new ObservableCollection<SingleSearchResultsPivotPageContext.SearchResult>(localSearchResults),
             };
+
+            //Report search results stats
+            WebStats.ReportWebStatEventDetailsAsync("Search Complete", "Address count: " + addressResults.Count() + " Local count: " + localSearchResults.Count());
+
             NavigationService.Navigate<SingleSearchResultsPivotPage>(searchResultsPageContext);
         }
 
@@ -160,6 +164,18 @@ namespace WazeWP7
 
         private void PerformSearch ()
         {
+            #region Crash Test Easter Egg
+
+            // Easter egg to intentionally crash waze - for testing
+            if (SearchTextBox.Text.Contains("Crash Waze"))
+            {
+                throw new Exception("Waze Crash Test");
+            }
+
+            #endregion Crash Test Easter Egg
+
+            WebStats.ReportWebStatEventAsync("Search");
+
             InProgressGrid.Visibility = System.Windows.Visibility.Visible;
             SelectAction(ActionType.SingleSearch);
         }

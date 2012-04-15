@@ -153,6 +153,11 @@ namespace WazeWP7
 
         private void OptionSelected(SingleSearchResultsPivotPageContext.SearchOption searchOption)
         {
+            //Report statistics:
+            string optionString = searchOption.ToString();
+            string optionName = optionString.Substring(optionString.LastIndexOf(".") + 1);
+            WebStats.ReportWebStatEventDetailsAsync("SearchOption", optionName);
+
             // Call the callback to start the operation
             PageContext.OnSearchOptionSelected(selectedResult.ReferenceIndex, searchOption, InputTextBox.Text);
 

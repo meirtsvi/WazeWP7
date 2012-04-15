@@ -1,0 +1,5 @@
+D:\Git\Repository\DynamicOrientationChanges\Bin\Release\DynamicOrientationChanges.dll
+D:\Git\Repository\DynamicOrientationChanges\Bin\Release\DynamicOrientationChanges.pdb
+D:\Git\Repository\DynamicOrientationChanges\obj\Release\ResolveAssemblyReference.cache
+D:\Git\Repository\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.dll
+D:\Git\Repository\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.pdb

@@ -1,17 +1,16 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Waze")]
-[assembly: AssemblyDescription("Waze for Windows Phone 7.5")]
+[assembly: AssemblyTitle("DynamicOrientationChanges")]
+[assembly: AssemblyDescription("DynamicOrientationChanges assembly.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Meir Tsvi")]
-[assembly: AssemblyProduct("Waze for WP7.5")]
-[assembly: AssemblyCopyright("Copyright © Meir Tsvi 2011-2012")]
+[assembly: AssemblyCompany("http://blogs.msdn.com/b/delay/")]
+[assembly: AssemblyProduct("DynamicOrientationChanges")]
+[assembly: AssemblyCopyright("Copyright © David Anson 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +20,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fc7b1a59-d0a4-43b1-909b-a29bf0502088")]
+[assembly: Guid("46e7ddbf-ec02-4614-aadb-97063db12bbd")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,6 +31,7 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.9.9.4")]
-[assembly: AssemblyFileVersion("0.9.9.4")]
-[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: CLSCompliant(false)] // warning CS3009: base type 'Microsoft.Phone.Controls.PhoneApplicationFrame' is not CLS-compliant

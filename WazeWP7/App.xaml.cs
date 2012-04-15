@@ -126,6 +126,7 @@ namespace WazeWP7
         // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
+            
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
@@ -134,7 +135,19 @@ namespace WazeWP7
 
             if (!(e.ExceptionObject is InvalidProgramException))
             {
-                MessageBoxResult result = MessageBox.Show("Waze crashed to to an unexpected exception. Please press OK to send an error report to the developers",
+                // We need to keep the UI Alive for Azure reporting to function (Library limitation)
+                e.Handled = true;
+
+                // Report Crash Event to Azure (Anonymous)
+                WebStats.ReportWebStatCrash(e.ExceptionObject.GetType().Name, e.ExceptionObject.ToString());
+                
+                //Ask the user to report more info via email, so we can contact him if needed.
+                MessageBoxResult result = MessageBox.Show("Waze crashed to to an unexpected exception." + Environment.NewLine +
+                "Please press OK to send an error report to the developers." + Environment.NewLine +
+                
+                // Since we are not terminating any more, let the user know it is best to restart the app.
+                "Notice: Waze may not function correctly untill restarted!",
+
                                                            "Unexpected error", MessageBoxButton.OKCancel);
 
                 if (result == MessageBoxResult.OK)
@@ -144,8 +157,10 @@ namespace WazeWP7
                     emailComposer.Subject = string.Format("Waze " + GamePage.get().GetAppVersion() + "Lang: " + LanguageResources.Instance.CurrentLanguage + " crashed due to {0} exception", e.ExceptionObject.GetType());
                     emailComposer.Body = e.ExceptionObject.ToString();
                     emailComposer.Show();
-                    Thread.Sleep(30000);
+                   //Thread.Sleep(30000);
                 }
+
+
             }
         }
 
@@ -162,7 +177,16 @@ namespace WazeWP7
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
-            RootFrame = new PhoneApplicationFrame();
+            //RootFrame = new PhoneApplicationFrame();
+
+            // Adding Cool animation for screen rotation:
+            RootFrame = new Delay.HybridOrientationChangesFrame();  // Use the rotation-enhanced custom Frame that 
+            // derives from the Toolkit TransitionFrame
+            ((Delay.HybridOrientationChangesFrame)RootFrame).Duration = TimeSpan.FromSeconds(0.6);
+
+
+
+
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Handle navigation failures
