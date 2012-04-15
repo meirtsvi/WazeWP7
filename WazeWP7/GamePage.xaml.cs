@@ -305,39 +305,41 @@ namespace WazeWP7
                 switch (location.State)
                 {
                     case TouchLocationState.Pressed:
+                        touchDownEvent((int)currentMouseState_X, (int)currentMouseState_Y);
                         isPressed = true;
                         break;
                     case TouchLocationState.Released:
                         isPressed = false;
+                        touchUpEvent((int)currentMouseState_X, (int)currentMouseState_Y);
                         break;
                     case TouchLocationState.Moved:
-                        isPressed = true;
+                        //isPressed = true;
                         break;
                     default:
                         throw new ArgumentException("invalid state: " + location.State);
                 }
             }
 
-            if (isPressed)
-            {
-                // fire click event only if one finger is down. Multitouch events are handled inside ManipulationDelta event handler
-                if (!prevIsPressed && col.Count == 1)
-                {
-                    touchDownEvent((int)currentMouseState_X, (int)currentMouseState_Y);
-                }
-                //else if (currentMouseState_X != prevMouseState_X || currentMouseState_Y != prevMouseState_Y)
-                //{
-                //    touchMovedEvent((int)currentMouseState_X, (int)currentMouseState_Y);
-                //}
-            }
-            else if (prevIsPressed)
-            {
-                touchUpEvent((int)currentMouseState_X, (int)currentMouseState_Y);
-            }
+            //if (isPressed)
+            //{
+            //    // fire click event only if one finger is down. Multitouch events are handled inside ManipulationDelta event handler
+            //    if (!prevIsPressed && col.Count == 1)
+            //    {
+            //        touchDownEvent((int)currentMouseState_X, (int)currentMouseState_Y);
+            //    }
+            //    //else if (currentMouseState_X != prevMouseState_X || currentMouseState_Y != prevMouseState_Y)
+            //    //{
+            //    //    touchMovedEvent((int)currentMouseState_X, (int)currentMouseState_Y);
+            //    //}
+            //}
+            //else if (prevIsPressed && col.Count == 1)
+            //{
+            //    touchUpEvent((int)currentMouseState_X, (int)currentMouseState_Y);
+            //}
 
-            prevIsPressed = isPressed;
-            prevMouseState_X = currentMouseState_X;
-            prevMouseState_Y = currentMouseState_Y;
+            //prevIsPressed = isPressed;
+            //prevMouseState_X = currentMouseState_X;
+            //prevMouseState_Y = currentMouseState_Y;
         }
 
         /// <summary>
