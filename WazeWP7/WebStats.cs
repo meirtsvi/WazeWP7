@@ -182,13 +182,11 @@ namespace WazeWP7
             Thread statThread = new Thread(new ThreadStart(
                 delegate
                 {
-
-
-                    #region Stat Delegate
+                    
                     ReportStat(eventName, exceptionName, details);
                 }
 
-                    #endregion Stat Delegate
+                    
 
                 ));
 

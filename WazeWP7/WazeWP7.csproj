@@ -752,13 +752,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <None Include="en2he_online_trans.txt" />
-    <Resource Include="App_Readme\Content\StorageInitializer.png" />
-    <Resource Include="App_Readme\Content\CloudTableInterfaces.png" />
-    <Resource Include="App_Readme\Content\CloudStorageClientResolver.png" />
-    <Resource Include="App_Readme\Content\CloudQueueInterfaces.png" />
-    <Resource Include="App_Readme\Content\CloudBlobInterfaces.png" />
-    <Content Include="App_Readme\Content\Site.css" />
-    <Content Include="App_Readme\Phone.Storage.Readme.htm" />
     <Content Include="Resources\menu_icon.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
