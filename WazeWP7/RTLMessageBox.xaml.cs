@@ -46,7 +46,10 @@ namespace WazeWP7
 
             // And now add to the current page
             var currentPage = ((App)Application.Current).RootFrame.Content as WazeApplicationPage;
-            currentPage.GetPopupPanel().Children.Add(this);
+            if (currentPage != null)
+            {
+                currentPage.GetPopupPanel().Children.Add(this);
+            }
         }
 
         internal void Hide()

@@ -2132,7 +2132,7 @@ public class Syscalls
 
     public static void NOPH_HttpConnection_close(int __hc)
     {
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        //HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
         //todomt hc.Close();
     }
 
@@ -2161,35 +2161,44 @@ public class Syscalls
         return registeredHandle;
     }
 
-    public static Dictionary<int, int> stream_to_request = new Dictionary<int, int>();
+    //public static Dictionary<int, int> stream_to_request = new Dictionary<int, int>();
 
-    private static ManualResetEvent http_request_sync = new ManualResetEvent(false);
-    private static int http_request_register_handle = -1;
+    
+    
     public static int NOPH_HttpConnection_openOutputStream(int __hc)
     {
+        //int http_request_register_handle = -1;
+        //ManualResetEvent http_request_sync = new ManualResetEvent(false);
+
         HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
         if (hc.Method == "POST")
         {
-            http_request_sync.Reset();
-            hc.BeginGetRequestStream(delegate(IAsyncResult result)
-            {
-                var request = (HttpWebRequest)result.AsyncState;
-                Stream ret = request.EndGetRequestStream(result);
-                http_request_register_handle = CRunTime.registerObject(ret);
-                int val = -1;
-                if (!stream_to_request.TryGetValue(http_request_register_handle, out val))
-                    stream_to_request.Add(http_request_register_handle, __hc);
-                http_request_sync.Set();
-            }, hc);
-
-            http_request_sync.WaitOne();
-            return http_request_register_handle;
+            return __hc;
         }
         else
+        {
             return 0;
+        }
+            //http_request_sync.Reset();
+            //hc.BeginGetRequestStream(delegate(IAsyncResult result)
+            //{
+            //    var request = (HttpWebRequest)result.AsyncState;
+            //    Stream ret = request.EndGetRequestStream(result);
+            //    http_request_register_handle = CRunTime.registerObject(ret);
+            //    int val = -1;
+            //    if (!stream_to_request.TryGetValue(http_request_register_handle, out val))
+            //        stream_to_request.Add(http_request_register_handle, __hc);
+            //    http_request_sync.Set();
+            //}, hc);
+
+            //http_request_sync.WaitOne();
+        //    return http_request_register_handle;
+        //}
+        //else
+        //    return 0;
     }
 
-    public static Dictionary<int, int> requests_content_length = new Dictionary<int, int>();
+    //public static Dictionary<int, int> requests_content_length = new Dictionary<int, int>();
 
     public static void NOPH_HttpConnection_setRequestProperty(int __hc, int __key, int __value)
     {
@@ -2200,14 +2209,14 @@ public class Syscalls
         {
             hc.ContentType = value;
         }
-        else if (key.Equals("Content-Length"))
-        {
-            int dummy;
-            if (requests_content_length.TryGetValue(__hc, out dummy))
-                requests_content_length.Remove(__hc);
-            requests_content_length.Add(__hc, int.Parse(value));
-            //todomt2 hc.ContentLength = int.Parse(value);
-        }
+        //else if (key.Equals("Content-Length"))
+        //{
+        //    int dummy;
+        //    if (requests_content_length.TryGetValue(__hc, out dummy))
+        //        requests_content_length.Remove(__hc);
+        //    requests_content_length.Add(__hc, int.Parse(value));
+        //    //todomt2 hc.ContentLength = int.Parse(value);
+        //}
         else if (key.Equals("User-Agent"))
         {
             hc.UserAgent = value;
@@ -2279,8 +2288,15 @@ end:
 
     public static void NOPH_OutputStream_close(int __os)
     {
-        Stream os = (Stream)CRunTime.objectRepository[__os];
-        os.Close();
+        if (CRunTime.objectRepository[__os] is Stream)
+        {
+            Stream os = (Stream)CRunTime.objectRepository[__os];
+
+            if (os is FileStream)
+            {
+                os.Close();
+            }
+        }
     }
 
     public static void NOPH_OutputStream_flush(int __os)
@@ -2313,49 +2329,49 @@ end:
         {
             Stream os = (Stream)CRunTime.objectRepository[__os];
 
-            if (!(os is FileStream))
-            {
-                int request_id = stream_to_request[__os];
-                if (!(CRunTime.objectRepository[request_id] is HttpWebRequest))
-                    return;
-                HttpWebRequest request = (HttpWebRequest)CRunTime.objectRepository[request_id];
-
-                byte[] str_buff;
-                byte[] new_buff;
-                int content_length = requests_content_length[request_id];
-
-                if (buffered_requests.TryGetValue(__os, out str_buff))
-                {
-                    buffered_requests.Remove(__os);
-                    new_buff = new byte[str_buff.Length + 1];
-                    str_buff.CopyTo(new_buff, 0);
-                    new_buff[str_buff.Length] = (byte)b;
-                }
-                else
-                {
-                    new_buff = new byte[1];
-                    new_buff[0] = (byte)b;
-                }
-
-                if (new_buff.Length == content_length)
-                {
-                    requests_content_length.Remove(request_id);
-                    os.Write(new_buff, 0, (int)new_buff.Length);
-#if DEBUG
-                    Logger.log("http put: " + System.Text.Encoding.UTF8.GetString(new_buff, 0, new_buff.Length));
-#endif
-                    os.Flush();
-                    os.Close();
-                }
-                else
-                {
-                    buffered_requests.Add(__os, new_buff);
-                }
-            }
-            else
+            if (os is FileStream)
             {
                 os.WriteByte((byte)b);
             }
+        }
+        else if (CRunTime.objectRepository[__os] is HttpWebRequest)
+        {
+            //int request_id = stream_to_request[__os];
+            //if (!(CRunTime.objectRepository[request_id] is HttpWebRequest))
+            //    return;
+            //HttpWebRequest request = (HttpWebRequest)CRunTime.objectRepository[request_id];
+
+            byte[] str_buff;
+            byte[] new_buff;
+            //int content_length = requests_content_length[request_id];
+
+            if (buffered_requests.TryGetValue(__os, out str_buff))
+            {
+                buffered_requests.Remove(__os);
+                new_buff = new byte[str_buff.Length + 1];
+                str_buff.CopyTo(new_buff, 0);
+                new_buff[str_buff.Length] = (byte)b;
+            }
+            else
+            {
+                new_buff = new byte[1];
+                new_buff[0] = (byte)b;
+            }
+
+            //                if (new_buff.Length == content_length)
+            //                {
+            //                    requests_content_length.Remove(request_id);
+            //                    os.Write(new_buff, 0, (int)new_buff.Length);
+            //#if DEBUG
+            //                    Logger.log("http put: " + System.Text.Encoding.UTF8.GetString(new_buff, 0, new_buff.Length));
+            //#endif
+            //                    os.Flush();
+            //                    os.Close();
+            //                }
+            //                else
+            //                {
+            buffered_requests.Add(__os, new_buff);
+            //                }
         }
     }
     

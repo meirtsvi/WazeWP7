@@ -108,7 +108,7 @@ public class AsyncNet : UIWorker.ValidityCheck
             if (updateTime != null && updateTime.Trim().Length > 0) {
                 conn.Headers["IfModifiedSince"] = updateTime;
             }
-            
+
             registeredHandle = CRunTime.registerObject(conn);
 
         }
@@ -151,12 +151,44 @@ public class AsyncNet : UIWorker.ValidityCheck
                     try
                     {
                         http_response_sync.Reset();
+
+                        if (conn.Method == "POST")
+                        {
+                            byte[] buffer;
+                            if (Syscalls.buffered_requests.TryGetValue(registeredHandle, out buffer))
+                            {
+                                conn.BeginGetRequestStream(delegate(IAsyncResult result)
+                                {
+                                    var request = (WebRequest)result.AsyncState;
+                                    using (var str = request.EndGetRequestStream(result))
+                                    {
+                                        Syscalls.buffered_requests.Remove(registeredHandle);
+                                        str.Write(buffer, 0, (int)buffer.Length);
+#if DEBUG
+                                        Logger.log("http put: " + System.Text.Encoding.UTF8.GetString(buffer, 0, buffer.Length));
+#endif
+                                    }
+                                    http_response_sync.Set();
+
+                                }, conn);
+                            }
+                            else
+                            {
+                                http_response_sync.Set();
+                            }
+
+
+                            http_response_sync.WaitOne();
+                        }
+
+                        http_response_sync.Reset();
+
                         conn.BeginGetResponse(delegate(IAsyncResult result)
                         {
                             try
                             {
                                 var request = (HttpWebRequest)result.AsyncState;
-                                Logger.log("downloading " + conn.RequestUri);
+                                Logger.log("downloading " + request.RequestUri);
                                 resp = (HttpWebResponse)request.EndGetResponse(result);
                                 http_response_sync.Set();
                             }

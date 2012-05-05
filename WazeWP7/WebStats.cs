@@ -207,10 +207,21 @@ namespace WazeWP7
 
                 var tableName = "WazeStatLog";
 
+                string lang = "";
+
+                try
+                {
+                    lang = LanguageResources.Instance.CurrentLanguage;
+                }
+                catch (Exception)
+                {
+                    // cross thread access to IsolatedStorage can cause exception here - just ignore it
+                }
+
                 var wazeStatLog = new WazeStatLog
                 {
                     DeviceID = deviceID,
-                    Lang = LanguageResources.Instance.CurrentLanguage,
+                    Lang = lang,
                     Ver = GamePage.get().GetAppVersion(),
                     DeviceType = Microsoft.Phone.Info.DeviceStatus.DeviceName,
                     Event = eventName,
