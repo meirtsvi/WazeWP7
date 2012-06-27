@@ -42,10 +42,10 @@
                     </toolkit:ContextMenu>
                 </toolkit:ContextMenuService.ContextMenu>
 
-                <Image Grid.Column="0" Source="{Binding IconResource}" Height="50"/>
+                <Image Grid.Column="0" Source="{Binding IconResource}" Height="80"/>
                 <TextBlock Grid.Column="1" 
                            Text="{Binding Label}" 
-                           TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"
+                           TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"
                            Foreground="Black"/>
             </Grid>
         </DataTemplate>
