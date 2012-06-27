@@ -48,11 +48,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AppLimit.CloudComputing.oAuth.WP7">
+      <HintPath>.\AppLimit.CloudComputing.oAuth.WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="AppLimit.CloudComputing.SharpBox.WP7">
+      <HintPath>.\AppLimit.CloudComputing.SharpBox.WP7.dll</HintPath>
+    </Reference>
     <Reference Include="cibyl">
       <HintPath>..\converted\cibyl.dll</HintPath>
     </Reference>
     <Reference Include="Data.Services.Client">
       <HintPath>..\packages\Phone.Storage.1.0.1\lib\sl40-wp71\Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DropNet.WindowsPhone">
+      <HintPath>.\DropNet.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Phone" />
@@ -70,8 +79,17 @@
     <Reference Include="NBidi">
       <HintPath>.\NBidi.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json.Silverlight">
+      <HintPath>.\Newtonsoft.Json.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.WindowsPhone">
+      <HintPath>.\Newtonsoft.Json.WindowsPhone.dll</HintPath>
+    </Reference>
     <Reference Include="Phone.Storage">
       <HintPath>..\packages\Phone.Storage.1.0.1\lib\sl40-wp71\Phone.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.WindowsPhone">
+      <HintPath>.\RestSharp.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="SilverlightActivator">
       <HintPath>..\packages\SilverlightActivator.1.0.4\lib\sl4-wp71\SilverlightActivator.dll</HintPath>

@@ -133,7 +133,6 @@ FILE *roadmap_file_fopen (const char *path,
 
 
    NOPH_try(fopen_exception_handler, (void*)&error) {
-	   printf("opening %s\n", full_name);
    	file = fopen (full_name, mode);
    }NOPH_catch();
 

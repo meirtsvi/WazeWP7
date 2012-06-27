@@ -124,7 +124,7 @@ using WazeWP7;
 
                                  * icon change needs to come after a delay.
                                  */
-                    Logger.log("FreemapApp (66) Exception :" + e);
+                    Logger.log("FreemapApp (66) Exception :" + e.ToString());
                     try
                     {
                         Thread.Sleep(2000);
@@ -137,7 +137,7 @@ using WazeWP7;
                     }
                     catch (Exception t)
                     {
-                        Logger.log("FreemapApp (73) Exception :" + t);
+                        Logger.log("FreemapApp (73) Exception :" + t.ToString());
                     }
                 }
             }
@@ -324,7 +324,7 @@ using WazeWP7;
             }
             catch (Exception e)
             {
-                Logger.log("could not call c_malloc_stack" + e);
+                Logger.log("could not call c_malloc_stack" + e.ToString());
                 safe_exit();
                 //MessageBox.Show("Exception in c_malloc_stack");
 
@@ -704,7 +704,7 @@ using WazeWP7;
             }
             catch (Exception e)
             {
-                UIWorker.addUIEventLog("Exception in printOSVersionToLog" + e);
+                UIWorker.addUIEventLog("Exception in printOSVersionToLog" + e.ToString());
             }
 
         }

@@ -121,7 +121,7 @@ using System.Windows;
             }
             catch (Exception t)
             {
-                Logger.log("Exception in start: " + t);
+                Logger.log("Exception in start: " + t.ToString());
                 MessageBox.Show("exception during run " + t);
                 /*   Logger.log("Exception in start: " + t);
                    t.printStackTrace();
@@ -307,6 +307,7 @@ using System.Windows;
                         //t.printStackTrace();
                         String res = "EXCEPTION in UiWorker, cb addr: " + o.addr +
                              ", toString() : " + t.ToString();
+                        Logger.log(res);
                         addUIEventLog(res);
                     }
                 }
@@ -354,7 +355,7 @@ using System.Windows;
                 }
                 catch (Exception e)
                 {
-                    Logger.log("UIWORKER - UIEventExecuteNow, could not finish call to addr : " + addr + " got exception : " + e);
+                    Logger.log("UIWORKER - UIEventExecuteNow, could not finish call to addr : " + addr + " got exception : " + e.ToString());
                     return 0;
                 }
             //}

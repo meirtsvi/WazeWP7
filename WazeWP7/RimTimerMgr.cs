@@ -37,7 +37,8 @@ public class RimTimerMgr
         }
         catch (Exception e)
         {
-            UIWorker.addUIEventLog("Exception in scheduling task" + e);
+            UIWorker.addUIEventLog("Exception in scheduling task" + e.ToString());
+            Logger.log("Exception in scheduling task " + e.ToString());
             return null;
         }
         return timer;
@@ -60,7 +61,8 @@ public class RimTimerMgr
         }
         catch (Exception ex)
         {
-            System.Diagnostics.Debug.WriteLine("Exception in run (rim_on_scheduledTask): " + ex);
+            System.Diagnostics.Debug.WriteLine("Exception in run (rim_on_scheduledTask): " + ex.ToString());
+            Logger.log(ex.ToString());
 
             throw; //todomt
             //Environment.Exit(0);

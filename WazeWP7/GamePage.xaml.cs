@@ -55,8 +55,9 @@ using System.Windows.Media.Imaging;
 using Microsoft.Phone.Shell;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Tasks;
-//using AppLimit.CloudComputing.SharpBox;
-//using AppLimit.CloudComputing.SharpBox.DropBox;
+using AppLimit.CloudComputing.SharpBox;
+using AppLimit.CloudComputing.oAuth.WP7.SilverLightHelper;
+using AppLimit.CloudComputing.SharpBox.DropBox;
 using System.Windows.Resources;
 using SharpGIS;
 using Microsoft.Devices.Sensors;
@@ -295,7 +296,7 @@ namespace WazeWP7
             TouchCollection col = TouchPanel.GetState();
             float currentMouseState_X = -1;
             float currentMouseState_Y = -1;
-            bool isPressed = false;
+            //bool isPressed = false;
 
             foreach (TouchLocation location in col)
             {
@@ -306,16 +307,19 @@ namespace WazeWP7
                 {
                     case TouchLocationState.Pressed:
                         touchDownEvent((int)currentMouseState_X, (int)currentMouseState_Y);
-                        isPressed = true;
+                        //isPressed = true;
                         break;
                     case TouchLocationState.Released:
-                        isPressed = false;
+                        //isPressed = false;
                         touchUpEvent((int)currentMouseState_X, (int)currentMouseState_Y);
                         break;
                     case TouchLocationState.Moved:
                         //isPressed = true;
                         break;
+                    case TouchLocationState.Invalid:
+                        break;
                     default:
+                        Logger.log("invalid state: " + location.State);
                         throw new ArgumentException("invalid state: " + location.State);
                 }
             }
@@ -342,6 +346,11 @@ namespace WazeWP7
             //prevMouseState_Y = currentMouseState_Y;
         }
 
+        static int exc_count = 0;
+        static int exc_count2 = 0;
+        static int exc_count3 = 0;
+        static int exc_count4 = 0;
+        static int draw_count = 0;
         /// <summary>
         /// Allows the page to draw itself.
         /// </summary>
@@ -388,6 +397,12 @@ namespace WazeWP7
                         }
                         catch (InvalidOperationException)
                         {
+                            if (exc_count2 < 10)
+                            {
+                                exc_count2++;
+                                Logger.log(e.ToString());
+                            }
+
                             spriteBatch.End();
                             spriteBatch.Begin();
                         }
@@ -424,7 +439,13 @@ namespace WazeWP7
                         spriteBatch.End();
                     }
                     catch (Exception)
-                    { }
+                    {
+                        if (exc_count < 10)
+                        {
+                            exc_count++;
+                            Logger.log(e.ToString());
+                        }
+                    }
                 }
             }
 
@@ -438,6 +459,12 @@ namespace WazeWP7
                 }
                 catch (InvalidOperationException)
                 {
+                    if (exc_count3 < 10)
+                    {
+                        exc_count3++;
+                        Logger.log(e.ToString());
+                    }
+                    
                     spriteBatch.End();
                     spriteBatch.Begin();
                 }
@@ -445,7 +472,15 @@ namespace WazeWP7
                 spriteBatch.Draw(elementRenderer.Texture, Vector2.Zero, Microsoft.Xna.Framework.Color.White);
                 spriteBatch.End();
             }
-            catch (Exception) { }
+            catch (Exception) 
+            {
+                if (exc_count4 < 10)
+                {
+                    exc_count4++;
+                    Logger.log(e.ToString());
+                }
+
+            }
             
         }
     
@@ -463,8 +498,9 @@ namespace WazeWP7
                     Syscalls.CopyFile("/WazeWP7;component/resources/prompt_list.txt", "prompt_list.txt");
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.log(e.ToString());
                 // do nothing
             }
         }
@@ -668,10 +704,40 @@ namespace WazeWP7
                 }
             }
 
-            // Do not add the exit menu item any more
+            // Do not add the exit menu item any more - add save logs instead
             if (text.ToLower().Equals("exit") || text.Equals("יציאה") || text.Equals(LanguageResources.Instance.Translate("Quit")))
             {
-                return;
+                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("Save logs");
+                    appBarMenuItem.Click += (delegate
+                    {
+                        EmailLogFile(null, null);
+
+                        //Logger.WriteToFile();
+                    });
+                    ApplicationBar.MenuItems.Add(appBarMenuItem);
+
+                });
+
+                //System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                //{
+                //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("Delete Cache");
+                //    appBarMenuItem.Click += (delegate
+                //    {
+                //        TileStorage ts = CRunTime.objectRepository[Syscalls.ts_id] as TileStorage;
+                //        if (ts != null)
+                //        {
+                //            ts.eraseStorage();
+                //            ts.initialize();
+                //        }
+                //        //Logger.WriteToFile();
+                //    });
+                //    ApplicationBar.MenuItems.Add(appBarMenuItem);
+
+                //});
+
+
             }
 
             WazeMenuItem new_item = new WazeMenuItem(text, ordinal, priority, wrapper_callback, callback);
@@ -823,7 +889,7 @@ namespace WazeWP7
                                                 version.Revision);
             return s;
         }
-        /*
+        
         private static bool isSendMailAdded = false;
         private CloudStorage _storage;
         private void EmailLogFile(object sender, EventArgs e)
@@ -870,18 +936,21 @@ namespace WazeWP7
             else
             {
                 // create the file
-                ICloudFileSystemEntry file = _storage.CreateFile(root, DateTime.Now.ToFileTime()+ ".csv");
+                ICloudFileSystemEntry file = _storage.CreateFile(root, "wazelog " + DateTime.Now.ToFileTime()+ ".txt");
 
                 // upload the data
                 Stream data = file.GetContentStream(FileAccess.Write);
 
-                int sz = Syscalls.fis.Count;
-                for (int i=0; i<sz; i++)
-                {
-                    function_info fi = Syscalls.fis[i];
-                    byte[] buffer = Syscalls.StringToAscii(fi.name + "," + fi.start + "," + fi.finish+ "\r\n");
-                    data.Write(buffer, 0, buffer.Length);
-                }
+                byte[] buffer = Syscalls.StringToAscii(Logger.logs);
+                data.Write(buffer, 0, buffer.Length);
+                
+                //int sz = Syscalls.fis.Count;
+                //for (int i=0; i<sz; i++)
+                //{
+                //    //function_info fi = Syscalls.fis[i];
+                //    byte[] buffer = Syscalls.StringToAscii(fi.name + "," + fi.start + "," + fi.finish+ "\r\n");
+                //    data.Write(buffer, 0, buffer.Length);
+                //}
 
                 // close the stream
                 data.Close();
@@ -893,8 +962,10 @@ namespace WazeWP7
             {
                 _storage.Close();
             }
+
+            Logger.logs = "";
         }
-        */
+        
 
         public void setLocale(String text)
         {
@@ -1045,7 +1116,7 @@ namespace WazeWP7
                 }
                 catch (Exception t)
                 {
-                    Logger.log("Exception in UI action: " + t);
+                    Logger.log("Exception in UI action: " + t.ToString());
 
                 }
                 return false; // return false so RIM will open the menu as necessary.
@@ -1083,7 +1154,7 @@ namespace WazeWP7
                 }
                 catch (Exception t)
                 {
-                    Logger.log("Exception in keyDown: " + t);
+                    Logger.log("Exception in keyDown: " + t.ToString());
 
 
                     throw; //todomt
@@ -1163,7 +1234,7 @@ namespace WazeWP7
             }
             catch (Exception t)
             {
-                Logger.log("Exception in navigationMovement: " + t);
+                Logger.log("Exception in navigationMovement: " + t.ToString());
 
 
                 throw; //todomt
@@ -1307,7 +1378,7 @@ namespace WazeWP7
             }
             catch (Exception t)
             {
-                Logger.log("Exception in checkOrientationChanged: " + t);
+                Logger.log("Exception in checkOrientationChanged: " + t.ToString());
 
 
                 throw; //todomt
@@ -1382,7 +1453,7 @@ namespace WazeWP7
             }
             catch (Exception t)
             {
-                Logger.log("Exception in touchDownEvent: " + t);
+                Logger.log("Exception in touchDownEvent: " + t.ToString());
 
 
                 throw; //todomt
@@ -1411,7 +1482,7 @@ namespace WazeWP7
             }
             catch (Exception t)
             {
-                Logger.log("Exception in touchUpEvent: " + t);
+                Logger.log("Exception in touchUpEvent: " + t.ToString());
 
 
                 throw; //todomt
@@ -1435,7 +1506,7 @@ namespace WazeWP7
             }
             catch (Exception t)
             {
-                Logger.log("Exception in touchMovedEvent: " + t);
+                Logger.log("Exception in touchMovedEvent: " + t.ToString());
 
 
                 throw; //todomt

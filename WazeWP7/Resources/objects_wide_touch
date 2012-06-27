@@ -12,3 +12,15 @@ A zoomin
 B -1 -2 94 94
 S show_screen_icons
 
+N Compass
+E Compass
+P 48 172
+S orientation_mode
+
+N Compass_north
+I north_off
+I north_touch
+P 0 123
+B -1 -2 94 94
+A toggleorientation
+S orientation_mode

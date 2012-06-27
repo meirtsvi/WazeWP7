@@ -937,7 +937,6 @@ void roadmap_main_set_periodic (int interval, RoadMapCallback callback) {
    timer->callback = callback;
    timer->task = task;
    timer->uid = uid;
-   roadmap_log(ROADMAP_DEBUG, "periodic registered successfully");
 }
 
 void roadmap_main_remove_periodic (RoadMapCallback callback) {
@@ -1181,9 +1180,6 @@ void dummy_log(const char *msg) {
 char rim_keydown_utf8[8];
 
 int main (int argc, char **argv) {
-	   	int i=6;
-	printf("%d",i);
-
 	printf("In main!!!\n");
 	return 0;
 }
@@ -1455,7 +1451,6 @@ BOOL rim_on_key_down(int key, int status)
 
    if (out)
    {
-	   roadmap_log(ROADMAP_ERROR,"pressed key: %s\n", out);
 	   return roadmap_keyboard_handler__key_pressed(out, flags);
    }
 
@@ -1654,9 +1649,6 @@ static void wait_for_events(void)
 int main (int argc, char **argv) {
 
    int i;
-   	i=6;
-	printf("%d",i);
-
    NOPH_DeviceSpecific_init();
 
    NOPH_Canvas_registerKeyPressedCallback(keyPressed);

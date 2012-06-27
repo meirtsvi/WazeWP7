@@ -44,7 +44,6 @@ static int load_index(int fips, void **base, size_t *size) {
          ROADMAP_DATA_TYPE);
 	roadmap_path_format (filename, sizeof (filename), map_path, name);
 
-	roadmap_log(ROADMAP_DEBUG,"index filename: %s", filename);
    RoadMapFile file = roadmap_file_open (filename, "r");
 
    if (!ROADMAP_FILE_IS_VALID(file)) {

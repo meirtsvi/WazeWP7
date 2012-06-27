@@ -585,7 +585,7 @@ void roadmap_canvas_draw_multiple_lines(int count, int *lines,
 
 	// keep these lines in order for rim_graphics to stay with valid value. For some reason cibyl decides to put it in RA register if
 	// we remove this line
-	roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine == %d\n", rim_graphics);
+	//roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine == %d\n", rim_graphics);
 
 	for (i = 0; i < count; ++i) {
 
@@ -603,7 +603,7 @@ void roadmap_canvas_draw_multiple_lines(int count, int *lines,
 #ifdef RIMAPI
 				// keep these lines in order for rim_graphics to stay with valid value. For some reason cibyl decides to put it in RA register if
 				// we remove this line
-				roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine (%d, %d) == %d\n", i, j, rim_graphics);
+				//roadmap_log(ROADMAP_DEBUG, "rim_graphics in drawLine (%d, %d) == %d\n", i, j, rim_graphics);
 				NOPH_Graphics_drawLine
 				(rim_graphics, points->x, points->y, to_point->x, to_point->y);
 #else
@@ -1127,7 +1127,6 @@ void rim_on_canvas_button_pressed(int x,int y) {
 	point.x = (short)x;
 	point.y = (short)y;
 
-	roadmap_log(ROADMAP_DEBUG, "rim_on_canvas_button_pressed %d %d", x, y);
 	(*RoadMapCanvasMouseButtonPressed) (&point);
 
 }
@@ -1182,8 +1181,6 @@ void roadmap_canvas_configure(void) {
 			CanvasWidth = NOPH_FreemapMainScreen_getVisibleWidth(rim_screen);
 			CanvasHeight = NOPH_FreemapMainScreen_getVisibleHeight(rim_screen);
 			roadmap_screen_set_screen_type(get_screen_type(CanvasWidth,CanvasHeight));
-
-			printf("Height: %d, Width: %d\n", CanvasHeight, CanvasWidth);
 #else
    canvas = NOPH_GameCanvas_get();
    graphics = NOPH_GameCanvas_getGraphics(canvas);

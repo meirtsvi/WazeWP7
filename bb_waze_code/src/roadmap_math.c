@@ -272,8 +272,6 @@ static void roadmap_math_compute_scale (void) {
    RoadMapContext.center_y = RoadMapContext.height / 2;
 
    RoadMapContext.zoom_x = RoadMapContext.zoom;
-/*   if (RoadMapContext.zoom_x == 0)
-	   printf("1Zoom_x == 0\n");*/
    RoadMapContext.zoom_y = RoadMapContext.zoom;
 
    /* The horizontal ratio is derived from the vertical one,
@@ -304,10 +302,6 @@ static void roadmap_math_compute_scale (void) {
    {
 	   RoadMapContext.zoom_x = 1;
    }
-   if (RoadMapContext.zoom_x == 0)
-	   printf("zoom_x is still zero!!!\n");
-
-
    RoadMapContext.upright_screen.west =
       RoadMapContext.center.longitude
          - (RoadMapContext.center_x * RoadMapContext.zoom_x);

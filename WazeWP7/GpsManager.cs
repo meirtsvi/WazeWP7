@@ -201,7 +201,7 @@ namespace WazeWP7
             }
             catch (Exception ex)
             {
-                Logger.log("Exception in do_async_connect_cb: " + ex);
+                Logger.log("Exception in do_async_connect_cb: " + ex.ToString());
             }
         }
 
@@ -216,7 +216,7 @@ namespace WazeWP7
                 }
                 catch (Exception ex)
                 {
-                    Logger.log("Exception in do_async_connect_cb: " + ex);
+                    Logger.log("Exception in do_async_connect_cb: " + ex.ToString());
                 }
             }
         }

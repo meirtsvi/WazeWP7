@@ -21,16 +21,19 @@ using System.Collections.Generic;
 public class AsyncNet : UIWorker.ValidityCheck
 {
 
+    //private static int concurrent_conns = 0;
+    //private static object concurrent_conns_lock = new object();
+
     private static int c_do_async_connect_cb;
     private static int c_input_ready_cb;
 
     private string url;
     private string updateTime;
     private int method;
-    private WebRequest conn;
     private Stream Stream;
     private int cb_addr;
     private int context;
+    private object lock_object;
 
     private int input_id = -1;
     private byte[] buffer;
@@ -42,9 +45,7 @@ public class AsyncNet : UIWorker.ValidityCheck
     private bool do_read = false;
     private bool is_valid = true;
 
-
-
-    private static NetQueue queue;
+    private static NetQueue queue = null;
 
     public AsyncNet(string url, int method, string updateTime,
        int cb_addr, int context)
@@ -65,7 +66,7 @@ public class AsyncNet : UIWorker.ValidityCheck
         }
         catch (Exception e)
         {
-            Logger.log("Exception in do_async_connect_cb: " + e);
+            Logger.log("Exception in do_async_connect_cb: " + e.ToString());
 
             throw; //todomt
             //Environment.Exit(0);
@@ -77,10 +78,6 @@ public class AsyncNet : UIWorker.ValidityCheck
             // assumes that this is called async
             queue = new NetQueue();
             queue.init();
-        }
-        else
-        {
-            queue = queue;
         }
 
         queue.add(this);
@@ -95,11 +92,32 @@ public class AsyncNet : UIWorker.ValidityCheck
     {
         ManualResetEvent http_response_sync = new ManualResetEvent(false);
         HttpWebResponse resp = null;
+        HttpWebRequest conn = null;
+
+        //bool wait = true;
+        //while (wait)
+        //{
+        //    lock (concurrent_conns_lock)
+        //    {
+        //        if (concurrent_conns <= 6)
+        //        {
+        //            wait = false;
+        //            concurrent_conns++;
+        //        }
+        //    }
+        //    if (wait)
+        //        Thread.Sleep(1000);
+        //}
+
 
         int registeredHandle = 0;
         try
         {
-            conn = HttpWebRequest.Create(url);//todomt (HttpConnection)Connector.open(url);
+            lock_object = new object();
+            conn = (HttpWebRequest)WebRequest.Create(url);//todomt (HttpConnection)Connector.open(url);
+            conn.AllowReadStreamBuffering = false;
+            conn.AllowAutoRedirect = true;
+
             //System.Net.ServicePointManager.Expect100Continue = false;
 
             if (method == 0) conn.Method = "GET";
@@ -116,30 +134,47 @@ public class AsyncNet : UIWorker.ValidityCheck
         {
             quit = true;
             Logger.log(e.ToString());
-            UIWorker.addUIEventLog("Async Net : Exception opening URL " + e);
+            UIWorker.addUIEventLog("Async Net : Exception opening URL " + e.ToString());
         }
 
-        int handle = registeredHandle;
-
-        UIWorker.addUIEventValid(c_do_async_connect_cb, handle, cb_addr, context, 0, false, this);
+        UIWorker.addUIEventValid(c_do_async_connect_cb, registeredHandle, cb_addr, context, 0, false, this);
         if (quit) return;
 
         while (!quit)
         {
-            lock (conn)
+            lock (lock_object)
             {
                 if (!do_read)
                 {
                     try
                     {
-                        Monitor.Wait(conn);
+                        Monitor.Wait(lock_object);
                     }
                     catch (SynchronizationLockException e)
                     {
+                        Logger.log(e.ToString());
                     }
                     if (quit) return;
                     if (!do_read) continue;
                 }
+            }
+
+            Dictionary<string, string> conn_props;
+            if (Syscalls.connection_properties.TryGetValue(registeredHandle, out conn_props))
+            {
+                foreach (string key in conn_props.Keys)
+                {
+                    string value = conn_props[key];
+                    if (key.Equals("Content-type"))
+                    {
+                        conn.ContentType = value;
+                    }
+                    else if (key.Equals("User-Agent"))
+                    {
+                        ((HttpWebRequest)(conn)).UserAgent = value;
+                    }
+                }
+                Syscalls.connection_properties.Remove(registeredHandle);
             }
 
             try
@@ -150,10 +185,10 @@ public class AsyncNet : UIWorker.ValidityCheck
                     Exception exp = null;
                     try
                     {
-                        http_response_sync.Reset();
-
                         if (conn.Method == "POST")
                         {
+                            http_response_sync.Reset();
+
                             byte[] buffer;
                             if (Syscalls.buffered_requests.TryGetValue(registeredHandle, out buffer))
                             {
@@ -183,27 +218,79 @@ public class AsyncNet : UIWorker.ValidityCheck
 
                         http_response_sync.Reset();
 
+                        Logger.log("Start downloading " + method + " " + conn.RequestUri);
                         conn.BeginGetResponse(delegate(IAsyncResult result)
                         {
                             try
                             {
                                 var request = (HttpWebRequest)result.AsyncState;
-                                Logger.log("downloading " + request.RequestUri);
+                                Logger.log("Downloading " + request.RequestUri);
                                 resp = (HttpWebResponse)request.EndGetResponse(result);
+                                Logger.log("Finish getting response " + request.RequestUri);
                                 http_response_sync.Set();
                             }
                             catch (Exception we)
                             {
-                                resp = null;
                                 exp = we;
+                                int status_code = -1;
+                                if (resp != null)
+                                {
+                                    status_code = (int)resp.StatusCode;                                    
+                                }
+
+                                Logger.log("status code " + status_code);
+
+                                if (we is WebException)
+                                {
+                                    WebException wwe = (WebException)we;
+                                    Logger.log("status - " + wwe.Status);
+                                    if (wwe.Response != null)
+                                    {
+                                        Logger.log(" url:" + wwe.Response.ResponseUri);
+                                    }
+                                    
+                                    Logger.log(wwe.ToString());
+
+                                    if (wwe.Data != null)
+                                    {
+                                        Logger.log(wwe.Data.ToString());
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.log(we.ToString());
+                                }
+
+                                if (we.InnerException != null)
+                                {
+                                    Logger.log("Inner exception " + we.InnerException.ToString());
+                                }
+
+                                if (resp != null)
+                                {
+                                    resp.Dispose();
+                                }
+                                resp = null;
                                 http_response_sync.Set();
                             }
                         }, conn);
                     }
                     catch (Exception ioe)
                     {
-                        resp = null;
+                        int status_code = -1;
+                        if (resp != null)
+                        {
+                            resp.Dispose();
+                            status_code = (int)resp.StatusCode;
+                        }
                         exp = ioe;
+                        Logger.log("status code2 " + status_code + " " + ioe.ToString());
+                        if (ioe.InnerException != null)
+                        {
+                            Logger.log("and inner exception " + ioe.InnerException.ToString());
+                        }
+
+                        resp = null;
                         http_response_sync.Set();
                     }
 
@@ -215,6 +302,7 @@ public class AsyncNet : UIWorker.ValidityCheck
                         int status = (int)resp.StatusCode;
                         long data_size = resp.ContentLength;
                         string lastModifiedStr = resp.Headers["Last-Modified"];
+                        Logger.log("Finish getting response stream for " + url);
                         //Logger.log("Java header, s is " + lastModifiedStr);
 
                         /*
@@ -239,6 +327,11 @@ public class AsyncNet : UIWorker.ValidityCheck
                         UIWorker.addUIEventLog("Exception in async net read: " + exp);
                         eof = true;
                         quit = true;
+                        //lock (concurrent_conns_lock)
+                        //{
+                        //    concurrent_conns--;
+                        //}
+
                         ////buffer = new byte[4096];
                         //string res = "HTTP/1.1 404 Not Found\r\n";
                         ///*byte[] res_bytes*/buffer = Syscalls.StringToAscii(res);
@@ -253,11 +346,14 @@ public class AsyncNet : UIWorker.ValidityCheck
                     if (buffer_cur_ptr == buffer_len)
                     {
                         buffer_len = Stream.Read(buffer, 0, buffer.Length);
-                        if (buffer_len == -1)
+                        if (buffer_len == 0)
                         {
                             eof = true;
-                            Stream.Dispose();
-                            resp.Dispose();
+                            Stream.Close();
+                            //lock (concurrent_conns_lock)
+                            //{
+                            //    concurrent_conns--;
+                            //}
                         }
                         buffer_cur_ptr = 0;
                     }
@@ -265,11 +361,11 @@ public class AsyncNet : UIWorker.ValidityCheck
             }
             catch (Exception e)
             {
-                UIWorker.addUIEventLog("Exception in async net read: " + e);
+                UIWorker.addUIEventLog("Exception in async net read: " + e.ToString());
                 eof = true;
                 quit = true;
             }
-            lock (conn)
+            lock (lock_object)
             {
                 do_read = false;
             }
@@ -282,29 +378,30 @@ public class AsyncNet : UIWorker.ValidityCheck
 
     public void startRead(int input_id)
     {
-        if (conn == null)
+        if (lock_object == null)
         {
             UIWorker.addUIEventLog("startRead with no connection!");
+            Logger.log("startRead with no connection!");
             eof = true;
-            Monitor.Pulse(conn);
+            Monitor.Pulse(lock_object);
         }
 
         this.input_id = input_id;
-        lock (conn)
+        lock (lock_object)
         {
             do_read = true;
-            Monitor.Pulse(conn);
+            Monitor.Pulse(lock_object);
         }
     }
 
     public void stopRead()
     {
-        if (conn != null)
+        if (lock_object != null)
         {
-            lock (conn)
+            lock (lock_object)
             {
                 quit = true;
-                Monitor.Pulse(conn);
+                Monitor.Pulse(lock_object);
             }
         }
     }
@@ -312,12 +409,12 @@ public class AsyncNet : UIWorker.ValidityCheck
     public void close()
     {
         is_valid = false;
-        if (conn != null)
+        if (lock_object != null)
         {
-            lock (conn)
+            lock (lock_object)
             {
                 quit = true;
-                Monitor.Pulse(conn);
+                Monitor.Pulse(lock_object);
             }
         }
     }
@@ -331,10 +428,10 @@ public class AsyncNet : UIWorker.ValidityCheck
         CRunTime.memcpy(addr, buffer, buffer_cur_ptr, len);
         buffer_cur_ptr += len;
 
-        lock (conn)
+        lock (lock_object)
         {
             do_read = true;
-            Monitor.Pulse(conn);
+            Monitor.Pulse(lock_object);
         }
 
         return len;
@@ -357,26 +454,27 @@ public class AsyncNet : UIWorker.ValidityCheck
         */
     public static void printUrl(int c_connection)
     {
-        try
-        {
-            HttpWebRequest httpConnection = (HttpWebRequest)CRunTime.getRegisteredObject(c_connection);
-            UIWorker.addUIEventLog("AsyncNet:printUrl : URL is " + httpConnection.RequestUri);
-        }
-        catch (Exception e)
-        {
-            UIWorker.addUIEventLog("Exception in AsyncNet:printUrl");
-        }
+        //try
+        //{
+        //    Logger.log("printUrl was called");
+        //    HttpWebRequest httpConnection = (HttpWebRequest)CRunTime.getRegisteredObject(c_connection);
+        //    UIWorker.addUIEventLog("AsyncNet:printUrl : URL is " + httpConnection.RequestUri);
+        //}
+        //catch (Exception e)
+        //{
+        //    UIWorker.addUIEventLog("Exception in AsyncNet:printUrl " + e.ToString());
+        //}
     }
 }
 
 class Worker
 {
+    private NetQueue netQueue;
     public Worker(NetQueue netqueue)
     {
-        netqueue.SetWorker(this);
+        this.netQueue = netqueue;
     }
 
-    public List<object> queue = new List<object>(50);
     private bool quit = false;
 
     public void run()
@@ -385,23 +483,23 @@ class Worker
 
         while (true)
         {
-            lock (queue)
+            lock (netQueue.queue)
             {
-                while (!quit && (queue.Count == 0))
+                while (!quit && (netQueue.queue.Count == 0))
                 {
                     try
                     {
-                        Monitor.Wait(queue);
+                        Monitor.Wait(netQueue.queue);
                     }
                     catch (SynchronizationLockException e)
                     {
-                        Logger.log("Sync exception " + e);
+                        Logger.log("Sync exception " + e.ToString());
                     }
                 }
                 if (quit) return;
 
-                net = (AsyncNet)queue[0];
-                queue.RemoveAt(0);
+                net = (AsyncNet)netQueue.queue[0];
+                netQueue.queue.RemoveAt(0);
             }
 
             net.runNetLoop();
@@ -411,7 +509,7 @@ class Worker
 
 class NetQueue
 {
-    Worker worker;
+    public List<object> queue = new List<object>(50);
 
     public void init()
     {
@@ -422,17 +520,12 @@ class NetQueue
         }
     }
 
-    public void SetWorker(Worker worker)
-    {
-        this.worker = worker;
-    }
-
     public void add(AsyncNet net)
     {
-        lock(worker.queue)
+        lock(queue)
         {
-            worker.queue.Add(net);
-            Monitor.Pulse(worker.queue);
+            queue.Add(net);
+            Monitor.Pulse(queue);
         }
     }
 }

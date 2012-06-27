@@ -39,7 +39,7 @@ public class Syscalls
     private static Random random;
     private static Dictionary<int, CachedBitmap> bitmapCacheStore = new Dictionary<int, CachedBitmap>();
     private static Dictionary<int, BitmapInfo> bitmaps_info = new Dictionary<int, BitmapInfo>();
-    private static ManualResetEvent mre = new ManualResetEvent(false);
+    //private static ManualResetEvent mre = new ManualResetEvent(false);
 
     #region Non NOPH methods
 
@@ -91,6 +91,24 @@ public class Syscalls
             throw new ArgumentException("invalid raw_file: " + raw_name);
         }
 
+        if (filename.StartsWith("default_day") || filename.StartsWith("default_night"))
+        {
+            file_type = FileType.RESOURCE;
+            filename = "/WazeWP7;component/resources/" + filename;
+        }
+
+        if (file_type == FileType.USER_STORE)
+        {
+            if (filename.StartsWith("/"))
+                filename = filename.Substring(1);
+
+            filename = filename.Replace("/", "\\");
+
+            if (filename.StartsWith("skins\\default\\"))
+                filename = filename.Substring(14);
+        }
+
+        filename = filename.Replace("///", "//");
     }
 
     public static Stream GetFileStream(string filename, FileMode mode)
@@ -99,12 +117,6 @@ public class Syscalls
         FileType file_type;
 
         GetFileTypeAndName(filename, out file_type, out name);
-
-        if (filename.StartsWith("default_day") || filename.StartsWith("default_night"))
-        {
-            file_type = FileType.RESOURCE;
-            name = "/WazeWP7;component/resources/" + filename;
-        }
 
         if (file_type == FileType.RESOURCE)
         {
@@ -115,35 +127,32 @@ public class Syscalls
         }
         else if (file_type == FileType.USER_STORE)
         {
-            if (name.StartsWith("/"))
-                name = name.Substring(1);
-
-            name = name.Replace("/", "\\");
-
             var store = IsolatedStorageFile.GetUserStoreForApplication();
             try
             {
-                if (name.StartsWith("skins\\default\\"))
-                    name = name.Substring(14);
                 if (store.FileExists(name) || mode == FileMode.OpenOrCreate)
                 {
-                    return new IsolatedStorageFileStream(name, mode, FileAccess.ReadWrite, FileShare.Read, store);
+                    var ret = new IsolatedStorageFileStream(name, mode, FileAccess.ReadWrite, FileShare.Read, store);
+                    return ret;
                 }
                 else
                 {
                     return null;
                 }
             }
-            catch (IsolatedStorageException)
+            catch (IsolatedStorageException e)
             {
+                Logger.log("Name: " + name + " Exception: " + e.ToString());
                 return null;
             }
-            catch (FileNotFoundException)
+            catch (FileNotFoundException ee)
             {
+                Logger.log("Name: " + name + " Exception: " + ee.ToString());
                 return null;
             }
-            catch (ArgumentException)
+            catch (ArgumentException eee)
             {
+                Logger.log("Name: " + name + " Exception: " + eee.ToString());
                 return null;
             }
 
@@ -154,16 +163,37 @@ public class Syscalls
 
     public static bool FileExists(string filename)
     {
-        Stream stream = GetFileStream(filename, FileMode.Open);
-        if (stream != null)
+        string name;
+        FileType file_type;
+
+        GetFileTypeAndName(filename, out file_type, out name);
+
+        if (file_type == FileType.RESOURCE)
         {
-            stream.Close();
-            return true;
+            var res = App.GetResourceStream(new Uri(name, UriKind.Relative));
+            if (res == null)
+                return false;
+            else
+                return true;
         }
-        else
+        else if (file_type == FileType.USER_STORE)
         {
-            return false;
+            var store = IsolatedStorageFile.GetUserStoreForApplication();
+            return store.FileExists(name);
         }
+
+        return false;
+
+        //Stream stream = GetFileStream(filename, FileMode.Open);
+        //if (stream != null)
+        //{
+        //    stream.Dispose();
+        //    return true;
+        //}
+        //else
+        //{
+        //    return false;
+        //}
     }
 
     public static byte[] StringToAscii(string s)
@@ -866,10 +896,21 @@ public class Syscalls
 
     public static int NOPH_Bitmap_new(int width, int height)
     {
-        Texture2D newBitmap = new Texture2D(SharedGraphicsDeviceManager.Current.GraphicsDevice, width, height, false, SurfaceFormat.Color);
-        int registeredHandle = CRunTime.registerObject(newBitmap);
-        bitmaps_info.Add(registeredHandle, new BitmapInfo(width, height));
-        return registeredHandle;
+        if (width <= 0 || height <= 0 || width > 1000 || height > 1000)
+            return 0;
+
+        try
+        {
+            Texture2D newBitmap = new Texture2D(SharedGraphicsDeviceManager.Current.GraphicsDevice, width, height, false, SurfaceFormat.Color);
+            int registeredHandle = CRunTime.registerObject(newBitmap);
+            bitmaps_info.Add(registeredHandle, new BitmapInfo(width, height));
+            return registeredHandle;
+        }
+        catch (Exception)
+        {
+            // Avoid OutOfMemory exception
+            return 0;
+        }
     }
 
     #endregion
@@ -883,19 +924,27 @@ public class Syscalls
     public static int NOPH_Calendar_get(int __calendar, int what)
     {
         int ret = -1;
-        DateTime calendar = (DateTime)CRunTime.objectRepository[__calendar];
-        switch (what)
+        try
         {
-            case NOPH_Calendar_HOUR:
-                ret = calendar.Hour;
-                break;
-            case NOPH_Calendar_MINUTE:
-                ret = calendar.Minute;
-                break;
-            case OPH_Calendar_SECOND:
-                ret = calendar.Second;
-                break;
+            DateTime calendar = (DateTime)CRunTime.objectRepository[__calendar];
+            switch (what)
+            {
+                case NOPH_Calendar_HOUR:
+                    ret = calendar.Hour;
+                    break;
+                case NOPH_Calendar_MINUTE:
+                    ret = calendar.Minute;
+                    break;
+                case OPH_Calendar_SECOND:
+                    ret = calendar.Second;
+                    break;
+            }
         }
+        catch (Exception e)
+        {
+            Logger.log(e.ToString());
+        }
+
         return ret;
     }
 
@@ -934,7 +983,10 @@ public class Syscalls
 
     public static void NOPH_TimerTask_cancel(int __timerTask)
     {
-        Timer timerTask = (Timer)CRunTime.objectRepository[__timerTask];
+        Timer timerTask = CRunTime.objectRepository[__timerTask] as Timer;
+        if (timerTask == null)
+            return;
+
         timerTask.Change(Timeout.Infinite, Timeout.Infinite);
         timerTask.Dispose();
     }
@@ -953,23 +1005,34 @@ public class Syscalls
 
     public static int NOPH_Class_getResourceAsStream(int __obj, int __name)
     {
-        Type obj = (Type)CRunTime.objectRepository[__obj];
-        String name = CRunTime.charPtrToString(__name);
+        int registeredHandle = -1;
 
-        Stream ret = GetFileStream(name, FileMode.Open);
-        if (ret == null)
+        try
         {
-            ret = GetFileStream("userstore://" + name, FileMode.Open);
+            Type obj = (Type)CRunTime.objectRepository[__obj];
+            String name = CRunTime.charPtrToString(__name);
+
+            Stream ret = GetFileStream(name, FileMode.Open);
             if (ret == null)
             {
-                return 0;
+                ret = GetFileStream("userstore://" + name, FileMode.Open);
+                if (ret == null)
+                {
+                    return 0;
+                }
             }
+
+            registeredHandle = CRunTime.registerObject(ret);
+        }
+        catch (Exception e)
+        {
+            Logger.log(e.ToString());
         }
 
-        int registeredHandle = CRunTime.registerObject(ret);
         return registeredHandle;
     }
 
+    private static ManualResetEvent dialogEvent = new ManualResetEvent(false);
     public static void NOPH_ConfirmDialog_CreateDialog(int __title, int __text, int defaultYes, int __textYes, int __textNo, int seconds, int yesCallback, int noCallback, int context)
     {
         String title = CRunTime.charPtrToString(__title);
@@ -977,7 +1040,7 @@ public class Syscalls
         String textYes = CRunTime.charPtrToString(__textYes);
         String textNo = CRunTime.charPtrToString(__textNo);
 
-        mre.Reset();
+        dialogEvent.Reset();
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
@@ -991,9 +1054,9 @@ public class Syscalls
                 {
                     UIWorker.addUIEvent(noCallback, context, 0, 0, 0, true);
                 }
-                mre.Set();
+                dialogEvent.Set();
             });
-        mre.WaitOne();
+        dialogEvent.WaitOne();
     }
 
     public static int NOPH_Exception_new()
@@ -1019,9 +1082,18 @@ public class Syscalls
 
     public static int NOPH_Object_getClass(int __obj)
     {
-        Object obj = (Object)CRunTime.objectRepository[__obj];
-        Type ret = (Type)obj.GetType();
-        int registeredHandle = CRunTime.registerObject(ret);
+        int registeredHandle = -1;
+        try
+        {
+            Object obj = (Object)CRunTime.objectRepository[__obj];
+            Type ret = (Type)obj.GetType();
+            registeredHandle = CRunTime.registerObject(ret);
+        }
+        catch (Exception e)
+        {
+            Logger.log(e.ToString());
+        }
+
         return registeredHandle;
     }
 
@@ -1117,16 +1189,25 @@ public class Syscalls
 
     public static void NOPH_FileConnection_close(int __fc)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
-        fc.stream.Close();
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc != null)
+        {
+            fc.stream.Dispose();
+        }
     }
 
     public static void NOPH_FileConnection_create(int __fc)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
-        Stream stream = GetFileStream(fc.filename, FileMode.OpenOrCreate);
-        fc.stream = stream;
-        stream.Close();
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc != null && !string.IsNullOrEmpty(fc.filename))
+        {
+            Stream stream = GetFileStream(fc.filename, FileMode.OpenOrCreate);
+            if (stream != null)
+            {
+                fc.stream = stream;
+                stream.Dispose();
+            }
+        }
     }
 
     public static void NOPH_FileConnection_delete(int __fc)
@@ -1136,12 +1217,17 @@ public class Syscalls
 
     public static int NOPH_FileConnection_exists(int __fc)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
-        Stream stream = GetFileStream(fc.filename, FileMode.Open);
-        int exist = (stream != null) ? 1 : 0;
-        if (stream != null)
+        int exist = 0;
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc != null && !string.IsNullOrEmpty(fc.filename))
         {
-            stream.Close();
+            return FileExists(fc.filename) ? 1 : 0;
+            //Stream stream = GetFileStream(fc.filename, FileMode.Open);
+            //exist = (stream != null) ? 1 : 0;
+            //if (stream != null)
+            //{
+            //    stream.Dispose();
+            //}
         }
         return exist;
     }
@@ -1150,7 +1236,10 @@ public class Syscalls
     {
         string name;
         FileType file_type;
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc == null)
+            return 0;
+
         GetFileTypeAndName(fc.filename, out file_type, out name);
 
         if (file_type == FileType.USER_STORE)
@@ -1166,7 +1255,10 @@ public class Syscalls
 
     public static int NOPH_FileConnection_openDataInputStream(int __fc)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc == null)
+            return 0;
+
         Stream stream = GetFileStream(fc.filename, FileMode.Open);
         if (stream == null)
             return 0;
@@ -1179,7 +1271,10 @@ public class Syscalls
 
     public static int NOPH_FileConnection_openInputStream(int __fc)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc == null)
+            return 0;
+
         if (File.Exists(fc.filename))
         {
             FileStream ret = new FileStream(fc.filename, FileMode.Open, FileAccess.Read);
@@ -1195,7 +1290,10 @@ public class Syscalls
 
     public static int NOPH_FileConnection_openOutputStream(int __fc, int offset)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
+        FileConnection fc = CRunTime.objectRepository[__fc] as FileConnection;
+        if (fc == null)
+            return -1;
+
         Stream ret = GetFileStream(fc.filename, FileMode.OpenOrCreate);
         fc.stream = ret;
         int registeredHandle = CRunTime.registerObject(ret);
@@ -1204,11 +1302,25 @@ public class Syscalls
 
     public static void NOPH_FileConnection_truncate(int __fc, int byteOffest)
     {
-        FileConnection fc = (FileConnection)CRunTime.objectRepository[__fc];
+        FileConnection fc = CRunTime.objectRepository[__fc] as  FileConnection;
+        if (fc == null)
+            return;
+
         if (fc.filename.ToLower().StartsWith("userstore://"))
         {
-            var store = IsolatedStorageFile.GetUserStoreForApplication();
-            store.DeleteFile(fc.filename.Substring(12));
+            string filename = "";
+            try
+            {
+                var store = IsolatedStorageFile.GetUserStoreForApplication();
+                filename = fc.filename.Substring(12);
+                if (filename.StartsWith("/"))
+                    filename = filename.Substring(1);
+                store.DeleteFile(filename);
+            }
+            catch (Exception e)
+            {
+                Logger.log("Error deleting " + filename + " " + e.ToString());
+            }
         }
         else
         {
@@ -1646,7 +1758,10 @@ public class Syscalls
 
     public static void NOPH_GpsManager_start(int __gm, int interval, int timeout, int maxage)
     {
-        GpsManager gm = (GpsManager)CRunTime.objectRepository[__gm];
+        GpsManager gm = CRunTime.objectRepository[__gm] as GpsManager;
+        if (gm == null)
+            return;
+
         gm.start(interval, timeout, maxage);
     }
 
@@ -2138,7 +2253,7 @@ public class Syscalls
 
     public static int NOPH_HttpConnection_getLength(int __hc)
     {
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        //HttpWebRequest hc = CRunTime.objectRepository[__hc] as HttpWebRequest;
         //todomt2 HttpWebResponse resp = (HttpWebResponse)hc.GetResponse();
         int ret = 5;//todomt2 (int)resp.ContentLength;
         return ret;
@@ -2146,7 +2261,7 @@ public class Syscalls
 
     public static int NOPH_HttpConnection_getResponseCode(int __hc)
     {
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        //HttpWebRequest hc = CRunTime.objectRepository[__hc] as HttpWebRequest;
         //todomt2 HttpWebResponse resp = (HttpWebResponse)hc.GetResponse();
         int ret = 200;//todomt2 (int)resp.StatusCode;
         return ret;
@@ -2154,7 +2269,7 @@ public class Syscalls
 
     public static int NOPH_HttpConnection_openInputStream(int __hc)
     {
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        //HttpWebRequest hc = CRunTime.objectRepository[__hc] as HttpWebRequest;
         //todomt2Stream ret = (Stream)hc.GetResponse().GetResponseStream();
         object ret = new object();
         int registeredHandle = CRunTime.registerObject(ret);
@@ -2170,7 +2285,10 @@ public class Syscalls
         //int http_request_register_handle = -1;
         //ManualResetEvent http_request_sync = new ManualResetEvent(false);
 
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        HttpWebRequest hc = CRunTime.objectRepository[__hc] as HttpWebRequest;
+        if (hc == null)
+            return 0;
+
         if (hc.Method == "POST")
         {
             return __hc;
@@ -2200,15 +2318,32 @@ public class Syscalls
 
     //public static Dictionary<int, int> requests_content_length = new Dictionary<int, int>();
 
+    public static Dictionary<int, Dictionary<string, string>> connection_properties = new Dictionary<int, Dictionary<string, string>>();
+
     public static void NOPH_HttpConnection_setRequestProperty(int __hc, int __key, int __value)
     {
-        HttpWebRequest hc = (HttpWebRequest)CRunTime.objectRepository[__hc];
+        HttpWebRequest hc = CRunTime.objectRepository[__hc] as HttpWebRequest;
+        if (hc == null)
+            return;
+
         String key = CRunTime.charPtrToString(__key);
         String value = CRunTime.charPtrToString(__value);
-        if (key.Equals("Content-type"))
+
+
+        Dictionary<string, string> keyVal;
+        if (!connection_properties.TryGetValue(__hc, out keyVal))
         {
-            hc.ContentType = value;
+            keyVal = new Dictionary<string, string>();
+            connection_properties.Add(__hc, keyVal);
         }
+        keyVal.Add(key, value);
+
+        //if (key.Equals("Content-type"))
+        //{
+        //    hc.ContentType = value;
+        //}
+
+
         //else if (key.Equals("Content-Length"))
         //{
         //    int dummy;
@@ -2217,38 +2352,45 @@ public class Syscalls
         //    requests_content_length.Add(__hc, int.Parse(value));
         //    //todomt2 hc.ContentLength = int.Parse(value);
         //}
-        else if (key.Equals("User-Agent"))
-        {
-            hc.UserAgent = value;
-        }
+
+        //else if (key.Equals("User-Agent"))
+        //{
+        //    hc.UserAgent = value;
+        //}
 
         //hc. .setRequestProperty(key, value);
     }
 
     #endregion
 
-    #region InputStream/PutputStream methods
+    #region InputStream/OutputStream methods
 
     public static int NOPH_InputStream_available(int __is)
     {
-        Stream iis = (Stream)CRunTime.objectRepository[__is];
+        Stream iis = CRunTime.objectRepository[__is] as Stream;
+        if (iis == null)
+            return -1;
+
         int ret = (int)iis.Length;//todomt .available();
         return ret;
     }
 
     public static void NOPH_InputStream_close(int __is)
     {
-        Stream iis = (Stream)CRunTime.objectRepository[__is];
+        Stream iis = CRunTime.objectRepository[__is] as Stream;
         if (iis != null)
         {
-            iis.Close();
+            iis.Dispose();
         }
     }
 
     /* From the optimized fread by Ehud Shabtai */
     public static int NOPH_InputStream_read_into(int obj, int ptr, int size, int eof_addr)
     {
-        Stream iis = (Stream)CRunTime.objectRepository[obj];
+        Stream iis = CRunTime.objectRepository[obj] as Stream;
+        if (iis == null)
+            return -1;
+
         int count = 0;
 
         byte[] buff = new byte[size];
@@ -2294,15 +2436,18 @@ end:
 
             if (os is FileStream)
             {
-                os.Close();
+                os.Dispose();
             }
         }
     }
 
     public static void NOPH_OutputStream_flush(int __os)
     {
-        TextWriter os = (TextWriter)CRunTime.objectRepository[__os];
-        os.Flush();
+        TextWriter os = CRunTime.objectRepository[__os] as TextWriter;
+        if (os != null)
+        {
+            os.Flush();
+        }
     }
 
     public static Dictionary<int, byte[]> buffered_requests = new Dictionary<int, byte[]>();
@@ -2424,23 +2569,25 @@ end:
     public static ProgressDialog progressDialog = new ProgressDialog();
     public static RTLMessageBox rtlDialog = new RTLMessageBox();
 
+    private static ManualResetEvent progressHideEvent = new ManualResetEvent(false);
     public static void NOPH_ProgressMessageDialog_hideDialog()
     {
-        mre.Reset();
+        progressHideEvent.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             progressDialog.Hide();
-            mre.Set();
+            progressHideEvent.Set();
             
         });
-        mre.WaitOne();
+        progressHideEvent.WaitOne();
     }
 
+    private static ManualResetEvent progressShowEvent = new ManualResetEvent(false);
     public static void NOPH_ProgressMessageDialog_showDialog(int __text)
     {
-        String text = CRunTime.charPtrToString(__text); 
+        String text = CRunTime.charPtrToString(__text);
 
-        mre.Reset();
+        progressShowEvent.Reset();
 
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
@@ -2448,10 +2595,10 @@ end:
             String label = CRunTime.charPtrToString(__text);
 
             progressDialog.Show(label);
-            mre.Set();
+            progressShowEvent.Set();
         });
 
-        mre.WaitOne();
+        progressShowEvent.WaitOne();
 
         //Logger.log("\nshowdialog: {0}\n", text);
     }
@@ -2473,8 +2620,11 @@ end:
 
     public static void NOPH_RecordStore_closeRecordStore(int __rs)
     {
-        RecordStore rs = (RecordStore)CRunTime.objectRepository[__rs];
-        rs.closeRecordStore();
+        RecordStore rs = CRunTime.objectRepository[__rs] as RecordStore;
+        if (rs != null)
+        {
+            rs.closeRecordStore();
+        }
     }
     
     public static int NOPH_RecordStore_getRecord(int _rs, int recordId, int _buffer, int offset)
@@ -2491,7 +2641,10 @@ end:
 
     public static int NOPH_RecordStore_getRecordSize(int __rs, int recordId)
     {
-        RecordStore rs = (RecordStore)CRunTime.objectRepository[__rs];
+        RecordStore rs = CRunTime.objectRepository[__rs] as RecordStore;
+        if (rs == null)
+            return 0;
+
         int ret = (int)rs.getRecordSize(recordId);
         return ret;
     }
@@ -2560,7 +2713,10 @@ end:
 
     public static int NOPH_SoundMgr_listAdd(int __sm, int list, int __name)
     {
-        SoundMgr sm = (SoundMgr)CRunTime.objectRepository[__sm];
+        SoundMgr sm = CRunTime.objectRepository[__sm] as SoundMgr;
+        if (sm == null)
+            return 0;
+
         String name = CRunTime.charPtrToString(__name);
         int ret = sm.listAdd(list, name);
         return ret;
@@ -2568,14 +2724,19 @@ end:
 
     public static int NOPH_SoundMgr_listCreate(int __sm, int flags)
     {
-        SoundMgr sm = (SoundMgr)CRunTime.objectRepository[__sm];
+        SoundMgr sm = CRunTime.objectRepository[__sm] as SoundMgr;
+        if (sm == null)
+            return 0;
         int ret = (int)sm.listCreate(flags);
         return ret;
     }
 
     public static void NOPH_SoundMgr_playList(int __sm, int list, int __path)
     {
-        SoundMgr sm = (SoundMgr)CRunTime.objectRepository[__sm];
+        SoundMgr sm = CRunTime.objectRepository[__sm] as SoundMgr;
+        if (sm == null)
+            return;
+
         String path = CRunTime.charPtrToString(__path);
         sm.playList(list, path);
     }
@@ -2620,7 +2781,10 @@ end:
 
     public static int NOPH_TileStorage_findTile(int __ts, int fips, int tile_index, int size)
     {
-        TileStorage ts = (TileStorage)CRunTime.objectRepository[__ts];
+        TileStorage ts = CRunTime.objectRepository[__ts] as TileStorage;
+        if (ts == null)
+            return -1;
+
         int ret = (int)ts.findTile(fips, tile_index, size);
         return ret;
     }
@@ -2637,15 +2801,22 @@ end:
 
     public static int NOPH_TileStorage_loadTile(int __ts, int fips, int tile_index, int store_id, int data)
     {
-        TileStorage ts = (TileStorage)CRunTime.objectRepository[__ts];
-        int ret = (int)ts.loadTile(fips, tile_index, store_id, data);
-        return ret;
+        TileStorage ts = CRunTime.objectRepository[__ts] as TileStorage;
+        if (ts != null)
+        {
+            int ret = (int)ts.loadTile(fips, tile_index, store_id, data);
+            return ret;
+        }
+        else
+        {
+            return -1;
+        }
     }
 
     public static int ts_id;
     public static int NOPH_TileStorage_new()
     {
-        TileStorage ret = (TileStorage)new TileStorage();
+        TileStorage ret = new TileStorage();
         int registeredHandle = CRunTime.registerObject(ret);
         ts_id = registeredHandle;
         return registeredHandle;
@@ -2653,14 +2824,24 @@ end:
 
     public static int NOPH_TileStorage_shutdown(int __ts)
     {
-        TileStorage ts = (TileStorage)CRunTime.objectRepository[__ts];
-        int ret = (int)ts.shutdown();
-        return ret;
+        TileStorage ts = CRunTime.objectRepository[__ts] as TileStorage;
+        if (ts != null)
+        {
+            int ret = (int)ts.shutdown();
+            return ret;
+        }
+        else
+        {
+            return -1;
+        }
     }
 
     public static int NOPH_TileStorage_storeTile(int __ts, int fips, int tile_index, int data, int size)
     {
-        TileStorage ts = (TileStorage)CRunTime.objectRepository[__ts];
+        TileStorage ts = CRunTime.objectRepository[__ts] as TileStorage;
+        if (ts == null)
+            return -1;
+
         int ret = (int)ts.storeTile(fips, tile_index, data, size);
         return ret;
     }
@@ -2835,7 +3016,7 @@ end:
         {
             if (fs != null)
             {
-                fs.Close();
+                fs.Dispose();
             }
         }
     }
@@ -3147,12 +3328,13 @@ end:
     {
         return 1;
     }
-    
+
+    private static ManualResetEvent EditboxEvent = new ManualResetEvent(false);
     public static void NOPH_EditBoxScreenOS5_showEditBox(int i_label, int i_in_text, int in_callback, int in_data, int style)
     {
         InputDialog dialog = null;
 
-        mre.Reset();
+        EditboxEvent.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             
@@ -3161,16 +3343,16 @@ end:
 
             dialog = new InputDialog(label, in_text);
             dialog.Show();
-            
 
-            mre.Set();
+
+            EditboxEvent.Set();
         });
 
-        mre.WaitOne();
+        EditboxEvent.WaitOne();
 
         dialog.dialogShowing.WaitOne();
 
-        mre.Reset();
+        EditboxEvent.Reset();
         System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
             dialog.Hide();
@@ -3181,9 +3363,9 @@ end:
             if (c_editbox_callback != 0)
                 UIWorker.addUIEvent(c_editbox_callback, in_callback, in_data, confirm ? 1 : 0, 0, true);
 
-            mre.Set();
+            EditboxEvent.Set();
         });
-        mre.WaitOne();
+        EditboxEvent.WaitOne();
 
     }
 
@@ -3783,4 +3965,3 @@ end:
     #endregion
 
 }
-

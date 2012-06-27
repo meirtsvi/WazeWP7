@@ -55,8 +55,9 @@ namespace WazeWP7
                 NavigationService.GoBack();
                 this.pageContext.OnSkipSignup();
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException ee)
             {
+                Logger.log(ee.ToString());
                 // can happen if navigation is already in progress. In this case ignore
             }
         }

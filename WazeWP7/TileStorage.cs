@@ -295,7 +295,7 @@ public class TileStorage
             listSetFirst(store_id);
             return 0;
         }
-        catch (RecordStoreException e)
+        catch (Exception e)
         {
             Logger.log("Error reading tile - " + e.ToString() + ". Initialize.");
             eraseStorage();

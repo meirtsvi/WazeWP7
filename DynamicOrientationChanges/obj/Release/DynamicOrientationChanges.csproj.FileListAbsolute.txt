@@ -3,3 +3,8 @@ D:\Git\Repository\DynamicOrientationChanges\Bin\Release\DynamicOrientationChange
 D:\Git\Repository\DynamicOrientationChanges\obj\Release\ResolveAssemblyReference.cache
 D:\Git\Repository\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.dll
 D:\Git\Repository\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.pdb
+C:\Users\meir\WazeWP7\DynamicOrientationChanges\Bin\Release\DynamicOrientationChanges.dll
+C:\Users\meir\WazeWP7\DynamicOrientationChanges\Bin\Release\DynamicOrientationChanges.pdb
+C:\Users\meir\WazeWP7\DynamicOrientationChanges\obj\Release\ResolveAssemblyReference.cache
+C:\Users\meir\WazeWP7\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.dll
+C:\Users\meir\WazeWP7\DynamicOrientationChanges\obj\Release\DynamicOrientationChanges.pdb

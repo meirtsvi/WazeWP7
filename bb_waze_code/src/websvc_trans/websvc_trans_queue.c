@@ -94,7 +94,7 @@ BOOL wstq_dequeue( wst_queue_ptr this, wstq_item_ptr item)
 
    if( !this->size)
    {
-      roadmap_log( ROADMAP_DEBUG, "wstq_enqueue() - queue is empty");
+      roadmap_log( ROADMAP_DEBUG, "wstq_dequeue() - queue is empty");
       return FALSE;
    }
    

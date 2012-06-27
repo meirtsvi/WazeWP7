@@ -120,7 +120,7 @@ FREEMAP LOG: TRANSLATION: SWCH:החלף
 FREEMAP LOG: TRANSLATION: Segment Properties:פרטים
 FREEMAP LOG: TRANSLATION: House number:מספר בית
 FREEMAP LOG: TRANSLATION: History:היסטוריה
-FREEMAP LOG: TRANSLATION: New address:כתובת חדשה
+FREEMAP LOG: TRANSLATION: New address:כתובת
 FREEMAP LOG: TRANSLATION: Quit:יציאה
 FREEMAP LOG: TRANSLATION: GPS Position:הצג מיקום GPS
 FREEMAP LOG: TRANSLATION: Destination:הצג יעד
@@ -1223,7 +1223,7 @@ FREEMAP LOG: TRANSLATION: SWCH:החלף
 FREEMAP LOG: TRANSLATION: Segment Properties:פרטים
 FREEMAP LOG: TRANSLATION: House number:מספר בית
 FREEMAP LOG: TRANSLATION: History:היסטוריה
-FREEMAP LOG: TRANSLATION: New address:כתובת חדשה
+FREEMAP LOG: TRANSLATION: New address:כתובת
 FREEMAP LOG: TRANSLATION: Quit:יציאה
 FREEMAP LOG: TRANSLATION: GPS Position:הצג מיקום GPS
 FREEMAP LOG: TRANSLATION: Destination:הצג יעד

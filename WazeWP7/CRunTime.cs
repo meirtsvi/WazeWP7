@@ -142,9 +142,9 @@ using System.Collections.Generic;
                     lout = lout + 1024;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             { // Should get an OutOfMemoryError but we prefer to catch everything.
-                v = null;
+                Logger.log(e.ToString());
                 //lout = Runtime.getRuntime().totalMemory();
                 //System.gc();
             }
@@ -297,8 +297,9 @@ using System.Collections.Generic;
 
                 return str;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.log(e.ToString());
                 return "UnSupportedEncodingException happened";
             }
         }
@@ -404,8 +405,9 @@ using System.Collections.Generic;
 
                 return lout;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.log(e.ToString());
                 // sometimes IndexOutOfRange is thrown - not sure why
                 return 0;
             }

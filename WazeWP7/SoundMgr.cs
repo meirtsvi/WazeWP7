@@ -81,7 +81,7 @@ namespace WazeWP7
                 if (current_list.streams[i] != null)
                 {
                     try { current_list.streams[i].Close(); }
-                    catch (Exception) { }
+                    catch (Exception e) { Logger.log("Exception: " + e.ToString());  }
                     current_list.streams[i] = null;
                 }
             }
@@ -212,7 +212,7 @@ namespace WazeWP7
                         }
                         catch (Exception e)
                         {
-                            Logger.log("Exception: " + e);
+                            Logger.log("Exception: " + e.ToString());
                         }
 
                     });
@@ -222,7 +222,7 @@ namespace WazeWP7
             }
             catch (Exception e)
             {
-                Logger.log("Exception: " + e);
+                Logger.log("Exception: " + e.ToString());
                 closeCurrentList();
                 playNextList();
                 return;
@@ -285,7 +285,7 @@ namespace WazeWP7
                 }
                 catch (Exception e)
                 {
-                    Logger.log("Error creating sound stream:" + current_list.list[i] + "excp :  " + e);
+                    Logger.log("Error creating sound stream:" + current_list.list[i] + "excp :  " + e.ToString());
                     UIWorker.addUIEventLog("Error creating sound stream:" + current_list.list[i] + "excp :  " + e);
                 }
             }
@@ -414,6 +414,7 @@ namespace WazeWP7
             catch (Exception e)
             {
                 UIWorker.addUIEventLog("Error in SoundMgr setVolume" + e);
+                Logger.log("Exception: " + e.ToString());
             }
         }
 

@@ -2137,7 +2137,8 @@ void navigate_main_login_cb(void){
       navigate_resume_navigation (dec_abort, NULL);
 
    // todomt - as soon as i have decent dialog remove the if (1)
-   if (1 || NavigateResumeNoConfirmation)
+   //if (1 || NavigateResumeNoConfirmation)
+   if (NavigateResumeNoConfirmation)
       navigate_resume_navigation(dec_yes, NULL);
    else
       ssd_confirm_dialog_timeout("Resume navigation",roadmap_lang_get("Navigation was discontinued before reaching destination. Would you like to resume last route?"),TRUE, navigate_resume_navigation, NULL, 5);

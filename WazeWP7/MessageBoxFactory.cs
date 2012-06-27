@@ -32,7 +32,7 @@ class MessageBoxFactory {
                                            int callback,  int numberOfSeconds,  int isModal)
     {
         // if numberOfSeconds is non zero we should auto close, but MessageBox is always Modal and does not support closing from code.
-        // we will need to implement a non model message box calss for this scenario.
+        // we will need to implement a non modal message box calss for this scenario.
 
                 MessageBoxResult res = MessageBoxResult.None;
 
