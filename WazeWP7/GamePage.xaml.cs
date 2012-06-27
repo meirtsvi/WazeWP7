@@ -709,7 +709,7 @@ namespace WazeWP7
             {
                 System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("Save logs");
+                    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(LanguageResources.Instance.Translate("Save logs"));
                     appBarMenuItem.Click += (delegate
                     {
                         EmailLogFile(null, null);
