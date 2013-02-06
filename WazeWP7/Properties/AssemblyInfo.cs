@@ -7,11 +7,11 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Waze")]
-[assembly: AssemblyDescription("Waze for Windows Phone 7.5")]
+[assembly: AssemblyDescription("Waze for Windows Phone 8")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Meir Tsvi")]
-[assembly: AssemblyProduct("Waze for WP7.5")]
-[assembly: AssemblyCopyright("Copyright © Meir Tsvi 2011-2012")]
+[assembly: AssemblyProduct("Waze for WP8")]
+[assembly: AssemblyCopyright("Copyright © Meir Tsvi 2011-2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,6 +32,6 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.9.9.61")]
-[assembly: AssemblyFileVersion("0.9.9.61")]
+[assembly: AssemblyVersion("0.9.9.7")]
+[assembly: AssemblyFileVersion("0.9.9.7")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]

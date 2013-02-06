@@ -24,28 +24,32 @@ public class AsyncNet : UIWorker.ValidityCheck
     //private static int concurrent_conns = 0;
     //private static object concurrent_conns_lock = new object();
 
-    private static int c_do_async_connect_cb;
-    private static int c_input_ready_cb;
+    private volatile static int c_do_async_connect_cb;
+    private volatile static int c_input_ready_cb;
 
-    private string url;
-    private string updateTime;
-    private int method;
-    private Stream Stream;
-    private int cb_addr;
-    private int context;
-    private object lock_object;
+    private volatile string url;
+    private volatile string updateTime;
+    private volatile int method;
+    private volatile Stream Stream;
+    private volatile int cb_addr;
+    private volatile int context;
+    private volatile object lock_object;
 
-    private int input_id = -1;
-    private byte[] buffer;
-    private int buffer_cur_ptr;
-    private int buffer_len;
+    private volatile int input_id = -1;
+    private volatile byte[] buffer;
+    private volatile int buffer_cur_ptr;
+    private volatile int buffer_len;
 
-    private bool quit = false;
-    private bool eof = false;
-    private bool do_read = false;
-    private bool is_valid = true;
+    private volatile bool quit = false;
+    private volatile bool eof = false;
+    private volatile bool do_read = false;
+    private volatile bool is_valid = true;
 
-    private static NetQueue queue = null;
+    private volatile static NetQueue queue = null;
+    private volatile ManualResetEvent http_response_sync = new ManualResetEvent(false);
+    private volatile HttpWebResponse resp = null;
+    private volatile HttpWebRequest conn = null;
+
 
     public AsyncNet(string url, int method, string updateTime,
        int cb_addr, int context)
@@ -90,9 +94,9 @@ public class AsyncNet : UIWorker.ValidityCheck
 
     public void runNetLoop()
     {
-        ManualResetEvent http_response_sync = new ManualResetEvent(false);
-        HttpWebResponse resp = null;
-        HttpWebRequest conn = null;
+        http_response_sync = new ManualResetEvent(false);
+        resp = null;
+        conn = null;
 
         //bool wait = true;
         //while (wait)

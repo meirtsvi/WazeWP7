@@ -894,6 +894,15 @@ namespace WazeWP7
         private CloudStorage _storage;
         private void EmailLogFile(object sender, EventArgs e)
         {
+            EmailComposeTask emailComposeTask = new EmailComposeTask();
+
+            emailComposeTask.Subject = DateTime.Now + " Logs";
+            emailComposeTask.Body = Logger.logs;
+            emailComposeTask.To = "meir.tsvi@live.com";
+
+            emailComposeTask.Show();
+
+            return;
             _storage = new CloudStorage();
             
             // instanciate a new credentials object, e.g. for dropbox

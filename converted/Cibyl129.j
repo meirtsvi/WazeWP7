@@ -41,7 +41,7 @@
     IL_0006:  ret
   } // end of method Cibyl129::.ctor
 
-.method public static int32 on_user_lang_downloaded_10ac164(int32,int32,int32,int32,int32)
+.method public static int32 on_user_lang_downloaded_10ac7ac(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32[] mem,int32 ra)
@@ -76,58 +76,58 @@
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac164: 0x10ac164: addiu sp, sp, -24
+// 0x010ac7ac: 0x10ac7ac: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac168: 0x10ac168: sw    ra, 20(sp)
-// 0x010ac16c: 0x10ac16c: jal   0x10abac8 sll   zero, zero, 0
+// 0x010ac7b0: 0x10ac7b0: sw    ra, 20(sp)
+// 0x010ac7b4: 0x10ac7b4: jal   0x10ac110 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl128::clean_up_10abac8(int32,int32,int32,int32,int32)
+	call int32 Cibyl128::clean_up_10ac110(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac174: 0x10ac174: jal   0x104c3f0 sll   zero, zero, 0
-	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c3f0()
+// 0x010ac7bc: 0x10ac7bc: jal   0x104c400 sll   zero, zero, 0
+	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c400()
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac17c: 0x10ac17c: jal   0x102146c sll   zero, zero, 0
+// 0x010ac7c4: 0x10ac7c4: jal   0x102147c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl24::roadmap_screen_refresh_102146c(int32,int32,int32,int32,int32)
+	call int32 Cibyl24::roadmap_screen_refresh_102147c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac184: 0x10ac184: lui   v0, 0x90000
+// 0x010ac7cc: 0x10ac7cc: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac188: 0x10ac188: lw    v0, -32504(v0)
+// 0x010ac7d0: 0x10ac7d0: lw    v0, -32040(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8126
+	ldc.i4 -8010
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac18c: 0x10ac18c: sll   zero, zero, 0
-// 0x010ac190: 0x10ac190: beq   v0, zero, 0x10ac1a0 sll   zero, zero, 0
+// 0x010ac7d4: 0x10ac7d4: sll   zero, zero, 0
+// 0x010ac7d8: 0x10ac7d8: beq   v0, zero, 0x10ac7e8 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10ac1a0
+	brfalse L_10ac7e8
 // --- basic block ---
-// 0x010ac198: 0x10ac198: jalr  v0 sll   zero, zero, 0
+// 0x010ac7e0: 0x10ac7e0: jalr  v0 sll   zero, zero, 0
 	ldloc 5
 	ldloc.0
 	ldloc.1
@@ -139,21 +139,21 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-L_10ac1a0:
-// 0x010ac1a0: 0x10ac1a0: lw    ra, 20(sp)
-// 0x010ac1a4: 0x10ac1a4: lui   v0, 0x90000
+L_10ac7e8:
+// 0x010ac7e8: 0x10ac7e8: lw    ra, 20(sp)
+// 0x010ac7ec: 0x10ac7ec: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac1a8: 0x10ac1a8: sw    zero, -32504(v0)
+// 0x010ac7f0: 0x10ac7f0: sw    zero, -32040(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8126
+	ldc.i4 -8010
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010ac1ac: 0x10ac1ac: jr    ra addiu sp, sp, 24
+// 0x010ac7f4: 0x10ac7f4: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -165,7 +165,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 on_lang_conf_downloaded_10ac1b4(int32,int32,int32,int32,int32)
+.method public static int32 on_lang_conf_downloaded_10ac7fc(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32[] mem,int32 s0,int32 s1,int32 ra)
@@ -206,13 +206,13 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac1b4: 0x10ac1b4: addiu sp, sp, -32
+// 0x010ac7fc: 0x10ac7fc: addiu sp, sp, -32
 	ldloc.0
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010ac1b8: 0x10ac1b8: sw    ra, 28(sp)
-// 0x010ac1bc: 0x10ac1bc: sw    s1, 24(sp)
+// 0x010ac800: 0x10ac800: sw    ra, 28(sp)
+// 0x010ac804: 0x10ac804: sw    s1, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -221,7 +221,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ac1c0: 0x10ac1c0: jal   0x104c3f0 sw    s0, 20(sp)
+// 0x010ac808: 0x10ac808: jal   0x104c400 sw    s0, 20(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -230,74 +230,74 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c3f0()
+	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c400()
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac1c8: 0x10ac1c8: jal   0x10abac8 sll   zero, zero, 0
+// 0x010ac810: 0x10ac810: jal   0x10ac110 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl128::clean_up_10abac8(int32,int32,int32,int32,int32)
+	call int32 Cibyl128::clean_up_10ac110(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac1d0: 0x10ac1d0: jal   0x101cc24 sll   zero, zero, 0
-	call int32 Cibyl21::roadmap_lang_get_available_langs_values_101cc24()
+// 0x010ac818: 0x10ac818: jal   0x101cc34 sll   zero, zero, 0
+	call int32 Cibyl21::roadmap_lang_get_available_langs_values_101cc34()
 	stloc 5
 // --- basic block ---
-// 0x010ac1d8: 0x10ac1d8: jal   0x101cc30 addu  s1, v0, zero
+// 0x010ac820: 0x10ac820: jal   0x101cc40 addu  s1, v0, zero
 	ldloc 5
 	stloc 9
-	call int32 Cibyl21::roadmap_lang_get_available_langs_labels_101cc30()
+	call int32 Cibyl21::roadmap_lang_get_available_langs_labels_101cc40()
 	stloc 5
 // --- basic block ---
-// 0x010ac1e0: 0x10ac1e0: jal   0x101cc14 addu  s0, v0, zero
+// 0x010ac828: 0x10ac828: jal   0x101cc24 addu  s0, v0, zero
 	ldloc 5
 	stloc 8
-	call int32 Cibyl21::roadmap_lang_get_available_langs_count_101cc14()
+	call int32 Cibyl21::roadmap_lang_get_available_langs_count_101cc24()
 	stloc 5
 // --- basic block ---
-// 0x010ac1e8: 0x10ac1e8: lui   a1, 0x10b0000
+// 0x010ac830: 0x10ac830: lui   a1, 0x10b0000
 	ldc.i4 17498112
 	stloc.2
-// 0x010ac1ec: 0x10ac1ec: lui   a0, 0x80000
-	ldc.i4 524288
+// 0x010ac834: 0x10ac834: lui   a0, 0x90000
+	ldc.i4 589824
 	stloc.1
-// 0x010ac1f0: 0x10ac1f0: addu  v1, v0, zero
+// 0x010ac838: 0x10ac838: addu  v1, v0, zero
 	ldloc 5
 	stloc 6
-// 0x010ac1f4: 0x10ac1f4: addiu a1, a1, -21064
+// 0x010ac83c: 0x10ac83c: addiu a1, a1, -19456
 	ldloc.2
-	ldc.i4 -21064
+	ldc.i4 -19456
 	add
 	stloc.2
-// 0x010ac1f8: 0x10ac1f8: addiu a0, a0, 32708
+// 0x010ac840: 0x10ac840: addiu a0, a0, -32364
 	ldloc.1
-	ldc.i4 32708
+	ldc.i4 -32364
 	add
 	stloc.1
-// 0x010ac1fc: 0x10ac1fc: cibyl_sysc_arg 0x10
+// 0x010ac844: 0x10ac844: cibyl_sysc_arg 0x10
 	ldloc 8
-// 0x010ac200: 0x10ac200: cibyl_sysc_arg 0x11
+// 0x010ac848: 0x10ac848: cibyl_sysc_arg 0x11
 	ldloc 9
-// 0x010ac204: 0x10ac204: cibyl_sysc_arg 0x3
+// 0x010ac84c: 0x10ac84c: cibyl_sysc_arg 0x3
 	ldloc 6
-// 0x010ac208: 0x10ac208: cibyl_sysc_arg 0x4
+// 0x010ac850: 0x10ac850: cibyl_sysc_arg 0x4
 	ldloc.1
-// 0x010ac20c: 0x10ac20c: cibyl_sysc_arg 0x5
+// 0x010ac854: 0x10ac854: cibyl_sysc_arg 0x5
 	ldloc.2
-// 0x010ac210: 0x10ac210: cibyl_sysc 0x22b6
+// 0x010ac858: 0x10ac858: cibyl_sysc 0x22b6
 	call void [WazeWP7]Syscalls::NOPH_SelectLanguageDialog_showDialog(int32,int32,int32,int32,int32)
-// 0x010ac214: 0x10ac214: addu  s0, v0, zero
+// 0x010ac85c: 0x10ac85c: addu  s0, v0, zero
 	ldloc 5
 	stloc 8
-// 0x010ac218: 0x10ac218: lw    ra, 28(sp)
-// 0x010ac21c: 0x10ac21c: lw    s1, 24(sp)
+// 0x010ac860: 0x10ac860: lw    ra, 28(sp)
+// 0x010ac864: 0x10ac864: lw    s1, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -306,7 +306,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ac220: 0x10ac220: lw    s0, 20(sp)
+// 0x010ac868: 0x10ac868: lw    s0, 20(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -315,7 +315,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010ac224: 0x10ac224: jr    ra addiu sp, sp, 32
+// 0x010ac86c: 0x10ac86c: jr    ra addiu sp, sp, 32
 	ldloc.0
 	ldc.i4.s 32
 	add
@@ -327,7 +327,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 roadmap_geo_config_transaction_failed_10ac22c(int32,int32,int32,int32,int32)
+.method public static int32 roadmap_geo_config_transaction_failed_10ac874(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32 ra,int32[] mem)
@@ -362,38 +362,38 @@ __CIBYL_function_return:
 	stloc 8
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac22c: 0x10ac22c: addiu sp, sp, -24
+// 0x010ac874: 0x10ac874: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac230: 0x10ac230: sw    ra, 20(sp)
-// 0x010ac234: 0x10ac234: jal   0x104c3f0 sll   zero, zero, 0
-	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c3f0()
+// 0x010ac878: 0x10ac878: sw    ra, 20(sp)
+// 0x010ac87c: 0x10ac87c: jal   0x104c400 sll   zero, zero, 0
+	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c400()
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac23c: 0x10ac23c: lui   a1, 0x20000
+// 0x010ac884: 0x10ac884: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010ac240: 0x10ac240: lui   a2, 0x10b0000
+// 0x010ac888: 0x10ac888: lui   a2, 0x10b0000
 	ldc.i4 17498112
 	stloc.3
-// 0x010ac244: 0x10ac244: lui   a0, 0x0
+// 0x010ac88c: 0x10ac88c: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010ac248: 0x10ac248: addiu a1, a1, 15724
+// 0x010ac890: 0x10ac890: addiu a1, a1, 16184
 	ldloc.2
-	ldc.i4 15724
+	ldc.i4 16184
 	add
 	stloc.2
-// 0x010ac24c: 0x10ac24c: addiu a2, a2, -15540
+// 0x010ac894: 0x10ac894: addiu a2, a2, -13932
 	ldloc.3
-	ldc.i4 -15540
+	ldc.i4 -13932
 	add
 	stloc.3
-// 0x010ac250: 0x10ac250: jal   0x104c058 addiu a0, a0, 30092
+// 0x010ac898: 0x10ac898: jal   0x104c068 addiu a0, a0, 30092
 	ldloc.1
 	ldc.i4 30092
 	add
@@ -403,28 +403,28 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl56::roadmap_messagebox_cb_104c058(int32,int32,int32,int32,int32)
+	call int32 Cibyl56::roadmap_messagebox_cb_104c068(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac258: 0x10ac258: jal   0x10abac8 sll   zero, zero, 0
+// 0x010ac8a0: 0x10ac8a0: jal   0x10ac110 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl128::clean_up_10abac8(int32,int32,int32,int32,int32)
+	call int32 Cibyl128::clean_up_10ac110(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac260: 0x10ac260: lui   a0, 0x10b0000
+// 0x010ac8a8: 0x10ac8a8: lui   a0, 0x10b0000
 	ldc.i4 17498112
 	stloc.1
-// 0x010ac264: 0x10ac264: jal   0x104fd00 addiu a0, a0, -15712
+// 0x010ac8ac: 0x10ac8ac: jal   0x104fd10 addiu a0, a0, -14104
 	ldloc.1
-	ldc.i4 -15712
+	ldc.i4 -14104
 	add
 	stloc.1
 	ldloc.0
@@ -432,40 +432,40 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl59::roadmap_main_remove_periodic_104fd00(int32,int32,int32,int32,int32)
+	call int32 Cibyl59::roadmap_main_remove_periodic_104fd10(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac26c: 0x10ac26c: jal   0x102146c sll   zero, zero, 0
+// 0x010ac8b4: 0x10ac8b4: jal   0x102147c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl24::roadmap_screen_refresh_102146c(int32,int32,int32,int32,int32)
+	call int32 Cibyl24::roadmap_screen_refresh_102147c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac274: 0x10ac274: lui   v0, 0x90000
+// 0x010ac8bc: 0x10ac8bc: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac278: 0x10ac278: lw    v0, -32504(v0)
+// 0x010ac8c0: 0x10ac8c0: lw    v0, -32040(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8126
+	ldc.i4 -8010
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac27c: 0x10ac27c: sll   zero, zero, 0
-// 0x010ac280: 0x10ac280: beq   v0, zero, 0x10ac290 sll   zero, zero, 0
+// 0x010ac8c4: 0x10ac8c4: sll   zero, zero, 0
+// 0x010ac8c8: 0x10ac8c8: beq   v0, zero, 0x10ac8d8 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10ac290
+	brfalse L_10ac8d8
 // --- basic block ---
-// 0x010ac288: 0x10ac288: jalr  v0 sll   zero, zero, 0
+// 0x010ac8d0: 0x10ac8d0: jalr  v0 sll   zero, zero, 0
 	ldloc 5
 	ldloc.0
 	ldloc.1
@@ -477,10 +477,10 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-L_10ac290:
-// 0x010ac290: 0x10ac290: lw    ra, 20(sp)
-// 0x010ac294: 0x10ac294: sll   zero, zero, 0
-// 0x010ac298: 0x10ac298: jr    ra addiu sp, sp, 24
+L_10ac8d8:
+// 0x010ac8d8: 0x10ac8d8: lw    ra, 20(sp)
+// 0x010ac8dc: 0x10ac8dc: sll   zero, zero, 0
+// 0x010ac8e0: 0x10ac8e0: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -492,7 +492,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 GeoConfigTimer_10ac2a0(int32,int32,int32,int32,int32)
+.method public static int32 GeoConfigTimer_10ac8e8(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32[] mem,int32 s0,int32 ra)
@@ -530,20 +530,20 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac2a0: 0x10ac2a0: lui   v0, 0x90000
+// 0x010ac8e8: 0x10ac8e8: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac2a4: 0x10ac2a4: addiu v0, v0, -32628
+// 0x010ac8ec: 0x10ac8ec: addiu v0, v0, -32164
 	ldloc 5
-	ldc.i4 -32628
+	ldc.i4 -32164
 	add
 	stloc 5
-// 0x010ac2a8: 0x10ac2a8: addiu sp, sp, -32
+// 0x010ac8f0: 0x10ac8f0: addiu sp, sp, -32
 	ldloc.0
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010ac2ac: 0x10ac2ac: lw    v1, 108(v0)
+// 0x010ac8f4: 0x10ac8f4: lw    v1, 108(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
@@ -552,7 +552,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010ac2b0: 0x10ac2b0: sw    s0, 24(sp)
+// 0x010ac8f8: 0x10ac8f8: sw    s0, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -561,7 +561,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x010ac2b4: 0x10ac2b4: lw    v0, 104(v0)
+// 0x010ac8fc: 0x10ac8fc: lw    v0, 104(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
@@ -570,35 +570,35 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac2b8: 0x10ac2b8: lui   s0, 0x20000
+// 0x010ac900: 0x10ac900: lui   s0, 0x20000
 	ldc.i4 131072
 	stloc 8
-// 0x010ac2bc: 0x10ac2bc: lui   a3, 0x20000
+// 0x010ac904: 0x10ac904: lui   a3, 0x20000
 	ldc.i4 131072
 	stloc 4
-// 0x010ac2c0: 0x10ac2c0: addiu v1, v1, 1
+// 0x010ac908: 0x10ac908: addiu v1, v1, 1
 	ldloc 6
 	ldc.i4.1
 	add
 	stloc 6
-// 0x010ac2c4: 0x10ac2c4: addiu a1, s0, 13476
+// 0x010ac90c: 0x10ac90c: addiu a1, s0, 13936
 	ldloc 8
-	ldc.i4 13476
+	ldc.i4 13936
 	add
 	stloc.2
-// 0x010ac2c8: 0x10ac2c8: addiu a3, a3, 15808
+// 0x010ac910: 0x10ac910: addiu a3, a3, 16268
 	ldloc 4
-	ldc.i4 15808
+	ldc.i4 16268
 	add
 	stloc 4
-// 0x010ac2cc: 0x10ac2cc: addiu a0, zero, 4
+// 0x010ac914: 0x10ac914: addiu a0, zero, 4
 	ldc.i4.4
 	stloc.1
-// 0x010ac2d0: 0x10ac2d0: addiu a2, zero, 180
+// 0x010ac918: 0x10ac918: addiu a2, zero, 180
 	ldc.i4 180
 	stloc.3
-// 0x010ac2d4: 0x10ac2d4: sw    ra, 28(sp)
-// 0x010ac2d8: 0x10ac2d8: sw    v1, 16(sp)
+// 0x010ac91c: 0x10ac91c: sw    ra, 28(sp)
+// 0x010ac920: 0x10ac920: sw    v1, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -607,7 +607,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 6
 	stelem.i4
-// 0x010ac2dc: 0x10ac2dc: jal   0x100449c sw    v0, 20(sp)
+// 0x010ac924: 0x10ac924: jal   0x100449c sw    v0, 20(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -626,29 +626,29 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac2e4: 0x10ac2e4: jal   0x104c3f0 sll   zero, zero, 0
-	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c3f0()
+// 0x010ac92c: 0x10ac92c: jal   0x104c400 sll   zero, zero, 0
+	call int32 Cibyl56::ssd_progress_msg_dialog_hide_104c400()
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac2ec: 0x10ac2ec: lui   a3, 0x20000
+// 0x010ac934: 0x10ac934: lui   a3, 0x20000
 	ldc.i4 131072
 	stloc 4
-// 0x010ac2f0: 0x10ac2f0: addiu a3, a3, 15856
+// 0x010ac938: 0x10ac938: addiu a3, a3, 16316
 	ldloc 4
-	ldc.i4 15856
+	ldc.i4 16316
 	add
 	stloc 4
-// 0x010ac2f4: 0x10ac2f4: addiu a1, s0, 13476
+// 0x010ac93c: 0x10ac93c: addiu a1, s0, 13936
 	ldloc 8
-	ldc.i4 13476
+	ldc.i4 13936
 	add
 	stloc.2
-// 0x010ac2f8: 0x10ac2f8: addiu a0, zero, 4
+// 0x010ac940: 0x10ac940: addiu a0, zero, 4
 	ldc.i4.4
 	stloc.1
-// 0x010ac2fc: 0x10ac2fc: jal   0x100449c addiu a2, zero, 184
+// 0x010ac944: 0x10ac944: jal   0x100449c addiu a2, zero, 184
 	ldc.i4 184
 	stloc.3
 	ldloc.0
@@ -661,28 +661,28 @@ __CIBYL_javamethod_begin:
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac304: 0x10ac304: lui   a0, 0x0
+// 0x010ac94c: 0x10ac94c: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010ac308: 0x10ac308: lui   a1, 0x20000
+// 0x010ac950: 0x10ac950: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010ac30c: 0x10ac30c: lui   a2, 0x10b0000
+// 0x010ac954: 0x10ac954: lui   a2, 0x10b0000
 	ldc.i4 17498112
 	stloc.3
-// 0x010ac310: 0x10ac310: addiu a0, a0, 30092
+// 0x010ac958: 0x10ac958: addiu a0, a0, 30092
 	ldloc.1
 	ldc.i4 30092
 	add
 	stloc.1
-// 0x010ac314: 0x10ac314: addiu a1, a1, 15888
+// 0x010ac95c: 0x10ac95c: addiu a1, a1, 16348
 	ldloc.2
-	ldc.i4 15888
+	ldc.i4 16348
 	add
 	stloc.2
-// 0x010ac318: 0x10ac318: jal   0x104c058 addiu a2, a2, -15540
+// 0x010ac960: 0x10ac960: jal   0x104c068 addiu a2, a2, -13932
 	ldloc.3
-	ldc.i4 -15540
+	ldc.i4 -13932
 	add
 	stloc.3
 	ldloc.0
@@ -690,39 +690,39 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl56::roadmap_messagebox_cb_104c058(int32,int32,int32,int32,int32)
+	call int32 Cibyl56::roadmap_messagebox_cb_104c068(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac320: 0x10ac320: jal   0x10abac8 sll   zero, zero, 0
+// 0x010ac968: 0x10ac968: jal   0x10ac110 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl128::clean_up_10abac8(int32,int32,int32,int32,int32)
+	call int32 Cibyl128::clean_up_10ac110(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac328: 0x10ac328: jal   0x102146c sll   zero, zero, 0
+// 0x010ac970: 0x10ac970: jal   0x102147c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl24::roadmap_screen_refresh_102146c(int32,int32,int32,int32,int32)
+	call int32 Cibyl24::roadmap_screen_refresh_102147c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac330: 0x10ac330: lui   a0, 0x10b0000
+// 0x010ac978: 0x10ac978: lui   a0, 0x10b0000
 	ldc.i4 17498112
 	stloc.1
-// 0x010ac334: 0x10ac334: jal   0x104fd00 addiu a0, a0, -15712
+// 0x010ac97c: 0x10ac97c: jal   0x104fd10 addiu a0, a0, -14104
 	ldloc.1
-	ldc.i4 -15712
+	ldc.i4 -14104
 	add
 	stloc.1
 	ldloc.0
@@ -730,13 +730,13 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl59::roadmap_main_remove_periodic_104fd00(int32,int32,int32,int32,int32)
+	call int32 Cibyl59::roadmap_main_remove_periodic_104fd10(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac33c: 0x10ac33c: lw    ra, 28(sp)
-// 0x010ac340: 0x10ac340: lw    s0, 24(sp)
+// 0x010ac984: 0x10ac984: lw    ra, 28(sp)
+// 0x010ac988: 0x10ac988: lw    s0, 24(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -745,7 +745,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010ac344: 0x10ac344: jr    ra addiu sp, sp, 32
+// 0x010ac98c: 0x10ac98c: jr    ra addiu sp, sp, 32
 	ldloc.0
 	ldc.i4.s 32
 	add
@@ -757,7 +757,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 roadmap_geo_config_failed_cb_10ac34c(int32,int32,int32,int32,int32)
+.method public static int32 roadmap_geo_config_failed_cb_10ac994(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 ra,int32[] mem,int32 v0,int32 v1)
@@ -792,26 +792,26 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac34c: 0x10ac34c: addiu sp, sp, -24
+// 0x010ac994: 0x10ac994: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac350: 0x10ac350: sw    ra, 20(sp)
-// 0x010ac354: 0x10ac354: jal   0x1050b24 sll   zero, zero, 0
+// 0x010ac998: 0x10ac998: sw    ra, 20(sp)
+// 0x010ac99c: 0x10ac99c: jal   0x1050b34 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl60::roadmap_main_exit_1050b24(int32,int32,int32,int32,int32)
+	call int32 Cibyl60::roadmap_main_exit_1050b34(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7
 // --- basic block ---
-// 0x010ac35c: 0x10ac35c: lw    ra, 20(sp)
-// 0x010ac360: 0x10ac360: sll   zero, zero, 0
-// 0x010ac364: 0x10ac364: jr    ra addiu sp, sp, 24
+// 0x010ac9a4: 0x10ac9a4: lw    ra, 20(sp)
+// 0x010ac9a8: 0x10ac9a8: sll   zero, zero, 0
+// 0x010ac9ac: 0x10ac9ac: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -823,7 +823,7 @@ __CIBYL_function_return:
 	ldloc 7
 	ret
 }
-.method public static int32 roadmap_result_string_10ac36c(int32,int32,int32,int32,int32)
+.method public static int32 roadmap_result_string_10ac9b4(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 s0,int32[] mem,int32 v1,int32 ra)
@@ -861,18 +861,18 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac36c: 0x10ac36c: addiu sp, sp, -24
+// 0x010ac9b4: 0x10ac9b4: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac370: 0x10ac370: sltiu v0, a0, 42
+// 0x010ac9b8: 0x10ac9b8: sltiu v0, a0, 42
 	ldloc.1
 	ldc.i4.s 42
 	clt.un
 	stloc 5
-// 0x010ac374: 0x10ac374: sw    ra, 20(sp)
-// 0x010ac378: 0x10ac378: bne   v0, zero, 0x10ac38c sw    s0, 16(sp)
+// 0x010ac9bc: 0x10ac9bc: sw    ra, 20(sp)
+// 0x010ac9c0: 0x10ac9c0: bne   v0, zero, 0x10ac9d4 sw    s0, 16(sp)
 	ldloc 5
 	ldloc 7
 	ldloc.0
@@ -882,343 +882,343 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 6
 	stelem.i4
-	brtrue L_10ac38c
+	brtrue L_10ac9d4
 // --- basic block ---
-// 0x010ac380: 0x10ac380: lui   v0, 0x20000
+// 0x010ac9c8: 0x10ac9c8: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac384: 0x10ac384: j	 0x10ac4f4 addiu v0, v0, 16032
+// 0x010ac9cc: 0x10ac9cc: j	 0x10acb3c addiu v0, v0, 16492
 	ldloc 5
-	ldc.i4 16032
+	ldc.i4 16492
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac38c:
-// 0x010ac38c: 0x10ac38c: sltiu v0, a0, 41
+L_10ac9d4:
+// 0x010ac9d4: 0x10ac9d4: sltiu v0, a0, 41
 	ldloc.1
 	ldc.i4.s 41
 	clt.un
 	stloc 5
-// 0x010ac390: 0x10ac390: beq   v0, zero, 0x10ac4dc lui   s0, 0x90000
+// 0x010ac9d8: 0x10ac9d8: beq   v0, zero, 0x10acb24 lui   s0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 6
-	brfalse L_10ac4dc
+	brfalse L_10acb24
 // --- basic block ---
-// 0x010ac398: 0x10ac398: lui   v0, 0x20000
+// 0x010ac9e0: 0x10ac9e0: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac39c: 0x10ac39c: sll   v1, a0, 2
+// 0x010ac9e4: 0x10ac9e4: sll   v1, a0, 2
 	ldloc.1
 	ldc.i4.2
 	shl
 	stloc 8
-// 0x010ac3a0: 0x10ac3a0: addiu v0, v0, 29820
+// 0x010ac9e8: 0x10ac9e8: addiu v0, v0, 30284
 	ldloc 5
-	ldc.i4 29820
+	ldc.i4 30284
 	add
 	stloc 5
-// 0x010ac3a4: 0x10ac3a4: addu  v0, v0, v1
+// 0x010ac9ec: 0x10ac9ec: addu  v0, v0, v1
 	ldloc 5
 	ldloc 8
 	add
 	stloc 5
-// 0x010ac3a8: 0x10ac3a8: lw    v0, 0(v0)
+// 0x010ac9f0: 0x10ac9f0: lw    v0, 0(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ac3ac: 0x10ac3ac: sll   zero, zero, 0
-// 0x010ac3b0: 0x10ac3b0: jr    v0 sll   zero, zero, 0
+// 0x010ac9f4: 0x10ac9f4: sll   zero, zero, 0
+// 0x010ac9f8: 0x10ac9f8: jr    v0 sll   zero, zero, 0
 	ldloc 5
 	br __CIBYL_local_jumptab
 // --- basic block ---
-L_10ac3b8:
-// 0x010ac3b8: 0x10ac3b8: lui   v0, 0x20000
+L_10aca00:
+// 0x010aca00: 0x10aca00: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3bc: 0x10ac3bc: j	 0x10ac4f4 addiu v0, v0, 16052
+// 0x010aca04: 0x10aca04: j	 0x10acb3c addiu v0, v0, 16512
 	ldloc 5
-	ldc.i4 16052
+	ldc.i4 16512
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac3c4:
-// 0x010ac3c4: 0x10ac3c4: lui   v0, 0x20000
+L_10aca0c:
+// 0x010aca0c: 0x10aca0c: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3c8: 0x10ac3c8: j	 0x10ac4f4 addiu v0, v0, 16072
+// 0x010aca10: 0x10aca10: j	 0x10acb3c addiu v0, v0, 16532
 	ldloc 5
-	ldc.i4 16072
+	ldc.i4 16532
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac3d0:
-// 0x010ac3d0: 0x10ac3d0: lui   v0, 0x20000
+L_10aca18:
+// 0x010aca18: 0x10aca18: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3d4: 0x10ac3d4: j	 0x10ac4f4 addiu v0, v0, 16080
+// 0x010aca1c: 0x10aca1c: j	 0x10acb3c addiu v0, v0, 16540
 	ldloc 5
-	ldc.i4 16080
+	ldc.i4 16540
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac3dc:
-// 0x010ac3dc: 0x10ac3dc: lui   v0, 0x20000
+L_10aca24:
+// 0x010aca24: 0x10aca24: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3e0: 0x10ac3e0: j	 0x10ac4f4 addiu v0, v0, 16096
+// 0x010aca28: 0x10aca28: j	 0x10acb3c addiu v0, v0, 16556
 	ldloc 5
-	ldc.i4 16096
+	ldc.i4 16556
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac3e8:
-// 0x010ac3e8: 0x10ac3e8: lui   v0, 0x20000
+L_10aca30:
+// 0x010aca30: 0x10aca30: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3ec: 0x10ac3ec: j	 0x10ac4f4 addiu v0, v0, 16116
+// 0x010aca34: 0x10aca34: j	 0x10acb3c addiu v0, v0, 16576
 	ldloc 5
-	ldc.i4 16116
+	ldc.i4 16576
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac3f4:
-// 0x010ac3f4: 0x10ac3f4: lui   v0, 0x20000
+L_10aca3c:
+// 0x010aca3c: 0x10aca3c: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac3f8: 0x10ac3f8: j	 0x10ac4f4 addiu v0, v0, 16136
+// 0x010aca40: 0x10aca40: j	 0x10acb3c addiu v0, v0, 16596
 	ldloc 5
-	ldc.i4 16136
+	ldc.i4 16596
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac400:
-// 0x010ac400: 0x10ac400: lui   v0, 0x20000
+L_10aca48:
+// 0x010aca48: 0x10aca48: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac404: 0x10ac404: j	 0x10ac4f4 addiu v0, v0, 16152
+// 0x010aca4c: 0x10aca4c: j	 0x10acb3c addiu v0, v0, 16612
 	ldloc 5
-	ldc.i4 16152
+	ldc.i4 16612
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac40c:
-// 0x010ac40c: 0x10ac40c: lui   v0, 0x20000
+L_10aca54:
+// 0x010aca54: 0x10aca54: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac410: 0x10ac410: j	 0x10ac4f4 addiu v0, v0, 16172
+// 0x010aca58: 0x10aca58: j	 0x10acb3c addiu v0, v0, 16632
 	ldloc 5
-	ldc.i4 16172
+	ldc.i4 16632
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac418:
-// 0x010ac418: 0x10ac418: lui   v0, 0x20000
+L_10aca60:
+// 0x010aca60: 0x10aca60: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac41c: 0x10ac41c: j	 0x10ac4f4 addiu v0, v0, 16188
+// 0x010aca64: 0x10aca64: j	 0x10acb3c addiu v0, v0, 16648
 	ldloc 5
-	ldc.i4 16188
+	ldc.i4 16648
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac424:
-// 0x010ac424: 0x10ac424: lui   v0, 0x20000
+L_10aca6c:
+// 0x010aca6c: 0x10aca6c: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac428: 0x10ac428: j	 0x10ac4f4 addiu v0, v0, 16220
+// 0x010aca70: 0x10aca70: j	 0x10acb3c addiu v0, v0, 16680
 	ldloc 5
-	ldc.i4 16220
+	ldc.i4 16680
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac430:
-// 0x010ac430: 0x10ac430: lui   v0, 0x20000
+L_10aca78:
+// 0x010aca78: 0x10aca78: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac434: 0x10ac434: j	 0x10ac4f4 addiu v0, v0, 16244
+// 0x010aca7c: 0x10aca7c: j	 0x10acb3c addiu v0, v0, 16704
 	ldloc 5
-	ldc.i4 16244
+	ldc.i4 16704
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac43c:
-// 0x010ac43c: 0x10ac43c: lui   v0, 0x20000
+L_10aca84:
+// 0x010aca84: 0x10aca84: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac440: 0x10ac440: j	 0x10ac4f4 addiu v0, v0, 16264
+// 0x010aca88: 0x10aca88: j	 0x10acb3c addiu v0, v0, 16724
 	ldloc 5
-	ldc.i4 16264
+	ldc.i4 16724
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac448:
-// 0x010ac448: 0x10ac448: lui   v0, 0x20000
+L_10aca90:
+// 0x010aca90: 0x10aca90: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac44c: 0x10ac44c: j	 0x10ac4f4 addiu v0, v0, 16288
+// 0x010aca94: 0x10aca94: j	 0x10acb3c addiu v0, v0, 16748
 	ldloc 5
-	ldc.i4 16288
+	ldc.i4 16748
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac454:
-// 0x010ac454: 0x10ac454: lui   v0, 0x20000
+L_10aca9c:
+// 0x010aca9c: 0x10aca9c: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac458: 0x10ac458: j	 0x10ac4f4 addiu v0, v0, 16316
+// 0x010acaa0: 0x10acaa0: j	 0x10acb3c addiu v0, v0, 16776
 	ldloc 5
-	ldc.i4 16316
+	ldc.i4 16776
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac460:
-// 0x010ac460: 0x10ac460: lui   v0, 0x20000
+L_10acaa8:
+// 0x010acaa8: 0x10acaa8: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac464: 0x10ac464: j	 0x10ac4f4 addiu v0, v0, 16340
+// 0x010acaac: 0x10acaac: j	 0x10acb3c addiu v0, v0, 16800
 	ldloc 5
-	ldc.i4 16340
+	ldc.i4 16800
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac46c:
-// 0x010ac46c: 0x10ac46c: lui   v0, 0x20000
+L_10acab4:
+// 0x010acab4: 0x10acab4: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac470: 0x10ac470: j	 0x10ac4f4 addiu v0, v0, 16356
+// 0x010acab8: 0x10acab8: j	 0x10acb3c addiu v0, v0, 16816
 	ldloc 5
-	ldc.i4 16356
+	ldc.i4 16816
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac478:
-// 0x010ac478: 0x10ac478: lui   v0, 0x20000
+L_10acac0:
+// 0x010acac0: 0x10acac0: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac47c: 0x10ac47c: j	 0x10ac4f4 addiu v0, v0, 16400
+// 0x010acac4: 0x10acac4: j	 0x10acb3c addiu v0, v0, 16860
 	ldloc 5
-	ldc.i4 16400
+	ldc.i4 16860
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac484:
-// 0x010ac484: 0x10ac484: lui   v0, 0x20000
+L_10acacc:
+// 0x010acacc: 0x10acacc: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac488: 0x10ac488: j	 0x10ac4f4 addiu v0, v0, 16420
+// 0x010acad0: 0x10acad0: j	 0x10acb3c addiu v0, v0, 16880
 	ldloc 5
-	ldc.i4 16420
+	ldc.i4 16880
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac490:
-// 0x010ac490: 0x10ac490: lui   v0, 0x20000
+L_10acad8:
+// 0x010acad8: 0x10acad8: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac494: 0x10ac494: j	 0x10ac4f4 addiu v0, v0, 16440
+// 0x010acadc: 0x10acadc: j	 0x10acb3c addiu v0, v0, 16900
 	ldloc 5
-	ldc.i4 16440
+	ldc.i4 16900
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac49c:
-// 0x010ac49c: 0x10ac49c: lui   v0, 0x20000
+L_10acae4:
+// 0x010acae4: 0x10acae4: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac4a0: 0x10ac4a0: j	 0x10ac4f4 addiu v0, v0, 16468
+// 0x010acae8: 0x10acae8: j	 0x10acb3c addiu v0, v0, 16928
 	ldloc 5
-	ldc.i4 16468
+	ldc.i4 16928
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac4a8:
-// 0x010ac4a8: 0x10ac4a8: lui   v0, 0x20000
+L_10acaf0:
+// 0x010acaf0: 0x10acaf0: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac4ac: 0x10ac4ac: j	 0x10ac4f4 addiu v0, v0, 16496
+// 0x010acaf4: 0x10acaf4: j	 0x10acb3c addiu v0, v0, 16956
 	ldloc 5
-	ldc.i4 16496
+	ldc.i4 16956
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac4b4:
-// 0x010ac4b4: 0x10ac4b4: lui   v0, 0x20000
+L_10acafc:
+// 0x010acafc: 0x10acafc: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac4b8: 0x10ac4b8: j	 0x10ac4f4 addiu v0, v0, 16520
+// 0x010acb00: 0x10acb00: j	 0x10acb3c addiu v0, v0, 16980
 	ldloc 5
-	ldc.i4 16520
+	ldc.i4 16980
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac4c0:
-// 0x010ac4c0: 0x10ac4c0: lui   v0, 0x20000
+L_10acb08:
+// 0x010acb08: 0x10acb08: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac4c4: 0x10ac4c4: j	 0x10ac4f4 addiu v0, v0, 16568
+// 0x010acb0c: 0x10acb0c: j	 0x10acb3c addiu v0, v0, 17028
 	ldloc 5
-	ldc.i4 16568
+	ldc.i4 17028
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac4cc:
-// 0x010ac4cc: 0x10ac4cc: lui   v0, 0x20000
+L_10acb14:
+// 0x010acb14: 0x10acb14: lui   v0, 0x20000
 	ldc.i4 131072
 	stloc 5
-// 0x010ac4d0: 0x10ac4d0: j	 0x10ac4f4 addiu v0, v0, 16616
+// 0x010acb18: 0x10acb18: j	 0x10acb3c addiu v0, v0, 17076
 	ldloc 5
-	ldc.i4 16616
+	ldc.i4 17076
 	add
 	stloc 5
-	br L_10ac4f4
+	br L_10acb3c
 // --- basic block ---
-L_10ac4d8:
-// 0x010ac4d8: 0x10ac4d8: lui   s0, 0x90000
+L_10acb20:
+// 0x010acb20: 0x10acb20: lui   s0, 0x90000
 	ldc.i4 589824
 	stloc 6
-L_10ac4dc:
-// 0x010ac4dc: 0x10ac4dc: lui   a1, 0x20000
+L_10acb24:
+// 0x010acb24: 0x10acb24: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010ac4e0: 0x10ac4e0: addu  a2, a0, zero
+// 0x010acb28: 0x10acb28: addu  a2, a0, zero
 	ldloc.1
 	stloc.3
-// 0x010ac4e4: 0x10ac4e4: addiu a1, a1, 16668
+// 0x010acb2c: 0x10acb2c: addiu a1, a1, 17128
 	ldloc.2
-	ldc.i4 16668
+	ldc.i4 17128
 	add
 	stloc.2
-// 0x010ac4e8: 0x10ac4e8: jal   0x1000f64 addiu a0, s0, -32500
+// 0x010acb30: 0x10acb30: jal   0x1000f64 addiu a0, s0, -32036
 	ldloc 6
-	ldc.i4 -32500
+	ldc.i4 -32036
 	add
 	stloc.1
 	ldloc.0
@@ -1231,14 +1231,14 @@ L_10ac4dc:
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac4f0: 0x10ac4f0: addiu v0, s0, -32500
+// 0x010acb38: 0x10acb38: addiu v0, s0, -32036
 	ldloc 6
-	ldc.i4 -32500
+	ldc.i4 -32036
 	add
 	stloc 5
-L_10ac4f4:
-// 0x010ac4f4: 0x10ac4f4: lw    ra, 20(sp)
-// 0x010ac4f8: 0x10ac4f8: lw    s0, 16(sp)
+L_10acb3c:
+// 0x010acb3c: 0x10acb3c: lw    ra, 20(sp)
+// 0x010acb40: 0x10acb40: lw    s0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -1247,7 +1247,7 @@ L_10ac4f4:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010ac4fc: 0x10ac4fc: jr    ra addiu sp, sp, 24
+// 0x010acb44: 0x10acb44: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -1257,80 +1257,80 @@ L_10ac4f4:
 __CIBYL_local_jumptab:
 	stloc 5
 	ldloc 5
-	ldc.i4 17482680
-	beq  L_10ac3b8
+	ldc.i4 17484288
+	beq  L_10aca00
 	ldloc 5
-	ldc.i4 17482692
-	beq  L_10ac3c4
+	ldc.i4 17484300
+	beq  L_10aca0c
 	ldloc 5
-	ldc.i4 17482704
-	beq  L_10ac3d0
+	ldc.i4 17484312
+	beq  L_10aca18
 	ldloc 5
-	ldc.i4 17482716
-	beq  L_10ac3dc
+	ldc.i4 17484324
+	beq  L_10aca24
 	ldloc 5
-	ldc.i4 17482728
-	beq  L_10ac3e8
+	ldc.i4 17484336
+	beq  L_10aca30
 	ldloc 5
-	ldc.i4 17482740
-	beq  L_10ac3f4
+	ldc.i4 17484348
+	beq  L_10aca3c
 	ldloc 5
-	ldc.i4 17482752
-	beq  L_10ac400
+	ldc.i4 17484360
+	beq  L_10aca48
 	ldloc 5
-	ldc.i4 17482764
-	beq  L_10ac40c
+	ldc.i4 17484372
+	beq  L_10aca54
 	ldloc 5
-	ldc.i4 17482776
-	beq  L_10ac418
+	ldc.i4 17484384
+	beq  L_10aca60
 	ldloc 5
-	ldc.i4 17482788
-	beq  L_10ac424
+	ldc.i4 17484396
+	beq  L_10aca6c
 	ldloc 5
-	ldc.i4 17482800
-	beq  L_10ac430
+	ldc.i4 17484408
+	beq  L_10aca78
 	ldloc 5
-	ldc.i4 17482812
-	beq  L_10ac43c
+	ldc.i4 17484420
+	beq  L_10aca84
 	ldloc 5
-	ldc.i4 17482824
-	beq  L_10ac448
+	ldc.i4 17484432
+	beq  L_10aca90
 	ldloc 5
-	ldc.i4 17482836
-	beq  L_10ac454
+	ldc.i4 17484444
+	beq  L_10aca9c
 	ldloc 5
-	ldc.i4 17482848
-	beq  L_10ac460
+	ldc.i4 17484456
+	beq  L_10acaa8
 	ldloc 5
-	ldc.i4 17482860
-	beq  L_10ac46c
+	ldc.i4 17484468
+	beq  L_10acab4
 	ldloc 5
-	ldc.i4 17482872
-	beq  L_10ac478
+	ldc.i4 17484480
+	beq  L_10acac0
 	ldloc 5
-	ldc.i4 17482884
-	beq  L_10ac484
+	ldc.i4 17484492
+	beq  L_10acacc
 	ldloc 5
-	ldc.i4 17482896
-	beq  L_10ac490
+	ldc.i4 17484504
+	beq  L_10acad8
 	ldloc 5
-	ldc.i4 17482908
-	beq  L_10ac49c
+	ldc.i4 17484516
+	beq  L_10acae4
 	ldloc 5
-	ldc.i4 17482920
-	beq  L_10ac4a8
+	ldc.i4 17484528
+	beq  L_10acaf0
 	ldloc 5
-	ldc.i4 17482932
-	beq  L_10ac4b4
+	ldc.i4 17484540
+	beq  L_10acafc
 	ldloc 5
-	ldc.i4 17482944
-	beq  L_10ac4c0
+	ldc.i4 17484552
+	beq  L_10acb08
 	ldloc 5
-	ldc.i4 17482956
-	beq  L_10ac4cc
+	ldc.i4 17484564
+	beq  L_10acb14
 	ldloc 5
-	ldc.i4 17482968
-	beq  L_10ac4d8
+	ldc.i4 17484576
+	beq  L_10acb20
 		br __CIBYL_function_return
 __CIBYL_function_return:
 	ldloc 8
@@ -1338,7 +1338,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 roadmap_spawn_write_pipe_10ac504()
+.method public static int32 roadmap_spawn_write_pipe_10acb4c()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1352,7 +1352,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac504: 0x10ac504: jr    ra addiu v0, zero, -1
+// 0x010acb4c: 0x10acb4c: jr    ra addiu v0, zero, -1
 	ldc.i4.m1
 	stloc.0
 	br __CIBYL_function_return
@@ -1360,7 +1360,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static int32 roadmap_spawn_read_pipe_10ac50c()
+.method public static int32 roadmap_spawn_read_pipe_10acb54()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1374,7 +1374,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac50c: 0x10ac50c: jr    ra addiu v0, zero, -1
+// 0x010acb54: 0x10acb54: jr    ra addiu v0, zero, -1
 	ldc.i4.m1
 	stloc.0
 	br __CIBYL_function_return
@@ -1382,7 +1382,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_spawn_close_pipe_10ac514()
+.method public static void roadmap_spawn_close_pipe_10acb5c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1393,12 +1393,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac514: 0x10ac514: jr    ra sll   zero, zero, 0
+// 0x010acb5c: 0x10acb5c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_device_events_os_init_10ac51c()
+.method public static int32 roadmap_device_events_os_init_10acb64()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1412,7 +1412,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac51c: 0x10ac51c: jr    ra addiu v0, zero, 1
+// 0x010acb64: 0x10acb64: jr    ra addiu v0, zero, 1
 	ldc.i4.1
 	stloc.0
 	br __CIBYL_function_return
@@ -1420,7 +1420,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_device_events_os_term_10ac524()
+.method public static void roadmap_device_events_os_term_10acb6c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1431,12 +1431,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac524: 0x10ac524: jr    ra sll   zero, zero, 0
+// 0x010acb6c: 0x10acb6c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_voice_initialize_10ac534()
+.method public static void roadmap_voice_initialize_10acb7c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1447,12 +1447,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac534: 0x10ac534: jr    ra sll   zero, zero, 0
+// 0x010acb7c: 0x10acb7c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_voice_announce_10ac53c()
+.method public static void roadmap_voice_announce_10acb84()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1463,12 +1463,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac53c: 0x10ac53c: jr    ra sll   zero, zero, 0
+// 0x010acb84: 0x10acb84: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_voice_mute_10ac544()
+.method public static void roadmap_voice_mute_10acb8c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1479,13 +1479,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac544:
-// 0x010ac544: 0x10ac544: jr    ra sll   zero, zero, 0
+L_10acb8c:
+// 0x010acb8c: 0x10acb8c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_voice_enable_10ac54c()
+.method public static void roadmap_voice_enable_10acb94()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1496,13 +1496,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac54c:
-// 0x010ac54c: 0x10ac54c: jr    ra sll   zero, zero, 0
+L_10acb94:
+// 0x010acb94: 0x10acb94: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_trip_load_10ac56c()
+.method public static int32 roadmap_trip_load_10acbb4()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1516,7 +1516,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac56c: 0x10ac56c: jr    ra addu  v0, zero, zero
+// 0x010acbb4: 0x10acbb4: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1524,7 +1524,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_trip_save_10ac574()
+.method public static void roadmap_trip_save_10acbbc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1535,12 +1535,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac574: 0x10ac574: jr    ra sll   zero, zero, 0
+// 0x010acbbc: 0x10acbbc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_trip_save_screenshot_10ac57c()
+.method public static void roadmap_trip_save_screenshot_10acbc4()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1551,13 +1551,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac57c:
-// 0x010ac57c: 0x10ac57c: jr    ra sll   zero, zero, 0
+L_10acbc4:
+// 0x010acbc4: 0x10acbc4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_show_space_10ac584()
+.method public static void roadmap_download_show_space_10acbcc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1568,13 +1568,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac584:
-// 0x010ac584: 0x10ac584: jr    ra sll   zero, zero, 0
+L_10acbcc:
+// 0x010acbcc: 0x10acbcc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_delete_10ac58c()
+.method public static void roadmap_download_delete_10acbd4()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1585,13 +1585,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac58c:
-// 0x010ac58c: 0x10ac58c: jr    ra sll   zero, zero, 0
+L_10acbd4:
+// 0x010acbd4: 0x10acbd4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_subscribe_protocol_10ac594()
+.method public static void roadmap_download_subscribe_protocol_10acbdc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1602,12 +1602,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac594: 0x10ac594: jr    ra sll   zero, zero, 0
+// 0x010acbdc: 0x10acbdc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_subscribe_when_done_10ac59c()
+.method public static void roadmap_download_subscribe_when_done_10acbe4()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1618,12 +1618,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac59c: 0x10ac59c: jr    ra sll   zero, zero, 0
+// 0x010acbe4: 0x10acbe4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_download_enabled_10ac5a4()
+.method public static int32 roadmap_download_enabled_10acbec()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1637,7 +1637,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5a4: 0x10ac5a4: jr    ra addu  v0, zero, zero
+// 0x010acbec: 0x10acbec: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1645,7 +1645,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_download_initialize_10ac5ac()
+.method public static void roadmap_download_initialize_10acbf4()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1656,12 +1656,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5ac: 0x10ac5ac: jr    ra sll   zero, zero, 0
+// 0x010acbf4: 0x10acbf4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_block_10ac5b4()
+.method public static void roadmap_download_block_10acbfc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1672,12 +1672,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5b4: 0x10ac5b4: jr    ra sll   zero, zero, 0
+// 0x010acbfc: 0x10acbfc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_download_unblock_all_10ac5c4()
+.method public static void roadmap_download_unblock_all_10acc0c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1688,12 +1688,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5c4: 0x10ac5c4: jr    ra sll   zero, zero, 0
+// 0x010acc0c: 0x10acc0c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_download_blocked_10ac5cc()
+.method public static int32 roadmap_download_blocked_10acc14()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1707,7 +1707,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5cc: 0x10ac5cc: jr    ra addu  v0, zero, zero
+// 0x010acc14: 0x10acc14: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1715,7 +1715,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_copy_init_10ac5d4()
+.method public static void roadmap_copy_init_10acc1c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1726,12 +1726,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5d4: 0x10ac5d4: jr    ra sll   zero, zero, 0
+// 0x010acc1c: 0x10acc1c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_httpcopy_init_10ac5dc()
+.method public static void roadmap_httpcopy_init_10acc24()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1742,12 +1742,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5dc: 0x10ac5dc: jr    ra sll   zero, zero, 0
+// 0x010acc24: 0x10acc24: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_spawn_check_10ac5e4()
+.method public static void roadmap_spawn_check_10acc2c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1758,12 +1758,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5e4: 0x10ac5e4: jr    ra sll   zero, zero, 0
+// 0x010acc2c: 0x10acc2c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_spawn_initialize_10ac5ec()
+.method public static void roadmap_spawn_initialize_10acc34()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1774,12 +1774,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5ec: 0x10ac5ec: jr    ra sll   zero, zero, 0
+// 0x010acc34: 0x10acc34: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_spawn_10ac5f4()
+.method public static int32 roadmap_spawn_10acc3c()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1793,7 +1793,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac5f4: 0x10ac5f4: jr    ra addu  v0, zero, zero
+// 0x010acc3c: 0x10acc3c: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1801,7 +1801,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_crossing_dialog_10ac634()
+.method public static void roadmap_crossing_dialog_10acc7c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1812,13 +1812,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac634:
-// 0x010ac634: 0x10ac634: jr    ra sll   zero, zero, 0
+L_10acc7c:
+// 0x010acc7c: 0x10acc7c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void roadmap_coord_dialog_10ac63c()
+.method public static void roadmap_coord_dialog_10acc84()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1829,13 +1829,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac63c:
-// 0x010ac63c: 0x10ac63c: jr    ra sll   zero, zero, 0
+L_10acc84:
+// 0x010acc84: 0x10acc84: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void edit_markers_dialog_10ac644()
+.method public static void edit_markers_dialog_10acc8c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1846,13 +1846,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac644:
-// 0x010ac644: 0x10ac644: jr    ra sll   zero, zero, 0
+L_10acc8c:
+// 0x010acc8c: 0x10acc8c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void editor_notes_add_quick_10ac64c()
+.method public static void editor_notes_add_quick_10acc94()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1863,13 +1863,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac64c:
-// 0x010ac64c: 0x10ac64c: jr    ra sll   zero, zero, 0
+L_10acc94:
+// 0x010acc94: 0x10acc94: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void editor_notes_add_edit_10ac654()
+.method public static void editor_notes_add_edit_10acc9c()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1880,13 +1880,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac654:
-// 0x010ac654: 0x10ac654: jr    ra sll   zero, zero, 0
+L_10acc9c:
+// 0x010acc9c: 0x10acc9c: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static void editor_notes_add_voice_10ac65c()
+.method public static void editor_notes_add_voice_10acca4()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1897,13 +1897,13 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-L_10ac65c:
-// 0x010ac65c: 0x10ac65c: jr    ra sll   zero, zero, 0
+L_10acca4:
+// 0x010acca4: 0x10acca4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_file_rename_10ac66c()
+.method public static int32 roadmap_file_rename_10accb4()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1917,7 +1917,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac66c: 0x10ac66c: jr    ra addu  v0, zero, zero
+// 0x010accb4: 0x10accb4: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1925,7 +1925,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_net_initialize_10ac674()
+.method public static void roadmap_net_initialize_10accbc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1936,12 +1936,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac674: 0x10ac674: jr    ra sll   zero, zero, 0
+// 0x010accbc: 0x10accbc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 roadmap_device_initialize_10ac67c()
+.method public static int32 roadmap_device_initialize_10accc4()
 {
 .maxstack 4
 .locals init (int32 v0,int32 ra)
@@ -1955,7 +1955,7 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac67c: 0x10ac67c: jr    ra addu  v0, zero, zero
+// 0x010accc4: 0x10accc4: jr    ra addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc.0
 	br __CIBYL_function_return
@@ -1963,7 +1963,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static void roadmap_screen_draw_line_direction_10ac684()
+.method public static void roadmap_screen_draw_line_direction_10acccc()
 {
 .maxstack 4
 .locals init (int32 ra)
@@ -1974,12 +1974,12 @@ __CIBYL_function_return:
 	stloc.0
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac684: 0x10ac684: jr    ra sll   zero, zero, 0
+// 0x010acccc: 0x10acccc: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ret
 }
-.method public static int32 editor_is_enabled_10ac694()
+.method public static int32 editor_is_enabled_10accdc()
 {
 .maxstack 5
 .locals init (int32 v0,int32 ra,int32[] mem)
@@ -1996,25 +1996,25 @@ __CIBYL_function_return:
 	stloc.2
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac694: 0x10ac694: lui   v0, 0x90000
+// 0x010accdc: 0x10accdc: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ac698: 0x10ac698: lw    v0, -32436(v0)
+// 0x010acce0: 0x10acce0: lw    v0, -31972(v0)
 	ldloc 2
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8109
+	ldc.i4 -7993
 	add
 	ldelem.i4
 	stloc.0
-// 0x010ac69c: 0x10ac69c: jr    ra sll   zero, zero, 0
+// 0x010acce4: 0x10acce4: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static int32 editor_main_set_10ac6b4(int32,int32,int32,int32,int32)
+.method public static int32 editor_main_set_10accfc(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32[] mem,int32 ra,int32 v1)
@@ -2049,68 +2049,68 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac6b4: 0x10ac6b4: addiu sp, sp, -32
+// 0x010accfc: 0x10accfc: addiu sp, sp, -32
 	ldloc.0
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010ac6b8: 0x10ac6b8: sw    ra, 28(sp)
-// 0x010ac6bc: 0x10ac6bc: beq   a0, zero, 0x10ac6dc lui   v0, 0x90000
+// 0x010acd00: 0x10acd00: sw    ra, 28(sp)
+// 0x010acd04: 0x10acd04: beq   a0, zero, 0x10acd24 lui   v0, 0x90000
 	ldloc.1
 	ldc.i4 589824
 	stloc 5
-	brfalse L_10ac6dc
+	brfalse L_10acd24
 // --- basic block ---
-// 0x010ac6c4: 0x10ac6c4: lw    v0, -32436(v0)
+// 0x010acd0c: 0x10acd0c: lw    v0, -31972(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8109
+	ldc.i4 -7993
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac6c8: 0x10ac6c8: sll   zero, zero, 0
-// 0x010ac6cc: 0x10ac6cc: beq   v0, zero, 0x10ac6ec lui   v0, 0x90000
+// 0x010acd10: 0x10acd10: sll   zero, zero, 0
+// 0x010acd14: 0x10acd14: beq   v0, zero, 0x10acd34 lui   v0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 5
-	brfalse L_10ac6ec
+	brfalse L_10acd34
 // --- basic block ---
-// 0x010ac6d4: 0x10ac6d4: j	 0x10ac708 sll   zero, zero, 0
-	br L_10ac708
+// 0x010acd1c: 0x10acd1c: j	 0x10acd50 sll   zero, zero, 0
+	br L_10acd50
 // --- basic block ---
-L_10ac6dc:
-// 0x010ac6dc: 0x10ac6dc: lw    v0, -32436(v0)
+L_10acd24:
+// 0x010acd24: 0x10acd24: lw    v0, -31972(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8109
+	ldc.i4 -7993
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac6e0: 0x10ac6e0: sll   zero, zero, 0
-// 0x010ac6e4: 0x10ac6e4: beq   v0, zero, 0x10ac708 lui   v0, 0x90000
+// 0x010acd28: 0x10acd28: sll   zero, zero, 0
+// 0x010acd2c: 0x10acd2c: beq   v0, zero, 0x10acd50 lui   v0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 5
-	brfalse L_10ac708
+	brfalse L_10acd50
 // --- basic block ---
-L_10ac6ec:
-// 0x010ac6ec: 0x10ac6ec: bne   a0, zero, 0x10ac700 sw    a0, -32436(v0)
+L_10acd34:
+// 0x010acd34: 0x10acd34: bne   a0, zero, 0x10acd48 sw    a0, -31972(v0)
 	ldloc.1
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8109
+	ldc.i4 -7993
 	add
 	ldloc.1
 	stelem.i4
-	brtrue L_10ac700
+	brtrue L_10acd48
 // --- basic block ---
-// 0x010ac6f4: 0x10ac6f4: jal   0x10b1788 sw    a0, 16(sp)
+// 0x010acd3c: 0x10acd3c: jal   0x10b1dd0 sw    a0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2124,12 +2124,12 @@ L_10ac6ec:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl132::editor_track_end_10b1788(int32,int32,int32,int32,int32)
+	call int32 Cibyl132::editor_track_end_10b1dd0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac6fc: 0x10ac6fc: lw    a0, 16(sp)
+// 0x010acd44: 0x10acd44: lw    a0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2138,22 +2138,22 @@ L_10ac6ec:
 	add
 	ldelem.i4
 	stloc.1
-L_10ac700:
-// 0x010ac700: 0x10ac700: jal   0x10bdd04 sll   zero, zero, 0
+L_10acd48:
+// 0x010acd48: 0x10acd48: jal   0x10be34c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_screen_set_10bdd04(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_screen_set_10be34c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-L_10ac708:
-// 0x010ac708: 0x10ac708: lw    ra, 28(sp)
-// 0x010ac70c: 0x10ac70c: sll   zero, zero, 0
-// 0x010ac710: 0x10ac710: jr    ra addiu sp, sp, 32
+L_10acd50:
+// 0x010acd50: 0x10acd50: lw    ra, 28(sp)
+// 0x010acd54: 0x10acd54: sll   zero, zero, 0
+// 0x010acd58: 0x10acd58: jr    ra addiu sp, sp, 32
 	ldloc.0
 	ldc.i4.s 32
 	add
@@ -2165,7 +2165,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_main_shutdown_10ac718(int32,int32,int32,int32,int32)
+.method public static int32 editor_main_shutdown_10acd60(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 ra,int32[] mem,int32 v1)
@@ -2200,10 +2200,10 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac718: 0x10ac718: lui   v0, 0x0
+// 0x010acd60: 0x10acd60: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x010ac71c: 0x10ac71c: lw    a0, 1816(v0)
+// 0x010acd64: 0x10acd64: lw    a0, 1816(v0)
 	ldloc 7
 	ldloc 5
 	ldc.i4.2
@@ -2212,26 +2212,26 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ac720: 0x10ac720: addiu sp, sp, -24
+// 0x010acd68: 0x10acd68: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac724: 0x10ac724: sw    ra, 20(sp)
-// 0x010ac728: 0x10ac728: jal   0x10b74d4 sll   zero, zero, 0
+// 0x010acd6c: 0x10acd6c: sw    ra, 20(sp)
+// 0x010acd70: 0x10acd70: jal   0x10b7b1c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl136::editor_db_close_10b74d4(int32,int32,int32,int32,int32)
+	call int32 Cibyl136::editor_db_close_10b7b1c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac730: 0x10ac730: lw    ra, 20(sp)
-// 0x010ac734: 0x10ac734: sll   zero, zero, 0
-// 0x010ac738: 0x10ac738: jr    ra addiu sp, sp, 24
+// 0x010acd78: 0x10acd78: lw    ra, 20(sp)
+// 0x010acd7c: 0x10acd7c: sll   zero, zero, 0
+// 0x010acd80: 0x10acd80: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -2243,7 +2243,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_main_initialize_10ac740(int32,int32,int32,int32,int32)
+.method public static int32 editor_main_initialize_10acd88(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v1,int32 v0,int32 ra,int32[] mem)
@@ -2278,93 +2278,93 @@ __CIBYL_function_return:
 	stloc 8
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac740: 0x10ac740: addiu sp, sp, -24
+// 0x010acd88: 0x10acd88: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac744: 0x10ac744: sw    ra, 20(sp)
-// 0x010ac748: 0x10ac748: jal   0x10b9840 sll   zero, zero, 0
+// 0x010acd8c: 0x10acd8c: sw    ra, 20(sp)
+// 0x010acd90: 0x10acd90: jal   0x10b9e88 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl138::editor_upload_initialize_10b9840(int32,int32,int32,int32,int32)
+	call int32 Cibyl138::editor_upload_initialize_10b9e88(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac750: 0x10ac750: jal   0x10bd46c sll   zero, zero, 0
+// 0x010acd98: 0x10acd98: jal   0x10bdab4 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_gps_data_initialize_10bd46c(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_gps_data_initialize_10bdab4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac758: 0x10ac758: jal   0x10bd8e4 sll   zero, zero, 0
+// 0x010acda0: 0x10acda0: jal   0x10bdf2c sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl141::editor_screen_initialize_10bd8e4(int32,int32,int32,int32,int32)
+	call int32 Cibyl141::editor_screen_initialize_10bdf2c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac760: 0x10ac760: jal   0x10b0e10 sll   zero, zero, 0
+// 0x010acda8: 0x10acda8: jal   0x10b1458 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl132::editor_track_initialize_10b0e10(int32,int32,int32,int32,int32)
+	call int32 Cibyl132::editor_track_initialize_10b1458(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac768: 0x10ac768: jal   0x10ba9c0 sll   zero, zero, 0
+// 0x010acdb0: 0x10acdb0: jal   0x10bb008 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl139::update_range_initialize_10ba9c0(int32,int32,int32,int32,int32)
+	call int32 Cibyl139::update_range_initialize_10bb008(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac770: 0x10ac770: jal   0x10b9c10 sll   zero, zero, 0
+// 0x010acdb8: 0x10acdb8: jal   0x10ba258 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl138::add_alert_initialize_10b9c10(int32,int32,int32,int32,int32)
+	call int32 Cibyl138::add_alert_initialize_10ba258(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac778: 0x10ac778: jal   0x10b8308 sll   zero, zero, 0
+// 0x010acdc0: 0x10acdc0: jal   0x10b8950 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl137::editor_plugin_register_10b8308(int32,int32,int32,int32,int32)
+	call int32 Cibyl137::editor_plugin_register_10b8950(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac780: 0x10ac780: lui   v1, 0x0
+// 0x010acdc8: 0x10acdc8: lui   v1, 0x0
 	ldc.i4.s 0
 	stloc 5
-// 0x010ac784: 0x10ac784: jal   0x1010a4c sw    v0, 18812(v1)
+// 0x010acdcc: 0x10acdcc: jal   0x1010a5c sw    v0, 18812(v1)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
@@ -2378,25 +2378,25 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl12::roadmap_layer_adjust_1010a4c(int32,int32,int32,int32,int32)
+	call int32 Cibyl12::roadmap_layer_adjust_1010a5c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac78c: 0x10ac78c: jal   0x10b80c0 sll   zero, zero, 0
+// 0x010acdd4: 0x10acdd4: jal   0x10b8708 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl137::editor_bar_initialize_10b80c0(int32,int32,int32,int32,int32)
+	call int32 Cibyl137::editor_bar_initialize_10b8708(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010ac794: 0x10ac794: lw    ra, 20(sp)
-// 0x010ac798: 0x10ac798: sll   zero, zero, 0
-// 0x010ac79c: 0x10ac79c: jr    ra addiu sp, sp, 24
+// 0x010acddc: 0x10acddc: lw    ra, 20(sp)
+// 0x010acde0: 0x10acde0: sll   zero, zero, 0
+// 0x010acde4: 0x10acde4: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -2408,7 +2408,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 editor_main_check_map_10ac7a4(int32,int32,int32,int32,int32)
+.method public static int32 editor_main_check_map_10acdec(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 s0,int32 v0,int32[] mem,int32 v1,int32 ra)
@@ -2446,15 +2446,15 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac7a4: 0x10ac7a4: addiu sp, sp, -24
+// 0x010acdec: 0x10acdec: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac7a8: 0x10ac7a8: lui   v0, 0x0
+// 0x010acdf0: 0x10acdf0: lui   v0, 0x0
 	ldc.i4.s 0
 	stloc 6
-// 0x010ac7ac: 0x10ac7ac: sw    s0, 16(sp)
+// 0x010acdf4: 0x10acdf4: sw    s0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2463,7 +2463,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ac7b0: 0x10ac7b0: lw    s0, 1816(v0)
+// 0x010acdf8: 0x10acdf8: lw    s0, 1816(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
@@ -2472,22 +2472,22 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac7b4: 0x10ac7b4: sll   zero, zero, 0
-// 0x010ac7b8: 0x10ac7b8: bgtz  s0, 0x10ac7c8 sw    ra, 20(sp)
+// 0x010acdfc: 0x10acdfc: sll   zero, zero, 0
+// 0x010ace00: 0x10ace00: bgtz  s0, 0x10ace10 sw    ra, 20(sp)
 	ldloc 5
 	ldc.i4.s 0
-	bgt L_10ac7c8
+	bgt L_10ace10
 // --- basic block ---
-// 0x010ac7c0: 0x10ac7c0: lui   s0, 0x10000
+// 0x010ace08: 0x10ace08: lui   s0, 0x10000
 	ldc.i4 65536
 	stloc 5
-// 0x010ac7c4: 0x10ac7c4: ori   s0, s0, 11465
+// 0x010ace0c: 0x10ace0c: ori   s0, s0, 11465
 	ldloc 5
 	ldc.i4 11465
 	or
 	stloc 5
-L_10ac7c8:
-// 0x010ac7c8: 0x10ac7c8: jal   0x1013c44 addu  a0, s0, zero
+L_10ace10:
+// 0x010ace10: 0x10ace10: jal   0x1013c54 addu  a0, s0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2495,28 +2495,28 @@ L_10ac7c8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl14::roadmap_locator_activate_1013c44(int32,int32,int32,int32,int32)
+	call int32 Cibyl14::roadmap_locator_activate_1013c54(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
 // --- basic block ---
-// 0x010ac7d0: 0x10ac7d0: beq   v0, zero, 0x10ac7e8 lui   a0, 0x20000
+// 0x010ace18: 0x10ace18: beq   v0, zero, 0x10ace30 lui   a0, 0x20000
 	ldloc 6
 	ldc.i4 131072
 	stloc.1
-	brfalse L_10ac7e8
+	brfalse L_10ace30
 // --- basic block ---
-// 0x010ac7d8: 0x10ac7d8: lui   a1, 0x20000
+// 0x010ace20: 0x10ace20: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010ac7dc: 0x10ac7dc: addiu a0, a0, 16676
+// 0x010ace24: 0x10ace24: addiu a0, a0, 17136
 	ldloc.1
-	ldc.i4 16676
+	ldc.i4 17136
 	add
 	stloc.1
-// 0x010ac7e0: 0x10ac7e0: jal   0x104c148 addiu a1, a1, 16684
+// 0x010ace28: 0x10ace28: jal   0x104c158 addiu a1, a1, 17144
 	ldloc.2
-	ldc.i4 16684
+	ldc.i4 17144
 	add
 	stloc.2
 	ldloc.0
@@ -2524,13 +2524,13 @@ L_10ac7c8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl56::roadmap_messagebox_104c148(int32,int32,int32,int32,int32)
+	call int32 Cibyl56::roadmap_messagebox_104c158(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
 // --- basic block ---
-L_10ac7e8:
-// 0x010ac7e8: 0x10ac7e8: jal   0x10b79b4 addu  a0, s0, zero
+L_10ace30:
+// 0x010ace30: 0x10ace30: jal   0x10b7ffc addu  a0, s0, zero
 	ldloc 5
 	stloc.1
 	ldloc.0
@@ -2538,13 +2538,13 @@ L_10ac7e8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl136::editor_db_activate_10b79b4(int32,int32,int32,int32,int32)
+	call int32 Cibyl136::editor_db_activate_10b7ffc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 6
 // --- basic block ---
-// 0x010ac7f0: 0x10ac7f0: lw    ra, 20(sp)
-// 0x010ac7f4: 0x10ac7f4: lw    s0, 16(sp)
+// 0x010ace38: 0x10ace38: lw    ra, 20(sp)
+// 0x010ace3c: 0x10ace3c: lw    s0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -2553,7 +2553,7 @@ L_10ac7e8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac7f8: 0x10ac7f8: jr    ra addiu sp, sp, 24
+// 0x010ace40: 0x10ace40: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -2565,7 +2565,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 editor_points_get_total_points_10ac820()
+.method public static int32 editor_points_get_total_points_10ace68()
 {
 .maxstack 5
 .locals init (int32 v0,int32 v1,int32[] mem,int32 ra)
@@ -2585,31 +2585,31 @@ __CIBYL_function_return:
 	stloc.2
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac820: 0x10ac820: lui   v0, 0x90000
+// 0x010ace68: 0x10ace68: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ac824: 0x10ac824: lw    v1, -32428(v0)
+// 0x010ace6c: 0x10ace6c: lw    v1, -31964(v0)
 	ldloc 2
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ac828: 0x10ac828: lui   v0, 0x90000
+// 0x010ace70: 0x10ace70: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ac82c: 0x10ac82c: lw    v0, -32424(v0)
+// 0x010ace74: 0x10ace74: lw    v0, -31960(v0)
 	ldloc 2
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8106
+	ldc.i4 -7990
 	add
 	ldelem.i4
 	stloc.0
-// 0x010ac830: 0x10ac830: jr    ra addu  v0, v1, v0
+// 0x010ace78: 0x10ace78: jr    ra addu  v0, v1, v0
 	ldloc.1
 	ldloc.0
 	add
@@ -2621,7 +2621,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static int32 editor_points_reset_munching_10ac838()
+.method public static int32 editor_points_reset_munching_10ace80()
 {
 .maxstack 5
 .locals init (int32 v1,int32[] mem,int32 v0,int32 ra)
@@ -2641,24 +2641,24 @@ __CIBYL_function_return:
 	stloc.1
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac838: 0x10ac838: lui   v1, 0x90000
+// 0x010ace80: 0x10ace80: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ac83c: 0x10ac83c: lw    v0, -32420(v1)
+// 0x010ace84: 0x10ace84: lw    v0, -31956(v1)
 	ldloc 1
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8105
+	ldc.i4 -7989
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ac840: 0x10ac840: jr    ra sw    zero, -32420(v1)
+// 0x010ace88: 0x10ace88: jr    ra sw    zero, -31956(v1)
 	ldloc 1
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8105
+	ldc.i4 -7989
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -2669,7 +2669,7 @@ __CIBYL_function_return:
 	ldloc.2
 	ret
 }
-.method public static int32 editor_points_display_new_points_timed_10ac874(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_display_new_points_timed_10acebc(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32[] mem,int32 s0,int32 v1,int32 s2,int32 s1,int32 ra,int32 lo)
@@ -2716,15 +2716,15 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac874: 0x10ac874: addiu sp, sp, -32
+// 0x010acebc: 0x10acebc: addiu sp, sp, -32
 	ldloc.0
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010ac878: 0x10ac878: addiu v0, zero, -1
+// 0x010acec0: 0x10acec0: addiu v0, zero, -1
 	ldc.i4.m1
 	stloc 5
-// 0x010ac87c: 0x10ac87c: sw    s1, 20(sp)
+// 0x010acec4: 0x10acec4: sw    s1, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2733,7 +2733,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010ac880: 0x10ac880: sw    s0, 16(sp)
+// 0x010acec8: 0x10acec8: sw    s0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2742,8 +2742,8 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ac884: 0x10ac884: sw    ra, 28(sp)
-// 0x010ac888: 0x10ac888: sw    s2, 24(sp)
+// 0x010acecc: 0x10acecc: sw    ra, 28(sp)
+// 0x010aced0: 0x10aced0: sw    s2, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2752,28 +2752,28 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ac88c: 0x10ac88c: addu  s0, a1, zero
+// 0x010aced4: 0x10aced4: addu  s0, a1, zero
 	ldloc.2
 	stloc 7
-// 0x010ac890: 0x10ac890: beq   a0, v0, 0x10ac8ac addu  s1, a2, zero
+// 0x010aced8: 0x10aced8: beq   a0, v0, 0x10acef4 addu  s1, a2, zero
 	ldloc.1
 	ldloc 5
 	ldloc.3
 	stloc 10
-	beq  L_10ac8ac
+	beq  L_10acef4
 // --- basic block ---
-// 0x010ac898: 0x10ac898: lui   a1, 0x20000
-	ldc.i4 131072
+// 0x010acee0: 0x10acee0: lui   a1, 0x10000
+	ldc.i4 65536
 	stloc.2
-// 0x010ac89c: 0x10ac89c: addu  a2, a0, zero
+// 0x010acee4: 0x10acee4: addu  a2, a0, zero
 	ldloc.1
 	stloc.3
-// 0x010ac8a0: 0x10ac8a0: addiu a1, a1, -13884
+// 0x010acee8: 0x10acee8: addiu a1, a1, 19088
 	ldloc.2
-	ldc.i4 -13884
+	ldc.i4 19088
 	add
 	stloc.2
-// 0x010ac8a4: 0x10ac8a4: jal   0x101aec4 addiu a0, zero, 88
+// 0x010aceec: 0x10aceec: jal   0x101aed4 addiu a0, zero, 88
 	ldc.i4.s 88
 	stloc.1
 	ldloc.0
@@ -2781,34 +2781,34 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl19::roadmap_message_set_101aec4(int32,int32,int32,int32,int32)
+	call int32 Cibyl19::roadmap_message_set_101aed4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-L_10ac8ac:
-// 0x010ac8ac: 0x10ac8ac: lui   s2, 0x90000
+L_10acef4:
+// 0x010acef4: 0x10acef4: lui   s2, 0x90000
 	ldc.i4 589824
 	stloc 9
-// 0x010ac8b0: 0x10ac8b0: lw    v0, -32432(s2)
+// 0x010acef8: 0x10acef8: lw    v0, -31968(s2)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8108
+	ldc.i4 -7992
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ac8b4: 0x10ac8b4: sll   zero, zero, 0
-// 0x010ac8b8: 0x10ac8b8: beq   v0, zero, 0x10ac8cc lui   a0, 0x10b0000
+// 0x010acefc: 0x10acefc: sll   zero, zero, 0
+// 0x010acf00: 0x10acf00: beq   v0, zero, 0x10acf14 lui   a0, 0x10b0000
 	ldloc 5
 	ldc.i4 17498112
 	stloc.1
-	brfalse L_10ac8cc
+	brfalse L_10acf14
 // --- basic block ---
-// 0x010ac8c0: 0x10ac8c0: jal   0x104fd00 addiu a0, a0, -14024
+// 0x010acf08: 0x10acf08: jal   0x104fd10 addiu a0, a0, -12416
 	ldloc.1
-	ldc.i4 -14024
+	ldc.i4 -12416
 	add
 	stloc.1
 	ldloc.0
@@ -2816,61 +2816,61 @@ L_10ac8ac:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl59::roadmap_main_remove_periodic_104fd00(int32,int32,int32,int32,int32)
+	call int32 Cibyl59::roadmap_main_remove_periodic_104fd10(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac8c8: 0x10ac8c8: sw    zero, -32432(s2)
+// 0x010acf10: 0x10acf10: sw    zero, -31968(s2)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8108
+	ldc.i4 -7992
 	add
 	ldc.i4.s 0
 	stelem.i4
-L_10ac8cc:
-// 0x010ac8cc: 0x10ac8cc: jal   0x101641c addu  a0, s1, zero
+L_10acf14:
+// 0x010acf14: 0x10acf14: jal   0x101642c addu  a0, s1, zero
 	ldloc 10
 	stloc.1
 	ldloc.1
-	call int32 Cibyl16::roadmap_ticker_set_last_event_101641c(int32)
+	call int32 Cibyl16::roadmap_ticker_set_last_event_101642c(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ac8d4: 0x10ac8d4: jal   0x1021900 sll   zero, zero, 0
+// 0x010acf1c: 0x10acf1c: jal   0x1021910 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl25::roadmap_screen_redraw_1021900(int32,int32,int32,int32,int32)
+	call int32 Cibyl25::roadmap_screen_redraw_1021910(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac8dc: 0x10ac8dc: addiu a0, zero, 1000
+// 0x010acf24: 0x10acf24: addiu a0, zero, 1000
 	ldc.i4 1000
 	stloc.1
-// 0x010ac8e0: 0x10ac8e0: mult  s0, a0
+// 0x010acf28: 0x10acf28: mult  s0, a0
 	ldloc 7
 	ldloc.1
 	mul
 	stloc 12
-// 0x010ac8e4: 0x10ac8e4: lui   s0, 0x10b0000
+// 0x010acf2c: 0x10acf2c: lui   s0, 0x10b0000
 	ldc.i4 17498112
 	stloc 7
-// 0x010ac8e8: 0x10ac8e8: addiu a1, s0, -14024
+// 0x010acf30: 0x10acf30: addiu a1, s0, -12416
 	ldloc 7
-	ldc.i4 -14024
+	ldc.i4 -12416
 	add
 	stloc.2
-// 0x010ac8ec: 0x10ac8ec: mflo  lo
+// 0x010acf34: 0x10acf34: mflo  lo
 	ldloc 12
 	stloc.1
-// 0x010ac8f0: 0x10ac8f0: jal   0x104fe98 addiu s0, s0, -14024
+// 0x010acf38: 0x10acf38: jal   0x104fea8 addiu s0, s0, -12416
 	ldloc 7
-	ldc.i4 -14024
+	ldc.i4 -12416
 	add
 	stloc 7
 	ldloc.0
@@ -2878,25 +2878,25 @@ L_10ac8cc:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl59::roadmap_main_set_periodic_104fe98(int32,int32,int32,int32,int32)
+	call int32 Cibyl59::roadmap_main_set_periodic_104fea8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ac8f8: 0x10ac8f8: lw    ra, 28(sp)
-// 0x010ac8fc: 0x10ac8fc: lui   v0, 0x90000
+// 0x010acf40: 0x10acf40: lw    ra, 28(sp)
+// 0x010acf44: 0x10acf44: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac900: 0x10ac900: sw    s0, -32432(v0)
+// 0x010acf48: 0x10acf48: sw    s0, -31968(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8108
+	ldc.i4 -7992
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ac904: 0x10ac904: lw    s2, 24(sp)
+// 0x010acf4c: 0x10acf4c: lw    s2, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2905,7 +2905,7 @@ L_10ac8cc:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ac908: 0x10ac908: lw    s1, 20(sp)
+// 0x010acf50: 0x10acf50: lw    s1, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2914,7 +2914,7 @@ L_10ac8cc:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ac90c: 0x10ac90c: lw    s0, 16(sp)
+// 0x010acf54: 0x10acf54: lw    s0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -2923,7 +2923,7 @@ L_10ac8cc:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ac910: 0x10ac910: jr    ra addiu sp, sp, 32
+// 0x010acf58: 0x10acf58: jr    ra addiu sp, sp, 32
 	ldloc.0
 	ldc.i4.s 32
 	add
@@ -2935,7 +2935,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_points_hide_10ac918(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_hide_10acf60(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 ra,int32[] mem,int32 v0,int32 v1)
@@ -2970,13 +2970,13 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac918: 0x10ac918: addiu sp, sp, -24
+// 0x010acf60: 0x10acf60: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac91c: 0x10ac91c: sw    ra, 20(sp)
-// 0x010ac920: 0x10ac920: jal   0x101ae54 addiu a0, zero, 42
+// 0x010acf64: 0x10acf64: sw    ra, 20(sp)
+// 0x010acf68: 0x10acf68: jal   0x101ae64 addiu a0, zero, 42
 	ldc.i4.s 42
 	stloc.1
 	ldloc.0
@@ -2984,14 +2984,14 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl19::roadmap_message_unset_101ae54(int32,int32,int32,int32,int32)
+	call int32 Cibyl19::roadmap_message_unset_101ae64(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 7
 // --- basic block ---
-// 0x010ac928: 0x10ac928: lw    ra, 20(sp)
-// 0x010ac92c: 0x10ac92c: sll   zero, zero, 0
-// 0x010ac930: 0x10ac930: jr    ra addiu sp, sp, 24
+// 0x010acf70: 0x10acf70: lw    ra, 20(sp)
+// 0x010acf74: 0x10acf74: sll   zero, zero, 0
+// 0x010acf78: 0x10acf78: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3003,7 +3003,7 @@ __CIBYL_function_return:
 	ldloc 7
 	ret
 }
-.method public static int32 timer_cb_10ac938(int32,int32,int32,int32,int32)
+.method public static int32 timer_cb_10acf80(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32 ra,int32[] mem)
@@ -3038,13 +3038,13 @@ __CIBYL_function_return:
 	stloc 8
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac938: 0x10ac938: addiu sp, sp, -24
+// 0x010acf80: 0x10acf80: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac93c: 0x10ac93c: sw    ra, 20(sp)
-// 0x010ac940: 0x10ac940: jal   0x101ae54 addiu a0, zero, 88
+// 0x010acf84: 0x10acf84: sw    ra, 20(sp)
+// 0x010acf88: 0x10acf88: jal   0x101ae64 addiu a0, zero, 88
 	ldc.i4.s 88
 	stloc.1
 	ldloc.0
@@ -3052,17 +3052,17 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl19::roadmap_message_unset_101ae54(int32,int32,int32,int32,int32)
+	call int32 Cibyl19::roadmap_message_unset_101ae64(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac948: 0x10ac948: lui   a0, 0x10b0000
+// 0x010acf90: 0x10acf90: lui   a0, 0x10b0000
 	ldc.i4 17498112
 	stloc.1
-// 0x010ac94c: 0x10ac94c: jal   0x104fd00 addiu a0, a0, -14024
+// 0x010acf94: 0x10acf94: jal   0x104fd10 addiu a0, a0, -12416
 	ldloc.1
-	ldc.i4 -14024
+	ldc.i4 -12416
 	add
 	stloc.1
 	ldloc.0
@@ -3070,20 +3070,20 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl59::roadmap_main_remove_periodic_104fd00(int32,int32,int32,int32,int32)
+	call int32 Cibyl59::roadmap_main_remove_periodic_104fd10(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac954: 0x10ac954: lui   v0, 0x90000
+// 0x010acf9c: 0x10acf9c: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ac958: 0x10ac958: jal   0x102146c sw    zero, -32432(v0)
+// 0x010acfa0: 0x10acfa0: jal   0x102147c sw    zero, -31968(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8108
+	ldc.i4 -7992
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -3092,37 +3092,37 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl24::roadmap_screen_refresh_102146c(int32,int32,int32,int32,int32)
+	call int32 Cibyl24::roadmap_screen_refresh_102147c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010ac960: 0x10ac960: bne   v0, zero, 0x10ac970 sll   zero, zero, 0
+// 0x010acfa8: 0x10acfa8: bne   v0, zero, 0x10acfb8 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ac970
+	brtrue L_10acfb8
 // --- basic block ---
-// 0x010ac968: 0x10ac968: jal   0x1021900 sll   zero, zero, 0
+// 0x010acfb0: 0x10acfb0: jal   0x1021910 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl25::roadmap_screen_redraw_1021900(int32,int32,int32,int32,int32)
+	call int32 Cibyl25::roadmap_screen_redraw_1021910(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-L_10ac970:
-// 0x010ac970: 0x10ac970: jal   0x101641c addu  a0, zero, zero
+L_10acfb8:
+// 0x010acfb8: 0x10acfb8: jal   0x101642c addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.1
-	call int32 Cibyl16::roadmap_ticker_set_last_event_101641c(int32)
+	call int32 Cibyl16::roadmap_ticker_set_last_event_101642c(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ac978: 0x10ac978: lw    ra, 20(sp)
-// 0x010ac97c: 0x10ac97c: sll   zero, zero, 0
-// 0x010ac980: 0x10ac980: jr    ra addiu sp, sp, 24
+// 0x010acfc0: 0x10acfc0: lw    ra, 20(sp)
+// 0x010acfc4: 0x10acfc4: sll   zero, zero, 0
+// 0x010acfc8: 0x10acfc8: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3134,7 +3134,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_points_display_10ac988(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_display_10acfd0(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 s0,int32[] mem,int32 ra,int32 v1,int32 lo)
@@ -3175,12 +3175,12 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac988: 0x10ac988: addiu sp, sp, -24
+// 0x010acfd0: 0x10acfd0: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac98c: 0x10ac98c: sw    s0, 16(sp)
+// 0x010acfd4: 0x10acfd4: sw    s0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -3189,14 +3189,14 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 6
 	stelem.i4
-// 0x010ac990: 0x10ac990: addu  s0, a0, zero
+// 0x010acfd8: 0x10acfd8: addu  s0, a0, zero
 	ldloc.1
 	stloc 6
-// 0x010ac994: 0x10ac994: lui   a0, 0x0
+// 0x010acfdc: 0x10acfdc: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010ac998: 0x10ac998: sw    ra, 20(sp)
-// 0x010ac99c: 0x10ac99c: jal   0x100e788 addiu a0, a0, 18884
+// 0x010acfe0: 0x10acfe0: sw    ra, 20(sp)
+// 0x010acfe4: 0x10acfe4: jal   0x100e798 addiu a0, a0, 18884
 	ldloc.1
 	ldc.i4 18884
 	add
@@ -3206,40 +3206,40 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 9
 	stloc 5
 // --- basic block ---
-// 0x010ac9a4: 0x10ac9a4: bne   v0, zero, 0x10ac9b0 sll   zero, zero, 0
+// 0x010acfec: 0x10acfec: bne   v0, zero, 0x10acff8 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ac9b0
+	brtrue L_10acff8
 // --- basic block ---
-// 0x010ac9ac: 0x10ac9ac: addiu v0, zero, 10
+// 0x010acff4: 0x10acff4: addiu v0, zero, 10
 	ldc.i4.s 10
 	stloc 5
-L_10ac9b0:
-// 0x010ac9b0: 0x10ac9b0: div   s0, v0
+L_10acff8:
+// 0x010acff8: 0x10acff8: div   s0, v0
 	ldloc 6
 	ldloc 5
 	div
 	stloc 10
-// 0x010ac9b4: 0x10ac9b4: mflo  lo
+// 0x010acffc: 0x10acffc: mflo  lo
 	ldloc 10
 	stloc.3
-// 0x010ac9b8: 0x10ac9b8: blez  a2, 0x10ac9cc lui   a1, 0x20000
+// 0x010ad000: 0x10ad000: blez  a2, 0x10ad014 lui   a1, 0x10000
 	ldloc.3
-	ldc.i4 131072
+	ldc.i4 65536
 	stloc.2
 	ldc.i4.s 0
-	ble L_10ac9cc
+	ble L_10ad014
 // --- basic block ---
-// 0x010ac9c0: 0x10ac9c0: addiu a1, a1, -13884
+// 0x010ad008: 0x10ad008: addiu a1, a1, 19088
 	ldloc.2
-	ldc.i4 -13884
+	ldc.i4 19088
 	add
 	stloc.2
-// 0x010ac9c4: 0x10ac9c4: jal   0x101aec4 addiu a0, zero, 42
+// 0x010ad00c: 0x10ad00c: jal   0x101aed4 addiu a0, zero, 42
 	ldc.i4.s 42
 	stloc.1
 	ldloc.0
@@ -3247,14 +3247,14 @@ L_10ac9b0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl19::roadmap_message_set_101aec4(int32,int32,int32,int32,int32)
+	call int32 Cibyl19::roadmap_message_set_101aed4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 9
 	stloc 5
 // --- basic block ---
-L_10ac9cc:
-// 0x010ac9cc: 0x10ac9cc: lw    ra, 20(sp)
-// 0x010ac9d0: 0x10ac9d0: lw    s0, 16(sp)
+L_10ad014:
+// 0x010ad014: 0x10ad014: lw    ra, 20(sp)
+// 0x010ad018: 0x10ad018: lw    s0, 16(sp)
 	ldloc 7
 	ldloc.0
 	ldc.i4.2
@@ -3263,7 +3263,7 @@ L_10ac9cc:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010ac9d4: 0x10ac9d4: jr    ra addiu sp, sp, 24
+// 0x010ad01c: 0x10ad01c: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3275,7 +3275,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 set_last_points_update_time_10ac9dc(int32,int32,int32,int32,int32)
+.method public static int32 set_last_points_update_time_10ad024(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 v1,int32 ra,int32[] mem)
@@ -3310,29 +3310,29 @@ __CIBYL_function_return:
 	stloc 8
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ac9dc: 0x10ac9dc: addiu sp, sp, -24
+// 0x010ad024: 0x10ad024: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010ac9e0: 0x10ac9e0: sw    ra, 20(sp)
-// 0x010ac9e4: 0x10ac9e4: jal   0x1030d28 sll   zero, zero, 0
-	call int32 Cibyl35::roadmap_gps_get_received_time_1030d28()
+// 0x010ad028: 0x10ad028: sw    ra, 20(sp)
+// 0x010ad02c: 0x10ad02c: jal   0x1030d38 sll   zero, zero, 0
+	call int32 Cibyl35::roadmap_gps_get_received_time_1030d38()
 	stloc 5
 // --- basic block ---
-// 0x010ac9ec: 0x10ac9ec: beq   v0, zero, 0x10aca0c sll   zero, zero, 0
+// 0x010ad034: 0x10ad034: beq   v0, zero, 0x10ad054 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10aca0c
+	brfalse L_10ad054
 // --- basic block ---
-// 0x010ac9f4: 0x10ac9f4: lui   a0, 0x0
+// 0x010ad03c: 0x10ad03c: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010ac9f8: 0x10ac9f8: addiu a0, a0, 18868
+// 0x010ad040: 0x10ad040: addiu a0, a0, 18868
 	ldloc.1
 	ldc.i4 18868
 	add
 	stloc.1
-// 0x010ac9fc: 0x10ac9fc: jal   0x100e610 addu  a1, v0, zero
+// 0x010ad044: 0x10ad044: jal   0x100e620 addu  a1, v0, zero
 	ldloc 5
 	stloc.2
 	ldloc.0
@@ -3340,12 +3340,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_integer_100e610(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_integer_100e620(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-// 0x010aca04: 0x10aca04: jal   0x100ea50 addu  a0, zero, zero
+// 0x010ad04c: 0x10ad04c: jal   0x100ea60 addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -3353,15 +3353,15 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_save_100ea50(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_save_100ea60(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 5
 // --- basic block ---
-L_10aca0c:
-// 0x010aca0c: 0x10aca0c: lw    ra, 20(sp)
-// 0x010aca10: 0x10aca10: sll   zero, zero, 0
-// 0x010aca14: 0x10aca14: jr    ra addiu sp, sp, 24
+L_10ad054:
+// 0x010ad054: 0x10ad054: lw    ra, 20(sp)
+// 0x010ad058: 0x10ad058: sll   zero, zero, 0
+// 0x010ad05c: 0x10ad05c: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3373,7 +3373,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_points_set_saved_new_points_10aca1c(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_set_saved_new_points_10ad064(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32[] mem,int32 v0,int32 v1,int32 ra)
@@ -3408,13 +3408,13 @@ __CIBYL_function_return:
 	stloc 5
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010aca1c: 0x10aca1c: addiu sp, sp, -32
+// 0x010ad064: 0x10ad064: addiu sp, sp, -32
 	ldloc.0
 	ldc.i4.s -32
 	add
 	stloc.0
-// 0x010aca20: 0x10aca20: sw    ra, 28(sp)
-// 0x010aca24: 0x10aca24: jal   0x10ac9dc sw    a0, 16(sp)
+// 0x010ad068: 0x10ad068: sw    ra, 28(sp)
+// 0x010ad06c: 0x10ad06c: jal   0x10ad024 sw    a0, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -3428,12 +3428,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::set_last_points_update_time_10ac9dc(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::set_last_points_update_time_10ad024(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010aca2c: 0x10aca2c: lw    a1, 16(sp)
+// 0x010ad074: 0x10ad074: lw    a1, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -3442,10 +3442,10 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010aca30: 0x10aca30: lui   a0, 0x0
+// 0x010ad078: 0x10ad078: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010aca34: 0x10aca34: jal   0x100e610 addiu a0, a0, 18852
+// 0x010ad07c: 0x10ad07c: jal   0x100e620 addiu a0, a0, 18852
 	ldloc.1
 	ldc.i4 18852
 	add
@@ -3455,12 +3455,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_integer_100e610(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_integer_100e620(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010aca3c: 0x10aca3c: jal   0x100ea50 addu  a0, zero, zero
+// 0x010ad084: 0x10ad084: jal   0x100ea60 addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -3468,14 +3468,14 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_save_100ea50(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_save_100ea60(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010aca44: 0x10aca44: lw    ra, 28(sp)
-// 0x010aca48: 0x10aca48: sll   zero, zero, 0
-// 0x010aca4c: 0x10aca4c: jr    ra addiu sp, sp, 32
+// 0x010ad08c: 0x10ad08c: lw    ra, 28(sp)
+// 0x010ad090: 0x10ad090: sll   zero, zero, 0
+// 0x010ad094: 0x10ad094: jr    ra addiu sp, sp, 32
 	ldloc.0
 	ldc.i4.s 32
 	add
@@ -3487,7 +3487,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 editor_points_add_10aca54(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_add_10ad09c(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32 s0,int32 v1,int32[] mem,int32 ra,int32 lo)
@@ -3528,12 +3528,12 @@ __CIBYL_function_return:
 	stloc 8
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010aca54: 0x10aca54: addiu sp, sp, -24
+// 0x010ad09c: 0x10ad09c: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010aca58: 0x10aca58: sw    s0, 16(sp)
+// 0x010ad0a0: 0x10ad0a0: sw    s0, 16(sp)
 	ldloc 8
 	ldloc.0
 	ldc.i4.2
@@ -3542,14 +3542,14 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 6
 	stelem.i4
-// 0x010aca5c: 0x10aca5c: addu  s0, a0, zero
+// 0x010ad0a4: 0x10ad0a4: addu  s0, a0, zero
 	ldloc.1
 	stloc 6
-// 0x010aca60: 0x10aca60: lui   a0, 0x0
+// 0x010ad0a8: 0x10ad0a8: lui   a0, 0x0
 	ldc.i4.s 0
 	stloc.1
-// 0x010aca64: 0x10aca64: sw    ra, 20(sp)
-// 0x010aca68: 0x10aca68: jal   0x100e788 addiu a0, a0, 18884
+// 0x010ad0ac: 0x10ad0ac: sw    ra, 20(sp)
+// 0x010ad0b0: 0x10ad0b0: jal   0x100e798 addiu a0, a0, 18884
 	ldloc.1
 	ldc.i4 18884
 	add
@@ -3559,63 +3559,63 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010aca70: 0x10aca70: bne   v0, zero, 0x10aca7c sll   zero, zero, 0
+// 0x010ad0b8: 0x10ad0b8: bne   v0, zero, 0x10ad0c4 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10aca7c
+	brtrue L_10ad0c4
 // --- basic block ---
-// 0x010aca78: 0x10aca78: addiu v0, zero, 10
+// 0x010ad0c0: 0x10ad0c0: addiu v0, zero, 10
 	ldc.i4.s 10
 	stloc 5
-L_10aca7c:
-// 0x010aca7c: 0x10aca7c: bltz  s0, 0x10acac0 sll   zero, zero, 0
+L_10ad0c4:
+// 0x010ad0c4: 0x10ad0c4: bltz  s0, 0x10ad108 sll   zero, zero, 0
 	ldloc 6
 	ldc.i4.s 0
-	blt L_10acac0
+	blt L_10ad108
 // --- basic block ---
-// 0x010aca84: 0x10aca84: div   s0, v0
+// 0x010ad0cc: 0x10ad0cc: div   s0, v0
 	ldloc 6
 	ldloc 5
 	div
 	stloc 10
-// 0x010aca88: 0x10aca88: mflo  lo
+// 0x010ad0d0: 0x10ad0d0: mflo  lo
 	ldloc 10
 	stloc 6
-// 0x010aca8c: 0x10aca8c: blez  s0, 0x10acac0 lui   v0, 0x90000
+// 0x010ad0d4: 0x10ad0d4: blez  s0, 0x10ad108 lui   v0, 0x90000
 	ldloc 6
 	ldc.i4 589824
 	stloc 5
 	ldc.i4.s 0
-	ble L_10acac0
+	ble L_10ad108
 // --- basic block ---
-// 0x010aca94: 0x10aca94: lw    v1, -32428(v0)
+// 0x010ad0dc: 0x10ad0dc: lw    v1, -31964(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldelem.i4
 	stloc 7
-// 0x010aca98: 0x10aca98: sll   zero, zero, 0
-// 0x010aca9c: 0x10aca9c: addu  v1, s0, v1
+// 0x010ad0e0: 0x10ad0e0: sll   zero, zero, 0
+// 0x010ad0e4: 0x10ad0e4: addu  v1, s0, v1
 	ldloc 6
 	ldloc 7
 	add
 	stloc 7
-// 0x010acaa0: 0x10acaa0: addu  a0, v1, zero
+// 0x010ad0e8: 0x10ad0e8: addu  a0, v1, zero
 	ldloc 7
 	stloc.1
-// 0x010acaa4: 0x10acaa4: jal   0x10aca1c sw    v1, -32428(v0)
+// 0x010ad0ec: 0x10ad0ec: jal   0x10ad064 sw    v1, -31964(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldloc 7
 	stelem.i4
@@ -3624,41 +3624,41 @@ L_10aca7c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::editor_points_set_saved_new_points_10aca1c(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::editor_points_set_saved_new_points_10ad064(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acaac: 0x10acaac: lui   v0, 0x90000
+// 0x010ad0f4: 0x10ad0f4: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010acab0: 0x10acab0: lw    v1, -32420(v0)
+// 0x010ad0f8: 0x10ad0f8: lw    v1, -31956(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8105
+	ldc.i4 -7989
 	add
 	ldelem.i4
 	stloc 7
-// 0x010acab4: 0x10acab4: sll   zero, zero, 0
-// 0x010acab8: 0x10acab8: addu  s0, s0, v1
+// 0x010ad0fc: 0x10ad0fc: sll   zero, zero, 0
+// 0x010ad100: 0x10ad100: addu  s0, s0, v1
 	ldloc 6
 	ldloc 7
 	add
 	stloc 6
-// 0x010acabc: 0x10acabc: sw    s0, -32420(v0)
+// 0x010ad104: 0x10ad104: sw    s0, -31956(v0)
 	ldloc 8
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8105
+	ldc.i4 -7989
 	add
 	ldloc 6
 	stelem.i4
-L_10acac0:
-// 0x010acac0: 0x10acac0: lw    ra, 20(sp)
-// 0x010acac4: 0x10acac4: lw    s0, 16(sp)
+L_10ad108:
+// 0x010ad108: 0x10ad108: lw    ra, 20(sp)
+// 0x010ad10c: 0x10ad10c: lw    s0, 16(sp)
 	ldloc 8
 	ldloc.0
 	ldc.i4.2
@@ -3667,7 +3667,7 @@ L_10acac0:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010acac8: 0x10acac8: jr    ra addiu sp, sp, 24
+// 0x010ad110: 0x10ad110: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3679,7 +3679,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_points_add_new_points_10acad0(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_add_new_points_10ad118(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v1,int32 v0,int32[] mem,int32 ra)
@@ -3714,38 +3714,38 @@ __CIBYL_function_return:
 	stloc 7
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010acad0: 0x10acad0: lui   v0, 0x90000
+// 0x010ad118: 0x10ad118: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 6
-// 0x010acad4: 0x10acad4: lw    v1, -32428(v0)
+// 0x010ad11c: 0x10ad11c: lw    v1, -31964(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldelem.i4
 	stloc 5
-// 0x010acad8: 0x10acad8: addiu sp, sp, -24
+// 0x010ad120: 0x10ad120: addiu sp, sp, -24
 	ldloc.0
 	ldc.i4.s -24
 	add
 	stloc.0
-// 0x010acadc: 0x10acadc: addu  v1, a0, v1
+// 0x010ad124: 0x10ad124: addu  v1, a0, v1
 	ldloc.1
 	ldloc 5
 	add
 	stloc 5
-// 0x010acae0: 0x10acae0: addu  a0, v1, zero
+// 0x010ad128: 0x10ad128: addu  a0, v1, zero
 	ldloc 5
 	stloc.1
-// 0x010acae4: 0x10acae4: sw    ra, 20(sp)
-// 0x010acae8: 0x10acae8: jal   0x10aca1c sw    v1, -32428(v0)
+// 0x010ad12c: 0x10ad12c: sw    ra, 20(sp)
+// 0x010ad130: 0x10ad130: jal   0x10ad064 sw    v1, -31964(v0)
 	ldloc 7
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldloc 5
 	stelem.i4
@@ -3754,14 +3754,14 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::editor_points_set_saved_new_points_10aca1c(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::editor_points_set_saved_new_points_10ad064(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 5
 	stloc 6
 // --- basic block ---
-// 0x010acaf0: 0x10acaf0: lw    ra, 20(sp)
-// 0x010acaf4: 0x10acaf4: sll   zero, zero, 0
-// 0x010acaf8: 0x10acaf8: jr    ra addiu sp, sp, 24
+// 0x010ad138: 0x10ad138: lw    ra, 20(sp)
+// 0x010ad13c: 0x10ad13c: sll   zero, zero, 0
+// 0x010ad140: 0x10ad140: jr    ra addiu sp, sp, 24
 	ldloc.0
 	ldc.i4.s 24
 	add
@@ -3773,7 +3773,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 editor_points_set_old_points_10acb00(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_set_old_points_10ad148(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32[] mem,int32 v1,int32 s0,int32 s1,int32 s2,int32 s3,int32 ra)
@@ -3820,12 +3820,12 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010acb00: 0x10acb00: addiu sp, sp, -48
+// 0x010ad148: 0x10ad148: addiu sp, sp, -48
 	ldloc.0
 	ldc.i4.s -48
 	add
 	stloc.0
-// 0x010acb04: 0x10acb04: sw    s2, 36(sp)
+// 0x010ad14c: 0x10ad14c: sw    s2, 36(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -3834,10 +3834,10 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010acb08: 0x10acb08: lui   s2, 0x0
+// 0x010ad150: 0x10ad150: lui   s2, 0x0
 	ldc.i4.s 0
 	stloc 10
-// 0x010acb0c: 0x10acb0c: sw    s1, 32(sp)
+// 0x010ad154: 0x10ad154: sw    s1, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -3846,15 +3846,15 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010acb10: 0x10acb10: addu  s1, a0, zero
+// 0x010ad158: 0x10ad158: addu  s1, a0, zero
 	ldloc.1
 	stloc 9
-// 0x010acb14: 0x10acb14: addiu a0, s2, 18820
+// 0x010ad15c: 0x10ad15c: addiu a0, s2, 18820
 	ldloc 10
 	ldc.i4 18820
 	add
 	stloc.1
-// 0x010acb18: 0x10acb18: sw    s0, 28(sp)
+// 0x010ad160: 0x10ad160: sw    s0, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -3863,8 +3863,8 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x010acb1c: 0x10acb1c: sw    ra, 44(sp)
-// 0x010acb20: 0x10acb20: sw    s3, 40(sp)
+// 0x010ad164: 0x10ad164: sw    ra, 44(sp)
+// 0x010ad168: 0x10ad168: sw    s3, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -3873,7 +3873,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x010acb24: 0x10acb24: jal   0x100e788 addu  s0, a1, zero
+// 0x010ad16c: 0x10ad16c: jal   0x100e798 addu  s0, a1, zero
 	ldloc.2
 	stloc 8
 	ldloc.0
@@ -3881,19 +3881,19 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb2c: 0x10acb2c: beq   v0, s1, 0x10acbc0 lui   s3, 0x0
+// 0x010ad174: 0x10ad174: beq   v0, s1, 0x10ad208 lui   s3, 0x0
 	ldloc 5
 	ldloc 9
 	ldc.i4.s 0
 	stloc 11
-	beq  L_10acbc0
+	beq  L_10ad208
 // --- basic block ---
-// 0x010acb34: 0x10acb34: jal   0x100e788 addiu a0, s3, 18868
+// 0x010ad17c: 0x10ad17c: jal   0x100e798 addiu a0, s3, 18868
 	ldloc 11
 	ldc.i4 18868
 	add
@@ -3903,26 +3903,26 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb3c: 0x10acb3c: slt   v0, v0, s0
+// 0x010ad184: 0x10ad184: slt   v0, v0, s0
 	ldloc 5
 	ldloc 8
 	clt
 	stloc 5
-// 0x010acb40: 0x10acb40: beq   v0, zero, 0x10acb94 lui   a0, 0x0
+// 0x010ad188: 0x10ad188: beq   v0, zero, 0x10ad1dc lui   a0, 0x0
 	ldloc 5
 	ldc.i4.s 0
 	stloc.1
-	brfalse L_10acb94
+	brfalse L_10ad1dc
 // --- basic block ---
-// 0x010acb48: 0x10acb48: addu  a1, s0, zero
+// 0x010ad190: 0x10ad190: addu  a1, s0, zero
 	ldloc 8
 	stloc.2
-// 0x010acb4c: 0x10acb4c: jal   0x100e610 addiu a0, a0, 18836
+// 0x010ad194: 0x10ad194: jal   0x100e620 addiu a0, a0, 18836
 	ldloc.1
 	ldc.i4 18836
 	add
@@ -3932,12 +3932,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_integer_100e610(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_integer_100e620(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb54: 0x10acb54: jal   0x100ea50 addu  a0, zero, zero
+// 0x010ad19c: 0x10ad19c: jal   0x100ea60 addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -3945,12 +3945,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_save_100ea50(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_save_100ea60(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb5c: 0x10acb5c: jal   0x10aca1c addu  a0, zero, zero
+// 0x010ad1a4: 0x10ad1a4: jal   0x10ad064 addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -3958,28 +3958,28 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::editor_points_set_saved_new_points_10aca1c(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::editor_points_set_saved_new_points_10ad064(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb64: 0x10acb64: jal   0x10ac9dc sll   zero, zero, 0
+// 0x010ad1ac: 0x10ad1ac: jal   0x10ad024 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::set_last_points_update_time_10ac9dc(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::set_last_points_update_time_10ad024(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb6c: 0x10acb6c: addiu a0, s2, 18820
+// 0x010ad1b4: 0x10ad1b4: addiu a0, s2, 18820
 	ldloc 10
 	ldc.i4 18820
 	add
 	stloc.1
-// 0x010acb70: 0x10acb70: jal   0x100e610 addu  a1, s1, zero
+// 0x010ad1b8: 0x10ad1b8: jal   0x100e620 addu  a1, s1, zero
 	ldloc 9
 	stloc.2
 	ldloc.0
@@ -3987,12 +3987,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_set_integer_100e610(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_set_integer_100e620(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb78: 0x10acb78: jal   0x100ea50 addu  a0, zero, zero
+// 0x010ad1c0: 0x10ad1c0: jal   0x100ea60 addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
 	ldloc.0
@@ -4000,39 +4000,39 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_save_100ea50(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_save_100ea60(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb80: 0x10acb80: lui   v0, 0x90000
+// 0x010ad1c8: 0x10ad1c8: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010acb84: 0x10acb84: sw    s1, -32424(v0)
+// 0x010ad1cc: 0x10ad1cc: sw    s1, -31960(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8106
+	ldc.i4 -7990
 	add
 	ldloc 9
 	stelem.i4
-// 0x010acb88: 0x10acb88: lui   v0, 0x90000
+// 0x010ad1d0: 0x10ad1d0: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010acb8c: 0x10acb8c: j	 0x10acbc0 sw    zero, -32428(v0)
+// 0x010ad1d4: 0x10ad1d4: j	 0x10ad208 sw    zero, -31964(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldc.i4.s 0
 	stelem.i4
-	br L_10acbc0
+	br L_10ad208
 // --- basic block ---
-L_10acb94:
-// 0x010acb94: 0x10acb94: jal   0x100e788 addiu a0, s3, 18868
+L_10ad1dc:
+// 0x010ad1dc: 0x10ad1dc: jal   0x100e798 addiu a0, s3, 18868
 	ldloc 11
 	ldc.i4 18868
 	add
@@ -4042,34 +4042,34 @@ L_10acb94:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010acb9c: 0x10acb9c: lui   a1, 0x20000
+// 0x010ad1e4: 0x10ad1e4: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010acba0: 0x10acba0: lui   a3, 0x20000
+// 0x010ad1e8: 0x10ad1e8: lui   a3, 0x20000
 	ldc.i4 131072
 	stloc 4
-// 0x010acba4: 0x10acba4: addiu a1, a1, 16716
+// 0x010ad1ec: 0x10ad1ec: addiu a1, a1, 17176
 	ldloc.2
-	ldc.i4 16716
+	ldc.i4 17176
 	add
 	stloc.2
-// 0x010acba8: 0x10acba8: addiu a3, a3, 16752
+// 0x010ad1f0: 0x10ad1f0: addiu a3, a3, 17212
 	ldloc 4
-	ldc.i4 16752
+	ldc.i4 17212
 	add
 	stloc 4
-// 0x010acbac: 0x10acbac: addiu a0, zero, 1
+// 0x010ad1f4: 0x10ad1f4: addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
-// 0x010acbb0: 0x10acbb0: addiu a2, zero, 200
+// 0x010ad1f8: 0x10ad1f8: addiu a2, zero, 200
 	ldc.i4 200
 	stloc.3
-// 0x010acbb4: 0x10acbb4: sw    v0, 16(sp)
+// 0x010ad1fc: 0x10ad1fc: sw    v0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4078,7 +4078,7 @@ L_10acb94:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010acbb8: 0x10acbb8: jal   0x100449c sw    s0, 20(sp)
+// 0x010ad200: 0x10ad200: jal   0x100449c sw    s0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4097,9 +4097,9 @@ L_10acb94:
 	stloc 7
 	stloc 5
 // --- basic block ---
-L_10acbc0:
-// 0x010acbc0: 0x10acbc0: lw    ra, 44(sp)
-// 0x010acbc4: 0x10acbc4: lw    s3, 40(sp)
+L_10ad208:
+// 0x010ad208: 0x10ad208: lw    ra, 44(sp)
+// 0x010ad20c: 0x10ad20c: lw    s3, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4108,7 +4108,7 @@ L_10acbc0:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010acbc8: 0x10acbc8: lw    s2, 36(sp)
+// 0x010ad210: 0x10ad210: lw    s2, 36(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4117,7 +4117,7 @@ L_10acbc0:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010acbcc: 0x10acbcc: lw    s1, 32(sp)
+// 0x010ad214: 0x10ad214: lw    s1, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4126,7 +4126,7 @@ L_10acbc0:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010acbd0: 0x10acbd0: lw    s0, 28(sp)
+// 0x010ad218: 0x10ad218: lw    s0, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -4135,7 +4135,7 @@ L_10acbc0:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010acbd4: 0x10acbd4: jr    ra addiu sp, sp, 48
+// 0x010ad21c: 0x10ad21c: jr    ra addiu sp, sp, 48
 	ldloc.0
 	ldc.i4.s 48
 	add
@@ -4147,7 +4147,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_points_initialize_10acbdc(int32,int32,int32,int32,int32)
+.method public static int32 editor_points_initialize_10ad224(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32[] mem,int32 v0,int32 v1,int32 s1,int32 s2,int32 s0,int32 s3,int32 ra)
@@ -4194,12 +4194,12 @@ __CIBYL_function_return:
 	stloc 5
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010acbdc: 0x10acbdc: addiu sp, sp, -40
+// 0x010ad224: 0x10ad224: addiu sp, sp, -40
 	ldloc.0
 	ldc.i4.s -40
 	add
 	stloc.0
-// 0x010acbe0: 0x10acbe0: sw    s2, 28(sp)
+// 0x010ad228: 0x10ad228: sw    s2, 28(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4208,7 +4208,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010acbe4: 0x10acbe4: sw    s1, 24(sp)
+// 0x010ad22c: 0x10ad22c: sw    s1, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4217,13 +4217,13 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x010acbe8: 0x10acbe8: lui   s2, 0x10000
+// 0x010ad230: 0x10ad230: lui   s2, 0x10000
 	ldc.i4 65536
 	stloc 9
-// 0x010acbec: 0x10acbec: lui   s1, 0x10000
+// 0x010ad234: 0x10ad234: lui   s1, 0x10000
 	ldc.i4 65536
 	stloc 8
-// 0x010acbf0: 0x10acbf0: sw    s0, 20(sp)
+// 0x010ad238: 0x10ad238: sw    s0, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4232,10 +4232,10 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010acbf4: 0x10acbf4: lui   s0, 0x0
+// 0x010ad23c: 0x10ad23c: lui   s0, 0x0
 	ldc.i4.s 0
 	stloc 10
-// 0x010acbf8: 0x10acbf8: sw    s3, 32(sp)
+// 0x010ad240: 0x10ad240: sw    s3, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4244,26 +4244,26 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x010acbfc: 0x10acbfc: addiu a0, s2, 18248
+// 0x010ad244: 0x10ad244: addiu a0, s2, 19712
 	ldloc 9
-	ldc.i4 18248
+	ldc.i4 19712
 	add
 	stloc.1
-// 0x010acc00: 0x10acc00: addiu a1, s0, 18852
+// 0x010ad248: 0x10ad248: addiu a1, s0, 18852
 	ldloc 10
 	ldc.i4 18852
 	add
 	stloc.2
-// 0x010acc04: 0x10acc04: addiu a2, s1, -48
+// 0x010ad24c: 0x10ad24c: addiu a2, s1, -52
 	ldloc 8
-	ldc.i4.s -48
+	ldc.i4.s -52
 	add
 	stloc.3
-// 0x010acc08: 0x10acc08: lui   s3, 0x0
+// 0x010ad250: 0x10ad250: lui   s3, 0x0
 	ldc.i4.s 0
 	stloc 11
-// 0x010acc0c: 0x10acc0c: sw    ra, 36(sp)
-// 0x010acc10: 0x10acc10: jal   0x100edb0 addu  a3, zero, zero
+// 0x010ad254: 0x10ad254: sw    ra, 36(sp)
+// 0x010ad258: 0x10ad258: jal   0x100edc0 addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
 	ldloc.0
@@ -4271,27 +4271,27 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_declare_100edb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_declare_100edc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc18: 0x10acc18: addiu a0, s2, 18248
+// 0x010ad260: 0x10ad260: addiu a0, s2, 19712
 	ldloc 9
-	ldc.i4 18248
+	ldc.i4 19712
 	add
 	stloc.1
-// 0x010acc1c: 0x10acc1c: addiu a1, s3, 18820
+// 0x010ad264: 0x10ad264: addiu a1, s3, 18820
 	ldloc 11
 	ldc.i4 18820
 	add
 	stloc.2
-// 0x010acc20: 0x10acc20: addiu a2, s1, -48
+// 0x010ad268: 0x10ad268: addiu a2, s1, -52
 	ldloc 8
-	ldc.i4.s -48
+	ldc.i4.s -52
 	add
 	stloc.3
-// 0x010acc24: 0x10acc24: jal   0x100edb0 addu  a3, zero, zero
+// 0x010ad26c: 0x10ad26c: jal   0x100edc0 addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
 	ldloc.0
@@ -4299,30 +4299,30 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_declare_100edb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_declare_100edc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc2c: 0x10acc2c: lui   a1, 0x0
+// 0x010ad274: 0x10ad274: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x010acc30: 0x10acc30: addiu a0, s2, 18248
+// 0x010ad278: 0x10ad278: addiu a0, s2, 19712
 	ldloc 9
-	ldc.i4 18248
+	ldc.i4 19712
 	add
 	stloc.1
-// 0x010acc34: 0x10acc34: addiu a2, s1, -48
+// 0x010ad27c: 0x10ad27c: addiu a2, s1, -52
 	ldloc 8
-	ldc.i4.s -48
+	ldc.i4.s -52
 	add
 	stloc.3
-// 0x010acc38: 0x10acc38: addiu a1, a1, 18836
+// 0x010ad280: 0x10ad280: addiu a1, a1, 18836
 	ldloc.2
 	ldc.i4 18836
 	add
 	stloc.2
-// 0x010acc3c: 0x10acc3c: jal   0x100edb0 addu  a3, zero, zero
+// 0x010ad284: 0x10ad284: jal   0x100edc0 addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
 	ldloc.0
@@ -4330,30 +4330,30 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_declare_100edb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_declare_100edc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc44: 0x10acc44: lui   a1, 0x0
+// 0x010ad28c: 0x10ad28c: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x010acc48: 0x10acc48: addiu a0, s2, 18248
+// 0x010ad290: 0x10ad290: addiu a0, s2, 19712
 	ldloc 9
-	ldc.i4 18248
+	ldc.i4 19712
 	add
 	stloc.1
-// 0x010acc4c: 0x10acc4c: addiu a2, s1, -48
+// 0x010ad294: 0x10ad294: addiu a2, s1, -52
 	ldloc 8
-	ldc.i4.s -48
+	ldc.i4.s -52
 	add
 	stloc.3
-// 0x010acc50: 0x10acc50: addiu a1, a1, 18868
+// 0x010ad298: 0x10ad298: addiu a1, a1, 18868
 	ldloc.2
 	ldc.i4 18868
 	add
 	stloc.2
-// 0x010acc54: 0x10acc54: jal   0x100edb0 addu  a3, zero, zero
+// 0x010ad29c: 0x10ad29c: jal   0x100edc0 addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
 	ldloc.0
@@ -4361,36 +4361,36 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_declare_100edb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_declare_100edc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc5c: 0x10acc5c: lui   a1, 0x0
+// 0x010ad2a4: 0x10ad2a4: lui   a1, 0x0
 	ldc.i4.s 0
 	stloc.2
-// 0x010acc60: 0x10acc60: lui   a2, 0x10000
+// 0x010ad2a8: 0x10ad2a8: lui   a2, 0x10000
 	ldc.i4 65536
 	stloc.3
-// 0x010acc64: 0x10acc64: lui   a0, 0x10000
+// 0x010ad2ac: 0x10ad2ac: lui   a0, 0x10000
 	ldc.i4 65536
 	stloc.1
-// 0x010acc68: 0x10acc68: addiu a1, a1, 18884
+// 0x010ad2b0: 0x10ad2b0: addiu a1, a1, 18884
 	ldloc.2
 	ldc.i4 18884
 	add
 	stloc.2
-// 0x010acc6c: 0x10acc6c: addiu a2, a2, -30004
+// 0x010ad2b4: 0x10ad2b4: addiu a2, a2, -30004
 	ldloc.3
 	ldc.i4 -30004
 	add
 	stloc.3
-// 0x010acc70: 0x10acc70: addu  a3, zero, zero
+// 0x010ad2b8: 0x10ad2b8: addu  a3, zero, zero
 	ldc.i4.s 0
 	stloc 4
-// 0x010acc74: 0x10acc74: jal   0x100edb0 addiu a0, a0, 12560
+// 0x010ad2bc: 0x10ad2bc: jal   0x100edc0 addiu a0, a0, 12556
 	ldloc.1
-	ldc.i4 12560
+	ldc.i4 12556
 	add
 	stloc.1
 	ldloc.0
@@ -4398,12 +4398,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_declare_100edb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_declare_100edc0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc7c: 0x10acc7c: jal   0x100e788 addiu a0, s3, 18820
+// 0x010ad2c4: 0x10ad2c4: jal   0x100e798 addiu a0, s3, 18820
 	ldloc 11
 	ldc.i4 18820
 	add
@@ -4413,25 +4413,25 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc84: 0x10acc84: lui   v1, 0x90000
+// 0x010ad2cc: 0x10ad2cc: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010acc88: 0x10acc88: addiu a0, s0, 18852
+// 0x010ad2d0: 0x10ad2d0: addiu a0, s0, 18852
 	ldloc 10
 	ldc.i4 18852
 	add
 	stloc.1
-// 0x010acc8c: 0x10acc8c: jal   0x100e788 sw    v0, -32424(v1)
+// 0x010ad2d4: 0x10ad2d4: jal   0x100e798 sw    v0, -31960(v1)
 	ldloc 5
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8106
+	ldc.i4 -7990
 	add
 	ldloc 6
 	stelem.i4
@@ -4440,28 +4440,28 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl10::roadmap_config_get_integer_100e788(int32,int32,int32,int32,int32)
+	call int32 Cibyl10::roadmap_config_get_integer_100e798(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 6
 // --- basic block ---
-// 0x010acc94: 0x10acc94: lui   v1, 0x90000
+// 0x010ad2dc: 0x10ad2dc: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010acc98: 0x10acc98: lw    ra, 36(sp)
-// 0x010acc9c: 0x10acc9c: sw    v0, -32428(v1)
+// 0x010ad2e0: 0x10ad2e0: lw    ra, 36(sp)
+// 0x010ad2e4: 0x10ad2e4: sw    v0, -31964(v1)
 	ldloc 5
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8107
+	ldc.i4 -7991
 	add
 	ldloc 6
 	stelem.i4
-// 0x010acca0: 0x10acca0: lui   v0, 0x90000
+// 0x010ad2e8: 0x10ad2e8: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 6
-// 0x010acca4: 0x10acca4: lw    s3, 32(sp)
+// 0x010ad2ec: 0x10ad2ec: lw    s3, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4470,7 +4470,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010acca8: 0x10acca8: lw    s2, 28(sp)
+// 0x010ad2f0: 0x10ad2f0: lw    s2, 28(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4479,7 +4479,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010accac: 0x10accac: lw    s1, 24(sp)
+// 0x010ad2f4: 0x10ad2f4: lw    s1, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4488,7 +4488,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010accb0: 0x10accb0: lw    s0, 20(sp)
+// 0x010ad2f8: 0x10ad2f8: lw    s0, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4497,16 +4497,16 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010accb4: 0x10accb4: sw    zero, -32420(v0)
+// 0x010ad2fc: 0x10ad2fc: sw    zero, -31956(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
-	ldc.i4 -8105
+	ldc.i4 -7989
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010accb8: 0x10accb8: jr    ra addiu sp, sp, 40
+// 0x010ad300: 0x10ad300: jr    ra addiu sp, sp, 40
 	ldloc.0
 	ldc.i4.s 40
 	add
@@ -4518,7 +4518,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 editor_track_filter_get_current_10acccc(int32,int32,int32)
+.method public static int32 editor_track_filter_get_current_10ad314(int32,int32,int32)
 {
 .maxstack 5
 .locals init (int32 a0,int32 a1,int32 a2,int32 v1,int32[] mem,int32 v0,int32 ra)
@@ -4547,7 +4547,7 @@ __CIBYL_function_return:
 	stloc 4
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010acccc: 0x10acccc: lw    v1, 16(a0)
+// 0x010ad314: 0x10ad314: lw    v1, 16(a0)
 	ldloc 4
 	ldloc.0
 	ldc.i4.2
@@ -4556,14 +4556,14 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010accd0: 0x10accd0: sll   zero, zero, 0
-// 0x010accd4: 0x10accd4: bne   v1, zero, 0x10acd00 addu  v0, zero, zero
+// 0x010ad318: 0x10ad318: sll   zero, zero, 0
+// 0x010ad31c: 0x10ad31c: bne   v1, zero, 0x10ad348 addu  v0, zero, zero
 	ldloc.3
 	ldc.i4.s 0
 	stloc 5
-	brtrue L_10acd00
+	brtrue L_10ad348
 // --- basic block ---
-// 0x010accdc: 0x10accdc: lw    v1, 52(a0)
+// 0x010ad324: 0x10ad324: lw    v1, 52(a0)
 	ldloc 4
 	ldloc.0
 	ldc.i4.2
@@ -4572,17 +4572,17 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010acce0: 0x10acce0: addiu v0, zero, 1
+// 0x010ad328: 0x10ad328: addiu v0, zero, 1
 	ldc.i4.1
 	stloc 5
-// 0x010acce4: 0x10acce4: sw    v1, 0(a1)
+// 0x010ad32c: 0x10ad32c: sw    v1, 0(a1)
 	ldloc 4
 	ldloc.1
 	ldc.i4.2
 	shr.un
 	ldloc.3
 	stelem.i4
-// 0x010acce8: 0x10acce8: lw    v1, 56(a0)
+// 0x010ad330: 0x10ad330: lw    v1, 56(a0)
 	ldloc 4
 	ldloc.0
 	ldc.i4.2
@@ -4591,8 +4591,8 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010accec: 0x10accec: sll   zero, zero, 0
-// 0x010accf0: 0x10accf0: sw    v1, 4(a1)
+// 0x010ad334: 0x10ad334: sll   zero, zero, 0
+// 0x010ad338: 0x10ad338: sw    v1, 4(a1)
 	ldloc 4
 	ldloc.1
 	ldc.i4.2
@@ -4601,7 +4601,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010accf4: 0x10accf4: lw    v1, 40(a0)
+// 0x010ad33c: 0x10ad33c: lw    v1, 40(a0)
 	ldloc 4
 	ldloc.0
 	ldc.i4.2
@@ -4610,16 +4610,16 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010accf8: 0x10accf8: sll   zero, zero, 0
-// 0x010accfc: 0x10accfc: sw    v1, 0(a2)
+// 0x010ad340: 0x10ad340: sll   zero, zero, 0
+// 0x010ad344: 0x10ad344: sw    v1, 0(a2)
 	ldloc 4
 	ldloc.2
 	ldc.i4.2
 	shr.un
 	ldloc.3
 	stelem.i4
-L_10acd00:
-// 0x010acd00: 0x10acd00: jr    ra sll   zero, zero, 0
+L_10ad348:
+// 0x010ad348: 0x10ad348: jr    ra sll   zero, zero, 0
 	br __CIBYL_function_return
 __CIBYL_function_return:
 	ldloc.3
@@ -4627,7 +4627,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_track_filter_get_10acd08(int32,int32,int32,int32,int32)
+.method public static int32 editor_track_filter_get_10ad350(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32[] mem,int32 v1,int32 v0,int32 s0,int32 s3,int32 s1,int32 s2,int32 lo,int32 ra)
@@ -4677,12 +4677,12 @@ __CIBYL_function_return:
 	stloc 5
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010acd08: 0x10acd08: addiu sp, sp, -64
+// 0x010ad350: 0x10ad350: addiu sp, sp, -64
 	ldloc.0
 	ldc.i4.s -64
 	add
 	stloc.0
-// 0x010acd0c: 0x10acd0c: sw    s3, 56(sp)
+// 0x010ad354: 0x10ad354: sw    s3, 56(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4691,7 +4691,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010acd10: 0x10acd10: sw    s1, 48(sp)
+// 0x010ad358: 0x10ad358: sw    s1, 48(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4700,17 +4700,17 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010acd14: 0x10acd14: addiu s3, a0, 52
+// 0x010ad35c: 0x10ad35c: addiu s3, a0, 52
 	ldloc.1
 	ldc.i4.s 52
 	add
 	stloc 9
-// 0x010acd18: 0x10acd18: addiu s1, a0, 20
+// 0x010ad360: 0x10ad360: addiu s1, a0, 20
 	ldloc.1
 	ldc.i4.s 20
 	add
 	stloc 10
-// 0x010acd1c: 0x10acd1c: sw    s0, 44(sp)
+// 0x010ad364: 0x10ad364: sw    s0, 44(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4719,17 +4719,17 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x010acd20: 0x10acd20: addu  a1, s3, zero
+// 0x010ad368: 0x10ad368: addu  a1, s3, zero
 	ldloc 9
 	stloc.2
-// 0x010acd24: 0x10acd24: addu  s0, a0, zero
+// 0x010ad36c: 0x10ad36c: addu  s0, a0, zero
 	ldloc.1
 	stloc 8
-// 0x010acd28: 0x10acd28: addu  a0, s1, zero
+// 0x010ad370: 0x10ad370: addu  a0, s1, zero
 	ldloc 10
 	stloc.1
-// 0x010acd2c: 0x10acd2c: sw    ra, 60(sp)
-// 0x010acd30: 0x10acd30: jal   0x1008eb0 sw    s2, 52(sp)
+// 0x010ad374: 0x10ad374: sw    ra, 60(sp)
+// 0x010ad378: 0x10ad378: jal   0x1008ec0 sw    s2, 52(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4743,12 +4743,12 @@ __CIBYL_javamethod_begin:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl6::roadmap_math_distance_1008eb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl6::roadmap_math_distance_1008ec0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 7
 // --- basic block ---
-// 0x010acd38: 0x10acd38: lw    v1, 12(s0)
+// 0x010ad380: 0x10ad380: lw    v1, 12(s0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -4757,33 +4757,33 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010acd3c: 0x10acd3c: sll   zero, zero, 0
-// 0x010acd40: 0x10acd40: slt   v0, v0, v1
+// 0x010ad384: 0x10ad384: sll   zero, zero, 0
+// 0x010ad388: 0x10ad388: slt   v0, v0, v1
 	ldloc 7
 	ldloc 6
 	clt
 	stloc 7
-// 0x010acd44: 0x10acd44: beq   v0, zero, 0x10acd54 addiu s2, sp, 16
+// 0x010ad38c: 0x10ad38c: beq   v0, zero, 0x10ad39c addiu s2, sp, 16
 	ldloc 7
 	ldloc.0
 	ldc.i4.s 16
 	add
 	stloc 11
-	brfalse L_10acd54
+	brfalse L_10ad39c
 // --- basic block ---
-// 0x010acd4c: 0x10acd4c: j	 0x10acdf0 addu  s1, zero, zero
+// 0x010ad394: 0x10ad394: j	 0x10ad438 addu  s1, zero, zero
 	ldc.i4.s 0
 	stloc 10
-	br L_10acdf0
+	br L_10ad438
 // --- basic block ---
-L_10acd54:
-// 0x010acd54: 0x10acd54: addu  a1, s3, zero
+L_10ad39c:
+// 0x010ad39c: 0x10ad39c: addu  a1, s3, zero
 	ldloc 9
 	stloc.2
-// 0x010acd58: 0x10acd58: addu  a0, s2, zero
+// 0x010ad3a0: 0x10ad3a0: addu  a0, s2, zero
 	ldloc 11
 	stloc.1
-// 0x010acd5c: 0x10acd5c: jal   0x1001800 addiu a2, zero, 20
+// 0x010ad3a4: 0x10ad3a4: jal   0x1001800 addiu a2, zero, 20
 	ldc.i4.s 20
 	stloc.3
 	ldloc.1
@@ -4795,13 +4795,13 @@ L_10acd54:
 	stloc 6
 	stloc 7
 // --- basic block ---
-// 0x010acd64: 0x10acd64: j	 0x10acdc0 addiu s3, zero, 2
+// 0x010ad3ac: 0x10ad3ac: j	 0x10ad408 addiu s3, zero, 2
 	ldc.i4.2
 	stloc 9
-	br L_10acdc0
+	br L_10ad408
 // --- basic block ---
-L_10acd6c:
-// 0x010acd6c: 0x10acd6c: lw    v1, 16(sp)
+L_10ad3b4:
+// 0x010ad3b4: 0x10ad3b4: lw    v1, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4810,7 +4810,7 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010acd70: 0x10acd70: lw    a0, 20(s0)
+// 0x010ad3b8: 0x10ad3b8: lw    a0, 20(s0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -4819,7 +4819,7 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010acd74: 0x10acd74: lw    a2, 24(s0)
+// 0x010ad3bc: 0x10ad3bc: lw    a2, 24(s0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -4828,17 +4828,17 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010acd78: 0x10acd78: addu  a0, a0, v1
+// 0x010ad3c0: 0x10ad3c0: addu  a0, a0, v1
 	ldloc.1
 	ldloc 6
 	add
 	stloc.1
-// 0x010acd7c: 0x10acd7c: div   a0, s3
+// 0x010ad3c4: 0x10ad3c4: div   a0, s3
 	ldloc.1
 	ldloc 9
 	div
 	stloc 12
-// 0x010acd80: 0x10acd80: lw    v1, 20(sp)
+// 0x010ad3c8: 0x10ad3c8: lw    v1, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4847,7 +4847,7 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010acd84: 0x10acd84: lw    v0, 28(s0)
+// 0x010ad3cc: 0x10ad3cc: lw    v0, 28(s0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -4856,12 +4856,12 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010acd88: 0x10acd88: addu  v1, a2, v1
+// 0x010ad3d0: 0x10ad3d0: addu  v1, a2, v1
 	ldloc.3
 	ldloc 6
 	add
 	stloc 6
-// 0x010acd8c: 0x10acd8c: lw    a1, 24(sp)
+// 0x010ad3d4: 0x10ad3d4: lw    a1, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4870,16 +4870,16 @@ L_10acd6c:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010acd90: 0x10acd90: sll   zero, zero, 0
-// 0x010acd94: 0x10acd94: addu  v0, v0, a1
+// 0x010ad3d8: 0x10ad3d8: sll   zero, zero, 0
+// 0x010ad3dc: 0x10ad3dc: addu  v0, v0, a1
 	ldloc 7
 	ldloc.2
 	add
 	stloc 7
-// 0x010acd98: 0x10acd98: mflo  lo
+// 0x010ad3e0: 0x10ad3e0: mflo  lo
 	ldloc 12
 	stloc.1
-// 0x010acd9c: 0x10acd9c: sw    a0, 16(sp)
+// 0x010ad3e4: 0x10ad3e4: sw    a0, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4888,16 +4888,16 @@ L_10acd6c:
 	add
 	ldloc.1
 	stelem.i4
-// 0x010acda0: 0x10acda0: sll   zero, zero, 0
-// 0x010acda4: 0x10acda4: div   v1, s3
+// 0x010ad3e8: 0x10ad3e8: sll   zero, zero, 0
+// 0x010ad3ec: 0x10ad3ec: div   v1, s3
 	ldloc 6
 	ldloc 9
 	div
 	stloc 12
-// 0x010acda8: 0x10acda8: mflo  lo
+// 0x010ad3f0: 0x10ad3f0: mflo  lo
 	ldloc 12
 	stloc 6
-// 0x010acdac: 0x10acdac: sw    v1, 20(sp)
+// 0x010ad3f4: 0x10ad3f4: sw    v1, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4906,16 +4906,16 @@ L_10acd6c:
 	add
 	ldloc 6
 	stelem.i4
-// 0x010acdb0: 0x10acdb0: sll   zero, zero, 0
-// 0x010acdb4: 0x10acdb4: div   v0, s3
+// 0x010ad3f8: 0x10ad3f8: sll   zero, zero, 0
+// 0x010ad3fc: 0x10ad3fc: div   v0, s3
 	ldloc 7
 	ldloc 9
 	div
 	stloc 12
-// 0x010acdb8: 0x10acdb8: mflo  lo
+// 0x010ad400: 0x10ad400: mflo  lo
 	ldloc 12
 	stloc 7
-// 0x010acdbc: 0x10acdbc: sw    v0, 24(sp)
+// 0x010ad404: 0x10ad404: sw    v0, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4924,11 +4924,11 @@ L_10acd6c:
 	add
 	ldloc 7
 	stelem.i4
-L_10acdc0:
-// 0x010acdc0: 0x10acdc0: addu  a0, s1, zero
+L_10ad408:
+// 0x010ad408: 0x10ad408: addu  a0, s1, zero
 	ldloc 10
 	stloc.1
-// 0x010acdc4: 0x10acdc4: jal   0x1008eb0 addu  a1, s2, zero
+// 0x010ad40c: 0x10ad40c: jal   0x1008ec0 addu  a1, s2, zero
 	ldloc 11
 	stloc.2
 	ldloc.0
@@ -4936,12 +4936,12 @@ L_10acdc0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl6::roadmap_math_distance_1008eb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl6::roadmap_math_distance_1008ec0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 6
 	stloc 7
 // --- basic block ---
-// 0x010acdcc: 0x10acdcc: lw    v1, 12(s0)
+// 0x010ad414: 0x10ad414: lw    v1, 12(s0)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -4950,29 +4950,29 @@ L_10acdc0:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010acdd0: 0x10acdd0: sll   zero, zero, 0
-// 0x010acdd4: 0x10acdd4: sll   v1, v1, 1
+// 0x010ad418: 0x10ad418: sll   zero, zero, 0
+// 0x010ad41c: 0x10ad41c: sll   v1, v1, 1
 	ldloc 6
 	ldc.i4.1
 	shl
 	stloc 6
-// 0x010acdd8: 0x10acdd8: slt   v0, v0, v1
+// 0x010ad420: 0x10ad420: slt   v0, v0, v1
 	ldloc 7
 	ldloc 6
 	clt
 	stloc 7
-// 0x010acddc: 0x10acddc: beq   v0, zero, 0x10acd6c addiu a0, s0, 20
+// 0x010ad424: 0x10ad424: beq   v0, zero, 0x10ad3b4 addiu a0, s0, 20
 	ldloc 7
 	ldloc 8
 	ldc.i4.s 20
 	add
 	stloc.1
-	brfalse L_10acd6c
+	brfalse L_10ad3b4
 // --- basic block ---
-// 0x010acde4: 0x10acde4: addu  a1, s2, zero
+// 0x010ad42c: 0x10ad42c: addu  a1, s2, zero
 	ldloc 11
 	stloc.2
-// 0x010acde8: 0x10acde8: jal   0x1001800 addiu a2, zero, 20
+// 0x010ad430: 0x10ad430: jal   0x1001800 addiu a2, zero, 20
 	ldc.i4.s 20
 	stloc.3
 	ldloc.1
@@ -4984,12 +4984,12 @@ L_10acdc0:
 	stloc 6
 	stloc 7
 // --- basic block ---
-L_10acdf0:
-// 0x010acdf0: 0x10acdf0: lw    ra, 60(sp)
-// 0x010acdf4: 0x10acdf4: addu  v0, s1, zero
+L_10ad438:
+// 0x010ad438: 0x10ad438: lw    ra, 60(sp)
+// 0x010ad43c: 0x10ad43c: addu  v0, s1, zero
 	ldloc 10
 	stloc 7
-// 0x010acdf8: 0x10acdf8: lw    s3, 56(sp)
+// 0x010ad440: 0x10ad440: lw    s3, 56(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -4998,7 +4998,7 @@ L_10acdf0:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010acdfc: 0x10acdfc: lw    s2, 52(sp)
+// 0x010ad444: 0x10ad444: lw    s2, 52(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5007,7 +5007,7 @@ L_10acdf0:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010ace00: 0x10ace00: lw    s1, 48(sp)
+// 0x010ad448: 0x10ad448: lw    s1, 48(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5016,7 +5016,7 @@ L_10acdf0:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ace04: 0x10ace04: lw    s0, 44(sp)
+// 0x010ad44c: 0x10ad44c: lw    s0, 44(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5025,7 +5025,7 @@ L_10acdf0:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010ace08: 0x10ace08: jr    ra addiu sp, sp, 64
+// 0x010ad450: 0x10ad450: jr    ra addiu sp, sp, 64
 	ldloc.0
 	ldc.i4.s 64
 	add
@@ -5037,7 +5037,7 @@ __CIBYL_function_return:
 	ldloc 7
 	ret
 }
-.method public static int32 editor_track_filter_add_10ace10(int32,int32,int32,int32,int32)
+.method public static int32 editor_track_filter_add_10ad458(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32[] mem,int32 s0,int32 v1,int32 s2,int32 s1,int32 s3,int32 s4,int32 lo,int32 ra)
@@ -5090,7 +5090,7 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ace10: 0x10ace10: lw    v0, 16(a0)
+// 0x010ad458: 0x10ad458: lw    v0, 16(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -5099,12 +5099,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ace14: 0x10ace14: addiu sp, sp, -40
+// 0x010ad45c: 0x10ad45c: addiu sp, sp, -40
 	ldloc.0
 	ldc.i4.s -40
 	add
 	stloc.0
-// 0x010ace18: 0x10ace18: sw    s3, 28(sp)
+// 0x010ad460: 0x10ad460: sw    s3, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5113,7 +5113,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x010ace1c: 0x10ace1c: sw    s2, 24(sp)
+// 0x010ad464: 0x10ad464: sw    s2, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5122,7 +5122,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ace20: 0x10ace20: sw    s1, 20(sp)
+// 0x010ad468: 0x10ad468: sw    s1, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5131,7 +5131,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010ace24: 0x10ace24: sw    s0, 16(sp)
+// 0x010ad46c: 0x10ad46c: sw    s0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5140,8 +5140,8 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ace28: 0x10ace28: sw    ra, 36(sp)
-// 0x010ace2c: 0x10ace2c: sw    s4, 32(sp)
+// 0x010ad470: 0x10ad470: sw    ra, 36(sp)
+// 0x010ad474: 0x10ad474: sw    s4, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5150,22 +5150,22 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 12
 	stelem.i4
-// 0x010ace30: 0x10ace30: addu  s0, a0, zero
+// 0x010ad478: 0x10ad478: addu  s0, a0, zero
 	ldloc.1
 	stloc 7
-// 0x010ace34: 0x10ace34: addu  s2, a1, zero
+// 0x010ad47c: 0x10ad47c: addu  s2, a1, zero
 	ldloc.2
 	stloc 9
-// 0x010ace38: 0x10ace38: addu  s3, a2, zero
+// 0x010ad480: 0x10ad480: addu  s3, a2, zero
 	ldloc.3
 	stloc 11
-// 0x010ace3c: 0x10ace3c: beq   v0, zero, 0x10ace80 addu  s1, a3, zero
+// 0x010ad484: 0x10ad484: beq   v0, zero, 0x10ad4c8 addu  s1, a3, zero
 	ldloc 5
 	ldloc 4
 	stloc 10
-	brfalse L_10ace80
+	brfalse L_10ad4c8
 // --- basic block ---
-// 0x010ace44: 0x10ace44: sw    zero, 16(a0)
+// 0x010ad48c: 0x10ad48c: sw    zero, 16(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -5174,7 +5174,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010ace48: 0x10ace48: lw    v0, 16(a3)
+// 0x010ad490: 0x10ad490: lw    v0, 16(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
@@ -5183,15 +5183,15 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ace4c: 0x10ace4c: addu  a1, a3, zero
+// 0x010ad494: 0x10ad494: addu  a1, a3, zero
 	ldloc 4
 	stloc.2
-// 0x010ace50: 0x10ace50: addiu a0, a0, 20
+// 0x010ad498: 0x10ad498: addiu a0, a0, 20
 	ldloc.1
 	ldc.i4.s 20
 	add
 	stloc.1
-// 0x010ace54: 0x10ace54: sw    v0, 48(s0)
+// 0x010ad49c: 0x10ad49c: sw    v0, 48(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5200,7 +5200,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ace58: 0x10ace58: jal   0x1001800 addiu a2, zero, 20
+// 0x010ad4a0: 0x10ad4a0: jal   0x1001800 addiu a2, zero, 20
 	ldc.i4.s 20
 	stloc.3
 	ldloc.1
@@ -5212,7 +5212,7 @@ __CIBYL_javamethod_begin:
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ace60: 0x10ace60: sw    s2, 40(s0)
+// 0x010ad4a8: 0x10ad4a8: sw    s2, 40(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5221,7 +5221,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ace64: 0x10ace64: sw    s2, 44(s0)
+// 0x010ad4ac: 0x10ad4ac: sw    s2, 44(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5230,15 +5230,15 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ace68: 0x10ace68: addiu a0, s0, 52
+// 0x010ad4b0: 0x10ad4b0: addiu a0, s0, 52
 	ldloc 7
 	ldc.i4.s 52
 	add
 	stloc.1
-// 0x010ace6c: 0x10ace6c: addu  a1, s1, zero
+// 0x010ad4b4: 0x10ad4b4: addu  a1, s1, zero
 	ldloc 10
 	stloc.2
-// 0x010ace70: 0x10ace70: jal   0x1001800 addiu a2, zero, 20
+// 0x010ad4b8: 0x10ad4b8: jal   0x1001800 addiu a2, zero, 20
 	ldc.i4.s 20
 	stloc.3
 	ldloc.1
@@ -5250,13 +5250,13 @@ __CIBYL_javamethod_begin:
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010ace78: 0x10ace78: j	 0x10ad014 addu  v0, zero, zero
+// 0x010ad4c0: 0x10ad4c0: j	 0x10ad65c addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc 5
-	br L_10ad014
+	br L_10ad65c
 // --- basic block ---
-L_10ace80:
-// 0x010ace80: 0x10ace80: lw    v1, 40(a0)
+L_10ad4c8:
+// 0x010ad4c8: 0x10ad4c8: lw    v1, 40(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -5265,7 +5265,7 @@ L_10ace80:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010ace84: 0x10ace84: lw    v0, 8(a0)
+// 0x010ad4cc: 0x10ad4cc: lw    v0, 8(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -5274,38 +5274,38 @@ L_10ace80:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ace88: 0x10ace88: sll   zero, zero, 0
-// 0x010ace8c: 0x10ace8c: addu  a0, v0, v1
+// 0x010ad4d0: 0x10ad4d0: sll   zero, zero, 0
+// 0x010ad4d4: 0x10ad4d4: addu  a0, v0, v1
 	ldloc 5
 	ldloc 8
 	add
 	stloc.1
-// 0x010ace90: 0x10ace90: slt   a0, a0, a1
+// 0x010ad4d8: 0x10ad4d8: slt   a0, a0, a1
 	ldloc.1
 	ldloc.2
 	clt
 	stloc.1
-// 0x010ace94: 0x10ace94: bne   a0, zero, 0x10acf44 sll   zero, zero, 0
+// 0x010ad4dc: 0x10ad4dc: bne   a0, zero, 0x10ad58c sll   zero, zero, 0
 	ldloc.1
-	brtrue L_10acf44
+	brtrue L_10ad58c
 // --- basic block ---
-// 0x010ace9c: 0x10ace9c: subu  v0, v1, v0
+// 0x010ad4e4: 0x10ad4e4: subu  v0, v1, v0
 	ldloc 8
 	ldloc 5
 	sub
 	stloc 5
-// 0x010acea0: 0x10acea0: slt   v0, a1, v0
+// 0x010ad4e8: 0x10ad4e8: slt   v0, a1, v0
 	ldloc.2
 	ldloc 5
 	clt
 	stloc 5
-// 0x010acea4: 0x10acea4: bne   v0, zero, 0x10acf48 addiu v0, zero, 1
+// 0x010ad4ec: 0x10ad4ec: bne   v0, zero, 0x10ad590 addiu v0, zero, 1
 	ldloc 5
 	ldc.i4.1
 	stloc 5
-	brtrue L_10acf48
+	brtrue L_10ad590
 // --- basic block ---
-// 0x010aceac: 0x10aceac: sw    a1, 40(s0)
+// 0x010ad4f4: 0x10ad4f4: sw    a1, 40(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5314,7 +5314,7 @@ L_10ace80:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010aceb0: 0x10aceb0: lw    v1, 24(s0)
+// 0x010ad4f8: 0x10ad4f8: lw    v1, 24(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5323,7 +5323,7 @@ L_10ace80:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010aceb4: 0x10aceb4: lw    v0, 4(a3)
+// 0x010ad4fc: 0x10ad4fc: lw    v0, 4(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
@@ -5332,15 +5332,15 @@ L_10ace80:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010aceb8: 0x10aceb8: sll   zero, zero, 0
-// 0x010acebc: 0x10acebc: bne   v1, v0, 0x10aced8 lui   v0, 0x20000
+// 0x010ad500: 0x10ad500: sll   zero, zero, 0
+// 0x010ad504: 0x10ad504: bne   v1, v0, 0x10ad520 lui   v0, 0x20000
 	ldloc 8
 	ldloc 5
 	ldc.i4 131072
 	stloc 5
-	bne.un L_10aced8
+	bne.un L_10ad520
 // --- basic block ---
-// 0x010acec4: 0x10acec4: lw    v1, 20(s0)
+// 0x010ad50c: 0x10ad50c: lw    v1, 20(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5349,41 +5349,41 @@ L_10ace80:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010acec8: 0x10acec8: lw    v0, 0(a3)
+// 0x010ad510: 0x10ad510: lw    v0, 0(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010acecc: 0x10acecc: sll   zero, zero, 0
-// 0x010aced0: 0x10aced0: beq   v1, v0, 0x10ad010 lui   v0, 0x20000
+// 0x010ad514: 0x10ad514: sll   zero, zero, 0
+// 0x010ad518: 0x10ad518: beq   v1, v0, 0x10ad658 lui   v0, 0x20000
 	ldloc 8
 	ldloc 5
 	ldc.i4 131072
 	stloc 5
-	beq  L_10ad010
+	beq  L_10ad658
 // --- basic block ---
-L_10aced8:
-// 0x010aced8: 0x10aced8: lw    a3, 23924(v0)
+L_10ad520:
+// 0x010ad520: 0x10ad520: lw    a3, 24388(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 5981
+	ldc.i4 6097
 	add
 	ldelem.i4
 	stloc 4
-// 0x010acedc: 0x10acedc: lw    a2, 23920(v0)
+// 0x010ad524: 0x10ad524: lw    a2, 24384(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 5980
+	ldc.i4 6096
 	add
 	ldelem.i4
 	stloc.3
-// 0x010acee0: 0x10acee0: lw    a1, 20(s3)
+// 0x010ad528: 0x10ad528: lw    a1, 20(s3)
 	ldloc 6
 	ldloc 11
 	ldc.i4.2
@@ -5392,7 +5392,7 @@ L_10aced8:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010acee4: 0x10acee4: lw    a0, 16(s3)
+// 0x010ad52c: 0x10ad52c: lw    a0, 16(s3)
 	ldloc 6
 	ldloc 11
 	ldc.i4.2
@@ -5401,33 +5401,33 @@ L_10aced8:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010acee8: 0x10acee8: jal   0x10c17ac sll   zero, zero, 0
+// 0x010ad530: 0x10ad530: jal   0x10c1dec sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl144::__gtdf2_10c17ac(int32,int32,int32,int32,int32)
+	call int32 Cibyl144::__gtdf2_10c1dec(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010acef0: 0x10acef0: bgtz  v0, 0x10ad014 addu  v0, zero, zero
+// 0x010ad538: 0x10ad538: bgtz  v0, 0x10ad65c addu  v0, zero, zero
 	ldloc 5
 	ldc.i4.s 0
 	stloc 5
 	ldc.i4.s 0
-	bgt L_10ad014
+	bgt L_10ad65c
 // --- basic block ---
-// 0x010acef8: 0x10acef8: addiu s4, s0, 20
+// 0x010ad540: 0x10ad540: addiu s4, s0, 20
 	ldloc 7
 	ldc.i4.s 20
 	add
 	stloc 12
-// 0x010acefc: 0x10acefc: addu  a0, s4, zero
+// 0x010ad544: 0x10ad544: addu  a0, s4, zero
 	ldloc 12
 	stloc.1
-// 0x010acf00: 0x10acf00: jal   0x1008eb0 addu  a1, s1, zero
+// 0x010ad548: 0x10ad548: jal   0x1008ec0 addu  a1, s1, zero
 	ldloc 10
 	stloc.2
 	ldloc.0
@@ -5435,31 +5435,31 @@ L_10aced8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl6::roadmap_math_distance_1008eb0(int32,int32,int32,int32,int32)
+	call int32 Cibyl6::roadmap_math_distance_1008ec0(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010acf08: 0x10acf08: lw    v1, 0(s0)
+// 0x010ad550: 0x10ad550: lw    v1, 0(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 8
-// 0x010acf0c: 0x10acf0c: sll   zero, zero, 0
-// 0x010acf10: 0x10acf10: slt   v0, v0, v1
+// 0x010ad554: 0x10ad554: sll   zero, zero, 0
+// 0x010ad558: 0x10ad558: slt   v0, v0, v1
 	ldloc 5
 	ldloc 8
 	clt
 	stloc 5
-// 0x010acf14: 0x10acf14: beq   v0, zero, 0x10acf48 addiu v0, zero, 1
+// 0x010ad55c: 0x10ad55c: beq   v0, zero, 0x10ad590 addiu v0, zero, 1
 	ldloc 5
 	ldc.i4.1
 	stloc 5
-	brfalse L_10acf48
+	brfalse L_10ad590
 // --- basic block ---
-// 0x010acf1c: 0x10acf1c: lw    v0, 44(s0)
+// 0x010ad564: 0x10ad564: lw    v0, 44(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5468,17 +5468,17 @@ L_10aced8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010acf20: 0x10acf20: sll   zero, zero, 0
-// 0x010acf24: 0x10acf24: slt   v1, s2, v0
+// 0x010ad568: 0x10ad568: sll   zero, zero, 0
+// 0x010ad56c: 0x10ad56c: slt   v1, s2, v0
 	ldloc 9
 	ldloc 5
 	clt
 	stloc 8
-// 0x010acf28: 0x10acf28: bne   v1, zero, 0x10acf44 sll   zero, zero, 0
+// 0x010ad570: 0x10ad570: bne   v1, zero, 0x10ad58c sll   zero, zero, 0
 	ldloc 8
-	brtrue L_10acf44
+	brtrue L_10ad58c
 // --- basic block ---
-// 0x010acf30: 0x10acf30: lw    v1, 4(s0)
+// 0x010ad578: 0x10ad578: lw    v1, 4(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5487,26 +5487,26 @@ L_10aced8:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010acf34: 0x10acf34: subu  v0, s2, v0
+// 0x010ad57c: 0x10ad57c: subu  v0, s2, v0
 	ldloc 9
 	ldloc 5
 	sub
 	stloc 5
-// 0x010acf38: 0x10acf38: slt   v0, v1, v0
+// 0x010ad580: 0x10ad580: slt   v0, v1, v0
 	ldloc 8
 	ldloc 5
 	clt
 	stloc 5
-// 0x010acf3c: 0x10acf3c: beq   v0, zero, 0x10acf68 sll   zero, zero, 0
+// 0x010ad584: 0x10ad584: beq   v0, zero, 0x10ad5b0 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10acf68
+	brfalse L_10ad5b0
 // --- basic block ---
-L_10acf44:
-// 0x010acf44: 0x10acf44: addiu v0, zero, 1
+L_10ad58c:
+// 0x010ad58c: 0x10ad58c: addiu v0, zero, 1
 	ldc.i4.1
 	stloc 5
-L_10acf48:
-// 0x010acf48: 0x10acf48: sw    v0, 16(s0)
+L_10ad590:
+// 0x010ad590: 0x10ad590: sw    v0, 16(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5515,16 +5515,16 @@ L_10acf48:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010acf4c: 0x10acf4c: addu  a0, s0, zero
+// 0x010ad594: 0x10ad594: addu  a0, s0, zero
 	ldloc 7
 	stloc.1
-// 0x010acf50: 0x10acf50: addu  a1, s2, zero
+// 0x010ad598: 0x10ad598: addu  a1, s2, zero
 	ldloc 9
 	stloc.2
-// 0x010acf54: 0x10acf54: addu  a2, s3, zero
+// 0x010ad59c: 0x10ad59c: addu  a2, s3, zero
 	ldloc 11
 	stloc.3
-// 0x010acf58: 0x10acf58: jal   0x10ace10 addu  a3, s1, zero
+// 0x010ad5a0: 0x10ad5a0: jal   0x10ad458 addu  a3, s1, zero
 	ldloc 10
 	stloc 4
 	ldloc.0
@@ -5532,18 +5532,18 @@ L_10acf48:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::editor_track_filter_add_10ace10(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::editor_track_filter_add_10ad458(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010acf60: 0x10acf60: j	 0x10ad014 addiu v0, zero, 1
+// 0x010ad5a8: 0x10ad5a8: j	 0x10ad65c addiu v0, zero, 1
 	ldc.i4.1
 	stloc 5
-	br L_10ad014
+	br L_10ad65c
 // --- basic block ---
-L_10acf68:
-// 0x010acf68: 0x10acf68: sw    s2, 44(s0)
+L_10ad5b0:
+// 0x010ad5b0: 0x10ad5b0: sw    s2, 44(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5552,7 +5552,7 @@ L_10acf68:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010acf6c: 0x10acf6c: lw    v0, 56(s0)
+// 0x010ad5b4: 0x10ad5b4: lw    v0, 56(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5561,7 +5561,7 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010acf70: 0x10acf70: lw    a0, 60(s0)
+// 0x010ad5b8: 0x10ad5b8: lw    a0, 60(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5570,7 +5570,7 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010acf74: 0x10acf74: lw    v1, 4(s1)
+// 0x010ad5bc: 0x10ad5bc: lw    v1, 4(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -5579,7 +5579,7 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010acf78: 0x10acf78: lw    a3, 8(s1)
+// 0x010ad5c0: 0x10ad5c0: lw    a3, 8(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -5588,25 +5588,25 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010acf7c: 0x10acf7c: addu  v1, v1, v0
+// 0x010ad5c4: 0x10ad5c4: addu  v1, v1, v0
 	ldloc 8
 	ldloc 5
 	add
 	stloc 8
-// 0x010acf80: 0x10acf80: addu  a3, a3, a0
+// 0x010ad5c8: 0x10ad5c8: addu  a3, a3, a0
 	ldloc 4
 	ldloc.1
 	add
 	stloc 4
-// 0x010acf84: 0x10acf84: addiu v0, zero, 2
+// 0x010ad5cc: 0x10ad5cc: addiu v0, zero, 2
 	ldc.i4.2
 	stloc 5
-// 0x010acf88: 0x10acf88: div   a3, v0
+// 0x010ad5d0: 0x10ad5d0: div   a3, v0
 	ldloc 4
 	ldloc 5
 	div
 	stloc 13
-// 0x010acf8c: 0x10acf8c: lw    a1, 52(s0)
+// 0x010ad5d4: 0x10ad5d4: lw    a1, 52(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5615,14 +5615,14 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010acf90: 0x10acf90: lw    a2, 0(s1)
+// 0x010ad5d8: 0x10ad5d8: lw    a2, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc.3
-// 0x010acf94: 0x10acf94: lw    a0, 12(s1)
+// 0x010ad5dc: 0x10ad5dc: lw    a0, 12(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -5631,17 +5631,17 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010acf98: 0x10acf98: addu  a2, a2, a1
+// 0x010ad5e0: 0x10ad5e0: addu  a2, a2, a1
 	ldloc.3
 	ldloc.2
 	add
 	stloc.3
-// 0x010acf9c: 0x10acf9c: addiu s3, s0, 52
+// 0x010ad5e4: 0x10ad5e4: addiu s3, s0, 52
 	ldloc 7
 	ldc.i4.s 52
 	add
 	stloc 11
-// 0x010acfa0: 0x10acfa0: sw    a0, 64(s0)
+// 0x010ad5e8: 0x10ad5e8: sw    a0, 64(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5650,16 +5650,16 @@ L_10acf68:
 	add
 	ldloc.1
 	stelem.i4
-// 0x010acfa4: 0x10acfa4: addu  a1, s3, zero
+// 0x010ad5ec: 0x10ad5ec: addu  a1, s3, zero
 	ldloc 11
 	stloc.2
-// 0x010acfa8: 0x10acfa8: addu  a0, s4, zero
+// 0x010ad5f0: 0x10ad5f0: addu  a0, s4, zero
 	ldloc 12
 	stloc.1
-// 0x010acfac: 0x10acfac: mflo  lo
+// 0x010ad5f4: 0x10ad5f4: mflo  lo
 	ldloc 13
 	stloc 4
-// 0x010acfb0: 0x10acfb0: sw    a3, 60(s0)
+// 0x010ad5f8: 0x10ad5f8: sw    a3, 60(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5668,16 +5668,16 @@ L_10acf68:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010acfb4: 0x10acfb4: sll   zero, zero, 0
-// 0x010acfb8: 0x10acfb8: div   a2, v0
+// 0x010ad5fc: 0x10ad5fc: sll   zero, zero, 0
+// 0x010ad600: 0x10ad600: div   a2, v0
 	ldloc.3
 	ldloc 5
 	div
 	stloc 13
-// 0x010acfbc: 0x10acfbc: mflo  lo
+// 0x010ad604: 0x10ad604: mflo  lo
 	ldloc 13
 	stloc.3
-// 0x010acfc0: 0x10acfc0: sw    a2, 52(s0)
+// 0x010ad608: 0x10ad608: sw    a2, 52(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5686,16 +5686,16 @@ L_10acf68:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010acfc4: 0x10acfc4: sll   zero, zero, 0
-// 0x010acfc8: 0x10acfc8: div   v1, v0
+// 0x010ad60c: 0x10ad60c: sll   zero, zero, 0
+// 0x010ad610: 0x10ad610: div   v1, v0
 	ldloc 8
 	ldloc 5
 	div
 	stloc 13
-// 0x010acfcc: 0x10acfcc: mflo  lo
+// 0x010ad614: 0x10ad614: mflo  lo
 	ldloc 13
 	stloc 8
-// 0x010acfd0: 0x10acfd0: jal   0x1009824 sw    v1, 56(s0)
+// 0x010ad618: 0x10ad618: jal   0x1009834 sw    v1, 56(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5709,12 +5709,12 @@ L_10acf68:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl6::roadmap_math_azymuth_1009824(int32,int32,int32,int32,int32)
+	call int32 Cibyl6::roadmap_math_azymuth_1009834(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 8
 	stloc 5
 // --- basic block ---
-// 0x010acfd8: 0x10acfd8: sw    v0, 68(s0)
+// 0x010ad620: 0x10ad620: sw    v0, 68(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5723,10 +5723,10 @@ L_10acf68:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010acfdc: 0x10acfdc: addu  s2, v0, zero
+// 0x010ad624: 0x10ad624: addu  s2, v0, zero
 	ldloc 5
 	stloc 9
-// 0x010acfe0: 0x10acfe0: lw    v0, 16(s1)
+// 0x010ad628: 0x10ad628: lw    v0, 16(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -5735,7 +5735,7 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010acfe4: 0x10acfe4: lw    a1, 48(s0)
+// 0x010ad62c: 0x10ad62c: lw    a1, 48(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5744,7 +5744,7 @@ L_10acf68:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010acfe8: 0x10acfe8: sw    v0, 68(s0)
+// 0x010ad630: 0x10ad630: sw    v0, 68(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5753,29 +5753,29 @@ L_10acf68:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010acfec: 0x10acfec: jal   0x1008410 addu  a0, s2, zero
+// 0x010ad634: 0x10ad634: jal   0x1008420 addu  a0, s2, zero
 	ldloc 9
 	stloc.1
 	ldloc.1
 	ldloc.2
-	call int32 Cibyl5::roadmap_math_delta_direction_1008410(int32,int32)
+	call int32 Cibyl5::roadmap_math_delta_direction_1008420(int32,int32)
 	stloc 5
 // --- basic block ---
-// 0x010acff4: 0x10acff4: slti  v0, v0, 91
+// 0x010ad63c: 0x10ad63c: slti  v0, v0, 91
 	ldloc 5
 	ldc.i4.s 91
 	clt
 	stloc 5
-// 0x010acff8: 0x10acff8: bne   v0, zero, 0x10ad00c addu  a0, s4, zero
+// 0x010ad640: 0x10ad640: bne   v0, zero, 0x10ad654 addu  a0, s4, zero
 	ldloc 5
 	ldloc 12
 	stloc.1
-	brtrue L_10ad00c
+	brtrue L_10ad654
 // --- basic block ---
-// 0x010ad000: 0x10ad000: addu  a1, s3, zero
+// 0x010ad648: 0x10ad648: addu  a1, s3, zero
 	ldloc 11
 	stloc.2
-// 0x010ad004: 0x10ad004: jal   0x1001800 addiu a2, zero, 20
+// 0x010ad64c: 0x10ad64c: jal   0x1001800 addiu a2, zero, 20
 	ldc.i4.s 20
 	stloc.3
 	ldloc.1
@@ -5787,8 +5787,8 @@ L_10acf68:
 	stloc 8
 	stloc 5
 // --- basic block ---
-L_10ad00c:
-// 0x010ad00c: 0x10ad00c: sw    s2, 48(s0)
+L_10ad654:
+// 0x010ad654: 0x10ad654: sw    s2, 48(s0)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -5797,13 +5797,13 @@ L_10ad00c:
 	add
 	ldloc 9
 	stelem.i4
-L_10ad010:
-// 0x010ad010: 0x10ad010: addu  v0, zero, zero
+L_10ad658:
+// 0x010ad658: 0x10ad658: addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc 5
-L_10ad014:
-// 0x010ad014: 0x10ad014: lw    ra, 36(sp)
-// 0x010ad018: 0x10ad018: lw    s4, 32(sp)
+L_10ad65c:
+// 0x010ad65c: 0x10ad65c: lw    ra, 36(sp)
+// 0x010ad660: 0x10ad660: lw    s4, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5812,7 +5812,7 @@ L_10ad014:
 	add
 	ldelem.i4
 	stloc 12
-// 0x010ad01c: 0x10ad01c: lw    s3, 28(sp)
+// 0x010ad664: 0x10ad664: lw    s3, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5821,7 +5821,7 @@ L_10ad014:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010ad020: 0x10ad020: lw    s2, 24(sp)
+// 0x010ad668: 0x10ad668: lw    s2, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5830,7 +5830,7 @@ L_10ad014:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ad024: 0x10ad024: lw    s1, 20(sp)
+// 0x010ad66c: 0x10ad66c: lw    s1, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5839,7 +5839,7 @@ L_10ad014:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ad028: 0x10ad028: lw    s0, 16(sp)
+// 0x010ad670: 0x10ad670: lw    s0, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -5848,7 +5848,7 @@ L_10ad014:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad02c: 0x10ad02c: jr    ra addiu sp, sp, 40
+// 0x010ad674: 0x10ad674: jr    ra addiu sp, sp, 40
 	ldloc.0
 	ldc.i4.s 40
 	add
@@ -5860,7 +5860,7 @@ __CIBYL_function_return:
 	ldloc 5
 	ret
 }
-.method public static int32 editor_track_filter_new_10ad034(int32,int32,int32,int32,int32)
+.method public static int32 editor_track_filter_new_10ad67c(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32[] mem,int32 v0,int32 s0,int32 ra,int32 v1)
@@ -5898,12 +5898,12 @@ __CIBYL_function_return:
 	stloc 5
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ad034: 0x10ad034: addiu sp, sp, -40
+// 0x010ad67c: 0x10ad67c: addiu sp, sp, -40
 	ldloc.0
 	ldc.i4.s -40
 	add
 	stloc.0
-// 0x010ad038: 0x10ad038: sw    s0, 32(sp)
+// 0x010ad680: 0x10ad680: sw    s0, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5912,14 +5912,14 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad03c: 0x10ad03c: addu  s0, a0, zero
+// 0x010ad684: 0x10ad684: addu  s0, a0, zero
 	ldloc.1
 	stloc 7
-// 0x010ad040: 0x10ad040: addiu a0, zero, 72
+// 0x010ad688: 0x10ad688: addiu a0, zero, 72
 	ldc.i4.s 72
 	stloc.1
-// 0x010ad044: 0x10ad044: sw    ra, 36(sp)
-// 0x010ad048: 0x10ad048: sw    a1, 16(sp)
+// 0x010ad68c: 0x10ad68c: sw    ra, 36(sp)
+// 0x010ad690: 0x10ad690: sw    a1, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5928,7 +5928,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010ad04c: 0x10ad04c: sw    a2, 20(sp)
+// 0x010ad694: 0x10ad694: sw    a2, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5937,7 +5937,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010ad050: 0x10ad050: jal   0x1000910 sw    a3, 24(sp)
+// 0x010ad698: 0x10ad698: jal   0x1000910 sw    a3, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5956,7 +5956,7 @@ __CIBYL_javamethod_begin:
 	stloc 9
 	stloc 6
 // --- basic block ---
-// 0x010ad058: 0x10ad058: lw    a1, 16(sp)
+// 0x010ad6a0: 0x10ad6a0: lw    a1, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5965,7 +5965,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad05c: 0x10ad05c: lw    a2, 20(sp)
+// 0x010ad6a4: 0x10ad6a4: lw    a2, 20(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5974,7 +5974,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad060: 0x10ad060: lw    a3, 24(sp)
+// 0x010ad6a8: 0x10ad6a8: lw    a3, 24(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -5983,18 +5983,18 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad064: 0x10ad064: lw    ra, 36(sp)
-// 0x010ad068: 0x10ad068: addiu a0, zero, 1
+// 0x010ad6ac: 0x10ad6ac: lw    ra, 36(sp)
+// 0x010ad6b0: 0x10ad6b0: addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
-// 0x010ad06c: 0x10ad06c: sw    s0, 0(v0)
+// 0x010ad6b4: 0x10ad6b4: sw    s0, 0(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
 	shr.un
 	ldloc 7
 	stelem.i4
-// 0x010ad070: 0x10ad070: sw    a0, 16(v0)
+// 0x010ad6b8: 0x10ad6b8: sw    a0, 16(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6003,7 +6003,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.1
 	stelem.i4
-// 0x010ad074: 0x10ad074: lw    s0, 32(sp)
+// 0x010ad6bc: 0x10ad6bc: lw    s0, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6012,7 +6012,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad078: 0x10ad078: sw    a1, 4(v0)
+// 0x010ad6c0: 0x10ad6c0: sw    a1, 4(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6021,7 +6021,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010ad07c: 0x10ad07c: sw    a2, 8(v0)
+// 0x010ad6c4: 0x10ad6c4: sw    a2, 8(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6030,7 +6030,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010ad080: 0x10ad080: sw    a3, 12(v0)
+// 0x010ad6c8: 0x10ad6c8: sw    a3, 12(v0)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6039,7 +6039,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ad084: 0x10ad084: jr    ra addiu sp, sp, 40
+// 0x010ad6cc: 0x10ad6cc: jr    ra addiu sp, sp, 40
 	ldloc.0
 	ldc.i4.s 40
 	add
@@ -6051,7 +6051,7 @@ __CIBYL_function_return:
 	ldloc 6
 	ret
 }
-.method public static int32 resolve_add_10ad09c(int32,int32,int32,int32,int32)
+.method public static int32 resolve_add_10ad6e4(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32[] mem,int32 v1,int32 t0,int32 s1,int32 t1,int32 v0,int32 s0,int32 t2,int32 ra)
@@ -6101,7 +6101,7 @@ __CIBYL_function_return:
 	stloc 5
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ad09c: 0x10ad09c: lw    v0, 1920(a0)
+// 0x010ad6e4: 0x10ad6e4: lw    v0, 1920(a0)
 	ldloc 5
 	ldloc.1
 	ldc.i4.2
@@ -6110,12 +6110,12 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ad0a0: 0x10ad0a0: addiu sp, sp, -40
+// 0x010ad6e8: 0x10ad6e8: addiu sp, sp, -40
 	ldloc.0
 	ldc.i4.s -40
 	add
 	stloc.0
-// 0x010ad0a4: 0x10ad0a4: sw    s1, 32(sp)
+// 0x010ad6ec: 0x10ad6ec: sw    s1, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6124,8 +6124,8 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 8
 	stelem.i4
-// 0x010ad0a8: 0x10ad0a8: sw    ra, 36(sp)
-// 0x010ad0ac: 0x10ad0ac: sw    s0, 28(sp)
+// 0x010ad6f0: 0x10ad6f0: sw    ra, 36(sp)
+// 0x010ad6f4: 0x10ad6f4: sw    s0, 28(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6134,39 +6134,39 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x010ad0b0: 0x10ad0b0: bne   a2, zero, 0x10ad0c8 addiu s1, v0, -1
+// 0x010ad6f8: 0x10ad6f8: bne   a2, zero, 0x10ad710 addiu s1, v0, -1
 	ldloc.3
 	ldloc 10
 	ldc.i4.m1
 	add
 	stloc 8
-	brtrue L_10ad0c8
+	brtrue L_10ad710
 // --- basic block ---
-L_10ad0b8:
-// 0x010ad0b8: 0x10ad0b8: addu  t1, a0, zero
+L_10ad700:
+// 0x010ad700: 0x10ad700: addu  t1, a0, zero
 	ldloc.1
 	stloc 9
-L_10ad0bc:
-// 0x010ad0bc: 0x10ad0bc: addu  v1, zero, zero
+L_10ad704:
+// 0x010ad704: 0x10ad704: addu  v1, zero, zero
 	ldc.i4.s 0
 	stloc 6
-// 0x010ad0c0: 0x10ad0c0: j	 0x10ad144 addu  t0, zero, zero
+// 0x010ad708: 0x10ad708: j	 0x10ad78c addu  t0, zero, zero
 	ldc.i4.s 0
 	stloc 7
-	br L_10ad144
+	br L_10ad78c
 // --- basic block ---
-L_10ad0c8:
-// 0x010ad0c8: 0x10ad0c8: sll   v1, s1, 7
+L_10ad710:
+// 0x010ad710: 0x10ad710: sll   v1, s1, 7
 	ldloc 8
 	ldc.i4.7
 	shl
 	stloc 6
-// 0x010ad0cc: 0x10ad0cc: addu  v1, a0, v1
+// 0x010ad714: 0x10ad714: addu  v1, a0, v1
 	ldloc.1
 	ldloc 6
 	add
 	stloc 6
-// 0x010ad0d0: 0x10ad0d0: lw    t0, 76(v1)
+// 0x010ad718: 0x10ad718: lw    t0, 76(v1)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6175,24 +6175,24 @@ L_10ad0c8:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad0d4: 0x10ad0d4: lw    t1, 0(a2)
+// 0x010ad71c: 0x10ad71c: lw    t1, 0(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 9
-// 0x010ad0d8: 0x10ad0d8: sll   zero, zero, 0
-// 0x010ad0dc: 0x10ad0dc: bne   t0, t1, 0x10ad0b8 sll   zero, zero, 0
+// 0x010ad720: 0x10ad720: sll   zero, zero, 0
+// 0x010ad724: 0x10ad724: bne   t0, t1, 0x10ad700 sll   zero, zero, 0
 	ldloc 7
 	ldloc 9
-	bne.un L_10ad0b8
+	bne.un L_10ad700
 // --- basic block ---
-// 0x010ad0e4: 0x10ad0e4: bne   t0, zero, 0x10ad100 sll   zero, zero, 0
+// 0x010ad72c: 0x10ad72c: bne   t0, zero, 0x10ad748 sll   zero, zero, 0
 	ldloc 7
-	brtrue L_10ad100
+	brtrue L_10ad748
 // --- basic block ---
-// 0x010ad0ec: 0x10ad0ec: lw    t0, 88(v1)
+// 0x010ad734: 0x10ad734: lw    t0, 88(v1)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6201,7 +6201,7 @@ L_10ad0c8:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad0f0: 0x10ad0f0: lw    v1, 12(a2)
+// 0x010ad738: 0x10ad738: lw    v1, 12(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
@@ -6210,26 +6210,26 @@ L_10ad0c8:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010ad0f4: 0x10ad0f4: sll   zero, zero, 0
-// 0x010ad0f8: 0x10ad0f8: bne   t0, v1, 0x10ad0bc addu  t1, a0, zero
+// 0x010ad73c: 0x10ad73c: sll   zero, zero, 0
+// 0x010ad740: 0x10ad740: bne   t0, v1, 0x10ad704 addu  t1, a0, zero
 	ldloc 7
 	ldloc 6
 	ldloc.1
 	stloc 9
-	bne.un L_10ad0bc
+	bne.un L_10ad704
 // --- basic block ---
-L_10ad100:
-// 0x010ad100: 0x10ad100: sll   v1, s1, 7
+L_10ad748:
+// 0x010ad748: 0x10ad748: sll   v1, s1, 7
 	ldloc 8
 	ldc.i4.7
 	shl
 	stloc 6
-// 0x010ad104: 0x10ad104: addu  v1, a0, v1
+// 0x010ad74c: 0x10ad74c: addu  v1, a0, v1
 	ldloc.1
 	ldloc 6
 	add
 	stloc 6
-// 0x010ad108: 0x10ad108: lw    t1, 80(v1)
+// 0x010ad750: 0x10ad750: lw    t1, 80(v1)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6238,7 +6238,7 @@ L_10ad100:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ad10c: 0x10ad10c: lw    t0, 4(a2)
+// 0x010ad754: 0x10ad754: lw    t0, 4(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
@@ -6247,13 +6247,13 @@ L_10ad100:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad110: 0x10ad110: sll   zero, zero, 0
-// 0x010ad114: 0x10ad114: bne   t1, t0, 0x10ad0b8 sll   zero, zero, 0
+// 0x010ad758: 0x10ad758: sll   zero, zero, 0
+// 0x010ad75c: 0x10ad75c: bne   t1, t0, 0x10ad700 sll   zero, zero, 0
 	ldloc 9
 	ldloc 7
-	bne.un L_10ad0b8
+	bne.un L_10ad700
 // --- basic block ---
-// 0x010ad11c: 0x10ad11c: lw    t0, 92(v1)
+// 0x010ad764: 0x10ad764: lw    t0, 92(v1)
 	ldloc 5
 	ldloc 6
 	ldc.i4.2
@@ -6262,7 +6262,7 @@ L_10ad100:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad120: 0x10ad120: lw    v1, 16(a2)
+// 0x010ad768: 0x10ad768: lw    v1, 16(a2)
 	ldloc 5
 	ldloc.3
 	ldc.i4.2
@@ -6271,23 +6271,23 @@ L_10ad100:
 	add
 	ldelem.i4
 	stloc 6
-// 0x010ad124: 0x10ad124: sll   zero, zero, 0
-// 0x010ad128: 0x10ad128: bne   t0, v1, 0x10ad0bc addu  t1, a0, zero
+// 0x010ad76c: 0x10ad76c: sll   zero, zero, 0
+// 0x010ad770: 0x10ad770: bne   t0, v1, 0x10ad704 addu  t1, a0, zero
 	ldloc 7
 	ldloc 6
 	ldloc.1
 	stloc 9
-	bne.un L_10ad0bc
+	bne.un L_10ad704
 // --- basic block ---
-// 0x010ad130: 0x10ad130: j	 0x10ad1c8 sll   s1, s1, 7
+// 0x010ad778: 0x10ad778: j	 0x10ad810 sll   s1, s1, 7
 	ldloc 8
 	ldc.i4.7
 	shl
 	stloc 8
-	br L_10ad1c8
+	br L_10ad810
 // --- basic block ---
-L_10ad138:
-// 0x010ad138: 0x10ad138: lw    t2, -4(t1)
+L_10ad780:
+// 0x010ad780: 0x10ad780: lw    t2, -4(t1)
 	ldloc 5
 	ldloc 9
 	ldc.i4.2
@@ -6296,39 +6296,39 @@ L_10ad138:
 	add
 	ldelem.i4
 	stloc 12
-// 0x010ad13c: 0x10ad13c: addiu t0, t0, 1
+// 0x010ad784: 0x10ad784: addiu t0, t0, 1
 	ldloc 7
 	ldc.i4.1
 	add
 	stloc 7
-// 0x010ad140: 0x10ad140: addu  v1, v1, t2
+// 0x010ad788: 0x10ad788: addu  v1, v1, t2
 	ldloc 6
 	ldloc 12
 	add
 	stloc 6
-L_10ad144:
-// 0x010ad144: 0x10ad144: slt   t2, t0, v0
+L_10ad78c:
+// 0x010ad78c: 0x10ad78c: slt   t2, t0, v0
 	ldloc 7
 	ldloc 10
 	clt
 	stloc 12
-// 0x010ad148: 0x10ad148: bne   t2, zero, 0x10ad138 addiu t1, t1, 128
+// 0x010ad790: 0x10ad790: bne   t2, zero, 0x10ad780 addiu t1, t1, 128
 	ldloc 12
 	ldloc 9
 	ldc.i4 128
 	add
 	stloc 9
-	brtrue L_10ad138
+	brtrue L_10ad780
 // --- basic block ---
-// 0x010ad150: 0x10ad150: addiu t0, v0, 1
+// 0x010ad798: 0x10ad798: addiu t0, v0, 1
 	ldloc 10
 	ldc.i4.1
 	add
 	stloc 7
-// 0x010ad154: 0x10ad154: addiu t1, zero, 15
+// 0x010ad79c: 0x10ad79c: addiu t1, zero, 15
 	ldc.i4.s 15
 	stloc 9
-// 0x010ad158: 0x10ad158: sw    t0, 1920(a0)
+// 0x010ad7a0: 0x10ad7a0: sw    t0, 1920(a0)
 	ldloc 5
 	ldloc.1
 	ldc.i4.2
@@ -6337,34 +6337,34 @@ L_10ad144:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad15c: 0x10ad15c: beq   t0, t1, 0x10ad1b4 addiu v0, zero, -1
+// 0x010ad7a4: 0x10ad7a4: beq   t0, t1, 0x10ad7fc addiu v0, zero, -1
 	ldloc 7
 	ldloc 9
 	ldc.i4.m1
 	stloc 10
-	beq  L_10ad1b4
+	beq  L_10ad7fc
 // --- basic block ---
-// 0x010ad164: 0x10ad164: sll   s1, s1, 7
+// 0x010ad7ac: 0x10ad7ac: sll   s1, s1, 7
 	ldloc 8
 	ldc.i4.7
 	shl
 	stloc 8
-// 0x010ad168: 0x10ad168: addu  s1, a0, s1
+// 0x010ad7b0: 0x10ad7b0: addu  s1, a0, s1
 	ldloc.1
 	ldloc 8
 	add
 	stloc 8
-// 0x010ad16c: 0x10ad16c: subu  a1, a1, v1
+// 0x010ad7b4: 0x10ad7b4: subu  a1, a1, v1
 	ldloc.2
 	ldloc 6
 	sub
 	stloc.2
-// 0x010ad170: 0x10ad170: addiu s0, s1, 128
+// 0x010ad7b8: 0x10ad7b8: addiu s0, s1, 128
 	ldloc 8
 	ldc.i4 128
 	add
 	stloc 11
-// 0x010ad174: 0x10ad174: sw    a1, 124(s0)
+// 0x010ad7bc: 0x10ad7bc: sw    a1, 124(s0)
 	ldloc 5
 	ldloc 11
 	ldc.i4.2
@@ -6373,18 +6373,18 @@ L_10ad144:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010ad178: 0x10ad178: addiu a0, s1, 204
+// 0x010ad7c0: 0x10ad7c0: addiu a0, s1, 204
 	ldloc 8
 	ldc.i4 204
 	add
 	stloc.1
-// 0x010ad17c: 0x10ad17c: addu  a1, a2, zero
+// 0x010ad7c4: 0x10ad7c4: addu  a1, a2, zero
 	ldloc.3
 	stloc.2
-// 0x010ad180: 0x10ad180: addiu a2, zero, 48
+// 0x010ad7c8: 0x10ad7c8: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010ad184: 0x10ad184: jal   0x1001800 sw    a3, 16(sp)
+// 0x010ad7cc: 0x10ad7cc: jal   0x1001800 sw    a3, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6402,7 +6402,7 @@ L_10ad144:
 	stloc 6
 	stloc 10
 // --- basic block ---
-// 0x010ad18c: 0x10ad18c: lw    a1, 56(sp)
+// 0x010ad7d4: 0x10ad7d4: lw    a1, 56(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6411,10 +6411,10 @@ L_10ad144:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad190: 0x10ad190: addu  a0, s0, zero
+// 0x010ad7d8: 0x10ad7d8: addu  a0, s0, zero
 	ldloc 11
 	stloc.1
-// 0x010ad194: 0x10ad194: jal   0x1001800 addiu a2, zero, 76
+// 0x010ad7dc: 0x10ad7dc: jal   0x1001800 addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
 	ldloc.1
@@ -6426,7 +6426,7 @@ L_10ad144:
 	stloc 6
 	stloc 10
 // --- basic block ---
-// 0x010ad19c: 0x10ad19c: lw    a3, 16(sp)
+// 0x010ad7e4: 0x10ad7e4: lw    a3, 16(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6435,10 +6435,10 @@ L_10ad144:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad1a0: 0x10ad1a0: addiu v0, zero, 1
+// 0x010ad7e8: 0x10ad7e8: addiu v0, zero, 1
 	ldc.i4.1
 	stloc 10
-// 0x010ad1a4: 0x10ad1a4: sw    a3, 28(s0)
+// 0x010ad7ec: 0x10ad7ec: sw    a3, 28(s0)
 	ldloc 5
 	ldloc 11
 	ldc.i4.2
@@ -6447,7 +6447,7 @@ L_10ad144:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ad1a8: 0x10ad1a8: sw    v0, 128(s1)
+// 0x010ad7f0: 0x10ad7f0: sw    v0, 128(s1)
 	ldloc 5
 	ldloc 8
 	ldc.i4.2
@@ -6456,7 +6456,7 @@ L_10ad144:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010ad1ac: 0x10ad1ac: sw    a3, 32(s0)
+// 0x010ad7f4: 0x10ad7f4: sw    a3, 32(s0)
 	ldloc 5
 	ldloc 11
 	ldc.i4.2
@@ -6465,13 +6465,13 @@ L_10ad144:
 	add
 	ldloc 4
 	stelem.i4
-L_10ad1b0:
-// 0x010ad1b0: 0x10ad1b0: addu  v0, zero, zero
+L_10ad7f8:
+// 0x010ad7f8: 0x10ad7f8: addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc 10
-L_10ad1b4:
-// 0x010ad1b4: 0x10ad1b4: lw    ra, 36(sp)
-// 0x010ad1b8: 0x10ad1b8: lw    s1, 32(sp)
+L_10ad7fc:
+// 0x010ad7fc: 0x10ad7fc: lw    ra, 36(sp)
+// 0x010ad800: 0x10ad800: lw    s1, 32(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6480,7 +6480,7 @@ L_10ad1b4:
 	add
 	ldelem.i4
 	stloc 8
-// 0x010ad1bc: 0x10ad1bc: lw    s0, 28(sp)
+// 0x010ad804: 0x10ad804: lw    s0, 28(sp)
 	ldloc 5
 	ldloc.0
 	ldc.i4.2
@@ -6489,20 +6489,20 @@ L_10ad1b4:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010ad1c0: 0x10ad1c0: jr    ra addiu sp, sp, 40
+// 0x010ad808: 0x10ad808: jr    ra addiu sp, sp, 40
 	ldloc.0
 	ldc.i4.s 40
 	add
 	stloc.0
 	br __CIBYL_function_return
 // --- basic block ---
-L_10ad1c8:
-// 0x010ad1c8: 0x10ad1c8: addu  a0, a0, s1
+L_10ad810:
+// 0x010ad810: 0x10ad810: addu  a0, a0, s1
 	ldloc.1
 	ldloc 8
 	add
 	stloc.1
-// 0x010ad1cc: 0x10ad1cc: j	 0x10ad1b0 sw    a3, 32(a0)
+// 0x010ad814: 0x10ad814: j	 0x10ad7f8 sw    a3, 32(a0)
 	ldloc 5
 	ldloc.1
 	ldc.i4.2
@@ -6511,14 +6511,14 @@ L_10ad1c8:
 	add
 	ldloc 4
 	stelem.i4
-	br L_10ad1b0
+	br L_10ad7f8
 __CIBYL_function_return:
 	ldloc 6
 	stsfld int32 [WazeWP7]CRunTime::saved_v1
 	ldloc 10
 	ret
 }
-.method public static int32 editor_track_known_resolve_10ad1d4()
+.method public static int32 editor_track_known_resolve_10ad81c()
 {
 .maxstack 8
 .locals init (int32 v0,int32 ra,int32[] mem)
@@ -6535,25 +6535,25 @@ __CIBYL_function_return:
 	stloc.2
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ad1d4: 0x10ad1d4: lui   v0, 0x90000
+// 0x010ad81c: 0x10ad81c: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ad1d8: 0x10ad1d8: lw    v0, -13136(v0)
+// 0x010ad820: 0x10ad820: lw    v0, -12672(v0)
 	ldloc 2
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.0
-// 0x010ad1dc: 0x10ad1dc: sll   zero, zero, 0
-// 0x010ad1e0: 0x10ad1e0: xori  v0, v0, 1
+// 0x010ad824: 0x10ad824: sll   zero, zero, 0
+// 0x010ad828: 0x10ad828: xori  v0, v0, 1
 	ldloc.0
 	ldc.i4.1
 	xor
 	stloc.0
-// 0x010ad1e4: 0x10ad1e4: jr    ra sltiu v0, v0, 1
+// 0x010ad82c: 0x10ad82c: jr    ra sltiu v0, v0, 1
 	ldloc.0
 	ldc.i4.1
 	clt.un
@@ -6563,7 +6563,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static int32 editor_track_known_reset_resolve_10ad1ec()
+.method public static int32 editor_track_known_reset_resolve_10ad834()
 {
 .maxstack 5
 .locals init (int32 v0,int32 ra,int32[] mem)
@@ -6580,15 +6580,15 @@ __CIBYL_function_return:
 	stloc.2
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ad1ec: 0x10ad1ec: lui   v0, 0x90000
+// 0x010ad834: 0x10ad834: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc.0
-// 0x010ad1f0: 0x10ad1f0: jr    ra sw    zero, -13136(v0)
+// 0x010ad838: 0x10ad838: jr    ra sw    zero, -12672(v0)
 	ldloc 2
 	ldloc.0
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldc.i4.s 0
 	stelem.i4
@@ -6597,7 +6597,7 @@ __CIBYL_function_return:
 	ldloc.0
 	ret
 }
-.method public static int32 editor_track_known_locate_point_10ad1f8(int32,int32,int32,int32,int32)
+.method public static int32 editor_track_known_locate_point_10ad840(int32,int32,int32,int32,int32)
 {
 .maxstack 8
 .locals init (int32 sp,int32 a0,int32 a1,int32 a2,int32 a3,int32 v0,int32[] mem,int32 v1,int32 lo,int32 s4,int32 s1,int32 s7,int32 s0,int32 t1,int32 s3,int32 t0,int32 s2,int32 s8,int32 s5,int32 s6,int32 t2,int32 t3,int32 ra,int32 t4)
@@ -6677,12 +6677,12 @@ __CIBYL_function_return:
 	stloc 6
 __CIBYL_javamethod_begin:
 // --- basic block ---
-// 0x010ad1f8: 0x10ad1f8: addiu sp, sp, -312
+// 0x010ad840: 0x10ad840: addiu sp, sp, -312
 	ldloc.0
 	ldc.i4 -312
 	add
 	stloc.0
-// 0x010ad1fc: 0x10ad1fc: sw    s2, 280(sp)
+// 0x010ad844: 0x10ad844: sw    s2, 280(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6691,11 +6691,11 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 16
 	stelem.i4
-// 0x010ad200: 0x10ad200: addu  s2, a0, zero
+// 0x010ad848: 0x10ad848: addu  s2, a0, zero
 	ldloc.1
 	stloc 16
-// 0x010ad204: 0x10ad204: sw    ra, 308(sp)
-// 0x010ad208: 0x10ad208: sw    s6, 296(sp)
+// 0x010ad84c: 0x10ad84c: sw    ra, 308(sp)
+// 0x010ad850: 0x10ad850: sw    s6, 296(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6704,7 +6704,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 19
 	stelem.i4
-// 0x010ad20c: 0x10ad20c: sw    s5, 292(sp)
+// 0x010ad854: 0x10ad854: sw    s5, 292(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6713,7 +6713,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 18
 	stelem.i4
-// 0x010ad210: 0x10ad210: sw    s4, 288(sp)
+// 0x010ad858: 0x10ad858: sw    s4, 288(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6722,7 +6722,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010ad214: 0x10ad214: sw    s3, 284(sp)
+// 0x010ad85c: 0x10ad85c: sw    s3, 284(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6731,7 +6731,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 14
 	stelem.i4
-// 0x010ad218: 0x10ad218: sw    s1, 276(sp)
+// 0x010ad860: 0x10ad860: sw    s1, 276(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6740,7 +6740,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010ad21c: 0x10ad21c: sw    s0, 272(sp)
+// 0x010ad864: 0x10ad864: sw    s0, 272(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6749,13 +6749,13 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 12
 	stelem.i4
-// 0x010ad220: 0x10ad220: addu  s6, a1, zero
+// 0x010ad868: 0x10ad868: addu  s6, a1, zero
 	ldloc.2
 	stloc 19
-// 0x010ad224: 0x10ad224: addu  s1, a2, zero
+// 0x010ad86c: 0x10ad86c: addu  s1, a2, zero
 	ldloc.3
 	stloc 10
-// 0x010ad228: 0x10ad228: sw    s8, 304(sp)
+// 0x010ad870: 0x10ad870: sw    s8, 304(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6764,7 +6764,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 17
 	stelem.i4
-// 0x010ad22c: 0x10ad22c: sw    s7, 300(sp)
+// 0x010ad874: 0x10ad874: sw    s7, 300(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6773,7 +6773,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 11
 	stelem.i4
-// 0x010ad230: 0x10ad230: lw    s3, 328(sp)
+// 0x010ad878: 0x10ad878: lw    s3, 328(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6782,7 +6782,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 14
-// 0x010ad234: 0x10ad234: lw    s5, 332(sp)
+// 0x010ad87c: 0x10ad87c: lw    s5, 332(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6791,19 +6791,19 @@ __CIBYL_javamethod_begin:
 	add
 	ldelem.i4
 	stloc 18
-// 0x010ad238: 0x10ad238: jal   0x102be38 addu  s0, a3, zero
+// 0x010ad880: 0x10ad880: jal   0x102be48 addu  s0, a3, zero
 	ldloc 4
 	stloc 12
-	call int32 Cibyl32::roadmap_fuzzy_false_102be38()
+	call int32 Cibyl32::roadmap_fuzzy_false_102be48()
 	stloc 5
 // --- basic block ---
-// 0x010ad240: 0x10ad240: addu  a0, s2, zero
+// 0x010ad888: 0x10ad888: addu  a0, s2, zero
 	ldloc 16
 	stloc.1
-// 0x010ad244: 0x10ad244: lui   s4, 0x90000
+// 0x010ad88c: 0x10ad88c: lui   s4, 0x90000
 	ldc.i4 589824
 	stloc 9
-// 0x010ad248: 0x10ad248: jal   0x10b07a0 sw    v0, 44(sp)
+// 0x010ad890: 0x10ad890: jal   0x10b0de8 sw    v0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6813,10 +6813,10 @@ __CIBYL_javamethod_begin:
 	ldloc 5
 	stelem.i4
 	ldloc.1
-	call int32 Cibyl132::track_point_pos_10b07a0(int32)
+	call int32 Cibyl132::track_point_pos_10b0de8(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ad250: 0x10ad250: sw    v0, 244(sp)
+// 0x010ad898: 0x10ad898: sw    v0, 244(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6825,62 +6825,62 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad254: 0x10ad254: lw    v0, -13136(s4)
+// 0x010ad89c: 0x10ad89c: lw    v0, -12672(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad258: 0x10ad258: sll   zero, zero, 0
-// 0x010ad25c: 0x10ad25c: slti  v0, v0, 2
+// 0x010ad8a0: 0x10ad8a0: sll   zero, zero, 0
+// 0x010ad8a4: 0x10ad8a4: slti  v0, v0, 2
 	ldloc 5
 	ldc.i4.2
 	clt
 	stloc 5
-// 0x010ad260: 0x10ad260: bne   v0, zero, 0x10ad844 lui   v0, 0x90000
+// 0x010ad8a8: 0x10ad8a8: bne   v0, zero, 0x10ade8c lui   v0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 5
-	brtrue L_10ad844
+	brtrue L_10ade8c
 // --- basic block ---
-// 0x010ad268: 0x10ad268: jal   0x102be38 sll   zero, zero, 0
-	call int32 Cibyl32::roadmap_fuzzy_false_102be38()
+// 0x010ad8b0: 0x10ad8b0: jal   0x102be48 sll   zero, zero, 0
+	call int32 Cibyl32::roadmap_fuzzy_false_102be48()
 	stloc 5
 // --- basic block ---
-// 0x010ad270: 0x10ad270: lw    a1, -13136(s4)
+// 0x010ad8b8: 0x10ad8b8: lw    a1, -12672(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad274: 0x10ad274: addiu a0, zero, 1928
+// 0x010ad8bc: 0x10ad8bc: addiu a0, zero, 1928
 	ldc.i4 1928
 	stloc.1
-// 0x010ad278: 0x10ad278: mult  a1, a0
+// 0x010ad8c0: 0x10ad8c0: mult  a1, a0
 	ldloc.2
 	ldloc.1
 	mul
 	stloc 8
-// 0x010ad27c: 0x10ad27c: addiu s8, a1, -1
+// 0x010ad8c4: 0x10ad8c4: addiu s8, a1, -1
 	ldloc.2
 	ldc.i4.m1
 	add
 	stloc 17
-// 0x010ad280: 0x10ad280: lui   v1, 0x90000
+// 0x010ad8c8: 0x10ad8c8: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010ad284: 0x10ad284: addiu v1, v1, -32416
+// 0x010ad8cc: 0x10ad8cc: addiu v1, v1, -31952
 	ldloc 7
-	ldc.i4 -32416
+	ldc.i4 -31952
 	add
 	stloc 7
-// 0x010ad288: 0x10ad288: sw    v0, 56(sp)
+// 0x010ad8d0: 0x10ad8d0: sw    v0, 56(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6889,10 +6889,10 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad28c: 0x10ad28c: addu  s7, v1, zero
+// 0x010ad8d4: 0x10ad8d4: addu  s7, v1, zero
 	ldloc 7
 	stloc 11
-// 0x010ad290: 0x10ad290: sw    s1, 236(sp)
+// 0x010ad8d8: 0x10ad8d8: sw    s1, 236(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6901,15 +6901,15 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 10
 	stelem.i4
-// 0x010ad294: 0x10ad294: mflo  lo
+// 0x010ad8dc: 0x10ad8dc: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ad298: 0x10ad298: addu  a1, v1, a1
+// 0x010ad8e0: 0x10ad8e0: addu  a1, v1, a1
 	ldloc 7
 	ldloc.2
 	add
 	stloc.2
-// 0x010ad29c: 0x10ad29c: sw    a1, 224(sp)
+// 0x010ad8e4: 0x10ad8e4: sw    a1, 224(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6918,30 +6918,30 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010ad2a0: 0x10ad2a0: mult  s8, a0
+// 0x010ad8e8: 0x10ad8e8: mult  s8, a0
 	ldloc 17
 	ldloc.1
 	mul
 	stloc 8
-// 0x010ad2a4: 0x10ad2a4: mflo  lo
+// 0x010ad8ec: 0x10ad8ec: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010ad2a8: 0x10ad2a8: addiu v0, a0, 1920
+// 0x010ad8f0: 0x10ad8f0: addiu v0, a0, 1920
 	ldloc.1
 	ldc.i4 1920
 	add
 	stloc 5
-// 0x010ad2ac: 0x10ad2ac: addu  v0, v1, v0
+// 0x010ad8f4: 0x10ad8f4: addu  v0, v1, v0
 	ldloc 7
 	ldloc 5
 	add
 	stloc 5
-// 0x010ad2b0: 0x10ad2b0: addu  v1, v1, a0
+// 0x010ad8f8: 0x10ad8f8: addu  v1, v1, a0
 	ldloc 7
 	ldloc.1
 	add
 	stloc 7
-// 0x010ad2b4: 0x10ad2b4: sw    v0, 220(sp)
+// 0x010ad8fc: 0x10ad8fc: sw    v0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6950,7 +6950,7 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad2b8: 0x10ad2b8: j	 0x10ad574 sw    v1, 216(sp)
+// 0x010ad900: 0x10ad900: j	 0x10adbbc sw    v1, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6959,18 +6959,18 @@ __CIBYL_javamethod_begin:
 	add
 	ldloc 7
 	stelem.i4
-	br L_10ad574
+	br L_10adbbc
 // --- basic block ---
-L_10ad2c0:
-// 0x010ad2c0: 0x10ad2c0: addiu v0, zero, 1928
+L_10ad908:
+// 0x010ad908: 0x10ad908: addiu v0, zero, 1928
 	ldc.i4 1928
 	stloc 5
-// 0x010ad2c4: 0x10ad2c4: mult  s8, v0
+// 0x010ad90c: 0x10ad90c: mult  s8, v0
 	ldloc 17
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad2c8: 0x10ad2c8: lw    v1, 220(sp)
+// 0x010ad910: 0x10ad910: lw    v1, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -6979,27 +6979,27 @@ L_10ad2c0:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad2cc: 0x10ad2cc: lui   a2, 0x90000
+// 0x010ad914: 0x10ad914: lui   a2, 0x90000
 	ldc.i4 589824
 	stloc.3
-// 0x010ad2d0: 0x10ad2d0: lw    v0, 0(v1)
+// 0x010ad918: 0x10ad918: lw    v0, 0(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ad2d4: 0x10ad2d4: addiu v1, sp, 52
+// 0x010ad91c: 0x10ad91c: addiu v1, sp, 52
 	ldloc.0
 	ldc.i4.s 52
 	add
 	stloc 7
-// 0x010ad2d8: 0x10ad2d8: addiu v0, v0, -1
+// 0x010ad920: 0x10ad920: addiu v0, v0, -1
 	ldloc 5
 	ldc.i4.m1
 	add
 	stloc 5
-// 0x010ad2dc: 0x10ad2dc: sw    v1, 24(sp)
+// 0x010ad924: 0x10ad924: sw    v1, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7008,17 +7008,17 @@ L_10ad2c0:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad2e0: 0x10ad2e0: sll   v0, v0, 7
+// 0x010ad928: 0x10ad928: sll   v0, v0, 7
 	ldloc 5
 	ldc.i4.7
 	shl
 	stloc 5
-// 0x010ad2e4: 0x10ad2e4: addiu a2, a2, -13132
+// 0x010ad92c: 0x10ad92c: addiu a2, a2, -12668
 	ldloc.3
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc.3
-// 0x010ad2e8: 0x10ad2e8: sw    a2, 16(sp)
+// 0x010ad930: 0x10ad930: sw    a2, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7027,18 +7027,18 @@ L_10ad2c0:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010ad2ec: 0x10ad2ec: addiu a2, sp, 56
+// 0x010ad934: 0x10ad934: addiu a2, sp, 56
 	ldloc.0
 	ldc.i4.s 56
 	add
 	stloc.3
-// 0x010ad2f0: 0x10ad2f0: addu  a0, s6, zero
+// 0x010ad938: 0x10ad938: addu  a0, s6, zero
 	ldloc 19
 	stloc.1
-// 0x010ad2f4: 0x10ad2f4: mflo  lo
+// 0x010ad93c: 0x10ad93c: mflo  lo
 	ldloc 8
 	stloc 7
-// 0x010ad2f8: 0x10ad2f8: sw    t1, 20(sp)
+// 0x010ad940: 0x10ad940: sw    t1, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7047,27 +7047,27 @@ L_10ad2c0:
 	add
 	ldloc 13
 	stelem.i4
-// 0x010ad2fc: 0x10ad2fc: addu  v0, v0, v1
+// 0x010ad944: 0x10ad944: addu  v0, v0, v1
 	ldloc 5
 	ldloc 7
 	add
 	stloc 5
-// 0x010ad300: 0x10ad300: addu  v1, s7, v0
+// 0x010ad948: 0x10ad948: addu  v1, s7, v0
 	ldloc 11
 	ldloc 5
 	add
 	stloc 7
-// 0x010ad304: 0x10ad304: addiu v1, v1, 76
+// 0x010ad94c: 0x10ad94c: addiu v1, v1, 76
 	ldloc 7
 	ldc.i4.s 76
 	add
 	stloc 7
-// 0x010ad308: 0x10ad308: addu  v0, s7, v0
+// 0x010ad950: 0x10ad950: addu  v0, s7, v0
 	ldloc 11
 	ldloc 5
 	add
 	stloc 5
-// 0x010ad30c: 0x10ad30c: sw    a2, 28(sp)
+// 0x010ad954: 0x10ad954: sw    a2, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7076,23 +7076,23 @@ L_10ad2c0:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010ad310: 0x10ad310: addiu t1, sp, 60
+// 0x010ad958: 0x10ad958: addiu t1, sp, 60
 	ldloc.0
 	ldc.i4.s 60
 	add
 	stloc 13
-// 0x010ad314: 0x10ad314: addiu a1, sp, 64
+// 0x010ad95c: 0x10ad95c: addiu a1, sp, 64
 	ldloc.0
 	ldc.i4.s 64
 	add
 	stloc.2
-// 0x010ad318: 0x10ad318: addu  a2, v0, zero
+// 0x010ad960: 0x10ad960: addu  a2, v0, zero
 	ldloc 5
 	stloc.3
-// 0x010ad31c: 0x10ad31c: addu  a3, v1, zero
+// 0x010ad964: 0x10ad964: addu  a3, v1, zero
 	ldloc 7
 	stloc 4
-// 0x010ad320: 0x10ad320: sw    t1, 32(sp)
+// 0x010ad968: 0x10ad968: sw    t1, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7101,7 +7101,7 @@ L_10ad2c0:
 	add
 	ldloc 13
 	stelem.i4
-// 0x010ad324: 0x10ad324: sw    v1, 232(sp)
+// 0x010ad96c: 0x10ad96c: sw    v1, 232(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7110,7 +7110,7 @@ L_10ad2c0:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad328: 0x10ad328: jal   0x10af7e4 sw    v0, 228(sp)
+// 0x010ad970: 0x10ad970: jal   0x10afe2c sw    v0, 228(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7124,12 +7124,12 @@ L_10ad2c0:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl131::editor_track_util_find_street_10af7e4(int32,int32,int32,int32,int32)
+	call int32 Cibyl131::editor_track_util_find_street_10afe2c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad330: 0x10ad330: lw    a0, 56(sp)
+// 0x010ad978: 0x10ad978: lw    a0, 56(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7138,7 +7138,7 @@ L_10ad2c0:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad334: 0x10ad334: jal   0x102be58 sw    v0, 240(sp)
+// 0x010ad97c: 0x10ad97c: jal   0x102be68 sw    v0, 240(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7148,35 +7148,35 @@ L_10ad2c0:
 	ldloc 5
 	stelem.i4
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ad33c: 0x10ad33c: bne   v0, zero, 0x10ad398 lui   a0, 0x90000
+// 0x010ad984: 0x10ad984: bne   v0, zero, 0x10ad9e0 lui   a0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc.1
-	brtrue L_10ad398
+	brtrue L_10ad9e0
 // --- basic block ---
-// 0x010ad344: 0x10ad344: lw    a2, -13136(a0)
+// 0x010ad98c: 0x10ad98c: lw    a2, -12672(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad348: 0x10ad348: addiu t1, zero, 1
+// 0x010ad990: 0x10ad990: addiu t1, zero, 1
 	ldc.i4.1
 	stloc 13
-// 0x010ad34c: 0x10ad34c: bne   a2, t1, 0x10ad360 addiu v0, zero, 1928
+// 0x010ad994: 0x10ad994: bne   a2, t1, 0x10ad9a8 addiu v0, zero, 1928
 	ldloc.3
 	ldloc 13
 	ldc.i4 1928
 	stloc 5
-	bne.un L_10ad360
+	bne.un L_10ad9a8
 // --- basic block ---
-// 0x010ad354: 0x10ad354: lw    s1, 236(sp)
+// 0x010ad99c: 0x10ad99c: lw    s1, 236(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7185,7 +7185,7 @@ L_10ad2c0:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ad358: 0x10ad358: j	 0x10ad810 sw    t1, 1924(s7)
+// 0x010ad9a0: 0x10ad9a0: j	 0x10ade58 sw    t1, 1924(s7)
 	ldloc 6
 	ldloc 11
 	ldc.i4.2
@@ -7194,25 +7194,25 @@ L_10ad2c0:
 	add
 	ldloc 13
 	stelem.i4
-	br L_10ad810
+	br L_10ade58
 // --- basic block ---
-L_10ad360:
-// 0x010ad360: 0x10ad360: addiu a2, a2, -1
+L_10ad9a8:
+// 0x010ad9a8: 0x10ad9a8: addiu a2, a2, -1
 	ldloc.3
 	ldc.i4.m1
 	add
 	stloc.3
-// 0x010ad364: 0x10ad364: subu  a2, a2, s8
+// 0x010ad9ac: 0x10ad9ac: subu  a2, a2, s8
 	ldloc.3
 	ldloc 17
 	sub
 	stloc.3
-// 0x010ad368: 0x10ad368: mult  a2, v0
+// 0x010ad9b0: 0x10ad9b0: mult  a2, v0
 	ldloc.3
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad36c: 0x10ad36c: lw    a0, 216(sp)
+// 0x010ad9b4: 0x10ad9b4: lw    a0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7221,7 +7221,7 @@ L_10ad360:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad370: 0x10ad370: lw    a1, 224(sp)
+// 0x010ad9b8: 0x10ad9b8: lw    a1, 224(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7230,10 +7230,10 @@ L_10ad360:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad374: 0x10ad374: mflo  lo
+// 0x010ad9bc: 0x10ad9bc: mflo  lo
 	ldloc 8
 	stloc.3
-// 0x010ad378: 0x10ad378: jal   0x100186c sll   zero, zero, 0
+// 0x010ad9c0: 0x10ad9c0: jal   0x100186c sll   zero, zero, 0
 	ldloc.1
 	ldloc.2
 	ldloc.3
@@ -7243,37 +7243,37 @@ L_10ad360:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad380: 0x10ad380: lui   v1, 0x90000
+// 0x010ad9c8: 0x10ad9c8: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010ad384: 0x10ad384: lw    v0, -13136(v1)
+// 0x010ad9cc: 0x10ad9cc: lw    v0, -12672(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad388: 0x10ad388: sll   zero, zero, 0
-// 0x010ad38c: 0x10ad38c: addiu v0, v0, -1
+// 0x010ad9d0: 0x10ad9d0: sll   zero, zero, 0
+// 0x010ad9d4: 0x10ad9d4: addiu v0, v0, -1
 	ldloc 5
 	ldc.i4.m1
 	add
 	stloc 5
-// 0x010ad390: 0x10ad390: j	 0x10ad54c sw    v0, -13136(v1)
+// 0x010ad9d8: 0x10ad9d8: j	 0x10adb94 sw    v0, -12672(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldloc 5
 	stelem.i4
-	br L_10ad54c
+	br L_10adb94
 // --- basic block ---
-L_10ad398:
-// 0x010ad398: 0x10ad398: lw    a0, 60(sp)
+L_10ad9e0:
+// 0x010ad9e0: 0x10ad9e0: lw    a0, 60(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7282,18 +7282,18 @@ L_10ad398:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad39c: 0x10ad39c: jal   0x102be58 sll   zero, zero, 0
+// 0x010ad9e4: 0x10ad9e4: jal   0x102be68 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ad3a4: 0x10ad3a4: beq   v0, zero, 0x10ad518 addiu v0, zero, 48
+// 0x010ad9ec: 0x10ad9ec: beq   v0, zero, 0x10adb60 addiu v0, zero, 48
 	ldloc 5
 	ldc.i4.s 48
 	stloc 5
-	brfalse L_10ad518
+	brfalse L_10adb60
 // --- basic block ---
-// 0x010ad3ac: 0x10ad3ac: lw    a1, 52(sp)
+// 0x010ad9f4: 0x10ad9f4: lw    a1, 52(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7302,21 +7302,21 @@ L_10ad398:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad3b0: 0x10ad3b0: sll   zero, zero, 0
-// 0x010ad3b4: 0x10ad3b4: mult  a1, v0
+// 0x010ad9f8: 0x10ad9f8: sll   zero, zero, 0
+// 0x010ad9fc: 0x10ad9fc: mult  a1, v0
 	ldloc.2
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad3b8: 0x10ad3b8: lui   v1, 0x90000
+// 0x010ada00: 0x10ada00: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010ad3bc: 0x10ad3bc: addiu v1, v1, -13132
+// 0x010ada04: 0x10ada04: addiu v1, v1, -12668
 	ldloc 7
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 7
-// 0x010ad3c0: 0x10ad3c0: lw    a0, 232(sp)
+// 0x010ada08: 0x10ada08: lw    a0, 232(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7325,10 +7325,10 @@ L_10ad398:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad3c4: 0x10ad3c4: mflo  lo
+// 0x010ada0c: 0x10ada0c: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ad3c8: 0x10ad3c8: jal   0x1014b10 addu  a1, v1, a1
+// 0x010ada10: 0x10ada10: jal   0x1014b20 addu  a1, v1, a1
 	ldloc 7
 	ldloc.2
 	add
@@ -7338,21 +7338,21 @@ L_10ad398:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl15::roadmap_plugin_same_db_line_1014b10(int32,int32,int32,int32,int32)
+	call int32 Cibyl15::roadmap_plugin_same_db_line_1014b20(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad3d0: 0x10ad3d0: bne   v0, zero, 0x10ad518 addu  v1, zero, zero
+// 0x010ada18: 0x10ada18: bne   v0, zero, 0x10adb60 addu  v1, zero, zero
 	ldloc 5
 	ldc.i4.s 0
 	stloc 7
-	brtrue L_10ad518
+	brtrue L_10adb60
 // --- basic block ---
-// 0x010ad3d8: 0x10ad3d8: lui   s1, 0x90000
+// 0x010ada20: 0x10ada20: lui   s1, 0x90000
 	ldc.i4 589824
 	stloc 10
-// 0x010ad3dc: 0x10ad3dc: lw    s4, 228(sp)
+// 0x010ada24: 0x10ada24: lw    s4, 228(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7361,15 +7361,15 @@ L_10ad398:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ad3e0: 0x10ad3e0: j	 0x10ad504 addiu s1, s1, -13132
+// 0x010ada28: 0x10ada28: j	 0x10adb4c addiu s1, s1, -12668
 	ldloc 10
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 10
-	br L_10ad504
+	br L_10adb4c
 // --- basic block ---
-L_10ad3e8:
-// 0x010ad3e8: 0x10ad3e8: lw    v0, 52(sp)
+L_10ada30:
+// 0x010ada30: 0x10ada30: lw    v0, 52(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7378,15 +7378,15 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad3ec: 0x10ad3ec: sll   zero, zero, 0
-// 0x010ad3f0: 0x10ad3f0: beq   v1, v0, 0x10ad4fc addu  a3, s1, zero
+// 0x010ada34: 0x10ada34: sll   zero, zero, 0
+// 0x010ada38: 0x10ada38: beq   v1, v0, 0x10adb44 addu  a3, s1, zero
 	ldloc 7
 	ldloc 5
 	ldloc 10
 	stloc 4
-	beq  L_10ad4fc
+	beq  L_10adb44
 // --- basic block ---
-// 0x010ad3f8: 0x10ad3f8: lw    v0, 16(s6)
+// 0x010ada40: 0x10ada40: lw    v0, 16(s6)
 	ldloc 6
 	ldloc 19
 	ldc.i4.2
@@ -7395,7 +7395,7 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad3fc: 0x10ad3fc: lw    a1, 228(sp)
+// 0x010ada44: 0x10ada44: lw    a1, 228(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7404,7 +7404,7 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad400: 0x10ad400: lw    a2, 232(sp)
+// 0x010ada48: 0x10ada48: lw    a2, 232(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7413,12 +7413,12 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad404: 0x10ad404: addiu a0, sp, 140
+// 0x010ada4c: 0x10ada4c: addiu a0, sp, 140
 	ldloc.0
 	ldc.i4 140
 	add
 	stloc.1
-// 0x010ad408: 0x10ad408: sw    v1, 264(sp)
+// 0x010ada50: 0x10ada50: sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7427,7 +7427,7 @@ L_10ad3e8:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad40c: 0x10ad40c: sw    v0, 20(sp)
+// 0x010ada54: 0x10ada54: sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7436,7 +7436,7 @@ L_10ad3e8:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad410: 0x10ad410: jal   0x102a3cc sw    zero, 16(sp)
+// 0x010ada58: 0x10ada58: jal   0x102a3dc sw    zero, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7450,15 +7450,15 @@ L_10ad3e8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3cc(int32,int32,int32,int32,int32)
+	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3dc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad418: 0x10ad418: addu  a0, v0, zero
+// 0x010ada60: 0x10ada60: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x010ad41c: 0x10ad41c: jal   0x102be58 sw    v0, 260(sp)
+// 0x010ada64: 0x10ada64: jal   0x102be68 sw    v0, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7468,10 +7468,10 @@ L_10ad3e8:
 	ldloc 5
 	stelem.i4
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ad424: 0x10ad424: lw    v1, 264(sp)
+// 0x010ada6c: 0x10ada6c: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7480,7 +7480,7 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad428: 0x10ad428: lw    a3, 260(sp)
+// 0x010ada70: 0x10ada70: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7489,11 +7489,11 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad42c: 0x10ad42c: beq   v0, zero, 0x10ad4fc sll   zero, zero, 0
+// 0x010ada74: 0x10ada74: beq   v0, zero, 0x10adb44 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10ad4fc
+	brfalse L_10adb44
 // --- basic block ---
-// 0x010ad434: 0x10ad434: lw    v0, 76(s4)
+// 0x010ada7c: 0x10ada7c: lw    v0, 76(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -7502,26 +7502,26 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad438: 0x10ad438: lw    a0, 0(s1)
+// 0x010ada80: 0x10ada80: lw    a0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc.1
-// 0x010ad43c: 0x10ad43c: sll   zero, zero, 0
-// 0x010ad440: 0x10ad440: bne   v0, a0, 0x10ae020 lui   a2, 0x90000
+// 0x010ada84: 0x10ada84: sll   zero, zero, 0
+// 0x010ada88: 0x10ada88: bne   v0, a0, 0x10ae668 lui   a2, 0x90000
 	ldloc 5
 	ldloc.1
 	ldc.i4 589824
 	stloc.3
-	bne.un L_10ae020
+	bne.un L_10ae668
 // --- basic block ---
-// 0x010ad448: 0x10ad448: bne   v0, zero, 0x10ad464 sll   zero, zero, 0
+// 0x010ada90: 0x10ada90: bne   v0, zero, 0x10adaac sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ad464
+	brtrue L_10adaac
 // --- basic block ---
-// 0x010ad450: 0x10ad450: lw    a0, 88(s4)
+// 0x010ada98: 0x10ada98: lw    a0, 88(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -7530,7 +7530,7 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad454: 0x10ad454: lw    v0, 12(s1)
+// 0x010ada9c: 0x10ada9c: lw    v0, 12(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -7539,14 +7539,14 @@ L_10ad3e8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad458: 0x10ad458: sll   zero, zero, 0
-// 0x010ad45c: 0x10ad45c: bne   a0, v0, 0x10ae020 sll   zero, zero, 0
+// 0x010adaa0: 0x10adaa0: sll   zero, zero, 0
+// 0x010adaa4: 0x10adaa4: bne   a0, v0, 0x10ae668 sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10ae020
+	bne.un L_10ae668
 // --- basic block ---
-L_10ad464:
-// 0x010ad464: 0x10ad464: lw    a0, 80(s4)
+L_10adaac:
+// 0x010adaac: 0x10adaac: lw    a0, 80(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -7555,7 +7555,7 @@ L_10ad464:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad468: 0x10ad468: lw    v0, 4(s1)
+// 0x010adab0: 0x10adab0: lw    v0, 4(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -7564,13 +7564,13 @@ L_10ad464:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad46c: 0x10ad46c: sll   zero, zero, 0
-// 0x010ad470: 0x10ad470: bne   a0, v0, 0x10ae01c sll   zero, zero, 0
+// 0x010adab4: 0x10adab4: sll   zero, zero, 0
+// 0x010adab8: 0x10adab8: bne   a0, v0, 0x10ae664 sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10ae01c
+	bne.un L_10ae664
 // --- basic block ---
-// 0x010ad478: 0x10ad478: lw    a0, 92(s4)
+// 0x010adac0: 0x10adac0: lw    a0, 92(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -7579,7 +7579,7 @@ L_10ad464:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad47c: 0x10ad47c: lw    v0, 16(s1)
+// 0x010adac4: 0x10adac4: lw    v0, 16(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -7588,29 +7588,29 @@ L_10ad464:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad480: 0x10ad480: sll   zero, zero, 0
-// 0x010ad484: 0x10ad484: bne   a0, v0, 0x10ae01c sll   zero, zero, 0
+// 0x010adac8: 0x10adac8: sll   zero, zero, 0
+// 0x010adacc: 0x10adacc: bne   a0, v0, 0x10ae664 sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10ae01c
+	bne.un L_10ae664
 // --- basic block ---
-// 0x010ad48c: 0x10ad48c: j	 0x10ad500 addiu v1, v1, 1
+// 0x010adad4: 0x10adad4: j	 0x10adb48 addiu v1, v1, 1
 	ldloc 7
 	ldc.i4.1
 	add
 	stloc 7
-	br L_10ad500
+	br L_10adb48
 // --- basic block ---
-L_10ad494:
-// 0x010ad494: 0x10ad494: addiu v0, zero, 1928
+L_10adadc:
+// 0x010adadc: 0x10adadc: addiu v0, zero, 1928
 	ldc.i4 1928
 	stloc 5
-// 0x010ad498: 0x10ad498: mult  a0, v0
+// 0x010adae0: 0x10adae0: mult  a0, v0
 	ldloc.1
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad49c: 0x10ad49c: lw    a1, 216(sp)
+// 0x010adae4: 0x10adae4: lw    a1, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7619,7 +7619,7 @@ L_10ad494:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad4a0: 0x10ad4a0: sw    v1, 264(sp)
+// 0x010adae8: 0x10adae8: sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7628,7 +7628,7 @@ L_10ad494:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad4a4: 0x10ad4a4: sw    a3, 260(sp)
+// 0x010adaec: 0x10adaec: sw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7637,10 +7637,10 @@ L_10ad494:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ad4a8: 0x10ad4a8: mflo  lo
+// 0x010adaf0: 0x10adaf0: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010ad4ac: 0x10ad4ac: jal   0x1001800 addu  a0, s7, a0
+// 0x010adaf4: 0x10adaf4: jal   0x1001800 addu  a0, s7, a0
 	ldloc 11
 	ldloc.1
 	add
@@ -7654,27 +7654,27 @@ L_10ad494:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad4b4: 0x10ad4b4: lui   a0, 0x90000
+// 0x010adafc: 0x10adafc: lui   a0, 0x90000
 	ldc.i4 589824
 	stloc.1
-// 0x010ad4b8: 0x10ad4b8: lw    t0, -13136(a0)
+// 0x010adb00: 0x10adb00: lw    t0, -12672(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ad4bc: 0x10ad4bc: addiu v0, zero, 1928
+// 0x010adb04: 0x10adb04: addiu v0, zero, 1928
 	ldc.i4 1928
 	stloc 5
-// 0x010ad4c0: 0x10ad4c0: mult  t0, v0
+// 0x010adb08: 0x10adb08: mult  t0, v0
 	ldloc 15
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad4c4: 0x10ad4c4: lw    a3, 260(sp)
+// 0x010adb0c: 0x10adb0c: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7683,18 +7683,18 @@ L_10ad494:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad4c8: 0x10ad4c8: addiu t1, sp, 140
+// 0x010adb10: 0x10adb10: addiu t1, sp, 140
 	ldloc.0
 	ldc.i4 140
 	add
 	stloc 13
-// 0x010ad4cc: 0x10ad4cc: addu  a1, s2, zero
+// 0x010adb14: 0x10adb14: addu  a1, s2, zero
 	ldloc 16
 	stloc.2
-// 0x010ad4d0: 0x10ad4d0: addu  a2, s1, zero
+// 0x010adb18: 0x10adb18: addu  a2, s1, zero
 	ldloc 10
 	stloc.3
-// 0x010ad4d4: 0x10ad4d4: sw    t0, 256(sp)
+// 0x010adb1c: 0x10adb1c: sw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7703,7 +7703,7 @@ L_10ad494:
 	add
 	ldloc 15
 	stelem.i4
-// 0x010ad4d8: 0x10ad4d8: sw    t1, 16(sp)
+// 0x010adb20: 0x10adb20: sw    t1, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7712,10 +7712,10 @@ L_10ad494:
 	add
 	ldloc 13
 	stelem.i4
-// 0x010ad4dc: 0x10ad4dc: mflo  lo
+// 0x010adb24: 0x10adb24: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010ad4e0: 0x10ad4e0: jal   0x10ad09c addu  a0, s7, a0
+// 0x010adb28: 0x10adb28: jal   0x10ad6e4 addu  a0, s7, a0
 	ldloc 11
 	ldloc.1
 	add
@@ -7725,12 +7725,12 @@ L_10ad494:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::resolve_add_10ad09c(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::resolve_add_10ad6e4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad4e8: 0x10ad4e8: lw    t0, 256(sp)
+// 0x010adb30: 0x10adb30: lw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7739,15 +7739,15 @@ L_10ad494:
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ad4ec: 0x10ad4ec: lui   v0, 0x90000
+// 0x010adb34: 0x10adb34: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ad4f0: 0x10ad4f0: addiu t0, t0, 1
+// 0x010adb38: 0x10adb38: addiu t0, t0, 1
 	ldloc 15
 	ldc.i4.1
 	add
 	stloc 15
-// 0x010ad4f4: 0x10ad4f4: lw    v1, 264(sp)
+// 0x010adb3c: 0x10adb3c: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7756,29 +7756,29 @@ L_10ad494:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad4f8: 0x10ad4f8: sw    t0, -13136(v0)
+// 0x010adb40: 0x10adb40: sw    t0, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldloc 15
 	stelem.i4
-L_10ad4fc:
-// 0x010ad4fc: 0x10ad4fc: addiu v1, v1, 1
+L_10adb44:
+// 0x010adb44: 0x10adb44: addiu v1, v1, 1
 	ldloc 7
 	ldc.i4.1
 	add
 	stloc 7
-L_10ad500:
-// 0x010ad500: 0x10ad500: addiu s1, s1, 48
+L_10adb48:
+// 0x010adb48: 0x10adb48: addiu s1, s1, 48
 	ldloc 10
 	ldc.i4.s 48
 	add
 	stloc 10
-L_10ad504:
-// 0x010ad504: 0x10ad504: lw    a0, 240(sp)
+L_10adb4c:
+// 0x010adb4c: 0x10adb4c: lw    a0, 240(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7787,18 +7787,18 @@ L_10ad504:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad508: 0x10ad508: sll   zero, zero, 0
-// 0x010ad50c: 0x10ad50c: slt   v0, v1, a0
+// 0x010adb50: 0x10adb50: sll   zero, zero, 0
+// 0x010adb54: 0x10adb54: slt   v0, v1, a0
 	ldloc 7
 	ldloc.1
 	clt
 	stloc 5
-// 0x010ad510: 0x10ad510: bne   v0, zero, 0x10ad3e8 sll   zero, zero, 0
+// 0x010adb58: 0x10adb58: bne   v0, zero, 0x10ada30 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ad3e8
+	brtrue L_10ada30
 // --- basic block ---
-L_10ad518:
-// 0x010ad518: 0x10ad518: lw    a2, 52(sp)
+L_10adb60:
+// 0x010adb60: 0x10adb60: lw    a2, 52(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7807,23 +7807,23 @@ L_10ad518:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad51c: 0x10ad51c: addiu v0, zero, 48
+// 0x010adb64: 0x10adb64: addiu v0, zero, 48
 	ldc.i4.s 48
 	stloc 5
-// 0x010ad520: 0x10ad520: mult  a2, v0
+// 0x010adb68: 0x10adb68: mult  a2, v0
 	ldloc.3
 	ldloc 5
 	mul
 	stloc 8
-// 0x010ad524: 0x10ad524: lui   t1, 0x90000
+// 0x010adb6c: 0x10adb6c: lui   t1, 0x90000
 	ldc.i4 589824
 	stloc 13
-// 0x010ad528: 0x10ad528: addiu t1, t1, -13132
+// 0x010adb70: 0x10adb70: addiu t1, t1, -12668
 	ldloc 13
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 13
-// 0x010ad52c: 0x10ad52c: lw    a0, 216(sp)
+// 0x010adb74: 0x10adb74: lw    a0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7832,7 +7832,7 @@ L_10ad518:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad530: 0x10ad530: lw    a3, 56(sp)
+// 0x010adb78: 0x10adb78: lw    a3, 56(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7841,15 +7841,15 @@ L_10ad518:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad534: 0x10ad534: addiu v1, sp, 64
+// 0x010adb7c: 0x10adb7c: addiu v1, sp, 64
 	ldloc.0
 	ldc.i4.s 64
 	add
 	stloc 7
-// 0x010ad538: 0x10ad538: addu  a1, s2, zero
+// 0x010adb80: 0x10adb80: addu  a1, s2, zero
 	ldloc 16
 	stloc.2
-// 0x010ad53c: 0x10ad53c: sw    v1, 16(sp)
+// 0x010adb84: 0x10adb84: sw    v1, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7858,10 +7858,10 @@ L_10ad518:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad540: 0x10ad540: mflo  lo
+// 0x010adb88: 0x10adb88: mflo  lo
 	ldloc 8
 	stloc.3
-// 0x010ad544: 0x10ad544: jal   0x10ad09c addu  a2, t1, a2
+// 0x010adb8c: 0x10adb8c: jal   0x10ad6e4 addu  a2, t1, a2
 	ldloc 13
 	ldloc.3
 	add
@@ -7871,13 +7871,13 @@ L_10ad518:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl129::resolve_add_10ad09c(int32,int32,int32,int32,int32)
+	call int32 Cibyl129::resolve_add_10ad6e4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-L_10ad54c:
-// 0x010ad54c: 0x10ad54c: lw    v0, 216(sp)
+L_10adb94:
+// 0x010adb94: 0x10adb94: lw    v0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7886,7 +7886,7 @@ L_10ad54c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad550: 0x10ad550: lw    v1, 224(sp)
+// 0x010adb98: 0x10adb98: lw    v1, 224(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7895,7 +7895,7 @@ L_10ad54c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad554: 0x10ad554: lw    a0, 220(sp)
+// 0x010adb9c: 0x10adb9c: lw    a0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7904,27 +7904,27 @@ L_10ad54c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad558: 0x10ad558: addiu v0, v0, -1928
+// 0x010adba0: 0x10adba0: addiu v0, v0, -1928
 	ldloc 5
 	ldc.i4 -1928
 	add
 	stloc 5
-// 0x010ad55c: 0x10ad55c: addiu v1, v1, -1928
+// 0x010adba4: 0x10adba4: addiu v1, v1, -1928
 	ldloc 7
 	ldc.i4 -1928
 	add
 	stloc 7
-// 0x010ad560: 0x10ad560: addiu a0, a0, -1928
+// 0x010adba8: 0x10adba8: addiu a0, a0, -1928
 	ldloc.1
 	ldc.i4 -1928
 	add
 	stloc.1
-// 0x010ad564: 0x10ad564: addiu s8, s8, -1
+// 0x010adbac: 0x10adbac: addiu s8, s8, -1
 	ldloc 17
 	ldc.i4.m1
 	add
 	stloc 17
-// 0x010ad568: 0x10ad568: sw    v0, 216(sp)
+// 0x010adbb0: 0x10adbb0: sw    v0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7933,7 +7933,7 @@ L_10ad54c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad56c: 0x10ad56c: sw    v1, 224(sp)
+// 0x010adbb4: 0x10adbb4: sw    v1, 224(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7942,7 +7942,7 @@ L_10ad54c:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad570: 0x10ad570: sw    a0, 220(sp)
+// 0x010adbb8: 0x10adbb8: sw    a0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7951,18 +7951,18 @@ L_10ad54c:
 	add
 	ldloc.1
 	stelem.i4
-L_10ad574:
-// 0x010ad574: 0x10ad574: bgez  s8, 0x10ad2c0 addiu t1, zero, 16
+L_10adbbc:
+// 0x010adbbc: 0x10adbbc: bgez  s8, 0x10ad908 addiu t1, zero, 16
 	ldloc 17
 	ldc.i4.s 16
 	stloc 13
 	ldc.i4.s 0
-	bge L_10ad2c0
+	bge L_10ad908
 // --- basic block ---
-// 0x010ad57c: 0x10ad57c: addu  v1, s7, zero
+// 0x010adbc4: 0x10adbc4: addu  v1, s7, zero
 	ldloc 11
 	stloc 7
-// 0x010ad580: 0x10ad580: lw    s1, 236(sp)
+// 0x010adbc8: 0x10adbc8: lw    s1, 236(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -7971,22 +7971,22 @@ L_10ad574:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ad584: 0x10ad584: addu  v0, zero, zero
+// 0x010adbcc: 0x10adbcc: addu  v0, zero, zero
 	ldc.i4.s 0
 	stloc 5
-// 0x010ad588: 0x10ad588: lui   a3, 0x90000
+// 0x010adbd0: 0x10adbd0: lui   a3, 0x90000
 	ldc.i4 589824
 	stloc 4
-// 0x010ad58c: 0x10ad58c: addiu s7, zero, 1928
+// 0x010adbd4: 0x10adbd4: addiu s7, zero, 1928
 	ldc.i4 1928
 	stloc 11
-// 0x010ad590: 0x10ad590: j	 0x10ad7f8 addu  s8, v1, zero
+// 0x010adbd8: 0x10adbd8: j	 0x10ade40 addu  s8, v1, zero
 	ldloc 7
 	stloc 17
-	br L_10ad7f8
+	br L_10ade40
 // --- basic block ---
-L_10ad598:
-// 0x010ad598: 0x10ad598: lw    t0, 1920(v1)
+L_10adbe0:
+// 0x010adbe0: 0x10adbe0: lw    t0, 1920(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -7995,22 +7995,22 @@ L_10ad598:
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ad59c: 0x10ad59c: addiu v0, v0, 1
+// 0x010adbe4: 0x10adbe4: addiu v0, v0, 1
 	ldloc 5
 	ldc.i4.1
 	add
 	stloc 5
-// 0x010ad5a0: 0x10ad5a0: addiu t0, t0, -1
+// 0x010adbe8: 0x10adbe8: addiu t0, t0, -1
 	ldloc 15
 	ldc.i4.m1
 	add
 	stloc 15
-// 0x010ad5a4: 0x10ad5a4: sll   t0, t0, 7
+// 0x010adbec: 0x10adbec: sll   t0, t0, 7
 	ldloc 15
 	ldc.i4.7
 	shl
 	stloc 15
-// 0x010ad5a8: 0x10ad5a8: sw    v0, 216(sp)
+// 0x010adbf0: 0x10adbf0: sw    v0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8019,33 +8019,33 @@ L_10ad598:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad5ac: 0x10ad5ac: addu  s4, v0, zero
+// 0x010adbf4: 0x10adbf4: addu  s4, v0, zero
 	ldloc 5
 	stloc 9
-// 0x010ad5b0: 0x10ad5b0: mflo  lo
+// 0x010adbf8: 0x10adbf8: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010ad5b4: 0x10ad5b4: addu  t0, t0, a0
+// 0x010adbfc: 0x10adbfc: addu  t0, t0, a0
 	ldloc 15
 	ldloc.1
 	add
 	stloc 15
-// 0x010ad5b8: 0x10ad5b8: addu  a0, s8, a0
+// 0x010adc00: 0x10adc00: addu  a0, s8, a0
 	ldloc 17
 	ldloc.1
 	add
 	stloc.1
-// 0x010ad5bc: 0x10ad5bc: addiu a0, a0, 28
+// 0x010adc04: 0x10adc04: addiu a0, a0, 28
 	ldloc.1
 	ldc.i4.s 28
 	add
 	stloc.1
-// 0x010ad5c0: 0x10ad5c0: addu  t0, s8, t0
+// 0x010adc08: 0x10adc08: addu  t0, s8, t0
 	ldloc 17
 	ldloc 15
 	add
 	stloc 15
-// 0x010ad5c4: 0x10ad5c4: j	 0x10ad7dc sw    a0, 220(sp)
+// 0x010adc0c: 0x10adc0c: j	 0x10ade24 sw    a0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8054,10 +8054,10 @@ L_10ad598:
 	add
 	ldloc.1
 	stelem.i4
-	br L_10ad7dc
+	br L_10ade24
 // --- basic block ---
-L_10ad5cc:
-// 0x010ad5cc: 0x10ad5cc: lw    t1, 76(t0)
+L_10adc14:
+// 0x010adc14: 0x10adc14: lw    t1, 76(t0)
 	ldloc 6
 	ldloc 15
 	ldc.i4.2
@@ -8066,15 +8066,15 @@ L_10ad5cc:
 	add
 	ldelem.i4
 	stloc 13
-// 0x010ad5d0: 0x10ad5d0: mflo  lo
+// 0x010adc18: 0x10adc18: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ad5d4: 0x10ad5d4: addu  v0, a1, s8
+// 0x010adc1c: 0x10adc1c: addu  v0, a1, s8
 	ldloc.2
 	ldloc 17
 	add
 	stloc 5
-// 0x010ad5d8: 0x10ad5d8: lw    v0, 1920(v0)
+// 0x010adc20: 0x10adc20: lw    v0, 1920(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
@@ -8083,28 +8083,28 @@ L_10ad5cc:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad5dc: 0x10ad5dc: sll   zero, zero, 0
-// 0x010ad5e0: 0x10ad5e0: addiu a0, v0, -1
+// 0x010adc24: 0x10adc24: sll   zero, zero, 0
+// 0x010adc28: 0x10adc28: addiu a0, v0, -1
 	ldloc 5
 	ldc.i4.m1
 	add
 	stloc.1
-// 0x010ad5e4: 0x10ad5e4: sll   a2, a0, 7
+// 0x010adc2c: 0x10adc2c: sll   a2, a0, 7
 	ldloc.1
 	ldc.i4.7
 	shl
 	stloc.3
-// 0x010ad5e8: 0x10ad5e8: addu  a1, a2, a1
+// 0x010adc30: 0x10adc30: addu  a1, a2, a1
 	ldloc.3
 	ldloc.2
 	add
 	stloc.2
-// 0x010ad5ec: 0x10ad5ec: addu  a1, s8, a1
+// 0x010adc34: 0x10adc34: addu  a1, s8, a1
 	ldloc 17
 	ldloc.2
 	add
 	stloc.2
-// 0x010ad5f0: 0x10ad5f0: lw    a2, 76(a1)
+// 0x010adc38: 0x10adc38: lw    a2, 76(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
@@ -8113,17 +8113,17 @@ L_10ad5cc:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad5f4: 0x10ad5f4: sll   zero, zero, 0
-// 0x010ad5f8: 0x10ad5f8: bne   a2, t1, 0x10ad7d8 sll   zero, zero, 0
+// 0x010adc3c: 0x10adc3c: sll   zero, zero, 0
+// 0x010adc40: 0x10adc40: bne   a2, t1, 0x10ade20 sll   zero, zero, 0
 	ldloc.3
 	ldloc 13
-	bne.un L_10ad7d8
+	bne.un L_10ade20
 // --- basic block ---
-// 0x010ad600: 0x10ad600: bne   a2, zero, 0x10ad61c sll   zero, zero, 0
+// 0x010adc48: 0x10adc48: bne   a2, zero, 0x10adc64 sll   zero, zero, 0
 	ldloc.3
-	brtrue L_10ad61c
+	brtrue L_10adc64
 // --- basic block ---
-// 0x010ad608: 0x10ad608: lw    a2, 88(a1)
+// 0x010adc50: 0x10adc50: lw    a2, 88(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
@@ -8132,7 +8132,7 @@ L_10ad5cc:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad60c: 0x10ad60c: lw    a1, 88(t0)
+// 0x010adc54: 0x10adc54: lw    a1, 88(t0)
 	ldloc 6
 	ldloc 15
 	ldc.i4.2
@@ -8141,19 +8141,19 @@ L_10ad5cc:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad610: 0x10ad610: sll   zero, zero, 0
-// 0x010ad614: 0x10ad614: bne   a2, a1, 0x10ad7d8 sll   zero, zero, 0
+// 0x010adc58: 0x10adc58: sll   zero, zero, 0
+// 0x010adc5c: 0x10adc5c: bne   a2, a1, 0x10ade20 sll   zero, zero, 0
 	ldloc.3
 	ldloc.2
-	bne.un L_10ad7d8
+	bne.un L_10ade20
 // --- basic block ---
-L_10ad61c:
-// 0x010ad61c: 0x10ad61c: sll   a0, a0, 7
+L_10adc64:
+// 0x010adc64: 0x10adc64: sll   a0, a0, 7
 	ldloc.1
 	ldc.i4.7
 	shl
 	stloc.1
-// 0x010ad620: 0x10ad620: lw    a1, 80(t0)
+// 0x010adc68: 0x10adc68: lw    a1, 80(t0)
 	ldloc 6
 	ldloc 15
 	ldc.i4.2
@@ -8162,20 +8162,20 @@ L_10ad61c:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad624: 0x10ad624: mflo  lo
+// 0x010adc6c: 0x10adc6c: mflo  lo
 	ldloc 8
 	stloc.3
-// 0x010ad628: 0x10ad628: addu  a0, a0, a2
+// 0x010adc70: 0x10adc70: addu  a0, a0, a2
 	ldloc.1
 	ldloc.3
 	add
 	stloc.1
-// 0x010ad62c: 0x10ad62c: addu  a0, s8, a0
+// 0x010adc74: 0x10adc74: addu  a0, s8, a0
 	ldloc 17
 	ldloc.1
 	add
 	stloc.1
-// 0x010ad630: 0x10ad630: lw    a2, 80(a0)
+// 0x010adc78: 0x10adc78: lw    a2, 80(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -8184,13 +8184,13 @@ L_10ad61c:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad634: 0x10ad634: sll   zero, zero, 0
-// 0x010ad638: 0x10ad638: bne   a2, a1, 0x10ad7d8 sll   zero, zero, 0
+// 0x010adc7c: 0x10adc7c: sll   zero, zero, 0
+// 0x010adc80: 0x10adc80: bne   a2, a1, 0x10ade20 sll   zero, zero, 0
 	ldloc.3
 	ldloc.2
-	bne.un L_10ad7d8
+	bne.un L_10ade20
 // --- basic block ---
-// 0x010ad640: 0x10ad640: lw    a1, 92(a0)
+// 0x010adc88: 0x10adc88: lw    a1, 92(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -8199,7 +8199,7 @@ L_10ad61c:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad644: 0x10ad644: lw    a0, 92(t0)
+// 0x010adc8c: 0x10adc8c: lw    a0, 92(t0)
 	ldloc 6
 	ldloc 15
 	ldc.i4.2
@@ -8208,13 +8208,13 @@ L_10ad61c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad648: 0x10ad648: sll   zero, zero, 0
-// 0x010ad64c: 0x10ad64c: bne   a1, a0, 0x10ad7d8 sll   zero, zero, 0
+// 0x010adc90: 0x10adc90: sll   zero, zero, 0
+// 0x010adc94: 0x10adc94: bne   a1, a0, 0x10ade20 sll   zero, zero, 0
 	ldloc.2
 	ldloc.1
-	bne.un L_10ad7d8
+	bne.un L_10ade20
 // --- basic block ---
-// 0x010ad654: 0x10ad654: lw    a0, 1920(v1)
+// 0x010adc9c: 0x10adc9c: lw    a0, 1920(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -8223,43 +8223,43 @@ L_10ad61c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad658: 0x10ad658: sll   zero, zero, 0
-// 0x010ad65c: 0x10ad65c: beq   a0, v0, 0x10ad678 addiu a2, v0, -1
+// 0x010adca0: 0x10adca0: sll   zero, zero, 0
+// 0x010adca4: 0x10adca4: beq   a0, v0, 0x10adcc0 addiu a2, v0, -1
 	ldloc.1
 	ldloc 5
 	ldloc 5
 	ldc.i4.m1
 	add
 	stloc.3
-	beq  L_10ad678
+	beq  L_10adcc0
 // --- basic block ---
-// 0x010ad664: 0x10ad664: addu  a2, a0, zero
+// 0x010adcac: 0x10adcac: addu  a2, a0, zero
 	ldloc.1
 	stloc.3
-// 0x010ad668: 0x10ad668: slt   a0, v0, a0
+// 0x010adcb0: 0x10adcb0: slt   a0, v0, a0
 	ldloc 5
 	ldloc.1
 	clt
 	stloc.1
-// 0x010ad66c: 0x10ad66c: beq   a0, zero, 0x10ad67c mult  s4, s7
+// 0x010adcb4: 0x10adcb4: beq   a0, zero, 0x10adcc4 mult  s4, s7
 	ldloc.1
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-	brfalse L_10ad67c
+	brfalse L_10adcc4
 // --- basic block ---
-// 0x010ad674: 0x10ad674: addu  a2, v0, zero
+// 0x010adcbc: 0x10adcbc: addu  a2, v0, zero
 	ldloc 5
 	stloc.3
-L_10ad678:
-// 0x010ad678: 0x10ad678: mult  s4, s7
+L_10adcc0:
+// 0x010adcc0: 0x10adcc0: mult  s4, s7
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-L_10ad67c:
-// 0x010ad67c: 0x10ad67c: lw    t2, 220(sp)
+L_10adcc4:
+// 0x010adcc4: 0x10adcc4: lw    t2, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8268,103 +8268,103 @@ L_10ad67c:
 	add
 	ldelem.i4
 	stloc 20
-// 0x010ad680: 0x10ad680: addu  t1, zero, zero
+// 0x010adcc8: 0x10adcc8: addu  t1, zero, zero
 	ldc.i4.s 0
 	stloc 13
-// 0x010ad684: 0x10ad684: addu  a1, zero, zero
+// 0x010adccc: 0x10adccc: addu  a1, zero, zero
 	ldc.i4.s 0
 	stloc.2
-// 0x010ad688: 0x10ad688: addu  a0, zero, zero
+// 0x010adcd0: 0x10adcd0: addu  a0, zero, zero
 	ldc.i4.s 0
 	stloc.1
-// 0x010ad68c: 0x10ad68c: mflo  lo
+// 0x010adcd4: 0x10adcd4: mflo  lo
 	ldloc 8
 	stloc 5
-// 0x010ad690: 0x10ad690: addu  v0, s8, v0
+// 0x010adcd8: 0x10adcd8: addu  v0, s8, v0
 	ldloc 17
 	ldloc 5
 	add
 	stloc 5
-// 0x010ad694: 0x10ad694: j	 0x10ad6b4 addiu v0, v0, 28
+// 0x010adcdc: 0x10adcdc: j	 0x10adcfc addiu v0, v0, 28
 	ldloc 5
 	ldc.i4.s 28
 	add
 	stloc 5
-	br L_10ad6b4
+	br L_10adcfc
 // --- basic block ---
-L_10ad69c:
-// 0x010ad69c: 0x10ad69c: lw    t4, 0(t2)
+L_10adce4:
+// 0x010adce4: 0x10adce4: lw    t4, 0(t2)
 	ldloc 6
 	ldloc 20
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 23
-// 0x010ad6a0: 0x10ad6a0: lw    t3, 0(v0)
+// 0x010adce8: 0x10adce8: lw    t3, 0(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 21
-// 0x010ad6a4: 0x10ad6a4: addu  a0, a0, t4
+// 0x010adcec: 0x10adcec: addu  a0, a0, t4
 	ldloc.1
 	ldloc 23
 	add
 	stloc.1
-// 0x010ad6a8: 0x10ad6a8: addu  a1, a1, t3
+// 0x010adcf0: 0x10adcf0: addu  a1, a1, t3
 	ldloc.2
 	ldloc 21
 	add
 	stloc.2
-// 0x010ad6ac: 0x10ad6ac: addiu t2, t2, 128
+// 0x010adcf4: 0x10adcf4: addiu t2, t2, 128
 	ldloc 20
 	ldc.i4 128
 	add
 	stloc 20
-// 0x010ad6b0: 0x10ad6b0: addiu v0, v0, 128
+// 0x010adcf8: 0x10adcf8: addiu v0, v0, 128
 	ldloc 5
 	ldc.i4 128
 	add
 	stloc 5
-L_10ad6b4:
-// 0x010ad6b4: 0x10ad6b4: slt   t3, t1, a2
+L_10adcfc:
+// 0x010adcfc: 0x10adcfc: slt   t3, t1, a2
 	ldloc 13
 	ldloc.3
 	clt
 	stloc 21
-// 0x010ad6b8: 0x10ad6b8: bne   t3, zero, 0x10ad69c addiu t1, t1, 1
+// 0x010add00: 0x10add00: bne   t3, zero, 0x10adce4 addiu t1, t1, 1
 	ldloc 21
 	ldloc 13
 	ldc.i4.1
 	add
 	stloc 13
-	brtrue L_10ad69c
+	brtrue L_10adce4
 // --- basic block ---
-// 0x010ad6c0: 0x10ad6c0: beq   a2, zero, 0x10ad6e0 sll   zero, zero, 0
+// 0x010add08: 0x10add08: beq   a2, zero, 0x10add28 sll   zero, zero, 0
 	ldloc.3
-	brfalse L_10ad6e0
+	brfalse L_10add28
 // --- basic block ---
-// 0x010ad6c8: 0x10ad6c8: div   a1, a2
+// 0x010add10: 0x10add10: div   a1, a2
 	ldloc.2
 	ldloc.3
 	div
 	stloc 8
-// 0x010ad6cc: 0x10ad6cc: mflo  lo
+// 0x010add14: 0x10add14: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ad6d0: 0x10ad6d0: sll   zero, zero, 0
-// 0x010ad6d4: 0x10ad6d4: sll   zero, zero, 0
-// 0x010ad6d8: 0x10ad6d8: div   a0, a2
+// 0x010add18: 0x10add18: sll   zero, zero, 0
+// 0x010add1c: 0x10add1c: sll   zero, zero, 0
+// 0x010add20: 0x10add20: div   a0, a2
 	ldloc.1
 	ldloc.3
 	div
 	stloc 8
-// 0x010ad6dc: 0x10ad6dc: mflo  lo
+// 0x010add24: 0x10add24: mflo  lo
 	ldloc 8
 	stloc.1
-L_10ad6e0:
-// 0x010ad6e0: 0x10ad6e0: sw    v1, 264(sp)
+L_10add28:
+// 0x010add28: 0x10add28: sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8373,7 +8373,7 @@ L_10ad6e0:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad6e4: 0x10ad6e4: sw    a0, 252(sp)
+// 0x010add2c: 0x10add2c: sw    a0, 252(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8382,7 +8382,7 @@ L_10ad6e0:
 	add
 	ldloc.1
 	stelem.i4
-// 0x010ad6e8: 0x10ad6e8: sw    a1, 248(sp)
+// 0x010add30: 0x10add30: sw    a1, 248(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8391,7 +8391,7 @@ L_10ad6e0:
 	add
 	ldloc.2
 	stelem.i4
-// 0x010ad6ec: 0x10ad6ec: sw    a3, 260(sp)
+// 0x010add34: 0x10add34: sw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8400,7 +8400,7 @@ L_10ad6e0:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ad6f0: 0x10ad6f0: jal   0x102be70 sw    t0, 256(sp)
+// 0x010add38: 0x10add38: jal   0x102be80 sw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8409,18 +8409,18 @@ L_10ad6e0:
 	add
 	ldloc 15
 	stelem.i4
-	call int32 Cibyl32::roadmap_fuzzy_good_102be70()
+	call int32 Cibyl32::roadmap_fuzzy_good_102be80()
 	stloc 5
 // --- basic block ---
-// 0x010ad6f8: 0x10ad6f8: addiu t1, zero, 10
+// 0x010add40: 0x10add40: addiu t1, zero, 10
 	ldc.i4.s 10
 	stloc 13
-// 0x010ad6fc: 0x10ad6fc: div   v0, t1
+// 0x010add44: 0x10add44: div   v0, t1
 	ldloc 5
 	ldloc 13
 	div
 	stloc 8
-// 0x010ad700: 0x10ad700: lw    a0, 252(sp)
+// 0x010add48: 0x10add48: lw    a0, 252(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8429,7 +8429,7 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad704: 0x10ad704: lw    a1, 248(sp)
+// 0x010add4c: 0x10add4c: lw    a1, 248(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8438,7 +8438,7 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010ad708: 0x10ad708: lw    v1, 264(sp)
+// 0x010add50: 0x10add50: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8447,27 +8447,27 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad70c: 0x10ad70c: subu  t1, a0, a1
+// 0x010add54: 0x10add54: subu  t1, a0, a1
 	ldloc.1
 	ldloc.2
 	sub
 	stloc 13
-// 0x010ad710: 0x10ad710: sra   a2, t1, 31
+// 0x010add58: 0x10add58: sra   a2, t1, 31
 	ldloc 13
 	ldc.i4.s 31
 	shr
 	stloc.3
-// 0x010ad714: 0x10ad714: xor   t1, a2, t1
+// 0x010add5c: 0x10add5c: xor   t1, a2, t1
 	ldloc.3
 	ldloc 13
 	xor
 	stloc 13
-// 0x010ad718: 0x10ad718: subu  a2, t1, a2
+// 0x010add60: 0x10add60: subu  a2, t1, a2
 	ldloc 13
 	ldloc.3
 	sub
 	stloc.3
-// 0x010ad71c: 0x10ad71c: lw    a3, 260(sp)
+// 0x010add64: 0x10add64: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8476,7 +8476,7 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad720: 0x10ad720: lw    t0, 256(sp)
+// 0x010add68: 0x10add68: lw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8485,23 +8485,23 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ad724: 0x10ad724: mflo  lo
+// 0x010add6c: 0x10add6c: mflo  lo
 	ldloc 8
 	stloc 5
-// 0x010ad728: 0x10ad728: slt   a2, a2, v0
+// 0x010add70: 0x10add70: slt   a2, a2, v0
 	ldloc.3
 	ldloc 5
 	clt
 	stloc.3
-// 0x010ad72c: 0x10ad72c: beq   a2, zero, 0x10ad760 mult  s4, s7
+// 0x010add74: 0x10add74: beq   a2, zero, 0x10adda8 mult  s4, s7
 	ldloc.3
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-	brfalse L_10ad760
+	brfalse L_10adda8
 // --- basic block ---
-// 0x010ad734: 0x10ad734: lw    v0, 1920(v1)
+// 0x010add7c: 0x10add7c: lw    v0, 1920(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -8510,15 +8510,15 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad738: 0x10ad738: mflo  lo
+// 0x010add80: 0x10add80: mflo  lo
 	ldloc 8
 	stloc.3
-// 0x010ad73c: 0x10ad73c: addu  a2, a2, s8
+// 0x010add84: 0x10add84: addu  a2, a2, s8
 	ldloc.3
 	ldloc 17
 	add
 	stloc.3
-// 0x010ad740: 0x10ad740: lw    a2, 1920(a2)
+// 0x010add88: 0x10add88: lw    a2, 1920(a2)
 	ldloc 6
 	ldloc.3
 	ldc.i4.2
@@ -8527,60 +8527,60 @@ L_10ad6e0:
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad744: 0x10ad744: sll   zero, zero, 0
-// 0x010ad748: 0x10ad748: beq   v0, a2, 0x10ad760 slt   v0, a2, v0
+// 0x010add8c: 0x10add8c: sll   zero, zero, 0
+// 0x010add90: 0x10add90: beq   v0, a2, 0x10adda8 slt   v0, a2, v0
 	ldloc 5
 	ldloc.3
 	ldloc.3
 	ldloc 5
 	clt
 	stloc 5
-	beq  L_10ad760
+	beq  L_10adda8
 // --- basic block ---
-// 0x010ad750: 0x10ad750: bne   v0, zero, 0x10ae03c addu  a0, v1, zero
+// 0x010add98: 0x10add98: bne   v0, zero, 0x10ae684 addu  a0, v1, zero
 	ldloc 5
 	ldloc 7
 	stloc.1
-	brtrue L_10ae03c
+	brtrue L_10ae684
 // --- basic block ---
-// 0x010ad758: 0x10ad758: j	 0x10ad770 addiu a1, s4, 1
+// 0x010adda0: 0x10adda0: j	 0x10addb8 addiu a1, s4, 1
 	ldloc 9
 	ldc.i4.1
 	add
 	stloc.2
-	br L_10ad770
+	br L_10addb8
 // --- basic block ---
-L_10ad760:
-// 0x010ad760: 0x10ad760: slt   a0, a0, a1
+L_10adda8:
+// 0x010adda8: 0x10adda8: slt   a0, a0, a1
 	ldloc.1
 	ldloc.2
 	clt
 	stloc.1
-// 0x010ad764: 0x10ad764: bne   a0, zero, 0x10ae038 mult  s4, s7
+// 0x010addac: 0x10addac: bne   a0, zero, 0x10ae680 mult  s4, s7
 	ldloc.1
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-	brtrue L_10ae038
+	brtrue L_10ae680
 // --- basic block ---
-L_10ad76c:
-// 0x010ad76c: 0x10ad76c: addiu a1, s4, 1
+L_10addb4:
+// 0x010addb4: 0x10addb4: addiu a1, s4, 1
 	ldloc 9
 	ldc.i4.1
 	add
 	stloc.2
-L_10ad770:
-// 0x010ad770: 0x10ad770: lw    a2, -13136(a3)
+L_10addb8:
+// 0x010addb8: 0x10addb8: lw    a2, -12672(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad774: 0x10ad774: sw    v1, 264(sp)
+// 0x010addbc: 0x10addbc: sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8589,17 +8589,17 @@ L_10ad770:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ad778: 0x10ad778: addiu a2, a2, -1
+// 0x010addc0: 0x10addc0: addiu a2, a2, -1
 	ldloc.3
 	ldc.i4.m1
 	add
 	stloc.3
-// 0x010ad77c: 0x10ad77c: subu  a2, a2, s4
+// 0x010addc4: 0x10addc4: subu  a2, a2, s4
 	ldloc.3
 	ldloc 9
 	sub
 	stloc.3
-// 0x010ad780: 0x10ad780: sw    a3, 260(sp)
+// 0x010addc8: 0x10addc8: sw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8608,7 +8608,7 @@ L_10ad770:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ad784: 0x10ad784: sw    t0, 256(sp)
+// 0x010addcc: 0x10addcc: sw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8617,39 +8617,39 @@ L_10ad770:
 	add
 	ldloc 15
 	stelem.i4
-// 0x010ad788: 0x10ad788: addiu s4, s4, -1
+// 0x010addd0: 0x10addd0: addiu s4, s4, -1
 	ldloc 9
 	ldc.i4.m1
 	add
 	stloc 9
-// 0x010ad78c: 0x10ad78c: mflo  lo
+// 0x010addd4: 0x10addd4: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010ad790: 0x10ad790: addu  a0, s8, a0
+// 0x010addd8: 0x10addd8: addu  a0, s8, a0
 	ldloc 17
 	ldloc.1
 	add
 	stloc.1
-// 0x010ad794: 0x10ad794: sll   zero, zero, 0
-// 0x010ad798: 0x10ad798: mult  a1, s7
+// 0x010adddc: 0x10adddc: sll   zero, zero, 0
+// 0x010adde0: 0x10adde0: mult  a1, s7
 	ldloc.2
 	ldloc 11
 	mul
 	stloc 8
-// 0x010ad79c: 0x10ad79c: mflo  lo
+// 0x010adde4: 0x10adde4: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ad7a0: 0x10ad7a0: sll   zero, zero, 0
-// 0x010ad7a4: 0x10ad7a4: sll   zero, zero, 0
-// 0x010ad7a8: 0x10ad7a8: mult  a2, s7
+// 0x010adde8: 0x10adde8: sll   zero, zero, 0
+// 0x010addec: 0x10addec: sll   zero, zero, 0
+// 0x010addf0: 0x10addf0: mult  a2, s7
 	ldloc.3
 	ldloc 11
 	mul
 	stloc 8
-// 0x010ad7ac: 0x10ad7ac: mflo  lo
+// 0x010addf4: 0x10addf4: mflo  lo
 	ldloc 8
 	stloc.3
-// 0x010ad7b0: 0x10ad7b0: jal   0x100186c addu  a1, s8, a1
+// 0x010addf8: 0x10addf8: jal   0x100186c addu  a1, s8, a1
 	ldloc 17
 	ldloc.2
 	add
@@ -8663,7 +8663,7 @@ L_10ad770:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad7b8: 0x10ad7b8: lw    a3, 260(sp)
+// 0x010ade00: 0x10ade00: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8672,7 +8672,7 @@ L_10ad770:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ad7bc: 0x10ad7bc: lw    v1, 264(sp)
+// 0x010ade04: 0x10ade04: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8681,24 +8681,24 @@ L_10ad770:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad7c0: 0x10ad7c0: lw    v0, -13136(a3)
+// 0x010ade08: 0x10ade08: lw    v0, -12672(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad7c4: 0x10ad7c4: addiu a0, zero, 1
+// 0x010ade0c: 0x10ade0c: addiu a0, zero, 1
 	ldc.i4.1
 	stloc.1
-// 0x010ad7c8: 0x10ad7c8: addiu v0, v0, -1
+// 0x010ade10: 0x10ade10: addiu v0, v0, -1
 	ldloc 5
 	ldc.i4.m1
 	add
 	stloc 5
-// 0x010ad7cc: 0x10ad7cc: lw    t0, 256(sp)
+// 0x010ade14: 0x10ade14: lw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8707,7 +8707,7 @@ L_10ad770:
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ad7d0: 0x10ad7d0: sw    a0, 1924(v1)
+// 0x010ade18: 0x10ade18: sw    a0, 1924(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -8716,46 +8716,46 @@ L_10ad770:
 	add
 	ldloc.1
 	stelem.i4
-// 0x010ad7d4: 0x10ad7d4: sw    v0, -13136(a3)
+// 0x010ade1c: 0x10ade1c: sw    v0, -12672(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldloc 5
 	stelem.i4
-L_10ad7d8:
-// 0x010ad7d8: 0x10ad7d8: addiu s4, s4, 1
+L_10ade20:
+// 0x010ade20: 0x10ade20: addiu s4, s4, 1
 	ldloc 9
 	ldc.i4.1
 	add
 	stloc 9
-L_10ad7dc:
-// 0x010ad7dc: 0x10ad7dc: lw    v0, -13136(a3)
+L_10ade24:
+// 0x010ade24: 0x10ade24: lw    v0, -12672(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad7e0: 0x10ad7e0: sll   zero, zero, 0
-// 0x010ad7e4: 0x10ad7e4: slt   v0, s4, v0
+// 0x010ade28: 0x10ade28: sll   zero, zero, 0
+// 0x010ade2c: 0x10ade2c: slt   v0, s4, v0
 	ldloc 9
 	ldloc 5
 	clt
 	stloc 5
-// 0x010ad7e8: 0x10ad7e8: bne   v0, zero, 0x10ad5cc mult  s4, s7
+// 0x010ade30: 0x10ade30: bne   v0, zero, 0x10adc14 mult  s4, s7
 	ldloc 5
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-	brtrue L_10ad5cc
+	brtrue L_10adc14
 // --- basic block ---
-// 0x010ad7f0: 0x10ad7f0: lw    v0, 216(sp)
+// 0x010ade38: 0x10ade38: lw    v0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -8764,76 +8764,76 @@ L_10ad7dc:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad7f4: 0x10ad7f4: addiu v1, v1, 1928
+// 0x010ade3c: 0x10ade3c: addiu v1, v1, 1928
 	ldloc 7
 	ldc.i4 1928
 	add
 	stloc 7
-L_10ad7f8:
-// 0x010ad7f8: 0x10ad7f8: lw    a0, -13136(a3)
+L_10ade40:
+// 0x010ade40: 0x10ade40: lw    a0, -12672(a3)
 	ldloc 6
 	ldloc 4
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad7fc: 0x10ad7fc: sll   zero, zero, 0
-// 0x010ad800: 0x10ad800: addiu a0, a0, -1
+// 0x010ade44: 0x10ade44: sll   zero, zero, 0
+// 0x010ade48: 0x10ade48: addiu a0, a0, -1
 	ldloc.1
 	ldc.i4.m1
 	add
 	stloc.1
-// 0x010ad804: 0x10ad804: slt   a0, v0, a0
+// 0x010ade4c: 0x10ade4c: slt   a0, v0, a0
 	ldloc 5
 	ldloc.1
 	clt
 	stloc.1
-// 0x010ad808: 0x10ad808: bne   a0, zero, 0x10ad598 mult  v0, s7
+// 0x010ade50: 0x10ade50: bne   a0, zero, 0x10adbe0 mult  v0, s7
 	ldloc.1
 	ldloc 5
 	ldloc 11
 	mul
 	stloc 8
-	brtrue L_10ad598
+	brtrue L_10adbe0
 // --- basic block ---
-L_10ad810:
-// 0x010ad810: 0x10ad810: lui   v0, 0x90000
+L_10ade58:
+// 0x010ade58: 0x10ade58: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010ad814: 0x10ad814: lw    v0, -13136(v0)
+// 0x010ade5c: 0x10ade5c: lw    v0, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad818: 0x10ad818: sll   zero, zero, 0
-// 0x010ad81c: 0x10ad81c: bne   v0, zero, 0x10ad83c slti  v0, v0, 2
+// 0x010ade60: 0x10ade60: sll   zero, zero, 0
+// 0x010ade64: 0x10ade64: bne   v0, zero, 0x10ade84 slti  v0, v0, 2
 	ldloc 5
 	ldloc 5
 	ldc.i4.2
 	clt
 	stloc 5
-	brtrue L_10ad83c
+	brtrue L_10ade84
 // --- basic block ---
-// 0x010ad824: 0x10ad824: lui   v0, 0x90000
+// 0x010ade6c: 0x10ade6c: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-L_10ad828:
-// 0x010ad828: 0x10ad828: sw    zero, -13136(v0)
+L_10ade70:
+// 0x010ade70: 0x10ade70: sw    zero, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010ad82c: 0x10ad82c: jal   0x10b0d70 addu  s2, zero, zero
+// 0x010ade74: 0x10ade74: jal   0x10b13b8 addu  s2, zero, zero
 	ldc.i4.s 0
 	stloc 16
 	ldloc.0
@@ -8841,48 +8841,48 @@ L_10ad828:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl132::editor_track_reset_10b0d70(int32,int32,int32,int32,int32)
+	call int32 Cibyl132::editor_track_reset_10b13b8(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad834: 0x10ad834: j	 0x10adfe8 sll   zero, zero, 0
-	br L_10adfe8
+// 0x010ade7c: 0x10ade7c: j	 0x10ae630 sll   zero, zero, 0
+	br L_10ae630
 // --- basic block ---
-L_10ad83c:
-// 0x010ad83c: 0x10ad83c: beq   v0, zero, 0x10adfe4 lui   v0, 0x90000
+L_10ade84:
+// 0x010ade84: 0x10ade84: beq   v0, zero, 0x10ae62c lui   v0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 5
-	brfalse L_10adfe4
+	brfalse L_10ae62c
 // --- basic block ---
-L_10ad844:
-// 0x010ad844: 0x10ad844: lw    a0, -13136(v0)
+L_10ade8c:
+// 0x010ade8c: 0x10ade8c: lw    a0, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad848: 0x10ad848: addiu v1, zero, 1
+// 0x010ade90: 0x10ade90: addiu v1, zero, 1
 	ldc.i4.1
 	stloc 7
-// 0x010ad84c: 0x10ad84c: bne   a0, v1, 0x10ad974 sll   zero, zero, 0
+// 0x010ade94: 0x10ade94: bne   a0, v1, 0x10adfbc sll   zero, zero, 0
 	ldloc.1
 	ldloc 7
-	bne.un L_10ad974
+	bne.un L_10adfbc
 // --- basic block ---
-// 0x010ad854: 0x10ad854: lui   s2, 0x90000
+// 0x010ade9c: 0x10ade9c: lui   s2, 0x90000
 	ldc.i4 589824
 	stloc 16
-// 0x010ad858: 0x10ad858: addiu s2, s2, -32416
+// 0x010adea0: 0x10adea0: addiu s2, s2, -31952
 	ldloc 16
-	ldc.i4 -32416
+	ldc.i4 -31952
 	add
 	stloc 16
-// 0x010ad85c: 0x10ad85c: lw    v1, 1920(s2)
+// 0x010adea4: 0x10adea4: lw    v1, 1920(s2)
 	ldloc 6
 	ldloc 16
 	ldc.i4.2
@@ -8891,13 +8891,13 @@ L_10ad844:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad860: 0x10ad860: sll   zero, zero, 0
-// 0x010ad864: 0x10ad864: addiu v1, v1, -1
+// 0x010adea8: 0x10adea8: sll   zero, zero, 0
+// 0x010adeac: 0x10adeac: addiu v1, v1, -1
 	ldloc 7
 	ldc.i4.m1
 	add
 	stloc 7
-// 0x010ad868: 0x10ad868: bne   v1, zero, 0x10ad874 sw    v1, 1920(s2)
+// 0x010adeb0: 0x10adeb0: bne   v1, zero, 0x10adebc sw    v1, 1920(s2)
 	ldloc 7
 	ldloc 6
 	ldloc 16
@@ -8907,25 +8907,25 @@ L_10ad844:
 	add
 	ldloc 7
 	stelem.i4
-	brtrue L_10ad874
+	brtrue L_10adebc
 // --- basic block ---
-// 0x010ad870: 0x10ad870: sw    zero, -13136(v0)
+// 0x010adeb8: 0x10adeb8: sw    zero, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldc.i4.s 0
 	stelem.i4
-L_10ad874:
-// 0x010ad874: 0x10ad874: addiu a2, zero, 48
+L_10adebc:
+// 0x010adebc: 0x10adebc: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010ad878: 0x10ad878: addu  a0, s5, zero
+// 0x010adec0: 0x10adec0: addu  a0, s5, zero
 	ldloc 18
 	stloc.1
-// 0x010ad87c: 0x10ad87c: jal   0x1001800 addiu a1, s2, 76
+// 0x010adec4: 0x10adec4: jal   0x1001800 addiu a1, s2, 76
 	ldloc 16
 	ldc.i4.s 76
 	add
@@ -8939,13 +8939,13 @@ L_10ad874:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad884: 0x10ad884: addu  a0, s3, zero
+// 0x010adecc: 0x10adecc: addu  a0, s3, zero
 	ldloc 14
 	stloc.1
-// 0x010ad888: 0x10ad888: addu  a1, s2, zero
+// 0x010aded0: 0x10aded0: addu  a1, s2, zero
 	ldloc 16
 	stloc.2
-// 0x010ad88c: 0x10ad88c: jal   0x1001800 addiu a2, zero, 76
+// 0x010aded4: 0x10aded4: jal   0x1001800 addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
 	ldloc.1
@@ -8957,7 +8957,7 @@ L_10ad874:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad894: 0x10ad894: lw    v0, 1924(s2)
+// 0x010adedc: 0x10adedc: lw    v0, 1924(s2)
 	ldloc 6
 	ldloc 16
 	ldc.i4.2
@@ -8966,18 +8966,18 @@ L_10ad874:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad898: 0x10ad898: sll   zero, zero, 0
-// 0x010ad89c: 0x10ad89c: beq   v0, zero, 0x10ad8b4 lui   v0, 0x90000
+// 0x010adee0: 0x10adee0: sll   zero, zero, 0
+// 0x010adee4: 0x10adee4: beq   v0, zero, 0x10adefc lui   v0, 0x90000
 	ldloc 5
 	ldc.i4 589824
 	stloc 5
-	brfalse L_10ad8b4
+	brfalse L_10adefc
 // --- basic block ---
-// 0x010ad8a4: 0x10ad8a4: jal   0x102be78 sll   zero, zero, 0
-	call int32 Cibyl32::roadmap_fuzzy_acceptable_102be78()
+// 0x010adeec: 0x10adeec: jal   0x102be88 sll   zero, zero, 0
+	call int32 Cibyl32::roadmap_fuzzy_acceptable_102be88()
 	stloc 5
 // --- basic block ---
-// 0x010ad8ac: 0x10ad8ac: sw    v0, 28(s3)
+// 0x010adef4: 0x10adef4: sw    v0, 28(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -8986,23 +8986,23 @@ L_10ad874:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad8b0: 0x10ad8b0: lui   v0, 0x90000
+// 0x010adef8: 0x10adef8: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-L_10ad8b4:
-// 0x010ad8b4: 0x10ad8b4: lw    a2, -30496(v0)
+L_10adefc:
+// 0x010adefc: 0x10adefc: lw    a2, -30032(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -7624
+	ldc.i4 -7508
 	add
 	ldelem.i4
 	stloc.3
-// 0x010ad8b8: 0x10ad8b8: addu  a0, s2, zero
+// 0x010adf00: 0x10adf00: addu  a0, s2, zero
 	ldloc 16
 	stloc.1
-// 0x010ad8bc: 0x10ad8bc: lw    s2, 124(s2)
+// 0x010adf04: 0x10adf04: lw    s2, 124(s2)
 	ldloc 6
 	ldloc 16
 	ldc.i4.2
@@ -9011,12 +9011,12 @@ L_10ad8b4:
 	add
 	ldelem.i4
 	stloc 16
-// 0x010ad8c0: 0x10ad8c0: sll   a2, a2, 7
+// 0x010adf08: 0x10adf08: sll   a2, a2, 7
 	ldloc.3
 	ldc.i4.7
 	shl
 	stloc.3
-// 0x010ad8c4: 0x10ad8c4: jal   0x100186c addiu a1, a0, 128
+// 0x010adf0c: 0x10adf0c: jal   0x100186c addiu a1, a0, 128
 	ldloc.1
 	ldc.i4 128
 	add
@@ -9030,51 +9030,51 @@ L_10ad8b4:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad8cc: 0x10ad8cc: bne   s2, zero, 0x10adfe8 sll   zero, zero, 0
+// 0x010adf14: 0x10adf14: bne   s2, zero, 0x10ae630 sll   zero, zero, 0
 	ldloc 16
-	brtrue L_10adfe8
+	brtrue L_10ae630
 // --- basic block ---
-// 0x010ad8d4: 0x10ad8d4: lw    v0, 0(s1)
+// 0x010adf1c: 0x10adf1c: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ad8d8: 0x10ad8d8: sll   zero, zero, 0
-// 0x010ad8dc: 0x10ad8dc: beq   v0, zero, 0x10ad944 sll   zero, zero, 0
+// 0x010adf20: 0x10adf20: sll   zero, zero, 0
+// 0x010adf24: 0x10adf24: beq   v0, zero, 0x10adf8c sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10ad944
+	brfalse L_10adf8c
 // --- basic block ---
-// 0x010ad8e4: 0x10ad8e4: beq   s0, zero, 0x10ad944 sll   zero, zero, 0
+// 0x010adf2c: 0x10adf2c: beq   s0, zero, 0x10adf8c sll   zero, zero, 0
 	ldloc 12
-	brfalse L_10ad944
+	brfalse L_10adf8c
 // --- basic block ---
-// 0x010ad8ec: 0x10ad8ec: lw    v0, 0(s0)
+// 0x010adf34: 0x10adf34: lw    v0, 0(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ad8f0: 0x10ad8f0: lw    v1, 0(s5)
+// 0x010adf38: 0x10adf38: lw    v1, 0(s5)
 	ldloc 6
 	ldloc 18
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 7
-// 0x010ad8f4: 0x10ad8f4: sll   zero, zero, 0
-// 0x010ad8f8: 0x10ad8f8: bne   v0, v1, 0x10ad944 sll   zero, zero, 0
+// 0x010adf3c: 0x10adf3c: sll   zero, zero, 0
+// 0x010adf40: 0x10adf40: bne   v0, v1, 0x10adf8c sll   zero, zero, 0
 	ldloc 5
 	ldloc 7
-	bne.un L_10ad944
+	bne.un L_10adf8c
 // --- basic block ---
-// 0x010ad900: 0x10ad900: bne   v0, zero, 0x10ad91c sll   zero, zero, 0
+// 0x010adf48: 0x10adf48: bne   v0, zero, 0x10adf64 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ad91c
+	brtrue L_10adf64
 // --- basic block ---
-// 0x010ad908: 0x10ad908: lw    v1, 12(s0)
+// 0x010adf50: 0x10adf50: lw    v1, 12(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9083,7 +9083,7 @@ L_10ad8b4:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad90c: 0x10ad90c: lw    v0, 12(s5)
+// 0x010adf54: 0x10adf54: lw    v0, 12(s5)
 	ldloc 6
 	ldloc 18
 	ldc.i4.2
@@ -9092,14 +9092,14 @@ L_10ad8b4:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad910: 0x10ad910: sll   zero, zero, 0
-// 0x010ad914: 0x10ad914: bne   v1, v0, 0x10ad944 sll   zero, zero, 0
+// 0x010adf58: 0x10adf58: sll   zero, zero, 0
+// 0x010adf5c: 0x10adf5c: bne   v1, v0, 0x10adf8c sll   zero, zero, 0
 	ldloc 7
 	ldloc 5
-	bne.un L_10ad944
+	bne.un L_10adf8c
 // --- basic block ---
-L_10ad91c:
-// 0x010ad91c: 0x10ad91c: lw    v1, 4(s0)
+L_10adf64:
+// 0x010adf64: 0x10adf64: lw    v1, 4(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9108,7 +9108,7 @@ L_10ad91c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad920: 0x10ad920: lw    v0, 4(s5)
+// 0x010adf68: 0x10adf68: lw    v0, 4(s5)
 	ldloc 6
 	ldloc 18
 	ldc.i4.2
@@ -9117,13 +9117,13 @@ L_10ad91c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad924: 0x10ad924: sll   zero, zero, 0
-// 0x010ad928: 0x10ad928: bne   v1, v0, 0x10ad944 sll   zero, zero, 0
+// 0x010adf6c: 0x10adf6c: sll   zero, zero, 0
+// 0x010adf70: 0x10adf70: bne   v1, v0, 0x10adf8c sll   zero, zero, 0
 	ldloc 7
 	ldloc 5
-	bne.un L_10ad944
+	bne.un L_10adf8c
 // --- basic block ---
-// 0x010ad930: 0x10ad930: lw    v1, 16(s0)
+// 0x010adf78: 0x10adf78: lw    v1, 16(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9132,7 +9132,7 @@ L_10ad91c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad934: 0x10ad934: lw    v0, 16(s5)
+// 0x010adf7c: 0x10adf7c: lw    v0, 16(s5)
 	ldloc 6
 	ldloc 18
 	ldc.i4.2
@@ -9141,20 +9141,20 @@ L_10ad91c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad938: 0x10ad938: sll   zero, zero, 0
-// 0x010ad93c: 0x10ad93c: beq   v1, v0, 0x10adfe8 sll   zero, zero, 0
+// 0x010adf80: 0x10adf80: sll   zero, zero, 0
+// 0x010adf84: 0x10adf84: beq   v1, v0, 0x10ae630 sll   zero, zero, 0
 	ldloc 7
 	ldloc 5
-	beq  L_10adfe8
+	beq  L_10ae630
 // --- basic block ---
-L_10ad944:
-// 0x010ad944: 0x10ad944: addu  a1, s3, zero
+L_10adf8c:
+// 0x010adf8c: 0x10adf8c: addu  a1, s3, zero
 	ldloc 14
 	stloc.2
-// 0x010ad948: 0x10ad948: addiu a2, zero, 76
+// 0x010adf90: 0x10adf90: addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
-// 0x010ad94c: 0x10ad94c: jal   0x1001800 addu  a0, s1, zero
+// 0x010adf94: 0x10adf94: jal   0x1001800 addu  a0, s1, zero
 	ldloc 10
 	stloc.1
 	ldloc.1
@@ -9166,13 +9166,13 @@ L_10ad944:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad954: 0x10ad954: addu  a0, s0, zero
+// 0x010adf9c: 0x10adf9c: addu  a0, s0, zero
 	ldloc 12
 	stloc.1
-// 0x010ad958: 0x10ad958: addu  a1, s5, zero
+// 0x010adfa0: 0x10adfa0: addu  a1, s5, zero
 	ldloc 18
 	stloc.2
-// 0x010ad95c: 0x10ad95c: jal   0x1001800 addiu a2, zero, 48
+// 0x010adfa4: 0x10adfa4: jal   0x1001800 addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
 	ldloc.1
@@ -9184,37 +9184,37 @@ L_10ad944:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad964: 0x10ad964: addiu v0, zero, 1
+// 0x010adfac: 0x10adfac: addiu v0, zero, 1
 	ldc.i4.1
 	stloc 5
-// 0x010ad968: 0x10ad968: sw    v0, 0(s1)
+// 0x010adfb0: 0x10adfb0: sw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldloc 5
 	stelem.i4
-// 0x010ad96c: 0x10ad96c: j	 0x10adfe8 addiu s2, zero, -1
+// 0x010adfb4: 0x10adfb4: j	 0x10ae630 addiu s2, zero, -1
 	ldc.i4.m1
 	stloc 16
-	br L_10adfe8
+	br L_10ae630
 // --- basic block ---
-L_10ad974:
-// 0x010ad974: 0x10ad974: lw    v0, 0(s1)
+L_10adfbc:
+// 0x010adfbc: 0x10adfbc: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ad978: 0x10ad978: sll   zero, zero, 0
-// 0x010ad97c: 0x10ad97c: beq   v0, zero, 0x10ada0c addiu v0, zero, 16
+// 0x010adfc0: 0x10adfc0: sll   zero, zero, 0
+// 0x010adfc4: 0x10adfc4: beq   v0, zero, 0x10ae054 addiu v0, zero, 16
 	ldloc 5
 	ldc.i4.s 16
 	stloc 5
-	brfalse L_10ada0c
+	brfalse L_10ae054
 // --- basic block ---
-// 0x010ad984: 0x10ad984: lw    a0, 244(sp)
+// 0x010adfcc: 0x10adfcc: lw    a0, 244(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9223,10 +9223,10 @@ L_10ad974:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ad988: 0x10ad988: addu  a1, s0, zero
+// 0x010adfd0: 0x10adfd0: addu  a1, s0, zero
 	ldloc 12
 	stloc.2
-// 0x010ad98c: 0x10ad98c: lw    s4, 32(s1)
+// 0x010adfd4: 0x10adfd4: lw    s4, 32(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -9235,7 +9235,7 @@ L_10ad974:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ad990: 0x10ad990: jal   0x10afadc addu  a2, s0, zero
+// 0x010adfd8: 0x10adfd8: jal   0x10b0124 addu  a2, s0, zero
 	ldloc 12
 	stloc.3
 	ldloc.0
@@ -9243,18 +9243,18 @@ L_10ad974:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl131::editor_track_util_get_distance_10afadc(int32,int32,int32,int32,int32)
+	call int32 Cibyl131::editor_track_util_get_distance_10b0124(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad998: 0x10ad998: bne   v0, zero, 0x10ad9a8 addiu v0, zero, 10000
+// 0x010adfe0: 0x10adfe0: bne   v0, zero, 0x10adff0 addiu v0, zero, 10000
 	ldloc 5
 	ldc.i4 10000
 	stloc 5
-	brtrue L_10ad9a8
+	brtrue L_10adff0
 // --- basic block ---
-// 0x010ad9a0: 0x10ad9a0: j	 0x10ada08 sw    v0, 20(s0)
+// 0x010adfe8: 0x10adfe8: j	 0x10ae050 sw    v0, 20(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9263,10 +9263,10 @@ L_10ad974:
 	add
 	ldloc 5
 	stelem.i4
-	br L_10ada08
+	br L_10ae050
 // --- basic block ---
-L_10ad9a8:
-// 0x010ad9a8: 0x10ad9a8: lw    v0, 16(s6)
+L_10adff0:
+// 0x010adff0: 0x10adff0: lw    v0, 16(s6)
 	ldloc 6
 	ldloc 19
 	ldc.i4.2
@@ -9275,19 +9275,19 @@ L_10ad9a8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad9ac: 0x10ad9ac: addu  a0, s3, zero
+// 0x010adff4: 0x10adff4: addu  a0, s3, zero
 	ldloc 14
 	stloc.1
-// 0x010ad9b0: 0x10ad9b0: addu  a1, s1, zero
+// 0x010adff8: 0x10adff8: addu  a1, s1, zero
 	ldloc 10
 	stloc.2
-// 0x010ad9b4: 0x10ad9b4: addu  a2, s0, zero
+// 0x010adffc: 0x10adffc: addu  a2, s0, zero
 	ldloc 12
 	stloc.3
-// 0x010ad9b8: 0x10ad9b8: addu  a3, s0, zero
+// 0x010ae000: 0x10ae000: addu  a3, s0, zero
 	ldloc 12
 	stloc 4
-// 0x010ad9bc: 0x10ad9bc: sw    v0, 20(sp)
+// 0x010ae004: 0x10ae004: sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9296,7 +9296,7 @@ L_10ad9a8:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ad9c0: 0x10ad9c0: jal   0x102a3cc sw    zero, 16(sp)
+// 0x010ae008: 0x10ae008: jal   0x102a3dc sw    zero, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9310,18 +9310,18 @@ L_10ad9a8:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3cc(int32,int32,int32,int32,int32)
+	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3dc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ad9c8: 0x10ad9c8: beq   v0, zero, 0x10ada08 addu  s7, v0, zero
+// 0x010ae010: 0x10ae010: beq   v0, zero, 0x10ae050 addu  s7, v0, zero
 	ldloc 5
 	ldloc 5
 	stloc 11
-	brfalse L_10ada08
+	brfalse L_10ae050
 // --- basic block ---
-// 0x010ad9d0: 0x10ad9d0: lw    v1, 20(s3)
+// 0x010ae018: 0x10ae018: lw    v1, 20(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -9330,7 +9330,7 @@ L_10ad9a8:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ad9d4: 0x10ad9d4: lw    v0, 20(s1)
+// 0x010ae01c: 0x10ae01c: lw    v0, 20(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -9339,38 +9339,38 @@ L_10ad9a8:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ad9d8: 0x10ad9d8: sll   zero, zero, 0
-// 0x010ad9dc: 0x10ad9dc: bne   v1, v0, 0x10ada0c addiu v0, zero, 16
+// 0x010ae020: 0x10ae020: sll   zero, zero, 0
+// 0x010ae024: 0x10ae024: bne   v1, v0, 0x10ae054 addiu v0, zero, 16
 	ldloc 7
 	ldloc 5
 	ldc.i4.s 16
 	stloc 5
-	bne.un L_10ada0c
+	bne.un L_10ae054
 // --- basic block ---
-// 0x010ad9e4: 0x10ad9e4: slt   s4, s7, s4
+// 0x010ae02c: 0x10ae02c: slt   s4, s7, s4
 	ldloc 11
 	ldloc 9
 	clt
 	stloc 9
-// 0x010ad9e8: 0x10ad9e8: beq   s4, zero, 0x10ada00 sll   zero, zero, 0
+// 0x010ae030: 0x10ae030: beq   s4, zero, 0x10ae048 sll   zero, zero, 0
 	ldloc 9
-	brfalse L_10ada00
+	brfalse L_10ae048
 // --- basic block ---
-// 0x010ad9f0: 0x10ad9f0: jal   0x102be64 addu  a0, s7, zero
+// 0x010ae038: 0x10ae038: jal   0x102be74 addu  a0, s7, zero
 	ldloc 11
 	stloc.1
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_certain_102be64(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_certain_102be74(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ad9f8: 0x10ad9f8: beq   v0, zero, 0x10ada0c addiu v0, zero, 16
+// 0x010ae040: 0x10ae040: beq   v0, zero, 0x10ae054 addiu v0, zero, 16
 	ldloc 5
 	ldc.i4.s 16
 	stloc 5
-	brfalse L_10ada0c
+	brfalse L_10ae054
 // --- basic block ---
-L_10ada00:
-// 0x010ada00: 0x10ada00: j	 0x10adfe4 sw    s7, 32(s1)
+L_10ae048:
+// 0x010ae048: 0x10ae048: j	 0x10ae62c sw    s7, 32(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -9379,14 +9379,14 @@ L_10ada00:
 	add
 	ldloc 11
 	stelem.i4
-	br L_10adfe4
+	br L_10ae62c
 // --- basic block ---
-L_10ada08:
-// 0x010ada08: 0x10ada08: addiu v0, zero, 16
+L_10ae050:
+// 0x010ae050: 0x10ae050: addiu v0, zero, 16
 	ldc.i4.s 16
 	stloc 5
-L_10ada0c:
-// 0x010ada0c: 0x10ada0c: sw    v0, 20(sp)
+L_10ae054:
+// 0x010ae054: 0x10ae054: sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9395,12 +9395,12 @@ L_10ada0c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ada10: 0x10ada10: addiu v0, sp, 40
+// 0x010ae058: 0x10ae058: addiu v0, sp, 40
 	ldloc.0
 	ldc.i4.s 40
 	add
 	stloc 5
-// 0x010ada14: 0x10ada14: sw    v0, 24(sp)
+// 0x010ae05c: 0x10ae05c: sw    v0, 24(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9409,18 +9409,18 @@ L_10ada0c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ada18: 0x10ada18: lui   s4, 0x90000
+// 0x010ae060: 0x10ae060: lui   s4, 0x90000
 	ldc.i4 589824
 	stloc 9
-// 0x010ada1c: 0x10ada1c: addiu v0, sp, 44
+// 0x010ae064: 0x10ae064: addiu v0, sp, 44
 	ldloc.0
 	ldc.i4.s 44
 	add
 	stloc 5
-// 0x010ada20: 0x10ada20: addu  a0, s6, zero
+// 0x010ae068: 0x10ae068: addu  a0, s6, zero
 	ldloc 19
 	stloc.1
-// 0x010ada24: 0x10ada24: sw    v0, 28(sp)
+// 0x010ae06c: 0x10ae06c: sw    v0, 28(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9429,26 +9429,26 @@ L_10ada0c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ada28: 0x10ada28: addiu s4, s4, -13132
+// 0x010ae070: 0x10ae070: addiu s4, s4, -12668
 	ldloc 9
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 9
-// 0x010ada2c: 0x10ada2c: addiu v0, sp, 48
+// 0x010ae074: 0x10ae074: addiu v0, sp, 48
 	ldloc.0
 	ldc.i4.s 48
 	add
 	stloc 5
-// 0x010ada30: 0x10ada30: addu  a1, s3, zero
+// 0x010ae078: 0x10ae078: addu  a1, s3, zero
 	ldloc 14
 	stloc.2
-// 0x010ada34: 0x10ada34: addu  a2, s1, zero
+// 0x010ae07c: 0x10ae07c: addu  a2, s1, zero
 	ldloc 10
 	stloc.3
-// 0x010ada38: 0x10ada38: addu  a3, s0, zero
+// 0x010ae080: 0x10ae080: addu  a3, s0, zero
 	ldloc 12
 	stloc 4
-// 0x010ada3c: 0x10ada3c: sw    v0, 32(sp)
+// 0x010ae084: 0x10ae084: sw    v0, 32(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9457,7 +9457,7 @@ L_10ada0c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010ada40: 0x10ada40: jal   0x10af7e4 sw    s4, 16(sp)
+// 0x010ae088: 0x10ae088: jal   0x10afe2c sw    s4, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9471,12 +9471,12 @@ L_10ada0c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl131::editor_track_util_find_street_10af7e4(int32,int32,int32,int32,int32)
+	call int32 Cibyl131::editor_track_util_find_street_10afe2c(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ada48: 0x10ada48: lw    a0, 44(sp)
+// 0x010ae090: 0x10ae090: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9485,7 +9485,7 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ada4c: 0x10ada4c: jal   0x102be58 sw    v0, 216(sp)
+// 0x010ae094: 0x10ae094: jal   0x102be68 sw    v0, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9495,14 +9495,14 @@ L_10ada0c:
 	ldloc 5
 	stelem.i4
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ada54: 0x10ada54: bne   v0, zero, 0x10adc0c sll   zero, zero, 0
+// 0x010ae09c: 0x10ae09c: bne   v0, zero, 0x10ae254 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10adc0c
+	brtrue L_10ae254
 // --- basic block ---
-// 0x010ada5c: 0x10ada5c: lw    a0, 44(sp)
+// 0x010ae0a4: 0x10ae0a4: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9511,28 +9511,28 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ada60: 0x10ada60: jal   0x102be40 sll   zero, zero, 0
+// 0x010ae0a8: 0x10ae0a8: jal   0x102be50 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be40(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be50(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ada68: 0x10ada68: beq   v0, zero, 0x10adc0c sll   zero, zero, 0
+// 0x010ae0b0: 0x10ae0b0: beq   v0, zero, 0x10ae254 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10adc0c
+	brfalse L_10ae254
 // --- basic block ---
-// 0x010ada70: 0x10ada70: lw    v0, 0(s1)
+// 0x010ae0b8: 0x10ae0b8: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ada74: 0x10ada74: sll   zero, zero, 0
-// 0x010ada78: 0x10ada78: beq   v0, zero, 0x10adc0c sll   zero, zero, 0
+// 0x010ae0bc: 0x10ae0bc: sll   zero, zero, 0
+// 0x010ae0c0: 0x10ae0c0: beq   v0, zero, 0x10ae254 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10adc0c
+	brfalse L_10ae254
 // --- basic block ---
-// 0x010ada80: 0x10ada80: lw    s7, 20(s0)
+// 0x010ae0c8: 0x10ae0c8: lw    s7, 20(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9541,29 +9541,29 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010ada84: 0x10ada84: jal   0x10b0f9c sll   zero, zero, 0
+// 0x010ae0cc: 0x10ae0cc: jal   0x10b15e4 sll   zero, zero, 0
 	ldloc.0
 	ldloc.1
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl132::editor_track_point_distance_10b0f9c(int32,int32,int32,int32,int32)
+	call int32 Cibyl132::editor_track_point_distance_10b15e4(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ada8c: 0x10ada8c: slt   v0, s7, v0
+// 0x010ae0d4: 0x10ae0d4: slt   v0, s7, v0
 	ldloc 11
 	ldloc 5
 	clt
 	stloc 5
-// 0x010ada90: 0x10ada90: beq   v0, zero, 0x10adc0c addiu v0, zero, 48
+// 0x010ae0d8: 0x10ae0d8: beq   v0, zero, 0x10ae254 addiu v0, zero, 48
 	ldloc 5
 	ldc.i4.s 48
 	stloc 5
-	brfalse L_10adc0c
+	brfalse L_10ae254
 // --- basic block ---
-// 0x010ada98: 0x10ada98: lw    s5, 40(sp)
+// 0x010ae0e0: 0x10ae0e0: lw    s5, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9572,55 +9572,55 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc 18
-// 0x010ada9c: 0x10ada9c: sll   zero, zero, 0
-// 0x010adaa0: 0x10adaa0: mult  s5, v0
+// 0x010ae0e4: 0x10ae0e4: sll   zero, zero, 0
+// 0x010ae0e8: 0x10ae0e8: mult  s5, v0
 	ldloc 18
 	ldloc 5
 	mul
 	stloc 8
-// 0x010adaa4: 0x10adaa4: lw    v1, 0(s0)
+// 0x010ae0ec: 0x10ae0ec: lw    v1, 0(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 7
-// 0x010adaa8: 0x10adaa8: mflo  lo
+// 0x010ae0f0: 0x10ae0f0: mflo  lo
 	ldloc 8
 	stloc 5
-// 0x010adaac: 0x10adaac: addu  v0, v0, s4
+// 0x010ae0f4: 0x10ae0f4: addu  v0, v0, s4
 	ldloc 5
 	ldloc 9
 	add
 	stloc 5
-// 0x010adab0: 0x10adab0: lw    v0, 0(v0)
+// 0x010ae0f8: 0x10ae0f8: lw    v0, 0(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010adab4: 0x10adab4: sll   zero, zero, 0
-// 0x010adab8: 0x10adab8: bne   v0, v1, 0x10adb48 sll   zero, zero, 0
+// 0x010ae0fc: 0x10ae0fc: sll   zero, zero, 0
+// 0x010ae100: 0x10ae100: bne   v0, v1, 0x10ae190 sll   zero, zero, 0
 	ldloc 5
 	ldloc 7
-	bne.un L_10adb48
+	bne.un L_10ae190
 // --- basic block ---
-// 0x010adac0: 0x10adac0: bne   v0, zero, 0x10adaf4 addiu a0, zero, 48
+// 0x010ae108: 0x10ae108: bne   v0, zero, 0x10ae13c addiu a0, zero, 48
 	ldloc 5
 	ldc.i4.s 48
 	stloc.1
-	brtrue L_10adaf4
+	brtrue L_10ae13c
 // --- basic block ---
-// 0x010adac8: 0x10adac8: addiu v1, zero, 6
+// 0x010ae110: 0x10ae110: addiu v1, zero, 6
 	ldc.i4.6
 	stloc 7
-// 0x010adacc: 0x10adacc: mult  s5, v1
+// 0x010ae114: 0x10ae114: mult  s5, v1
 	ldloc 18
 	ldloc 7
 	mul
 	stloc 8
-// 0x010adad0: 0x10adad0: lw    v0, 12(s0)
+// 0x010ae118: 0x10ae118: lw    v0, 12(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9629,25 +9629,25 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adad4: 0x10adad4: mflo  lo
+// 0x010ae11c: 0x10ae11c: mflo  lo
 	ldloc 8
 	stloc 7
-// 0x010adad8: 0x10adad8: addiu v1, v1, 1
+// 0x010ae120: 0x10ae120: addiu v1, v1, 1
 	ldloc 7
 	ldc.i4.1
 	add
 	stloc 7
-// 0x010adadc: 0x10adadc: sll   v1, v1, 3
+// 0x010ae124: 0x10ae124: sll   v1, v1, 3
 	ldloc 7
 	ldc.i4.3
 	shl
 	stloc 7
-// 0x010adae0: 0x10adae0: addu  s4, s4, v1
+// 0x010ae128: 0x10ae128: addu  s4, s4, v1
 	ldloc 9
 	ldloc 7
 	add
 	stloc 9
-// 0x010adae4: 0x10adae4: lw    v1, 4(s4)
+// 0x010ae12c: 0x10ae12c: lw    v1, 4(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -9656,29 +9656,29 @@ L_10ada0c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adae8: 0x10adae8: sll   zero, zero, 0
-// 0x010adaec: 0x10adaec: bne   v1, v0, 0x10adb4c lui   s3, 0x90000
+// 0x010ae130: 0x10ae130: sll   zero, zero, 0
+// 0x010ae134: 0x10ae134: bne   v1, v0, 0x10ae194 lui   s3, 0x90000
 	ldloc 7
 	ldloc 5
 	ldc.i4 589824
 	stloc 14
-	bne.un L_10adb4c
+	bne.un L_10ae194
 // --- basic block ---
-L_10adaf4:
-// 0x010adaf4: 0x10adaf4: mult  s5, a0
+L_10ae13c:
+// 0x010ae13c: 0x10ae13c: mult  s5, a0
 	ldloc 18
 	ldloc.1
 	mul
 	stloc 8
-// 0x010adaf8: 0x10adaf8: lui   v0, 0x90000
+// 0x010ae140: 0x10ae140: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010adafc: 0x10adafc: addiu v0, v0, -13132
+// 0x010ae144: 0x10ae144: addiu v0, v0, -12668
 	ldloc 5
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 5
-// 0x010adb00: 0x10adb00: lw    v1, 4(s0)
+// 0x010ae148: 0x10ae148: lw    v1, 4(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9687,15 +9687,15 @@ L_10adaf4:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adb04: 0x10adb04: mflo  lo
+// 0x010ae14c: 0x10ae14c: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010adb08: 0x10adb08: addu  a0, v0, a0
+// 0x010ae150: 0x10ae150: addu  a0, v0, a0
 	ldloc 5
 	ldloc.1
 	add
 	stloc.1
-// 0x010adb0c: 0x10adb0c: lw    a0, 4(a0)
+// 0x010ae154: 0x10ae154: lw    a0, 4(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -9704,23 +9704,23 @@ L_10adaf4:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adb10: 0x10adb10: sll   zero, zero, 0
-// 0x010adb14: 0x10adb14: bne   a0, v1, 0x10adb4c lui   s3, 0x90000
+// 0x010ae158: 0x10ae158: sll   zero, zero, 0
+// 0x010ae15c: 0x10ae15c: bne   a0, v1, 0x10ae194 lui   s3, 0x90000
 	ldloc.1
 	ldloc 7
 	ldc.i4 589824
 	stloc 14
-	bne.un L_10adb4c
+	bne.un L_10ae194
 // --- basic block ---
-// 0x010adb1c: 0x10adb1c: addiu a0, zero, 3
+// 0x010ae164: 0x10ae164: addiu a0, zero, 3
 	ldc.i4.3
 	stloc.1
-// 0x010adb20: 0x10adb20: mult  s5, a0
+// 0x010ae168: 0x10ae168: mult  s5, a0
 	ldloc 18
 	ldloc.1
 	mul
 	stloc 8
-// 0x010adb24: 0x10adb24: lw    v1, 16(s0)
+// 0x010ae16c: 0x10ae16c: lw    v1, 16(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -9729,54 +9729,54 @@ L_10adaf4:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adb28: 0x10adb28: mflo  lo
+// 0x010ae170: 0x10ae170: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010adb2c: 0x10adb2c: addiu a0, a0, 1
+// 0x010ae174: 0x10ae174: addiu a0, a0, 1
 	ldloc.1
 	ldc.i4.1
 	add
 	stloc.1
-// 0x010adb30: 0x10adb30: sll   a0, a0, 4
+// 0x010ae178: 0x10ae178: sll   a0, a0, 4
 	ldloc.1
 	ldc.i4.4
 	shl
 	stloc.1
-// 0x010adb34: 0x10adb34: addu  v0, a0, v0
+// 0x010ae17c: 0x10ae17c: addu  v0, a0, v0
 	ldloc.1
 	ldloc 5
 	add
 	stloc 5
-// 0x010adb38: 0x10adb38: lw    v0, 0(v0)
+// 0x010ae180: 0x10ae180: lw    v0, 0(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010adb3c: 0x10adb3c: sll   zero, zero, 0
-// 0x010adb40: 0x10adb40: beq   v0, v1, 0x10adfe4 sll   zero, zero, 0
+// 0x010ae184: 0x10ae184: sll   zero, zero, 0
+// 0x010ae188: 0x10ae188: beq   v0, v1, 0x10ae62c sll   zero, zero, 0
 	ldloc 5
 	ldloc 7
-	beq  L_10adfe4
+	beq  L_10ae62c
 // --- basic block ---
-L_10adb48:
-// 0x010adb48: 0x10adb48: lui   s3, 0x90000
+L_10ae190:
+// 0x010ae190: 0x10ae190: lui   s3, 0x90000
 	ldc.i4 589824
 	stloc 14
-L_10adb4c:
-// 0x010adb4c: 0x10adb4c: addiu s3, s3, -32416
+L_10ae194:
+// 0x010ae194: 0x10ae194: addiu s3, s3, -31952
 	ldloc 14
-	ldc.i4 -32416
+	ldc.i4 -31952
 	add
 	stloc 14
-// 0x010adb50: 0x10adb50: addu  a0, s3, zero
+// 0x010ae198: 0x10ae198: addu  a0, s3, zero
 	ldloc 14
 	stloc.1
-// 0x010adb54: 0x10adb54: addu  a1, s1, zero
+// 0x010ae19c: 0x10ae19c: addu  a1, s1, zero
 	ldloc 10
 	stloc.2
-// 0x010adb58: 0x10adb58: jal   0x1001800 addiu a2, zero, 76
+// 0x010ae1a0: 0x10ae1a0: jal   0x1001800 addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
 	ldloc.1
@@ -9788,18 +9788,18 @@ L_10adb4c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adb60: 0x10adb60: addiu s7, zero, 48
+// 0x010ae1a8: 0x10ae1a8: addiu s7, zero, 48
 	ldc.i4.s 48
 	stloc 11
-// 0x010adb64: 0x10adb64: addiu a0, s3, 76
+// 0x010ae1ac: 0x10ae1ac: addiu a0, s3, 76
 	ldloc 14
 	ldc.i4.s 76
 	add
 	stloc.1
-// 0x010adb68: 0x10adb68: addu  a1, s0, zero
+// 0x010ae1b0: 0x10ae1b0: addu  a1, s0, zero
 	ldloc 12
 	stloc.2
-// 0x010adb6c: 0x10adb6c: jal   0x1001800 addiu a2, zero, 48
+// 0x010ae1b4: 0x10ae1b4: jal   0x1001800 addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
 	ldloc.1
@@ -9811,15 +9811,15 @@ L_10adb4c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adb74: 0x10adb74: mult  s5, s7
+// 0x010ae1bc: 0x10ae1bc: mult  s5, s7
 	ldloc 18
 	ldloc 11
 	mul
 	stloc 8
-// 0x010adb78: 0x10adb78: addiu s4, zero, 1
+// 0x010ae1c0: 0x10ae1c0: addiu s4, zero, 1
 	ldc.i4.1
 	stloc 9
-// 0x010adb7c: 0x10adb7c: sw    zero, 124(s3)
+// 0x010ae1c4: 0x10ae1c4: sw    zero, 124(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -9828,7 +9828,7 @@ L_10adb4c:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010adb80: 0x10adb80: sw    s4, 1920(s3)
+// 0x010ae1c8: 0x10ae1c8: sw    s4, 1920(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -9837,7 +9837,7 @@ L_10adb4c:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010adb84: 0x10adb84: sw    zero, 1924(s3)
+// 0x010ae1cc: 0x10ae1cc: sw    zero, 1924(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -9846,10 +9846,10 @@ L_10adb4c:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010adb88: 0x10adb88: lui   s5, 0x90000
+// 0x010ae1d0: 0x10ae1d0: lui   s5, 0x90000
 	ldc.i4 589824
 	stloc 18
-// 0x010adb8c: 0x10adb8c: lw    v0, 16(s6)
+// 0x010ae1d4: 0x10ae1d4: lw    v0, 16(s6)
 	ldloc 6
 	ldloc 19
 	ldc.i4.2
@@ -9858,29 +9858,29 @@ L_10adb4c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adb90: 0x10adb90: addiu s5, s5, -13132
+// 0x010ae1d8: 0x10ae1d8: addiu s5, s5, -12668
 	ldloc 18
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 18
-// 0x010adb94: 0x10adb94: addiu s6, sp, 64
+// 0x010ae1dc: 0x10ae1dc: addiu s6, sp, 64
 	ldloc.0
 	ldc.i4.s 64
 	add
 	stloc 19
-// 0x010adb98: 0x10adb98: addu  a1, s1, zero
+// 0x010ae1e0: 0x10ae1e0: addu  a1, s1, zero
 	ldloc 10
 	stloc.2
-// 0x010adb9c: 0x10adb9c: addu  a2, s0, zero
+// 0x010ae1e4: 0x10ae1e4: addu  a2, s0, zero
 	ldloc 12
 	stloc.3
-// 0x010adba0: 0x10adba0: addu  a0, s6, zero
+// 0x010ae1e8: 0x10ae1e8: addu  a0, s6, zero
 	ldloc 19
 	stloc.1
-// 0x010adba4: 0x10adba4: mflo  lo
+// 0x010ae1ec: 0x10ae1ec: mflo  lo
 	ldloc 8
 	stloc 4
-// 0x010adba8: 0x10adba8: sw    v0, 20(sp)
+// 0x010ae1f0: 0x10ae1f0: sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9889,12 +9889,12 @@ L_10adb4c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adbac: 0x10adbac: addu  a3, s5, a3
+// 0x010ae1f4: 0x10ae1f4: addu  a3, s5, a3
 	ldloc 18
 	ldloc 4
 	add
 	stloc 4
-// 0x010adbb0: 0x10adbb0: jal   0x102a3cc sw    zero, 16(sp)
+// 0x010ae1f8: 0x10ae1f8: jal   0x102a3dc sw    zero, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9908,23 +9908,23 @@ L_10adb4c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3cc(int32,int32,int32,int32,int32)
+	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3dc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adbb8: 0x10adbb8: addu  a1, s6, zero
+// 0x010ae200: 0x10ae200: addu  a1, s6, zero
 	ldloc 19
 	stloc.2
-// 0x010adbbc: 0x10adbbc: addiu a0, s3, 1928
+// 0x010ae204: 0x10ae204: addiu a0, s3, 1928
 	ldloc 14
 	ldc.i4 1928
 	add
 	stloc.1
-// 0x010adbc0: 0x10adbc0: addiu a2, zero, 76
+// 0x010ae208: 0x10ae208: addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
-// 0x010adbc4: 0x10adbc4: sw    v0, 96(sp)
+// 0x010ae20c: 0x10ae20c: sw    v0, 96(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9933,7 +9933,7 @@ L_10adb4c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adbc8: 0x10adbc8: sw    v0, 92(sp)
+// 0x010ae210: 0x10ae210: sw    v0, 92(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9942,7 +9942,7 @@ L_10adb4c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adbcc: 0x10adbcc: jal   0x1001800 sw    s4, 64(sp)
+// 0x010ae214: 0x10ae214: jal   0x1001800 sw    s4, 64(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9960,7 +9960,7 @@ L_10adb4c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adbd4: 0x10adbd4: lw    v0, 40(sp)
+// 0x010ae21c: 0x10ae21c: lw    v0, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -9969,23 +9969,23 @@ L_10adb4c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adbd8: 0x10adbd8: addiu a0, s3, 2004
+// 0x010ae220: 0x10ae220: addiu a0, s3, 2004
 	ldloc 14
 	ldc.i4 2004
 	add
 	stloc.1
-// 0x010adbdc: 0x10adbdc: mult  v0, s7
+// 0x010ae224: 0x10ae224: mult  v0, s7
 	ldloc 5
 	ldloc 11
 	mul
 	stloc 8
-// 0x010adbe0: 0x10adbe0: addiu a2, zero, 48
+// 0x010ae228: 0x10ae228: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010adbe4: 0x10adbe4: mflo  lo
+// 0x010ae22c: 0x10ae22c: mflo  lo
 	ldloc 8
 	stloc 11
-// 0x010adbe8: 0x10adbe8: jal   0x1001800 addu  a1, s5, s7
+// 0x010ae230: 0x10ae230: jal   0x1001800 addu  a1, s5, s7
 	ldloc 18
 	ldloc 11
 	add
@@ -9999,22 +9999,22 @@ L_10adb4c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adbf0: 0x10adbf0: addiu v1, zero, 2
+// 0x010ae238: 0x10ae238: addiu v1, zero, 2
 	ldc.i4.2
 	stloc 7
-// 0x010adbf4: 0x10adbf4: lui   v0, 0x90000
+// 0x010ae23c: 0x10ae23c: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-// 0x010adbf8: 0x10adbf8: sw    v1, -13136(v0)
+// 0x010ae240: 0x10ae240: sw    v1, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldloc 7
 	stelem.i4
-// 0x010adbfc: 0x10adbfc: sw    s2, 2052(s3)
+// 0x010ae244: 0x10ae244: sw    s2, 2052(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -10023,7 +10023,7 @@ L_10adb4c:
 	add
 	ldloc 16
 	stelem.i4
-// 0x010adc00: 0x10adc00: sw    s4, 3848(s3)
+// 0x010ae248: 0x10ae248: sw    s4, 3848(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -10032,7 +10032,7 @@ L_10adb4c:
 	add
 	ldloc 9
 	stelem.i4
-// 0x010adc04: 0x10adc04: j	 0x10adfe4 sw    zero, 3852(s3)
+// 0x010ae24c: 0x10ae24c: j	 0x10ae62c sw    zero, 3852(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -10041,10 +10041,10 @@ L_10adb4c:
 	add
 	ldc.i4.s 0
 	stelem.i4
-	br L_10adfe4
+	br L_10ae62c
 // --- basic block ---
-L_10adc0c:
-// 0x010adc0c: 0x10adc0c: lw    a0, 44(sp)
+L_10ae254:
+// 0x010ae254: 0x10ae254: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10053,16 +10053,16 @@ L_10adc0c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adc10: 0x10adc10: jal   0x102be58 sll   zero, zero, 0
+// 0x010ae258: 0x10ae258: jal   0x102be68 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adc18: 0x10adc18: beq   v0, zero, 0x10adc34 sll   zero, zero, 0
+// 0x010ae260: 0x10ae260: beq   v0, zero, 0x10ae27c sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10adc34
+	brfalse L_10ae27c
 // --- basic block ---
-// 0x010adc20: 0x10adc20: lw    a0, 48(sp)
+// 0x010ae268: 0x10ae268: lw    a0, 48(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10071,17 +10071,17 @@ L_10adc0c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adc24: 0x10adc24: jal   0x102be58 sll   zero, zero, 0
+// 0x010ae26c: 0x10ae26c: jal   0x102be68 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adc2c: 0x10adc2c: bne   v0, zero, 0x10adc5c sll   zero, zero, 0
+// 0x010ae274: 0x10ae274: bne   v0, zero, 0x10ae2a4 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10adc5c
+	brtrue L_10ae2a4
 // --- basic block ---
-L_10adc34:
-// 0x010adc34: 0x10adc34: lw    a0, 44(sp)
+L_10ae27c:
+// 0x010ae27c: 0x10ae27c: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10090,16 +10090,16 @@ L_10adc34:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adc38: 0x10adc38: jal   0x102be58 sll   zero, zero, 0
+// 0x010ae280: 0x10ae280: jal   0x102be68 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adc40: 0x10adc40: bne   v0, zero, 0x10ade30 sll   zero, zero, 0
+// 0x010ae288: 0x10ae288: bne   v0, zero, 0x10ae478 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10ade30
+	brtrue L_10ae478
 // --- basic block ---
-// 0x010adc48: 0x10adc48: lw    a0, 48(sp)
+// 0x010ae290: 0x10ae290: lw    a0, 48(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10108,17 +10108,17 @@ L_10adc34:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adc4c: 0x10adc4c: jal   0x102be40 sll   zero, zero, 0
+// 0x010ae294: 0x10ae294: jal   0x102be50 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be40(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be50(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adc54: 0x10adc54: beq   v0, zero, 0x10ade30 sll   zero, zero, 0
+// 0x010ae29c: 0x10ae29c: beq   v0, zero, 0x10ae478 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10ade30
+	brfalse L_10ae478
 // --- basic block ---
-L_10adc5c:
-// 0x010adc5c: 0x10adc5c: lw    a0, 44(sp)
+L_10ae2a4:
+// 0x010ae2a4: 0x10ae2a4: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10127,17 +10127,17 @@ L_10adc5c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adc60: 0x10adc60: jal   0x102be58 lui   s4, 0x90000
+// 0x010ae2a8: 0x10ae2a8: jal   0x102be68 lui   s4, 0x90000
 	ldc.i4 589824
 	stloc 9
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adc68: 0x10adc68: addu  s7, zero, zero
+// 0x010ae2b0: 0x10ae2b0: addu  s7, zero, zero
 	ldc.i4.s 0
 	stloc 11
-// 0x010adc6c: 0x10adc6c: sw    v0, 220(sp)
+// 0x010ae2b4: 0x10ae2b4: sw    v0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10146,18 +10146,18 @@ L_10adc5c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adc70: 0x10adc70: addiu s4, s4, -13132
+// 0x010ae2b8: 0x10ae2b8: addiu s4, s4, -12668
 	ldloc 9
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 9
-// 0x010adc74: 0x10adc74: j	 0x10ade00 lui   s8, 0x90000
+// 0x010ae2bc: 0x10ae2bc: j	 0x10ae448 lui   s8, 0x90000
 	ldc.i4 589824
 	stloc 17
-	br L_10ade00
+	br L_10ae448
 // --- basic block ---
-L_10adc7c:
-// 0x010adc7c: 0x10adc7c: lw    v0, 16(s6)
+L_10ae2c4:
+// 0x010ae2c4: 0x10ae2c4: lw    v0, 16(s6)
 	ldloc 6
 	ldloc 19
 	ldc.i4.2
@@ -10166,16 +10166,16 @@ L_10adc7c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adc80: 0x10adc80: addu  a1, s1, zero
+// 0x010ae2c8: 0x10ae2c8: addu  a1, s1, zero
 	ldloc 10
 	stloc.2
-// 0x010adc84: 0x10adc84: addu  a2, s0, zero
+// 0x010ae2cc: 0x10ae2cc: addu  a2, s0, zero
 	ldloc 12
 	stloc.3
-// 0x010adc88: 0x10adc88: addu  a3, s4, zero
+// 0x010ae2d0: 0x10ae2d0: addu  a3, s4, zero
 	ldloc 9
 	stloc 4
-// 0x010adc8c: 0x10adc8c: sw    v0, 20(sp)
+// 0x010ae2d4: 0x10ae2d4: sw    v0, 20(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10184,7 +10184,7 @@ L_10adc7c:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adc90: 0x10adc90: jal   0x102a3cc sw    zero, 16(sp)
+// 0x010ae2d8: 0x10ae2d8: jal   0x102a3dc sw    zero, 16(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10198,15 +10198,15 @@ L_10adc7c:
 	ldloc.2
 	ldloc.3
 	ldloc 4
-	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3cc(int32,int32,int32,int32,int32)
+	call int32 Cibyl31::roadmap_navigate_fuzzify_102a3dc(int32,int32,int32,int32,int32)
 	ldsfld int32 [WazeWP7]CRunTime::saved_v1
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adc98: 0x10adc98: addu  a0, v0, zero
+// 0x010ae2e0: 0x10ae2e0: addu  a0, v0, zero
 	ldloc 5
 	stloc.1
-// 0x010adc9c: 0x10adc9c: jal   0x102be58 sw    v0, 264(sp)
+// 0x010ae2e4: 0x10ae2e4: jal   0x102be68 sw    v0, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10216,10 +10216,10 @@ L_10adc7c:
 	ldloc 5
 	stelem.i4
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_good_102be58(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_good_102be68(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adca4: 0x10adca4: lw    v1, 264(sp)
+// 0x010ae2ec: 0x10ae2ec: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10228,11 +10228,11 @@ L_10adc7c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adca8: 0x10adca8: bne   v0, zero, 0x10adcd4 sll   zero, zero, 0
+// 0x010ae2f0: 0x10ae2f0: bne   v0, zero, 0x10ae31c sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10adcd4
+	brtrue L_10ae31c
 // --- basic block ---
-// 0x010adcb0: 0x10adcb0: lw    v0, 220(sp)
+// 0x010ae2f8: 0x10ae2f8: lw    v0, 220(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10241,19 +10241,19 @@ L_10adc7c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adcb4: 0x10adcb4: sll   zero, zero, 0
-// 0x010adcb8: 0x10adcb8: bne   v0, zero, 0x10addf8 sll   zero, zero, 0
+// 0x010ae2fc: 0x10ae2fc: sll   zero, zero, 0
+// 0x010ae300: 0x10ae300: bne   v0, zero, 0x10ae440 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10addf8
+	brtrue L_10ae440
 // --- basic block ---
-// 0x010adcc0: 0x10adcc0: jal   0x102be40 addu  a0, v1, zero
+// 0x010ae308: 0x10ae308: jal   0x102be50 addu  a0, v1, zero
 	ldloc 7
 	stloc.1
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be40(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be50(int32)
 	stloc 5
 // --- basic block ---
-// 0x010adcc8: 0x10adcc8: lw    v1, 264(sp)
+// 0x010ae310: 0x10ae310: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10262,52 +10262,52 @@ L_10adc7c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adccc: 0x10adccc: beq   v0, zero, 0x10addf8 sll   zero, zero, 0
+// 0x010ae314: 0x10ae314: beq   v0, zero, 0x10ae440 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10addf8
+	brfalse L_10ae440
 // --- basic block ---
-L_10adcd4:
-// 0x010adcd4: 0x10adcd4: lw    v0, 0(s1)
+L_10ae31c:
+// 0x010ae31c: 0x10ae31c: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010adcd8: 0x10adcd8: sll   zero, zero, 0
-// 0x010adcdc: 0x10adcdc: beq   v0, zero, 0x10add54 sll   zero, zero, 0
+// 0x010ae320: 0x10ae320: sll   zero, zero, 0
+// 0x010ae324: 0x10ae324: beq   v0, zero, 0x10ae39c sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10add54
+	brfalse L_10ae39c
 // --- basic block ---
-// 0x010adce4: 0x10adce4: beq   s0, zero, 0x10add54 sll   zero, zero, 0
+// 0x010ae32c: 0x10ae32c: beq   s0, zero, 0x10ae39c sll   zero, zero, 0
 	ldloc 12
-	brfalse L_10add54
+	brfalse L_10ae39c
 // --- basic block ---
-// 0x010adcec: 0x10adcec: lw    v0, 0(s0)
+// 0x010ae334: 0x10ae334: lw    v0, 0(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010adcf0: 0x10adcf0: lw    a0, 0(s4)
+// 0x010ae338: 0x10ae338: lw    a0, 0(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc.1
-// 0x010adcf4: 0x10adcf4: sll   zero, zero, 0
-// 0x010adcf8: 0x10adcf8: bne   v0, a0, 0x10add54 sll   zero, zero, 0
+// 0x010ae33c: 0x10ae33c: sll   zero, zero, 0
+// 0x010ae340: 0x10ae340: bne   v0, a0, 0x10ae39c sll   zero, zero, 0
 	ldloc 5
 	ldloc.1
-	bne.un L_10add54
+	bne.un L_10ae39c
 // --- basic block ---
-// 0x010add00: 0x10add00: bne   v0, zero, 0x10add1c sll   zero, zero, 0
+// 0x010ae348: 0x10ae348: bne   v0, zero, 0x10ae364 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10add1c
+	brtrue L_10ae364
 // --- basic block ---
-// 0x010add08: 0x10add08: lw    a0, 12(s0)
+// 0x010ae350: 0x10ae350: lw    a0, 12(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10316,7 +10316,7 @@ L_10adcd4:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010add0c: 0x10add0c: lw    v0, 12(s4)
+// 0x010ae354: 0x10ae354: lw    v0, 12(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -10325,14 +10325,14 @@ L_10adcd4:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010add10: 0x10add10: sll   zero, zero, 0
-// 0x010add14: 0x10add14: bne   a0, v0, 0x10add54 sll   zero, zero, 0
+// 0x010ae358: 0x10ae358: sll   zero, zero, 0
+// 0x010ae35c: 0x10ae35c: bne   a0, v0, 0x10ae39c sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10add54
+	bne.un L_10ae39c
 // --- basic block ---
-L_10add1c:
-// 0x010add1c: 0x10add1c: lw    a0, 4(s0)
+L_10ae364:
+// 0x010ae364: 0x10ae364: lw    a0, 4(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10341,7 +10341,7 @@ L_10add1c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010add20: 0x10add20: lw    v0, 4(s4)
+// 0x010ae368: 0x10ae368: lw    v0, 4(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -10350,13 +10350,13 @@ L_10add1c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010add24: 0x10add24: sll   zero, zero, 0
-// 0x010add28: 0x10add28: bne   a0, v0, 0x10add54 sll   zero, zero, 0
+// 0x010ae36c: 0x10ae36c: sll   zero, zero, 0
+// 0x010ae370: 0x10ae370: bne   a0, v0, 0x10ae39c sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10add54
+	bne.un L_10ae39c
 // --- basic block ---
-// 0x010add30: 0x10add30: lw    a0, 16(s0)
+// 0x010ae378: 0x10ae378: lw    a0, 16(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10365,7 +10365,7 @@ L_10add1c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010add34: 0x10add34: lw    v0, 16(s4)
+// 0x010ae37c: 0x10ae37c: lw    v0, 16(s4)
 	ldloc 6
 	ldloc 9
 	ldc.i4.2
@@ -10374,54 +10374,54 @@ L_10add1c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010add38: 0x10add38: sll   zero, zero, 0
-// 0x010add3c: 0x10add3c: bne   a0, v0, 0x10add54 sll   zero, zero, 0
+// 0x010ae380: 0x10ae380: sll   zero, zero, 0
+// 0x010ae384: 0x10ae384: bne   a0, v0, 0x10ae39c sll   zero, zero, 0
 	ldloc.1
 	ldloc 5
-	bne.un L_10add54
+	bne.un L_10ae39c
 // --- basic block ---
-// 0x010add44: 0x10add44: j	 0x10ae06c sll   zero, zero, 0
-	br L_10ae06c
+// 0x010ae38c: 0x10ae38c: j	 0x10ae6b4 sll   zero, zero, 0
+	br L_10ae6b4
 // --- basic block ---
-L_10add4c:
-// 0x010add4c: 0x10add4c: j	 0x10adfe4 sw    zero, -13136(v0)
+L_10ae394:
+// 0x010ae394: 0x10ae394: j	 0x10ae62c sw    zero, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldc.i4.s 0
 	stelem.i4
-	br L_10adfe4
+	br L_10ae62c
 // --- basic block ---
-L_10add54:
-// 0x010add54: 0x10add54: lw    a3, -13136(s8)
+L_10ae39c:
+// 0x010ae39c: 0x10ae39c: lw    a3, -12672(s8)
 	ldloc 6
 	ldloc 17
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 4
-// 0x010add58: 0x10add58: addiu a0, zero, 1928
+// 0x010ae3a0: 0x10ae3a0: addiu a0, zero, 1928
 	ldc.i4 1928
 	stloc.1
-// 0x010add5c: 0x10add5c: mult  a3, a0
+// 0x010ae3a4: 0x10ae3a4: mult  a3, a0
 	ldloc 4
 	ldloc.1
 	mul
 	stloc 8
-// 0x010add60: 0x10add60: lui   a0, 0x90000
+// 0x010ae3a8: 0x10ae3a8: lui   a0, 0x90000
 	ldc.i4 589824
 	stloc.1
-// 0x010add64: 0x10add64: addiu a0, a0, -32416
+// 0x010ae3ac: 0x10ae3ac: addiu a0, a0, -31952
 	ldloc.1
-	ldc.i4 -32416
+	ldc.i4 -31952
 	add
 	stloc.1
-// 0x010add68: 0x10add68: sw    v1, 92(sp)
+// 0x010ae3b0: 0x10ae3b0: sw    v1, 92(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10430,7 +10430,7 @@ L_10add54:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010add6c: 0x10add6c: sw    v1, 96(sp)
+// 0x010ae3b4: 0x10ae3b4: sw    v1, 96(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10439,18 +10439,18 @@ L_10add54:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010add70: 0x10add70: addiu t1, zero, 1
+// 0x010ae3b8: 0x10ae3b8: addiu t1, zero, 1
 	ldc.i4.1
 	stloc 13
-// 0x010add74: 0x10add74: addiu a1, sp, 64
+// 0x010ae3bc: 0x10ae3bc: addiu a1, sp, 64
 	ldloc.0
 	ldc.i4.s 64
 	add
 	stloc.2
-// 0x010add78: 0x10add78: addiu a2, zero, 76
+// 0x010ae3c0: 0x10ae3c0: addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
-// 0x010add7c: 0x10add7c: sw    t1, 64(sp)
+// 0x010ae3c4: 0x10ae3c4: sw    t1, 64(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10459,7 +10459,7 @@ L_10add54:
 	add
 	ldloc 13
 	stelem.i4
-// 0x010add80: 0x10add80: sw    a3, 260(sp)
+// 0x010ae3c8: 0x10ae3c8: sw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10468,18 +10468,18 @@ L_10add54:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010add84: 0x10add84: mflo  lo
+// 0x010ae3cc: 0x10ae3cc: mflo  lo
 	ldloc 8
 	stloc 5
-// 0x010add88: 0x10add88: addu  v1, v0, a0
+// 0x010ae3d0: 0x10ae3d0: addu  v1, v0, a0
 	ldloc 5
 	ldloc.1
 	add
 	stloc 7
-// 0x010add8c: 0x10add8c: addu  a0, v1, zero
+// 0x010ae3d4: 0x10ae3d4: addu  a0, v1, zero
 	ldloc 7
 	stloc.1
-// 0x010add90: 0x10add90: jal   0x1001800 sw    v1, 264(sp)
+// 0x010ae3d8: 0x10ae3d8: jal   0x1001800 sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10497,7 +10497,7 @@ L_10add54:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010add98: 0x10add98: lw    v1, 264(sp)
+// 0x010ae3e0: 0x10ae3e0: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10506,15 +10506,15 @@ L_10add54:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010add9c: 0x10add9c: addiu a2, zero, 48
+// 0x010ae3e4: 0x10ae3e4: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010adda0: 0x10adda0: addiu a0, v1, 76
+// 0x010ae3e8: 0x10ae3e8: addiu a0, v1, 76
 	ldloc 7
 	ldc.i4.s 76
 	add
 	stloc.1
-// 0x010adda4: 0x10adda4: jal   0x1001800 addu  a1, s4, zero
+// 0x010ae3ec: 0x10ae3ec: jal   0x1001800 addu  a1, s4, zero
 	ldloc 9
 	stloc.2
 	ldloc.1
@@ -10526,7 +10526,7 @@ L_10add54:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010addac: 0x10addac: lw    a3, 260(sp)
+// 0x010ae3f4: 0x10ae3f4: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10535,7 +10535,7 @@ L_10add54:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010addb0: 0x10addb0: lw    v1, 264(sp)
+// 0x010ae3f8: 0x10ae3f8: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10544,18 +10544,18 @@ L_10add54:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010addb4: 0x10addb4: addiu a3, a3, 1
+// 0x010ae3fc: 0x10ae3fc: addiu a3, a3, 1
 	ldloc 4
 	ldc.i4.1
 	add
 	stloc 4
-// 0x010addb8: 0x10addb8: addiu a2, zero, 1
+// 0x010ae400: 0x10ae400: addiu a2, zero, 1
 	ldc.i4.1
 	stloc.3
-// 0x010addbc: 0x10addbc: addiu t1, zero, 10
+// 0x010ae404: 0x10ae404: addiu t1, zero, 10
 	ldc.i4.s 10
 	stloc 13
-// 0x010addc0: 0x10addc0: sw    zero, 1924(v1)
+// 0x010ae408: 0x10ae408: sw    zero, 1924(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -10564,7 +10564,7 @@ L_10add54:
 	add
 	ldc.i4.s 0
 	stelem.i4
-// 0x010addc4: 0x10addc4: sw    s2, 124(v1)
+// 0x010ae40c: 0x10ae40c: sw    s2, 124(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -10573,7 +10573,7 @@ L_10add54:
 	add
 	ldloc 16
 	stelem.i4
-// 0x010addc8: 0x10addc8: sw    a2, 1920(v1)
+// 0x010ae410: 0x10ae410: sw    a2, 1920(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -10582,39 +10582,39 @@ L_10add54:
 	add
 	ldloc.3
 	stelem.i4
-// 0x010addcc: 0x10addcc: bne   a3, t1, 0x10addf8 sw    a3, -13136(s8)
+// 0x010ae414: 0x10ae414: bne   a3, t1, 0x10ae440 sw    a3, -12672(s8)
 	ldloc 4
 	ldloc 13
 	ldloc 6
 	ldloc 17
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldloc 4
 	stelem.i4
-	bne.un L_10addf8
+	bne.un L_10ae440
 // --- basic block ---
-// 0x010addd4: 0x10addd4: lui   a1, 0x20000
+// 0x010ae41c: 0x10ae41c: lui   a1, 0x20000
 	ldc.i4 131072
 	stloc.2
-// 0x010addd8: 0x10addd8: lui   a3, 0x20000
+// 0x010ae420: 0x10ae420: lui   a3, 0x20000
 	ldc.i4 131072
 	stloc 4
-// 0x010adddc: 0x10adddc: addiu a1, a1, 16928
+// 0x010ae424: 0x10ae424: addiu a1, a1, 17388
 	ldloc.2
-	ldc.i4 16928
+	ldc.i4 17388
 	add
 	stloc.2
-// 0x010adde0: 0x10adde0: addiu a3, a3, 16972
+// 0x010ae428: 0x10ae428: addiu a3, a3, 17432
 	ldloc 4
-	ldc.i4 16972
+	ldc.i4 17432
 	add
 	stloc 4
-// 0x010adde4: 0x10adde4: addiu a0, zero, 4
+// 0x010ae42c: 0x10ae42c: addiu a0, zero, 4
 	ldc.i4.4
 	stloc.1
-// 0x010adde8: 0x10adde8: jal   0x100449c addiu a2, zero, 692
+// 0x010ae430: 0x10ae430: jal   0x100449c addiu a2, zero, 692
 	ldc.i4 692
 	stloc.3
 	ldloc.0
@@ -10627,25 +10627,25 @@ L_10add54:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010addf0: 0x10addf0: j	 0x10ade18 lui   v0, 0x90000
+// 0x010ae438: 0x10ae438: j	 0x10ae460 lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-	br L_10ade18
+	br L_10ae460
 // --- basic block ---
-L_10addf8:
-// 0x010addf8: 0x10addf8: addiu s7, s7, 1
+L_10ae440:
+// 0x010ae440: 0x10ae440: addiu s7, s7, 1
 	ldloc 11
 	ldc.i4.1
 	add
 	stloc 11
-L_10addfc:
-// 0x010addfc: 0x10addfc: addiu s4, s4, 48
+L_10ae444:
+// 0x010ae444: 0x10ae444: addiu s4, s4, 48
 	ldloc 9
 	ldc.i4.s 48
 	add
 	stloc 9
-L_10ade00:
-// 0x010ade00: 0x10ade00: lw    v1, 216(sp)
+L_10ae448:
+// 0x010ae448: 0x10ae448: lw    v1, 216(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10654,54 +10654,54 @@ L_10ade00:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ade04: 0x10ade04: sll   zero, zero, 0
-// 0x010ade08: 0x10ade08: slt   v0, s7, v1
+// 0x010ae44c: 0x10ae44c: sll   zero, zero, 0
+// 0x010ae450: 0x10ae450: slt   v0, s7, v1
 	ldloc 11
 	ldloc 7
 	clt
 	stloc 5
-// 0x010ade0c: 0x10ade0c: bne   v0, zero, 0x10adc7c addiu a0, sp, 64
+// 0x010ae454: 0x10ae454: bne   v0, zero, 0x10ae2c4 addiu a0, sp, 64
 	ldloc 5
 	ldloc.0
 	ldc.i4.s 64
 	add
 	stloc.1
-	brtrue L_10adc7c
+	brtrue L_10ae2c4
 // --- basic block ---
-// 0x010ade14: 0x10ade14: lui   v0, 0x90000
+// 0x010ae45c: 0x10ae45c: lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-L_10ade18:
-// 0x010ade18: 0x10ade18: lw    v1, -13136(v0)
+L_10ae460:
+// 0x010ae460: 0x10ae460: lw    v1, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ade1c: 0x10ade1c: sll   zero, zero, 0
-// 0x010ade20: 0x10ade20: slti  v1, v1, 2
+// 0x010ae464: 0x10ae464: sll   zero, zero, 0
+// 0x010ae468: 0x10ae468: slti  v1, v1, 2
 	ldloc 7
 	ldc.i4.2
 	clt
 	stloc 7
-// 0x010ade24: 0x10ade24: beq   v1, zero, 0x10adfe4 sll   zero, zero, 0
+// 0x010ae46c: 0x10ae46c: beq   v1, zero, 0x10ae62c sll   zero, zero, 0
 	ldloc 7
-	brfalse L_10adfe4
+	brfalse L_10ae62c
 // --- basic block ---
-// 0x010ade2c: 0x10ade2c: sw    zero, -13136(v0)
+// 0x010ae474: 0x10ae474: sw    zero, -12672(v0)
 	ldloc 6
 	ldloc 5
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldc.i4.s 0
 	stelem.i4
-L_10ade30:
-// 0x010ade30: 0x10ade30: lw    a0, 44(sp)
+L_10ae478:
+// 0x010ae478: 0x10ae478: lw    a0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10710,28 +10710,28 @@ L_10ade30:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ade34: 0x10ade34: jal   0x102be40 sll   zero, zero, 0
+// 0x010ae47c: 0x10ae47c: jal   0x102be50 sll   zero, zero, 0
 	ldloc.1
-	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be40(int32)
+	call int32 Cibyl32::roadmap_fuzzy_is_acceptable_102be50(int32)
 	stloc 5
 // --- basic block ---
-// 0x010ade3c: 0x10ade3c: beq   v0, zero, 0x10adfdc sll   zero, zero, 0
+// 0x010ae484: 0x10ae484: beq   v0, zero, 0x10ae624 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10adfdc
+	brfalse L_10ae624
 // --- basic block ---
-// 0x010ade44: 0x10ade44: lw    v0, 0(s1)
+// 0x010ae48c: 0x10ae48c: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010ade48: 0x10ade48: sll   zero, zero, 0
-// 0x010ade4c: 0x10ade4c: beq   v0, zero, 0x10adf6c sll   zero, zero, 0
+// 0x010ae490: 0x10ae490: sll   zero, zero, 0
+// 0x010ae494: 0x10ae494: beq   v0, zero, 0x10ae5b4 sll   zero, zero, 0
 	ldloc 5
-	brfalse L_10adf6c
+	brfalse L_10ae5b4
 // --- basic block ---
-// 0x010ade54: 0x10ade54: lw    v0, 40(sp)
+// 0x010ae49c: 0x10ae49c: lw    v0, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -10740,68 +10740,68 @@ L_10ade30:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ade58: 0x10ade58: beq   s0, zero, 0x10adf30 lui   v1, 0x90000
+// 0x010ae4a0: 0x10ae4a0: beq   s0, zero, 0x10ae578 lui   v1, 0x90000
 	ldloc 12
 	ldc.i4 589824
 	stloc 7
-	brfalse L_10adf30
+	brfalse L_10ae578
 // --- basic block ---
-// 0x010ade60: 0x10ade60: addiu a1, zero, 48
+// 0x010ae4a8: 0x10ae4a8: addiu a1, zero, 48
 	ldc.i4.s 48
 	stloc.2
-// 0x010ade64: 0x10ade64: mult  v0, a1
+// 0x010ae4ac: 0x10ae4ac: mult  v0, a1
 	ldloc 5
 	ldloc.2
 	mul
 	stloc 8
-// 0x010ade68: 0x10ade68: addiu v1, v1, -13132
+// 0x010ae4b0: 0x10ae4b0: addiu v1, v1, -12668
 	ldloc 7
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 7
-// 0x010ade6c: 0x10ade6c: lw    a0, 0(s0)
+// 0x010ae4b4: 0x10ae4b4: lw    a0, 0(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc.1
-// 0x010ade70: 0x10ade70: mflo  lo
+// 0x010ae4b8: 0x10ae4b8: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ade74: 0x10ade74: addu  a1, a1, v1
+// 0x010ae4bc: 0x10ae4bc: addu  a1, a1, v1
 	ldloc.2
 	ldloc 7
 	add
 	stloc.2
-// 0x010ade78: 0x10ade78: lw    a1, 0(a1)
+// 0x010ae4c0: 0x10ae4c0: lw    a1, 0(a1)
 	ldloc 6
 	ldloc.2
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc.2
-// 0x010ade7c: 0x10ade7c: sll   zero, zero, 0
-// 0x010ade80: 0x10ade80: bne   a0, a1, 0x10adf30 sll   zero, zero, 0
+// 0x010ae4c4: 0x10ae4c4: sll   zero, zero, 0
+// 0x010ae4c8: 0x10ae4c8: bne   a0, a1, 0x10ae578 sll   zero, zero, 0
 	ldloc.1
 	ldloc.2
-	bne.un L_10adf30
+	bne.un L_10ae578
 // --- basic block ---
-// 0x010ade88: 0x10ade88: bne   a0, zero, 0x10adec0 addiu a0, zero, 48
+// 0x010ae4d0: 0x10ae4d0: bne   a0, zero, 0x10ae508 addiu a0, zero, 48
 	ldloc.1
 	ldc.i4.s 48
 	stloc.1
-	brtrue L_10adec0
+	brtrue L_10ae508
 // --- basic block ---
-// 0x010ade90: 0x10ade90: addiu a1, zero, 6
+// 0x010ae4d8: 0x10ae4d8: addiu a1, zero, 6
 	ldc.i4.6
 	stloc.2
-// 0x010ade94: 0x10ade94: mult  v0, a1
+// 0x010ae4dc: 0x10ae4dc: mult  v0, a1
 	ldloc 5
 	ldloc.2
 	mul
 	stloc 8
-// 0x010ade98: 0x10ade98: lw    a0, 12(s0)
+// 0x010ae4e0: 0x10ae4e0: lw    a0, 12(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10810,25 +10810,25 @@ L_10ade30:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ade9c: 0x10ade9c: mflo  lo
+// 0x010ae4e4: 0x10ae4e4: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010adea0: 0x10adea0: addiu a1, a1, 1
+// 0x010ae4e8: 0x10ae4e8: addiu a1, a1, 1
 	ldloc.2
 	ldc.i4.1
 	add
 	stloc.2
-// 0x010adea4: 0x10adea4: sll   a1, a1, 3
+// 0x010ae4ec: 0x10ae4ec: sll   a1, a1, 3
 	ldloc.2
 	ldc.i4.3
 	shl
 	stloc.2
-// 0x010adea8: 0x10adea8: addu  v1, v1, a1
+// 0x010ae4f0: 0x10ae4f0: addu  v1, v1, a1
 	ldloc 7
 	ldloc.2
 	add
 	stloc 7
-// 0x010adeac: 0x10adeac: lw    v1, 4(v1)
+// 0x010ae4f4: 0x10ae4f4: lw    v1, 4(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
@@ -10837,32 +10837,32 @@ L_10ade30:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adeb0: 0x10adeb0: sll   zero, zero, 0
-// 0x010adeb4: 0x10adeb4: bne   a0, v1, 0x10adf34 addiu v1, zero, 48
+// 0x010ae4f8: 0x10ae4f8: sll   zero, zero, 0
+// 0x010ae4fc: 0x10ae4fc: bne   a0, v1, 0x10ae57c addiu v1, zero, 48
 	ldloc.1
 	ldloc 7
 	ldc.i4.s 48
 	stloc 7
-	bne.un L_10adf34
+	bne.un L_10ae57c
 // --- basic block ---
-// 0x010adebc: 0x10adebc: addiu a0, zero, 48
+// 0x010ae504: 0x10ae504: addiu a0, zero, 48
 	ldc.i4.s 48
 	stloc.1
-L_10adec0:
-// 0x010adec0: 0x10adec0: mult  v0, a0
+L_10ae508:
+// 0x010ae508: 0x10ae508: mult  v0, a0
 	ldloc 5
 	ldloc.1
 	mul
 	stloc 8
-// 0x010adec4: 0x10adec4: lui   v1, 0x90000
+// 0x010ae50c: 0x10ae50c: lui   v1, 0x90000
 	ldc.i4 589824
 	stloc 7
-// 0x010adec8: 0x10adec8: addiu v1, v1, -13132
+// 0x010ae510: 0x10ae510: addiu v1, v1, -12668
 	ldloc 7
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc 7
-// 0x010adecc: 0x10adecc: lw    a1, 4(s0)
+// 0x010ae514: 0x10ae514: lw    a1, 4(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10871,15 +10871,15 @@ L_10adec0:
 	add
 	ldelem.i4
 	stloc.2
-// 0x010aded0: 0x10aded0: mflo  lo
+// 0x010ae518: 0x10ae518: mflo  lo
 	ldloc 8
 	stloc.1
-// 0x010aded4: 0x10aded4: addu  a0, v1, a0
+// 0x010ae51c: 0x10ae51c: addu  a0, v1, a0
 	ldloc 7
 	ldloc.1
 	add
 	stloc.1
-// 0x010aded8: 0x10aded8: lw    a0, 4(a0)
+// 0x010ae520: 0x10ae520: lw    a0, 4(a0)
 	ldloc 6
 	ldloc.1
 	ldc.i4.2
@@ -10888,21 +10888,21 @@ L_10adec0:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adedc: 0x10adedc: sll   zero, zero, 0
-// 0x010adee0: 0x10adee0: bne   a1, a0, 0x10adf30 sll   zero, zero, 0
+// 0x010ae524: 0x10ae524: sll   zero, zero, 0
+// 0x010ae528: 0x10ae528: bne   a1, a0, 0x10ae578 sll   zero, zero, 0
 	ldloc.2
 	ldloc.1
-	bne.un L_10adf30
+	bne.un L_10ae578
 // --- basic block ---
-// 0x010adee8: 0x10adee8: addiu a1, zero, 3
+// 0x010ae530: 0x10ae530: addiu a1, zero, 3
 	ldc.i4.3
 	stloc.2
-// 0x010adeec: 0x10adeec: mult  v0, a1
+// 0x010ae534: 0x10ae534: mult  v0, a1
 	ldloc 5
 	ldloc.2
 	mul
 	stloc 8
-// 0x010adef0: 0x10adef0: lw    a0, 16(s0)
+// 0x010ae538: 0x10ae538: lw    a0, 16(s0)
 	ldloc 6
 	ldloc 12
 	ldc.i4.2
@@ -10911,44 +10911,44 @@ L_10adec0:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adef4: 0x10adef4: mflo  lo
+// 0x010ae53c: 0x10ae53c: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010adef8: 0x10adef8: addiu a1, a1, 1
+// 0x010ae540: 0x10ae540: addiu a1, a1, 1
 	ldloc.2
 	ldc.i4.1
 	add
 	stloc.2
-// 0x010adefc: 0x10adefc: sll   a1, a1, 4
+// 0x010ae544: 0x10ae544: sll   a1, a1, 4
 	ldloc.2
 	ldc.i4.4
 	shl
 	stloc.2
-// 0x010adf00: 0x10adf00: addu  v1, a1, v1
+// 0x010ae548: 0x10ae548: addu  v1, a1, v1
 	ldloc.2
 	ldloc 7
 	add
 	stloc 7
-// 0x010adf04: 0x10adf04: lw    v1, 0(v1)
+// 0x010ae54c: 0x10ae54c: lw    v1, 0(v1)
 	ldloc 6
 	ldloc 7
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 7
-// 0x010adf08: 0x10adf08: sll   zero, zero, 0
-// 0x010adf0c: 0x10adf0c: bne   a0, v1, 0x10adf34 addiu v1, zero, 48
+// 0x010ae550: 0x10ae550: sll   zero, zero, 0
+// 0x010ae554: 0x10ae554: bne   a0, v1, 0x10ae57c addiu v1, zero, 48
 	ldloc.1
 	ldloc 7
 	ldc.i4.s 48
 	stloc 7
-	bne.un L_10adf34
+	bne.un L_10ae57c
 // --- basic block ---
-// 0x010adf14: 0x10adf14: j	 0x10ae088 sll   zero, zero, 0
-	br L_10ae088
+// 0x010ae55c: 0x10ae55c: j	 0x10ae6d0 sll   zero, zero, 0
+	br L_10ae6d0
 // --- basic block ---
-L_10adf1c:
-// 0x010adf1c: 0x10adf1c: lw    a0, 20(s1)
+L_10ae564:
+// 0x010ae564: 0x10ae564: lw    a0, 20(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -10957,7 +10957,7 @@ L_10adf1c:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010adf20: 0x10adf20: lw    v1, 20(s3)
+// 0x010ae568: 0x10ae568: lw    v1, 20(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -10966,40 +10966,40 @@ L_10adf1c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adf24: 0x10adf24: sll   zero, zero, 0
-// 0x010adf28: 0x10adf28: beq   a0, v1, 0x10adf6c sll   zero, zero, 0
+// 0x010ae56c: 0x10ae56c: sll   zero, zero, 0
+// 0x010ae570: 0x10ae570: beq   a0, v1, 0x10ae5b4 sll   zero, zero, 0
 	ldloc.1
 	ldloc 7
-	beq  L_10adf6c
+	beq  L_10ae5b4
 // --- basic block ---
-L_10adf30:
-// 0x010adf30: 0x10adf30: addiu v1, zero, 48
+L_10ae578:
+// 0x010ae578: 0x10ae578: addiu v1, zero, 48
 	ldc.i4.s 48
 	stloc 7
-L_10adf34:
-// 0x010adf34: 0x10adf34: mult  v0, v1
+L_10ae57c:
+// 0x010ae57c: 0x10ae57c: mult  v0, v1
 	ldloc 5
 	ldloc 7
 	mul
 	stloc 8
-// 0x010adf38: 0x10adf38: lui   a1, 0x90000
+// 0x010ae580: 0x10ae580: lui   a1, 0x90000
 	ldc.i4 589824
 	stloc.2
-// 0x010adf3c: 0x10adf3c: addiu a1, a1, -13132
+// 0x010ae584: 0x10ae584: addiu a1, a1, -12668
 	ldloc.2
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc.2
-// 0x010adf40: 0x10adf40: addu  a0, s5, zero
+// 0x010ae588: 0x10ae588: addu  a0, s5, zero
 	ldloc 18
 	stloc.1
-// 0x010adf44: 0x10adf44: addiu a2, zero, 48
+// 0x010ae58c: 0x10ae58c: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010adf48: 0x10adf48: mflo  lo
+// 0x010ae590: 0x10ae590: mflo  lo
 	ldloc 8
 	stloc 5
-// 0x010adf4c: 0x10adf4c: jal   0x1001800 addu  a1, a1, v0
+// 0x010ae594: 0x10ae594: jal   0x1001800 addu  a1, a1, v0
 	ldloc.2
 	ldloc 5
 	add
@@ -11013,7 +11013,7 @@ L_10adf34:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adf54: 0x10adf54: lw    v0, 44(sp)
+// 0x010ae59c: 0x10ae59c: lw    v0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11022,10 +11022,10 @@ L_10adf34:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adf58: 0x10adf58: addiu v1, zero, 1
+// 0x010ae5a0: 0x10ae5a0: addiu v1, zero, 1
 	ldc.i4.1
 	stloc 7
-// 0x010adf5c: 0x10adf5c: sw    v0, 28(s3)
+// 0x010ae5a4: 0x10ae5a4: sw    v0, 28(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -11034,14 +11034,14 @@ L_10adf34:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adf60: 0x10adf60: sw    v1, 0(s3)
+// 0x010ae5a8: 0x10ae5a8: sw    v1, 0(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
 	shr.un
 	ldloc 7
 	stelem.i4
-// 0x010adf64: 0x10adf64: j	 0x10adfe8 sw    v0, 32(s3)
+// 0x010ae5ac: 0x10ae5ac: j	 0x10ae630 sw    v0, 32(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -11050,10 +11050,10 @@ L_10adf34:
 	add
 	ldloc 5
 	stelem.i4
-	br L_10adfe8
+	br L_10ae630
 // --- basic block ---
-L_10adf6c:
-// 0x010adf6c: 0x10adf6c: lw    v1, 40(sp)
+L_10ae5b4:
+// 0x010ae5b4: 0x10ae5b4: lw    v1, 40(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11062,32 +11062,32 @@ L_10adf6c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010adf70: 0x10adf70: addiu v0, zero, 48
+// 0x010ae5b8: 0x10ae5b8: addiu v0, zero, 48
 	ldc.i4.s 48
 	stloc 5
-// 0x010adf74: 0x10adf74: mult  v1, v0
+// 0x010ae5bc: 0x10ae5bc: mult  v1, v0
 	ldloc 7
 	ldloc 5
 	mul
 	stloc 8
-// 0x010adf78: 0x10adf78: lui   a1, 0x90000
+// 0x010ae5c0: 0x10ae5c0: lui   a1, 0x90000
 	ldc.i4 589824
 	stloc.2
-// 0x010adf7c: 0x10adf7c: addiu a1, a1, -13132
+// 0x010ae5c4: 0x10ae5c4: addiu a1, a1, -12668
 	ldloc.2
-	ldc.i4 -13132
+	ldc.i4 -12668
 	add
 	stloc.2
-// 0x010adf80: 0x10adf80: addu  a0, s0, zero
+// 0x010ae5c8: 0x10ae5c8: addu  a0, s0, zero
 	ldloc 12
 	stloc.1
-// 0x010adf84: 0x10adf84: addiu a2, zero, 48
+// 0x010ae5cc: 0x10ae5cc: addiu a2, zero, 48
 	ldc.i4.s 48
 	stloc.3
-// 0x010adf88: 0x10adf88: mflo  lo
+// 0x010ae5d0: 0x10ae5d0: mflo  lo
 	ldloc 8
 	stloc 7
-// 0x010adf8c: 0x10adf8c: jal   0x1001800 addu  a1, a1, v1
+// 0x010ae5d4: 0x10ae5d4: jal   0x1001800 addu  a1, a1, v1
 	ldloc.2
 	ldloc 7
 	add
@@ -11101,19 +11101,19 @@ L_10adf6c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adf94: 0x10adf94: lw    v0, 0(s1)
+// 0x010ae5dc: 0x10ae5dc: lw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldelem.i4
 	stloc 5
-// 0x010adf98: 0x10adf98: sll   zero, zero, 0
-// 0x010adf9c: 0x10adf9c: bne   v0, zero, 0x10adfb0 sll   zero, zero, 0
+// 0x010ae5e0: 0x10ae5e0: sll   zero, zero, 0
+// 0x010ae5e4: 0x10ae5e4: bne   v0, zero, 0x10ae5f8 sll   zero, zero, 0
 	ldloc 5
-	brtrue L_10adfb0
+	brtrue L_10ae5f8
 // --- basic block ---
-// 0x010adfa4: 0x10adfa4: lw    v0, 44(sp)
+// 0x010ae5ec: 0x10ae5ec: lw    v0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11122,8 +11122,8 @@ L_10adf6c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adfa8: 0x10adfa8: sll   zero, zero, 0
-// 0x010adfac: 0x10adfac: sw    v0, 28(s1)
+// 0x010ae5f0: 0x10ae5f0: sll   zero, zero, 0
+// 0x010ae5f4: 0x10ae5f4: sw    v0, 28(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -11132,8 +11132,8 @@ L_10adf6c:
 	add
 	ldloc 5
 	stelem.i4
-L_10adfb0:
-// 0x010adfb0: 0x10adfb0: lw    v0, 28(s1)
+L_10ae5f8:
+// 0x010ae5f8: 0x10ae5f8: lw    v0, 28(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -11142,10 +11142,10 @@ L_10adfb0:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adfb4: 0x10adfb4: addu  a1, s3, zero
+// 0x010ae5fc: 0x10ae5fc: addu  a1, s3, zero
 	ldloc 14
 	stloc.2
-// 0x010adfb8: 0x10adfb8: sw    v0, 28(s3)
+// 0x010ae600: 0x10ae600: sw    v0, 28(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -11154,10 +11154,10 @@ L_10adfb0:
 	add
 	ldloc 5
 	stelem.i4
-// 0x010adfbc: 0x10adfbc: addu  a0, s1, zero
+// 0x010ae604: 0x10ae604: addu  a0, s1, zero
 	ldloc 10
 	stloc.1
-// 0x010adfc0: 0x10adfc0: jal   0x1001800 addiu a2, zero, 76
+// 0x010ae608: 0x10ae608: jal   0x1001800 addiu a2, zero, 76
 	ldc.i4.s 76
 	stloc.3
 	ldloc.1
@@ -11169,17 +11169,17 @@ L_10adfb0:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010adfc8: 0x10adfc8: addiu v0, zero, 1
+// 0x010ae610: 0x10ae610: addiu v0, zero, 1
 	ldc.i4.1
 	stloc 5
-// 0x010adfcc: 0x10adfcc: sw    v0, 0(s1)
+// 0x010ae614: 0x10ae614: sw    v0, 0(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
 	shr.un
 	ldloc 5
 	stelem.i4
-// 0x010adfd0: 0x10adfd0: lw    v0, 44(sp)
+// 0x010ae618: 0x10ae618: lw    v0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11188,7 +11188,7 @@ L_10adfb0:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010adfd4: 0x10adfd4: j	 0x10adfe4 sw    v0, 32(s1)
+// 0x010ae61c: 0x10ae61c: j	 0x10ae62c sw    v0, 32(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -11197,28 +11197,28 @@ L_10adfb0:
 	add
 	ldloc 5
 	stelem.i4
-	br L_10adfe4
+	br L_10ae62c
 // --- basic block ---
-L_10adfdc:
-// 0x010adfdc: 0x10adfdc: j	 0x10adfe8 sw    zero, 0(s3)
+L_10ae624:
+// 0x010ae624: 0x10ae624: j	 0x10ae630 sw    zero, 0(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
 	shr.un
 	ldc.i4.s 0
 	stelem.i4
-	br L_10adfe8
+	br L_10ae630
 // --- basic block ---
-L_10adfe4:
-// 0x010adfe4: 0x10adfe4: addu  s2, zero, zero
+L_10ae62c:
+// 0x010ae62c: 0x10ae62c: addu  s2, zero, zero
 	ldc.i4.s 0
 	stloc 16
-L_10adfe8:
-// 0x010adfe8: 0x10adfe8: lw    ra, 308(sp)
-// 0x010adfec: 0x10adfec: addu  v0, s2, zero
+L_10ae630:
+// 0x010ae630: 0x10ae630: lw    ra, 308(sp)
+// 0x010ae634: 0x10ae634: addu  v0, s2, zero
 	ldloc 16
 	stloc 5
-// 0x010adff0: 0x10adff0: lw    s8, 304(sp)
+// 0x010ae638: 0x10ae638: lw    s8, 304(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11227,7 +11227,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 17
-// 0x010adff4: 0x10adff4: lw    s7, 300(sp)
+// 0x010ae63c: 0x10ae63c: lw    s7, 300(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11236,7 +11236,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 11
-// 0x010adff8: 0x10adff8: lw    s6, 296(sp)
+// 0x010ae640: 0x10ae640: lw    s6, 296(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11245,7 +11245,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 19
-// 0x010adffc: 0x10adffc: lw    s5, 292(sp)
+// 0x010ae644: 0x10ae644: lw    s5, 292(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11254,7 +11254,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 18
-// 0x010ae000: 0x10ae000: lw    s4, 288(sp)
+// 0x010ae648: 0x10ae648: lw    s4, 288(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11263,7 +11263,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 9
-// 0x010ae004: 0x10ae004: lw    s3, 284(sp)
+// 0x010ae64c: 0x10ae64c: lw    s3, 284(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11272,7 +11272,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 14
-// 0x010ae008: 0x10ae008: lw    s2, 280(sp)
+// 0x010ae650: 0x10ae650: lw    s2, 280(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11281,7 +11281,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 16
-// 0x010ae00c: 0x10ae00c: lw    s1, 276(sp)
+// 0x010ae654: 0x10ae654: lw    s1, 276(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11290,7 +11290,7 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 10
-// 0x010ae010: 0x10ae010: lw    s0, 272(sp)
+// 0x010ae658: 0x10ae658: lw    s0, 272(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11299,51 +11299,51 @@ L_10adfe8:
 	add
 	ldelem.i4
 	stloc 12
-// 0x010ae014: 0x10ae014: jr    ra addiu sp, sp, 312
+// 0x010ae65c: 0x10ae65c: jr    ra addiu sp, sp, 312
 	ldloc.0
 	ldc.i4 312
 	add
 	stloc.0
 	br __CIBYL_function_return
 // --- basic block ---
-L_10ae01c:
-// 0x010ae01c: 0x10ae01c: lui   a2, 0x90000
+L_10ae664:
+// 0x010ae664: 0x10ae664: lui   a2, 0x90000
 	ldc.i4 589824
 	stloc.3
-L_10ae020:
-// 0x010ae020: 0x10ae020: lw    a0, -13136(a2)
+L_10ae668:
+// 0x010ae668: 0x10ae668: lw    a0, -12672(a2)
 	ldloc 6
 	ldloc.3
 	ldc.i4.2
 	shr.un
-	ldc.i4 -3284
+	ldc.i4 -3168
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ae024: 0x10ae024: addiu t1, zero, 10
+// 0x010ae66c: 0x10ae66c: addiu t1, zero, 10
 	ldc.i4.s 10
 	stloc 13
-// 0x010ae028: 0x10ae028: bne   a0, t1, 0x10ad494 addiu a2, zero, 1928
+// 0x010ae670: 0x10ae670: bne   a0, t1, 0x10adadc addiu a2, zero, 1928
 	ldloc.1
 	ldloc 13
 	ldc.i4 1928
 	stloc.3
-	bne.un L_10ad494
+	bne.un L_10adadc
 // --- basic block ---
-// 0x010ae030: 0x10ae030: j	 0x10ad828 lui   v0, 0x90000
+// 0x010ae678: 0x10ae678: j	 0x10ade70 lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-	br L_10ad828
+	br L_10ade70
 // --- basic block ---
-L_10ae038:
-// 0x010ae038: 0x10ae038: addu  a0, v1, zero
+L_10ae680:
+// 0x010ae680: 0x10ae680: addu  a0, v1, zero
 	ldloc 7
 	stloc.1
-L_10ae03c:
-// 0x010ae03c: 0x10ae03c: addiu a2, zero, 1928
+L_10ae684:
+// 0x010ae684: 0x10ae684: addiu a2, zero, 1928
 	ldc.i4 1928
 	stloc.3
-// 0x010ae040: 0x10ae040: sw    v1, 264(sp)
+// 0x010ae688: 0x10ae688: sw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11352,7 +11352,7 @@ L_10ae03c:
 	add
 	ldloc 7
 	stelem.i4
-// 0x010ae044: 0x10ae044: sw    a3, 260(sp)
+// 0x010ae68c: 0x10ae68c: sw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11361,7 +11361,7 @@ L_10ae03c:
 	add
 	ldloc 4
 	stelem.i4
-// 0x010ae048: 0x10ae048: sw    t0, 256(sp)
+// 0x010ae690: 0x10ae690: sw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11370,10 +11370,10 @@ L_10ae03c:
 	add
 	ldloc 15
 	stelem.i4
-// 0x010ae04c: 0x10ae04c: mflo  lo
+// 0x010ae694: 0x10ae694: mflo  lo
 	ldloc 8
 	stloc.2
-// 0x010ae050: 0x10ae050: jal   0x1001800 addu  a1, s8, a1
+// 0x010ae698: 0x10ae698: jal   0x1001800 addu  a1, s8, a1
 	ldloc 17
 	ldloc.2
 	add
@@ -11387,7 +11387,7 @@ L_10ae03c:
 	stloc 7
 	stloc 5
 // --- basic block ---
-// 0x010ae058: 0x10ae058: lw    v1, 264(sp)
+// 0x010ae6a0: 0x10ae6a0: lw    v1, 264(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11396,7 +11396,7 @@ L_10ae03c:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ae05c: 0x10ae05c: lw    a3, 260(sp)
+// 0x010ae6a4: 0x10ae6a4: lw    a3, 260(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11405,7 +11405,7 @@ L_10ae03c:
 	add
 	ldelem.i4
 	stloc 4
-// 0x010ae060: 0x10ae060: lw    t0, 256(sp)
+// 0x010ae6a8: 0x10ae6a8: lw    t0, 256(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11414,15 +11414,15 @@ L_10ae03c:
 	add
 	ldelem.i4
 	stloc 15
-// 0x010ae064: 0x10ae064: j	 0x10ad76c mult  s4, s7
+// 0x010ae6ac: 0x10ae6ac: j	 0x10addb4 mult  s4, s7
 	ldloc 9
 	ldloc 11
 	mul
 	stloc 8
-	br L_10ad76c
+	br L_10addb4
 // --- basic block ---
-L_10ae06c:
-// 0x010ae06c: 0x10ae06c: lw    v0, 44(sp)
+L_10ae6b4:
+// 0x010ae6b4: 0x10ae6b4: lw    v0, 44(sp)
 	ldloc 6
 	ldloc.0
 	ldc.i4.2
@@ -11431,27 +11431,27 @@ L_10ae06c:
 	add
 	ldelem.i4
 	stloc 5
-// 0x010ae070: 0x10ae070: sll   zero, zero, 0
-// 0x010ae074: 0x10ae074: slt   v1, v1, v0
+// 0x010ae6b8: 0x10ae6b8: sll   zero, zero, 0
+// 0x010ae6bc: 0x10ae6bc: slt   v1, v1, v0
 	ldloc 7
 	ldloc 5
 	clt
 	stloc 7
-// 0x010ae078: 0x10ae078: bne   v1, zero, 0x10addfc addiu s7, s7, 1
+// 0x010ae6c0: 0x10ae6c0: bne   v1, zero, 0x10ae444 addiu s7, s7, 1
 	ldloc 7
 	ldloc 11
 	ldc.i4.1
 	add
 	stloc 11
-	brtrue L_10addfc
+	brtrue L_10ae444
 // --- basic block ---
-// 0x010ae080: 0x10ae080: j	 0x10add4c lui   v0, 0x90000
+// 0x010ae6c8: 0x10ae6c8: j	 0x10ae394 lui   v0, 0x90000
 	ldc.i4 589824
 	stloc 5
-	br L_10add4c
+	br L_10ae394
 // --- basic block ---
-L_10ae088:
-// 0x010ae088: 0x10ae088: lw    a0, 24(s1)
+L_10ae6d0:
+// 0x010ae6d0: 0x10ae6d0: lw    a0, 24(s1)
 	ldloc 6
 	ldloc 10
 	ldc.i4.2
@@ -11460,7 +11460,7 @@ L_10ae088:
 	add
 	ldelem.i4
 	stloc.1
-// 0x010ae08c: 0x10ae08c: lw    v1, 24(s3)
+// 0x010ae6d4: 0x10ae6d4: lw    v1, 24(s3)
 	ldloc 6
 	ldloc 14
 	ldc.i4.2
@@ -11469,16 +11469,16 @@ L_10ae088:
 	add
 	ldelem.i4
 	stloc 7
-// 0x010ae090: 0x10ae090: sll   zero, zero, 0
-// 0x010ae094: 0x10ae094: bne   a0, v1, 0x10adf34 addiu v1, zero, 48
+// 0x010ae6d8: 0x10ae6d8: sll   zero, zero, 0
+// 0x010ae6dc: 0x10ae6dc: bne   a0, v1, 0x10ae57c addiu v1, zero, 48
 	ldloc.1
 	ldloc 7
 	ldc.i4.s 48
 	stloc 7
-	bne.un L_10adf34
+	bne.un L_10ae57c
 // --- basic block ---
-// 0x010ae09c: 0x10ae09c: j	 0x10adf1c sll   zero, zero, 0
-	br L_10adf1c
+// 0x010ae6e4: 0x10ae6e4: j	 0x10ae564 sll   zero, zero, 0
+	br L_10ae564
 __CIBYL_function_return:
 	ldloc 7
 	stsfld int32 [WazeWP7]CRunTime::saved_v1
