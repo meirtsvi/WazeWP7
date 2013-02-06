@@ -347,11 +347,11 @@ void roadmap_log (int level, const char *source, int line, const char *format, .
 
    
 #ifdef J2ME
-   if(level < ROADMAP_MESSAGE_FATAL)  {
-       return; // don't show WARNING, INFO, and DEBUG prints in J2ME, too slow.
-   }
-   if (level < ROADMAP_MESSAGE_INFO) return;
-   if (level < ROADMAP_MESSAGE_DEBUG) return;
+//   if(level < ROADMAP_MESSAGE_FATAL)  {
+//       return; // don't show WARNING, INFO, and DEBUG prints in J2ME, too slow.
+//   }
+//   if (level < ROADMAP_MESSAGE_INFO) return;
+//   if (level < ROADMAP_MESSAGE_DEBUG) return;
 #else
    if (level < roadmap_verbosity()) return;
 #endif

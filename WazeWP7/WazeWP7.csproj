@@ -20,7 +20,7 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>WazeWP7.xap</XapFilename>
+    <XapFilename>WazeWP8.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>WazeWP7.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>

@@ -28,7 +28,7 @@ using System.Windows;
                 logfile.Close();
             }
 */
-            if (logs.Length > 300 * 1024)
+            if (logs.Length > 32 * 1024 - 1)
                 logs = "Zeroed";
 
             logs += "\r\n" + DateTime.Now + ":" + text;

@@ -1273,6 +1273,7 @@ SsdWidget ssd_dialog_activate (const char *name, void *context) {
    return dialog->container; /* Tell the caller the dialog already exists. */
 }
 
+void ssd_dialog_hide_cont(SsdDialog dialog);
 void ssd_dialog_hide (const char *name, int exit_code) {
 
    SsdDialog prev = NULL;
@@ -1303,6 +1304,11 @@ void ssd_dialog_hide (const char *name, int exit_code) {
       prev->activated_prev = dialog->activated_prev;
    }
 
+   ssd_dialog_hide_cont(dialog);
+}
+
+void ssd_dialog_hide_cont(SsdDialog dialog)
+{
    if (RoadMapDialogCurrent) {
       ssd_dialog_disable_key ();
 //      if (RoadMapDialogCurrent->in_focus)
