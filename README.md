@@ -38,7 +38,8 @@ The idea behind this project is to supply proper GPS for Windows Phone. It also 
 
 ### OK, SO WHAT'S NEXT? HOW DO I START?
 
-You open the .sln file from WazeWP7 and run it. As simple as that.
+1. Install font.ttf and font_normal.ttf fonts under resources directory
+2. Open the .sln file from WazeWP7 and run it. As simple as that.
 
 ### COOL, NOW I WANT TO CHANGE THE BEHAVIOUR. HOW DO I DO THAT?
 
