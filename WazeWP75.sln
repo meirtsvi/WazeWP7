@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WazeWP7", "WazeWP7\WazeWP7.csproj", "{F2C7A91A-7C82-4943-920D-ED32BDBE1ADC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WazeWP7Lib", "WazeWP7Lib\WazeWP7Lib.csproj", "{F2A9743D-63BD-4E70-8269-08952EDC1602}"

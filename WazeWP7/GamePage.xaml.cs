@@ -720,6 +720,8 @@ namespace WazeWP7
 
                 });
 
+                return; // We added the save logs, but we don't want to add the exit item...
+
                 //System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
                 //{
                 //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("Delete Cache");

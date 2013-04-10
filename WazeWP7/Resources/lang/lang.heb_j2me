@@ -6,7 +6,7 @@
 # Usage Format: Use the pipe char to translate english text to the new language text.
 # notice we are keeping the same filename convention of the online files waze hosts.
 # Use the Diaz (#) char to start a comment line that will be ignored.
-# For example:
+# For example :
 # Hellow World!|שלום עולם!
 #
 # Hebrew
